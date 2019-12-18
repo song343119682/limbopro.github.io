@@ -12,7 +12,7 @@
 <meta name="theme-color" content="#ff393e" />
 <meta http-equiv="x-dns-prefetch-control" content="on">
 <title>GitHub 新手指南，从入门到放弃（5分钟教学，你也可以拥有自己的仓库）以及 fork 后如何与上游仓库保持更新； - 毒奶博主丨欢迎使用代理访问本站。</title>
-<link rel="icon" type="image/ico" href="../favicon.ico">
+<link rel="icon" type="image/ico" href="/favicon.ico">
 <meta name="description" content="本文概要就算是素人玩家，也可以玩到飞起。1.Github 是什么，它可以做什么2.开局新建一个账号3.装备全靠捡4.本地/远程/合并/更新/仓库就是一切以上。本文隶属于 实用工具/科学上网 分类..." />
 <meta name="keywords" content="网站百科" />
 <meta name="generator" content="Typecho 1.1/17.10.30" />
@@ -20,19 +20,19 @@
 <link rel="alternate" type="application/rss+xml" title="GitHub 新手指南，从入门到放弃（5分钟教学，你也可以拥有自己的仓库）以及 fork 后如何与上游仓库保持更新； &raquo; 毒奶博主丨欢迎使用代理访问本站。 &raquo; RSS 2.0" href="https://limbopro.xyz/feed/archives/3856.html" />
 <link rel="alternate" type="application/rdf+xml" title="GitHub 新手指南，从入门到放弃（5分钟教学，你也可以拥有自己的仓库）以及 fork 后如何与上游仓库保持更新； &raquo; 毒奶博主丨欢迎使用代理访问本站。 &raquo; RSS 1.0" href="https://limbopro.xyz/feed/rss/archives/3856.html" />
 <link rel="alternate" type="application/atom+xml" title="GitHub 新手指南，从入门到放弃（5分钟教学，你也可以拥有自己的仓库）以及 fork 后如何与上游仓库保持更新； &raquo; 毒奶博主丨欢迎使用代理访问本站。 &raquo; ATOM 1.0" href="https://limbopro.xyz/feed/atom/archives/3856.html" />
-<link rel="stylesheet" type="text/css" href="../usr/plugins/CodePrettify/static/styles/tomorrow-night.css" />
+<link rel="stylesheet" type="text/css" href="https://limbopro.xyz/usr/plugins/CodePrettify/static/styles/tomorrow-night.css" />
 <script type="text/x-mathjax-config">
         MathJax.Hub.Config({messageStyle: "none",tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
     </script>
 
-<link href="../usr/themes/handsome/assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://limbopro.xyz/usr/themes/handsome/assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-<link rel="stylesheet" href="../usr/themes/handsome/assets/css/function.min.css?v=5.3.120190915221" type="text/css" />
-<link rel="stylesheet" href="../usr/themes/handsome/assets/css/handsome.min.css?v=5.3.120190915221" type="text/css" />
+<link rel="stylesheet" href="https://limbopro.xyz/usr/themes/handsome/assets/css/function.min.css?v=5.3.120190915221" type="text/css" />
+<link rel="stylesheet" href="https://limbopro.xyz/usr/themes/handsome/assets/css/handsome.min.css?v=5.3.120190915221" type="text/css" />
 
-<link rel="stylesheet" href="../usr/themes/handsome/assets/css/features/jquery.fancybox.min.css?v=5.3.120190915221" type="text/css" />
-<link rel="stylesheet" href="../usr/themes/handsome/assets/css/features/code/zenburn.min.css?v=5.3.120190915221" type="text/css" />
-<link rel="stylesheet" href="../usr/themes/handsome/assets/css/features/coolopacity.min.css?v=5.3.120190915221" type="text/css" />
+<link rel="stylesheet" href="https://limbopro.xyz/usr/themes/handsome/assets/css/features/jquery.fancybox.min.css?v=5.3.120190915221" type="text/css" />
+<link rel="stylesheet" href="https://limbopro.xyz/usr/themes/handsome/assets/css/features/code/zenburn.min.css?v=5.3.120190915221" type="text/css" />
+<link rel="stylesheet" href="https://limbopro.xyz/usr/themes/handsome/assets/css/features/coolopacity.min.css?v=5.3.120190915221" type="text/css" />
 <style>
             .cool-transparent .app:before {
                 background-color: rgba(0 , 0, 0, 0.7)!important;
@@ -40,41 +40,41 @@
             }
         </style>
 
-<link rel="stylesheet" href="../usr/themes/handsome/assets/css/font.min.css?v=5.3.120190915221" type="text/css" />
+<link rel="stylesheet" href="https://limbopro.xyz/usr/themes/handsome/assets/css/font.min.css?v=5.3.120190915221" type="text/css" />
 <style type="text/css">
         
         html.bg {
-        background: url(../usr/uploads/2019/11/425005431.jpg) center center no-repeat no-repeat fixed #6A6B6F;background-size: cover;
+        background: url(https://limbopro.xyz/usr/uploads/2019/11/425005431.jpg) center center no-repeat no-repeat fixed #6A6B6F;background-size: cover;
         }
         .cool-transparent .off-screen+* .app-content-body {
-        background: url(../usr/uploads/2019/11/425005431.jpg) center center no-repeat no-repeat fixed #6A6B6F;background-size: cover;
+        background: url(https://limbopro.xyz/usr/uploads/2019/11/425005431.jpg) center center no-repeat no-repeat fixed #6A6B6F;background-size: cover;
         }
 @media (max-width:767px){
     html.bg {
-        background: url(../usr/uploads/2019/11/425005431.jpg) center center no-repeat no-repeat fixed #6A6B6F;background-size: cover;
+        background: url(https://limbopro.xyz/usr/uploads/2019/11/425005431.jpg) center center no-repeat no-repeat fixed #6A6B6F;background-size: cover;
         }
         .cool-transparent .off-screen+* .app-content-body {
-        background: url(../usr/uploads/2019/11/425005431.jpg) center center no-repeat no-repeat fixed #6A6B6F;background-size: cover;
+        background: url(https://limbopro.xyz/usr/uploads/2019/11/425005431.jpg) center center no-repeat no-repeat fixed #6A6B6F;background-size: cover;
         }
 }
 #aside .wrapper:hover {
-	background: url(../usr/themes/handsome/assets/img/snow.gif);
+	background: url(https://limbopro.xyz/usr/themes/handsome/assets/img/snow.gif);
 	background-size: cover;
 	color: #999;
 }    </style>
 
-<script src="../usr/themes/handsome/assets/libs/jquery/jquery.min.js" type="debf14f5485d1b24a303ae3b-text/javascript"></script>
+<script src="https://limbopro.xyz/usr/themes/handsome/assets/libs/jquery/jquery.min.js" type="a5a4bde4b697d1e125e3cb07-text/javascript"></script>
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140019039-1" type="debf14f5485d1b24a303ae3b-text/javascript"></script>
-<script type="debf14f5485d1b24a303ae3b-text/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140019039-1" type="a5a4bde4b697d1e125e3cb07-text/javascript"></script>
+<script type="a5a4bde4b697d1e125e3cb07-text/javascript">
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'UA-140019039-1');
 </script>
-<script src="../usr/themes/handsome/assets/js/features/fancyMorph.min.js" type="debf14f5485d1b24a303ae3b-text/javascript"></script>
+<script src="https://limbopro.xyz/usr/themes/handsome/assets/js/features/fancyMorph.min.js" type="a5a4bde4b697d1e125e3cb07-text/javascript"></script>
 </head>
 <body id="body">
 
@@ -89,7 +89,7 @@
 <i class="fontello fontello-menu text-lg"></i>
 </button>
 
-<a href="../index.html" class="navbar-brand text-lt">
+<a href="https://limbopro.xyz/" class="navbar-brand text-lt">
 <i class="fontello fontello-home"></i>
 <span class="hidden-folded m-l-xs">毒奶博主</span>
 </a>
@@ -114,12 +114,12 @@
 </div>
 </div>
 </form>
-<a href="3856.html" style="display: none" id="searchUrl"></a>
+<a href="" style="display: none" id="searchUrl"></a>
 
 <ul class="nav navbar-nav navbar-right">
 <li class="dropdown"><a target="blank" href="https://t.me/limboprobot" class="dropdown-toggle"><i class="fontello-chat-alt icon-fw"></i><span class="visible-xs-inline">相册</span></a></li> 
 <li class="dropdown">
-<a href="3856.html#" data-toggle="dropdown" class="dropdown-toggle">
+<a href="#" data-toggle="dropdown" class="dropdown-toggle">
 <i class="fontello fontello-bell icon-fw"></i>
 <span class="visible-xs-inline">
 闲言碎语 </span>
@@ -133,7 +133,7 @@
 闲言碎语 </strong>
 </div>
 <div class="list-group" id="smallRecording">
-<a href="../cross.html" class="list-group-item"><span class="clear block m-b-none words_contents">希望你每次打开，都能在这里看到新东西，有用的内容。<br><small class="text-muted">2019-8-3 11:48:43</small></span></a><a href="../cross.html" class="list-group-item"><span class="clear block m-b-none words_contents">早睡早起身体好，吃嘛嘛香。<br><small class="text-muted">2019-8-2 23:35:28</small></span></a><a href="../cross.html" class="list-group-item"><span class="clear block m-b-none words_contents">晚来天欲雪，能饮一杯无。<br><small class="text-muted">2019-8-2 23:21:01</small></span></a> </div>
+<a href="https://limbopro.xyz/cross.html" class="list-group-item"><span class="clear block m-b-none words_contents">希望你每次打开，都能在这里看到新东西，有用的内容。<br><small class="text-muted">2019-8-3 11:48:43</small></span></a><a href="https://limbopro.xyz/cross.html" class="list-group-item"><span class="clear block m-b-none words_contents">早睡早起身体好，吃嘛嘛香。<br><small class="text-muted">2019-8-2 23:35:28</small></span></a><a href="https://limbopro.xyz/cross.html" class="list-group-item"><span class="clear block m-b-none words_contents">晚来天欲雪，能饮一杯无。<br><small class="text-muted">2019-8-2 23:21:01</small></span></a> </div>
 </div>
 </div>
 </li>
@@ -153,11 +153,11 @@
 <div ui-nav>
 <a href="https://t.me/limboprossr">
 <span class="thumb-lg w-auto-folded avatar m-t-sm">
-<img src="../usr/uploads/2019/09/2211209831.jpg" class="img-full">
+<img src="https://limbopro.xyz/usr/uploads/2019/09/2211209831.jpg" class="img-full">
 </span>
 </a>
 </div>
-<a href="3856.html#" data-toggle="dropdown" class="dropdown-toggle hidden-folded">
+<a href="#" data-toggle="dropdown" class="dropdown-toggle hidden-folded">
 <span class="clear">
 <span class="block m-t-sm">
 <strong class="font-bold text-lt">毒奶</strong>
@@ -174,7 +174,7 @@
 <p>晚上好，注意早点休息</p>
 </div>
 <div class="progress progress-xs m-b-none dker">
-<div class="progress-bar bg-white" data-toggle="tooltip" data-original-title="时间已经度过0.00%" style="width: 0.00%"></div>
+<div class="progress-bar bg-white" data-toggle="tooltip" data-original-title="时间已经度过4.17%" style="width: 4.17%"></div>
 </div>
 </li>
 </ul>
@@ -192,13 +192,13 @@
 </li>
 
 <li>
-<a href="../index.html" class="auto">
+<a href="https://limbopro.xyz/" class="auto">
 <i class="iconfont icon-zhuye icon text-md"></i>
 <span>首页</span>
 </a>
 </li>
 
-<li> <a target="_self" href="../6.html" class="auto"><i class="glyphicon fontello-emo-devil icon text-md"></i><span>联系我们</span></a></li><li> <a target="_self" href="../1765.html" class="auto"><i class="glyphicon fontello-indent icon text-md"></i><span>文章归档</span></a></li><li> <a target="_self" href="../865.html" class="auto"><i class="glyphicon fontello-instagram icon text-md"></i><span>机场推荐</span></a></li><li> <a target="_blank" href="https://t.me/limboprossr" class="auto"><i class="glyphicon fontello-bell icon text-md"></i><span>电报频道</span></a></li><li> <a target="_blank" href="../search.html" class="auto"><i class="glyphicon fontello-search icon text-md"></i><span>毒奶搜索</span></a></li><li> <a target="_blank" href="https://github.com/limbopro" class="auto"><i class="glyphicon fontello-eye icon text-md"></i><span>托管仓库</span></a></li> <li class="line dk"></li>
+<li> <a target="_self" href="https://limbopro.xyz/6.html" class="auto"><i class="glyphicon fontello-emo-devil icon text-md"></i><span>联系我们</span></a></li><li> <a target="_self" href="https://limbopro.xyz/1765.html" class="auto"><i class="glyphicon fontello-indent icon text-md"></i><span>文章归档</span></a></li><li> <a target="_self" href="https://limbopro.xyz/865.html" class="auto"><i class="glyphicon fontello-instagram icon text-md"></i><span>机场推荐</span></a></li><li> <a target="_blank" href="https://t.me/limboprossr" class="auto"><i class="glyphicon fontello-bell icon text-md"></i><span>电报频道</span></a></li><li> <a target="_blank" href="https://limbopro.xyz/search.html" class="auto"><i class="glyphicon fontello-search icon text-md"></i><span>毒奶搜索</span></a></li><li> <a target="_blank" href="https://github.com/limbopro" class="auto"><i class="glyphicon fontello-eye icon text-md"></i><span>托管仓库</span></a></li> <li class="line dk"></li>
 
 <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
 <span>组成</span>
@@ -220,7 +220,7 @@
 </a>
 </li>
 
-<li><a href="../category/master-care/index.html"><b class="badge pull-right">20</b><span>无主杂记</span></a></li><li><a href="../category/Bulletin/index.html"><b class="badge pull-right">5</b><span>运营通报</span></a></li><li><a href="../category/hot-movies/index.html"><b class="badge pull-right">18</b><span>追剧小组</span></a></li><li><a href="../category/films-recommend/index.html"><b class="badge pull-right">39</b><span>电影推荐</span></a></li><li><a href="../category/ssr/index.html"><b class="badge pull-right">19</b><span>科学上网</span></a></li><li><a href="../category/ssr-operation/index.html"><b class="badge pull-right">2</b><span>自学上网</span></a></li><li><a href="../category/tools/index.html"><b class="badge pull-right">27</b><span>实用工具</span></a></li><li><a href="../category/LNMP/index.html"><b class="badge pull-right">24</b><span>建站指南</span></a></li><li><a href="../category/Typecho/index.html"><b class="badge pull-right">19</b><span>网站优化</span></a></li><li><a href="../category/Toilet-reading/index.html"><b class="badge pull-right">8</b><span>厕所读物</span></a></li><li><a href="../category/software-skills/index.html"><b class="badge pull-right">23</b><span>软件百科</span></a></li><li><a href="../category/telegram-anecdote/index.html"><b class="badge pull-right">12</b><span>电报奇闻</span></a></li><li><a href="../category/instagram/index.html"><b class="badge pull-right">11</b><span>美图欣赏</span></a></li><li><a href="../category/sales/index.html"><b class="badge pull-right">1</b><span>怪薅羊毛</span></a></li><li><a href="../category/NSFW/index.html"><b class="badge pull-right">17</b><span>开车专栏</span></a></li><li><a href="../category/day-of-history/index.html"><b class="badge pull-right">1</b><span>历史时刻</span></a></li><li><a href="../category/AfterFQ/index.html"><b class="badge pull-right">1</b><span>毒奶世界</span></a></li><li><a href="../category/technologyart/index.html"><b class="badge pull-right">2</b><span>科技美学</span></a></li> </ul>
+<li><a href="https://limbopro.xyz/category/master-care/"><b class="badge pull-right">20</b><span>无主杂记</span></a></li><li><a href="https://limbopro.xyz/category/Bulletin/"><b class="badge pull-right">5</b><span>运营通报</span></a></li><li><a href="https://limbopro.xyz/category/hot-movies/"><b class="badge pull-right">18</b><span>追剧小组</span></a></li><li><a href="https://limbopro.xyz/category/films-recommend/"><b class="badge pull-right">39</b><span>电影推荐</span></a></li><li><a href="https://limbopro.xyz/category/ssr/"><b class="badge pull-right">19</b><span>科学上网</span></a></li><li><a href="https://limbopro.xyz/category/ssr-operation/"><b class="badge pull-right">2</b><span>自学上网</span></a></li><li><a href="https://limbopro.xyz/category/tools/"><b class="badge pull-right">27</b><span>实用工具</span></a></li><li><a href="https://limbopro.xyz/category/LNMP/"><b class="badge pull-right">24</b><span>建站指南</span></a></li><li><a href="https://limbopro.xyz/category/Typecho/"><b class="badge pull-right">19</b><span>网站优化</span></a></li><li><a href="https://limbopro.xyz/category/Toilet-reading/"><b class="badge pull-right">8</b><span>厕所读物</span></a></li><li><a href="https://limbopro.xyz/category/software-skills/"><b class="badge pull-right">23</b><span>软件百科</span></a></li><li><a href="https://limbopro.xyz/category/telegram-anecdote/"><b class="badge pull-right">12</b><span>电报奇闻</span></a></li><li><a href="https://limbopro.xyz/category/instagram/"><b class="badge pull-right">11</b><span>美图欣赏</span></a></li><li><a href="https://limbopro.xyz/category/sales/"><b class="badge pull-right">1</b><span>怪薅羊毛</span></a></li><li><a href="https://limbopro.xyz/category/NSFW/"><b class="badge pull-right">17</b><span>开车专栏</span></a></li><li><a href="https://limbopro.xyz/category/day-of-history/"><b class="badge pull-right">1</b><span>历史时刻</span></a></li><li><a href="https://limbopro.xyz/category/AfterFQ/"><b class="badge pull-right">1</b><span>毒奶世界</span></a></li><li><a href="https://limbopro.xyz/category/technologyart/"><b class="badge pull-right">2</b><span>科技美学</span></a></li> </ul>
 </li>
 
 <li>
@@ -239,11 +239,11 @@
 </a>
 </li>
 
-<li><a href="../1765.html"><span>归档</span></a></li>
-<li><a href="../6.html"><span>联系我们</span></a></li>
-<li><a href="../telegram.html"><span>电报</span></a></li>
-<li><a href="../865.html"><span>毒奶の机场专线</span></a></li>
-<li><a href="../cross.html"><span>说说</span></a></li>
+<li><a href="https://limbopro.xyz/1765.html"><span>归档</span></a></li>
+<li><a href="https://limbopro.xyz/6.html"><span>联系我们</span></a></li>
+<li><a href="https://limbopro.xyz/telegram.html"><span>电报</span></a></li>
+<li><a href="https://limbopro.xyz/865.html"><span>毒奶の机场专线</span></a></li>
+<li><a href="https://limbopro.xyz/cross.html"><span>说说</span></a></li>
 </ul>
 </li>
 
@@ -273,13 +273,13 @@
 
 <div id="left_footer" class="footer wrapper-xs text-center nav-xs lt">
 <div class="col-xs-6 no-padder">
-<a target="_blank" class="tinav" href="../feed/index.html" title="" data-toggle="tooltip" data-placement="top" data-original-title="文章RSS地址">
+<a target="_blank" class="tinav" href="https://limbopro.xyz/feed/" title="" data-toggle="tooltip" data-placement="top" data-original-title="文章RSS地址">
 <span class="block"><i class="fontello fontello-rss"></i></span>
 <small class="text-muted">文章</small>
 </a>
 </div>
 <div class="col-xs-6 no-padder">
-<a target="_blank" href="../feed/comments/index.html" title="" data-toggle="tooltip" data-placement="top" data-original-title="评论RSS地址">
+<a target="_blank" href="https://limbopro.xyz/feed/comments/" title="" data-toggle="tooltip" data-placement="top" data-original-title="评论RSS地址">
 <span class="block"><i class="fontello fontello-rss-square"></i></span>
 <small class="text-muted">评论</small>
 </a>
@@ -312,20 +312,20 @@
 <ul class="entry-meta text-muted list-inline m-b-none small
              post-head-icon">
 
-<li class="meta-author"><i class="fontello fontello-user" aria-hidden="true"></i><span class="sr-only">博主：</span> <a class="meta-value" href="../author/1/index.html" rel="author"> 毒奶</a></li>
+<li class="meta-author"><i class="fontello fontello-user" aria-hidden="true"></i><span class="sr-only">博主：</span> <a class="meta-value" href="https://limbopro.xyz/author/1/" rel="author"> 毒奶</a></li>
 
 <li class="meta-date"><i class="fontello fontello-clock-o" aria-hidden="true"></i>&nbsp;<span class="sr-only">发布时间：</span><time class="meta-value">2019 年 10 月 18 日</time></li>
 
-<li class="meta-views"><i class="fontello fontello-eye" aria-hidden="true"></i>&nbsp;<span class="meta-value">3837&nbsp;次浏览</span></li>
+<li class="meta-views"><i class="fontello fontello-eye" aria-hidden="true"></i>&nbsp;<span class="meta-value">3841&nbsp;次浏览</span></li>
 
 <li class="meta-word"><i class="fontello fontello-pencil"></i>&nbsp;<span class="meta-value">11501&nbsp;字数</span></li>
 
-<li class="meta-categories"><i class="fontello fontello-tags" aria-hidden="true"></i> <span class="sr-only">分类：</span> <span class="meta-value"><a href="../category/tools/index.html">实用工具</a> <a href="../category/software-skills/index.html">软件百科</a></span></li>
+<li class="meta-categories"><i class="fontello fontello-tags" aria-hidden="true"></i> <span class="sr-only">分类：</span> <span class="meta-value"><a href="https://limbopro.xyz/category/tools/">实用工具</a> <a href="https://limbopro.xyz/category/software-skills/">软件百科</a></span></li>
 </ul>
 </header>
 <div class="wrapper-md" id="post-panel">
 <ol class="breadcrumb bg-white b-a" itemscope=""><li>
-<a href="../index.html" itemprop="breadcrumb" title="返回首页" data-toggle="tooltip"><i class="fontello fontello-home" aria-hidden="true"></i>&nbsp;首页</a>
+<a href="https://limbopro.xyz/" itemprop="breadcrumb" title="返回首页" data-toggle="tooltip"><i class="fontello fontello-home" aria-hidden="true"></i>&nbsp;首页</a>
 </li><li class="active">正文&nbsp;&nbsp;</li>
 <div style="float:right;">
 分享到：
@@ -337,49 +337,49 @@
     }
     
    </style>
-<a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://limbopro.xyz/archives/3856.html&title=GitHub 新手指南，从入门到放弃（5分钟教学，你也可以拥有自己的仓库）以及 fork 后如何与上游仓库保持更新；&site=https://limbopro.xyz/" itemprop="breadcrumb" target="_blank" title="" data-toggle="tooltip" data-original-title="分享到QQ空间" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open(this.href, 'qzone-share', 'width=550,height=335');return false;" data-cf-modified-debf14f5485d1b24a303ae3b-=""><i style="font-size:15px;" class="iconfont icon-qzone" aria-hidden="true"></i></a>
-<a href="http://service.weibo.com/share/share.php?url=https://limbopro.xyz/archives/3856.html&title=GitHub 新手指南，从入门到放弃（5分钟教学，你也可以拥有自己的仓库）以及 fork 后如何与上游仓库保持更新；" target="_blank" itemprop="breadcrumb" title="" data-toggle="tooltip" data-original-title="分享到微博" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open(this.href, 'weibo-share', 'width=550,height=335');return false;" data-cf-modified-debf14f5485d1b24a303ae3b-=""><i style="font-size:15px;" class="fontello fontello-weibo" aria-hidden="true"></i></a></div></ol> 
+<a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://limbopro.xyz/archives/3856.html&title=GitHub 新手指南，从入门到放弃（5分钟教学，你也可以拥有自己的仓库）以及 fork 后如何与上游仓库保持更新；&site=https://limbopro.xyz/" itemprop="breadcrumb" target="_blank" title="" data-toggle="tooltip" data-original-title="分享到QQ空间" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open(this.href, 'qzone-share', 'width=550,height=335');return false;" data-cf-modified-a5a4bde4b697d1e125e3cb07-=""><i style="font-size:15px;" class="iconfont icon-qzone" aria-hidden="true"></i></a>
+<a href="http://service.weibo.com/share/share.php?url=https://limbopro.xyz/archives/3856.html&title=GitHub 新手指南，从入门到放弃（5分钟教学，你也可以拥有自己的仓库）以及 fork 后如何与上游仓库保持更新；" target="_blank" itemprop="breadcrumb" title="" data-toggle="tooltip" data-original-title="分享到微博" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open(this.href, 'weibo-share', 'width=550,height=335');return false;" data-cf-modified-a5a4bde4b697d1e125e3cb07-=""><i style="font-size:15px;" class="fontello fontello-weibo" aria-hidden="true"></i></a></div></ol> 
 <div id="postpage" class="blog-post">
 <article class="panel">
 
 
 <div id="post-content" class="wrapper-lg">
 <div class="entry-content l-h-2x">
-<p><img src="https://limbopro.xyz/usr/uploads/2019/10/2578344228.png" alt="github_logo.png" title="github_logo.png"></p><h2>本文概要</h2><p>就算是素人玩家，也可以玩到飞起。</p><p>1.Github 是什么，它可以做什么<br>2.开局新建一个账号<br>3.装备全靠捡<br>4.本地/远程/合并/更新/仓库就是一切</p><p>以上。</p><p>本文隶属于 <a href="../category/tools/index.html" target="_blank">实用工具</a>/<a href="../category/ssr/index.html" target="_blank">科学上网</a> 分类，点击分类名称可以查看更多相关文章；</p><h2>Github 是什么</h2><p>GitHub是通过Git进行版本控制的软件源代码托管服务平台，由GitHub公司的开发者Chris Wanstrath、PJ Hyett和Tom Preston-Werner使用Ruby on Rails编写而成。 GitHub同时提供付费账户和免费账户。 <a href="https://zh.wikipedia.org/zh-cn/GitHub" target="_blank">维基百科</a></p><h2>Github /Git 深入学习资料</h2><p>从素人到大神，一步到位。</p><h3>学习资料</h3><p><img src="https://limbopro.xyz/usr/uploads/2019/11/2219304508.png" alt="Github-入门" title="Github-入门"></p><p><a href="https://git-scm.com/book/zh/v1" target="_blank">https://git-scm.com/book/zh/v1</a> Git 工具中文使用指南；或可下载 <a href="https://github.com/progit/progit2-zh/releases/download/2.1.31/progit_v2.1.31.epub" target="_blank">.equb</a>丨<a href="https://github.com/progit/progit2-zh/releases/download/2.1.31/progit_v2.1.31.mobi" target="_blank">.mobi</a>丨<a href="https://github.com/progit/progit2-zh/releases/download/2.1.31/progit_v2.1.31.pdf" target="_blank">.pdf</a> 放在平板或手机 *重点学习 <br><a href="https://rogerdudler.github.io/git-guide/index.zh.html" target="_blank">http://rogerdudler.github.io/git-guide/index.zh.html</a> git - 简明指南 *素人入门学习指南</p><hr><h2>Github 可以用来做什么</h2><p><code>新手</code>可以把Github理解为<code>一个云盘</code>，托管你的<code>代码</code>文件甚至<code>种子</code>，可以上传图片/视频/任意格式支持（似乎是）。</p><h2>Github 注册</h2><h3>注册步骤及建议</h3><p>0.<a href="https://github.com/join?source=header" target="_blank">https://github.com/join?source=header</a>；<br>1.建议使用<code>Gmail</code>进行注册；<br>2.密码/<code>Password</code> 密码设置确保至少15个字符或至少8个字符（包括数字和小写字母）；<br>3.名字/<code>Username</code> 用户名只能包含字母数字字符或单个连字符，而不能以连字符开头或结尾；<br>4.如果英语不行可以使用谷歌翻译：<a href="https://translate.google.com/?hl=zh-CH" target="_blank">https://translate.google.com/?hl=zh-CH</a>；</p><h3>注册成功后</h3><p><img src="https://limbopro.xyz/usr/uploads/2019/10/74627969.png" alt="Github注册页面" title="Github注册页面"></p><p><strong>页面右上角点击你的<code>头像</code>可以分别看到：</strong></p><p><code>Your profile</code> / 你的个人资料<br><code>Your repositories</code> /你的仓库<br><code>Your projects</code> /你的项目<br><code>Your stars</code> /你加星（类似于favorite）的库或项目<br><code>Your gists</code> /我没用过</p><p>这个页面请稍微花些时间熟悉一下，这样基本上就可以掌握各个<code>模块</code>的<code>位置</code>；</p><h2>仓库的结构</h2><p><code>repositories</code> 即仓库集，大家口中所谓<code>Repo</code>即仓库；</p><p><a href="https://limbopro.xyz/usr/uploads/2019/11/2439006833.jpg" target="_blank"><img src="https://limbopro.xyz/usr/uploads/2019/11/2439006833.jpg" alt="Repo.jpg" title="Repo.jpg"></a></p><p>via <a href="https://github.com/limbopro/Script" target="_blank">https://github.com/limbopro/Script</a></p><p>如上图，一个仓库的<code>结构</code>及<code>功能</code>介绍（Fork后，也是自己的库）；点击库所属<code>用户名</code>，你可看到他的<code>所有公开仓库</code>资源，也可切换当前仓库的分支查看分支内容（很多大佬会隐藏主要分支，所以需要自己手动切换一下分支才能查看）；</p><h2>如何新建一个仓库</h2><p><code>Your repositories</code>，仓库，顾名思义就是存放东西的地方；<code>新手</code>可能一下子不需要理解它神奇的地方，只管先把它当做<code>云盘</code>即可。</p><h3>操作步骤</h3><p>1.头像左边的 <code>+ </code>号，点击<code>new repository</code>，即可开始新建；</p><p><img src="https://limbopro.xyz/usr/uploads/2019/10/4257564684.png" alt="创建仓库" title="创建仓库"></p><p>2.填写仓库名称<code>Repository name</code>及关于仓库的描述<code>Description</code>；<br>3.点击<code>Create repository</code> 按钮完成仓库的创建；<br>4.好了，开搞；</p><p><strong>功能介绍</strong><br><img src="https://limbopro.xyz/usr/uploads/2019/10/2957563075.png" alt="功能介绍" title="功能介绍"></p><p><code>Create new file</code> / 创建文件（*创建新文件时在文件名的后面加一斜杆<code>/</code>即可把该文件变成文件夹）</p><p><code>Upload file</code> / 上传文件（*似乎可以上传任意格式文件，限制单个文件100MB以内，关于大小及磁盘配额等相关问题可参考：<a href="https://help.github.com/cn/articles/what-is-my-disk-quota" target="_blank">https://help.github.com/cn/articles/what-is-my-disk-quota</a>）</p><p><code>Find file</code> / 查找文件</p><h3>如何编辑/下载某个文件</h3><p>1.进入该仓库 <code>Repository</code>，找到该文件，点击；</p><p><img src="https://limbopro.xyz/usr/uploads/2019/10/2078344368.png" alt="ConnersHua/Profiles" title="ConnersHua/Profiles"></p><h4>下载文件</h4><p><img src="https://limbopro.xyz/usr/uploads/2019/10/684380052.png" alt="下载按钮" title="下载按钮"></p><p>上图，我从花花那里Fork了一个仓库，里面有各种软体的分流规则；这里以，<code>Quantumult.conf</code>举例，找到<code>RAW</code>或<code>DOWNLOAD</code>按钮，点击，即可跳转到<code>下载链接</code>；</p><p>该<code>下载链接</code>是可以直接外部调用的；他们大都以<code>raw.githubusercontent.com</code>开头，举例<code>Quantumult.conf</code>的下载链接是<code>https://raw.githubusercontent.com/limbopro/Profiles/master/limbopro/Quantumult.conf</code>，所对应的仓库位置是<code>https://github.com/limbopro/Profiles/blob/master/limbopro/Quantumult.conf</code>；（发现小小的区别了吗？如果别人给你<code>下载链接</code>，你可以反向找到它所在仓库的位置，并进行<code>Fork</code>，<code>Star</code>等操作；）</p><h4>编辑文件</h4><p><img src="https://limbopro.xyz/usr/uploads/2019/10/3021452352.png" alt="编辑按钮" title="编辑按钮"></p><p>如需编辑，找到那个类似编辑<code>铅笔</code>的图标按钮；</p><p>以上；<br>新建仓库的功能基本上就介绍这么多；</p><h2>fork 他人仓库</h2><p>1.<code>Fork</code>，进入任意他人的仓库，找到<code>Fork</code>按钮，点击即可；</p><p><img src="https://limbopro.xyz/usr/uploads/2019/10/1364312659.png" alt="Zure" title="Zure"></p><p>2.以 <a href="https://github.com/zealson/Zure" target="_blank">https://github.com/zealson/Zure</a> 仓库举例；</p><p><img src="https://limbopro.xyz/usr/uploads/2019/10/769585660.png" alt="Fork" title="Fork"></p><p>3.即刻拥有；</p><p><img src="https://limbopro.xyz/usr/uploads/2019/10/2899281794.png" alt="zure复制" title="zure复制"></p><h3>通俗释疑</h3><p><code>Watch</code>，字面意思，观察，查看；<br><code>Star</code>，类似关注或点赞；</p><p><code>Fork</code>，相当于你自己有了一份原项目的拷贝，当然这个拷贝只是针对当时的项目文件，如果后续原项目文件发生改变，你必须通过其他的方式去同步。（后文有说；）</p><p>Github 相关基础知识介绍完毕。</p><p>以上。</p><hr><p>以下教程如有疑问可先预习 <a href="https://rogerdudler.github.io/git-guide/index.zh.html%20git" target="_blank">git - 简明指南</a> 或 <a href="https://git-scm.com/book/zh/v1" target="_blank">Git 工具中文使用指南</a> ，理解会更透彻。</p><h2>fork 后如何同步上游仓库新更新内容？</h2><p>Github进行fork后如何与原仓库同步：重新fork很省事，但不如反复练习版本合并。</p><p>Fork 了一些著名的仓库后，<code>上游仓库</code>近期又有了更新该怎么使fork后的<code>仓库</code>与<code>上游仓库</code>保持同步，而不会丢失对本地仓库做的修改？如下：</p><h3>24.11.2019 更新</h3><h3>安装 Git</h3><p>以在Mac 操作下举例，先安装 <a href="https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git" target="_blank">Git</a> ，然后打开<code>终端</code>应用程序；Windows 系统请先安装 <a href="https://git-scm.com/downloads" target="_blank">Git Bash</a>；最后 <code>PUSH</code> 的时候会需要你输入你的Github 用户名（是什么？参考本文关于 <code>仓库结构</code> 的说明），以及登录密码；</p><p>参考：<a href="https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git" target="_blank">1.5 起步 - 安装 Git</a></p><h3>克隆仓库到本地</h3><p>又称作<code>检出仓库</code>：可参考：<a href="https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%9A%84%E4%BD%BF%E7%94%A8" target="_blank">2.5 Git 基础 - 远程仓库的使用</a>；</p><p><img src="https://limbopro.xyz/usr/uploads/2019/11/171590001.png" alt="Clone-Remote-2-local.png" title="Clone-Remote-2-local.png"></p><pre><code><a href="../cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6b1904041f2b0704080a070304181f">[email&#160;protected]</a>:/home/#  git clone https://github.com/limbopro/Script.git</code></pre><p>注意：<code>https://github.com/limbopro/Script.git</code> 是我 fork 后的<code>远程仓库</code>地址，你fork后的<code>远程仓库</code>地址请以你的为准；</p><h3>检查远程仓库配置</h3><p>List the current configured remote repository for your fork.<br>列出您的fork的当前配置的远程仓库及其路径；</p><pre><code><a href="../cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e4968b8b90a4888b8785888c8b9790">[email&#160;protected]</a>:/home/Script# git remote -v #您的fork的当前配置的远程仓库。
+<p><img src="https://limbopro.xyz/usr/uploads/2019/10/2578344228.png" alt="github_logo.png" title="github_logo.png"></p><h2>本文概要</h2><p>就算是素人玩家，也可以玩到飞起。</p><p>1.Github 是什么，它可以做什么<br>2.开局新建一个账号<br>3.装备全靠捡<br>4.本地/远程/合并/更新/仓库就是一切</p><p>以上。</p><p>本文隶属于 <a href="https://limbopro.xyz/category/tools/" target="_blank">实用工具</a>/<a href="https://limbopro.xyz/category/ssr/" target="_blank">科学上网</a> 分类，点击分类名称可以查看更多相关文章；</p><h2>Github 是什么</h2><p>GitHub是通过Git进行版本控制的软件源代码托管服务平台，由GitHub公司的开发者Chris Wanstrath、PJ Hyett和Tom Preston-Werner使用Ruby on Rails编写而成。 GitHub同时提供付费账户和免费账户。 <a href="https://zh.wikipedia.org/zh-cn/GitHub" target="_blank">维基百科</a></p><h2>Github /Git 深入学习资料</h2><p>从素人到大神，一步到位。</p><h3>学习资料</h3><p><img src="https://limbopro.xyz/usr/uploads/2019/11/2219304508.png" alt="Github-入门" title="Github-入门"></p><p><a href="https://git-scm.com/book/zh/v1" target="_blank">https://git-scm.com/book/zh/v1</a> Git 工具中文使用指南；或可下载 <a href="https://github.com/progit/progit2-zh/releases/download/2.1.31/progit_v2.1.31.epub" target="_blank">.equb</a>丨<a href="https://github.com/progit/progit2-zh/releases/download/2.1.31/progit_v2.1.31.mobi" target="_blank">.mobi</a>丨<a href="https://github.com/progit/progit2-zh/releases/download/2.1.31/progit_v2.1.31.pdf" target="_blank">.pdf</a> 放在平板或手机 *重点学习 <br><a href="https://rogerdudler.github.io/git-guide/index.zh.html" target="_blank">http://rogerdudler.github.io/git-guide/index.zh.html</a> git - 简明指南 *素人入门学习指南</p><hr><h2>Github 可以用来做什么</h2><p><code>新手</code>可以把Github理解为<code>一个云盘</code>，托管你的<code>代码</code>文件甚至<code>种子</code>，可以上传图片/视频/任意格式支持（似乎是）。</p><h2>Github 注册</h2><h3>注册步骤及建议</h3><p>0.<a href="https://github.com/join?source=header" target="_blank">https://github.com/join?source=header</a>；<br>1.建议使用<code>Gmail</code>进行注册；<br>2.密码/<code>Password</code> 密码设置确保至少15个字符或至少8个字符（包括数字和小写字母）；<br>3.名字/<code>Username</code> 用户名只能包含字母数字字符或单个连字符，而不能以连字符开头或结尾；<br>4.如果英语不行可以使用谷歌翻译：<a href="https://translate.google.com/?hl=zh-CH" target="_blank">https://translate.google.com/?hl=zh-CH</a>；</p><h3>注册成功后</h3><p><img src="https://limbopro.xyz/usr/uploads/2019/10/74627969.png" alt="Github注册页面" title="Github注册页面"></p><p><strong>页面右上角点击你的<code>头像</code>可以分别看到：</strong></p><p><code>Your profile</code> / 你的个人资料<br><code>Your repositories</code> /你的仓库<br><code>Your projects</code> /你的项目<br><code>Your stars</code> /你加星（类似于favorite）的库或项目<br><code>Your gists</code> /我没用过</p><p>这个页面请稍微花些时间熟悉一下，这样基本上就可以掌握各个<code>模块</code>的<code>位置</code>；</p><h2>仓库的结构</h2><p><code>repositories</code> 即仓库集，大家口中所谓<code>Repo</code>即仓库；</p><p><a href="https://limbopro.xyz/usr/uploads/2019/11/2439006833.jpg" target="_blank"><img src="https://limbopro.xyz/usr/uploads/2019/11/2439006833.jpg" alt="Repo.jpg" title="Repo.jpg"></a></p><p>via <a href="https://github.com/limbopro/Script" target="_blank">https://github.com/limbopro/Script</a></p><p>如上图，一个仓库的<code>结构</code>及<code>功能</code>介绍（Fork后，也是自己的库）；点击库所属<code>用户名</code>，你可看到他的<code>所有公开仓库</code>资源，也可切换当前仓库的分支查看分支内容（很多大佬会隐藏主要分支，所以需要自己手动切换一下分支才能查看）；</p><h2>如何新建一个仓库</h2><p><code>Your repositories</code>，仓库，顾名思义就是存放东西的地方；<code>新手</code>可能一下子不需要理解它神奇的地方，只管先把它当做<code>云盘</code>即可。</p><h3>操作步骤</h3><p>1.头像左边的 <code>+ </code>号，点击<code>new repository</code>，即可开始新建；</p><p><img src="https://limbopro.xyz/usr/uploads/2019/10/4257564684.png" alt="创建仓库" title="创建仓库"></p><p>2.填写仓库名称<code>Repository name</code>及关于仓库的描述<code>Description</code>；<br>3.点击<code>Create repository</code> 按钮完成仓库的创建；<br>4.好了，开搞；</p><p><strong>功能介绍</strong><br><img src="https://limbopro.xyz/usr/uploads/2019/10/2957563075.png" alt="功能介绍" title="功能介绍"></p><p><code>Create new file</code> / 创建文件（*创建新文件时在文件名的后面加一斜杆<code>/</code>即可把该文件变成文件夹）</p><p><code>Upload file</code> / 上传文件（*似乎可以上传任意格式文件，限制单个文件100MB以内，关于大小及磁盘配额等相关问题可参考：<a href="https://help.github.com/cn/articles/what-is-my-disk-quota" target="_blank">https://help.github.com/cn/articles/what-is-my-disk-quota</a>）</p><p><code>Find file</code> / 查找文件</p><h3>如何编辑/下载某个文件</h3><p>1.进入该仓库 <code>Repository</code>，找到该文件，点击；</p><p><img src="https://limbopro.xyz/usr/uploads/2019/10/2078344368.png" alt="ConnersHua/Profiles" title="ConnersHua/Profiles"></p><h4>下载文件</h4><p><img src="https://limbopro.xyz/usr/uploads/2019/10/684380052.png" alt="下载按钮" title="下载按钮"></p><p>上图，我从花花那里Fork了一个仓库，里面有各种软体的分流规则；这里以，<code>Quantumult.conf</code>举例，找到<code>RAW</code>或<code>DOWNLOAD</code>按钮，点击，即可跳转到<code>下载链接</code>；</p><p>该<code>下载链接</code>是可以直接外部调用的；他们大都以<code>raw.githubusercontent.com</code>开头，举例<code>Quantumult.conf</code>的下载链接是<code>https://raw.githubusercontent.com/limbopro/Profiles/master/limbopro/Quantumult.conf</code>，所对应的仓库位置是<code>https://github.com/limbopro/Profiles/blob/master/limbopro/Quantumult.conf</code>；（发现小小的区别了吗？如果别人给你<code>下载链接</code>，你可以反向找到它所在仓库的位置，并进行<code>Fork</code>，<code>Star</code>等操作；）</p><h4>编辑文件</h4><p><img src="https://limbopro.xyz/usr/uploads/2019/10/3021452352.png" alt="编辑按钮" title="编辑按钮"></p><p>如需编辑，找到那个类似编辑<code>铅笔</code>的图标按钮；</p><p>以上；<br>新建仓库的功能基本上就介绍这么多；</p><h2>fork 他人仓库</h2><p>1.<code>Fork</code>，进入任意他人的仓库，找到<code>Fork</code>按钮，点击即可；</p><p><img src="https://limbopro.xyz/usr/uploads/2019/10/1364312659.png" alt="Zure" title="Zure"></p><p>2.以 <a href="https://github.com/zealson/Zure" target="_blank">https://github.com/zealson/Zure</a> 仓库举例；</p><p><img src="https://limbopro.xyz/usr/uploads/2019/10/769585660.png" alt="Fork" title="Fork"></p><p>3.即刻拥有；</p><p><img src="https://limbopro.xyz/usr/uploads/2019/10/2899281794.png" alt="zure复制" title="zure复制"></p><h3>通俗释疑</h3><p><code>Watch</code>，字面意思，观察，查看；<br><code>Star</code>，类似关注或点赞；</p><p><code>Fork</code>，相当于你自己有了一份原项目的拷贝，当然这个拷贝只是针对当时的项目文件，如果后续原项目文件发生改变，你必须通过其他的方式去同步。（后文有说；）</p><p>Github 相关基础知识介绍完毕。</p><p>以上。</p><hr><p>以下教程如有疑问可先预习 <a href="https://rogerdudler.github.io/git-guide/index.zh.html%20git" target="_blank">git - 简明指南</a> 或 <a href="https://git-scm.com/book/zh/v1" target="_blank">Git 工具中文使用指南</a> ，理解会更透彻。</p><h2>fork 后如何同步上游仓库新更新内容？</h2><p>Github进行fork后如何与原仓库同步：重新fork很省事，但不如反复练习版本合并。</p><p>Fork 了一些著名的仓库后，<code>上游仓库</code>近期又有了更新该怎么使fork后的<code>仓库</code>与<code>上游仓库</code>保持同步，而不会丢失对本地仓库做的修改？如下：</p><h3>24.11.2019 更新</h3><h3>安装 Git</h3><p>以在Mac 操作下举例，先安装 <a href="https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git" target="_blank">Git</a> ，然后打开<code>终端</code>应用程序；Windows 系统请先安装 <a href="https://git-scm.com/downloads" target="_blank">Git Bash</a>；最后 <code>PUSH</code> 的时候会需要你输入你的Github 用户名（是什么？参考本文关于 <code>仓库结构</code> 的说明），以及登录密码；</p><p>参考：<a href="https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git" target="_blank">1.5 起步 - 安装 Git</a></p><h3>克隆仓库到本地</h3><p>又称作<code>检出仓库</code>：可参考：<a href="https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%9A%84%E4%BD%BF%E7%94%A8" target="_blank">2.5 Git 基础 - 远程仓库的使用</a>；</p><p><img src="https://limbopro.xyz/usr/uploads/2019/11/171590001.png" alt="Clone-Remote-2-local.png" title="Clone-Remote-2-local.png"></p><pre><code><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b1c3dedec5f1ddded2d0ddd9dec2c5">[email&#160;protected]</a>:/home/#  git clone https://github.com/limbopro/Script.git</code></pre><p>注意：<code>https://github.com/limbopro/Script.git</code> 是我 fork 后的<code>远程仓库</code>地址，你fork后的<code>远程仓库</code>地址请以你的为准；</p><h3>检查远程仓库配置</h3><p>List the current configured remote repository for your fork.<br>列出您的fork的当前配置的远程仓库及其路径；</p><pre><code><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f98b96968db995969a989591968a8d">[email&#160;protected]</a>:/home/Script# git remote -v #您的fork的当前配置的远程仓库。
 origin  https://github.com/limbopro/Script.git (fetch)
-origin  https://github.com/limbopro/Script.git (push)</code></pre><p>如果只有上面2行，说明你未设置 <code>upstream</code> （中文叫：上游仓库/代码库）。</p><h3>配置上游仓库</h3><p>Specify a new remote upstream repository that will be synced with the fork.<br><code>上游仓库</code>一般指定为我们所<code>Fork</code>的对象；例如在这里的<code>上游仓库</code>指的是：<a href="https://github.com/NobyDa/Script.git" target="_blank">https://github.com/NobyDa/Script.git</a>；</p><pre><code><a href="../cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="86f4e9e9f2c6eae9e5e7eaeee9f5f2">[email&#160;protected]</a>:/home/Script# git remote add upstream https://github.com/NobyDa/Script.git</code></pre><h3>检查远程仓库配置</h3><p>Verify the new upstream repository you've specified for your fork.<br>确认<code>上游仓库</code>是否配置完毕；</p><pre><code><a href="../cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a1d3ceced5e1cdcec2c0cdc9ced2d5">[email&#160;protected]</a>:/home/Script# git remote -v
+origin  https://github.com/limbopro/Script.git (push)</code></pre><p>如果只有上面2行，说明你未设置 <code>upstream</code> （中文叫：上游仓库/代码库）。</p><h3>配置上游仓库</h3><p>Specify a new remote upstream repository that will be synced with the fork.<br><code>上游仓库</code>一般指定为我们所<code>Fork</code>的对象；例如在这里的<code>上游仓库</code>指的是：<a href="https://github.com/NobyDa/Script.git" target="_blank">https://github.com/NobyDa/Script.git</a>；</p><pre><code><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0f7d60607b4f63606c6e6367607c7b">[email&#160;protected]</a>:/home/Script# git remote add upstream https://github.com/NobyDa/Script.git</code></pre><h3>检查远程仓库配置</h3><p>Verify the new upstream repository you've specified for your fork.<br>确认<code>上游仓库</code>是否配置完毕；</p><pre><code><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a1d3ceced5e1cdcec2c0cdc9ced2d5">[email&#160;protected]</a>:/home/Script# git remote -v
 origin  https://github.com/limbopro/Script.git (fetch)
 origin  https://github.com/limbopro/Script.git (push)
 upstream        https://github.com/NobyDa/Script.git (fetch)
-upstream        https://github.com/NobyDa/Script.git (push)</code></pre><h3>拉取上游仓库更新</h3><p>Fetch the branches and their respective commits from the upstream repository. Commits to master will be stored in a local branch, upstream/master.</p><p>抓取<code>上游仓库</code>的更新到本地，并提交这些更新内容到本地仓库。</p><pre><code><a href="../cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="43312c2c37032f2c20222f2b2c3037">[email&#160;protected]</a>:/home/Script# git fetch upstream
+upstream        https://github.com/NobyDa/Script.git (push)</code></pre><h3>拉取上游仓库更新</h3><p>Fetch the branches and their respective commits from the upstream repository. Commits to master will be stored in a local branch, upstream/master.</p><p>抓取<code>上游仓库</code>的更新到本地，并提交这些更新内容到本地仓库。</p><pre><code><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="51233e3e25113d3e32303d393e2225">[email&#160;protected]</a>:/home/Script# git fetch upstream
 remote: Enumerating objects: 29, done.
 remote: Counting objects: 100% (29/29), done.
 remote: Compressing objects: 100% (4/4), done.
 remote: Total 20 (delta 16), reused 20 (delta 16), pack-reused 0
 展开对象中: 100% (20/20), 完成.
 来自 https://github.com/NobyDa/Script
-   abd7a76..2291d5d  master     -&gt; upstream/master</code></pre><h3>切换到主分支</h3><p>Check out your fork's local master branch.</p><p>切换到您的fork的本地主分支；可参考：<a href="https://git-scm.com/book/zh/v1/Git-%E5%88%86%E6%94%AF-%E4%BD%95%E8%B0%93%E5%88%86%E6%94%AF" target="_blank">Git 分支 - 何谓分支</a> 以及 <a href="https://git-scm.com/book/zh/v1/Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E7%9A%84%E6%96%B0%E5%BB%BA%E4%B8%8E%E5%90%88%E5%B9%B6" target="_blank">Git 分支 - 分支的新建与合并</a>；</p><pre><code><a href="../cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="483a27273c0824272b29242027">[email&#160;protected]</a>st:/home/Script# git branch #列出当前有多少分支
+   abd7a76..2291d5d  master     -&gt; upstream/master</code></pre><h3>切换到主分支</h3><p>Check out your fork's local master branch.</p><p>切换到您的fork的本地主分支；可参考：<a href="https://git-scm.com/book/zh/v1/Git-%E5%88%86%E6%94%AF-%E4%BD%95%E8%B0%93%E5%88%86%E6%94%AF" target="_blank">Git 分支 - 何谓分支</a> 以及 <a href="https://git-scm.com/book/zh/v1/Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E7%9A%84%E6%96%B0%E5%BB%BA%E4%B8%8E%E5%90%88%E5%B9%B6" target="_blank">Git 分支 - 分支的新建与合并</a>；</p><pre><code><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="bcced3d3c8fcd0d3dfddd0d4d3cfc8">[email&#160;protected]</a>:/home/Script# git branch #列出当前有多少分支
 * master
-<a href="../cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e5978a8a91a5898a8684898d8a9691">[email&#160;protected]</a>:/home/Script# git checkout master #切换到 master 主分支
+<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2755484853674b4844464b4f485453">[email&#160;protected]</a>:/home/Script# git checkout master #切换到 master 主分支
 已经位于 'master'
-您的分支与上游分支 'origin/master' 一致</code></pre><h3>合并上游更新</h3><p>Merge the changes from upstream/master into your local master branch. This brings your fork's master branch into sync with the upstream repository, without losing your local changes.</p><p>将更改从上游/主服务器合并到本地主服务器分支。 这使fork的master分支与上游仓库同步，而不会丢失本地更改。</p><pre><code><a href="../cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4c3e2323380c20232f2d2024233f38">[email&#160;protected]</a>:/home/Script# git merge upstream/master
+您的分支与上游分支 'origin/master' 一致</code></pre><h3>合并上游更新</h3><p>Merge the changes from upstream/master into your local master branch. This brings your fork's master branch into sync with the upstream repository, without losing your local changes.</p><p>将更改从上游/主服务器合并到本地主服务器分支。 这使fork的master分支与上游仓库同步，而不会丢失本地更改。</p><pre><code><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c6b4a9a9b286aaa9a5a7aaaea9b5b2">[email&#160;protected]</a>:/home/Script# git merge upstream/master
 Merge made by the 'recursive' strategy.
  Surge/JS/KuWoMusicDownload.js | 9 +++++++--
- 1 file changed, 7 insertions(+), 2 deletions(-)</code></pre><h3>推送合并后的更新</h3><p>PUSH 合并后的更新到远程 master 分支上，PUSH 后，查看你的远程仓库即可看到已经把<code>上游仓库</code>的更新合并到自己<code>Fork</code>后的仓库了；</p><pre><code><a href="../cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="70021f1f04301c1f13111c181f0304">[email&#160;protected]</a>:/home/Script# git push origin master
+ 1 file changed, 7 insertions(+), 2 deletions(-)</code></pre><h3>推送合并后的更新</h3><p>PUSH 合并后的更新到远程 master 分支上，PUSH 后，查看你的远程仓库即可看到已经把<code>上游仓库</code>的更新合并到自己<code>Fork</code>后的仓库了；</p><pre><code><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6f1d00001b2f03000c0e0307001c1b">[email&#160;protected]</a>:/home/Script# git push origin master
 Username for 'https://github.com': limbopro 
-Password for 'https://<a href="../cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="325e5b5f505d42405d72555b465a47501c515d5f">[email&#160;protected]</a>': 
+Password for 'https://<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1b77727679746b69745b7c726f736e7935787476">[email&#160;protected]</a>': 
 对象计数中: 4, 完成.
 压缩对象中: 100% (4/4), 完成.
 写入对象中: 100% (4/4), 426 bytes | 426.00 KiB/s, 完成.
 Total 4 (delta 3), reused 0 (delta 0)
 remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
 To https://github.com/limbopro/Script.git
-   3736a26..78745c8  master -&gt; master</code></pre><h3>小问题</h3><p>fork 后如何同步上游仓库新更新内容到此结束；如果出现问题不能<code>合并更新</code>，或<code>PUSH</code>，可在执行 <code>git push</code> 前运行 <code>git status</code> 命令查看哪些文件已修改但未提交到暂存区，并使用 <code>git add [finename]</code> 将这些文件的修改状态进行跟踪；完全指南可参考：<a href="https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E8%AE%B0%E5%BD%95%E6%AF%8F%E6%AC%A1%E6%9B%B4%E6%96%B0%E5%88%B0%E4%BB%93%E5%BA%93" target="_blank">2.2 Git 基础 - 记录每次更新到仓库</a></p><pre><code><a href="../cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2e5c41415a6e42414d4f4246415d5a">[email&#160;protected]</a>:/home/Script# git status
+   3736a26..78745c8  master -&gt; master</code></pre><h3>小问题</h3><p>fork 后如何同步上游仓库新更新内容到此结束；如果出现问题不能<code>合并更新</code>，或<code>PUSH</code>，可在执行 <code>git push</code> 前运行 <code>git status</code> 命令查看哪些文件已修改但未提交到暂存区，并使用 <code>git add [finename]</code> 将这些文件的修改状态进行跟踪；完全指南可参考：<a href="https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E8%AE%B0%E5%BD%95%E6%AF%8F%E6%AC%A1%E6%9B%B4%E6%96%B0%E5%88%B0%E4%BB%93%E5%BA%93" target="_blank">2.2 Git 基础 - 记录每次更新到仓库</a></p><pre><code><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1b6974746f5b7774787a777374686f">[email&#160;protected]</a>:/home/Script# git status
 位于分支 master
 您的分支领先 'origin/master' 共 2 个提交。
   （使用 &quot;git push&quot; 来发布您的本地提交）
 
-无文件要提交，干净的工作</code></pre><p>更多疑问参阅：<a href="https://git-scm.com/book/zh/v1/Git-%E5%88%86%E6%94%AF" target="_blank">Git 分支</a> 或本文 <a href="3856.html#Github/Git%E6%B7%B1%E5%85%A5%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99" target="_blank">Github /Git 深入学习资料</a> 部分；</p><p>以上。</p><h2>Git 常用命令集</h2><pre><code>检出仓库：$ git clone git://github.com/limbopro/Script.git
+无文件要提交，干净的工作</code></pre><p>更多疑问参阅：<a href="https://git-scm.com/book/zh/v1/Git-%E5%88%86%E6%94%AF" target="_blank">Git 分支</a> 或本文 <a href="https://limbopro.xyz/archives/3856.html#Github/Git%E6%B7%B1%E5%85%A5%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99" target="_blank">Github /Git 深入学习资料</a> 部分；</p><p>以上。</p><h2>Git 常用命令集</h2><pre><code>检出仓库：$ git clone git://github.com/limbopro/Script.git
 查看远程仓库：$ git remote -v #刚刚已经用过了
 添加远程仓库：$ git remote add [name] [url] #刚刚已经用过了
 删除远程仓库：$ git remote rm [name]
@@ -418,7 +418,7 @@ git revert HEAD # 恢复最后一次提交的状态
 **查看文件diff**
 git diff &lt;file&gt; # 比较当前文件和暂存区文件差异 git diff
 git diff &lt; i d1&gt; &lt;id2&gt; # 比较两次提交之间的差异
-</code></pre><p>via <a href="https://juejin.im/post/5cdea2d5f265da1b91636122" target="_blank">Git命令详解和实战技巧</a> / <a href="https://blog.csdn.net/yidu_fanchen/article/details/78663359" target="_blank">Git中文件的修改与提交</a></p><h2>Faq及附注</h2><p>1.<a href="https://www.zhihu.com/question/28676261" target="_blank">Github下fork后如何同步源的新更新内容？</a>；（中文教程参考）<br>1.0.<a href="https://github.com/selfteaching/the-craft-of-selfteaching/issues/67" target="_blank">Github进行fork后如何与原仓库同步：重新fork很省事，但不如反复练习版本合并</a> （较为清晰）</p><p>1.1.<a href="https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/configuring-a-remote-for-a-fork" target="_blank">Configuring a remote for a fork</a>；（官方）<br>1.2.<a href="https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork" target="_blank">Syncing a fork</a>；（官方）<br>*以上 1.1-1.2为GitHub官方的帮助文档中关于Fork同步的说明；</p><p>2.<a href="https://blog.csdn.net/arkblue/article/details/9568249" target="_blank">git 查看远程分支、本地分支、创建分支、把分支推到远程repository、删除本地分支</a>；</p><h2>联系主理人</h2><p>1.关注频道 <a href="https://t.me/limboprossr" target="_blank">https://t.me/limboprossr</a> 不失联；<br>2.<code>毒奶粉</code>们（我管我的Fans）可联系 <a href="https://t.me/limboprobot" target="_blank">TG机器人</a> 或发送 邮件 获取帮助；</p><p>3.或点击<code>本页面右下角</code>的聊天按钮联系；</p><h2>附注</h2><p><a href="https://help.github.com/cn" target="_blank">https://help.github.com/cn</a> 中文文档</p><hr class="content-copyright" style="margin-top:50px" /><blockquote class="content-copyright" style="font-style:normal"><p class="content-copyright">版权属于：<a class="content-copyright" target="_blank" href="https://t.me/limboprobot">http://t.me/limboprobot</a> TG 毒奶博主 Julia； <br>联系我们： <a class="content-copyright" target="_blank" href="../6.html">https://limbopro.xyz/6.html</a> 投稿或反馈或转载文章或交换友链； <br>电报频道： <a class="content-copyright" target="_blank" href="https://t.me/limboprossr">https://t.me/limboprossr</a> 及时收讯不失联； <br>必备技能： <a class="content-copyright" target="_blank" href="2910.html">https://limbopro.xyz/archives/2910.html</a> 如何访问任意被墙域名； <br>网站镜像： <a class="content-copyright" target="_blank" href="https://limbopro.github.io">https://limbopro.github.io</a> 每月更新；</p><p class="content-copyright">本文链接：<a class="content-copyright" href="3856.html">https://limbopro.xyz/archives/3856.html</a></p><p class="content-copyright">版权声明：<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本文采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a> 进行许可，转载请附上原文出处链接和本声明。</p></blockquote> </div>
+</code></pre><p>via <a href="https://juejin.im/post/5cdea2d5f265da1b91636122" target="_blank">Git命令详解和实战技巧</a> / <a href="https://blog.csdn.net/yidu_fanchen/article/details/78663359" target="_blank">Git中文件的修改与提交</a></p><h2>Faq及附注</h2><p>1.<a href="https://www.zhihu.com/question/28676261" target="_blank">Github下fork后如何同步源的新更新内容？</a>；（中文教程参考）<br>1.0.<a href="https://github.com/selfteaching/the-craft-of-selfteaching/issues/67" target="_blank">Github进行fork后如何与原仓库同步：重新fork很省事，但不如反复练习版本合并</a> （较为清晰）</p><p>1.1.<a href="https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/configuring-a-remote-for-a-fork" target="_blank">Configuring a remote for a fork</a>；（官方）<br>1.2.<a href="https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork" target="_blank">Syncing a fork</a>；（官方）<br>*以上 1.1-1.2为GitHub官方的帮助文档中关于Fork同步的说明；</p><p>2.<a href="https://blog.csdn.net/arkblue/article/details/9568249" target="_blank">git 查看远程分支、本地分支、创建分支、把分支推到远程repository、删除本地分支</a>；</p><h2>联系主理人</h2><p>1.关注频道 <a href="https://t.me/limboprossr" target="_blank">https://t.me/limboprossr</a> 不失联；<br>2.<code>毒奶粉</code>们（我管我的Fans）可联系 <a href="https://t.me/limboprobot" target="_blank">TG机器人</a> 或发送 邮件 获取帮助；</p><p>3.或点击<code>本页面右下角</code>的聊天按钮联系；</p><h2>附注</h2><p><a href="https://help.github.com/cn" target="_blank">https://help.github.com/cn</a> 中文文档</p><hr class="content-copyright" style="margin-top:50px" /><blockquote class="content-copyright" style="font-style:normal"><p class="content-copyright">版权属于：<a class="content-copyright" target="_blank" href="https://t.me/limboprobot">http://t.me/limboprobot</a> TG 毒奶博主 Julia； <br>联系我们： <a class="content-copyright" target="_blank" href="https://limbopro.xyz/6.html">https://limbopro.xyz/6.html</a> 投稿或反馈或转载文章或交换友链； <br>电报频道： <a class="content-copyright" target="_blank" href="https://t.me/limboprossr">https://t.me/limboprossr</a> 及时收讯不失联； <br>必备技能： <a class="content-copyright" target="_blank" href="https://limbopro.xyz/archives/2910.html">https://limbopro.xyz/archives/2910.html</a> 如何访问任意被墙域名； <br>网站镜像： <a class="content-copyright" target="_blank" href="https://limbopro.github.io">https://limbopro.github.io</a> 每月更新；</p><p class="content-copyright">本文链接：<a class="content-copyright" href="https://limbopro.xyz/archives/3856.html">https://limbopro.xyz/archives/3856.html</a></p><p class="content-copyright">版权声明：<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本文采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a> 进行许可，转载请附上原文出处链接和本声明。</p></blockquote> </div>
 
 <div class="show-foot">
 <div class="notebook">
@@ -435,13 +435,13 @@ git diff &lt; i d1&gt; &lt;id2&gt; # 比较两次提交之间的差异
 
 <nav class="m-t-lg m-b-lg">
 <ul class="pager">
-<li class="next"> <a href="3846.html" title="QuantumultX 进阶教程：组策略&amp;分流规则&amp;自定义图标的进阶玩法" data-toggle="tooltip"> 下一篇 </a></li> <li class="previous"> <a href="3892.html" title="致命女人 Why Women Kill （第1季）完结" data-toggle="tooltip"> 上一篇 </a></li>
+<li class="next"> <a href="https://limbopro.xyz/archives/3846.html" title="QuantumultX 进阶教程：组策略&amp;分流规则&amp;自定义图标的进阶玩法" data-toggle="tooltip"> 下一篇 </a></li> <li class="previous"> <a href="https://limbopro.xyz/archives/3892.html" title="致命女人 Why Women Kill （第1季）完结" data-toggle="tooltip"> 上一篇 </a></li>
 </ul>
 </nav>
 
-<div id="disqus_thread"><script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="debf14f5485d1b24a303ae3b-text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="adf24965-dd03-45f8-9fdf-3f1e953df737";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script></div>
+<div id="disqus_thread"><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="a5a4bde4b697d1e125e3cb07-text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="adf24965-dd03-45f8-9fdf-3f1e953df737";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script></div>
 <div id="disqus_thread"></div>
-<script type="debf14f5485d1b24a303ae3b-text/javascript">
+<script type="a5a4bde4b697d1e125e3cb07-text/javascript">
 
 
 /**
@@ -469,44 +469,44 @@ git diff &lt; i d1&gt; &lt;id2&gt; # 比较两次提交之间的差异
 <section id="tabs-4" class="widget widget_tabs clear">
 <div class="nav-tabs-alt no-js-hide">
 <ul class="nav nav-tabs nav-justified" role="tablist">
-<li class="active" role="presentation"> <a href="3856.html#widget-tabs-4-hots" role="tab" aria-controls="widget-tabs-4-hots" aria-expanded="true" data-toggle="tab"> <i class="glyphicon glyphicon-fire text-md text-muted wrapper-sm" aria-hidden="true"></i> <span class="sr-only">热门文章</span> </a></li>
-<li role="presentation"> <a href="3856.html#widget-tabs-4-random" role="tab" aria-controls="widget-tabs-4-random" aria-expanded="false" data-toggle="tab"> <i class="glyphicon glyphicon-transfer text-md text-muted wrapper-sm" aria-hidden="true"></i> <span class="sr-only">随机文章</span> </a></li>
+<li class="active" role="presentation"> <a href="#widget-tabs-4-hots" role="tab" aria-controls="widget-tabs-4-hots" aria-expanded="true" data-toggle="tab"> <i class="glyphicon glyphicon-fire text-md text-muted wrapper-sm" aria-hidden="true"></i> <span class="sr-only">热门文章</span> </a></li>
+<li role="presentation"> <a href="#widget-tabs-4-random" role="tab" aria-controls="widget-tabs-4-random" aria-expanded="false" data-toggle="tab"> <i class="glyphicon glyphicon-transfer text-md text-muted wrapper-sm" aria-hidden="true"></i> <span class="sr-only">随机文章</span> </a></li>
 </ul>
 </div>
 <div class="tab-content">
 
 <div id="widget-tabs-4-hots" class="tab-pane  fade in wrapper-md active" role="tabpanel">
- <h3 class="widget-title m-t-none text-md">热门文章</h3>
+<h3 class="widget-title m-t-none text-md">热门文章</h3>
 <ul class="list-group no-bg no-borders pull-in m-b-none">
 <li class="list-group-item">
-<a href="615.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/8.jpg" class="img-circle"></a>
+<a href="https://limbopro.xyz/archives/615.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="https://limbopro.xyz/usr/themes/handsome/usr/img/sj2/8.jpg" class="img-circle"></a>
 <div class="clear">
-<h4 class="h5 l-h"> <a href="615.html" title="极游丨4K秒开丨3.5元起丨v2Ray机场推荐及简易配置教程"> 极游丨4K秒开丨3.5元起丨v2Ray机场推荐及简易配置教程 </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">67789</span>
+<h4 class="h5 l-h"> <a href="https://limbopro.xyz/archives/615.html" title="极游丨4K秒开丨3.5元起丨v2Ray机场推荐及简易配置教程"> 极游丨4K秒开丨3.5元起丨v2Ray机场推荐及简易配置教程 </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">67803</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="2561.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/5.jpg" class="img-circle"></a>
+<a href="https://limbopro.xyz/archives/2561.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="https://limbopro.xyz/usr/themes/handsome/usr/img/sj2/2.jpg" class="img-circle"></a>
 <div class="clear">
-<h4 class="h5 l-h"> <a href="2561.html" title="Rules / 分流/去广告规则：Surge / Shadowrocket / Quantumult/ Quantumult X  及详细配置步骤教程（萌新小白版本）"> Rules / 分流/去广告规则：Surge / Shadowrocket / Quantumult/ Quantumult X 及详细配置步骤教程（萌新小白版本） </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">29871</span>
+<h4 class="h5 l-h"> <a href="https://limbopro.xyz/archives/2561.html" title="Rules / 分流/去广告规则：Surge / Shadowrocket / Quantumult/ Quantumult X  及详细配置步骤教程（萌新小白版本）"> Rules / 分流/去广告规则：Surge / Shadowrocket / Quantumult/ Quantumult X 及详细配置步骤教程（萌新小白版本） </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">29921</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="1423.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/10.jpg" class="img-circle"></a>
+<a href="https://limbopro.xyz/archives/1423.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="https://limbopro.xyz/usr/themes/handsome/usr/img/sj2/1.jpg" class="img-circle"></a>
 <div class="clear">
-<h4 class="h5 l-h"> <a href="1423.html" title="卡车家族丨1080P秒开丨折后6.4元/月起丨50+节点丨SSR机场推荐（学生党首选）"> 卡车家族丨1080P秒开丨折后6.4元/月起丨50+节点丨SSR机场推荐（学生党首选） </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">23520</span>
+<h4 class="h5 l-h"> <a href="https://limbopro.xyz/archives/1423.html" title="卡车家族丨1080P秒开丨折后6.4元/月起丨50+节点丨SSR机场推荐（学生党首选）"> 卡车家族丨1080P秒开丨折后6.4元/月起丨50+节点丨SSR机场推荐（学生党首选） </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">23535</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="2787.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/6.jpg" class="img-circle"></a>
+<a href="https://limbopro.xyz/archives/2787.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="https://limbopro.xyz/usr/themes/handsome/usr/img/sj2/10.jpg" class="img-circle"></a>
 <div class="clear">
-<h4 class="h5 l-h"> <a href="2787.html" title="高速内网IPLC专线机场丨4K秒开丨14.99元/月起丨京港/沪港/深港/深新/沪美线路（贵在稳定）"> 高速内网IPLC专线机场丨4K秒开丨14.99元/月起丨京港/沪港/深港/深新/沪美线路（贵在稳定） </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">20624</span>
+<h4 class="h5 l-h"> <a href="https://limbopro.xyz/archives/2787.html" title="高速内网IPLC专线机场丨4K秒开丨14.99元/月起丨京港/沪港/深港/深新/沪美线路（贵在稳定）"> 高速内网IPLC专线机场丨4K秒开丨14.99元/月起丨京港/沪港/深港/深新/沪美线路（贵在稳定） </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">20642</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="969.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/9.jpg" class="img-circle"></a>
- <div class="clear">
-<h4 class="h5 l-h"> <a href="969.html" title="在中国看Netflix丨HBO丨Hulu丨Amazon Prime Video丨Apple TV丨或其他任意剧集。"> 在中国看Netflix丨HBO丨Hulu丨Amazon Prime Video丨Apple TV丨或其他任意剧集。 </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">18791</span>
+<a href="https://limbopro.xyz/archives/969.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="https://limbopro.xyz/usr/themes/handsome/usr/img/sj2/3.jpg" class="img-circle"></a>
+<div class="clear">
+<h4 class="h5 l-h"> <a href="https://limbopro.xyz/archives/969.html" title="在中国看Netflix丨HBO丨Hulu丨Amazon Prime Video丨Apple TV丨或其他任意剧集。"> 在中国看Netflix丨HBO丨Hulu丨Amazon Prime Video丨Apple TV丨或其他任意剧集。 </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">18807</span>
 </span>
 </small></div></li> </ul>
 </div>
@@ -515,34 +515,34 @@ git diff &lt; i d1&gt; &lt;id2&gt; # 比较两次提交之间的差异
 <h3 class="widget-title m-t-none text-md">随机文章</h3>
 <ul class="list-group no-bg no-borders pull-in">
 <li class="list-group-item">
-<a href="https://limbopro.xyz/archives/445.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/8.jpg" class="img-circle"></a>
+<a href="https://limbopro.xyz/archives/3856.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="https://limbopro.xyz/usr/themes/handsome/usr/img/sj2/8.jpg" class="img-circle"></a>
 <div class="clear">
-<h4 class="h5 l-h"> <a href="https://limbopro.xyz/archives/445.html" title="切尔诺贝利  Chernobyl"> 切尔诺贝利 Chernobyl </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">3329</span>
+<h4 class="h5 l-h"> <a href="https://limbopro.xyz/archives/3856.html" title="GitHub 新手指南，从入门到放弃（5分钟教学，你也可以拥有自己的仓库）以及 fork 后如何与上游仓库保持更新；"> GitHub 新手指南，从入门到放弃（5分钟教学，你也可以拥有自己的仓库）以及 fork 后如何与上游仓库保持更新； </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">3842</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="clashA.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/5.jpg" class="img-circle"></a>
+<a href="https://limbopro.xyz/archives/3846.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="https://limbopro.xyz/usr/themes/handsome/usr/img/sj2/2.jpg" class="img-circle"></a>
 <div class="clear">
-<h4 class="h5 l-h"> <a href="clashA.html" title="神一般的工具：ClashA（UI设计赞爆！）及使用配置简明教程"> 神一般的工具：ClashA（UI设计赞爆！）及使用配置简明教程 </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">3140</span>
+<h4 class="h5 l-h"> <a href="https://limbopro.xyz/archives/3846.html" title="QuantumultX 进阶教程：组策略&amp;分流规则&amp;自定义图标的进阶玩法"> QuantumultX 进阶教程：组策略&amp;分流规则&amp;自定义图标的进阶玩法 </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">14473</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="2106.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/10.jpg" class="img-circle"></a>
+<a href="https://limbopro.xyz/archives/27.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="https://limbopro.xyz/usr/themes/handsome/usr/img/sj2/1.jpg" class="img-circle"></a>
 <div class="clear">
-<h4 class="h5 l-h"> <a href="2106.html" title="Cloudflare清退边缘丨运营通报 30TB+了；"> Cloudflare清退边缘丨运营通报 30TB+了； </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">1436</span>
+<h4 class="h5 l-h"> <a href="https://limbopro.xyz/archives/27.html" title="无忧无虑"> 无忧无虑 </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">3013</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="1381.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/6.jpg" class="img-circle"></a>
+<a href="https://limbopro.xyz/archives/383.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="https://limbopro.xyz/usr/themes/handsome/usr/img/sj2/10.jpg" class="img-circle"></a>
 <div class="clear">
-<h4 class="h5 l-h"> <a href="1381.html" title="行星 The Planets (2019)"> 行星 The Planets (2019) </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">3001</span>
+<h4 class="h5 l-h"> <a href="https://limbopro.xyz/archives/383.html" title="谷歌已经收录关键词 limbopro"> 谷歌已经收录关键词 limbopro </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">3145</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="1579.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/9.jpg" class="img-circle"></a>
+<a href="https://limbopro.xyz/archives/432.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="https://limbopro.xyz/usr/themes/handsome/usr/img/sj2/3.jpg" class="img-circle"></a>
 <div class="clear">
-<h4 class="h5 l-h"> <a href="1579.html" title="复仇者联盟4：终局之战丨本周电影推荐"> 复仇者联盟4：终局之战丨本周电影推荐 </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">3607</span>
+<h4 class="h5 l-h"> <a href="https://limbopro.xyz/archives/432.html" title="一串清单"> 一串清单 </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">3137</span>
 </span>
 </small></div></li> </ul>
 </div>
@@ -559,7 +559,7 @@ git diff &lt; i d1&gt; &lt;id2&gt; # 比较两次提交之间的差异
 <li class="list-group-item"> <i class="glyphicon glyphicon-equalizer text-muted"></i> <span class="badge
            pull-right">223天</span>运行天数</li>
 <li class="list-group-item"> <i class="glyphicon glyphicon-refresh text-muted"></i> <span class="badge
-           pull-right">13 小时前</span>最后活动</li>
+           pull-right">14 小时前</span>最后活动</li>
 </ul>
 </section>
 
@@ -591,42 +591,42 @@ git diff &lt; i d1&gt; &lt;id2&gt; # 比较两次提交之间的差异
 <div id="morphing-content" class="hidden read_mode_article">
 <div class="page">
 <h1 class="title">GitHub 新手指南，从入门到放弃（5分钟教学，你也可以拥有自己的仓库）以及 fork 后如何与上游仓库保持更新；</h1>
-<div class="metadata singleline"><a href="3856.html#" rel="author" class="byline">毒奶</a>&nbsp;•&nbsp;<span class="delimiter"></span><time class="date">2019 年 10 月 18 日</time></div>
-<p><img src="https://limbopro.xyz/usr/uploads/2019/10/2578344228.png" alt="github_logo.png" title="github_logo.png"></p><h2>本文概要</h2><p>就算是素人玩家，也可以玩到飞起。</p><p>1.Github 是什么，它可以做什么<br>2.开局新建一个账号<br>3.装备全靠捡<br>4.本地/远程/合并/更新/仓库就是一切</p><p>以上。</p><p>本文隶属于 <a href="../category/tools/index.html" target="_blank">实用工具</a>/<a href="../category/ssr/index.html" target="_blank">科学上网</a> 分类，点击分类名称可以查看更多相关文章；</p><h2>Github 是什么</h2><p>GitHub是通过Git进行版本控制的软件源代码托管服务平台，由GitHub公司的开发者Chris Wanstrath、PJ Hyett和Tom Preston-Werner使用Ruby on Rails编写而成。 GitHub同时提供付费账户和免费账户。 <a href="https://zh.wikipedia.org/zh-cn/GitHub" target="_blank">维基百科</a></p><h2>Github /Git 深入学习资料</h2><p>从素人到大神，一步到位。</p><h3>学习资料</h3><p><img src="https://limbopro.xyz/usr/uploads/2019/11/2219304508.png" alt="Github-入门" title="Github-入门"></p><p><a href="https://git-scm.com/book/zh/v1" target="_blank">https://git-scm.com/book/zh/v1</a> Git 工具中文使用指南；或可下载 <a href="https://github.com/progit/progit2-zh/releases/download/2.1.31/progit_v2.1.31.epub" target="_blank">.equb</a>丨<a href="https://github.com/progit/progit2-zh/releases/download/2.1.31/progit_v2.1.31.mobi" target="_blank">.mobi</a>丨<a href="https://github.com/progit/progit2-zh/releases/download/2.1.31/progit_v2.1.31.pdf" target="_blank">.pdf</a> 放在平板或手机 *重点学习 <br><a href="https://rogerdudler.github.io/git-guide/index.zh.html" target="_blank">http://rogerdudler.github.io/git-guide/index.zh.html</a> git - 简明指南 *素人入门学习指南</p><hr><h2>Github 可以用来做什么</h2><p><code>新手</code>可以把Github理解为<code>一个云盘</code>，托管你的<code>代码</code>文件甚至<code>种子</code>，可以上传图片/视频/任意格式支持（似乎是）。</p><h2>Github 注册</h2><h3>注册步骤及建议</h3><p>0.<a href="https://github.com/join?source=header" target="_blank">https://github.com/join?source=header</a>；<br>1.建议使用<code>Gmail</code>进行注册；<br>2.密码/<code>Password</code> 密码设置确保至少15个字符或至少8个字符（包括数字和小写字母）；<br>3.名字/<code>Username</code> 用户名只能包含字母数字字符或单个连字符，而不能以连字符开头或结尾；<br>4.如果英语不行可以使用谷歌翻译：<a href="https://translate.google.com/?hl=zh-CH" target="_blank">https://translate.google.com/?hl=zh-CH</a>；</p><h3>注册成功后</h3><p><img src="https://limbopro.xyz/usr/uploads/2019/10/74627969.png" alt="Github注册页面" title="Github注册页面"></p><p><strong>页面右上角点击你的<code>头像</code>可以分别看到：</strong></p><p><code>Your profile</code> / 你的个人资料<br><code>Your repositories</code> /你的仓库<br><code>Your projects</code> /你的项目<br><code>Your stars</code> /你加星（类似于favorite）的库或项目<br><code>Your gists</code> /我没用过</p><p>这个页面请稍微花些时间熟悉一下，这样基本上就可以掌握各个<code>模块</code>的<code>位置</code>；</p><h2>仓库的结构</h2><p><code>repositories</code> 即仓库集，大家口中所谓<code>Repo</code>即仓库；</p><p><a href="https://limbopro.xyz/usr/uploads/2019/11/2439006833.jpg" target="_blank"><img src="https://limbopro.xyz/usr/uploads/2019/11/2439006833.jpg" alt="Repo.jpg" title="Repo.jpg"></a></p><p>via <a href="https://github.com/limbopro/Script" target="_blank">https://github.com/limbopro/Script</a></p><p>如上图，一个仓库的<code>结构</code>及<code>功能</code>介绍（Fork后，也是自己的库）；点击库所属<code>用户名</code>，你可看到他的<code>所有公开仓库</code>资源，也可切换当前仓库的分支查看分支内容（很多大佬会隐藏主要分支，所以需要自己手动切换一下分支才能查看）；</p><h2>如何新建一个仓库</h2><p><code>Your repositories</code>，仓库，顾名思义就是存放东西的地方；<code>新手</code>可能一下子不需要理解它神奇的地方，只管先把它当做<code>云盘</code>即可。</p><h3>操作步骤</h3><p>1.头像左边的 <code>+ </code>号，点击<code>new repository</code>，即可开始新建；</p><p><img src="https://limbopro.xyz/usr/uploads/2019/10/4257564684.png" alt="创建仓库" title="创建仓库"></p><p>2.填写仓库名称<code>Repository name</code>及关于仓库的描述<code>Description</code>；<br>3.点击<code>Create repository</code> 按钮完成仓库的创建；<br>4.好了，开搞；</p><p><strong>功能介绍</strong><br><img src="https://limbopro.xyz/usr/uploads/2019/10/2957563075.png" alt="功能介绍" title="功能介绍"></p><p><code>Create new file</code> / 创建文件（*创建新文件时在文件名的后面加一斜杆<code>/</code>即可把该文件变成文件夹）</p><p><code>Upload file</code> / 上传文件（*似乎可以上传任意格式文件，限制单个文件100MB以内，关于大小及磁盘配额等相关问题可参考：<a href="https://help.github.com/cn/articles/what-is-my-disk-quota" target="_blank">https://help.github.com/cn/articles/what-is-my-disk-quota</a>）</p><p><code>Find file</code> / 查找文件</p><h3>如何编辑/下载某个文件</h3><p>1.进入该仓库 <code>Repository</code>，找到该文件，点击；</p><p><img src="https://limbopro.xyz/usr/uploads/2019/10/2078344368.png" alt="ConnersHua/Profiles" title="ConnersHua/Profiles"></p><h4>下载文件</h4><p><img src="https://limbopro.xyz/usr/uploads/2019/10/684380052.png" alt="下载按钮" title="下载按钮"></p><p>上图，我从花花那里Fork了一个仓库，里面有各种软体的分流规则；这里以，<code>Quantumult.conf</code>举例，找到<code>RAW</code>或<code>DOWNLOAD</code>按钮，点击，即可跳转到<code>下载链接</code>；</p><p>该<code>下载链接</code>是可以直接外部调用的；他们大都以<code>raw.githubusercontent.com</code>开头，举例<code>Quantumult.conf</code>的下载链接是<code>https://raw.githubusercontent.com/limbopro/Profiles/master/limbopro/Quantumult.conf</code>，所对应的仓库位置是<code>https://github.com/limbopro/Profiles/blob/master/limbopro/Quantumult.conf</code>；（发现小小的区别了吗？如果别人给你<code>下载链接</code>，你可以反向找到它所在仓库的位置，并进行<code>Fork</code>，<code>Star</code>等操作；）</p><h4>编辑文件</h4><p><img src="https://limbopro.xyz/usr/uploads/2019/10/3021452352.png" alt="编辑按钮" title="编辑按钮"></p><p>如需编辑，找到那个类似编辑<code>铅笔</code>的图标按钮；</p><p>以上；<br>新建仓库的功能基本上就介绍这么多；</p><h2>fork 他人仓库</h2><p>1.<code>Fork</code>，进入任意他人的仓库，找到<code>Fork</code>按钮，点击即可；</p><p><img src="https://limbopro.xyz/usr/uploads/2019/10/1364312659.png" alt="Zure" title="Zure"></p><p>2.以 <a href="https://github.com/zealson/Zure" target="_blank">https://github.com/zealson/Zure</a> 仓库举例；</p><p><img src="https://limbopro.xyz/usr/uploads/2019/10/769585660.png" alt="Fork" title="Fork"></p><p>3.即刻拥有；</p><p><img src="https://limbopro.xyz/usr/uploads/2019/10/2899281794.png" alt="zure复制" title="zure复制"></p><h3>通俗释疑</h3><p><code>Watch</code>，字面意思，观察，查看；<br><code>Star</code>，类似关注或点赞；</p><p><code>Fork</code>，相当于你自己有了一份原项目的拷贝，当然这个拷贝只是针对当时的项目文件，如果后续原项目文件发生改变，你必须通过其他的方式去同步。（后文有说；）</p><p>Github 相关基础知识介绍完毕。</p><p>以上。</p><hr><p>以下教程如有疑问可先预习 <a href="https://rogerdudler.github.io/git-guide/index.zh.html%20git" target="_blank">git - 简明指南</a> 或 <a href="https://git-scm.com/book/zh/v1" target="_blank">Git 工具中文使用指南</a> ，理解会更透彻。</p><h2>fork 后如何同步上游仓库新更新内容？</h2><p>Github进行fork后如何与原仓库同步：重新fork很省事，但不如反复练习版本合并。</p><p>Fork 了一些著名的仓库后，<code>上游仓库</code>近期又有了更新该怎么使fork后的<code>仓库</code>与<code>上游仓库</code>保持同步，而不会丢失对本地仓库做的修改？如下：</p><h3>24.11.2019 更新</h3><h3>安装 Git</h3><p>以在Mac 操作下举例，先安装 <a href="https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git" target="_blank">Git</a> ，然后打开<code>终端</code>应用程序；Windows 系统请先安装 <a href="https://git-scm.com/downloads" target="_blank">Git Bash</a>；最后 <code>PUSH</code> 的时候会需要你输入你的Github 用户名（是什么？参考本文关于 <code>仓库结构</code> 的说明），以及登录密码；</p><p>参考：<a href="https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git" target="_blank">1.5 起步 - 安装 Git</a></p><h3>克隆仓库到本地</h3><p>又称作<code>检出仓库</code>：可参考：<a href="https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%9A%84%E4%BD%BF%E7%94%A8" target="_blank">2.5 Git 基础 - 远程仓库的使用</a>；</p><p><img src="https://limbopro.xyz/usr/uploads/2019/11/171590001.png" alt="Clone-Remote-2-local.png" title="Clone-Remote-2-local.png"></p><pre><code><a href="../cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a1d3ceced5e1cdcec2c0cdc9ced2d5">[email&#160;protected]</a>:/home/#  git clone https://github.com/limbopro/Script.git</code></pre><p>注意：<code>https://github.com/limbopro/Script.git</code> 是我 fork 后的<code>远程仓库</code>地址，你fork后的<code>远程仓库</code>地址请以你的为准；</p><h3>检查远程仓库配置</h3><p>List the current configured remote repository for your fork.<br>列出您的fork的当前配置的远程仓库及其路径；</p><pre><code><a href="../cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="196b76766d5975767a787571766a6d">[email&#160;protected]</a>:/home/Script# git remote -v #您的fork的当前配置的远程仓库。
+<div class="metadata singleline"><a href="#" rel="author" class="byline">毒奶</a>&nbsp;•&nbsp;<span class="delimiter"></span><time class="date">2019 年 10 月 18 日</time></div>
+<p><img src="https://limbopro.xyz/usr/uploads/2019/10/2578344228.png" alt="github_logo.png" title="github_logo.png"></p><h2>本文概要</h2><p>就算是素人玩家，也可以玩到飞起。</p><p>1.Github 是什么，它可以做什么<br>2.开局新建一个账号<br>3.装备全靠捡<br>4.本地/远程/合并/更新/仓库就是一切</p><p>以上。</p><p>本文隶属于 <a href="https://limbopro.xyz/category/tools/" target="_blank">实用工具</a>/<a href="https://limbopro.xyz/category/ssr/" target="_blank">科学上网</a> 分类，点击分类名称可以查看更多相关文章；</p><h2>Github 是什么</h2><p>GitHub是通过Git进行版本控制的软件源代码托管服务平台，由GitHub公司的开发者Chris Wanstrath、PJ Hyett和Tom Preston-Werner使用Ruby on Rails编写而成。 GitHub同时提供付费账户和免费账户。 <a href="https://zh.wikipedia.org/zh-cn/GitHub" target="_blank">维基百科</a></p><h2>Github /Git 深入学习资料</h2><p>从素人到大神，一步到位。</p><h3>学习资料</h3><p><img src="https://limbopro.xyz/usr/uploads/2019/11/2219304508.png" alt="Github-入门" title="Github-入门"></p><p><a href="https://git-scm.com/book/zh/v1" target="_blank">https://git-scm.com/book/zh/v1</a> Git 工具中文使用指南；或可下载 <a href="https://github.com/progit/progit2-zh/releases/download/2.1.31/progit_v2.1.31.epub" target="_blank">.equb</a>丨<a href="https://github.com/progit/progit2-zh/releases/download/2.1.31/progit_v2.1.31.mobi" target="_blank">.mobi</a>丨<a href="https://github.com/progit/progit2-zh/releases/download/2.1.31/progit_v2.1.31.pdf" target="_blank">.pdf</a> 放在平板或手机 *重点学习 <br><a href="https://rogerdudler.github.io/git-guide/index.zh.html" target="_blank">http://rogerdudler.github.io/git-guide/index.zh.html</a> git - 简明指南 *素人入门学习指南</p><hr><h2>Github 可以用来做什么</h2><p><code>新手</code>可以把Github理解为<code>一个云盘</code>，托管你的<code>代码</code>文件甚至<code>种子</code>，可以上传图片/视频/任意格式支持（似乎是）。</p><h2>Github 注册</h2><h3>注册步骤及建议</h3><p>0.<a href="https://github.com/join?source=header" target="_blank">https://github.com/join?source=header</a>；<br>1.建议使用<code>Gmail</code>进行注册；<br>2.密码/<code>Password</code> 密码设置确保至少15个字符或至少8个字符（包括数字和小写字母）；<br>3.名字/<code>Username</code> 用户名只能包含字母数字字符或单个连字符，而不能以连字符开头或结尾；<br>4.如果英语不行可以使用谷歌翻译：<a href="https://translate.google.com/?hl=zh-CH" target="_blank">https://translate.google.com/?hl=zh-CH</a>；</p><h3>注册成功后</h3><p><img src="https://limbopro.xyz/usr/uploads/2019/10/74627969.png" alt="Github注册页面" title="Github注册页面"></p><p><strong>页面右上角点击你的<code>头像</code>可以分别看到：</strong></p><p><code>Your profile</code> / 你的个人资料<br><code>Your repositories</code> /你的仓库<br><code>Your projects</code> /你的项目<br><code>Your stars</code> /你加星（类似于favorite）的库或项目<br><code>Your gists</code> /我没用过</p><p>这个页面请稍微花些时间熟悉一下，这样基本上就可以掌握各个<code>模块</code>的<code>位置</code>；</p><h2>仓库的结构</h2><p><code>repositories</code> 即仓库集，大家口中所谓<code>Repo</code>即仓库；</p><p><a href="https://limbopro.xyz/usr/uploads/2019/11/2439006833.jpg" target="_blank"><img src="https://limbopro.xyz/usr/uploads/2019/11/2439006833.jpg" alt="Repo.jpg" title="Repo.jpg"></a></p><p>via <a href="https://github.com/limbopro/Script" target="_blank">https://github.com/limbopro/Script</a></p><p>如上图，一个仓库的<code>结构</code>及<code>功能</code>介绍（Fork后，也是自己的库）；点击库所属<code>用户名</code>，你可看到他的<code>所有公开仓库</code>资源，也可切换当前仓库的分支查看分支内容（很多大佬会隐藏主要分支，所以需要自己手动切换一下分支才能查看）；</p><h2>如何新建一个仓库</h2><p><code>Your repositories</code>，仓库，顾名思义就是存放东西的地方；<code>新手</code>可能一下子不需要理解它神奇的地方，只管先把它当做<code>云盘</code>即可。</p><h3>操作步骤</h3><p>1.头像左边的 <code>+ </code>号，点击<code>new repository</code>，即可开始新建；</p><p><img src="https://limbopro.xyz/usr/uploads/2019/10/4257564684.png" alt="创建仓库" title="创建仓库"></p><p>2.填写仓库名称<code>Repository name</code>及关于仓库的描述<code>Description</code>；<br>3.点击<code>Create repository</code> 按钮完成仓库的创建；<br>4.好了，开搞；</p><p><strong>功能介绍</strong><br><img src="https://limbopro.xyz/usr/uploads/2019/10/2957563075.png" alt="功能介绍" title="功能介绍"></p><p><code>Create new file</code> / 创建文件（*创建新文件时在文件名的后面加一斜杆<code>/</code>即可把该文件变成文件夹）</p><p><code>Upload file</code> / 上传文件（*似乎可以上传任意格式文件，限制单个文件100MB以内，关于大小及磁盘配额等相关问题可参考：<a href="https://help.github.com/cn/articles/what-is-my-disk-quota" target="_blank">https://help.github.com/cn/articles/what-is-my-disk-quota</a>）</p><p><code>Find file</code> / 查找文件</p><h3>如何编辑/下载某个文件</h3><p>1.进入该仓库 <code>Repository</code>，找到该文件，点击；</p><p><img src="https://limbopro.xyz/usr/uploads/2019/10/2078344368.png" alt="ConnersHua/Profiles" title="ConnersHua/Profiles"></p><h4>下载文件</h4><p><img src="https://limbopro.xyz/usr/uploads/2019/10/684380052.png" alt="下载按钮" title="下载按钮"></p><p>上图，我从花花那里Fork了一个仓库，里面有各种软体的分流规则；这里以，<code>Quantumult.conf</code>举例，找到<code>RAW</code>或<code>DOWNLOAD</code>按钮，点击，即可跳转到<code>下载链接</code>；</p><p>该<code>下载链接</code>是可以直接外部调用的；他们大都以<code>raw.githubusercontent.com</code>开头，举例<code>Quantumult.conf</code>的下载链接是<code>https://raw.githubusercontent.com/limbopro/Profiles/master/limbopro/Quantumult.conf</code>，所对应的仓库位置是<code>https://github.com/limbopro/Profiles/blob/master/limbopro/Quantumult.conf</code>；（发现小小的区别了吗？如果别人给你<code>下载链接</code>，你可以反向找到它所在仓库的位置，并进行<code>Fork</code>，<code>Star</code>等操作；）</p><h4>编辑文件</h4><p><img src="https://limbopro.xyz/usr/uploads/2019/10/3021452352.png" alt="编辑按钮" title="编辑按钮"></p><p>如需编辑，找到那个类似编辑<code>铅笔</code>的图标按钮；</p><p>以上；<br>新建仓库的功能基本上就介绍这么多；</p><h2>fork 他人仓库</h2><p>1.<code>Fork</code>，进入任意他人的仓库，找到<code>Fork</code>按钮，点击即可；</p><p><img src="https://limbopro.xyz/usr/uploads/2019/10/1364312659.png" alt="Zure" title="Zure"></p><p>2.以 <a href="https://github.com/zealson/Zure" target="_blank">https://github.com/zealson/Zure</a> 仓库举例；</p><p><img src="https://limbopro.xyz/usr/uploads/2019/10/769585660.png" alt="Fork" title="Fork"></p><p>3.即刻拥有；</p><p><img src="https://limbopro.xyz/usr/uploads/2019/10/2899281794.png" alt="zure复制" title="zure复制"></p><h3>通俗释疑</h3><p><code>Watch</code>，字面意思，观察，查看；<br><code>Star</code>，类似关注或点赞；</p><p><code>Fork</code>，相当于你自己有了一份原项目的拷贝，当然这个拷贝只是针对当时的项目文件，如果后续原项目文件发生改变，你必须通过其他的方式去同步。（后文有说；）</p><p>Github 相关基础知识介绍完毕。</p><p>以上。</p><hr><p>以下教程如有疑问可先预习 <a href="https://rogerdudler.github.io/git-guide/index.zh.html%20git" target="_blank">git - 简明指南</a> 或 <a href="https://git-scm.com/book/zh/v1" target="_blank">Git 工具中文使用指南</a> ，理解会更透彻。</p><h2>fork 后如何同步上游仓库新更新内容？</h2><p>Github进行fork后如何与原仓库同步：重新fork很省事，但不如反复练习版本合并。</p><p>Fork 了一些著名的仓库后，<code>上游仓库</code>近期又有了更新该怎么使fork后的<code>仓库</code>与<code>上游仓库</code>保持同步，而不会丢失对本地仓库做的修改？如下：</p><h3>24.11.2019 更新</h3><h3>安装 Git</h3><p>以在Mac 操作下举例，先安装 <a href="https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git" target="_blank">Git</a> ，然后打开<code>终端</code>应用程序；Windows 系统请先安装 <a href="https://git-scm.com/downloads" target="_blank">Git Bash</a>；最后 <code>PUSH</code> 的时候会需要你输入你的Github 用户名（是什么？参考本文关于 <code>仓库结构</code> 的说明），以及登录密码；</p><p>参考：<a href="https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git" target="_blank">1.5 起步 - 安装 Git</a></p><h3>克隆仓库到本地</h3><p>又称作<code>检出仓库</code>：可参考：<a href="https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%9A%84%E4%BD%BF%E7%94%A8" target="_blank">2.5 Git 基础 - 远程仓库的使用</a>；</p><p><img src="https://limbopro.xyz/usr/uploads/2019/11/171590001.png" alt="Clone-Remote-2-local.png" title="Clone-Remote-2-local.png"></p><pre><code><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3a4855554e7a5655595b565255494e">[email&#160;protected]</a>:/home/#  git clone https://github.com/limbopro/Script.git</code></pre><p>注意：<code>https://github.com/limbopro/Script.git</code> 是我 fork 后的<code>远程仓库</code>地址，你fork后的<code>远程仓库</code>地址请以你的为准；</p><h3>检查远程仓库配置</h3><p>List the current configured remote repository for your fork.<br>列出您的fork的当前配置的远程仓库及其路径；</p><pre><code><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="9ceef3f3e8dcf0f3fffdf0f4f3efe8">[email&#160;protected]</a>:/home/Script# git remote -v #您的fork的当前配置的远程仓库。
 origin  https://github.com/limbopro/Script.git (fetch)
-origin  https://github.com/limbopro/Script.git (push)</code></pre><p>如果只有上面2行，说明你未设置 <code>upstream</code> （中文叫：上游仓库/代码库）。</p><h3>配置上游仓库</h3><p>Specify a new remote upstream repository that will be synced with the fork.<br><code>上游仓库</code>一般指定为我们所<code>Fork</code>的对象；例如在这里的<code>上游仓库</code>指的是：<a href="https://github.com/NobyDa/Script.git" target="_blank">https://github.com/NobyDa/Script.git</a>；</p><pre><code><a href="../cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="14667b7b6054787b7775787c7b6760">[email&#160;protected]</a>:/home/Script# git remote add upstream https://github.com/NobyDa/Script.git</code></pre><h3>检查远程仓库配置</h3><p>Verify the new upstream repository you've specified for your fork.<br>确认<code>上游仓库</code>是否配置完毕；</p><pre><code><a href="../cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0775686873476b6864666b6f687473">[email&#160;protected]</a>:/home/Script# git remote -v
+origin  https://github.com/limbopro/Script.git (push)</code></pre><p>如果只有上面2行，说明你未设置 <code>upstream</code> （中文叫：上游仓库/代码库）。</p><h3>配置上游仓库</h3><p>Specify a new remote upstream repository that will be synced with the fork.<br><code>上游仓库</code>一般指定为我们所<code>Fork</code>的对象；例如在这里的<code>上游仓库</code>指的是：<a href="https://github.com/NobyDa/Script.git" target="_blank">https://github.com/NobyDa/Script.git</a>；</p><pre><code><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5c2e3333281c30333f3d3034332f28">[email&#160;protected]</a>:/home/Script# git remote add upstream https://github.com/NobyDa/Script.git</code></pre><h3>检查远程仓库配置</h3><p>Verify the new upstream repository you've specified for your fork.<br>确认<code>上游仓库</code>是否配置完毕；</p><pre><code><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="bbc9d4d4cffbd7d4d8dad7d3d4c8cf">[email&#160;protected]</a>:/home/Script# git remote -v
 origin  https://github.com/limbopro/Script.git (fetch)
 origin  https://github.com/limbopro/Script.git (push)
 upstream        https://github.com/NobyDa/Script.git (fetch)
-upstream        https://github.com/NobyDa/Script.git (push)</code></pre><h3>拉取上游仓库更新</h3><p>Fetch the branches and their respective commits from the upstream repository. Commits to master will be stored in a local branch, upstream/master.</p><p>抓取<code>上游仓库</code>的更新到本地，并提交这些更新内容到本地仓库。</p><pre><code><a href="../cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b0c2dfdfc4f0dcdfd3d1dcd8dfc3c4">[email&#160;protected]</a>:/home/Script# git fetch upstream
+upstream        https://github.com/NobyDa/Script.git (push)</code></pre><h3>拉取上游仓库更新</h3><p>Fetch the branches and their respective commits from the upstream repository. Commits to master will be stored in a local branch, upstream/master.</p><p>抓取<code>上游仓库</code>的更新到本地，并提交这些更新内容到本地仓库。</p><pre><code><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e0928f8f94a08c8f83818c888f9394">[email&#160;protected]</a>:/home/Script# git fetch upstream
 remote: Enumerating objects: 29, done.
 remote: Counting objects: 100% (29/29), done.
 remote: Compressing objects: 100% (4/4), done.
 remote: Total 20 (delta 16), reused 20 (delta 16), pack-reused 0
 展开对象中: 100% (20/20), 完成.
 来自 https://github.com/NobyDa/Script
-   abd7a76..2291d5d  master     -&gt; upstream/master</code></pre><h3>切换到主分支</h3><p>Check out your fork's local master branch.</p><p>切换到您的fork的本地主分支；可参考：<a href="https://git-scm.com/book/zh/v1/Git-%E5%88%86%E6%94%AF-%E4%BD%95%E8%B0%93%E5%88%86%E6%94%AF" target="_blank">Git 分支 - 何谓分支</a> 以及 <a href="https://git-scm.com/book/zh/v1/Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E7%9A%84%E6%96%B0%E5%BB%BA%E4%B8%8E%E5%90%88%E5%B9%B6" target="_blank">Git 分支 - 分支的新建与合并</a>；</p><pre><code><a href="../cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6614090912260a0905070a0e091512">[email&#160;protected]</a>:/home/Script# git branch #列出当前有多少分支
+   abd7a76..2291d5d  master     -&gt; upstream/master</code></pre><h3>切换到主分支</h3><p>Check out your fork's local master branch.</p><p>切换到您的fork的本地主分支；可参考：<a href="https://git-scm.com/book/zh/v1/Git-%E5%88%86%E6%94%AF-%E4%BD%95%E8%B0%93%E5%88%86%E6%94%AF" target="_blank">Git 分支 - 何谓分支</a> 以及 <a href="https://git-scm.com/book/zh/v1/Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E7%9A%84%E6%96%B0%E5%BB%BA%E4%B8%8E%E5%90%88%E5%B9%B6" target="_blank">Git 分支 - 分支的新建与合并</a>；</p><pre><code><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4735282833072b2824262b2f283433">[email&#160;protected]</a>:/home/Script# git branch #列出当前有多少分支
 * master
-<a href="../cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f684999982b69a9995979a9e998582">[email&#160;protected]</a>:/home/Script# git checkout master #切换到 master 主分支
+<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a2d0cdcdd6e2cecdc1c3cecacdd1d6">[email&#160;protected]</a>:/home/Script# git checkout master #切换到 master 主分支
 已经位于 'master'
-您的分支与上游分支 'origin/master' 一致</code></pre><h3>合并上游更新</h3><p>Merge the changes from upstream/master into your local master branch. This brings your fork's master branch into sync with the upstream repository, without losing your local changes.</p><p>将更改从上游/主服务器合并到本地主服务器分支。 这使fork的master分支与上游仓库同步，而不会丢失本地更改。</p><pre><code><a href="../cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="10627f7f64507c7f73717c787f6364">[email&#160;protected]</a>:/home/Script# git merge upstream/master
+您的分支与上游分支 'origin/master' 一致</code></pre><h3>合并上游更新</h3><p>Merge the changes from upstream/master into your local master branch. This brings your fork's master branch into sync with the upstream repository, without losing your local changes.</p><p>将更改从上游/主服务器合并到本地主服务器分支。 这使fork的master分支与上游仓库同步，而不会丢失本地更改。</p><pre><code><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5c2e3333281c30333f3d3034332f28">[email&#160;protected]</a>:/home/Script# git merge upstream/master
 Merge made by the 'recursive' strategy.
  Surge/JS/KuWoMusicDownload.js | 9 +++++++--
- 1 file changed, 7 insertions(+), 2 deletions(-)</code></pre><h3>推送合并后的更新</h3><p>PUSH 合并后的更新到远程 master 分支上，PUSH 后，查看你的远程仓库即可看到已经把<code>上游仓库</code>的更新合并到自己<code>Fork</code>后的仓库了；</p><pre><code><a href="../cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="62100d0d16220e0d01030e0a0d1116">[email&#160;protected]</a>:/home/Script# git push origin master
+ 1 file changed, 7 insertions(+), 2 deletions(-)</code></pre><h3>推送合并后的更新</h3><p>PUSH 合并后的更新到远程 master 分支上，PUSH 后，查看你的远程仓库即可看到已经把<code>上游仓库</code>的更新合并到自己<code>Fork</code>后的仓库了；</p><pre><code><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="96e4f9f9e2d6faf9f5f7fafef9e5e2">[email&#160;protected]</a>:/home/Script# git push origin master
 Username for 'https://github.com': limbopro 
-Password for 'https://<a href="../cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a8c4c1c5cac7d8dac7e8cfc1dcc0ddca86cbc7c5">[email&#160;protected]</a>': 
+Password for 'https://<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="583431353a37282a37183f312c302d3a763b3735">[email&#160;protected]</a>': 
 对象计数中: 4, 完成.
 压缩对象中: 100% (4/4), 完成.
 写入对象中: 100% (4/4), 426 bytes | 426.00 KiB/s, 完成.
 Total 4 (delta 3), reused 0 (delta 0)
 remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
 To https://github.com/limbopro/Script.git
-   3736a26..78745c8  master -&gt; master</code></pre><h3>小问题</h3><p>fork 后如何同步上游仓库新更新内容到此结束；如果出现问题不能<code>合并更新</code>，或<code>PUSH</code>，可在执行 <code>git push</code> 前运行 <code>git status</code> 命令查看哪些文件已修改但未提交到暂存区，并使用 <code>git add [finename]</code> 将这些文件的修改状态进行跟踪；完全指南可参考：<a href="https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E8%AE%B0%E5%BD%95%E6%AF%8F%E6%AC%A1%E6%9B%B4%E6%96%B0%E5%88%B0%E4%BB%93%E5%BA%93" target="_blank">2.2 Git 基础 - 记录每次更新到仓库</a></p><pre><code><a href="../cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="90e2ffffe4d0fcfff3f1fcf8ffe3e4">[email&#160;protected]</a>:/home/Script# git status
+   3736a26..78745c8  master -&gt; master</code></pre><h3>小问题</h3><p>fork 后如何同步上游仓库新更新内容到此结束；如果出现问题不能<code>合并更新</code>，或<code>PUSH</code>，可在执行 <code>git push</code> 前运行 <code>git status</code> 命令查看哪些文件已修改但未提交到暂存区，并使用 <code>git add [finename]</code> 将这些文件的修改状态进行跟踪；完全指南可参考：<a href="https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E8%AE%B0%E5%BD%95%E6%AF%8F%E6%AC%A1%E6%9B%B4%E6%96%B0%E5%88%B0%E4%BB%93%E5%BA%93" target="_blank">2.2 Git 基础 - 记录每次更新到仓库</a></p><pre><code><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="54263b3b2014383b3735383c3b2720">[email&#160;protected]</a>:/home/Script# git status
 位于分支 master
 您的分支领先 'origin/master' 共 2 个提交。
   （使用 &quot;git push&quot; 来发布您的本地提交）
 
-无文件要提交，干净的工作</code></pre><p>更多疑问参阅：<a href="https://git-scm.com/book/zh/v1/Git-%E5%88%86%E6%94%AF" target="_blank">Git 分支</a> 或本文 <a href="3856.html#Github/Git%E6%B7%B1%E5%85%A5%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99" target="_blank">Github /Git 深入学习资料</a> 部分；</p><p>以上。</p><h2>Git 常用命令集</h2><pre><code>检出仓库：$ git clone git://github.com/limbopro/Script.git
+无文件要提交，干净的工作</code></pre><p>更多疑问参阅：<a href="https://git-scm.com/book/zh/v1/Git-%E5%88%86%E6%94%AF" target="_blank">Git 分支</a> 或本文 <a href="https://limbopro.xyz/archives/3856.html#Github/Git%E6%B7%B1%E5%85%A5%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99" target="_blank">Github /Git 深入学习资料</a> 部分；</p><p>以上。</p><h2>Git 常用命令集</h2><pre><code>检出仓库：$ git clone git://github.com/limbopro/Script.git
 查看远程仓库：$ git remote -v #刚刚已经用过了
 添加远程仓库：$ git remote add [name] [url] #刚刚已经用过了
 删除远程仓库：$ git remote rm [name]
@@ -665,10 +665,10 @@ git revert HEAD # 恢复最后一次提交的状态
 **查看文件diff**
 git diff &lt;file&gt; # 比较当前文件和暂存区文件差异 git diff
 git diff &lt; i d1&gt; &lt;id2&gt; # 比较两次提交之间的差异
-</code></pre><p>via <a href="https://juejin.im/post/5cdea2d5f265da1b91636122" target="_blank">Git命令详解和实战技巧</a> / <a href="https://blog.csdn.net/yidu_fanchen/article/details/78663359" target="_blank">Git中文件的修改与提交</a></p><h2>Faq及附注</h2><p>1.<a href="https://www.zhihu.com/question/28676261" target="_blank">Github下fork后如何同步源的新更新内容？</a>；（中文教程参考）<br>1.0.<a href="https://github.com/selfteaching/the-craft-of-selfteaching/issues/67" target="_blank">Github进行fork后如何与原仓库同步：重新fork很省事，但不如反复练习版本合并</a> （较为清晰）</p><p>1.1.<a href="https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/configuring-a-remote-for-a-fork" target="_blank">Configuring a remote for a fork</a>；（官方）<br>1.2.<a href="https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork" target="_blank">Syncing a fork</a>；（官方）<br>*以上 1.1-1.2为GitHub官方的帮助文档中关于Fork同步的说明；</p><p>2.<a href="https://blog.csdn.net/arkblue/article/details/9568249" target="_blank">git 查看远程分支、本地分支、创建分支、把分支推到远程repository、删除本地分支</a>；</p><h2>联系主理人</h2><p>1.关注频道 <a href="https://t.me/limboprossr" target="_blank">https://t.me/limboprossr</a> 不失联；<br>2.<code>毒奶粉</code>们（我管我的Fans）可联系 <a href="https://t.me/limboprobot" target="_blank">TG机器人</a> 或发送 邮件 获取帮助；</p><p>3.或点击<code>本页面右下角</code>的聊天按钮联系；</p><h2>附注</h2><p><a href="https://help.github.com/cn" target="_blank">https://help.github.com/cn</a> 中文文档</p><hr class="content-copyright" style="margin-top:50px" /><blockquote class="content-copyright" style="font-style:normal"><p class="content-copyright">版权属于：<a class="content-copyright" target="_blank" href="https://t.me/limboprobot">http://t.me/limboprobot</a> TG 毒奶博主 Julia； <br>联系我们： <a class="content-copyright" target="_blank" href="../6.html">https://limbopro.xyz/6.html</a> 投稿或反馈或转载文章或交换友链； <br>电报频道： <a class="content-copyright" target="_blank" href="https://t.me/limboprossr">https://t.me/limboprossr</a> 及时收讯不失联； <br>必备技能： <a class="content-copyright" target="_blank" href="2910.html">https://limbopro.xyz/archives/2910.html</a> 如何访问任意被墙域名； <br>网站镜像： <a class="content-copyright" target="_blank" href="https://limbopro.github.io">https://limbopro.github.io</a> 每月更新；</p><p class="content-copyright">本文链接：<a class="content-copyright" href="3856.html">https://limbopro.xyz/archives/3856.html</a></p><p class="content-copyright">版权声明：<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本文采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a> 进行许可，转载请附上原文出处链接和本声明。</p></blockquote>
+</code></pre><p>via <a href="https://juejin.im/post/5cdea2d5f265da1b91636122" target="_blank">Git命令详解和实战技巧</a> / <a href="https://blog.csdn.net/yidu_fanchen/article/details/78663359" target="_blank">Git中文件的修改与提交</a></p><h2>Faq及附注</h2><p>1.<a href="https://www.zhihu.com/question/28676261" target="_blank">Github下fork后如何同步源的新更新内容？</a>；（中文教程参考）<br>1.0.<a href="https://github.com/selfteaching/the-craft-of-selfteaching/issues/67" target="_blank">Github进行fork后如何与原仓库同步：重新fork很省事，但不如反复练习版本合并</a> （较为清晰）</p><p>1.1.<a href="https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/configuring-a-remote-for-a-fork" target="_blank">Configuring a remote for a fork</a>；（官方）<br>1.2.<a href="https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork" target="_blank">Syncing a fork</a>；（官方）<br>*以上 1.1-1.2为GitHub官方的帮助文档中关于Fork同步的说明；</p><p>2.<a href="https://blog.csdn.net/arkblue/article/details/9568249" target="_blank">git 查看远程分支、本地分支、创建分支、把分支推到远程repository、删除本地分支</a>；</p><h2>联系主理人</h2><p>1.关注频道 <a href="https://t.me/limboprossr" target="_blank">https://t.me/limboprossr</a> 不失联；<br>2.<code>毒奶粉</code>们（我管我的Fans）可联系 <a href="https://t.me/limboprobot" target="_blank">TG机器人</a> 或发送 邮件 获取帮助；</p><p>3.或点击<code>本页面右下角</code>的聊天按钮联系；</p><h2>附注</h2><p><a href="https://help.github.com/cn" target="_blank">https://help.github.com/cn</a> 中文文档</p><hr class="content-copyright" style="margin-top:50px" /><blockquote class="content-copyright" style="font-style:normal"><p class="content-copyright">版权属于：<a class="content-copyright" target="_blank" href="https://t.me/limboprobot">http://t.me/limboprobot</a> TG 毒奶博主 Julia； <br>联系我们： <a class="content-copyright" target="_blank" href="https://limbopro.xyz/6.html">https://limbopro.xyz/6.html</a> 投稿或反馈或转载文章或交换友链； <br>电报频道： <a class="content-copyright" target="_blank" href="https://t.me/limboprossr">https://t.me/limboprossr</a> 及时收讯不失联； <br>必备技能： <a class="content-copyright" target="_blank" href="https://limbopro.xyz/archives/2910.html">https://limbopro.xyz/archives/2910.html</a> 如何访问任意被墙域名； <br>网站镜像： <a class="content-copyright" target="_blank" href="https://limbopro.github.io">https://limbopro.github.io</a> 每月更新；</p><p class="content-copyright">本文链接：<a class="content-copyright" href="https://limbopro.xyz/archives/3856.html">https://limbopro.xyz/archives/3856.html</a></p><p class="content-copyright">版权声明：<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本文采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a> 进行许可，转载请附上原文出处链接和本声明。</p></blockquote>
 </div>
 </div>
-<script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="debf14f5485d1b24a303ae3b-text/javascript">
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="a5a4bde4b697d1e125e3cb07-text/javascript">
         try {
             $("[data-morphing]").fancyMorph({
                 hash : 'morphing'
@@ -679,7 +679,7 @@ git diff &lt; i d1&gt; &lt;id2&gt; # 比较两次提交之间的差异
 
             </script>
 
-<script type="debf14f5485d1b24a303ae3b-text/javascript">
+<script type="a5a4bde4b697d1e125e3cb07-text/javascript">
 (function () {
     window.TypechoComment = {
         dom : function (id) {
@@ -751,7 +751,7 @@ git diff &lt; i d1&gt; &lt;id2&gt; # 比较两次提交之间的差异
     };
 })();
 </script>
-<script type="debf14f5485d1b24a303ae3b-text/javascript">
+<script type="a5a4bde4b697d1e125e3cb07-text/javascript">
 var registCommentEvent = function() {
     var event = document.addEventListener ? {
         add: 'addEventListener',
@@ -776,34 +776,35 @@ var registCommentEvent = function() {
                         input.type = 'hidden';
                         input.name = '_';
                             input.value = (function () {
-    var _BHuaf = 'f'//'J'
-+'a'//'2d'
-+'87'//'PG'
-+''///*'FB'*/'FB'
-+//'co'
-'0d'+'b'//'yNB'
-+//'Q'
-'c24'+//'H84'
-'71'+/* 'HFa'//'HFa' */''+//'Xp4'
-'Xp4'+//'h'
-'h'+'3d'//'15'
-+'205'//'9VM'
-+/* 'P'//'P' */''+//'m'
-'6'+//'xsQ'
-'b9'+'95b'//'vll'
-+'f'//'cb'
-+//'zN'
-'46'+'9'//'0gW'
-+'2'//'2'
-+//'Ydv'
-'242'+//'c'
-'3e', _pP5 = [[12,15],[12,13],[27,28]];
+    var _vU4k = 'fa8'//'H'
++'70'//'vQ'
++'Od6'//'Od6'
++'db'//'O8'
++//'b'
+'c2'+//'RB0'
+'471'+//'Ysh'
+'Ysh'+//'SD'
+'3d'+'ZXX'//'ZXX'
++//'vb'
+'2'+//'i'
+'05'+//'9'
+'6b9'+//'Xps'
+'9'+''///*'S6'*/'S6'
++//'e'
+'5b'+'I'//'I'
++/* 'auY'//'auY' */''+//'0w'
+'0w'+'f4'//'iY'
++//'H'
+'692'+/* 'p3'//'p3' */''+'423'//'az'
++''///*'0'*/'0'
++'e'//'0MY'
+, _A6DfBR = [[5,8],[12,15],[14,17],[23,24],[23,25]];
     
-    for (var i = 0; i < _pP5.length; i ++) {
-        _BHuaf = _BHuaf.substring(0, _pP5[i][0]) + _BHuaf.substring(_pP5[i][1]);
+    for (var i = 0; i < _A6DfBR.length; i ++) {
+        _vU4k = _vU4k.substring(0, _A6DfBR[i][0]) + _vU4k.substring(_A6DfBR[i][1]);
     }
 
-    return _BHuaf;
+    return _vU4k;
 })();
                     
                         f.appendChild(input);
@@ -827,9 +828,9 @@ var registCommentEvent = function() {
 <footer id="footer" class="app-footer" role="footer">
 <div class="wrapper b-t bg-light">
 <span class="pull-right hidden-xs text-ellipsis">
-Powered by <a target="blank" href="http://www.typecho.org">Typecho</a>&nbsp;|&nbsp;Theme by <a target="blank" href="../index.html#">handsome</a>
+Powered by <a target="blank" href="http://www.typecho.org">Typecho</a>&nbsp;|&nbsp;Theme by <a target="blank" href="https://limbopro.xyz/#">handsome</a>
 </span>
-<span class="text-ellipsis">&copy;&nbsp;2019 <a target="blank" href="../index.html">毒奶</a>.inc Copyright&nbsp; 自建站之日起，本站总访问量 3813666007 次</span>
+<span class="text-ellipsis">&copy;&nbsp;2019 <a target="blank" href="https://limbopro.xyz/">毒奶</a>.inc Copyright&nbsp; 自建站之日起，本站总访问量 3813666640 次</span>
 </div>
 
 <script type="text/template" id="tmpl-customizer">
@@ -908,14 +909,14 @@ Powered by <a target="blank" href="http://www.typecho.org">Typecho</a>&nbsp;|&nb
 		-moz-transform: scale(1.4);	/* Firefox */
 	}
 </style>
-<script type="debf14f5485d1b24a303ae3b-text/javascript">
+<script type="a5a4bde4b697d1e125e3cb07-text/javascript">
 	document.addEventListener('DOMContentLoaded', function(){
 		var imgs = document.querySelectorAll('img');
 		Array.prototype.forEach.call(imgs, function(el, i) {
 			if (el.tabIndex <= 0) el.tabIndex = 100;
 		});
 	});
-</script><script type="debf14f5485d1b24a303ae3b-text/javascript">
+</script><script type="a5a4bde4b697d1e125e3cb07-text/javascript">
 	(function(){
 		var pres = document.querySelectorAll('pre');
 		var lineNumberClassName = 'line-numbers';
@@ -924,15 +925,15 @@ Powered by <a target="blank" href="http://www.typecho.org">Typecho</a>&nbsp;|&nb
 		});
 	})();
 </script>
-<script type="debf14f5485d1b24a303ae3b-text/javascript" src="../usr/plugins/CodePrettify/static/clipboard.min.js"></script>
-<script type="debf14f5485d1b24a303ae3b-text/javascript" src="../usr/plugins/CodePrettify/static/prism.js"></script>
-<script type="debf14f5485d1b24a303ae3b-text/javascript">
+<script type="a5a4bde4b697d1e125e3cb07-text/javascript" src="https://limbopro.xyz/usr/plugins/CodePrettify/static/clipboard.min.js"></script>
+<script type="a5a4bde4b697d1e125e3cb07-text/javascript" src="https://limbopro.xyz/usr/plugins/CodePrettify/static/prism.js"></script>
+<script type="a5a4bde4b697d1e125e3cb07-text/javascript">
 SearchConfig = {
     url : "https://limbopro.xyz/usr/plugins/Handsome/cache/search.json"
 }
 </script>
 
-<script type="debf14f5485d1b24a303ae3b-text/javascript">
+<script type="a5a4bde4b697d1e125e3cb07-text/javascript">
         window['LocalConst'] = {
             COMMENT_NAME_INFO: '必须填写昵称或姓名',
             COMMENT_EMAIL_INFO: '必须填写电子邮箱地址',
@@ -1002,9 +1003,9 @@ SearchConfig = {
 
     </script>
 
-<script src="../usr/themes/handsome/assets/libs/bootstrap/js/bootstrap.min.js" type="debf14f5485d1b24a303ae3b-text/javascript"></script>
-<script src="../usr/themes/handsome/assets/js/features/jquery.pjax.min.js" type="debf14f5485d1b24a303ae3b-text/javascript"></script>
-<script type="debf14f5485d1b24a303ae3b-text/javascript">
+<script src="https://limbopro.xyz/usr/themes/handsome/assets/libs/bootstrap/js/bootstrap.min.js" type="a5a4bde4b697d1e125e3cb07-text/javascript"></script>
+<script src="https://limbopro.xyz/usr/themes/handsome/assets/js/features/jquery.pjax.min.js" type="a5a4bde4b697d1e125e3cb07-text/javascript"></script>
+<script type="a5a4bde4b697d1e125e3cb07-text/javascript">
         $(document).pjax('a[href^="https://limbopro.xyz/"]:not(a[target="_blank"], a[no-pjax])', {
             container: '#content',
             fragment: '#content',
@@ -1033,17 +1034,17 @@ SearchConfig = {
 
 
 
-<script src="https://cdn.staticfile.org/mathjax/2.7.0/MathJax.js" type="debf14f5485d1b24a303ae3b-text/javascript"></script>
-<script src="https://cdn.staticfile.org/mathjax/2.7.0/config/TeX-AMS-MML_SVG.js" type="debf14f5485d1b24a303ae3b-text/javascript"></script>
+<script src="https://cdn.staticfile.org/mathjax/2.7.0/MathJax.js" type="a5a4bde4b697d1e125e3cb07-text/javascript"></script>
+<script src="https://cdn.staticfile.org/mathjax/2.7.0/config/TeX-AMS-MML_SVG.js" type="a5a4bde4b697d1e125e3cb07-text/javascript"></script>
 
-<script src="../usr/themes/handsome/assets/js/features/jquery.fancybox.min.js?v=5.3.120190915221" type="debf14f5485d1b24a303ae3b-text/javascript"></script>
+<script src="https://limbopro.xyz/usr/themes/handsome/assets/js/features/jquery.fancybox.min.js?v=5.3.120190915221" type="a5a4bde4b697d1e125e3cb07-text/javascript"></script>
 
 
-<script src="../usr/themes/handsome/assets/js/function.min.js?v=5.3.120190915221" type="debf14f5485d1b24a303ae3b-text/javascript"></script>
-<script src="../usr/themes/handsome/assets/js/core.min.js?v=5.3.120190915221" type="debf14f5485d1b24a303ae3b-text/javascript"></script>
-<script src="../usr/themes/handsome/assets/js/features/setting.min.js?v=5.3.120190915221" type="debf14f5485d1b24a303ae3b-text/javascript"></script>
-<script type="debf14f5485d1b24a303ae3b-text/javascript">
+<script src="https://limbopro.xyz/usr/themes/handsome/assets/js/function.min.js?v=5.3.120190915221" type="a5a4bde4b697d1e125e3cb07-text/javascript"></script>
+<script src="https://limbopro.xyz/usr/themes/handsome/assets/js/core.min.js?v=5.3.120190915221" type="a5a4bde4b697d1e125e3cb07-text/javascript"></script>
+<script src="https://limbopro.xyz/usr/themes/handsome/assets/js/features/setting.min.js?v=5.3.120190915221" type="a5a4bde4b697d1e125e3cb07-text/javascript"></script>
+<script type="a5a4bde4b697d1e125e3cb07-text/javascript">
             </script>
-<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="debf14f5485d1b24a303ae3b-|49" defer=""></script></body>
+<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="a5a4bde4b697d1e125e3cb07-|49" defer=""></script></body>
 </html>
 

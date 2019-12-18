@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"
+xmlns:thr="http://purl.org/syndication/thread/1.0"
+xml:lang="zh-CN"
+xml:base="https://limbopro.xyz/tag/维基百科/"
+>
+<title type="text">毒奶博主丨欢迎使用代理访问本站。 - 维基百科</title>
+<subtitle type="text"></subtitle>
+<updated>2019-10-10T13:32:00+08:00</updated>
+<generator uri="http://typecho.org/" version="1.1/17.10.30">Typecho</generator>
+<link rel="alternate" type="text/html" href="https://limbopro.xyz/tag/维基百科/" />
+<id>https://limbopro.xyz/feed/atom/tag/%E7%BB%B4%E5%9F%BA%E7%99%BE%E7%A7%91/</id>
+<link rel="self" type="application/atom+xml" href="https://limbopro.xyz/feed/atom/tag/%E7%BB%B4%E5%9F%BA%E7%99%BE%E7%A7%91/" />
+<entry>
+<title type="html"><![CDATA[iOS 使用 Surge/Quantumult/Shadowrocket /QuantumultX 解锁 TikTok （国际版）区域限制（免拔卡）12.17.2019]]></title>
+<link rel="alternate" type="text/html" href="https://limbopro.xyz/archives/3629.html" />
+<id>https://limbopro.xyz/archives/3629.html</id>
+<updated>2019-10-10T13:32:00+08:00</updated>
+<published>2019-10-10T13:32:00+08:00</published>
+<author>
+    <name>毒奶</name>
+    <uri>https://limbopro.xyz</uri>
+</author>
+<summary type="html"><![CDATA[近期更新可以用，真开心。17.12.2019 更新https://t.me/limboprossr/830via Tiktok（抖音国际版）解锁成功案例；本文隶属于 实用工具/科学上网 分类，点...]]></summary>
+<content type="html" xml:base="https://limbopro.xyz/archives/3629.html" xml:lang="zh-CN"><![CDATA[
+<h2>近期更新</h2><p>可以用，真开心。</p><h3>17.12.2019 更新</h3><p><a href="https://t.me/limboprossr/830">https://t.me/limboprossr/830</a><br>via Tiktok（抖音国际版）解锁成功案例；</p><p>本文隶属于 <a href="https://limbopro.xyz/category/tools/">实用工具</a>/<a href="https://limbopro.xyz/category/ssr/">科学上网</a> 分类，点击分类名称可以查看更多相关文章；<br><u>*关注TG频道或群组 <a href="https://t.me/limboprossr">https://t.me/limboprossr</a> ，及时收讯不失联。</u></p><h2>Tiktok 介绍</h2><p>抖音海外版/国际版；抖音短视频简称抖音，是一款移动电话上影片的社群应用程序，用户可录制15秒钟的短片，能轻易完成对口型，并内置特效，用户可对影片留言，自2016年9月于今日头条孵化上线，定位为适合中国年轻人的音乐短影片社区，应用为垂直音乐的UGC短视频，2017年以来获得用户规模快速增长。 <a href="https://zh.wikipedia.org/zh-cn/%E6%8A%96%E9%9F%B3%E7%9F%AD%E8%A7%86%E9%A2%91">维基百科</a></p><p><strong>Tiktok 用户界面截图 iOS端</strong><br><img src="https://limbopro.xyz/usr/uploads/2019/10/2106629353.jpg" alt="Tiktok.jpg" title="Tiktok.jpg"></p><h2>主理人说</h2><p>1.前人栽树后人乘凉，感谢 <a href="https://github.com/ConnersHua/Profiles">花姐</a>，<a href="https://github.com/NobyDa">NobyDa</a>；<br>2.以下步骤其实很简单；<br>3.涉及 Surge/Quantumult/Shadowrocket /QuantumultX 的<code>两个功能模块</code>；<br>4.[Rewrite] (即复写，将网络请求改写)；<br>5.以及 [MitM]（<a href="https://zh.wikipedia.org/zh-hans/%E4%B8%AD%E9%97%B4%E4%BA%BA%E6%94%BB%E5%87%BB">即中间人攻击</a>）；<br>6.通过新增[Rewrite]规则和[MitM]达到伪造请求的目的；<br>7.这样Tiktok就会把你当成某个地区的用户；<br>8.而推送相关地区的内容给你了；</p><p>*当你开启 Surge/Quantumult/Shadowrocket /QuantumultX 时，它们已经接管了你的所有网络请求；</p><p>[post cid="3833" cover="https://limbopro.xyz/usr/uploads/2019/10/641260207.jpg"/]</p><p>*呐，这是一篇 Surge/Quantumult/Shadowrocket /QuantumultX 通用性进阶学习资料，告诉你分流规则/模式是什么，网络请求日志怎么看，MitM 是否命中等等；</p><p>以上。</p><h2>操作前必看</h2><p>12.17.2019 Tiktok 最新可用情报</p><h3>分流模式</h3><p>*以下各软体配置教程中，Surge/Quantumult/QuantumultX/Shadowrocket 默认模式使用<code>规则模式</code>/<code>规则分流</code>/<code>配置</code>模式，请不要<code>全局代理/全部代理</code>或<code>直连</code>模式；（不懂什么是直连/全局代理/分流模式？这个教程不适合你）。</p><h3>Tiktok App版本可用性说明</h3><h4>12.17.2019 可用性更新</h4><table><thead><tr><th align="center">项目</th><th align="center">国家或地区</th><th align="center">版本可用性</th></tr></thead><tbody><tr><td align="center">Tiktok</td><td align="center"><a href="https://apps.apple.com/us/app/tiktok-make-your-day/id835599320">美区</a></td><td align="center">v14.0.0（最新版本）</td></tr><tr><td align="center">Tiktok</td><td align="center"><a href="https://apps.apple.com/hk/app/tiktok-global-video-community/id1235601864?l=en">港区</a></td><td align="center">v9.1.0（最新版本）</td></tr><tr><td align="center">Tiktok</td><td align="center"> </td><td align="center"> </td></tr></tbody></table><p>1.新的 <code>[Rewrite]</code> 规则已支持 <code>Tiktok 最新版本</code>；<br>2.<code>无需抓包旧版Tiktok IPA</code>；</p><p><strong>[Rewrite] </strong>（12.17.2019）最新</p><pre><code># TikTok
+(?&lt;=(carrier|account|sys)_region=)CN url 307 JP
+# Resso
+(?&lt;=(carrier|account|sys|sim)_region=)cn url 307 in</code></pre><p><strong>Hostname</strong>（12.17.2019）最新</p><pre><code>api*.tiktokv.com
+api*.musical.ly
+api*.amemv.com
+aweme*.snssdk.com</code></pre><p>via <a href="https://t.me/quantumultapp">Quantumult(X)</a> 群友贡献；</p><p>不会添加<code>[Rewrite]</code> 或 <code>hostname</code> ？可参考下方各软体的详细教程（参考操作步骤操作即可，<code>[Rewrite]</code> 或 <code>hostname</code>部分需填写的内容，请参考以上最新的内容，其他继续按操作步骤做）；</p><h4>12.04.2019 可用性更新</h4><table><thead><tr><th align="center">项目</th><th align="center">国家或地区</th><th align="center">版本可用性</th></tr></thead><tbody><tr><td align="center">Tiktok</td><td align="center"><a href="https://apps.apple.com/us/app/tiktok-make-your-day/id835599320">美区</a></td><td align="center">v13.4.0及之前版本</td></tr><tr><td align="center">Tiktok</td><td align="center"><a href="https://apps.apple.com/hk/app/tiktok-global-video-community/id1235601864?l=en">港区</a></td><td align="center">v8.4.0及之前版本</td></tr><tr><td align="center">Tiktok</td><td align="center">待更新</td><td align="center">待更新</td></tr></tbody></table><p><strong>*版本可用性说明</strong>：可用性是指可与 Surge/Quantumult/Shadowrocket /QuantumultX 配合，进行解<code>锁区</code>实现观看Tiktok 海外各区域内容；（App 每次更新都有对应的版本号，这些更新意外着不同程度的改动，升级，优化等等；不同版本的App有着不一样的特性；）</p><h4>抓包旧版IPA</h4><p><img src="https://limbopro.xyz/usr/uploads/2019/12/1764954798.png" alt="Tiktok2.png" title="Tiktok2.png"></p><p>1.Tiktok 旧版本IPA可使用 fiddler/ Charles 进行抓包，实现APP版本降级；</p><p><strong>我找到的一些实用性很高的抓包资料</strong><br>1.Windows + fiddler 抓包IPA实现App降级：<a href="https://zhuanlan.zhihu.com/p/56622577">https://zhuanlan.zhihu.com/p/56622577</a> + 安装 fiddler后记得 <a href="https://juejin.im/post/5c3c2a2af265da61620d9a72">给 Fidder 配置证书</a> （*Windows + fiddler 抓包很简单，参考教程步骤多看两遍，基本上小白也可以很容易就上手；）</p><p>2.Mac + 利用Charles Proxy 下载旧版本iOS App（IPA）：<a href="https://sspai.com/post/36171">https://sspai.com/post/36171</a> （有点糙）<br>3.仅需三步，免费使用iMazing <a href="https://limbopro.xyz/archives/imazing.html">安装IPA文件（旧版本）</a>  </p><p><strong>附注</strong>：查看App版本号<a href="https://www.icloud.com/shortcuts/ae93a1b11f81454baa72c7cf59540759">App 版本编号查询</a> iOS捷径 / <a href="https://sharecuts.cn/shortcut/254">捷径社区</a></p><p>以上。</p><p>以下为本文正文；</p><h2>如何使用Surge 解锁 TikTok 区域限制</h2><h3>必要准备</h3><p>1.拥有Surge3及以上版本授权用户；<br>2.并已配置有机场/服务器；<br>3.拥有非大陆地区AppleID并已下载Tiktok；</p><p>*本教程基于 Surge 为中文的操作界面，打开Surge-<code>More</code>-APPEARANCE 模块下-<code>Language</code> 设置语言为<code>Chinese</code>；</p><h2>详细步骤</h2><p><img src="https://limbopro.xyz/usr/uploads/2019/10/1942454765.jpg" alt="配置列表.jpg" title="配置列表.jpg"><br>如上图，选择任意可用的配置文件，举例选择<code>海螺</code>，点击<code>编辑</code>模块下，<code>在文本模式中编辑</code>，如果提示<code>托管配置不可被编辑...创建副本再进行修改。</code>，点击<code>好的</code>，找到<code>创建</code>-<code>创建当前配置副本</code>-任意命名。</p><p>选中刚刚创建的<code>副本</code>，点击<code>在文本中编辑</code>，找到如下字眼：</p><h3>第一步：添加URL重定向</h3><p>在<code>文本编辑模式</code>中找到<code>[URL Rewrite]</code>字眼，并复制下方代码到该字眼下方；</p><pre><code>(.*video_id=\w{32})(.*watermark=)(.*) $1 302
+(?&lt;=(carrier|account|sys)_region=)CN JP 307</code></pre><p>粘贴后，效果如下</p><pre><code>[URL Rewrite]
+(.*video_id=\w{32})(.*watermark=)(.*) $1 302
+(?&lt;=(carrier|account|sys)_region=)CN JP 307</code></pre><p>点击右上角完成，URL 重定向设置结束。</p><p><img src="https://limbopro.xyz/usr/uploads/2019/10/3518532099.jpg" alt="URL 重定向.jpg" title="URL 重定向.jpg"></p><p>在 Surge 主页面， <code>Rewrite</code> 模块中，<code>URL 重定向</code>里面可以查看刚刚修改的效果，如下图：</p><p><img src="https://limbopro.xyz/usr/uploads/2019/10/4168746175.jpg" alt="URL 重定向-.jpg" title="URL 重定向-.jpg"></p><h3>Surge Tiktok 换区操作</h3><p>如需<code>改/换区</code>，亦可直接在这个<code>Rewrite</code>模块-&gt;<code>URL 重定向</code>下修改，找到<code>(?&lt;=(carrier|account|sys)_region=)CN </code>，编辑，替代文本处更换成<code>其他国家或地区代码</code>即可，例如<code>HK</code>，例如<code>KR</code>。<code>其他国家或地区代码</code>在本文文末可找到。</p><h3>第二步，MitM添加主机名</h3><p><img src="https://limbopro.xyz/usr/uploads/2019/10/19523502.jpg" alt="MINT2.jpg" title="MINT2.jpg"></p><p>点击<code>主机名</code>，以进行配置，<code>点新增</code>；</p><pre><code>api*.tiktokv.com
+api*.musical.ly
+api*.amemv.com
+aweme*.snssdk.com</code></pre><p>效果如下：</p><p><img src="https://limbopro.xyz/usr/uploads/2019/10/3331340599.jpg" alt="MITM.jpg" title="MITM.jpg"></p><p>到此，MitM添加主机名完成。</p><h3>第三步，配置根证书</h3><p><img src="https://limbopro.xyz/usr/uploads/2019/10/19523502.jpg" alt="MINT2.jpg" title="MINT2.jpg"></p><p>1.点击，<code>配置根证书</code>，<code>生成新的 CA 证书</code>，生成后，点击<code>安装证书</code>，此时会跳转至<code> Safari</code>，提示<code>此网站...下载一个配置描述文件。您要允许吗？</code>，点击<code>允许</code>，网页提示<code>已下载描述文件</code>；</p><p>2.进入 iOS 系统<code>设置</code>-<code> 通用</code>-<code>描述文件</code>-<code>已下载的描述文件</code>-选中，并安装，输入密码...完成描述文件安装；</p><p>3.进入 iOS 系统<code>设置</code>-<code> 通用</code>-<code>关于本机</code>-<code>证书信任设置</code>-<code>针对根证书启用完全信任</code>-选中刚刚安装的并启用即可；</p><h3>享用Tiktok</h3><p><img src="https://limbopro.xyz/usr/uploads/2019/10/1243371340.jpg" alt="启用.jpg" title="启用.jpg"></p><p>开启 <code>mitm</code> &<code>rewrite</code>按钮，开启 Surge，打开Tiktok，完事；</p><h2>如何使用 Quantumult 解锁 TikTok 区域限制</h2><h3>必要准备</h3><p>1.拥有 Quantumult 的用户；<br>2.并已配置有机场/服务器；<br>3.拥有非大陆地区AppleID并已下载Tiktok；</p><p>*本教程基于 Quantumult 为中文的操作界面，打开Quantumult-<code>More</code>-PERSONALIZATION 模块下-<code>Language</code> 设置语言为<code>Chinese</code>；</p><h2>详细步骤</h2><h3>第一步，开启模块</h3><p>打开圈 Quantumult --<code>更多</code>--<code>模块</code>--选用<code>TUN+HTTP(Default）</code>；</p><h3>第二步，开启HTTPS解密并信任证书</h3><p>1.<code>设置</code>-<code>HTTPS解密</code>-选择开启<code>HTTPS解密</code>-再点<code>生成密钥及证书</code>-右上角点击<code>保存</code>，此时会跳转至<code> Safari</code>浏览器，提示<code>此网站...下载一个配置描述文件。您要允许吗？</code>，点击<code>允许</code>，网页提示<code>已下载描述文件</code>；</p><p>2.进入 iOS 系统<code>设置</code>-<code> 通用</code>-<code>描述文件</code>-<code>已下载的描述文件</code>-选中，并安装，输入密码...完成描述文件安装；</p><p>3.进入 iOS 系统<code>设置</code>-<code> 通用</code>-<code>关于本机</code>-<code>证书信任设置</code>-<code>针对根证书启用完全信任</code>-选中刚刚安装的并启用即可；</p><p>PS：这一步，跟Surge 第三步，配置根证书 略同，安装证书，信任证书。</p><h3>第三步，添加订阅分流链接</h3><p>添加订阅分流链接：前往<code>Quantumult</code>：<code>设置</code>--)<code>订阅</code>--)右上角加号--)<code>分流</code>--)链接处添加网址<a href="https://raw.githubusercontent.com/lhie1/Rules/master/Quantumult/Quantumult.conf">https://raw.githubusercontent.com/lhie1/Rules/master/Quantumult/Quantumult.conf</a> --)名称输入分流俩字--)个性化戳出对勾--)右上角保存--)左划--)点选替换--)保存--)好</p><h3>第四步，添加订阅链接阻止</h3><p>添加订阅链接阻止：<code>设置</code>-<code>订阅</code>-点击右上角<code>+号</code>，选择<code>链接阻止</code>-在链接填写处添加网址：<code>https://raw.githubusercontent.com/lhie1/Rules/master/Quantumult/Quantumult_URL.conf</code>名称输入<code>阻止</code>俩字或任意取名-选择包含<code>主机名</code>-点击右上角<code>保存</code>-选中刚刚保存的<code>链接阻止</code>的名字<code>阻止</code>处，左划-点选<code>增加</code>-<code>好</code>；</p><h3>添加直播分流规则</h3><p>不看美区直播的可跳过此步：<code>设置</code>-<code>分流</code>-搜索关键字如<code>pstatp.com</code>-戳进去将<code>行为</code>中的<code>Direct</code>改为<code>Proxy</code>-并开启<code>远程解析TUN连接</code>-右上角<code>保存</code>；</p><h3>享用Tiktok</h3><h3>Quantumult Tiktok 换区操作</h3><p><img src="https://limbopro.xyz/usr/uploads/2019/10/4192828682.jpg" alt="复写.jpg" title="复写.jpg"></p><p>TikTok换区操作：打开<code>Quantumult</code>-<code>设置</code>-<code>HTTP复写</code>，如上图所示，找到<code>(?&lt;=(carrier|account|sys)_region=)CN</code>，编辑，替换<code>JP</code>为任意<code>其他国家或地区代码</code>，例如<code>MO</code>、<code>SG</code>等；（跟Surge URL Rewrite 类似）；</p><p>以上，亲测有效。（10.10.2019）</p><h2>如何使用Shadowrocket 解锁 TikTok 区域限制</h2><h3>必要准备</h3><p>1.拥有Shadowrocket 最新版本授权用户（设置-关于中查看版本：2.1.24及以上版本均可）；</p><p>2.并已配置有机场/服务器；<br>3.拥有非大陆地区AppleID并已下载Tiktok；</p><p>*本教程基于 Shadowrocket 为中文的操作界面，打开Shadowrocket-<code>Settings</code>-<code>Language</code> 设置语言为<code>Chinese/中文简体</code>；</p><h2>详细步骤</h2><h3>第一步，生成证书文件</h3><p>1.Shadowrocket 2.1.24（717）之后版本：<code>配置</code> – 点击一个配置文件（默认是<code>default.conf</code>） – <code>编辑配置</code> – <code>开启 HTTPS 解密</code> – <code>生成新的 CA证书</code> – `安装证书；</p><p>2.点右上角 – <code>安装</code> – 输入手机锁屏密码 – 再次点右上角 – <code>安装</code> – <code>安装</code> – 右上角 – <code>完成</code>；</p><p>3.打开手机 – <code>设置</code> – <code>通用</code> – <code>关于本机</code> – <code>证书信任设置</code> – 找到 – <code>Shadowrocket开头的选项</code> – 打开右侧开关 – 弹出警告框 – <code>继续</code>；</p><p>4.再次打开<code>Shadowrocket</code> – <code>配置</code> – 找到[本地文件]内的配置文件，默认是[default.conf] – 点击 – <code>default.conf</code> – <code>编辑纯文本</code>；</p><p>5.<code>复制</code>下面这一段，粘贴到App内<code>编辑配置</code>文档内（最后面），安装证书这一步其实<code>跟Surge/Quantumult一模一样</code>；</p><pre><code>[Rule]
+DOMAIN,api-h2.tiktokv.com,PROXY
+DOMAIN,api2-16-h2.musical.ly,PROXY
+DOMAIN,api2-19-h2.musical.ly,PROXY
+
+[URL Rewrite]
+(.*video_id=\w{32})(.*watermark=)(.*) $1 302
+((carrier|account|sys)_region=)CN JP 302
+
+[MITM]
+hostname = ,api*.tiktokv.com,*.musical.ly,
+enable = true</code></pre><p>然后点击右上角 – 保存；</p><h3>Shadowrocket Tiktok 换区操作</h3><p>如果需要观看不同国家的视频，只需要修改代码中的<code>JP</code>，比如</p><p>切换到 US ：<code>((carrier|account|sys)_region=)CN US 302</code><br>切换到 UK：<code>((carrier|account|sys)_region=)CN US 302</code><br>切换到台湾省：<code>((carrier|account|sys)_region=)CN TW 302</code></p><h2>如何使用QuantumultX 解锁 TikTok 区域限制</h2><p>QuantumultX 一键配置可参考：<a href="https://t.me/limboprossr/847">https://t.me/limboprossr/847</a></p><h3>11.24.2019 更新</h3><p><img src="https://limbopro.xyz/usr/uploads/2019/11/2669096140.png" alt="QuantumultX.png" title="QuantumultX.png"></p><p>1.QuantumultX 已更新至商店版<code>1.0.3</code>（v1.0.3-build155），Tiktok（美区应用商店最新版，已登录Tiktok账户）使用正常；</p><p>2.1.QuantumultX <code>1.0.3</code> 增加了<code>设备ID</code>（进入QuantumltX，点击右下角三菱按钮，点击右上角 <code>...</code> 更多按钮，滑至底部<code>关于</code>，即可找到设备ID）；</p><p>2.2.QuantumultX <code>1.0.3</code> 增加了<code>共享</code>账号侦测，如果你的QuantumultX是用<code>共享</code>AppleID下载的，则<code>设备ID</code>下方，版本部分则会出现<code>红色问号</code>，而不是绿色<code>√</code>（如上图）；</p><p>2.3.出现<code>红色问号</code>会导致 <code>Rewrite</code> (模块)功能不可用，其它功能不受影响，请支持正版。</p><h3>11.15.2019 更新</h3><p>1.这两天收到<code>之前使用正常</code>的用户反馈<code>Tiktok</code>使用不了，原因未知；<br>2.我个人目前使用完全正常（<a href="https://apps.apple.com/us/app/tiktok-make-your-day/id835599320">美区应用商店</a>下载的Tiktok（目前最新版），并已登录Tiktok账户）；<br>3.如能提供更多有用细节可与我反馈；</p><h3>10.28.2019 更新</h3><h2>详细配置</h2><h3>第一步，下载脚本</h3><h4>旧版本</h4><p>*本步骤目前测试支持 <code>QuantumultX</code> v1.0.1 及之前版本；</p><p>复制脚本链接<code>https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Js.conf</code><br>进入QuantumultX，点击页面右下角三菱<code>按钮</code>，找到<code>Rewrite</code>模块，点击<code>引用</code>，粘贴刚刚复制的链接，右上角点击<code>确定</code>，点击<code>全部同步</code>就可以下载脚本了；</p><h4>新版本</h4><p>*本步骤目前测试支持 <code>QuantumultX</code> v1.0.2 版本；</p><p>1.复制<code>(?&lt;=(carrier|account|sys)_region=)CN url 307 JP</code>（*JP为国别代码）<br>进入QuantumultX，点击页面右下角三菱<code>按钮</code>，找到<code>Rewrite</code>模块，点击<code>添加</code>，粘贴刚刚复制的规则段落，右上角点击<code>确定</code>；</p><p>2.复制<code>api*.tiktokv.com, api*.musical.ly, api*.amemv.com, aweme*.snssdk.com</code>，进入QuantumultX，点击页面右下角三菱<code>按钮</code>，找到<code>配置文件</code>模块，点击<code>编辑</code>，滑至页面末尾；</p><p>找到<code>[mitm]</code>，在 hostname 后面粘贴，效果如下：</p><pre><code>hostname = *.example.com, *.sample.com, vsco.co, *.my10api.com, *googlevideo.com, api.termius.com, api*.tiktokv.com, api*.musical.ly, api*.amemv.com, aweme*.snssdk.com</code></pre><p>*注意， <code>;hostname</code> 前面的<code>;</code> 符号（注释符号），如果有这个符号，务必删掉；<br>*这一步其实跟<code>Shadowrocket</code>/<code>Surge</code>配置证书步骤等是一模一样的；</p><h3>第二步，生成证书</h3><p>1.进入QuantumultX，点击页面右下角三菱<code>按钮</code>，找到<code>MinM</code>模块，点击<code>生成证书</code>，提示生成成功，点击<code>安装证书</code>此时会跳转至<code> Safari</code>，提示<code>此网站...下载一个配置描述文件。您要允许吗？</code>，点击<code>允许</code>，网页提示<code>已下载描述文件</code>；</p><p>2.进入 iOS 系统<code>设置</code>-<code> 通用</code>-<code>描述文件</code>-<code>已下载的描述文件</code>-选中，并安装，输入密码...完成描述文件安装；</p><p>3.进入 iOS 系统<code>设置</code>-<code> 通用</code>-<code>关于本机</code>-<code>证书信任设置</code>-<code>针对根证书启用完全信任</code>-选中刚刚安装的并启用即可；</p><h3>享用Tiktok</h3><p><img src="https://limbopro.xyz/usr/uploads/2019/10/422188080.jpg" alt="QuantumltX.jpg" title="QuantumltX.jpg"></p><p>开启 Rewrite & MinM 如上图；</p><h3>QuantumultX Tiktok 换区操作</h3><p>如想切换到其他地区，进入QuantumultX，点击页面右下角三菱<code>按钮</code>，找到<code>Rewrite</code>模块，点击<code>添加</code>，复制<br><code>(?&lt;=(carrier|account|sys)_region=)CN url 307 JP</code><br>将<code>JP</code>修改成其他地区英文缩写即可，其他国家或地区代码。</p><h2>FAQ</h2><p>1.暂无，欢迎反馈。</p><h2>附录</h2><h3>其他国家或地区代码</h3><p><img src="https://limbopro.xyz/usr/uploads/2019/10/3740990267.png" alt="国别代码.png" title="国别代码.png"></p><h3>QuantumultX & Surge脚本收集</h3><p>带你玩转QuantumltX & Surge，各种VIP解锁（例如VSCO会员/91...）<br><a href="https://t.me/limboprossr/832">https://t.me/limboprossr/832</a></p><h2>联系主理人</h2><p>1.关注频道 <a href="https://t.me/limboprossr">https://t.me/limboprossr</a> 不失联；<br>2.<code>毒奶粉</code>们（我管我的Fans）可联系 <a href="https://limbopro.xyz/usr/uploads/2019/10/3453243330.png">TG机器人</a> 或发送 <a href="https://limbopro.xyz/usr/uploads/2019/10/3453243330.png">邮件</a> 获取帮助；</p><p>3.或点击<code>本页面右下角</code>的聊天按钮联系；</p><h2>机场推荐</h2><p><a href="https://limbopro.xyz/865.html">https://limbopro.xyz/865.html</a></p>
+]]></content>
+<link rel="replies" type="text/html" href="https://limbopro.xyz/archives/3629.html#comments" thr:count="0" />
+<link rel="replies" type="application/atom+xml" href="https://limbopro.xyz/feed/atom/archives/3629.html" thr:count="0"/>
+</entry>
+<entry>
+<title type="html"><![CDATA[我们的星球 Our Planet (2019)]]></title>
+<link rel="alternate" type="text/html" href="https://limbopro.xyz/archives/3349.html" />
+<id>https://limbopro.xyz/archives/3349.html</id>
+<updated>2019-10-05T19:27:00+08:00</updated>
+<published>2019-10-05T19:27:00+08:00</published>
+<author>
+    <name>毒奶</name>
+    <uri>https://limbopro.xyz</uri>
+</author>
+<summary type="html"><![CDATA[本篇文章隶属于 毒奶带你看世界，现在，探索开始。从酷热沙漠到冰天雪地再到无边海洋，加入这个穿越地球珍稀自然栖息地的绝美之旅。]]></summary>
+<content type="html" xml:base="https://limbopro.xyz/archives/3349.html" xml:lang="zh-CN"><![CDATA[
+<p>本篇文章隶属于 <a href="https://limbopro.xyz/category/AfterFQ/">毒奶带你看世界</a>，现在，探索开始。</p><p><img src="https://limbopro.xyz/usr/uploads/2019/10/766656787.jpg" alt="我们的星球.jpg" title="我们的星球.jpg"></p><p>从酷热沙漠到冰天雪地再到无边海洋，加入这个穿越地球珍稀自然栖息地的绝美之旅。</p></img><p class="more"><a href="https://limbopro.xyz/archives/3349.html" title="我们的星球 Our Planet (2019)">[...]</a></p>
+]]></content>
+<link rel="replies" type="text/html" href="https://limbopro.xyz/archives/3349.html#comments" thr:count="0" />
+<link rel="replies" type="application/atom+xml" href="https://limbopro.xyz/feed/atom/archives/3349.html" thr:count="0"/>
+</entry>
+<entry>
+<title type="html"><![CDATA[杀人回忆 살인의 추억 (2003)]]></title>
+<link rel="alternate" type="text/html" href="https://limbopro.xyz/archives/2695.html" />
+<id>https://limbopro.xyz/archives/2695.html</id>
+<updated>2019-09-20T00:47:00+08:00</updated>
+<published>2019-09-20T00:47:00+08:00</published>
+<author>
+    <name>毒奶</name>
+    <uri>https://limbopro.xyz</uri>
+</author>
+<summary type="html"><![CDATA[听说凶手找到了，可惜已经过了有效诉讼期，不能绳之以法。]]></summary>
+<content type="html" xml:base="https://limbopro.xyz/archives/2695.html" xml:lang="zh-CN"><![CDATA[
+<p>听说凶手找到了，可惜已经过了有效诉讼期，不能绳之以法。</p><p><img src="https://limbopro.xyz/usr/uploads/2019/09/1045701757.jpg" alt="杀人回忆.jpg" title="杀人回忆.jpg"></p></img><p class="more"><a href="https://limbopro.xyz/archives/2695.html" title="杀人回忆 살인의 추억 (2003)">[...]</a></p>
+]]></content>
+<link rel="replies" type="text/html" href="https://limbopro.xyz/archives/2695.html#comments" thr:count="0" />
+<link rel="replies" type="application/atom+xml" href="https://limbopro.xyz/feed/atom/archives/2695.html" thr:count="0"/>
+</entry>
+<entry>
+<title type="html"><![CDATA[10个优秀的资讯、科普、涨姿势网站推荐]]></title>
+<link rel="alternate" type="text/html" href="https://limbopro.xyz/archives/2487.html" />
+<id>https://limbopro.xyz/archives/2487.html</id>
+<updated>2019-09-17T13:07:00+08:00</updated>
+<published>2019-09-17T13:07:00+08:00</published>
+<author>
+    <name>毒奶</name>
+    <uri>https://limbopro.xyz</uri>
+</author>
+<summary type="html"><![CDATA[带你一起涨姿势；]]></summary>
+<content type="html" xml:base="https://limbopro.xyz/archives/2487.html" xml:lang="zh-CN"><![CDATA[
+<p>带你一起涨姿势；</p><p class="more"><a href="https://limbopro.xyz/archives/2487.html" title="10个优秀的资讯、科普、涨姿势网站推荐">[...]</a></p>
+]]></content>
+<link rel="replies" type="text/html" href="https://limbopro.xyz/archives/2487.html#comments" thr:count="0" />
+<link rel="replies" type="application/atom+xml" href="https://limbopro.xyz/feed/atom/archives/2487.html" thr:count="0"/>
+</entry>
+<entry>
+<title type="html"><![CDATA[蝙蝠侠黑暗骑士三部曲：侠隐之谜&amp;黑暗骑士&amp;黑暗骑士崛起（小丑电影相关）]]></title>
+<link rel="alternate" type="text/html" href="https://limbopro.xyz/archives/2456.html" />
+<id>https://limbopro.xyz/archives/2456.html</id>
+<updated>2019-09-10T15:11:00+08:00</updated>
+<published>2019-09-10T15:11:00+08:00</published>
+<author>
+    <name>毒奶</name>
+    <uri>https://limbopro.xyz</uri>
+</author>
+<summary type="html"><![CDATA[蝙蝠侠：黑暗骑士&amp;黑暗骑士崛起&amp;侠隐之谜在线观看蝙蝠侠三部曲蝙蝠侠：侠影之谜 Batman Begins (2005)：在线观看蝙蝠侠：黑暗骑士 The Dark Knight (2008)：在...]]></summary>
+<content type="html" xml:base="https://limbopro.xyz/archives/2456.html" xml:lang="zh-CN"><![CDATA[
+<h2>蝙蝠侠：黑暗骑士&黑暗骑士崛起&侠隐之谜在线观看</h2><p><img src="https://limbopro.xyz/usr/uploads/2019/09/3602719354.jpg" alt="黑暗骑士.jpg" title="黑暗骑士.jpg"></p><h2>蝙蝠侠三部曲</h2><p>蝙蝠侠：侠影之谜 Batman Begins (2005)：<a href="https://www.nfmovies.com/detail/?3663.html">在线观看</a><br>蝙蝠侠：黑暗骑士 The Dark Knight (2008)：<a href="https://www.nfmovies.com/detail/?9078.html">在线观看</a><br>蝙蝠侠：黑暗骑士崛起 The Dark Knight Rises (2012)：<a href="https://www.nfmovies.com/detail/?3599.html">在线观看</a></p><p>via <a href="https://movie.douban.com/celebrity/1054524/">克里斯托弗·诺兰</a>导演作品</p></br></br></img><p class="more"><a href="https://limbopro.xyz/archives/2456.html" title="蝙蝠侠黑暗骑士三部曲：侠隐之谜&amp;黑暗骑士&amp;黑暗骑士崛起（小丑电影相关）">[...]</a></p>
+]]></content>
+<link rel="replies" type="text/html" href="https://limbopro.xyz/archives/2456.html#comments" thr:count="0" />
+<link rel="replies" type="application/atom+xml" href="https://limbopro.xyz/feed/atom/archives/2456.html" thr:count="0"/>
+</entry>
+</feed>
