@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+xmlns:content="http://purl.org/rss/1.0/modules/content/"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+xmlns:atom="http://www.w3.org/2005/Atom"
+xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+<channel>
+<title>TG 优秀博主丨limboPro.xyz - LNMP</title>
+<link>https://limbopro.xyz/tag/LNMP/</link>
+<atom:link href="https://limbopro.xyz/feed/tag/LNMP/" rel="self" type="application/rss+xml" />
+<language>zh-CN</language>
+<description></description>
+<lastBuildDate>Mon, 05 Aug 2019 11:34:00 +0800</lastBuildDate>
+<pubDate>Mon, 05 Aug 2019 11:34:00 +0800</pubDate>
+<item>
+<title>Cloudflare 下 Nginx限制单个IP的并发连接数</title>
+<link>https://limbopro.xyz/archives/1852.html</link>
+<guid>https://limbopro.xyz/archives/1852.html</guid>
+<pubDate>Mon, 05 Aug 2019 11:34:00 +0800</pubDate>
+<dc:creator>Julia</dc:creator>
+<description><![CDATA[限制思路Cloudflare 加持下的 Nginx，对单个IP限制并发数：获取用户真实IP，并对其限制并发数；Nginx 的运作方式一些与不套CDN的区别：Cloudflare 下的 Nginx...]]></description>
+<content:encoded xml:lang="zh-CN"><![CDATA[
+<p><img src="https://limbopro.xyz/usr/uploads/2019/08/1773492194.png" alt="NGINX-logo-rgb-large.png" title="NGINX-logo-rgb-large.png"></p><span class="menu-target-fix" id="menu_index_1" name="menu_index_1"></span><h2>限制思路</h2><p>Cloudflare 加持下的 Nginx，对单个IP限制并发数：<code>获取用户真实IP</code>，并<code>对其限制并发数</code>；</p><span class="menu-target-fix" id="menu_index_2" name="menu_index_2"></span><h2>Nginx 的运作方式</h2><p>一些与不套CDN的区别：Cloudflare 下的 Nginx 运作方式，Cloudflare <code>转发用户请求</code>至源站服务器，源站<code>返回结果</code>并传输内容到Cloudflare，Cloudflare <code>转发内容至客户端</code>。如果设置了缓存，未来的相通请求不会经过<code>源站服务器</code>，而是直接从Cloudflare缓存中直接调用；以上。</p><p>需要厘清的一点就是，Nginx 识别到的请求IP来自 Cloudflare 全球各个加速节点的<a href="https://www.cloudflare.com/ips/">IP</a>；</p><span class="menu-target-fix" id="menu_index_3" name="menu_index_3"></span><h2>识别并记录用户真实IP</h2><p><a href="https://limbopro.xyz/archives/1481.html">Cloudflare 下 Nginx 获取用户真实IP 地址</a>，这里提供了相关思路思路（专门为了拉黑CC的无尽IP写的）；</p><span class="menu-target-fix" id="menu_index_4" name="menu_index_4"></span><h3>在nginx.conf的[http]模块里添加如下代码</h3><pre><code>获取用户真实IP，并赋值给变量$clientRealIP
+map $http_x_forwarded_for  $clientRealIp {
+        &quot;&quot;      $remote_addr;
+        ~^(?P&lt;firstAddr&gt;[0-9\.]+),?.*$  $firstAddr;
+}</code></pre><p>通过 map 指令，我们为 nginx 创建了一个变量 $clientRealIp ，这个就是 原始用户的真实 IP 地址，不论用户是直接访问，还是通过一串 CDN 之后的访问，我们都能取得正确的原始IP地址。</p><span class="menu-target-fix" id="menu_index_5" name="menu_index_5"></span><h3>在nginx.conf的[http]模块里添加如下代码</h3><pre><code>#用户的 IP 地址 $clientRealIP 作为 Key，每个 IP 地址每秒处理 10 个请求
+#你想用程序每秒几百次的刷我，没戏，再快了就不处理了，直接返回 503 错误给你
+limit_req_zone $clientRealIP zone=ConnLimitZone:10m  rate=10r/s;
+limit_req_log_level notice;</code></pre><span class="menu-target-fix" id="menu_index_6" name="menu_index_6"></span><h3>最后在Nginx的站点配置文件里[server]模块里加上下面一段代码</h3><pre><code>limit_req zone=ConnLimitZone burst=5 nodelay;</code></pre><p>这样限制单个真实访客IP并发连接数以及速度限制就生效了，实现的效果是：“ 最多 5 个排队， 由于每秒处理 10 个请求 + 5个排队，你一秒最多发送 15 个请求过来，再多就直接返回 503 错误给你了”</p><span class="menu-target-fix" id="menu_index_7" name="menu_index_7"></span><h3>一些问题</h3><p>我用的是 lnmp.org 的脚本安装的 lnmp ； 所以按以上设定配置了 <code>子站</code> 配置文件，即 <code>vhost</code>文件夹下的子站<code>配置文件</code>； 我将 <code>limit_req zone=ConnLimitZone burst=5 nodelay;</code> 配置在了 [http] 模块下，也是生效的；相应的，我加上了一个我想要的状态码，403；可以说是很好的保障。</p><span class="menu-target-fix" id="menu_index_8" name="menu_index_8"></span><h3>我的配置文件参考</h3><pre><code>#获取用户真实IP，并赋值给变量$clientRealIP
+map $http_x_forwarded_for  $clientRealIp {
+        &quot;&quot;      $remote_addr;
+        ~^(?P&lt;firstAddr&gt;[0-9\.]+),?.*$  $firstAddr;
+}
+
+#用户的 IP 地址 $clientRealIP 作为 Key，每个 IP 地址每秒处理 10 个请求
+#你想用程序每秒几百次的刷我，没戏，再快了就不处理了，直接返回 403 错误给你
+limit_req_zone $clientRealIP zone=ConnLimitZone:10m  rate=10r/s;
+limit_req_log_level notice;
+limit_req zone=ConnLimitZone burst=5 nodelay;
+limit_req_status 403; ## 返回状态403！
+
+server
+    {
+        listen 443 ssl http2;
+        #listen [::]:80;
+server_name limbopro.xyz ;
+...</code></pre><span class="menu-target-fix" id="menu_index_9" name="menu_index_9"></span><h2>附注</h2><p>文章参考：<a href="https://www.imydl.tech/lnmp/231.html">Nginx 限制单个IP的并发连接数改进适配开启 CDN 站点</a></p>
+]]></content:encoded>
+<slash:comments>0</slash:comments>
+<comments>https://limbopro.xyz/archives/1852.html#comments</comments>
+<wfw:commentRss>https://limbopro.xyz/feed/archives/1852.html</wfw:commentRss>
+</item>
+<item>
+<title>Typecho 全静态切换防御DDoS策略</title>
+<link>https://limbopro.xyz/archives/1282.html</link>
+<guid>https://limbopro.xyz/archives/1282.html</guid>
+<pubDate>Thu, 18 Jul 2019 23:18:00 +0800</pubDate>
+<dc:creator>Julia</dc:creator>
+<description><![CDATA[做防御的方法有很多种，但最多的两种莫过于加钱或装死。主理人序加钱，万万是不可能加钱的。想来大家问到这个问题了，肯定还是因为没钱，或者说相关的预算并不多。那么到底有什么好办法呢？一 部署免费CDN...]]></description>
+<content:encoded xml:lang="zh-CN"><![CDATA[
+<p><img src="https://limbopro.xyz/usr/uploads/2019/07/1467826344.jpg" alt="DDoS" title="DDoS"></p><p>做防御的方法有很多种，但最多的两种莫过于<code>加钱</code>或<code>装死</code>。</p><h2>主理人序</h2><p>加钱，万万是不可能加钱的。想来大家问到这个问题了，肯定还是因为没钱，或者说相关的预算并不多。那么到底有什么好办法呢？</p><h1>一 部署免费CDN</h1><p>可以参考这一篇：<a href="https://limbopro.xyz/archives/1204.html">Cloudflare 三步隐藏真实服务器IP</a> 以及，<a href="https://limbopro.xyz/category/LNMP/">LNMP相关系列</a>文章。</p><h1>二 全站静态/动态切换</h1><p>是的，在部署免费CDN的基础上，做动静切换。必须要明白的动态资源仍然会消耗服务器资源，例如登陆页，搜索页，都要调取 PHP，mysql 数据索引服务。</p></img><p class="more"><a href="https://limbopro.xyz/archives/1282.html" title="Typecho 全静态切换防御DDoS策略">[...]</a></p>
+]]></content:encoded>
+<slash:comments>0</slash:comments>
+<comments>https://limbopro.xyz/archives/1282.html#comments</comments>
+<wfw:commentRss>https://limbopro.xyz/feed/archives/1282.html</wfw:commentRss>
+</item>
+</channel>
+</rss>

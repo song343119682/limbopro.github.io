@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns="http://purl.org/rss/1.0/"
+xmlns:dc="http://purl.org/dc/elements/1.1/">
+<channel rdf:about="https://limbopro.xyz/feed/rss/tag/%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+<title>毒奶博主丨欢迎使用代理访问本站。 - 服务器</title>
+<link>https://limbopro.xyz/tag/服务器/</link>
+<description></description>
+<items>
+<rdf:Seq>
+<rdf:li resource="https://limbopro.xyz/archives/3629.html"/>
+<rdf:li resource="https://limbopro.xyz/archives/2027.html"/>
+<rdf:li resource="https://limbopro.xyz/archives/1959.html"/>
+<rdf:li resource="https://limbopro.xyz/archives/1872.html"/>
+<rdf:li resource="https://limbopro.xyz/archives/1859.html"/>
+<rdf:li resource="https://limbopro.xyz/archives/1204.html"/>
+</rdf:Seq>
+</items>
+</channel>
+<item rdf:about="https://limbopro.xyz/archives/3629.html">
+<title>iOS 使用 Surge/Quantumult/Shadowrocket /QuantumultX 解锁 TikTok 区域限制（免拔卡）10.10.2019</title>
+<link>https://limbopro.xyz/archives/3629.html</link>
+<dc:date>2019-10-10T13:32:00+08:00</dc:date>
+<description>近期更新可以用，真开心。13.10.2019 更新https://t.me/limboprossr/830via 成功案例；本文隶属于 实用工具/科学上网 分类，点击分类名称可以查看更多相关文章；Tiktok 介绍抖音海外版；抖音短视频简称抖音，是一款移动电话上影片的社群应用程序，用户可录制15秒钟的短片，能轻易完成对口型，并内置特效，用户可对影片留言，自2016年9月于今日头条孵化上线，定位为适合中国年轻人的音乐短影片社区，应用为垂直音乐的UGC短视频，2017年以来获得用户规模快速增长。 维基百科Tiktok 用户界面截图 iOS端如何使用Surge 解锁 TikTok 区域限制必要准备1.拥有Surge3及以上版本授权用户；2.并已配置有机场/服务器；3.拥有非大陆地区AppleID并已下载Tiktok；*本教程基于 Surge 为中文的操作界面，打开Surge-More-APPEARANCE 模块下-Language 设置语言为Chinese；详细步骤如上图，选择任意可用的配置文件，举例选择海螺，点击编辑模块下，在文本模式中编辑，如果提示托管配置不可被编辑...创建副本再进行修改。，点击好的，找到创建-创建当前配置副本-任意命名。选中刚刚创建的副本，点击在文本中编辑，找到如下字眼：第一步：添加URL重定向在文本编辑模式中找到[URL Rewrite]字眼，并复制下方代码到该字眼下方；(.*video_id=\w{32})(.*watermark=)(.*) $1 302
+(?&lt;=(carrier|account|sys)_region=)CN JP 307粘贴后，效果如下[URL Rewrite]
+(.*video_id=\w{32})(.*watermark=)(.*) $1 302
+(?&lt;=(carrier|account|sys)_region=)CN JP 307点击右上角完成，URL 重定向设置结束。在 Surge 主页面， Rewrite 模块中，URL 重定向里面可以查看刚刚修改的效果，如下图：Surge Tiktok 换区操作如需改/换区，亦可直接在这个Rewrite模块-&gt;URL 重定向下修改，找到(?&lt;=(carrier|account|sys)_region=)CN ，编辑，替代文本处更换成其他国家或地区代码即可，例如HK，例如KR。其他国家或地区代码在本文文末可找到。第二步，MitM添加主机名点击主机名，以进行配置，点新增；api*.tiktokv.com
+api*.musical.ly
+api*.amemv.com
+aweme*.snssdk.com效果如下：到此，MitM添加主机名完成。第三步，配置根证书1.点击，配置根证书，生成新的 CA 证书，生成后，点击安装证书，此时会跳转至 Safari，提示此网站...下载一个配置描述文件。您要允许吗？，点击允许，网页提示已下载描述文件；2.进入 iOS 系统设置- 通用-描述文件-已下载的描述文件-选中，并安装，输入密码...完成描述文件安装；3.进入 iOS 系统设置- 通用-关于本机-证书信任设置-针对根证书启用完全信任-选中刚刚安装的并启用即可；享用Tiktok开启 mitm &rewrite按钮，开启 Surge，打开Tiktok，完事；如何使用 Quantumult 解锁 TikTok 区域限制必要准备1.拥有 Quantumult 的用户；2.并已配置有机场/服务器；3.拥有非大陆地区AppleID并已下载Tiktok；*本教程基于 Quantumult 为中文的操作界面，打开Quantumult-More-PERSONALIZATION 模块下-Language 设置语言为Chinese；详细步骤第一步，开启模块打开圈 Quantumult --更多--模块--选用TUN+HTTP(Default）；第二步，开启HTTPS解密并信任证书1.设置-HTTPS解密-选择开启HTTPS解密-再点生成密钥及证书-右上角点击保存，此时会跳转至 Safari浏览器，提示此网站...下载一个配置描述文件。您要允许吗？，点击允许，网页提示已下载描述文件；2.进入 iOS 系统设置- 通用-描述文件-已下载的描述文件-选中，并安装，输入密码...完成描述文件安装；3.进入 iOS 系统设置- 通用-关于本机-证书信任设置-针对根证书启用完全信任-选中刚刚安装的并启用即可；PS：这一步，跟Surge 第三步，配置根证书 略同，安装证书，信任证书。第三步，添加订阅分流链接添加订阅分流链接：前往Quantumult：设置--)订阅--)右上角加号--)分流--)链接处添加网址https://raw.githubusercontent.com/lhie1/Rules/master/Quantumult/Quantumult.conf --)名称输入分流俩字--)个性化戳出对勾--)右上角保存--)左划--)点选替换--)保存--)好第四步，添加订阅链接阻止添加订阅链接阻止：设置-订阅-点击右上角+号，选择链接阻止-在链接填写处添加网址：https://raw.githubusercontent.com/lhie1/Rules/master/Quantumult/Quantumult_URL.conf名称输入阻止俩字或任意取名-选择包含主机名-点击右上角保存-选中刚刚保存的链接阻止的名字阻止处，左划-点选增加-好；添加直播分流规则不看美区直播的可跳过此步：设置-分流-搜索关键字如pstatp.com-戳进去将行为中的Direct改为Proxy-并开启远程解析TUN连接-右上角保存；享用TiktokQuantumult Tiktok 换区操作TikTok换区操作：打开Quantumult-设置-HTTP复写，如上图所示，找到(?&lt;=(carrier|account|sys)_region=)CN，编辑，替换JP为任意其他国家或地区代码，例如MO、SG等；（跟Surge URL Rewrite 类似）；以上，亲测有效。（10.10.2019）如何使用Shadowrocket 解锁 TikTok 区域限制必要准备1.拥有Shadowrocket 最新版本授权用户（设置-关于中查看版本：2.1.24及以上版本均可）；2.并已配置有机场/服务器；3.拥有非大陆地区AppleID并已下载Tiktok；*本教程基于 Shadowrocket 为中文的操作界面，打开Shadowrocket-Settings-Language 设置语言为Chinese/中文简体；详细步骤第一步，生成证书文件1.Shadowrocket 2.1.24（717）之后版本：配置 – 点击一个配置文件（默认是default.conf） – 编辑配置 – 开启 HTTPS 解密 – 生成新的 CA证书 – `安装证书；2.点右上角 – 安装 – 输入手机锁屏密码 – 再次点右上角 – 安装 – 安装 – 右上角 – 完成；3.打开手机 – 设置 – 通用 – 关于本机 – 证书信任设置 – 找到 – Shadowrocket开头的选项 – 打开右侧开关 – 弹出警告框 – 继续；4.再次打开Shadowrocket – 配置 – 找到[本地文件]内的配置文件，默认是[default.conf] – 点击 – default.conf – 编辑纯文本；5.复制下面这一段，粘贴到App内编辑配置文档内（最后面），安装证书这一步其实跟Surge/Quantumult一模一样；[Rule]
+DOMAIN,api-h2.tiktokv.com,PROXY
+DOMAIN,api2-16-h2.musical.ly,PROXY
+DOMAIN,api2-19-h2.musical.ly,PROXY
+
+[URL Rewrite]
+(.*video_id=\w{32})(.*watermark=)(.*) $1 302
+((carrier|account|sys)_region=)CN JP 302
+
+[MITM]
+hostname = ,api*.tiktokv.com,*.musical.ly,
+enable = true然后点击右上角 – 保存；Shadowrocket Tiktok 换区操作如果需要观看不同国家的视频，只需要修改代码中的JP，比如切换到 US ：((carrier|account|sys)_region=)CN US 302切换到 UK：((carrier|account|sys)_region=)CN US 302切换到台湾省：((carrier|account|sys)_region=)CN TW 302如何使用QuantumultX 解锁 TikTok 区域限制10.12.2019 更新详细配置第一步，下载脚本复制脚本链接https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Js.conf进入QuantumultX，点击页面右下角三菱按钮，找到Rewrite模块，点击引用，粘贴刚刚复制的链接，右上角点击确定，点击全部同步就可以下载脚本了；第二步，生成证书1.进入QuantumultX，点击页面右下角三菱按钮，找到MinM模块，点击生成证书，提示生成成功，点击安装证书此时会跳转至 Safari，提示此网站...下载一个配置描述文件。您要允许吗？，点击允许，网页提示已下载描述文件；2.进入 iOS 系统设置- 通用-描述文件-已下载的描述文件-选中，并安装，输入密码...完成描述文件安装；3.进入 iOS 系统设置- 通用-关于本机-证书信任设置-针对根证书启用完全信任-选中刚刚安装的并启用即可；享用Tiktok开启 Rewrite & MinM 如上图；QuantumultX Tiktok 换区操作如想切换到其他地区，进入QuantumultX，点击页面右下角三菱按钮，找到Rewrite模块，点击添加，复制(?&lt;=(carrier|account|sys)_region=)CN url 307 JP将JP修改成其他地区英文缩写即可，其他国家或地区代码。FAQ1.暂无，欢迎反馈。附录其他国家或地区代码QuantumultX & Surge脚本收集带你玩转QuantumltX & Surge，各种VIP解锁（例如VSCO会员/91...）https://t.me/limboprossr/832联系主理人1.关注频道 https://t.me/limboprossr 不失联；2.毒奶粉们（我管我的Fans）可联系 TG机器人 或发送 邮件 获取帮助；3.或点击本页面右下角的聊天按钮联系；机场推荐https://limbopro.xyz/865.html</description>
+</item>
+<item rdf:about="https://limbopro.xyz/archives/2027.html">
+<title>Nikto丨网页服务器漏洞扫描器（开源的（GPL））</title>
+<link>https://limbopro.xyz/archives/2027.html</link>
+<dc:date>2019-08-12T13:18:00+08:00</dc:date>
+<description>Nikto 开源的（GPL）网页服务器扫描器Nikto是一款开源的（GPL）网页服务器扫描器，它可以对网页服务器进行全面的多种扫描，包含超过3300种有潜在危险的文件／CGIs；超过625种服务器版本；超过230种特定服务器问题。扫描项和插件可以自动更新（如果需要）。基于Whisker/libwhisker完成其底层功能。这是一款非常棒的工具，但其软件本身并不经常更新，最新和最危险的可能检测不到。[...]</description>
+</item>
+<item rdf:about="https://limbopro.xyz/archives/1959.html">
+<title>6个优秀的网站连通状态及速度检测工具</title>
+<link>https://limbopro.xyz/archives/1959.html</link>
+<dc:date>2019-08-10T13:33:00+08:00</dc:date>
+<description>网站的访问速度对于一个网站非常重要，没有一个人会喜欢速度慢的网站。这里提供6个优秀的网站连通状态及速度检测工具；[...]</description>
+</item>
+<item rdf:about="https://limbopro.xyz/archives/1872.html">
+<title>Linode丨建站VPS服务商推荐</title>
+<link>https://limbopro.xyz/archives/1872.html</link>
+<dc:date>2019-08-06T00:13:00+08:00</dc:date>
+<description>老牌VPS服务商linode ，知名业界VPS服务商。800,000 用户的选择；断断续续已经用了 5 年有余，中途也没有转用其他 VPS 服务商，但还是觉得 linode 好，其他 VPS 这里暂且不表； [...]</description>
+</item>
+<item rdf:about="https://limbopro.xyz/archives/1859.html">
+<title>FinalShell - SSH 管理工具</title>
+<link>https://limbopro.xyz/archives/1859.html</link>
+<dc:date>2019-08-05T16:22:00+08:00</dc:date>
+<description>FinalShell 介绍FinalShell是一体化的的服务器，网络管理软件，不仅是ssh客户端，还是功能强大的开发，运维工具，充分满足开发，运维需求！支持平台[...]</description>
+</item>
+<item rdf:about="https://limbopro.xyz/archives/1204.html">
+<title>三个步骤隐藏真实服务器IP</title>
+<link>https://limbopro.xyz/archives/1204.html</link>
+<dc:date>2019-07-15T22:46:00+08:00</dc:date>
+<description>运作逻辑图使用Cloudflare（CDN）隐藏服务器真实IPCloudFlare是一个国外著名的免费CDN网站加速服务公司。Content Delivery Network，简称CDN，内容分发网络，是建立并覆盖在承载网之上，由分布在不同区域的边缘节点服务器群组成的分布式网络。查看CDN更多资讯；这里我推荐使用Cloudflare，免费版本基本可以满足一个小站需求。步骤一 一些必要的检查除非你一开始就使用了CDN，不然你铁定泄露了。如何知道你的服务器IP是否已被扫描，查看关于接入 Cloudflare CDN网络后，如何防止源站IP泄露；如果已经被扫描并被记录，这时候你要做的先将域名解析（一般你的解析是在域名服务商下）迁移至Cloudflare下，之后再做服务器迁移。[...]</description>
+</item>
+</rdf:RDF>

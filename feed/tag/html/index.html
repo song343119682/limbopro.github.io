@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+xmlns:content="http://purl.org/rss/1.0/modules/content/"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+xmlns:atom="http://www.w3.org/2005/Atom"
+xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+<channel>
+<title>毒奶 - html</title>
+<link>https://limbopro.xyz/tag/html/</link>
+<atom:link href="https://limbopro.xyz/feed/tag/html/" rel="self" type="application/rss+xml" />
+<language>zh-CN</language>
+<description></description>
+<lastBuildDate>Tue, 20 Aug 2019 14:42:00 +0800</lastBuildDate>
+<pubDate>Tue, 20 Aug 2019 14:42:00 +0800</pubDate>
+<item>
+<title>手把手教你用谷歌自定义搜索引擎</title>
+<link>https://limbopro.xyz/archives/2203.html</link>
+<guid>https://limbopro.xyz/archives/2203.html</guid>
+<pubDate>Tue, 20 Aug 2019 14:42:00 +0800</pubDate>
+<dc:creator>毒奶</dc:creator>
+<description><![CDATA[让网站搜索更容易通过 Google 自定义搜索，您可以将搜索框添加到您的首页上，从而帮助他人在您的网站上找到需要的信息。主理人推荐https://limbopro.xyz/search.html...]]></description>
+<content:encoded xml:lang="zh-CN"><![CDATA[
+<p><img src="https://limbopro.xyz/usr/uploads/2019/08/2639019316.png" alt="googlelogo_color_284x96dp.png" title="googlelogo_color_284x96dp.png"></p><h2>让网站搜索更容易</h2><p>通过 Google 自定义搜索，您可以将搜索框添加到您的首页上，从而帮助他人在您的网站上找到需要的信息。</p><h2>主理人推荐</h2><p><img src="https://limbopro.xyz/usr/uploads/2019/08/3795456132.jpg" alt="预览" title="预览"></p><p><a href="https://limbopro.xyz/search.html">https://limbopro.xyz/search.html</a> 大家可以先体验一下；</p><p>其实，这也算是为个人网站增加一个实用功能吧；<br>我想大家都知道一些搜索引擎的灵魂技巧，例如 <code>site:limbopro.xyz 关键字 </code>指定对某个网站进行搜索；由此你可以理解，谷歌自定义搜索引擎的妙用；</p><p>我们使用谷歌搜索时，<code>结果来自不同的网站</code>，数以千万计；现在好了，我们<code>自定义</code>结果的<code>搜索范围</code>，并对结果加以<code>分类</code>；</p><h2>操作简单</h2><p>在你的HTML页面中加入一串代码，即可引入自定义搜索引擎方便简单；</p><h2>新建搜索引擎</h2><p>P.S 希望你有谷歌账号；</p><p>1.新建搜索引擎（New search engine）：<a href="https://cse.google.com/cse/create/new">https://cse.google.com/cse/create/new</a> </p><p>2.就填写你的域名好了；</p><h2>设置搜索范围</h2><p>新建好搜索引擎后，<code>编辑搜索引擎</code>；设置是否支持<code>图片搜索</code>、<code>地区与语言</code>、<code>安全搜索</code>；</p><p><strong>Sites to search</strong> //搜索范围</p><p>路径  Edit search engine &gt;&gt;Setup</p><p><img src="https://limbopro.xyz/usr/uploads/2019/08/2276945330.png" alt="Edit search engine.png" title="Edit search engine.png"></p><p>添加要在哪些网站进行搜索，即划定<code>搜索范围</code>；它可以是一个网站，或多个网站；默认是你刚刚填写的网站，使用<code>Add</code> 添加即可；这一步尽管添加网站即可；添加完后，可以在页面右侧进行搜索预览测试；</p><h2>设置结果的分类</h2><p><strong>Refinements </strong> //分类</p><p>路径 Edit search engine &gt;&gt;Search features</p><p>网站都是有分类的，比如说影视分类如：爱奇艺、优酷、腾讯视频等；刚刚设置搜索范围时都有哪些网站呢？现在给它们做个分类；名称自己想，一定要选<code>Search only the sites with this label.</code> 因为这是对目标网站进行<code>结果分类</code>的前提；</p><p><img src="https://limbopro.xyz/usr/uploads/2019/08/3203365610.png" alt="Refinements.png" title="Refinements.png"></p><h2>分配相应网站到结果分类</h2><p>分类设置好后，进入</p><p><strong>Sites to search</strong> //搜索范围 页面；找到相应网站，编辑，分配到相应分类；</p><p><img src="https://limbopro.xyz/usr/uploads/2019/08/254881260.png" alt="Sites to search" title="Sites to search"></p><p>设置完毕后，可以在页面右侧进行搜索预览测试；</p><h2>添加搜索引擎至你的网站/网页</h2><p>找到你的<code>Search engine ID </code><br><strong>Sites to search</strong> //搜索范围<br>路径  Edit search engine &gt;&gt;Setup</p><p>以毒奶搜索举例：进入网站根目录，新建一个html页面，粘贴以下HTML代码，保存为search.html；</p><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+    &lt;!-- 网站的名称，会显示在浏览器的 Tab 中，根据你自己的需要进行修改 --&gt;
+    &lt;title&gt;万能搜索丨TG 毒奶博主丨limboPro.xyz&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css&quot;&gt;
+    &lt;script defer src=&quot;https://use.fontawesome.com/releases/v5.1.0/js/all.js&quot;&gt;&lt;/script&gt;
+ &lt;base target=&quot;_blank&quot;&gt;
+ 
+ &lt;!-- Global site tag (gtag.js) - Google Analytics --&gt;
+&lt;script async src=&quot;https://www.googletagmanager.com/gtag/js?id=UA-140019039-1&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-140019039-1');
+&lt;/script&gt;
+
+ &lt;script&gt;
+function AddFavorite() {
+    var title = '万能搜索丨TG 毒奶丨limboPro.xyz';
+    var url = 'https://limbopro.xyz/search.html';
+    try {
+        window.external.addFavorite(url, title);
+    }
+    catch (e) {
+        try {
+            window.sidebar.addPanel(title, url, &quot;&quot;);
+        }
+        catch (e) {
+            alert(&quot;抱歉，您所使用的浏览器无法完成此操作。\n\n加入收藏失败，请使用Ctrl+D进行添加&quot;);
+        }
+    }
+}
+&lt;/script&gt;
+ 
+ &lt;/head&gt;
+  &lt;body&gt;
+
+  &lt;section class=&quot;section&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+      &lt;div class=&quot;has-text-centered&quot;&gt;
+        &lt;!-- 图片地址替换为你自己的 Logo 的地址 --&gt;
+        &lt;img src=&quot;https://limbopro.xyz/Search.png&quot; alt=&quot;Logo&quot; width=&quot;180&quot;&gt;
+        &lt;!-- 页面的 Title --&gt;
+        &lt;h1 class=&quot;title&quot; style=&quot;padding:20px;&quot;&gt;
+        毒奶博主の万能搜索引擎
+        &lt;/h1&gt;
+        &lt;!-- 页面的描述 --&gt;
+        &lt;p class=&quot;subtitle &quot;&gt; 本站丨电影丨韩剧丨美剧丨英剧丨日剧丨大陆剧丨动漫丨追番丨演员丨番号丨电报
+        &lt;/p&gt;
+        
+        &lt;!-- 页面导航 --&gt;
+        &lt;p class=&quot;subtitle &quot;&gt;
+        &gt;&gt;&lt;a href='https://limbopro.xyz'&gt;首页&lt;/a&gt;&gt;&gt;&lt;a href='https://t.me/limboprossr'&gt;频道&lt;/a&gt;&gt;&gt;&lt;a href='https://limbopro.xyz/865.html'&gt;机场&lt;/a&gt;&gt;&gt;&lt;a href='https://limbopro.xyz/6.html'&gt;联系&lt;/a&gt;&gt;&gt;&lt;a href=&quot;javascript:void(0);&quot; onclick=&quot;AddFavorite()&quot;&gt;收藏本页&lt;/a&gt;&gt;&gt;
+        &lt;/p&gt;
+        &lt;!-- 页面导航 --&gt;
+        
+        &lt;script&gt;
+          (function() {
+            // 下方的 cx 的值替换为你的搜索引擎 ID ，可以在搜索引擎-设置-基本设置中获取。
+            var cx = '011828234062176881129:0m3tfod8nnu';
+            var gcse = document.createElement('script');
+            gcse.type = 'text/javascript';
+            gcse.async = true;
+            gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(gcse, s);
+          })();
+        &lt;/script&gt;
+        &lt;!-- 搜索引擎的输入框 --&gt;
+        &lt;gcse:searchbox&gt;&lt;/gcse:searchbox&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+        &lt;!-- 搜索引擎结果框 --&gt;
+        &lt;gcse:searchresults&gt;&lt;/gcse:searchresults&gt;
+        &lt;p&gt;
+        &lt;/p&gt;
+     &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre><h2>总结</h2><p>需要一些HTML知识，用起来会很舒服；也可以很快的帮助小伙伴找到需要的优质资源，信息，结果等；至少，目前来看，我设定的搜索范围在业界还是挺高的；你们也快一点试试吧；</p><h2>附注</h2><p>1.<a href="https://sspai.com/post/47192">站在Google 巨人的肩膀上，打造一个信息搜集的利器</a>- 少数派<br>2.<a href="https://www.google.com/cse/?hl=zh-CN">自定义搜索引擎</a> - Google</p>
+]]></content:encoded>
+<slash:comments>0</slash:comments>
+<comments>https://limbopro.xyz/archives/2203.html#comments</comments>
+<wfw:commentRss>https://limbopro.xyz/feed/archives/2203.html</wfw:commentRss>
+</item>
+<item>
+<title>Typecho 插入本地视频的方法</title>
+<link>https://limbopro.xyz/archives/58.html</link>
+<guid>https://limbopro.xyz/archives/58.html</guid>
+<pubDate>Mon, 13 May 2019 15:48:00 +0800</pubDate>
+<dc:creator>毒奶</dc:creator>
+<description><![CDATA[成功展示效果展示引入代码文章编辑器内插入代码如下：&lt;video src=&quot;https://limbopro.xyz/usr/uploads/2019/05/3093449111....]]></description>
+<content:encoded xml:lang="zh-CN"><![CDATA[
+<h1>成功展示效果展示</h1><p><video src="https://limbopro.xyz/usr/uploads/2019/05/3093449111.mkv" width="100%" height="360" controls="controls"></video></p><h3>引入代码</h3><p>文章编辑器内插入代码如下：</p><p><code>&lt;video src=&quot;https://limbopro.xyz/usr/uploads/2019/05/3093449111.mkv&quot; width=&quot;100%&quot; height=&quot;320&quot; controls=&quot;controls&quot;&gt;&lt;/video&gt;</code></p><h3>代码无效的解决方法</h3><p class="more"><a href="https://limbopro.xyz/archives/58.html" title="Typecho 插入本地视频的方法">[...]</a></p>
+]]></content:encoded>
+<slash:comments>0</slash:comments>
+<comments>https://limbopro.xyz/archives/58.html#comments</comments>
+<wfw:commentRss>https://limbopro.xyz/feed/archives/58.html</wfw:commentRss>
+</item>
+</channel>
+</rss>
