@@ -30,4 +30,4 @@ Disallow:
 User-agent: *
 Disallow: 
 Sitemap: https://limbopro.xyz/sitemap.xml
-
+Sitemap: https://limbopro.xyz/limbopro.xml
