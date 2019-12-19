@@ -6,54 +6,11 @@ xml:base="https://limbopro.xyz/search/quantumultx 分流/"
 >
 <title type="text">毒奶博主丨欢迎使用代理访问本站。 - quantumultx 分流</title>
 <subtitle type="text">够了，我无法忍受你的行为，现在你将成为我们中的一员。</subtitle>
-<updated>2019-12-05T18:01:00+08:00</updated>
+<updated>2019-10-30T10:16:00+08:00</updated>
 <generator uri="http://typecho.org/" version="1.1/17.10.30">Typecho</generator>
 <link rel="alternate" type="text/html" href="https://limbopro.xyz/search/quantumultx 分流/" />
 <id>https://limbopro.xyz/feed/atom/search/quantumultx%20%E5%88%86%E6%B5%81/</id>
 <link rel="self" type="application/atom+xml" href="https://limbopro.xyz/feed/atom/search/quantumultx%20%E5%88%86%E6%B5%81/" />
-<entry>
-<title type="html"><![CDATA[机场专用分流规则（80+机场）]]></title>
-<link rel="alternate" type="text/html" href="https://limbopro.xyz/archives/5890.html" />
-<id>https://limbopro.xyz/archives/5890.html</id>
-<updated>2019-12-05T18:01:00+08:00</updated>
-<published>2019-12-05T18:01:00+08:00</published>
-<author>
-    <name>毒奶</name>
-    <uri>https://limbopro.xyz</uri>
-</author>
-<summary type="html"><![CDATA[机场网站被墙了，打不开，咋搞？主理人说排除机场主跑路的可能，挂代理访问即可访问被墙机场网站（不用一个个手动添加分流规则，只需订阅分流规则即可搞定，且无需开启全局模式；）；附一篇自定义分流的文章：...]]></summary>
-<content type="html" xml:base="https://limbopro.xyz/archives/5890.html" xml:lang="zh-CN"><![CDATA[
-<p>机场网站被墙了，打不开，咋搞？</p><h2>主理人说</h2><p>排除机场主跑路的可能，挂代理访问即可访问被墙机场网站（不用一个个<code>手动添加</code>分流规则，只需<code>订阅</code>分流规则即可搞定，且无需开启全局模式；）；附一篇自定义分流的文章：</p><p>[post cid="2910" cover="https://limbopro.xyz/usr/uploads/2019/09/1752548461.jpg"/]</p><p>以上。</p><p>以下为本文正文；</p><h2>80+机场分流规则</h2><p>规则涵盖了绝大部分机场，默认走代理（即PROXY），如有遗漏欢迎补充；</p><pre><code>...
-# 毒奶专用
-DOMAIN-KEYWORD,limbopro,PROXY
-DOMAIN-KEYWORD,iplcm,PROXY
-DOMAIN-KEYWORD,kcssr,PROXY
-DOMAIN-KEYWORD,kcjisu,PROXY
-DOMAIN-KEYWORD,n3ro,PROXY
-DOMAIN-KEYWORD,gtary,PROXY
-DOMAIN-KEYWORD,nexitally,PROXY
-...</code></pre><p>via 机场分流规则示例；</p><p><strong>10.17.2019 更新</strong><br>经过一个小时的翻阅毒药测速记录，现已增加 80+ 机场域名记录；<br>Github 仓库地址：<a href="https://github.com/limbopro/Profiles/tree/master/limbopro">https://github.com/limbopro/Profiles/tree/master/limbopro</a></p><h2>配置指引</h2><h3>Quantumult//</h3><p><code>https://raw.githubusercontent.com/limbopro/Profiles/master/limbopro/Quantumult.conf</code><br>1.复制<code>链接</code>；<br>2.打开<code>Quantumult</code> App，<code>设置</code>-<code>订阅</code>-点击右上角<code>+</code>号 -<code>分流</code>；<br>3.填写名称（机场分流），粘贴<code>链接</code>；  <br>4.保存；</p><h3>Quantumult X</h3><p><code>https://raw.githubusercontent.com/limbopro/Profiles/master/limbopro/QuantumultX.list</code><br>0.复制<code>链接</code>；<br>1.打开<code>Quantumult X</code> App ，点击右下角<code>三菱</code>模样的按钮；<br>2.找到<code>分流</code>模块 -&gt; 点击<code>引用</code> -&gt; 点击右上角<code>+</code>号；<br>3.粘贴<code>链接</code>，策略偏好选择<code>PROXY</code>，保存；</p><h3>Shadowrocket</h3><p><code>https://raw.githubusercontent.com/limbopro/Profiles/master/limbopro/Shadowrocket.conf</code><br>1.复制<code>链接</code>；<br>2.打开<code>Shadowrocket</code>-<code>配置</code>-点击右上角<code>+</code>号；<br>3.粘贴链接（提示：从给定的URL下载配置）；<br>4.<code>配置</code>-<code>远程文件</code>-点击刚刚粘贴的链接，<code>使用配置</code>；</p><h3>Surge</h3><p><code>https://raw.githubusercontent.com/limbopro/Profiles/master/limbopro/Surge.list</code>；</p><p>1.打开<code>Surge</code>App，<code>首页</code>-<code>出站模式</code>功能模块下 - 点击 <code>代理规则</code>（如若提示：托管配置不可被编辑，你可以创建一个副本再进行修改，请点击<code>首页</code>-点击左上角当前在用的<code>配置文件名称</code>- <code>创建</code> - <code>创建当前配置副本</code>；）</p><p>2.切换到副本，<code>出站模式</code>功能模块下 - 点击 <code>代理规则</code>- <code>新增</code> -选择 <code>增加新规则集</code>；<br>3.选择<code>外部规则集</code>，策略选择<code>Proxy</code>或任意可用<code>节点</code>；<br>4.URL处粘贴链接；</p><p>以上；</p><h2>其他相关</h2><p>安卓版 SSR/Maying/V2rayNG/Kitsunebi 等安装客戶端请使用内置的分应用代理模式（在软件设置-分应用代理-中进行设置，选择某款浏览器走代理，在这个浏览器浏览被墙网站即可。）</p><p>PC/MAC 的应用如ClashW/X等可在软件里找到配置或者PAC这两个相关字眼，修改配置/PAC文件即可(配置文件里其实有相应的基础示例)。</p><h2>机场相关</h2><p>[post cid="1423" cover="https://limbopro.xyz/usr/uploads/2019/08/728231641.jpg"/]<br>[post cid="2787" cover="https://limbopro.xyz/usr/uploads/2019/09/1975249076.jpg"/]</p><h2>联系主理人</h2><p>1.关注频道 <a href="https://t.me/limboprossr">https://t.me/limboprossr</a> 不失联；<br>2.<code>毒奶粉</code>们（我管我的Fans）可联系 <a href="https://t.me/limboprobot">TG机器人</a> 或发送<del> 邮件</del>获取帮助；</p><p>3.或点击<code>本页面右下角</code>的聊天按钮联系；</p>
-]]></content>
-<link rel="replies" type="text/html" href="https://limbopro.xyz/archives/5890.html#comments" thr:count="0" />
-<link rel="replies" type="application/atom+xml" href="https://limbopro.xyz/feed/atom/archives/5890.html" thr:count="0"/>
-</entry>
-<entry>
-<title type="html"><![CDATA[神一般的工具们：Surge/Quantumult/Shadowrocket /QuantumultX/Clash/v2Ray（NG）/Maying 支持协议及配置教程科普指北]]></title>
-<link rel="alternate" type="text/html" href="https://limbopro.xyz/archives/5230.html" />
-<id>https://limbopro.xyz/archives/5230.html</id>
-<updated>2019-11-22T22:26:00+08:00</updated>
-<published>2019-11-22T22:26:00+08:00</published>
-<author>
-    <name>毒奶</name>
-    <uri>https://limbopro.xyz</uri>
-</author>
-<summary type="html"><![CDATA[该图片由dima_goroziya在Pixabay上发布主理人说目前我用得最顺手的便是 QuantumultX，丰富的协议支持（SSR/SS/Vmess...），也不用担心哪家 机场 因协议不支...]]></summary>
-<content type="html" xml:base="https://limbopro.xyz/archives/5230.html" xml:lang="zh-CN"><![CDATA[
-<p><img src="https://limbopro.xyz/usr/uploads/2019/11/3839266483.jpg" alt="compass-1753659_1280.jpg" title="compass-1753659_1280.jpg"></p><p>该图片由<a href="https://pixabay.com/zh/users/dima_goroziya-3562044/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1753659">dima_goroziya</a>在<a href="https://pixabay.com/zh/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1753659">Pixabay</a>上发布</p><h2>主理人说</h2><p><img src="https://limbopro.xyz/usr/uploads/2019/12/1777082229.jpg" alt="QX.jpg" title="QX.jpg"></p><p>目前我用得最顺手的便是 <a href="https://apps.apple.com/us/app/quantumult-x/id1443988620">QuantumultX</a>，丰富的协议支持（<code>SSR</code>/<code>SS</code>/<code>Vmess</code>...），也不用担心哪家 <a href="https://limbopro.xyz/865.html">机场</a> 因协议不支持而用不了；丰富的<a href="https://limbopro.xyz/archives/3846.html">自定义玩法</a>（加图标/策略偏好/组/分流/），各种<a href="https://limbopro.xyz/archives/workingcopy.html">远程脚本</a> 支持，解锁各类姿势；</p><p>在此文就各类软体的协议，展开对比说明；</p><p>以上。</p><h2>软体及协议</h2><table><thead><tr><th align="center">软件</th><th align="center">协议支持</th><th align="center">平台支持</th><th align="center">开源与否</th></tr></thead><tbody><tr><td align="center"><a href="https:///us/app/shadowrocket/id932747118">Shadowrocket</a></td><td align="center">SS/SSR/Vmess/</td><td align="center">iOS</td><td align="center">$2.99</td></tr><tr><td align="center"><a href="https://apps.apple.com/us/app/quantumult/id1252015438">Quantumult</a></td><td align="center">SS/SSR/Vmess/</td><td align="center">iOS</td><td align="center">$4.99</td></tr><tr><td align="center"><a href="https://apps.apple.com/us/app/quantumult-x/id1443988620">Quantumult X</a></td><td align="center">SS/SSR/Vmess/</td><td align="center">iOS</td><td align="center">$4.99</td></tr><tr><td align="center"><a href="https://nssurge.com/buy_now">Surge4</a></td><td align="center">SS</td><td align="center">iOS</td><td align="center">$49.99起</td></tr><tr><td align="center"><a href="https://github.com/2dust/v2rayNG/releases">v2rayNG</a></td><td align="center">SS/Vmess</td><td align="center">Android</td><td align="center">免费</td></tr><tr><td align="center"><a href="https://github.com/2dust/v2rayN/releases">v2rayN</a></td><td align="center">SS/Vmess/Trojan</td><td align="center">Windows</td><td align="center">免费</td></tr><tr><td align="center"><a href="https://github.com/yichengchen/clashX/releases">ClashX</a></td><td align="center">SS/Vmess</td><td align="center">Mac</td><td align="center">免费</td></tr><tr><td align="center"><a href="https://github.com/Fndroid/clash_for_windows_pkg/releases">ClashW</a></td><td align="center">SS/Vmess</td><td align="center">Windows</td><td align="center">免费</td></tr><tr><td align="center"><a href="https://t.me/clash_for_android_channel">ClashA</a></td><td align="center">SS/Vmess</td><td align="center">Android</td><td align="center">免费</td></tr><tr><td align="center"><a href="https://apkpure.com/cn/maying/co.tgbot.peekfun">Maying</a></td><td align="center">SSR</td><td align="center">Android</td><td align="center">免费</td></tr><tr><td align="center"><a href="https://play.google.com/store/apps/details?id=com.getsurfboard">Surfboard</a></td><td align="center">SS</td><td align="center">Android</td><td align="center">免费</td></tr><tr><td align="center">Kitsunebit</td><td align="center">SS/Vmess</td><td align="center"><a href="https://play.google.com/store/apps/details?id=fun.kitsunebi.kitsunebi4android&hl=zh">Android</a>/<a href="https://apps.apple.com/jp/app/kitsunebi-proxy-utility/id1446584073?l=en">iOS</a></td><td align="center">免费/$4.99</td></tr></tbody></table><p>本文隶属于 <a href="https://limbopro.xyz/category/tools/">实用工具</a>/<a href="https://limbopro.xyz/category/ssr/">科学上网</a> 分类，点击分类名称可以查看更多相关文章；如有遗漏，欢迎<a href="https://limbopro.xyz/6.html">联系我们</a>进行补充；</p><h2>我要怎么选</h2><p>就<code>实用性</code>与<code>便捷性</code>而言（价格的<code>经济性</code>，以及丰富的<code>协议</code>支持），iOS建议加持 <code>Quantumult X</code> 即可；<u>Android</u> <code>SS/Vmess</code> 协议建议加持 <del><code>V2RayNG</code></del>ClashA即可，<code>SSR</code>协议建议加持<code>Maying</code>，基佬蓝；<u>Windows</u> <code>SS/Vmess</code>协议建议加持<code>V2RayN</code>即可；<u>Mac</u>  <code>SS/Vmess</code>协议建议加持<code>ClashX</code>；（*Android 用户如果不能直接从Google Play下载App，可参考：<a href="https://limbopro.xyz/archives/3235.html">无需安装谷歌服务框架，在线下载Google Play应用（APK）的方法。（附Go谷歌安装器下载与安装）</a>）</p><p>我已经很久不在电脑使用<code>SSR</code>协议的机场了，<code>Windows</code>/<code>Mac</code>平台支持<code>SSR</code>协议的客户端我建议大家使用<a href="https://limbopro.xyz/865.html">机场</a>提供（一般在节点或用户中心处）的下载链接。</p><h2>软体配置</h2><p>*关于软件如何配置：1.相关<a href="https://limbopro.xyz/865.html">机场</a>的帮助中心或多都会提供各类软体的通用性教程；2.如实在没有，Google 搜索，<code>软件名</code>+怎么用，在此博主不再一一赘述；</p><p>*本文末尾<code>附注</code>部分提供了一些软体的<code>进阶玩法</code>给大家；</p><table><thead><tr><th align="center">软件</th><th align="center">教程</th><th align="center">备注</th></tr></thead><tbody><tr><td align="center">surfboard</td><td align="center"><a href="https://manual.getsurfboard.com/cn/introduction#dan-du-zhi-chi-de-gong-neng">简明教程</a></td><td align="center">无</td></tr><tr><td align="center">v2RayNG</td><td align="center"><a href="https://limbopro.xyz/archives/615.html#Android%E7%AB%AFV2rayNG%E9%85%8D%E7%BD%AE">简明教程</a></td><td align="center">无</td></tr><tr><td align="center">v2RayN</td><td align="center"><a href="https://limbopro.xyz/archives/615.html#Windowsv2rayN%E7%AB%AF%E9%85%8D%E7%BD%AE">简明教程</a></td><td align="center">无</td></tr><tr><td align="center">ClashW/X</td><td align="center"><a href="https://limbopro.xyz/archives/615.html#ClashX/W/A%E9%85%8D%E7%BD%AE">简明教程</a></td><td align="center">无</td></tr><tr><td align="center">ClashA</td><td align="center"><a href="https://limbopro.xyz/archives/clashA.html">简明教程</a></td><td align="center">无</td></tr><tr><td align="center">Shadowsocket</td><td align="center"><a href="https://limbopro.xyz/archives/615.html#iOSShadowsocket%E9%85%8D%E7%BD%AE">简明教程</a></td><td align="center">无</td></tr><tr><td align="center">Quantumult</td><td align="center"><a href="https://github.com/shigalin/Quantumult/blob/master/README.md">简明教程</a></td><td align="center">无</td></tr><tr><td align="center">Quantumult X</td><td align="center"><a href="https://limbopro.xyz/archives/3846.html">简明教程</a></td><td align="center">无</td></tr></tbody></table><p>*以上<code>简明教程</code>对应链接，如点击后不能跳转到相关教程位置，请在文章内自行搜索软件关键词；参考教程前，请确保你能找到<a href="https://limbopro.xyz/865.html">机场</a>订阅链接；如果不知道订阅是什么？请参考：<a href="https://limbopro.xyz/archives/615.html#%E6%9C%AC%E6%95%99%E7%A8%8B%E9%80%9A%E7%94%A8%E6%80%A7%E8%AF%B4%E6%98%8E">本教程通用性说明</a>；</p><h2>App 代购</h2><p>[post cid="2549" cover="https://limbopro.xyz/usr/uploads/2019/09/396172038.jpg"/]</p><h2>App相关群组</h2><table><thead><tr><th align="center">App</th><th align="center">讨论群组</th><th align="center">备注</th></tr></thead><tbody><tr><td align="center">QuantumultX</td><td align="center"><a href="https://t.me/quantumultapp">https://t.me/quantumultapp</a></td><td align="center">无</td></tr><tr><td align="center">Surge</td><td align="center"><a href="https://t.me/loveapps">https://t.me/loveapps</a></td><td align="center">无</td></tr><tr><td align="center">ClashA</td><td align="center"><a href="https://t.me/clash_android_discuss">https://t.me/clash_android_discuss</a></td><td align="center">无</td></tr></tbody></table><p>*目前较为活跃且友爱的TG群组；</p><h2>游戏相关</h2><p>除了上网？还想用 <a href="https://limbopro.xyz/865.html">机场</a> 加速海外服务器<code>打游戏</code>？有两个较为出名的项目可以了解一下；</p><table><thead><tr><th align="center">软件</th><th align="center">协议支持</th><th align="center">平台支持</th><th align="center">备注</th></tr></thead><tbody><tr><td align="center"><a href="https://github.com/FQrabbit/SSTap-Rule">SSTap</a></td><td align="center">SSR</td><td align="center">Windows</td><td align="center">开源</td></tr><tr><td align="center"><a href="https://github.com/NetchX/Netch/blob/master/docs/README.zh-CN.md">Netch</a></td><td align="center">SS</td><td align="center">Windows</td><td align="center">开源</td></tr></tbody></table><h3>SSTap介绍</h3><p>SSTap 是个人开发者编写的，支持 SSR 协议的客户端。其通过使用 tun2socks 调用虚拟 TAP 接口来实现了类 VPN 的全局代理效果，可以正常代理不遵循系统代理设置的应用程序。</p><h3>Netch 介绍</h3><p>Netch 是一款 Windows 平台的开源游戏加速工具，Netch 可以实现类似 <a href="https://www.sockscap64.com/homepage/">SocksCap64</a> 那样的进程代理，也可以实现 <a href="https://github.com/mayunbaba2/SSTap-beta-setup">SSTap</a> 那样的全局 TUN/TAP 代理，和 <a href="https://github.com/shadowsocks/shadowsocks-windows">shadowsocks-windows</a> 那样的本地 Socks5，HTTP 和系统代理。至于连接至远程服务器的代理协议，目前 Netch 支持以下代理协议：Shadowsocks，Vmess，Socks5，ShadowsocksR</p><p>*支持的游戏具体可看作者更新日志；如有遗漏，欢迎<a href="https://limbopro.xyz/6.html">联系我们</a>进行补充；</p><h2>机场相关</h2><p>[post cid="1423" cover="https://limbopro.xyz/usr/uploads/2019/08/728231641.jpg"/]</p><p>[post cid="2787" cover="https://limbopro.xyz/usr/uploads/2019/09/1975249076.jpg"/]</p><h2>附注</h2><p>[post cid="4182" cover="https://limbopro.xyz/usr/uploads/2019/10/3546260568.jpg"/]</p><p>[post cid="3629" cover="https://limbopro.xyz/usr/uploads/2019/11/540587537.png"/]</p><p>[post cid="3833" cover="https://limbopro.xyz/usr/uploads/2019/10/641260207.jpg"/]</p><p>[post cid="2910" cover="https://limbopro.xyz/usr/uploads/2019/09/1752548461.jpg"/]</p><p>[post cid="2561" cover="https://limbopro.xyz/usr/uploads/2019/09/2033351625.jpg"/]</p><p>5.<a href="[https://limbopro.xyz/archives/615.html#Windowsv2rayN%E7%AB%AF%E9%85%8D%E7%BD%AE]">v2rayNG/v2RayN配置教程参考</a>)；</p>
-]]></content>
-<link rel="replies" type="text/html" href="https://limbopro.xyz/archives/5230.html#comments" thr:count="0" />
-<link rel="replies" type="application/atom+xml" href="https://limbopro.xyz/feed/atom/archives/5230.html" thr:count="0"/>
-</entry>
 <entry>
 <title type="html"><![CDATA[Working Copy丨将Github仓库内容同步到手机文件（iOS）并配置 Quantumult X 本地脚本（解锁Tiktok/VSCO/Termius等）11.26 更新]]></title>
 <link rel="alternate" type="text/html" href="https://limbopro.xyz/archives/workingcopy.html" />
@@ -80,23 +37,6 @@ $done(body);</code></pre><h3>第三步 使用WorkingCopy同步 fork 到本地</h
 ]]></content>
 <link rel="replies" type="text/html" href="https://limbopro.xyz/archives/workingcopy.html#comments" thr:count="0" />
 <link rel="replies" type="application/atom+xml" href="https://limbopro.xyz/feed/atom/archives/workingcopy.html" thr:count="0"/>
-</entry>
-<entry>
-<title type="html"><![CDATA[QuantumultX 进阶教程：组策略&amp;分流规则&amp;自定义图标的进阶玩法]]></title>
-<link rel="alternate" type="text/html" href="https://limbopro.xyz/archives/3846.html" />
-<id>https://limbopro.xyz/archives/3846.html</id>
-<updated>2019-10-17T13:12:00+08:00</updated>
-<published>2019-10-17T13:12:00+08:00</published>
-<author>
-    <name>毒奶</name>
-    <uri>https://limbopro.xyz</uri>
-</author>
-<summary type="html"><![CDATA[本文隶属于 实用工具/科学上网 分类，点击分类名称可以查看更多相关文章；主理人说用好一个工具不难，只要肯放弃。]]></summary>
-<content type="html" xml:base="https://limbopro.xyz/archives/3846.html" xml:lang="zh-CN"><![CDATA[
-<p>本文隶属于 <a href="https://limbopro.xyz/category/tools/">实用工具</a>/<a href="https://limbopro.xyz/category/ssr/">科学上网</a> 分类，点击分类名称可以查看更多相关文章；</p><h2>主理人说</h2><p>用好一个工具不难，只要肯放弃。</p><p class="more"><a href="https://limbopro.xyz/archives/3846.html" title="QuantumultX 进阶教程：组策略&amp;分流规则&amp;自定义图标的进阶玩法">[...]</a></p>
-]]></content>
-<link rel="replies" type="text/html" href="https://limbopro.xyz/archives/3846.html#comments" thr:count="0" />
-<link rel="replies" type="application/atom+xml" href="https://limbopro.xyz/feed/atom/archives/3846.html" thr:count="0"/>
 </entry>
 <entry>
 <title type="html"><![CDATA[iOS 使用 Surge/Quantumult/Shadowrocket /QuantumultX 解锁 TikTok （国际版）区域限制（免拔卡）12.17.2019]]></title>
@@ -137,90 +77,5 @@ enable = true</code></pre><p>然后点击右上角 – 保存；</p><h3>Shadowro
 ]]></content>
 <link rel="replies" type="text/html" href="https://limbopro.xyz/archives/3629.html#comments" thr:count="0" />
 <link rel="replies" type="application/atom+xml" href="https://limbopro.xyz/feed/atom/archives/3629.html" thr:count="0"/>
-</entry>
-<entry>
-<title type="html"><![CDATA[44+条高速内网IPLC专线丨N3RO丨折后14.4元/月起丨线路多多丨川日/川港/京港/京美/京德/沪韩/沪日/沪港/深新/深港/沪新/杭港/沪美/川日/游戏加速]]></title>
-<link rel="alternate" type="text/html" href="https://limbopro.xyz/archives/n3ro.html" />
-<id>https://limbopro.xyz/archives/n3ro.html</id>
-<updated>2019-10-02T10:16:00+08:00</updated>
-<published>2019-10-02T10:16:00+08:00</published>
-<author>
-    <name>毒奶</name>
-    <uri>https://limbopro.xyz</uri>
-</author>
-<summary type="html"><![CDATA[主理人推荐序10.31.2019 更新新增 12条 IPLC 专线，共计 44+ 条 IPLC专线，专治各种开会，加上其他低倍率线路，共计66条；10.29.2019 更新特殊日子，IPLC 稳...]]></summary>
-<content type="html" xml:base="https://limbopro.xyz/archives/n3ro.html" xml:lang="zh-CN"><![CDATA[
-<h2>主理人推荐序</h2><h3>10.31.2019 更新</h3><p>新增 12条 IPLC 专线，共计 44+ 条 IPLC专线，专治各种<code>开会</code>，加上其他低倍率线路，共计66条；</p><h3>10.29.2019 更新</h3><p>特殊日子，IPLC 稳定依旧；</p><h3>10.04.2019 更新</h3><p>N3RO与<a href="https://limbopro.xyz/archives/1423.html">卡车家族</a>是同款老板（10.2019 转让交接完毕）；得益于大陆多点部署的<code>BGP数据中心</code>，通过<code>IPLC专线</code>连接至国外，<code>不受任何外部干扰</code>或<code>QoS</code>。<code>并拥有川日/川港/京港/京美/京德/沪韩/沪日/沪港/深新/深港/沪新/杭港/沪美/川日/等IPLC中转线路</code>；</p><p><code>大流量视频用户</code>，预算有限的<code>学生党</code>可用另一个平台的产品，<a href="https://limbopro.xyz/archives/1423.html">卡车家族丨1080秒开丨折后6.4元/月起丨50+节点丨SSR机场推荐</a>。</p><p>via <a href="https://limbopro.xyz/865.html">机场专线</a> 查看适合你的机场推荐；</p><p>以上。</p><p class="more"><a href="https://limbopro.xyz/archives/n3ro.html" title="44+条高速内网IPLC专线丨N3RO丨折后14.4元/月起丨线路多多丨川日/川港/京港/京美/京德/沪韩/沪日/沪港/深新/深港/沪新/杭港/沪美/川日/游戏加速">[...]</a></p>
-]]></content>
-<link rel="replies" type="text/html" href="https://limbopro.xyz/archives/n3ro.html#comments" thr:count="0" />
-<link rel="replies" type="application/atom+xml" href="https://limbopro.xyz/feed/atom/archives/n3ro.html" thr:count="0"/>
-</entry>
-<entry>
-<title type="html"><![CDATA[Surge/Shadowrocket/Quantumult及X/SSR/V2rayNG/如何通过自定义分流/代理规则（PAC），以使用代理以访问任意被墙域名/网站]]></title>
-<link rel="alternate" type="text/html" href="https://limbopro.xyz/archives/2910.html" />
-<id>https://limbopro.xyz/archives/2910.html</id>
-<updated>2019-09-24T08:46:00+08:00</updated>
-<published>2019-09-24T08:46:00+08:00</published>
-<author>
-    <name>毒奶</name>
-    <uri>https://limbopro.xyz</uri>
-</author>
-<summary type="html"><![CDATA[没有什么能够阻挡，我对自由的向往；]]></summary>
-<content type="html" xml:base="https://limbopro.xyz/archives/2910.html" xml:lang="zh-CN"><![CDATA[
-<p>没有什么能够阻挡，我对自由的向往；<br></br></p><p class="more"><a href="https://limbopro.xyz/archives/2910.html" title="Surge/Shadowrocket/Quantumult及X/SSR/V2rayNG/如何通过自定义分流/代理规则（PAC），以使用代理以访问任意被墙域名/网站">[...]</a></p>
-]]></content>
-<link rel="replies" type="text/html" href="https://limbopro.xyz/archives/2910.html#comments" thr:count="0" />
-<link rel="replies" type="application/atom+xml" href="https://limbopro.xyz/feed/atom/archives/2910.html" thr:count="0"/>
-</entry>
-<entry>
-<title type="html"><![CDATA[Rules / 分流/去广告规则：Surge / Shadowrocket / Quantumult/ Quantumult X  及详细配置步骤教程（萌新小白版本）]]></title>
-<link rel="alternate" type="text/html" href="https://limbopro.xyz/archives/2561.html" />
-<id>https://limbopro.xyz/archives/2561.html</id>
-<updated>2019-09-19T12:28:00+08:00</updated>
-<published>2019-09-19T12:28:00+08:00</published>
-<author>
-    <name>毒奶</name>
-    <uri>https://limbopro.xyz</uri>
-</author>
-<summary type="html"><![CDATA[怎么用？这里为大家提供详细操作步骤，非常适合萌新小白；本文隶属于 科学上网 分类，点击分类名称可以查看更多相关文章；]]></summary>
-<content type="html" xml:base="https://limbopro.xyz/archives/2561.html" xml:lang="zh-CN"><![CDATA[
-<p>怎么用？这里为大家提供详细操作步骤，非常适合萌新小白；</p><p>本文隶属于 <a href="https://limbopro.xyz/category/ssr/">科学上网</a> 分类，点击分类名称可以查看更多相关文章；</p><p class="more"><a href="https://limbopro.xyz/archives/2561.html" title="Rules / 分流/去广告规则：Surge / Shadowrocket / Quantumult/ Quantumult X  及详细配置步骤教程（萌新小白版本）">[...]</a></p>
-]]></content>
-<link rel="replies" type="text/html" href="https://limbopro.xyz/archives/2561.html#comments" thr:count="0" />
-<link rel="replies" type="application/atom+xml" href="https://limbopro.xyz/feed/atom/archives/2561.html" thr:count="0"/>
-</entry>
-<entry>
-<title type="html"><![CDATA[卡车家族丨1080P秒开丨折后6.4元/月起丨50+节点丨SSR机场推荐（学生党首选）]]></title>
-<link rel="alternate" type="text/html" href="https://limbopro.xyz/archives/1423.html" />
-<id>https://limbopro.xyz/archives/1423.html</id>
-<updated>2019-07-25T09:24:00+08:00</updated>
-<published>2019-07-25T09:24:00+08:00</published>
-<author>
-    <name>毒奶</name>
-    <uri>https://limbopro.xyz</uri>
-</author>
-<summary type="html"><![CDATA[主理人推荐序13.11.2019 更新海螺何许人海螺人在欧洲，自称砸锅卖铁做专线（笑），我们除了在沟通上有时差，基本上都是有求必应的（请像一个朋友那样，无理，瞎几把扯可能被无视；简单如设置软体这...]]></summary>
-<content type="html" xml:base="https://limbopro.xyz/archives/1423.html" xml:lang="zh-CN"><![CDATA[
-<h2>主理人推荐序</h2><p>13.11.2019 更新</p><h3>海螺何许人</h3><p><code>海螺</code>人在欧洲，自称砸锅卖铁做专线（笑），我们除了在沟通上有时差，基本上都是有求必应的（请像一个朋友那样，无理，瞎几把扯可能被无视；简单如设置软体这些基本事项可能需要大家有一些动手能力或在群组礼貌请教；）；</p><p>除了卡车家族（SSR机场），还在今年10月收购了<a href="https://limbopro.xyz/archives/n3ro.html">N3RO</a>（IPLC内网专线机场）；卡车家族主打<code>经济与流量</code>，面向<code>学生党</code>，且有<code>大流量</code>需求的用户（目前共计64+路线）；<a href="https://limbopro.xyz/archives/n3ro.html">N3RO</a>（IPLC内网专线机场）主打<code>高速与稳定（非绝对）</code>，<code>不墙与无Qos</code>，折后32Gb/14.4元/月起（IPLC流量一直很贵），上班一族首选。</p><h3>卡车家族</h3><p>卡车家族SSR机场：<code>50+全球节点</code>，<code>稳定高冗余</code>，<code>大流量套餐</code>适合影音视频重度用户，同时<code>8元</code>起的定价也非常适合<code>学生党</code>；支持<code>ShadowsocksR </code>协议，各个平台（iOS/Mac/Android/Windows）均有软体支持；50+节点支持，合理分配带宽压力，<del>4K秒开</del>(会Qos，能否秒开还得看本地；)；支持<code>奈菲/Netflix解锁</code>（DNS/原生节点解锁等）；对了，甚至还安排了<code>公益路线（节点）</code>；（*卡车家族的注册地址在<code>本文文末</code>，同时也为<code>毒奶粉</code>们拿到了专属独家<code>20%</code>优惠码；）</p><h3>N3RO</h3><p>如需IPLC高速内网专线机场，这边请：<a href="https://limbopro.xyz/archives/n3ro.html">N3RO丨4K秒开丨16元/月起丨高速内网IPLC专线中转机场丨川日/川港/京港/京美/京德/沪韩/沪日/沪港/深新/深港/沪新/杭港/沪美/川日/游戏加速/SS机场</a>，延时稳定，无Qos，高速不墙，适合上班白领及需要稳定办公的用户（或游戏）。</p><p>via <a href="https://limbopro.xyz/865.html">机场专线</a> 查看适合你的机场推荐；</p><p>以上。</p><p class="more"><a href="https://limbopro.xyz/archives/1423.html" title="卡车家族丨1080P秒开丨折后6.4元/月起丨50+节点丨SSR机场推荐（学生党首选）">[...]</a></p>
-]]></content>
-<link rel="replies" type="text/html" href="https://limbopro.xyz/archives/1423.html#comments" thr:count="0" />
-<link rel="replies" type="application/atom+xml" href="https://limbopro.xyz/feed/atom/archives/1423.html" thr:count="0"/>
-</entry>
-<entry>
-<title type="html"><![CDATA[极游丨4K秒开丨3.5元起丨v2Ray机场推荐及简易配置教程]]></title>
-<link rel="alternate" type="text/html" href="https://limbopro.xyz/archives/615.html" />
-<id>https://limbopro.xyz/archives/615.html</id>
-<updated>2019-06-17T09:46:00+08:00</updated>
-<published>2019-06-17T09:46:00+08:00</published>
-<author>
-    <name>毒奶</name>
-    <uri>https://limbopro.xyz</uri>
-</author>
-<summary type="html"><![CDATA[编者注：本文包含优质v2Ray机场推荐及各个平台v2Ray客户配置及使用教程，测速软体 Speedtest 的下载及iOS端默认皮肤的更换。1元良心v2Ray加速服务，4K油管秒开。机场注册地址...]]></summary>
-<content type="html" xml:base="https://limbopro.xyz/archives/615.html" xml:lang="zh-CN"><![CDATA[
-<p>编者注：本文包含优质v2Ray机场推荐及各个平台v2Ray客户配置及使用教程，测速软体 Speedtest 的下载及iOS端默认皮肤的更换。</p><h2>1元良心v2Ray加速服务，4K油管秒开。</h2><table><thead><tr><th>机场</th><th>注册地址</th><th>特点</th></tr></thead><tbody><tr><td><a href="https://tianlinzhao.com/aff.php?aff=2037">极游-Cloud</a></td><td><a href="https://tianlinzhao.com/aff.php?aff=2037">Jiyou.cloud</a></td><td>油管4k秒开</td></tr><tr><td>月付3元起</td><td>150Gb流量/月</td><td>支付宝付款</td></tr></tbody></table><p>在外口碑：3元良心V2加速服务，<code>4K油管秒开</code>，全线国内中转，解锁<code>Netfix</code>，<code>hulu</code>，<code>HBO</code>等。<code>Air A/B/E/F</code> <code>150Gb/月/季度</code> <code>限新加坡节点</code>。目前看来，Jiyou是TG上极少数<code>靠谱又实惠的V2ray商家</code>。（如需购买，推荐MOON SAND SUN 套餐三个任意选一）！</p><p>多平台支持 <code>Android</code> <code>Mac</code> <code>iOS</code> <code>Windows</code>。（文末有客户端离线下载地址；我仔细查了下<code>v2rayNG Android</code>客户端内置的推荐模块也有关于Jiyou的推荐，可以说相当良心了。）。</p><hr><h2>一些额外说明</h2><h3>30.11.2019 更新</h3><p>极游 iOS 用户如需购买<code>Shadowrocket</code>/<code>Quantumult(X)</code>等可联系iOS app代购；<br>[post cid="2549" cover="https://limbopro.xyz/usr/uploads/2019/09/396172038.jpg"/]</p><h3>11.11.2019 更新</h3><p><strong>*套餐相关</strong>：线路或套餐详情请参阅极游官方说明页面，以实际说明为准；<br><strong>*极游官方</strong>：无SLA及速度保证，介意者勿购买；（<a href="https://zh.wikipedia.org/wiki/%E6%9C%8D%E5%8A%A1%E7%BA%A7%E5%88%AB%E5%8D%8F%E8%AE%AE">SLA是什么</a>？）<br><strong>*毒奶博主</strong>：据我所知，似乎没有任何一家机场，能真正做到<code>SLA及速度保证</code>，如果能（做到保证）也不会明确写出；当然到这里套餐价格就是另外一回事了；如果极游这个价格（每天1毛+）还TM再要求SLA，我确实是无盐以对的。</p><p><strong>劝退说明</strong>：1.本博客<code>不接受任意极游用户技术咨询</code>以及<code>任意咨询</code>，无动手能力（就连谷歌也不会用）的巨婴用户不大适合使用此机场，请立即关闭此页面；2.另，本文后文提供极游v2Ray服务<code>软件配置</code>及<code>使用</code>教程，可/仅供参考（能解决<code>绝大部分用户在使用中遇到的问题</code>）；3.如需<code>人工</code>技术咨询/帮助，请进极游<code>TG群组</code>，那里会有<code>群友提供友情帮助</code>（群组可在用户中心可找到）；</p><p>via <a href="https://limbopro.xyz/865.html">机场专线</a> 查看适合你的机场推荐；</p><h3>08.11.2019 更新</h3><p>上班族/白领用户（预算充足用户）可加持<a href="https://limbopro.xyz/tag/IPLC/">IPLC</a>，内网专线，稳定，高速，不墙（不过GFW）。</p><p>[post cid="2787" cover="https://limbopro.xyz/usr/uploads/2019/09/1975249076.jpg"/]</p><p><strong>*厘米云：</strong><code>全平台软体订阅支持</code>，<code>SS</code>/<code>SSR</code>/<code>V2ray</code>/<code>SSD</code>/<code>Surge托管</code>；</p><p>[post cid="3211" cover="https://limbopro.xyz/usr/uploads/2019/11/2531730809.png"/]</p><p><strong>*N3RO</strong>：<code>全平台软体订阅支持</code>，<code>SS</code>/<del><code>SSR</code></del>/<del><code>V2ray</code></del>/<code>SSD</code>/<code>Surge托管</code>；</p><h3>10.22.2019 更新</h3><p>极游已添加 Quantumultx 订阅支持，具体查看用户中心；</p><h3>10.05.2019 更新</h3><p>极游域名未污染，已启用备用域名 <a href="https://tianlinzhao.com/aff.php?aff=2037">tianlinzhao.com</a> / <a href="https://tianlinzhao.com/aff.php?aff=2037">portal.caipin.pro</a>；</p><h3>10.01.2019 更新</h3><p>!&gt; 特别提醒！！务必注意！！</p><p>0.近期机场主已恢复了维护；（09.30.2019）<br>1.关于此贴仅为教程贴，也是出于个人对极游的喜欢； <br>2.<a href="https://limbopro.xyz">本站</a> 并不提供极游任何相关服务售后；<br>3.关注本站 Telegram <a href="https://t.me/limboprossr">主理人频道</a>，了解及时资讯不失联；</p><p>以上。</p><hr><h2>极游GO最新进展</h2><p>以下测速结果仅供参考；</p><h3>2019.12.17 更新</h3><p><img src="https://limbopro.xyz/usr/uploads/2019/12/3283812413.jpg" alt="极游-GO.jpg" title="极游-GO.jpg"></p><p>via Jiyou-Mithril 套餐 目前我正在用（还有<code>Moon</code>套餐也在用，Mithril 价格有点小贵；</p><p><img src="https://limbopro.xyz/usr/uploads/2019/12/205608997.jpg" alt="极游.jpg" title="极游.jpg"></p><p>via Jiyou-Air A 套餐</p><p><img src="https://limbopro.xyz/usr/uploads/2019/12/498888360.jpg" alt="极游-E套餐.jpg" title="极游-E套餐.jpg"></p><p>via Jiyou-Air E 套餐</p><h3>2019.11.18 更新</h3><p><img src="https://limbopro.xyz/usr/uploads/2019/11/3179694965.jpg" alt="极游-MOON.jpg" title="极游-MOON.jpg"></p><p><code>MOON</code>套餐（我的最爱）；</p><p><img src="https://limbopro.xyz/usr/uploads/2019/11/3508609793.jpg" alt="极游.jpg" title="极游.jpg"></p><p>新增 <code>Platinum/Orichalcum/Mithril</code> 套餐，5.99元/月起，速度优秀，新用户请优先选择；</p><h3>2019.10.14 更新</h3><p><img src="https://limbopro.xyz/usr/uploads/2019/10/1273930758.jpg" alt="极游.jpg" title="极游.jpg"></p><h3>2019.10.04 更新</h3><p><img src="https://limbopro.xyz/usr/uploads/2019/10/4217266935.jpg" alt="极游.jpg" title="极游.jpg"></p><p>via Stair Speedtest Reborn</p><h3>2019.10.02 更新</h3><p><img src="https://limbopro.xyz/usr/uploads/2019/10/1794389185.jpg" alt="IMG_8065.JPG" title="IMG_8065.JPG"><br>via Stair Speedtest Reborn</p><h3>2019.09.30 更新</h3><p><img src="https://limbopro.xyz/usr/uploads/2019/10/2516224852.jpg" alt="IMG_7964.JPG" title="IMG_7964.JPG"></p><p>via Stair Speedtest Reborn</p><h3>2019.05.10 更新</h3><p>官网由于DNS污染已启用新域名：<a href="https://portal.caipin.pro/aff.php?aff=2037">tianlinzhao.com</a> ，备用域名 <a href="https://portal.caipin.pro/aff.php?aff=2037">caipin.pro</a> / <a href="https://tianlinzhao.com/aff.php?aff=2037">tianlinzhao.com</a>，套餐新推出 Air F/E/A ¥7.99 RMB /季度（150GB/月）；套餐 PRO F ¥9.99 RMB /月付 （1TB/月）；套餐 MAX F ¥16.99 RMB /月付 （2TB/月），套餐 SAND PRO ¥120.00 RMB /年付 （600GB/月），套餐 MOON PRO ¥110.00 RMB /年付 （600GB/月）；当然，以上套餐都不限制设备数量，无限客户端同时在线；（P.S. 随着时间的变化，价格会小幅度变动；1元套餐是元老套餐，现在依旧可以续约，但新朋友应该是再也买不到了。）</p><hr><h2>v2ray配置教程</h2><h2>基础知识点</h2><h2>你的订阅信息</h2></hr></img></br></img></img></img></img></img></img></img></img></hr></br></br></br></br></br></br></hr><p class="more"><a href="https://limbopro.xyz/archives/615.html" title="极游丨4K秒开丨3.5元起丨v2Ray机场推荐及简易配置教程">[...]</a></p>
-]]></content>
-<link rel="replies" type="text/html" href="https://limbopro.xyz/archives/615.html#comments" thr:count="0" />
-<link rel="replies" type="application/atom+xml" href="https://limbopro.xyz/feed/atom/archives/615.html" thr:count="0"/>
 </entry>
 </feed>
