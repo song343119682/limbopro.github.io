@@ -63,18 +63,18 @@
 	color: #999;
 }    </style>
 
-<script src="../usr/themes/handsome/assets/libs/jquery/jquery.min.js" type="7bffaa9c84e0b35054f557df-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/libs/jquery/jquery.min.js" type="0dbd6ab6ca841908ab5b2943-text/javascript"></script>
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140019039-1" type="7bffaa9c84e0b35054f557df-text/javascript"></script>
-<script type="7bffaa9c84e0b35054f557df-text/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140019039-1" type="0dbd6ab6ca841908ab5b2943-text/javascript"></script>
+<script type="0dbd6ab6ca841908ab5b2943-text/javascript">
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'UA-140019039-1');
 </script>
-<script src="../usr/themes/handsome/assets/js/features/fancyMorph.min.js" type="7bffaa9c84e0b35054f557df-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/js/features/fancyMorph.min.js" type="0dbd6ab6ca841908ab5b2943-text/javascript"></script>
 </head>
 <body id="body">
 
@@ -316,7 +316,7 @@
 
 <li class="meta-date"><i class="fontello fontello-clock-o" aria-hidden="true"></i>&nbsp;<span class="sr-only">发布时间：</span><time class="meta-value">2019 年 07 月 18 日</time></li>
 
-<li class="meta-views"><i class="fontello fontello-eye" aria-hidden="true"></i>&nbsp;<span class="meta-value">2811&nbsp;次浏览</span></li>
+<li class="meta-views"><i class="fontello fontello-eye" aria-hidden="true"></i>&nbsp;<span class="meta-value">2813&nbsp;次浏览</span></li>
 
 <li class="meta-word"><i class="fontello fontello-pencil"></i>&nbsp;<span class="meta-value">2097&nbsp;字数</span></li>
 
@@ -337,15 +337,15 @@
     }
     
    </style>
-<a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://limbopro.xyz/archives/1282.html&title=Typecho 全静态切换防御DDoS策略&site=https://limbopro.xyz/" itemprop="breadcrumb" target="_blank" title="" data-toggle="tooltip" data-original-title="分享到QQ空间" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open(this.href, 'qzone-share', 'width=550,height=335');return false;" data-cf-modified-7bffaa9c84e0b35054f557df-=""><i style="font-size:15px;" class="iconfont icon-qzone" aria-hidden="true"></i></a>
-<a href="http://service.weibo.com/share/share.php?url=https://limbopro.xyz/archives/1282.html&title=Typecho 全静态切换防御DDoS策略" target="_blank" itemprop="breadcrumb" title="" data-toggle="tooltip" data-original-title="分享到微博" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open(this.href, 'weibo-share', 'width=550,height=335');return false;" data-cf-modified-7bffaa9c84e0b35054f557df-=""><i style="font-size:15px;" class="fontello fontello-weibo" aria-hidden="true"></i></a></div></ol> 
+<a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://limbopro.xyz/archives/1282.html&title=Typecho 全静态切换防御DDoS策略&site=https://limbopro.xyz/" itemprop="breadcrumb" target="_blank" title="" data-toggle="tooltip" data-original-title="分享到QQ空间" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open(this.href, 'qzone-share', 'width=550,height=335');return false;" data-cf-modified-0dbd6ab6ca841908ab5b2943-=""><i style="font-size:15px;" class="iconfont icon-qzone" aria-hidden="true"></i></a>
+<a href="http://service.weibo.com/share/share.php?url=https://limbopro.xyz/archives/1282.html&title=Typecho 全静态切换防御DDoS策略" target="_blank" itemprop="breadcrumb" title="" data-toggle="tooltip" data-original-title="分享到微博" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open(this.href, 'weibo-share', 'width=550,height=335');return false;" data-cf-modified-0dbd6ab6ca841908ab5b2943-=""><i style="font-size:15px;" class="fontello fontello-weibo" aria-hidden="true"></i></a></div></ol> 
 <div id="postpage" class="blog-post">
 <article class="panel">
 
 
 <div id="post-content" class="wrapper-lg">
 <div class="entry-content l-h-2x">
-<p><img src="https://limbopro.xyz/usr/uploads/2019/07/1467826344.jpg" alt="DDoS" title="DDoS"></p><p>做防御的方法有很多种，但最多的两种莫过于<code>加钱</code>或<code>装死</code>。</p><h2>主理人序</h2><p>加钱，万万是不可能加钱的。想来大家问到这个问题了，肯定还是因为没钱，或者说相关的预算并不多。那么到底有什么好办法呢？</p><h1>一 部署免费CDN</h1><p>可以参考这一篇：<a href="1204.html" target="_blank">Cloudflare 三步隐藏真实服务器IP</a> 以及，<a href="../category/LNMP/index.html" target="_blank">LNMP相关系列</a>文章。</p><h1>二 全站静态/动态切换</h1><p>是的，在部署免费CDN的基础上，做动静切换。必须要明白的动态资源仍然会消耗服务器资源，例如登陆页，搜索页，都要调取 PHP，mysql 数据索引服务。</p><h1>静态资源概述</h1><p>默认情况下，<a href="https://www.cloudflare.com/features-cdn" target="_blank">Cloudflare CDN</a> 缓存具有以下文件扩展名的文件：</p><table><thead><tr><th>bmp</th><th>ejs</th><th>jpeg</th><th>pdf</th><th>ps</th><th>ttf</th></tr></thead><tbody><tr><td>class</td><td>eot</td><td>jpg</td><td>pict</td><td>svg</td><td>webp</td></tr><tr><td>css</td><td>eps</td><td>js</td><td>pls</td><td>svgz</td><td>woff</td></tr><tr><td>csv</td><td>gif</td><td>mid</td><td>png</td><td>swf</td><td>woff2</td></tr><tr><td>doc</td><td>ico</td><td>midi</td><td>ppt</td><td>tif</td><td>xls</td></tr><tr><td>docx</td><td>jar</td><td>otf</td><td>pptx</td><td>tiff</td><td>xlsx</td></tr></tbody></table><p>以上，不在范围内的就不会缓存了。参考：<a href="https://www.cloudflare.com/zh-cn/features-page-rules/must-use-page-rules/" target="_blank">必用的基本页面规则</a>，在Cloudflare中设置你想要缓存的页面或者目录，注意，这个参考非常重要。</p><p>*Cloudflare 仅缓存从您网站直接提供的资源。第三方资源（Facebook、Flickr 等）不会被缓存。Cloudflare 当前不会按 MIME 类型进行缓存。</p><p>如何做到<code>全静态</code>？那就<code>复制一遍自己的网站</code>。</p><h1>使用 wget 递归镜像网站</h1><p><code>wget --mirror https://limbopro.xyz</code> 或 <code>wget -r -p -np -k https://limbopro.xyz </code> 大家可以试试备份我的网站，至少HTML部分（包括CSS/MP4等等）。相应的，你的网站也可以做相应的操作。</p><h2>切换思路</h2><p>具体思路，这里涉及到 nginx.conf 配置文件中，通过切换配置文件，对当前网站根目录的进行切换。即正常情况下，你的vhost下应该有下个配置文件，例如<code>limbopro.xyz.conf</code> <code>limbopro.xyz.conf.bak</code> <code>limbopro.xyz.conf.ddos</code> ，正常情况下 nginx主配置文件 只调用vhost文件下的.conf 文件。</p><h2>遭遇攻击时切换 nginx 配置文件</h2><p>遭遇DDoS时，<code>cp limbopro.xyz.conf.ddos limbopro.xyz.conf </code> &&<code>nginx reload</code> (mysql && php-fpm stop)，DDoS结束时，<code>cp limbopro.xyz.conf.bak limbopro.xyz.conf</code> && <code>nginx reload</code> (mysql && php-fpm start) 。</p><h2>说明</h2><p><code>limbopro.xyz.conf.bak</code> 中网站根目录是正常配置，跟<code>limbopro.xyz.conf</code>是一样的，<code>limbopro.xyz.conf.ddos</code> 中的网站根目录，是我们备份网站所在的目录地址。其中判定是否遭遇攻击，我的思路是通过TCP连接数，以及CPU占用。</p><h2>总结</h2><p>以最小的成本应对攻击，并保持网页链接打开完好完整（损失更新文章特性），我觉得这仍然不失为一个不错的策略。当然，本文尚有欠缺，仍需行家多多只带。博主仍在努力学习相关知识，也希望本篇文章能给大家带来帮助。</p><h2>参考与附录</h2><p>1.<a href="http://www.724idc.com/helpview_71.html" target="_blank">DDoS防御的11种方针详解</a></p><hr class="content-copyright" style="margin-top:50px" /><blockquote class="content-copyright" style="font-style:normal"><p class="content-copyright">版权属于：<a class="content-copyright" target="_blank" href="https://t.me/limboprobot">http://t.me/limboprobot</a> TG 毒奶博主 Julia； <br>联系我们： <a class="content-copyright" target="_blank" href="../6.html">https://limbopro.xyz/6.html</a> 投稿或反馈或转载文章或交换友链； <br>电报频道： <a class="content-copyright" target="_blank" href="https://t.me/limboprossr">https://t.me/limboprossr</a> 及时收讯不失联； <br>必备技能： <a class="content-copyright" target="_blank" href="https://limbopro.xyz/archives/2910.html">https://limbopro.xyz/archives/2910.html</a> 如何访问任意被墙域名； <br>网站镜像： <a class="content-copyright" target="_blank" href="https://limbopro.github.io">https://limbopro.github.io</a> 每月更新；</p><p class="content-copyright">本文链接：<a class="content-copyright" href="1282.html">https://limbopro.xyz/archives/1282.html</a></p><p class="content-copyright">版权声明：<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本文采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a> 进行许可，转载请附上原文出处链接和本声明。</p></blockquote> </div>
+<p><img src="../usr/uploads/2019/07/1467826344.jpg" alt="DDoS" title="DDoS"></p><p>做防御的方法有很多种，但最多的两种莫过于<code>加钱</code>或<code>装死</code>。</p><h2>主理人序</h2><p>加钱，万万是不可能加钱的。想来大家问到这个问题了，肯定还是因为没钱，或者说相关的预算并不多。那么到底有什么好办法呢？</p><h1>一 部署免费CDN</h1><p>可以参考这一篇：<a href="1204.html" target="_blank">Cloudflare 三步隐藏真实服务器IP</a> 以及，<a href="../category/LNMP/index.html" target="_blank">LNMP相关系列</a>文章。</p><h1>二 全站静态/动态切换</h1><p>是的，在部署免费CDN的基础上，做动静切换。必须要明白的动态资源仍然会消耗服务器资源，例如登陆页，搜索页，都要调取 PHP，mysql 数据索引服务。</p><h1>静态资源概述</h1><p>默认情况下，<a href="https://www.cloudflare.com/features-cdn" target="_blank">Cloudflare CDN</a> 缓存具有以下文件扩展名的文件：</p><table><thead><tr><th>bmp</th><th>ejs</th><th>jpeg</th><th>pdf</th><th>ps</th><th>ttf</th></tr></thead><tbody><tr><td>class</td><td>eot</td><td>jpg</td><td>pict</td><td>svg</td><td>webp</td></tr><tr><td>css</td><td>eps</td><td>js</td><td>pls</td><td>svgz</td><td>woff</td></tr><tr><td>csv</td><td>gif</td><td>mid</td><td>png</td><td>swf</td><td>woff2</td></tr><tr><td>doc</td><td>ico</td><td>midi</td><td>ppt</td><td>tif</td><td>xls</td></tr><tr><td>docx</td><td>jar</td><td>otf</td><td>pptx</td><td>tiff</td><td>xlsx</td></tr></tbody></table><p>以上，不在范围内的就不会缓存了。参考：<a href="https://www.cloudflare.com/zh-cn/features-page-rules/must-use-page-rules/" target="_blank">必用的基本页面规则</a>，在Cloudflare中设置你想要缓存的页面或者目录，注意，这个参考非常重要。</p><p>*Cloudflare 仅缓存从您网站直接提供的资源。第三方资源（Facebook、Flickr 等）不会被缓存。Cloudflare 当前不会按 MIME 类型进行缓存。</p><p>如何做到<code>全静态</code>？那就<code>复制一遍自己的网站</code>。</p><h1>使用 wget 递归镜像网站</h1><p><code>wget --mirror https://limbopro.xyz</code> 或 <code>wget -r -p -np -k https://limbopro.xyz </code> 大家可以试试备份我的网站，至少HTML部分（包括CSS/MP4等等）。相应的，你的网站也可以做相应的操作。</p><h2>切换思路</h2><p>具体思路，这里涉及到 nginx.conf 配置文件中，通过切换配置文件，对当前网站根目录的进行切换。即正常情况下，你的vhost下应该有下个配置文件，例如<code>limbopro.xyz.conf</code> <code>limbopro.xyz.conf.bak</code> <code>limbopro.xyz.conf.ddos</code> ，正常情况下 nginx主配置文件 只调用vhost文件下的.conf 文件。</p><h2>遭遇攻击时切换 nginx 配置文件</h2><p>遭遇DDoS时，<code>cp limbopro.xyz.conf.ddos limbopro.xyz.conf </code> &&<code>nginx reload</code> (mysql && php-fpm stop)，DDoS结束时，<code>cp limbopro.xyz.conf.bak limbopro.xyz.conf</code> && <code>nginx reload</code> (mysql && php-fpm start) 。</p><h2>说明</h2><p><code>limbopro.xyz.conf.bak</code> 中网站根目录是正常配置，跟<code>limbopro.xyz.conf</code>是一样的，<code>limbopro.xyz.conf.ddos</code> 中的网站根目录，是我们备份网站所在的目录地址。其中判定是否遭遇攻击，我的思路是通过TCP连接数，以及CPU占用。</p><h2>总结</h2><p>以最小的成本应对攻击，并保持网页链接打开完好完整（损失更新文章特性），我觉得这仍然不失为一个不错的策略。当然，本文尚有欠缺，仍需行家多多只带。博主仍在努力学习相关知识，也希望本篇文章能给大家带来帮助。</p><h2>参考与附录</h2><p>1.<a href="http://www.724idc.com/helpview_71.html" target="_blank">DDoS防御的11种方针详解</a></p><hr class="content-copyright" style="margin-top:50px" /><blockquote class="content-copyright" style="font-style:normal"><p class="content-copyright">版权属于：<a class="content-copyright" target="_blank" href="https://t.me/limboprobot">http://t.me/limboprobot</a> TG 毒奶博主 Julia； <br>联系我们： <a class="content-copyright" target="_blank" href="../6.html">https://limbopro.xyz/6.html</a> 投稿或反馈或转载文章或交换友链； <br>电报频道： <a class="content-copyright" target="_blank" href="https://t.me/limboprossr">https://t.me/limboprossr</a> 及时收讯不失联； <br>必备技能： <a class="content-copyright" target="_blank" href="https://limbopro.xyz/archives/2910.html">https://limbopro.xyz/archives/2910.html</a> 如何访问任意被墙域名； <br>网站镜像： <a class="content-copyright" target="_blank" href="https://limbopro.github.io">https://limbopro.github.io</a> 每月更新；</p><p class="content-copyright">本文链接：<a class="content-copyright" href="1282.html">https://limbopro.xyz/archives/1282.html</a></p><p class="content-copyright">版权声明：<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本文采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a> 进行许可，转载请附上原文出处链接和本声明。</p></blockquote> </div>
 
 <div class="show-foot">
 <div class="notebook">
@@ -366,9 +366,9 @@
 </ul>
 </nav>
 
-<div id="disqus_thread"><script type="7bffaa9c84e0b35054f557df-text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="adf24965-dd03-45f8-9fdf-3f1e953df737";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script></div>
+<div id="disqus_thread"><script type="0dbd6ab6ca841908ab5b2943-text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="adf24965-dd03-45f8-9fdf-3f1e953df737";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script></div>
 <div id="disqus_thread"></div>
-<script type="7bffaa9c84e0b35054f557df-text/javascript">
+<script type="0dbd6ab6ca841908ab5b2943-text/javascript">
 
 
 /**
@@ -406,34 +406,34 @@
 <h3 class="widget-title m-t-none text-md">热门文章</h3>
 <ul class="list-group no-bg no-borders pull-in m-b-none">
 <li class="list-group-item">
-<a href="庆余年.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/10.jpg" class="img-circle"></a>
+<a href="庆余年.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/7.jpg" class="img-circle"></a>
 <div class="clear">
 <h4 class="h5 l-h"> <a href="庆余年.html" title="庆余年全集在线观看丨22-46集丨高清丨大结局免费超钱点播（包含泄露版）"> 庆余年全集在线观看丨22-46集丨高清丨大结局免费超钱点播（包含泄露版） </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">21726</span>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">22095</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="969.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/6.jpg" class="img-circle"></a>
+<a href="969.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/8.jpg" class="img-circle"></a>
 <div class="clear">
 <h4 class="h5 l-h"> <a href="969.html" title="在中国看Netflix丨HBO丨Hulu丨Amazon Prime Video丨Apple TV丨或其他任意剧集。"> 在中国看Netflix丨HBO丨Hulu丨Amazon Prime Video丨Apple TV丨或其他任意剧集。 </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">19178</span>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">19186</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="https://limbopro.xyz/archives/1560.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/2.jpg" class="img-circle"></a>
+<a href="1560.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/3.jpg" class="img-circle"></a>
 <div class="clear">
-<h4 class="h5 l-h"> <a href="https://limbopro.xyz/archives/1560.html" title="全网在线视频解析与下载（YouTube/Pornhub/Instagram/Twitter/Xvideo/Facebook/哔哩哔哩解析/微博视频...）"> 全网在线视频解析与下载（YouTube/Pornhub/Instagram/Twitter/Xvideo/Facebook/哔哩哔哩解析/微博视频...） </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">17791</span>
+<h4 class="h5 l-h"> <a href="1560.html" title="全网在线视频解析与下载（YouTube/Pornhub/Instagram/Twitter/Xvideo/Facebook/哔哩哔哩解析/微博视频...）"> 全网在线视频解析与下载（YouTube/Pornhub/Instagram/Twitter/Xvideo/Facebook/哔哩哔哩解析/微博视频...） </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">17793</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="https://limbopro.xyz/archives/1163.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/9.jpg" class="img-circle"></a>
+<a href="1163.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/4.jpg" class="img-circle"></a>
 <div class="clear">
-<h4 class="h5 l-h"> <a href="https://limbopro.xyz/archives/1163.html" title="长安十二时辰丨优酷源同步在线观看"> 长安十二时辰丨优酷源同步在线观看 </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">15667</span>
+<h4 class="h5 l-h"> <a href="1163.html" title="长安十二时辰丨优酷源同步在线观看"> 长安十二时辰丨优酷源同步在线观看 </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">15669</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="https://limbopro.xyz/archives/3629.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/7.jpg" class="img-circle"></a>
+<a href="3629.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/10.jpg" class="img-circle"></a>
 <div class="clear">
-<h4 class="h5 l-h"> <a href="https://limbopro.xyz/archives/3629.html" title="iOS 使用 Surge/Quantumult/Shadowrocket /QuantumultX 解锁 TikTok （国际版）区域限制（免拔卡）12.17.2019"> iOS 使用 Surge/Quantumult/Shadowrocket /QuantumultX 解锁 TikTok （国际版）区域限制（免拔卡）12.17.2019 </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">12969</span>
+<h4 class="h5 l-h"> <a href="3629.html" title="iOS 使用 Surge/Quantumult/Shadowrocket /QuantumultX 解锁 TikTok （国际版）区域限制（免拔卡）12.17.2019"> iOS 使用 Surge/Quantumult/Shadowrocket /QuantumultX 解锁 TikTok （国际版）区域限制（免拔卡）12.17.2019 </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">12971</span>
 </span>
 </small></div></li> </ul>
 </div>
@@ -442,34 +442,34 @@
 <h3 class="widget-title m-t-none text-md">随机文章</h3>
 <ul class="list-group no-bg no-borders pull-in">
 <li class="list-group-item">
-<a href="445.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/10.jpg" class="img-circle"></a>
+<a href="1369.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/7.jpg" class="img-circle"></a>
 <div class="clear">
-<h4 class="h5 l-h"> <a href="445.html" title="切尔诺贝利  Chernobyl"> 切尔诺贝利 Chernobyl </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">3349</span>
+<h4 class="h5 l-h"> <a href="1369.html" title="你这个猫冬瓜（大雾"> 你这个猫冬瓜（大雾 </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">2903</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="1468.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/6.jpg" class="img-circle"></a>
+<a href="https://limbopro.xyz/archives/3892.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/8.jpg" class="img-circle"></a>
 <div class="clear">
-<h4 class="h5 l-h"> <a href="1468.html" title="追龙弍 贼王丨本周电影推荐"> 追龙弍 贼王丨本周电影推荐 </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">2849</span>
+<h4 class="h5 l-h"> <a href="https://limbopro.xyz/archives/3892.html" title="致命女人 Why Women Kill （第1季）完结"> 致命女人 Why Women Kill （第1季）完结 </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">1040</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="https://limbopro.xyz/archives/termius.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/2.jpg" class="img-circle"></a>
+<a href="932.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/3.jpg" class="img-circle"></a>
 <div class="clear">
-<h4 class="h5 l-h"> <a href="https://limbopro.xyz/archives/termius.html" title="Termius - SSH 管理工具 丨可配合 Quantumult X 解锁/破解 Pro 功能"> Termius - SSH 管理工具 丨可配合 Quantumult X 解锁/破解 Pro 功能 </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">1867</span>
+<h4 class="h5 l-h"> <a href="932.html" title="这样褥五折生日礼券，99%有效！ - QQ音乐豪华绿钻会员"> 这样褥五折生日礼券，99%有效！ - QQ音乐豪华绿钻会员 </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">3953</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="https://limbopro.xyz/archives/3962.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/9.jpg" class="img-circle"></a>
+<a href="https://limbopro.xyz/archives/362.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/4.jpg" class="img-circle"></a>
 <div class="clear">
-<h4 class="h5 l-h"> <a href="https://limbopro.xyz/archives/3962.html" title="Fatkun丨图片批量下载（谷歌浏览器插件/扩展程序）"> Fatkun丨图片批量下载（谷歌浏览器插件/扩展程序） </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">1917</span>
+<h4 class="h5 l-h"> <a href="https://limbopro.xyz/archives/362.html" title="赛博朋克，艺术与崩坏。"> 赛博朋克，艺术与崩坏。 </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">3662</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="1299.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/7.jpg" class="img-circle"></a>
+<a href="1398.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/10.jpg" class="img-circle"></a>
 <div class="clear">
-<h4 class="h5 l-h"> <a href="1299.html" title="人类登月50年丨值得关注的事"> 人类登月50年丨值得关注的事 </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">2809</span>
+<h4 class="h5 l-h"> <a href="1398.html" title="网站底部建站计时代码"> 网站底部建站计时代码 </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">4821</span>
 </span>
 </small></div></li> </ul>
 </div>
@@ -519,10 +519,10 @@
 <div class="page">
 <h1 class="title">Typecho 全静态切换防御DDoS策略</h1>
 <div class="metadata singleline"><a href="1282.html#" rel="author" class="byline">毒奶</a>&nbsp;•&nbsp;<span class="delimiter"></span><time class="date">2019 年 07 月 18 日</time></div>
-<p><img src="https://limbopro.xyz/usr/uploads/2019/07/1467826344.jpg" alt="DDoS" title="DDoS"></p><p>做防御的方法有很多种，但最多的两种莫过于<code>加钱</code>或<code>装死</code>。</p><h2>主理人序</h2><p>加钱，万万是不可能加钱的。想来大家问到这个问题了，肯定还是因为没钱，或者说相关的预算并不多。那么到底有什么好办法呢？</p><h1>一 部署免费CDN</h1><p>可以参考这一篇：<a href="1204.html" target="_blank">Cloudflare 三步隐藏真实服务器IP</a> 以及，<a href="../category/LNMP/index.html" target="_blank">LNMP相关系列</a>文章。</p><h1>二 全站静态/动态切换</h1><p>是的，在部署免费CDN的基础上，做动静切换。必须要明白的动态资源仍然会消耗服务器资源，例如登陆页，搜索页，都要调取 PHP，mysql 数据索引服务。</p><h1>静态资源概述</h1><p>默认情况下，<a href="https://www.cloudflare.com/features-cdn" target="_blank">Cloudflare CDN</a> 缓存具有以下文件扩展名的文件：</p><table><thead><tr><th>bmp</th><th>ejs</th><th>jpeg</th><th>pdf</th><th>ps</th><th>ttf</th></tr></thead><tbody><tr><td>class</td><td>eot</td><td>jpg</td><td>pict</td><td>svg</td><td>webp</td></tr><tr><td>css</td><td>eps</td><td>js</td><td>pls</td><td>svgz</td><td>woff</td></tr><tr><td>csv</td><td>gif</td><td>mid</td><td>png</td><td>swf</td><td>woff2</td></tr><tr><td>doc</td><td>ico</td><td>midi</td><td>ppt</td><td>tif</td><td>xls</td></tr><tr><td>docx</td><td>jar</td><td>otf</td><td>pptx</td><td>tiff</td><td>xlsx</td></tr></tbody></table><p>以上，不在范围内的就不会缓存了。参考：<a href="https://www.cloudflare.com/zh-cn/features-page-rules/must-use-page-rules/" target="_blank">必用的基本页面规则</a>，在Cloudflare中设置你想要缓存的页面或者目录，注意，这个参考非常重要。</p><p>*Cloudflare 仅缓存从您网站直接提供的资源。第三方资源（Facebook、Flickr 等）不会被缓存。Cloudflare 当前不会按 MIME 类型进行缓存。</p><p>如何做到<code>全静态</code>？那就<code>复制一遍自己的网站</code>。</p><h1>使用 wget 递归镜像网站</h1><p><code>wget --mirror https://limbopro.xyz</code> 或 <code>wget -r -p -np -k https://limbopro.xyz </code> 大家可以试试备份我的网站，至少HTML部分（包括CSS/MP4等等）。相应的，你的网站也可以做相应的操作。</p><h2>切换思路</h2><p>具体思路，这里涉及到 nginx.conf 配置文件中，通过切换配置文件，对当前网站根目录的进行切换。即正常情况下，你的vhost下应该有下个配置文件，例如<code>limbopro.xyz.conf</code> <code>limbopro.xyz.conf.bak</code> <code>limbopro.xyz.conf.ddos</code> ，正常情况下 nginx主配置文件 只调用vhost文件下的.conf 文件。</p><h2>遭遇攻击时切换 nginx 配置文件</h2><p>遭遇DDoS时，<code>cp limbopro.xyz.conf.ddos limbopro.xyz.conf </code> &&<code>nginx reload</code> (mysql && php-fpm stop)，DDoS结束时，<code>cp limbopro.xyz.conf.bak limbopro.xyz.conf</code> && <code>nginx reload</code> (mysql && php-fpm start) 。</p><h2>说明</h2><p><code>limbopro.xyz.conf.bak</code> 中网站根目录是正常配置，跟<code>limbopro.xyz.conf</code>是一样的，<code>limbopro.xyz.conf.ddos</code> 中的网站根目录，是我们备份网站所在的目录地址。其中判定是否遭遇攻击，我的思路是通过TCP连接数，以及CPU占用。</p><h2>总结</h2><p>以最小的成本应对攻击，并保持网页链接打开完好完整（损失更新文章特性），我觉得这仍然不失为一个不错的策略。当然，本文尚有欠缺，仍需行家多多只带。博主仍在努力学习相关知识，也希望本篇文章能给大家带来帮助。</p><h2>参考与附录</h2><p>1.<a href="http://www.724idc.com/helpview_71.html" target="_blank">DDoS防御的11种方针详解</a></p><hr class="content-copyright" style="margin-top:50px" /><blockquote class="content-copyright" style="font-style:normal"><p class="content-copyright">版权属于：<a class="content-copyright" target="_blank" href="https://t.me/limboprobot">http://t.me/limboprobot</a> TG 毒奶博主 Julia； <br>联系我们： <a class="content-copyright" target="_blank" href="../6.html">https://limbopro.xyz/6.html</a> 投稿或反馈或转载文章或交换友链； <br>电报频道： <a class="content-copyright" target="_blank" href="https://t.me/limboprossr">https://t.me/limboprossr</a> 及时收讯不失联； <br>必备技能： <a class="content-copyright" target="_blank" href="https://limbopro.xyz/archives/2910.html">https://limbopro.xyz/archives/2910.html</a> 如何访问任意被墙域名； <br>网站镜像： <a class="content-copyright" target="_blank" href="https://limbopro.github.io">https://limbopro.github.io</a> 每月更新；</p><p class="content-copyright">本文链接：<a class="content-copyright" href="1282.html">https://limbopro.xyz/archives/1282.html</a></p><p class="content-copyright">版权声明：<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本文采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a> 进行许可，转载请附上原文出处链接和本声明。</p></blockquote>
+<p><img src="../usr/uploads/2019/07/1467826344.jpg" alt="DDoS" title="DDoS"></p><p>做防御的方法有很多种，但最多的两种莫过于<code>加钱</code>或<code>装死</code>。</p><h2>主理人序</h2><p>加钱，万万是不可能加钱的。想来大家问到这个问题了，肯定还是因为没钱，或者说相关的预算并不多。那么到底有什么好办法呢？</p><h1>一 部署免费CDN</h1><p>可以参考这一篇：<a href="1204.html" target="_blank">Cloudflare 三步隐藏真实服务器IP</a> 以及，<a href="../category/LNMP/index.html" target="_blank">LNMP相关系列</a>文章。</p><h1>二 全站静态/动态切换</h1><p>是的，在部署免费CDN的基础上，做动静切换。必须要明白的动态资源仍然会消耗服务器资源，例如登陆页，搜索页，都要调取 PHP，mysql 数据索引服务。</p><h1>静态资源概述</h1><p>默认情况下，<a href="https://www.cloudflare.com/features-cdn" target="_blank">Cloudflare CDN</a> 缓存具有以下文件扩展名的文件：</p><table><thead><tr><th>bmp</th><th>ejs</th><th>jpeg</th><th>pdf</th><th>ps</th><th>ttf</th></tr></thead><tbody><tr><td>class</td><td>eot</td><td>jpg</td><td>pict</td><td>svg</td><td>webp</td></tr><tr><td>css</td><td>eps</td><td>js</td><td>pls</td><td>svgz</td><td>woff</td></tr><tr><td>csv</td><td>gif</td><td>mid</td><td>png</td><td>swf</td><td>woff2</td></tr><tr><td>doc</td><td>ico</td><td>midi</td><td>ppt</td><td>tif</td><td>xls</td></tr><tr><td>docx</td><td>jar</td><td>otf</td><td>pptx</td><td>tiff</td><td>xlsx</td></tr></tbody></table><p>以上，不在范围内的就不会缓存了。参考：<a href="https://www.cloudflare.com/zh-cn/features-page-rules/must-use-page-rules/" target="_blank">必用的基本页面规则</a>，在Cloudflare中设置你想要缓存的页面或者目录，注意，这个参考非常重要。</p><p>*Cloudflare 仅缓存从您网站直接提供的资源。第三方资源（Facebook、Flickr 等）不会被缓存。Cloudflare 当前不会按 MIME 类型进行缓存。</p><p>如何做到<code>全静态</code>？那就<code>复制一遍自己的网站</code>。</p><h1>使用 wget 递归镜像网站</h1><p><code>wget --mirror https://limbopro.xyz</code> 或 <code>wget -r -p -np -k https://limbopro.xyz </code> 大家可以试试备份我的网站，至少HTML部分（包括CSS/MP4等等）。相应的，你的网站也可以做相应的操作。</p><h2>切换思路</h2><p>具体思路，这里涉及到 nginx.conf 配置文件中，通过切换配置文件，对当前网站根目录的进行切换。即正常情况下，你的vhost下应该有下个配置文件，例如<code>limbopro.xyz.conf</code> <code>limbopro.xyz.conf.bak</code> <code>limbopro.xyz.conf.ddos</code> ，正常情况下 nginx主配置文件 只调用vhost文件下的.conf 文件。</p><h2>遭遇攻击时切换 nginx 配置文件</h2><p>遭遇DDoS时，<code>cp limbopro.xyz.conf.ddos limbopro.xyz.conf </code> &&<code>nginx reload</code> (mysql && php-fpm stop)，DDoS结束时，<code>cp limbopro.xyz.conf.bak limbopro.xyz.conf</code> && <code>nginx reload</code> (mysql && php-fpm start) 。</p><h2>说明</h2><p><code>limbopro.xyz.conf.bak</code> 中网站根目录是正常配置，跟<code>limbopro.xyz.conf</code>是一样的，<code>limbopro.xyz.conf.ddos</code> 中的网站根目录，是我们备份网站所在的目录地址。其中判定是否遭遇攻击，我的思路是通过TCP连接数，以及CPU占用。</p><h2>总结</h2><p>以最小的成本应对攻击，并保持网页链接打开完好完整（损失更新文章特性），我觉得这仍然不失为一个不错的策略。当然，本文尚有欠缺，仍需行家多多只带。博主仍在努力学习相关知识，也希望本篇文章能给大家带来帮助。</p><h2>参考与附录</h2><p>1.<a href="http://www.724idc.com/helpview_71.html" target="_blank">DDoS防御的11种方针详解</a></p><hr class="content-copyright" style="margin-top:50px" /><blockquote class="content-copyright" style="font-style:normal"><p class="content-copyright">版权属于：<a class="content-copyright" target="_blank" href="https://t.me/limboprobot">http://t.me/limboprobot</a> TG 毒奶博主 Julia； <br>联系我们： <a class="content-copyright" target="_blank" href="../6.html">https://limbopro.xyz/6.html</a> 投稿或反馈或转载文章或交换友链； <br>电报频道： <a class="content-copyright" target="_blank" href="https://t.me/limboprossr">https://t.me/limboprossr</a> 及时收讯不失联； <br>必备技能： <a class="content-copyright" target="_blank" href="https://limbopro.xyz/archives/2910.html">https://limbopro.xyz/archives/2910.html</a> 如何访问任意被墙域名； <br>网站镜像： <a class="content-copyright" target="_blank" href="https://limbopro.github.io">https://limbopro.github.io</a> 每月更新；</p><p class="content-copyright">本文链接：<a class="content-copyright" href="1282.html">https://limbopro.xyz/archives/1282.html</a></p><p class="content-copyright">版权声明：<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本文采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a> 进行许可，转载请附上原文出处链接和本声明。</p></blockquote>
 </div>
 </div>
-<script type="7bffaa9c84e0b35054f557df-text/javascript">
+<script type="0dbd6ab6ca841908ab5b2943-text/javascript">
         try {
             $("[data-morphing]").fancyMorph({
                 hash : 'morphing'
@@ -533,7 +533,7 @@
 
             </script>
 
-<script type="7bffaa9c84e0b35054f557df-text/javascript">
+<script type="0dbd6ab6ca841908ab5b2943-text/javascript">
 (function () {
     window.TypechoComment = {
         dom : function (id) {
@@ -605,7 +605,7 @@
     };
 })();
 </script>
-<script type="7bffaa9c84e0b35054f557df-text/javascript">
+<script type="0dbd6ab6ca841908ab5b2943-text/javascript">
 var registCommentEvent = function() {
     var event = document.addEventListener ? {
         add: 'addEventListener',
@@ -630,37 +630,35 @@ var registCommentEvent = function() {
                         input.type = 'hidden';
                         input.name = '_';
                             input.value = (function () {
-    var _ilMd = //'kXh'
-'b5a'+/* 'U1O'//'U1O' */''+//'FX'
-'15e'+//'S4t'
-'S4t'+//'fA'
-'93'+//'WdU'
-'c'+//'ah'
-'36'+//'2s'
-'8c'+//'U4w'
-'1f'+//'riG'
-'87a'+'aO'//'aO'
-+'7'//'sCj'
-+//'Q'
-'9e'+'9d'//'nL'
-+'quA'//'quA'
-+//'vAt'
-'70'+''///*'UrG'*/'UrG'
-+'rQ'//'rQ'
-+''///*'xY'*/'xY'
-+''///*'im'*/'im'
-+'5'//'ZYd'
-+''///*'Q6'*/'Q6'
-+'d8'//'0CZ'
-+'66'//'P'
-+'31'//'O'
-, _1SH = [[6,9],[18,20],[23,26],[25,27]];
+    var _0DWE0DZ = 'Ok'//'Ok'
++'b5a'//'cLK'
++//'Wv'
+'1'+/* 'al3'//'al3' */''+//'xY'
+'5'+'e9'//'J0'
++//'O'
+'O'+''///*'R'*/'R'
++'GU'//'GU'
++'3'//'9Qn'
++/* '1'//'1' */''+'c3'//'n4d'
++'d'//'d'
++/* 'j'//'j' */''+//'gK'
+'6'+//'vu'
+'8c1'+//'0uv'
+'0uv'+/* '4'//'4' */''+'f'//'v'
++/* 'YLM'//'YLM' */''+//'bWk'
+'87'+//'7'
+'a79'+'e9'//'4'
++'d70'//'xq'
++//'V'
+'5d'+'86'//'mZ'
++'631'//'E'
+, _7RI = [[0,2],[7,8],[7,9],[10,11],[14,17]];
     
-    for (var i = 0; i < _1SH.length; i ++) {
-        _ilMd = _ilMd.substring(0, _1SH[i][0]) + _ilMd.substring(_1SH[i][1]);
+    for (var i = 0; i < _7RI.length; i ++) {
+        _0DWE0DZ = _0DWE0DZ.substring(0, _7RI[i][0]) + _0DWE0DZ.substring(_7RI[i][1]);
     }
 
-    return _ilMd;
+    return _0DWE0DZ;
 })();
                     
                         f.appendChild(input);
@@ -684,9 +682,9 @@ var registCommentEvent = function() {
 <footer id="footer" class="app-footer" role="footer">
 <div class="wrapper b-t bg-light">
 <span class="pull-right hidden-xs text-ellipsis">
- Powered by <a target="blank" href="http://www.typecho.org">Typecho</a>&nbsp;|&nbsp;Theme by <a target="blank" href="../index.html#">handsome</a>
+Powered by <a target="blank" href="http://www.typecho.org">Typecho</a>&nbsp;|&nbsp;Theme by <a target="blank" href="../index.html#">handsome</a>
 </span>
-<span class="text-ellipsis">&copy;&nbsp;2019 <a target="blank" href="../index.html">毒奶</a>.inc Copyright&nbsp; 自建站之日起，本站总访问量 3813678884 次</span>
+<span class="text-ellipsis">&copy;&nbsp;2019 <a target="blank" href="../index.html">毒奶</a>.inc Copyright&nbsp; 自建站之日起，本站总访问量 3813679274 次</span>
 </div>
 
 <script type="text/template" id="tmpl-customizer">
@@ -765,14 +763,14 @@ var registCommentEvent = function() {
 		-moz-transform: scale(1.4);	/* Firefox */
 	}
 </style>
-<script type="7bffaa9c84e0b35054f557df-text/javascript">
+<script type="0dbd6ab6ca841908ab5b2943-text/javascript">
 	document.addEventListener('DOMContentLoaded', function(){
 		var imgs = document.querySelectorAll('img');
 		Array.prototype.forEach.call(imgs, function(el, i) {
 			if (el.tabIndex <= 0) el.tabIndex = 100;
 		});
 	});
-</script><script type="7bffaa9c84e0b35054f557df-text/javascript">
+</script><script type="0dbd6ab6ca841908ab5b2943-text/javascript">
 	(function(){
 		var pres = document.querySelectorAll('pre');
 		var lineNumberClassName = 'line-numbers';
@@ -781,15 +779,15 @@ var registCommentEvent = function() {
 		});
 	})();
 </script>
-<script type="7bffaa9c84e0b35054f557df-text/javascript" src="../usr/plugins/CodePrettify/static/clipboard.min.js"></script>
-<script type="7bffaa9c84e0b35054f557df-text/javascript" src="../usr/plugins/CodePrettify/static/prism.js"></script>
-<script type="7bffaa9c84e0b35054f557df-text/javascript">
+<script type="0dbd6ab6ca841908ab5b2943-text/javascript" src="../usr/plugins/CodePrettify/static/clipboard.min.js"></script>
+<script type="0dbd6ab6ca841908ab5b2943-text/javascript" src="../usr/plugins/CodePrettify/static/prism.js"></script>
+<script type="0dbd6ab6ca841908ab5b2943-text/javascript">
 SearchConfig = {
     url : "https://limbopro.xyz/usr/plugins/Handsome/cache/search.json"
 }
 </script>
 
-<script type="7bffaa9c84e0b35054f557df-text/javascript">
+<script type="0dbd6ab6ca841908ab5b2943-text/javascript">
         window['LocalConst'] = {
             COMMENT_NAME_INFO: '必须填写昵称或姓名',
             COMMENT_EMAIL_INFO: '必须填写电子邮箱地址',
@@ -859,9 +857,9 @@ SearchConfig = {
 
     </script>
 
-<script src="../usr/themes/handsome/assets/libs/bootstrap/js/bootstrap.min.js" type="7bffaa9c84e0b35054f557df-text/javascript"></script>
-<script src="../usr/themes/handsome/assets/js/features/jquery.pjax.min.js" type="7bffaa9c84e0b35054f557df-text/javascript"></script>
-<script type="7bffaa9c84e0b35054f557df-text/javascript">
+<script src="../usr/themes/handsome/assets/libs/bootstrap/js/bootstrap.min.js" type="0dbd6ab6ca841908ab5b2943-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/js/features/jquery.pjax.min.js" type="0dbd6ab6ca841908ab5b2943-text/javascript"></script>
+<script type="0dbd6ab6ca841908ab5b2943-text/javascript">
         $(document).pjax('a[href^="https://limbopro.xyz/"]:not(a[target="_blank"], a[no-pjax])', {
             container: '#content',
             fragment: '#content',
@@ -890,17 +888,17 @@ SearchConfig = {
 
 
 
-<script src="https://cdn.staticfile.org/mathjax/2.7.0/MathJax.js" type="7bffaa9c84e0b35054f557df-text/javascript"></script>
-<script src="https://cdn.staticfile.org/mathjax/2.7.0/config/TeX-AMS-MML_SVG.js" type="7bffaa9c84e0b35054f557df-text/javascript"></script>
+<script src="https://cdn.staticfile.org/mathjax/2.7.0/MathJax.js" type="0dbd6ab6ca841908ab5b2943-text/javascript"></script>
+<script src="https://cdn.staticfile.org/mathjax/2.7.0/config/TeX-AMS-MML_SVG.js" type="0dbd6ab6ca841908ab5b2943-text/javascript"></script>
 
-<script src="../usr/themes/handsome/assets/js/features/jquery.fancybox.min.js?v=5.3.120190915221" type="7bffaa9c84e0b35054f557df-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/js/features/jquery.fancybox.min.js?v=5.3.120190915221" type="0dbd6ab6ca841908ab5b2943-text/javascript"></script>
 
 
-<script src="../usr/themes/handsome/assets/js/function.min.js?v=5.3.120190915221" type="7bffaa9c84e0b35054f557df-text/javascript"></script>
-<script src="../usr/themes/handsome/assets/js/core.min.js?v=5.3.120190915221" type="7bffaa9c84e0b35054f557df-text/javascript"></script>
-<script src="../usr/themes/handsome/assets/js/features/setting.min.js?v=5.3.120190915221" type="7bffaa9c84e0b35054f557df-text/javascript"></script>
-<script type="7bffaa9c84e0b35054f557df-text/javascript">
+<script src="../usr/themes/handsome/assets/js/function.min.js?v=5.3.120190915221" type="0dbd6ab6ca841908ab5b2943-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/js/core.min.js?v=5.3.120190915221" type="0dbd6ab6ca841908ab5b2943-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/js/features/setting.min.js?v=5.3.120190915221" type="0dbd6ab6ca841908ab5b2943-text/javascript"></script>
+<script type="0dbd6ab6ca841908ab5b2943-text/javascript">
             </script>
-<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="7bffaa9c84e0b35054f557df-|49" defer=""></script></body>
+<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="0dbd6ab6ca841908ab5b2943-|49" defer=""></script></body>
 </html>
 
