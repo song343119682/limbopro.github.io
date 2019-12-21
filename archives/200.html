@@ -27,12 +27,12 @@
 
 <link href="../usr/themes/handsome/assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-<link rel="stylesheet" href="../usr/themes/handsome/assets/css/function.min.css?v=5.3.120190915221" type="text/css" />
-<link rel="stylesheet" href="../usr/themes/handsome/assets/css/handsome.min.css?v=5.3.120190915221" type="text/css" />
+<link rel="stylesheet" href="../usr/themes/handsome/assets/css/function.min.css?v=6.0.020191205" type="text/css" />
+<link rel="stylesheet" href="../usr/themes/handsome/assets/css/handsome.min.css?v=6.0.020191205" type="text/css" />
 
-<link rel="stylesheet" href="../usr/themes/handsome/assets/css/features/jquery.fancybox.min.css?v=5.3.120190915221" type="text/css" />
-<link rel="stylesheet" href="../usr/themes/handsome/assets/css/features/code/zenburn.min.css?v=5.3.120190915221" type="text/css" />
-<link rel="stylesheet" href="../usr/themes/handsome/assets/css/features/coolopacity.min.css?v=5.3.120190915221" type="text/css" />
+<link rel="stylesheet" href="../usr/themes/handsome/assets/css/features/jquery.fancybox.min.css?v=6.0.020191205" type="text/css" />
+<link rel="stylesheet" href="../usr/themes/handsome/assets/css/features/code/vs.min.css?v=6.0.020191205" type="text/css" />
+<link rel="stylesheet" href="../usr/themes/handsome/assets/css/features/coolopacity.min.css?v=6.0.020191205" type="text/css" />
 <style>
             .cool-transparent .app:before {
                 background-color: rgba(0 , 0, 0, 0.7)!important;
@@ -40,7 +40,7 @@
             }
         </style>
 
-<link rel="stylesheet" href="../usr/themes/handsome/assets/css/font.min.css?v=5.3.120190915221" type="text/css" />
+<link rel="stylesheet" href="../usr/themes/handsome/assets/css/font.min.css?v=6.0.020191205" type="text/css" />
 <style type="text/css">
         
         html.bg {
@@ -57,70 +57,79 @@
         background: url(../usr/uploads/2019/11/425005431.jpg) center center no-repeat no-repeat fixed #6A6B6F;background-size: cover;
         }
 }
-#aside .wrapper:hover {
+    .nav-tabs-alt .nav-tabs>li[data-index="2"].active~.navs-slider-bar {
+        transform: translateX(405%);
+    }
+    .nav-tabs-alt .nav-tabs>li[data-index="0"].active~.navs-slider-bar {
+        transform: translateX(100%);
+    }#aside .wrapper:hover {
 	background: url(../usr/themes/handsome/assets/img/snow.gif);
 	background-size: cover;
 	color: #999;
 }    </style>
 
-<script src="../usr/themes/handsome/assets/libs/jquery/jquery.min.js" type="1e7763cc85538a116e0db2be-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/libs/jquery/jquery.min.js" type="a9a83d03ca2eb4c9937524c1-text/javascript"></script>
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140019039-1" type="1e7763cc85538a116e0db2be-text/javascript"></script>
-<script type="1e7763cc85538a116e0db2be-text/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140019039-1" type="a9a83d03ca2eb4c9937524c1-text/javascript"></script>
+<script type="a9a83d03ca2eb4c9937524c1-text/javascript">
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'UA-140019039-1');
 </script>
-<script src="../usr/themes/handsome/assets/js/features/fancyMorph.min.js" type="1e7763cc85538a116e0db2be-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/js/features/fancyMorph.min.js" type="a9a83d03ca2eb4c9937524c1-text/javascript"></script>
 </head>
-<body id="body">
+<body id="body" class="fix-padding">
 
-<div id="alllayout" class="app app-aside-fixed container app-header-fixed "> 
-<header id="header" class="app-header navbar" role="menu">
+<div id="alllayout" class="app app-aside-fix container app-header-fixed "> 
+<header id="header" class="fix-padding app-header navbar box-shadow-bottom-lg" role="menu">
 
 <div class="text-ellipsis navbar-header bg-danger">
-<button class="pull-right visible-xs dk" ui-toggle-class="show animated animated-lento fadeIn" target=".navbar-collapse">
-<i class="fontello fontello-gear text-lg"></i>
+<button class="pull-right visible-xs" ui-toggle-class="show animated animated-lento fadeIn" target=".navbar-collapse">
+<span class="menu-icons"><i data-feather="search"></i></span>
 </button>
 <button class="pull-left visible-xs" ui-toggle-class="off-screen animated" target=".app-aside" ui-scroll="app">
-<i class="fontello fontello-menu text-lg"></i>
+<span class="menu-icons"><i data-feather="menu"></i></span>
 </button>
 
 <a href="../index.html" class="navbar-brand text-lt">
 <i class="fontello fontello-home"></i>
-<span class="hidden-folded m-l-xs">毒奶博主</span>
+<span class="hidden-folded m-l-xs">It's limboPro.xyz</span>
 </a>
 
 </div>
 
 
-<div class="collapse pos-rlt navbar-collapse box-shadow bg-danger">
+<div class="collapse pos-rlt navbar-collapse bg-danger">
 
 <form id="searchform1" class="searchform navbar-form navbar-form-sm navbar-left shift" method="post" role="search">
 <div class="form-group">
-<div class="input-group rounded bg-light">
-<input data-status="false" autocomplete="off" id="search_input" type="search" name="s" class="transparent
-                rounded
-              form-control input-sm no-border padder" required placeholder="输入关键词搜索…">
+<div class="input-group rounded bg-white-pure box-shadow-wrap-normal">
+<input autocomplete="off" id="search_input" type="search" name="s" class="transparent rounded form-control input-sm no-borders padder" required placeholder="输入关键词搜索…">
 
-<ul id="search_tips_drop" class="dropdown-menu hide" style="display: block;top: 30px; left: 0px;">
+<ul id="search_tips_drop" class="small-scroll-bar dropdown-menu hide" style="display: block;top: 
+                30px; left: 0px;">
 </ul>
 <span id="search_submit" class="transparent input-group-btn">
-<button type="submit" class="transparent btn btn-sm"><i class="fontello fontello-search" id="icon-search"></i><i class="animate-spin  fontello fontello-spinner hide" id="spin-search"></i></button>
+<button type="submit" class="transparent btn btn-sm">
+<span class="feathericons" id="icon-search"><i data-feather="search"></i></span>
+<span class="feathericons animate-spin  hide" id="spin-search"><i data-feather="loader"></i></span>
+
+
+</button>
 </span>
 </div>
 </div>
 </form>
 <a href="200.html" style="display: none" id="searchUrl"></a>
 
-<ul class="nav navbar-nav navbar-right">
+ <ul class="nav navbar-nav navbar-right">
 <li class="dropdown"><a target="blank" href="https://t.me/limboprobot" class="dropdown-toggle"><i class="fontello-chat-alt icon-fw"></i><span class="visible-xs-inline">相册</span></a></li> 
 <li class="dropdown">
-<a href="200.html#" data-toggle="dropdown" class="dropdown-toggle">
-<i class="fontello fontello-bell icon-fw"></i>
+<a href="200.html#" data-toggle="dropdown" class="feathericons dropdown-toggle">
+<i data-feather="twitch"></i>
 <span class="visible-xs-inline">
 闲言碎语 </span>
 <span class="badge badge-sm up bg-danger pull-right-xs"></span>
@@ -144,26 +153,26 @@
 </header>
 
 
-<aside id="aside" class="app-aside hidden-xs bg-dark"> 
+<aside id="aside" class="app-aside hidden-xs bg-black"> 
 <div class="aside-wrap" layout="column">
-<div class="navi-wrap scroll-y" flex>
+<div class="navi-wrap scroll-y scroll-hide" flex>
 
 <div class="clearfix hidden-xs text-center hide  show" id="aside-user">
-<div class="dropdown wrapper">
+<div class="dropdown wrapper ">
 <div ui-nav>
 <a href="https://t.me/limboprossr">
-<span class="thumb-lg w-auto-folded avatar m-t-sm">
-<img src="../usr/uploads/2019/09/2211209831.jpg" class="img-full">
+<span class="thumb-lg w-auto-folded avatar m-t-sm  ">
+<img src="../usr/uploads/2019/09/2211209831.jpg" class="img-full img-circle normal-shadow">
 </span>
 </a>
 </div>
-<a href="200.html#" data-toggle="dropdown" class="dropdown-toggle hidden-folded">
+<a href="200.html#" data-toggle="dropdown" class="dropdown-toggle hidden-folded  ">
 <span class="clear">
 <span class="block m-t-sm">
 <strong class="font-bold text-lt">毒奶</strong>
 <b class="caret"></b>
 </span>
-<span class="text-muted text-xs block">TG 毒奶博主<br>业余斜杆青年<br>增长黑客<br>收集癖</span>
+<span class="text-muted text-xs block">TG 毒奶博主<br>业余斜杆青年<br>增长黑客</span>
 </span>
 </a>
 
@@ -174,7 +183,7 @@
 <p>下午好，是时候打个盹了</p>
 </div>
 <div class="progress progress-xs m-b-none dker">
-<div class="progress-bar bg-white" data-toggle="tooltip" data-original-title="时间已经度过58.33%" style="width: 58.33%"></div>
+<div class="progress-bar bg-white" data-toggle="tooltip" data-original-title="时间已经度过54.17%" style="width: 54.17%"></div>
 </div>
 </li>
 </ul>
@@ -193,12 +202,12 @@
 
 <li>
 <a href="../index.html" class="auto">
-<i class="iconfont icon-zhuye icon text-md"></i>
+<span class="nav-icon"><i data-feather="home"></i></span>
 <span>首页</span>
 </a>
 </li>
 
-<li> <a target="_self" href="../6.html" class="auto"><i class="glyphicon fontello-emo-devil icon text-md"></i><span>联系我们</span></a></li><li> <a target="_self" href="../1765.html" class="auto"><i class="glyphicon fontello-indent icon text-md"></i><span>文章归档</span></a></li><li> <a target="_self" href="../865.html" class="auto"><i class="glyphicon fontello-instagram icon text-md"></i><span>机场推荐</span></a></li><li> <a target="_blank" href="https://t.me/limboprossr" class="auto"><i class="glyphicon fontello-bell icon text-md"></i><span>电报频道</span></a></li><li> <a target="_blank" href="../search.html" class="auto"><i class="glyphicon fontello-search icon text-md"></i><span>毒奶搜索</span></a></li><li> <a target="_blank" href="https://github.com/limbopro" class="auto"><i class="glyphicon fontello-eye icon text-md"></i><span>托管仓库</span></a></li> <li class="line dk"></li>
+<li> <a target="_self" href="../6.html" class="auto"><span class="nav-icon"><i class="glyphicon fontello-emo-devil"></i></span><span>联系我们</span></a></li><li> <a target="_self" href="../1765.html" class="auto"><span class="nav-icon"><i class="glyphicon fontello-indent"></i></span><span>文章归档</span></a></li><li> <a target="_self" href="../865.html" class="auto"><span class="nav-icon"><i class="glyphicon fontello-instagram"></i></span><span>机场推荐</span></a></li><li> <a target="_blank" href="https://t.me/limboprossr" class="auto"><span class="nav-icon"><i class="glyphicon fontello-bell"></i></span><span>电报频道</span></a></li><li> <a target="_blank" href="../search.html" class="auto"><span class="nav-icon"><i class="glyphicon fontello-search"></i></span><span>毒奶搜索</span></a></li><li> <a target="_blank" href="https://github.com/limbopro" class="auto"><span class="nav-icon"><i class="glyphicon fontello-eye"></i></span><span>托管仓库</span></a></li> <li class="line dk"></li>
 
 <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
 <span>组成</span>
@@ -210,7 +219,8 @@
 <i class="fontello icon-fw fontello-angle-right text"></i>
 <i class="fontello icon-fw fontello-angle-down text-active"></i>
 </span>
-<i class="glyphicon glyphicon-th"></i>
+
+<span class="nav-icon"><i data-feather="grid"></i></span>
 <span>分类</span>
 </a>
 <ul class="nav nav-sub dk">
@@ -220,7 +230,7 @@
 </a>
 </li>
 
-<li><a href="../category/master-care/index.html"><b class="badge pull-right">19</b><span>无主杂记</span></a></li><li><a href="../category/Bulletin/index.html"><b class="badge pull-right">5</b><span>运营通报</span></a></li><li><a href="../category/hot-movies/index.html"><b class="badge pull-right">18</b><span>追剧小组</span></a></li><li><a href="../category/films-recommend/index.html"><b class="badge pull-right">39</b><span>电影推荐</span></a></li><li><a href="../category/ssr/index.html"><b class="badge pull-right">0</b><span>科学上网</span></a></li><li><a href="../category/ssr-operation/index.html"><b class="badge pull-right">2</b><span>自学上网</span></a></li><li><a href="../category/tools/index.html"><b class="badge pull-right">22</b><span>实用工具</span></a></li><li><a href="../category/LNMP/index.html"><b class="badge pull-right">24</b><span>建站指南</span></a></li><li><a href="../category/Typecho/index.html"><b class="badge pull-right">19</b><span>网站优化</span></a></li><li><a href="../category/Toilet-reading/index.html"><b class="badge pull-right">8</b><span>厕所读物</span></a></li><li><a href="https://limbopro.xyz/category/software-skills/"><b class="badge pull-right">23</b><span>软件百科</span></a></li><li><a href="https://limbopro.xyz/category/telegram-anecdote/"><b class="badge pull-right">10</b><span>电报奇闻</span></a></li><li><a href="https://limbopro.xyz/category/instagram/"><b class="badge pull-right">11</b><span>美图欣赏</span></a></li><li><a href="https://limbopro.xyz/category/sales/"><b class="badge pull-right">1</b><span>怪薅羊毛</span></a></li><li><a href="https://limbopro.xyz/category/NSFW/"><b class="badge pull-right">17</b><span>开车专栏</span></a></li><li><a href="https://limbopro.xyz/category/day-of-history/"><b class="badge pull-right">1</b><span>历史时刻</span></a></li><li><a href="https://limbopro.xyz/category/AfterFQ/"><b class="badge pull-right">1</b><span>毒奶世界</span></a></li><li><a href="https://limbopro.xyz/category/technologyart/"><b class="badge pull-right">2</b><span>科技美学</span></a></li> </ul>
+<li><a href="../category/master-care/index.html"><b class="badge pull-right">19</b><span>无主杂记</span></a></li><li><a href="../category/Bulletin/index.html"><b class="badge pull-right">5</b><span>运营通报</span></a></li><li><a href="../category/hot-movies/index.html"><b class="badge pull-right">17</b><span>追剧小组</span></a></li><li><a href="../category/films-recommend/index.html"><b class="badge pull-right">39</b><span>电影推荐</span></a></li><li><a href="../category/ssr/index.html"><b class="badge pull-right">3</b><span>科学上网</span></a></li><li><a href="../category/ssr-operation/index.html"><b class="badge pull-right">1</b><span>自学上网</span></a></li><li><a href="../category/tools/index.html"><b class="badge pull-right">21</b><span>实用工具</span></a></li><li><a href="../category/LNMP/index.html"><b class="badge pull-right">24</b><span>建站指南</span></a></li><li><a href="../category/Typecho/index.html"><b class="badge pull-right">19</b><span>网站优化</span></a></li><li><a href="../category/Toilet-reading/index.html"><b class="badge pull-right">8</b><span>厕所读物</span></a></li><li><a href="../category/software-skills/index.html"><b class="badge pull-right">23</b><span>软件百科</span></a></li><li><a href="../category/telegram-anecdote/index.html"><b class="badge pull-right">10</b><span>电报奇闻</span></a></li><li><a href="../category/instagram/index.html"><b class="badge pull-right">11</b><span>美图欣赏</span></a></li><li><a href="../category/sales/index.html"><b class="badge pull-right">1</b><span>怪薅羊毛</span></a></li><li><a href="../category/NSFW/index.html"><b class="badge pull-right">17</b><span>开车专栏</span></a></li><li><a href="../category/day-of-history/index.html"><b class="badge pull-right">1</b><span>历史时刻</span></a></li><li><a href="../category/AfterFQ/index.html"><b class="badge pull-right">1</b><span>毒奶世界</span></a></li><li><a href="../category/technologyart/index.html"><b class="badge pull-right">2</b><span>科技美学</span></a></li><li><a href="../category/Internetlog/index.html"><b class="badge pull-right">1</b><span>观察报告</span></a></li> </ul>
 </li>
 
 <li>
@@ -229,7 +239,7 @@
 <i class="fontello icon-fw fontello-angle-right text"></i>
 <i class="fontello icon-fw fontello-angle-down text-active"></i>
 </span>
-<i class="glyphicon glyphicon-file"></i>
+<span class="nav-icon"><i data-feather="file"></i></span>
 <span>页面</span>
 </a>
 <ul class="nav nav-sub dk">
@@ -241,7 +251,7 @@
 
 <li><a href="../1765.html"><span>归档</span></a></li>
 <li><a href="../6.html"><span>联系我们</span></a></li>
-<li><a href="https://limbopro.xyz/telegram.html"><span>电报</span></a></li>
+<li><a href="../telegram.html"><span>电报</span></a></li>
 <li><a href="../865.html"><span>毒奶の机场专线</span></a></li>
 <li><a href="../cross.html"><span>说说</span></a></li>
 </ul>
@@ -253,7 +263,7 @@
 <i class="fontello icon-fw fontello-angle-right text"></i>
 <i class="fontello icon-fw fontello-angle-down text-active"></i>
 </span>
-<i class="iconfont icon-links"></i>
+<span class="nav-icon"><i data-feather="user"></i></span>
 <span>友链</span>
 </a>
 <ul class="nav nav-sub dk">
@@ -274,13 +284,13 @@
 <div id="left_footer" class="footer wrapper-xs text-center nav-xs lt">
 <div class="col-xs-6 no-padder">
 <a target="_blank" class="tinav" href="../feed/index.html" title="" data-toggle="tooltip" data-placement="top" data-original-title="文章RSS地址">
-<span class="block"><i class="fontello fontello-rss"></i></span>
+<span class="left-bottom-icons block"><i data-feather="rss"></i></span>
 <small class="text-muted">文章</small>
 </a>
 </div>
 <div class="col-xs-6 no-padder">
-<a target="_blank" href="https://limbopro.xyz/feed/comments/" title="" data-toggle="tooltip" data-placement="top" data-original-title="评论RSS地址">
-<span class="block"><i class="fontello fontello-rss-square"></i></span>
+<a target="_blank" href="../feed/comments/index.html" title="" data-toggle="tooltip" data-placement="top" data-original-title="评论RSS地址">
+<span class="left-bottom-icons block"><i data-feather="message-square"></i></span>
 <small class="text-muted">评论</small>
 </a>
 </div>
@@ -305,47 +315,43 @@
 
 <div class="col center-part">
 
-
-<header id="small_widgets" class="bg-light lter b-b wrapper-md">
-<h1 class="entry-title m-n font-thin h3 text-black l-h">JuiceSSH - SSH 管理工具<a class="plus-font-size" data-toggle="tooltip" data-original-title="点击改变文章字体大小"><i class="glyphicon glyphicon-text-size
-" aria-hidden="true"></i></a><a data-morphing="" id="morphing" data-src="#morphing-content" href="javascript:;" class="read_mode superscript m-l-sm" data-toggle="tooltip" data-placement="right" data-original-title="阅读模式"><i class="glyphicon glyphicon-eye-open" aria-hidden="true"></i></a></h1> 
+<style>
+        
+        .mdx-si-head .cover{
+            object-fit: cover;
+            width: 100%;
+            height: 100%
+        }
+        
+</style>
+<div class="mdx-share-img" id="mdx-share-img"><div class="mdx-si-head" style="background-image:url(../usr/themes/handsome/assets/img/video.jpg)"><p>毒奶</p><span>JuiceSSH - SSH 管理工具</span></div><div class="mdx-si-sum">这可能是我用过的最好用的SSH安卓客户端。下载地址：Google playApkture本地下载 2.1.4版或应...</div><div class="mdx-si-box"><span>扫描右侧二维码阅读全文</span><div class="mdx-si-qr" id="mdx-si-qr"><img src="../usr/themes/handsome/libs/GetCode.php?type=url&amp;content=https:%252F%252Flimbopro.xyz%252Farchives%252F200.html"></div></div><div class="mdx-si-time">16<br><span class="mdx-si-time-2">2019/05</span></div></div> 
+<header id="small_widgets" class="bg-light lter wrapper-md">
+<h1 class="entry-title m-n font-thin text-black l-h">JuiceSSH - SSH 管理工具<a class="plus-font-size" data-toggle="tooltip" data-original-title="点击改变文章字体大小"><i data-feather="type"></i></a><a data-morphing="" id="morphing" data-src="#morphing-content" href="javascript:;" class="read_mode superscript m-l-sm" data-toggle="tooltip" data-placement="right" data-original-title="阅读模式"><i data-feather="book-open"></i></a></h1> 
 <ul class="entry-meta text-muted list-inline m-b-none small
              post-head-icon">
 
-<li class="meta-author"><i class="fontello fontello-user" aria-hidden="true"></i><span class="sr-only">博主：</span> <a class="meta-value" href="https://limbopro.xyz/author/1/" rel="author"> 毒奶</a></li>
+<li class="meta-author"><span class="post-icons"><i data-feather="user"></i></span><span class="sr-only">博主：</span> <a class="meta-value" href="../author/1/index.html" rel="author"> 毒奶</a></li>
 
-<li class="meta-date"><i class="fontello fontello-clock-o" aria-hidden="true"></i>&nbsp;<span class="sr-only">发布时间：</span><time class="meta-value">2019 年 05 月 16 日</time></li>
+<li class="meta-date"><span class="post-icons"><i data-feather="clock"></i></span><span class="sr-only">发布时间：</span><time class="meta-value">2019 年 05 月 16 日</time></li>
 
-<li class="meta-views"><i class="fontello fontello-eye" aria-hidden="true"></i>&nbsp;<span class="meta-value">3110&nbsp;次浏览</span></li>
+<li class="meta-views"><span class="post-icons"><i data-feather="eye"></i></span><span class="meta-value">3116次浏览</span></li>
 
-<li class="meta-word"><i class="fontello fontello-pencil"></i>&nbsp;<span class="meta-value">485&nbsp;字数</span></li>
+<li class="meta-word"><span class="post-icons"><i data-feather="pen-tool"></i></span><span class="meta-value">485字数</span></li>
 
-<li class="meta-categories"><i class="fontello fontello-tags" aria-hidden="true"></i> <span class="sr-only">分类：</span> <span class="meta-value"><a href="../category/tools/index.html">实用工具</a></span></li>
+<li class="meta-categories"><span class="post-icons"><i data-feather="hash"></i></span><span class="sr-only">分类：</span> <span class="meta-value"><a href="../category/tools/index.html">实用工具</a></span></li>
 </ul>
 </header>
 <div class="wrapper-md" id="post-panel">
-<ol class="breadcrumb bg-white b-a" itemscope=""><li>
-<a href="../index.html" itemprop="breadcrumb" title="返回首页" data-toggle="tooltip"><i class="fontello fontello-home" aria-hidden="true"></i>&nbsp;首页</a>
-</li><li class="active">正文&nbsp;&nbsp;</li>
-<div style="float:right;">
-分享到：
-<style>
-   .breadcrumb i.iconfont.icon-qzone:after {
-    padding: 0 0 0 5px;
-    color: #ccc;
-    content: "/\00a0";
-    }
-    
-   </style>
-<a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://limbopro.xyz/archives/200.html&title=JuiceSSH - SSH 管理工具&site=https://limbopro.xyz/" itemprop="breadcrumb" target="_blank" title="" data-toggle="tooltip" data-original-title="分享到QQ空间" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open(this.href, 'qzone-share', 'width=550,height=335');return false;" data-cf-modified-1e7763cc85538a116e0db2be-=""><i style="font-size:15px;" class="iconfont icon-qzone" aria-hidden="true"></i></a>
-<a href="http://service.weibo.com/share/share.php?url=https://limbopro.xyz/archives/200.html&title=JuiceSSH - SSH 管理工具" target="_blank" itemprop="breadcrumb" title="" data-toggle="tooltip" data-original-title="分享到微博" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open(this.href, 'weibo-share', 'width=550,height=335');return false;" data-cf-modified-1e7763cc85538a116e0db2be-=""><i style="font-size:15px;" class="fontello fontello-weibo" aria-hidden="true"></i></a></div></ol> 
+<ol class="breadcrumb bg-white-pure" itemscope=""><li>
+<a href="../index.html" itemprop="breadcrumb" title="返回首页" data-toggle="tooltip"><span class="home-icons"><i data-feather="home"></i></span>首页</a>
+</li><li class="active">正文&nbsp;&nbsp;</li></ol> 
 <div id="postpage" class="blog-post">
-<article class="panel">
+<article class="single-post panel">
 
 
 <div id="post-content" class="wrapper-lg">
 <div class="entry-content l-h-2x">
-<blockquote><p>这可能是我用过的最好用的SSH安卓客户端。</p></blockquote><p><img src="../usr/uploads/2019/05/65168143.png" alt="屏幕快照 2019-05-16 下午10.31.24.png" title="屏幕快照 2019-05-16 下午10.31.24.png"></p><h3>下载地址：</h3><p><a href="https://play.google.com/store/apps/details?id=com.sonelli.juicessh" target="_blank">Google play</a><br><a href="https://apkpure.com/cn/juicessh-ssh-client/com.sonelli.juicessh" target="_blank">Apkture</a><br><a href="https://limbopro.xyz/usr/uploads/2019/05/1335633537.apk" target="_blank">本地下载 2.1.4版</a></p><p>或<code>应用商店</code>搜索：JuiceSSH；</p><h2>相关推荐</h2><p>与SSH 客户端相关推荐：<a href="https://limbopro.xyz/tag/SSH/" target="_blank">https://limbopro.xyz/tag/SSH/</a> ；</p><hr class="content-copyright" style="margin-top:50px" /><blockquote class="content-copyright" style="font-style:normal"><p class="content-copyright">版权属于：<a class="content-copyright" target="_blank" href="https://t.me/limboprobot">http://t.me/limboprobot</a> TG 毒奶博主 Julia； <br>联系我们： <a class="content-copyright" target="_blank" href="../6.html">https://limbopro.xyz/6.html</a> 投稿或反馈或转载文章或交换友链； <br>电报频道： <a class="content-copyright" target="_blank" href="https://t.me/limboprossr">https://t.me/limboprossr</a> 及时收讯不失联； <br>必备技能： <a class="content-copyright" target="_blank" href="https://limbopro.xyz/archives/2910.html">https://limbopro.xyz/archives/2910.html</a> 如何访问任意被墙域名； <br>网站镜像： <a class="content-copyright" target="_blank" href="https://limbopro.github.io">https://limbopro.github.io</a> 每月更新；</p><p class="content-copyright">本文链接：<a class="content-copyright" href="200.html">https://limbopro.xyz/archives/200.html</a></p><p class="content-copyright">版权声明：<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本文采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a> 进行许可，转载请附上原文出处链接和本声明。</p></blockquote> </div>
+<blockquote><p>这可能是我用过的最好用的SSH安卓客户端。</p></blockquote><p><img src="../usr/uploads/2019/05/65168143.png" alt="屏幕快照 2019-05-16 下午10.31.24.png" title="屏幕快照 2019-05-16 下午10.31.24.png"></p><h3>下载地址：</h3><p><span class="external-link"><a href="https://play.google.com/store/apps/details?id=com.sonelli.juicessh" target="_blank">Google play<i data-feather='external-link'></i></a></span><br><span class="external-link"><a href="https://apkpure.com/cn/juicessh-ssh-client/com.sonelli.juicessh" target="_blank">Apkture<i data-feather='external-link'></i></a></span><br><a href="https://limbopro.xyz/usr/uploads/2019/05/1335633537.apk">本地下载 2.1.4版</a></p><p>或<code>应用商店</code>搜索：JuiceSSH；</p><h2>相关推荐</h2><p>与SSH 客户端相关推荐：<a href="../tag/SSH/index.html">https://limbopro.xyz/tag/SSH/</a> ；</p><hr class="content-copyright" style="margin-top:50px" /><blockquote class="content-copyright" style="font-style:normal"><p class="content-copyright">版权属于：<a class="content-copyright" target="_blank" href="https://t.me/limboprobot">http://t.me/limboprobot</a> TG 毒奶博主 Julia； <br>联系我们： <a class="content-copyright" target="_blank" href="../6.html">https://limbopro.xyz/6.html</a> 投稿或反馈或转载文章或交换友链； <br>电报频道： <a class="content-copyright" target="_blank" href="https://t.me/limboprossr">https://t.me/limboprossr</a> 及时收讯不失联； <br>必备技能： <a class="content-copyright" target="_blank" href="2910.html">https://limbopro.xyz/archives/2910.html</a> 如何访问任意被墙域名； <br>网站镜像： <a class="content-copyright" target="_blank" href="https://limbopro.github.io">https://limbopro.github.io</a> 每月更新；</p><p class="content-copyright">本文链接：<a class="content-copyright" href="200.html">https://limbopro.xyz/archives/200.html</a></p><p class="content-copyright">版权声明：<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本文采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a> 进行许可，转载请附上原文出处链接和本声明。</p></blockquote> </div>
 
 <div class="show-foot">
 <div class="notebook">
@@ -362,13 +368,14 @@
 
 <nav class="m-t-lg m-b-lg">
 <ul class="pager">
-<li class="next"> <a href="190.html" title="Big Brother is watching you" data-toggle="tooltip"> 下一篇 </a></li> <li class="previous"> <a href="204.html" title="Typecho丨开启你的第一个轻量化网站" data-toggle="tooltip"> 上一篇 </a></li>
+<li class="next"> <a class="box-shadow-wrap-normal" href="190.html" title="Big Brother is watching you" data-toggle="tooltip">
+下一篇 </a></li> <li class="previous"> <a class="box-shadow-wrap-normal" href="204.html" title="Typecho丨开启你的第一个轻量化网站" data-toggle="tooltip"> 上一篇 </a></li>
 </ul>
 </nav>
 
-<div id="disqus_thread"><script type="1e7763cc85538a116e0db2be-text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="adf24965-dd03-45f8-9fdf-3f1e953df737";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script></div>
+<div id="disqus_thread"><script type="a9a83d03ca2eb4c9937524c1-text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="adf24965-dd03-45f8-9fdf-3f1e953df737";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script></div>
 <div id="disqus_thread"></div>
-<script type="1e7763cc85538a116e0db2be-text/javascript">
+<script type="a9a83d03ca2eb4c9937524c1-text/javascript">
 
 
 /**
@@ -391,125 +398,115 @@
 </div>
 </div>
 
-<aside class="asideBar col w-md bg-white-only b-l bg-auto no-border-xs" role="complementary">
+<aside class="asideBar col w-md bg-white-only bg-auto no-border-xs" role="complementary">
 <div id="sidebar">
 <section id="tabs-4" class="widget widget_tabs clear">
 <div class="nav-tabs-alt no-js-hide">
-<ul class="nav nav-tabs nav-justified" role="tablist">
-<li class="active" role="presentation"> <a href="200.html#widget-tabs-4-hots" role="tab" aria-controls="widget-tabs-4-hots" aria-expanded="true" data-toggle="tab"> <i class="glyphicon glyphicon-fire text-md text-muted wrapper-sm" aria-hidden="true"></i> <span class="sr-only">热门文章</span> </a></li>
-<li role="presentation"> <a href="200.html#widget-tabs-4-random" role="tab" aria-controls="widget-tabs-4-random" aria-expanded="false" data-toggle="tab"> <i class="glyphicon glyphicon-transfer text-md text-muted wrapper-sm" aria-hidden="true"></i> <span class="sr-only">随机文章</span> </a></li>
+<ul class="nav nav-tabs nav-justified box-shadow-bottom-normal tablist" role="tablist">
+<li data-index="0" class="active" role="presentation"> <a href="200.html#widget-tabs-4-hots" role="tab" aria-controls="widget-tabs-4-hots" aria-expanded="true" data-toggle="tab"><div class="sidebar-icon wrapper-sm"><i data-feather="thumbs-up"></i></div><span class="sr-only">热门文章</span> </a></li>
+<li data-index="2" role="presentation"> <a href="200.html#widget-tabs-4-random" role="tab" aria-controls="widget-tabs-4-random" aria-expanded="false" data-toggle="tab"> <div class="sidebar-icon wrapper-sm"><i data-feather="gift"></i></div> <span class="sr-only">随机文章</span>
+</a></li>
+<span class="navs-slider-bar"></span>
 </ul>
 </div>
 <div class="tab-content">
 
 <div id="widget-tabs-4-hots" class="tab-pane  fade in wrapper-md active" role="tabpanel">
-<h3 class="widget-title m-t-none text-md">热门文章</h3>
+<h5 class="widget-title m-t-none text-md">热门文章</h5>
 <ul class="list-group no-bg no-borders pull-in m-b-none">
 <li class="list-group-item">
-<a href="https://limbopro.xyz/archives/%E5%BA%86%E4%BD%99%E5%B9%B4.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/8.jpg" class="img-circle"></a>
+<a href="1423.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/10.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h"> <a href="https://limbopro.xyz/archives/%E5%BA%86%E4%BD%99%E5%B9%B4.html" title="庆余年全集在线观看丨22-46集丨高清丨大结局免费超钱点播（包含泄露版）"> 庆余年全集在线观看丨22-46集丨高清丨大结局免费超钱点播（包含泄露版） </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">21137</span>
+<h4 class="h5 l-h text-second"> <a href="1423.html" title="卡车家族丨1080P秒开丨折后6.4元/月起丨50+节点丨SSR机场推荐（学生党首选）"> 卡车家族丨1080P秒开丨折后6.4元/月起丨50+节点丨SSR机场推荐（学生党首选） </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">23800</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="https://limbopro.xyz/archives/969.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/1.jpg" class="img-circle"></a>
+<a href="2787.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/3.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h"> <a href="https://limbopro.xyz/archives/969.html" title="在中国看Netflix丨HBO丨Hulu丨Amazon Prime Video丨Apple TV丨或其他任意剧集。"> 在中国看Netflix丨HBO丨Hulu丨Amazon Prime Video丨Apple TV丨或其他任意剧集。 </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">19166</span>
+<h4 class="h5 l-h text-second"> <a href="2787.html" title="高速内网IPLC专线机场丨4K秒开丨14.99元/月起丨京港/沪港/深港/深新/沪美线路（贵在稳定）"> 高速内网IPLC专线机场丨4K秒开丨14.99元/月起丨京港/沪港/深港/深新/沪美线路（贵在稳定） </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">20898</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="https://limbopro.xyz/archives/1560.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/5.jpg" class="img-circle"></a>
+<a href="969.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/8.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h"> <a href="https://limbopro.xyz/archives/1560.html" title="全网在线视频解析与下载（YouTube/Pornhub/Instagram/Twitter/Xvideo/Facebook/哔哩哔哩解析/微博视频...）"> 全网在线视频解析与下载（YouTube/Pornhub/Instagram/Twitter/Xvideo/Facebook/哔哩哔哩解析/微博视频...） </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">17781</span>
+<h4 class="h5 l-h text-second"> <a href="969.html" title="在中国看Netflix丨HBO丨Hulu丨Amazon Prime Video丨Apple TV丨或其他任意剧集。"> 在中国看Netflix丨HBO丨Hulu丨Amazon Prime Video丨Apple TV丨或其他任意剧集。 </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">19251</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="https://limbopro.xyz/archives/1163.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/10.jpg" class="img-circle"></a>
+<a href="n3ro.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/7.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h"> <a href="https://limbopro.xyz/archives/1163.html" title="长安十二时辰丨优酷源同步在线观看"> 长安十二时辰丨优酷源同步在线观看 </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">15665</span>
+<h4 class="h5 l-h text-second"> <a href="n3ro.html" title="44+条高速内网IPLC专线丨N3RO丨折后14.4元/月起丨线路多多丨川日/川港/京港/京美/京德/沪韩/沪日/沪港/深新/深港/沪新/杭港/沪美/川日/游戏加速"> 44+条高速内网IPLC专线丨N3RO丨折后14.4元/月起丨线路多多丨川日/川港/京港/京美/京德/沪韩/沪日/沪港/深新/深港/沪新/杭港/沪美/川日/游戏加速 </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">16851</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="https://limbopro.xyz/archives/3629.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/9.jpg" class="img-circle"></a>
+<a href="3629.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/9.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h"> <a href="https://limbopro.xyz/archives/3629.html" title="iOS 使用 Surge/Quantumult/Shadowrocket /QuantumultX 解锁 TikTok （国际版）区域限制（免拔卡）12.17.2019"> iOS 使用 Surge/Quantumult/Shadowrocket /QuantumultX 解锁 TikTok （国际版）区域限制（免拔卡）12.17.2019 </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">12965</span>
+<h4 class="h5 l-h text-second"> <a href="3629.html" title="iOS 使用 Surge/Quantumult/Shadowrocket /QuantumultX 解锁 TikTok （国际版）区域限制（免拔卡）12.17.2019"> iOS 使用 Surge/Quantumult/Shadowrocket /QuantumultX 解锁 TikTok （国际版）区域限制（免拔卡）12.17.2019 </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">13093</span>
 </span>
 </small></div></li> </ul>
 </div>
 
 <div id="widget-tabs-4-random" class="tab-pane fade wrapper-md no-js-show" role="tabpanel">
-<h3 class="widget-title m-t-none text-md">随机文章</h3>
+<h5 class="widget-title m-t-none text-md">随机文章</h5>
 <ul class="list-group no-bg no-borders pull-in">
 <li class="list-group-item">
- <a href="https://limbopro.xyz/archives/5624.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/8.jpg" class="img-circle"></a>
+<a href="2955.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/10.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h"> <a href="https://limbopro.xyz/archives/5624.html" title="少年的你 (2019)"> 少年的你 (2019) </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">538</span>
+<h4 class="h5 l-h text-second"> <a href="2955.html" title="有哪些值得反复观看的科幻电影（一个世纪内）"> 有哪些值得反复观看的科幻电影（一个世纪内） </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">1370</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="https://limbopro.xyz/archives/775.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/1.jpg" class="img-circle"></a>
+<a href="BoJack-Horseman.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/3.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h"> <a href="https://limbopro.xyz/archives/775.html" title="异形：契约"> 异形：契约 </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">3421</span>
+<h4 class="h5 l-h text-second"> <a href="BoJack-Horseman.html" title="马男波杰克 （1-6季）丨Netflix 原创剧集"> 马男波杰克 （1-6季）丨Netflix 原创剧集 </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">1275</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="https://limbopro.xyz/archives/1316.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/5.jpg" class="img-circle"></a>
+<a href="394.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/8.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h"> <a href="https://limbopro.xyz/archives/1316.html" title="大佬吹牛群丨XDDoS 评测指北丨9 TB+35.8 亿请求"> 大佬吹牛群丨XDDoS 评测指北丨9 TB+35.8 亿请求 </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">3179</span>
+<h4 class="h5 l-h text-second"> <a href="394.html" title="这个世界很温柔"> 这个世界很温柔 </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">3515</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="https://limbopro.xyz/archives/2184.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/10.jpg" class="img-circle"></a>
+<a href="1201.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/7.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h"> <a href="https://limbopro.xyz/archives/2184.html" title="小丑回魂1&amp;2丨本周电影推荐"> 小丑回魂1&amp;2丨本周电影推荐 </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">1358</span>
+<h4 class="h5 l-h text-second"> <a href="1201.html" title="百度网盘直链下载助手（一个脚本搞定百度网盘下载）&amp;3个方法解决百度网盘限速"> 百度网盘直链下载助手（一个脚本搞定百度网盘下载）&amp;3个方法解决百度网盘限速 </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">3883</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="https://limbopro.xyz/archives/1035.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/9.jpg" class="img-circle"></a>
+<a href="373.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/9.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h"> <a href="https://limbopro.xyz/archives/1035.html" title="用 WebBench 进行网站压力测试"> 用 WebBench 进行网站压力测试 </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">3490</span>
+<h4 class="h5 l-h text-second"> <a href="373.html" title="毒药测速DuyaoSS吃瓜吹水群"> 毒药测速DuyaoSS吃瓜吹水群 </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">3700</span>
 </span>
 </small></div></li> </ul>
 </div>
 </div>
 </section>
 
-<section id="categories-2" class="widget widget_categories wrapper-md clear">
-<h3 class="widget-title m-t-none text-md">博客信息</h3>
-<ul class="list-group">
-<li class="list-group-item"> <i class="glyphicon glyphicon-file text-muted"></i> <span class="badge
+<section id="blog_info" class="widget widget_categories wrapper-md clear">
+<h5 class="widget-title m-t-none text-md">博客信息</h5>
+<ul class="list-group box-shadow-wrap-normal">
+<li class="list-group-item text-second"><span class="blog-info-icons"> <i data-feather="award"></i></span> <span class="badge
            pull-right">213</span>文章数目</li>
-<li class="list-group-item"> <i class="glyphicon glyphicon-comment text-muted"></i> <span class="badge
+<li class="list-group-item text-second"> <span class="blog-info-icons"> <i data-feather="message-circle"></i></span>
+<span class="badge
            pull-right">5</span>评论数目</li>
-<li class="list-group-item"> <i class="glyphicon glyphicon-equalizer text-muted"></i> <span class="badge
-           pull-right">224天</span>运行天数</li>
-<li class="list-group-item"> <i class="glyphicon glyphicon-refresh text-muted"></i> <span class="badge
-           pull-right">4 小时前</span>最后活动</li>
+<li class="list-group-item text-second"><span class="blog-info-icons"> <i data-feather="calendar"></i></span>
+<span class="badge
+           pull-right">225天</span>运行天数</li>
+<li class="list-group-item text-second"><span class="blog-info-icons"> <i data-feather="activity"></i></span> <span class="badge
+           pull-right">12 小时前</span>最后活动</li>
 </ul>
 </section>
 
-<div id="tag_toc_body">
-<section id="tag_toc" class="widget widget_categories wrapper-md clear">
-<h3 class="widget-title m-t-none text-md">文章目录</h3>
-<div class="tags l-h-2x">
-<div id="toc"></div>
-</div>
+
+<section id="tag_cloud-2" class="widget widget_tag_cloud wrapper-md clear">
+<h5 class="widget-title m-t-none text-md">标签云</h5>
+<div class="post-tags tags l-h-2x">
+<a href="../tag/SSH/index.html">SSH</a> <a href="../tag/APK/index.html">APK</a> <a href="../tag/Android/index.html">Android</a> </div>
 </section>
-<div class="hidden-lg tocify-mobile-panel panel panel-default
-              setting_body_panel" aria-hidden="true">
-<button class="btn btn-default no-shadow pos-abt" data-toggle="tooltip" data-placement="left" data-original-title="目录" data-toggle-class=".tocify-mobile-panel=active">
-<i class="glyphicon glyphicon-resize-full"></i>
-</button>
-<div class="panel-heading">文章目录</div>
-<div class="setting_body toc-mobile-body">
-<div class="panel-body">
-<div class="tocTree"></div>
-</div>
-</div>
-</div>
-</div>
 </div>
 </aside>
 
@@ -519,10 +516,10 @@
 <div class="page">
 <h1 class="title">JuiceSSH - SSH 管理工具</h1>
 <div class="metadata singleline"><a href="200.html#" rel="author" class="byline">毒奶</a>&nbsp;•&nbsp;<span class="delimiter"></span><time class="date">2019 年 05 月 16 日</time></div>
-<blockquote><p>这可能是我用过的最好用的SSH安卓客户端。</p></blockquote><p><img src="../usr/uploads/2019/05/65168143.png" alt="屏幕快照 2019-05-16 下午10.31.24.png" title="屏幕快照 2019-05-16 下午10.31.24.png"></p><h3>下载地址：</h3><p><a href="https://play.google.com/store/apps/details?id=com.sonelli.juicessh" target="_blank">Google play</a><br><a href="https://apkpure.com/cn/juicessh-ssh-client/com.sonelli.juicessh" target="_blank">Apkture</a><br><a href="https://limbopro.xyz/usr/uploads/2019/05/1335633537.apk" target="_blank">本地下载 2.1.4版</a></p><p>或<code>应用商店</code>搜索：JuiceSSH；</p><h2>相关推荐</h2><p>与SSH 客户端相关推荐：<a href="https://limbopro.xyz/tag/SSH/" target="_blank">https://limbopro.xyz/tag/SSH/</a> ；</p><hr class="content-copyright" style="margin-top:50px" /><blockquote class="content-copyright" style="font-style:normal"><p class="content-copyright">版权属于：<a class="content-copyright" target="_blank" href="https://t.me/limboprobot">http://t.me/limboprobot</a> TG 毒奶博主 Julia； <br>联系我们： <a class="content-copyright" target="_blank" href="../6.html">https://limbopro.xyz/6.html</a> 投稿或反馈或转载文章或交换友链； <br>电报频道： <a class="content-copyright" target="_blank" href="https://t.me/limboprossr">https://t.me/limboprossr</a> 及时收讯不失联； <br>必备技能： <a class="content-copyright" target="_blank" href="https://limbopro.xyz/archives/2910.html">https://limbopro.xyz/archives/2910.html</a> 如何访问任意被墙域名； <br>网站镜像： <a class="content-copyright" target="_blank" href="https://limbopro.github.io">https://limbopro.github.io</a> 每月更新；</p><p class="content-copyright">本文链接：<a class="content-copyright" href="200.html">https://limbopro.xyz/archives/200.html</a></p><p class="content-copyright">版权声明：<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本文采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a> 进行许可，转载请附上原文出处链接和本声明。</p></blockquote>
+<blockquote><p>这可能是我用过的最好用的SSH安卓客户端。</p></blockquote><p><img src="../usr/uploads/2019/05/65168143.png" alt="屏幕快照 2019-05-16 下午10.31.24.png" title="屏幕快照 2019-05-16 下午10.31.24.png"></p><h3>下载地址：</h3><p><span class="external-link"><a href="https://play.google.com/store/apps/details?id=com.sonelli.juicessh" target="_blank">Google play<i data-feather='external-link'></i></a></span><br><span class="external-link"><a href="https://apkpure.com/cn/juicessh-ssh-client/com.sonelli.juicessh" target="_blank">Apkture<i data-feather='external-link'></i></a></span><br><a href="https://limbopro.xyz/usr/uploads/2019/05/1335633537.apk">本地下载 2.1.4版</a></p><p>或<code>应用商店</code>搜索：JuiceSSH；</p><h2>相关推荐</h2><p>与SSH 客户端相关推荐：<a href="../tag/SSH/index.html">https://limbopro.xyz/tag/SSH/</a> ；</p><hr class="content-copyright" style="margin-top:50px" /><blockquote class="content-copyright" style="font-style:normal"><p class="content-copyright">版权属于：<a class="content-copyright" target="_blank" href="https://t.me/limboprobot">http://t.me/limboprobot</a> TG 毒奶博主 Julia； <br>联系我们： <a class="content-copyright" target="_blank" href="../6.html">https://limbopro.xyz/6.html</a> 投稿或反馈或转载文章或交换友链； <br>电报频道： <a class="content-copyright" target="_blank" href="https://t.me/limboprossr">https://t.me/limboprossr</a> 及时收讯不失联； <br>必备技能： <a class="content-copyright" target="_blank" href="2910.html">https://limbopro.xyz/archives/2910.html</a> 如何访问任意被墙域名； <br>网站镜像： <a class="content-copyright" target="_blank" href="https://limbopro.github.io">https://limbopro.github.io</a> 每月更新；</p><p class="content-copyright">本文链接：<a class="content-copyright" href="200.html">https://limbopro.xyz/archives/200.html</a></p><p class="content-copyright">版权声明：<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本文采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a> 进行许可，转载请附上原文出处链接和本声明。</p></blockquote>
 </div>
 </div>
-<script type="1e7763cc85538a116e0db2be-text/javascript">
+<script type="a9a83d03ca2eb4c9937524c1-text/javascript">
         try {
             $("[data-morphing]").fancyMorph({
                 hash : 'morphing'
@@ -533,7 +530,7 @@
 
             </script>
 
-<script type="1e7763cc85538a116e0db2be-text/javascript">
+<script type="a9a83d03ca2eb4c9937524c1-text/javascript">
 (function () {
     window.TypechoComment = {
         dom : function (id) {
@@ -605,7 +602,7 @@
     };
 })();
 </script>
-<script type="1e7763cc85538a116e0db2be-text/javascript">
+<script type="a9a83d03ca2eb4c9937524c1-text/javascript">
 var registCommentEvent = function() {
     var event = document.addEventListener ? {
         add: 'addEventListener',
@@ -630,33 +627,36 @@ var registCommentEvent = function() {
                         input.type = 'hidden';
                         input.name = '_';
                             input.value = (function () {
-    var _G7o = 'Inw'//'Inw'
-+'W'//'W'
-+'46'//'wA'
-+/* 'Xe8'//'Xe8' */''+/* 'O'//'O' */''+'T'//'T'
-+'56'//'fp'
-+//'kTx'
-'a66'+//'P'
-'P'+''///*'4c0'*/'4c0'
-+'55'//'2XP'
-+/* 'uEc'//'uEc' */''+'0'//'u'
-+//'C'
-'746'+//'giZ'
-'ad'+//'J'
-'e3'+'df'//'W'
-+//'L'
-'L'+'70'//'m'
-+//'D10'
-'873'+//'Wd9'
-'db'+'f17'//'1'
-+//'GU'
-'896', _Dwvqc = [[0,3],[0,1],[2,3],[7,8],[19,20]];
+    var _k1J8QV = //'qHc'
+'46'+'56a'//'0O'
++/* 'J'//'J' */''+//'Q'
+'66'+''///*'qs'*/'qs'
++//'GO'
+'55'+//'klo'
+'07'+''///*'T'*/'T'
++//'XT'
+'4'+'6a'//'k'
++//'f'
+'d'+//'OI'
+'OI'+'e3'//'x'
++'d'//'q'
++/* 'oa8'//'oa8' */''+//'L'
+'L'+'f70'//'65'
++//'pJ9'
+'87'+''///*'dL'*/'dL'
++//'Yk9'
+'3'+//'0Wo'
+'db'+//'5H'
+'f'+''///*'FH'*/'FH'
++'17'//'zu'
++'896'//'RYP'
+, _YkAZa = [[15,17],[18,19]];
     
-    for (var i = 0; i < _Dwvqc.length; i ++) {
-        _G7o = _G7o.substring(0, _Dwvqc[i][0]) + _G7o.substring(_Dwvqc[i][1]);
+    for (var i = 0; i < _YkAZa.length; i ++) {
+        _k1J8QV = _k1J8QV.substring(0, _YkAZa[i][0]) + _k1J8QV.substring(_YkAZa[i][1]);
     }
 
-    return _G7o;
+    return _k1J8QV;
 })();
                     
                         f.appendChild(input);
@@ -678,20 +678,21 @@ var registCommentEvent = function() {
 };
 </script></div>
 <footer id="footer" class="app-footer" role="footer">
-<div class="wrapper b-t bg-light">
+<div class="wrapper bg-light">
 <span class="pull-right hidden-xs text-ellipsis">
-Powered by <a target="blank" href="http://www.typecho.org">Typecho</a>&nbsp;|&nbsp;Theme by <a target="blank" href="../index.html#">handsome</a>
+Powered by <a target="_blank" href="http://www.typecho.org">Typecho</a>&nbsp;|&nbsp;Theme by <a target="_blank" href="https://www.ihewro.com/archives/489/">handsome</a>
 </span>
-<span class="text-ellipsis">&copy;&nbsp;2019 <a target="blank" href="../index.html">毒奶</a>.inc Copyright&nbsp; 自建站之日起，本站总访问量 3813678206 次</span>
+<span class="text-ellipsis">&copy;&nbsp;2019 Copyright&nbsp;</span>
 </div>
 
 <script type="text/template" id="tmpl-customizer">
           <div class="settings panel panel-default setting_body_panel" aria-hidden="true">
-              <button class="btn btn-default no-shadow pos-abt" data-toggle="tooltip" data-placement="left" data-original-title="设置" data-toggle-class=".settings=active, .settings-icon=animate-spin">
+              <button class=" btn btn-default no-shadow pos-abt border-radius-half-left"
+                      data-toggle="tooltip" data-placement="left" data-original-title="设置" data-toggle-class=".settings=active, .settings-icon=animate-spin">
                   <i class="fontello fontello-gear settings-icon"></i>
               </button>
               <div class="panel-heading">
-                  <button class="pull-right btn btn-xs btn-rounded btn-danger" name="reset" data-toggle="tooltip" data-placement="top" data-original-title="恢复默认值" >重置</button>
+                  <button class="pull-right btn btn-xs btn-rounded btn-danger " name="reset" data-toggle="tooltip" data-placement="top" data-original-title="恢复默认值" >重置</button>
                   设置		</div>
               <div class="setting_body">
               <div class="panel-body">
@@ -735,7 +736,7 @@ Powered by <a target="blank" href="http://www.typecho.org">Typecho</a>&nbsp;|&nb
           </div>
       </script>
 <div class="topButton panel panel-default">
-<button id="goToTop" class="btn btn-default no-shadow pos-abt hide">
+<button id="goToTop" class="btn btn-default no-shadow pos-abt hide  border-radius-half-left" data-toggle="tooltip" data-placement="left" data-original-title="返回顶部">
 <i class="fontello fontello-chevron-circle-up" aria-hidden="true"></i>
 </button>
 </div>
@@ -761,14 +762,14 @@ Powered by <a target="blank" href="http://www.typecho.org">Typecho</a>&nbsp;|&nb
 		-moz-transform: scale(1.4);	/* Firefox */
 	}
 </style>
-<script type="1e7763cc85538a116e0db2be-text/javascript">
+<script type="a9a83d03ca2eb4c9937524c1-text/javascript">
 	document.addEventListener('DOMContentLoaded', function(){
 		var imgs = document.querySelectorAll('img');
 		Array.prototype.forEach.call(imgs, function(el, i) {
 			if (el.tabIndex <= 0) el.tabIndex = 100;
 		});
 	});
-</script><script type="1e7763cc85538a116e0db2be-text/javascript">
+</script><script type="a9a83d03ca2eb4c9937524c1-text/javascript">
 	(function(){
 		var pres = document.querySelectorAll('pre');
 		var lineNumberClassName = 'line-numbers';
@@ -777,22 +778,22 @@ Powered by <a target="blank" href="http://www.typecho.org">Typecho</a>&nbsp;|&nb
 		});
 	})();
 </script>
-<script type="1e7763cc85538a116e0db2be-text/javascript" src="../usr/plugins/CodePrettify/static/clipboard.min.js"></script>
-<script type="1e7763cc85538a116e0db2be-text/javascript" src="../usr/plugins/CodePrettify/static/prism.js"></script>
-<script type="1e7763cc85538a116e0db2be-text/javascript">
+<script type="a9a83d03ca2eb4c9937524c1-text/javascript" src="../usr/plugins/CodePrettify/static/clipboard.min.js"></script>
+<script type="a9a83d03ca2eb4c9937524c1-text/javascript" src="../usr/plugins/CodePrettify/static/prism.js"></script>
+<script type="a9a83d03ca2eb4c9937524c1-text/javascript">
 SearchConfig = {
     url : "https://limbopro.xyz/usr/plugins/Handsome/cache/search.json"
 }
 </script>
 
-<script type="1e7763cc85538a116e0db2be-text/javascript">
+<script type="a9a83d03ca2eb4c9937524c1-text/javascript">
         window['LocalConst'] = {
             COMMENT_NAME_INFO: '必须填写昵称或姓名',
             COMMENT_EMAIL_INFO: '必须填写电子邮箱地址',
             COMMENT_EMAIL_LEGAL_INFO: '邮箱地址不合法',
             COMMENT_CONTENT_INFO: '必须填写评论内容',
             COMMENT_SUBMIT_ERROR: '提交失败，请重试！',
-            COMMENT_CONTENT_LEGAL_INFO: '提交失败,您的输入内容不符合规则！',
+            COMMENT_CONTENT_LEGAL_INFO: '提交失败,评论被拦截，可能发言太快或内容不符合规则',
 
             LOGIN_USERNAME_INFO: '必须填写用户名',
             LOGIN_PASSWORD_INFO: '请填写密码',
@@ -821,14 +822,15 @@ SearchConfig = {
             BASE_SCRIPT_URL: 'https://limbopro.xyz/usr/themes/handsome/',
             BLOG_URL: 'https://limbopro.xyz/',
             BLOG_URL_PHP: 'https://limbopro.xyz/',
-            THEME_COLOR: '13',
+            THEME_COLOR: '14',
+            THEME_COLOR_EDIT: 'danger-danger-black',
             THEME_HEADER_FIX: '1',
             THEME_ASIDE_FIX: '1',
             THEME_ASIDE_FOLDED: '',
             THEME_ASIDE_DOCK: '',
             THEME_CONTAINER_BOX: '1',
             THEME_HIGHLIGHT_CODE: '1',
-            THEME_TOC: '1',
+            THEME_TOC: '',
             TOC_TITLE: '文章目录',
             HEADER_FIX: '固定头部',
             ASIDE_FIX: '固定导航',
@@ -839,7 +841,7 @@ SearchConfig = {
             COMMENT_REJECT_PLACEHOLDER: '居然什么也不说，哼',
             COMMENT_PLACEHOLDER: '说点什么吧……',
             SHOW_SETTING_BUTTON: '1',
-            THEME_VERSION: '5.3.120190915221',
+            THEME_VERSION: '6.0.020191205',
 
             OPERATION_NOTICE: '操作通知',
             SCREENSHOT_BEGIN: '正在生成当前页面截图……',
@@ -850,14 +852,15 @@ SearchConfig = {
             MUSIC_FAILE: '当前音乐地址无效，自动为您播放下一首',
             MUSIC_FAILE_END: '当前音乐地址无效',
             MUSIC_LIST_SUCCESS: '歌单歌曲加载成功',
-            CDN_NAME: ''
+            CDN_NAME: '',
+            LAZY_LOAD: ''
         };
 
     </script>
 
-<script src="../usr/themes/handsome/assets/libs/bootstrap/js/bootstrap.min.js" type="1e7763cc85538a116e0db2be-text/javascript"></script>
-<script src="../usr/themes/handsome/assets/js/features/jquery.pjax.min.js" type="1e7763cc85538a116e0db2be-text/javascript"></script>
-<script type="1e7763cc85538a116e0db2be-text/javascript">
+<script src="../usr/themes/handsome/assets/libs/bootstrap/js/bootstrap.min.js" type="a9a83d03ca2eb4c9937524c1-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/js/features/jquery.pjax.min.js" type="a9a83d03ca2eb4c9937524c1-text/javascript"></script>
+<script type="a9a83d03ca2eb4c9937524c1-text/javascript">
         $(document).pjax('a[href^="https://limbopro.xyz/"]:not(a[target="_blank"], a[no-pjax])', {
             container: '#content',
             fragment: '#content',
@@ -885,18 +888,22 @@ SearchConfig = {
     </script>
 
 
+<script src="../usr/themes/handsome/assets/js/features/feather.min.js?v=6.0.020191205" type="a9a83d03ca2eb4c9937524c1-text/javascript"></script>
 
-<script src="https://cdn.staticfile.org/mathjax/2.7.0/MathJax.js" type="1e7763cc85538a116e0db2be-text/javascript"></script>
-<script src="https://cdn.staticfile.org/mathjax/2.7.0/config/TeX-AMS-MML_SVG.js" type="1e7763cc85538a116e0db2be-text/javascript"></script>
+<script src="https://cdn.staticfile.org/mathjax/2.7.0/MathJax.js" type="a9a83d03ca2eb4c9937524c1-text/javascript"></script>
+<script src="https://cdn.staticfile.org/mathjax/2.7.0/config/TeX-AMS-MML_SVG.js" type="a9a83d03ca2eb4c9937524c1-text/javascript"></script>
 
-<script src="../usr/themes/handsome/assets/js/features/jquery.fancybox.min.js?v=5.3.120190915221" type="1e7763cc85538a116e0db2be-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/js/features/jquery.fancybox.min.js?v=6.0.020191205" type="a9a83d03ca2eb4c9937524c1-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/js/features/easypiechart.min.js?v=6.0.020191205" type="a9a83d03ca2eb4c9937524c1-text/javascript"></script>
+
+<script src="../usr/themes/handsome/assets/js/features/html2canvas.min.js" type="a9a83d03ca2eb4c9937524c1-text/javascript"></script>
 
 
-<script src="../usr/themes/handsome/assets/js/function.min.js?v=5.3.120190915221" type="1e7763cc85538a116e0db2be-text/javascript"></script>
-<script src="../usr/themes/handsome/assets/js/core.min.js?v=5.3.120190915221" type="1e7763cc85538a116e0db2be-text/javascript"></script>
-<script src="../usr/themes/handsome/assets/js/features/setting.min.js?v=5.3.120190915221" type="1e7763cc85538a116e0db2be-text/javascript"></script>
-<script type="1e7763cc85538a116e0db2be-text/javascript">
+<script src="../usr/themes/handsome/assets/js/function.min.js?v=6.0.020191205" type="a9a83d03ca2eb4c9937524c1-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/js/core.min.js?v=6.0.020191205" type="a9a83d03ca2eb4c9937524c1-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/js/features/setting.min.js?v=6.0.020191205" type="a9a83d03ca2eb4c9937524c1-text/javascript"></script>
+<script type="a9a83d03ca2eb4c9937524c1-text/javascript">
             </script>
-<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="1e7763cc85538a116e0db2be-|49" defer=""></script></body>
+<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="a9a83d03ca2eb4c9937524c1-|49" defer=""></script></body>
 </html>
 

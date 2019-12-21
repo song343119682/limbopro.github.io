@@ -27,12 +27,12 @@
 
 <link href="../usr/themes/handsome/assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-<link rel="stylesheet" href="../usr/themes/handsome/assets/css/function.min.css?v=5.3.120190915221" type="text/css" />
-<link rel="stylesheet" href="../usr/themes/handsome/assets/css/handsome.min.css?v=5.3.120190915221" type="text/css" />
+<link rel="stylesheet" href="../usr/themes/handsome/assets/css/function.min.css?v=6.0.020191205" type="text/css" />
+<link rel="stylesheet" href="../usr/themes/handsome/assets/css/handsome.min.css?v=6.0.020191205" type="text/css" />
 
-<link rel="stylesheet" href="../usr/themes/handsome/assets/css/features/jquery.fancybox.min.css?v=5.3.120190915221" type="text/css" />
-<link rel="stylesheet" href="../usr/themes/handsome/assets/css/features/code/zenburn.min.css?v=5.3.120190915221" type="text/css" />
-<link rel="stylesheet" href="../usr/themes/handsome/assets/css/features/coolopacity.min.css?v=5.3.120190915221" type="text/css" />
+<link rel="stylesheet" href="../usr/themes/handsome/assets/css/features/jquery.fancybox.min.css?v=6.0.020191205" type="text/css" />
+<link rel="stylesheet" href="../usr/themes/handsome/assets/css/features/code/vs.min.css?v=6.0.020191205" type="text/css" />
+<link rel="stylesheet" href="../usr/themes/handsome/assets/css/features/coolopacity.min.css?v=6.0.020191205" type="text/css" />
 <style>
             .cool-transparent .app:before {
                 background-color: rgba(0 , 0, 0, 0.7)!important;
@@ -40,7 +40,7 @@
             }
         </style>
 
-<link rel="stylesheet" href="../usr/themes/handsome/assets/css/font.min.css?v=5.3.120190915221" type="text/css" />
+<link rel="stylesheet" href="../usr/themes/handsome/assets/css/font.min.css?v=6.0.020191205" type="text/css" />
 <style type="text/css">
         
         html.bg {
@@ -57,59 +57,68 @@
         background: url(../usr/uploads/2019/11/425005431.jpg) center center no-repeat no-repeat fixed #6A6B6F;background-size: cover;
         }
 }
-#aside .wrapper:hover {
+    .nav-tabs-alt .nav-tabs>li[data-index="2"].active~.navs-slider-bar {
+        transform: translateX(405%);
+    }
+    .nav-tabs-alt .nav-tabs>li[data-index="0"].active~.navs-slider-bar {
+        transform: translateX(100%);
+    }#aside .wrapper:hover {
 	background: url(../usr/themes/handsome/assets/img/snow.gif);
 	background-size: cover;
 	color: #999;
 }    </style>
 
-<script src="../usr/themes/handsome/assets/libs/jquery/jquery.min.js" type="eebc66af87be616784a94b47-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/libs/jquery/jquery.min.js" type="9f093e6ea3bc83bc41b9a8b8-text/javascript"></script>
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140019039-1" type="eebc66af87be616784a94b47-text/javascript"></script>
-<script type="eebc66af87be616784a94b47-text/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140019039-1" type="9f093e6ea3bc83bc41b9a8b8-text/javascript"></script>
+<script type="9f093e6ea3bc83bc41b9a8b8-text/javascript">
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'UA-140019039-1');
 </script>
-<script src="../usr/themes/handsome/assets/js/features/fancyMorph.min.js" type="eebc66af87be616784a94b47-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/js/features/fancyMorph.min.js" type="9f093e6ea3bc83bc41b9a8b8-text/javascript"></script>
 </head>
-<body id="body">
+<body id="body" class="fix-padding">
 
-<div id="alllayout" class="app app-aside-fixed container app-header-fixed "> 
-<header id="header" class="app-header navbar" role="menu">
+<div id="alllayout" class="app app-aside-fix container app-header-fixed "> 
+<header id="header" class="fix-padding app-header navbar box-shadow-bottom-lg" role="menu">
 
 <div class="text-ellipsis navbar-header bg-danger">
-<button class="pull-right visible-xs dk" ui-toggle-class="show animated animated-lento fadeIn" target=".navbar-collapse">
-<i class="fontello fontello-gear text-lg"></i>
+<button class="pull-right visible-xs" ui-toggle-class="show animated animated-lento fadeIn" target=".navbar-collapse">
+<span class="menu-icons"><i data-feather="search"></i></span>
 </button>
 <button class="pull-left visible-xs" ui-toggle-class="off-screen animated" target=".app-aside" ui-scroll="app">
-<i class="fontello fontello-menu text-lg"></i>
+<span class="menu-icons"><i data-feather="menu"></i></span>
 </button>
 
 <a href="../index.html" class="navbar-brand text-lt">
 <i class="fontello fontello-home"></i>
-<span class="hidden-folded m-l-xs">毒奶博主</span>
+<span class="hidden-folded m-l-xs">It's limboPro.xyz</span>
 </a>
 
 </div>
 
 
-<div class="collapse pos-rlt navbar-collapse box-shadow bg-danger">
+<div class="collapse pos-rlt navbar-collapse bg-danger">
 
 <form id="searchform1" class="searchform navbar-form navbar-form-sm navbar-left shift" method="post" role="search">
 <div class="form-group">
-<div class="input-group rounded bg-light">
-<input data-status="false" autocomplete="off" id="search_input" type="search" name="s" class="transparent
-                rounded
-              form-control input-sm no-border padder" required placeholder="输入关键词搜索…">
+<div class="input-group rounded bg-white-pure box-shadow-wrap-normal">
+<input autocomplete="off" id="search_input" type="search" name="s" class="transparent rounded form-control input-sm no-borders padder" required placeholder="输入关键词搜索…">
 
-<ul id="search_tips_drop" class="dropdown-menu hide" style="display: block;top: 30px; left: 0px;">
+<ul id="search_tips_drop" class="small-scroll-bar dropdown-menu hide" style="display: block;top: 
+                30px; left: 0px;">
 </ul>
 <span id="search_submit" class="transparent input-group-btn">
-<button type="submit" class="transparent btn btn-sm"><i class="fontello fontello-search" id="icon-search"></i><i class="animate-spin  fontello fontello-spinner hide" id="spin-search"></i></button>
+<button type="submit" class="transparent btn btn-sm">
+<span class="feathericons" id="icon-search"><i data-feather="search"></i></span>
+<span class="feathericons animate-spin  hide" id="spin-search"><i data-feather="loader"></i></span>
+
+
+</button>
 </span>
 </div>
 </div>
@@ -119,8 +128,8 @@
 <ul class="nav navbar-nav navbar-right">
 <li class="dropdown"><a target="blank" href="https://t.me/limboprobot" class="dropdown-toggle"><i class="fontello-chat-alt icon-fw"></i><span class="visible-xs-inline">相册</span></a></li> 
 <li class="dropdown">
-<a href="1084.html#" data-toggle="dropdown" class="dropdown-toggle">
-<i class="fontello fontello-bell icon-fw"></i>
+<a href="1084.html#" data-toggle="dropdown" class="feathericons dropdown-toggle">
+<i data-feather="twitch"></i>
 <span class="visible-xs-inline">
 闲言碎语 </span>
 <span class="badge badge-sm up bg-danger pull-right-xs"></span>
@@ -144,26 +153,26 @@
 </header>
 
 
-<aside id="aside" class="app-aside hidden-xs bg-dark"> 
+<aside id="aside" class="app-aside hidden-xs bg-black"> 
 <div class="aside-wrap" layout="column">
-<div class="navi-wrap scroll-y" flex>
+<div class="navi-wrap scroll-y scroll-hide" flex>
 
 <div class="clearfix hidden-xs text-center hide  show" id="aside-user">
-<div class="dropdown wrapper">
+<div class="dropdown wrapper ">
 <div ui-nav>
 <a href="https://t.me/limboprossr">
-<span class="thumb-lg w-auto-folded avatar m-t-sm">
-<img src="../usr/uploads/2019/09/2211209831.jpg" class="img-full">
+<span class="thumb-lg w-auto-folded avatar m-t-sm  ">
+<img src="../usr/uploads/2019/09/2211209831.jpg" class="img-full img-circle normal-shadow">
 </span>
 </a>
 </div>
-<a href="1084.html#" data-toggle="dropdown" class="dropdown-toggle hidden-folded">
+<a href="1084.html#" data-toggle="dropdown" class="dropdown-toggle hidden-folded  ">
 <span class="clear">
 <span class="block m-t-sm">
 <strong class="font-bold text-lt">毒奶</strong>
 <b class="caret"></b>
 </span>
-<span class="text-muted text-xs block">TG 毒奶博主<br>业余斜杆青年<br>增长黑客<br>收集癖</span>
+<span class="text-muted text-xs block">TG 毒奶博主<br>业余斜杆青年<br>增长黑客</span>
 </span>
 </a>
 
@@ -174,7 +183,7 @@
 <p>下午好，是时候打个盹了</p>
 </div>
 <div class="progress progress-xs m-b-none dker">
-<div class="progress-bar bg-white" data-toggle="tooltip" data-original-title="时间已经度过62.50%" style="width: 62.50%"></div>
+<div class="progress-bar bg-white" data-toggle="tooltip" data-original-title="时间已经度过54.17%" style="width: 54.17%"></div>
 </div>
 </li>
 </ul>
@@ -193,12 +202,12 @@
 
 <li>
 <a href="../index.html" class="auto">
-<i class="iconfont icon-zhuye icon text-md"></i>
- <span>首页</span>
+<span class="nav-icon"><i data-feather="home"></i></span>
+<span>首页</span>
 </a>
 </li>
 
-<li> <a target="_self" href="../6.html" class="auto"><i class="glyphicon fontello-emo-devil icon text-md"></i><span>联系我们</span></a></li><li> <a target="_self" href="../1765.html" class="auto"><i class="glyphicon fontello-indent icon text-md"></i><span>文章归档</span></a></li><li> <a target="_self" href="../865.html" class="auto"><i class="glyphicon fontello-instagram icon text-md"></i><span>机场推荐</span></a></li><li> <a target="_blank" href="https://t.me/limboprossr" class="auto"><i class="glyphicon fontello-bell icon text-md"></i><span>电报频道</span></a></li><li> <a target="_blank" href="../search.html" class="auto"><i class="glyphicon fontello-search icon text-md"></i><span>毒奶搜索</span></a></li><li> <a target="_blank" href="https://github.com/limbopro" class="auto"><i class="glyphicon fontello-eye icon text-md"></i><span>托管仓库</span></a></li> <li class="line dk"></li>
+<li> <a target="_self" href="../6.html" class="auto"><span class="nav-icon"><i class="glyphicon fontello-emo-devil"></i></span><span>联系我们</span></a></li><li> <a target="_self" href="../1765.html" class="auto"><span class="nav-icon"><i class="glyphicon fontello-indent"></i></span><span>文章归档</span></a></li><li> <a target="_self" href="../865.html" class="auto"><span class="nav-icon"><i class="glyphicon fontello-instagram"></i></span><span>机场推荐</span></a></li><li> <a target="_blank" href="https://t.me/limboprossr" class="auto"><span class="nav-icon"><i class="glyphicon fontello-bell"></i></span><span>电报频道</span></a></li><li> <a target="_blank" href="../search.html" class="auto"><span class="nav-icon"><i class="glyphicon fontello-search"></i></span><span>毒奶搜索</span></a></li><li> <a target="_blank" href="https://github.com/limbopro" class="auto"><span class="nav-icon"><i class="glyphicon fontello-eye"></i></span><span>托管仓库</span></a></li> <li class="line dk"></li>
 
 <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
 <span>组成</span>
@@ -210,7 +219,8 @@
 <i class="fontello icon-fw fontello-angle-right text"></i>
 <i class="fontello icon-fw fontello-angle-down text-active"></i>
 </span>
-<i class="glyphicon glyphicon-th"></i>
+
+<span class="nav-icon"><i data-feather="grid"></i></span>
 <span>分类</span>
 </a>
 <ul class="nav nav-sub dk">
@@ -220,7 +230,7 @@
 </a>
 </li>
 
-<li><a href="../category/master-care/index.html"><b class="badge pull-right">19</b><span>无主杂记</span></a></li><li><a href="../category/Bulletin/index.html"><b class="badge pull-right">5</b><span>运营通报</span></a></li><li><a href="../category/hot-movies/index.html"><b class="badge pull-right">18</b><span>追剧小组</span></a></li><li><a href="../category/films-recommend/index.html"><b class="badge pull-right">39</b><span>电影推荐</span></a></li><li><a href="../category/ssr/index.html"><b class="badge pull-right">0</b><span>科学上网</span></a></li><li><a href="../category/ssr-operation/index.html"><b class="badge pull-right">2</b><span>自学上网</span></a></li><li><a href="../category/tools/index.html"><b class="badge pull-right">22</b><span>实用工具</span></a></li><li><a href="../category/LNMP/index.html"><b class="badge pull-right">24</b><span>建站指南</span></a></li><li><a href="../category/Typecho/index.html"><b class="badge pull-right">19</b><span>网站优化</span></a></li><li><a href="../category/Toilet-reading/index.html"><b class="badge pull-right">8</b><span>厕所读物</span></a></li><li><a href="../category/software-skills/index.html"><b class="badge pull-right">23</b><span>软件百科</span></a></li><li><a href="../category/telegram-anecdote/index.html"><b class="badge pull-right">10</b><span>电报奇闻</span></a></li><li><a href="../category/instagram/index.html"><b class="badge pull-right">11</b><span>美图欣赏</span></a></li><li><a href="../category/sales/index.html"><b class="badge pull-right">1</b><span>怪薅羊毛</span></a></li><li><a href="../category/NSFW/index.html"><b class="badge pull-right">17</b><span>开车专栏</span></a></li><li><a href="../category/day-of-history/index.html"><b class="badge pull-right">1</b><span>历史时刻</span></a></li><li><a href="../category/AfterFQ/index.html"><b class="badge pull-right">1</b><span>毒奶世界</span></a></li><li><a href="../category/technologyart/index.html"><b class="badge pull-right">2</b><span>科技美学</span></a></li> </ul>
+<li><a href="../category/master-care/index.html"><b class="badge pull-right">19</b><span>无主杂记</span></a></li><li><a href="../category/Bulletin/index.html"><b class="badge pull-right">5</b><span>运营通报</span></a></li><li><a href="../category/hot-movies/index.html"><b class="badge pull-right">17</b><span>追剧小组</span></a></li><li><a href="../category/films-recommend/index.html"><b class="badge pull-right">39</b><span>电影推荐</span></a></li><li><a href="../category/ssr/index.html"><b class="badge pull-right">3</b><span>科学上网</span></a></li><li><a href="../category/ssr-operation/index.html"><b class="badge pull-right">1</b><span>自学上网</span></a></li><li><a href="../category/tools/index.html"><b class="badge pull-right">21</b><span>实用工具</span></a></li><li><a href="../category/LNMP/index.html"><b class="badge pull-right">24</b><span>建站指南</span></a></li><li><a href="../category/Typecho/index.html"><b class="badge pull-right">19</b><span>网站优化</span></a></li><li><a href="../category/Toilet-reading/index.html"><b class="badge pull-right">8</b><span>厕所读物</span></a></li><li><a href="../category/software-skills/index.html"><b class="badge pull-right">23</b><span>软件百科</span></a></li><li><a href="../category/telegram-anecdote/index.html"><b class="badge pull-right">10</b><span>电报奇闻</span></a></li><li><a href="../category/instagram/index.html"><b class="badge pull-right">11</b><span>美图欣赏</span></a></li><li><a href="../category/sales/index.html"><b class="badge pull-right">1</b><span>怪薅羊毛</span></a></li><li><a href="../category/NSFW/index.html"><b class="badge pull-right">17</b><span>开车专栏</span></a></li><li><a href="../category/day-of-history/index.html"><b class="badge pull-right">1</b><span>历史时刻</span></a></li><li><a href="../category/AfterFQ/index.html"><b class="badge pull-right">1</b><span>毒奶世界</span></a></li><li><a href="../category/technologyart/index.html"><b class="badge pull-right">2</b><span>科技美学</span></a></li><li><a href="../category/Internetlog/index.html"><b class="badge pull-right">1</b><span>观察报告</span></a></li> </ul>
 </li>
 
 <li>
@@ -229,7 +239,7 @@
 <i class="fontello icon-fw fontello-angle-right text"></i>
 <i class="fontello icon-fw fontello-angle-down text-active"></i>
 </span>
-<i class="glyphicon glyphicon-file"></i>
+<span class="nav-icon"><i data-feather="file"></i></span>
 <span>页面</span>
 </a>
 <ul class="nav nav-sub dk">
@@ -253,7 +263,7 @@
 <i class="fontello icon-fw fontello-angle-right text"></i>
 <i class="fontello icon-fw fontello-angle-down text-active"></i>
 </span>
-<i class="iconfont icon-links"></i>
+<span class="nav-icon"><i data-feather="user"></i></span>
 <span>友链</span>
 </a>
 <ul class="nav nav-sub dk">
@@ -274,13 +284,13 @@
 <div id="left_footer" class="footer wrapper-xs text-center nav-xs lt">
 <div class="col-xs-6 no-padder">
 <a target="_blank" class="tinav" href="../feed/index.html" title="" data-toggle="tooltip" data-placement="top" data-original-title="文章RSS地址">
-<span class="block"><i class="fontello fontello-rss"></i></span>
+<span class="left-bottom-icons block"><i data-feather="rss"></i></span>
 <small class="text-muted">文章</small>
 </a>
 </div>
 <div class="col-xs-6 no-padder">
 <a target="_blank" href="../feed/comments/index.html" title="" data-toggle="tooltip" data-placement="top" data-original-title="评论RSS地址">
-<span class="block"><i class="fontello fontello-rss-square"></i></span>
+<span class="left-bottom-icons block"><i data-feather="message-square"></i></span>
 <small class="text-muted">评论</small>
 </a>
 </div>
@@ -305,52 +315,48 @@
 
 <div class="col center-part">
 
-
-<header id="small_widgets" class="bg-light lter b-b wrapper-md">
-<h1 class="entry-title m-n font-thin h3 text-black l-h">薛兆丰的经济学讲义丨书单推荐第一期<a class="plus-font-size" data-toggle="tooltip" data-original-title="点击改变文章字体大小"><i class="glyphicon glyphicon-text-size
-" aria-hidden="true"></i></a><a data-morphing="" id="morphing" data-src="#morphing-content" href="javascript:;" class="read_mode superscript m-l-sm" data-toggle="tooltip" data-placement="right" data-original-title="阅读模式"><i class="glyphicon glyphicon-eye-open" aria-hidden="true"></i></a></h1> 
+<style>
+        
+        .mdx-si-head .cover{
+            object-fit: cover;
+            width: 100%;
+            height: 100%
+        }
+        
+</style>
+<div class="mdx-share-img" id="mdx-share-img"><div class="mdx-si-head" style="background-image:url(../usr/themes/handsome/assets/img/video.jpg)"><p>毒奶</p><span>薛兆丰的经济学讲义丨书单推荐第一期</span></div><div class="mdx-si-sum">必读清单开篇志有且仅且向大家推荐通俗易懂，且尚且有用的休闲课外读物，尊崇内心的愉悦。就算是必读清单，如果不读也不会...</div><div class="mdx-si-box"><span>扫描右侧二维码阅读全文</span><div class="mdx-si-qr" id="mdx-si-qr"><img src="../usr/themes/handsome/libs/GetCode.php?type=url&amp;content=https:%252F%252Flimbopro.xyz%252Farchives%252F1084.html"></div></div><div class="mdx-si-time">06<br><span class="mdx-si-time-2">2019/07</span></div></div> 
+<header id="small_widgets" class="bg-light lter wrapper-md">
+<h1 class="entry-title m-n font-thin text-black l-h">薛兆丰的经济学讲义丨书单推荐第一期<a class="plus-font-size" data-toggle="tooltip" data-original-title="点击改变文章字体大小"><i data-feather="type"></i></a><a data-morphing="" id="morphing" data-src="#morphing-content" href="javascript:;" class="read_mode superscript m-l-sm" data-toggle="tooltip" data-placement="right" data-original-title="阅读模式"><i data-feather="book-open"></i></a></h1> 
 <ul class="entry-meta text-muted list-inline m-b-none small
              post-head-icon">
 
-<li class="meta-author"><i class="fontello fontello-user" aria-hidden="true"></i><span class="sr-only">博主：</span> <a class="meta-value" href="../author/1/index.html" rel="author"> 毒奶</a></li>
+<li class="meta-author"><span class="post-icons"><i data-feather="user"></i></span><span class="sr-only">博主：</span> <a class="meta-value" href="../author/1/index.html" rel="author"> 毒奶</a></li>
 
-<li class="meta-date"><i class="fontello fontello-clock-o" aria-hidden="true"></i>&nbsp;<span class="sr-only">发布时间：</span><time class="meta-value">2019 年 07 月 06 日</time></li>
+<li class="meta-date"><span class="post-icons"><i data-feather="clock"></i></span><span class="sr-only">发布时间：</span><time class="meta-value">2019 年 07 月 06 日</time></li>
 
-<li class="meta-views"><i class="fontello fontello-eye" aria-hidden="true"></i>&nbsp;<span class="meta-value">3454&nbsp;次浏览</span></li>
+<li class="meta-views"><span class="post-icons"><i data-feather="eye"></i></span><span class="meta-value">3458次浏览</span></li>
 
-<li class="meta-word"><i class="fontello fontello-pencil"></i>&nbsp;<span class="meta-value">4282&nbsp;字数</span></li>
+<li class="meta-word"><span class="post-icons"><i data-feather="pen-tool"></i></span><span class="meta-value">4282字数</span></li>
 
-<li class="meta-categories"><i class="fontello fontello-tags" aria-hidden="true"></i> <span class="sr-only">分类：</span> <span class="meta-value"><a href="../category/Toilet-reading/index.html">厕所读物</a></span></li>
+<li class="meta-categories"><span class="post-icons"><i data-feather="hash"></i></span><span class="sr-only">分类：</span> <span class="meta-value"><a href="../category/Toilet-reading/index.html">厕所读物</a></span></li>
 </ul>
 </header>
 <div class="wrapper-md" id="post-panel">
-<ol class="breadcrumb bg-white b-a" itemscope=""><li>
-<a href="../index.html" itemprop="breadcrumb" title="返回首页" data-toggle="tooltip"><i class="fontello fontello-home" aria-hidden="true"></i>&nbsp;首页</a>
-</li><li class="active">正文&nbsp;&nbsp;</li>
-<div style="float:right;">
-分享到：
-<style>
-   .breadcrumb i.iconfont.icon-qzone:after {
-    padding: 0 0 0 5px;
-    color: #ccc;
-    content: "/\00a0";
-    }
-    
-   </style>
-<a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://limbopro.xyz/archives/1084.html&title=薛兆丰的经济学讲义丨书单推荐第一期&site=https://limbopro.xyz/" itemprop="breadcrumb" target="_blank" title="" data-toggle="tooltip" data-original-title="分享到QQ空间" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open(this.href, 'qzone-share', 'width=550,height=335');return false;" data-cf-modified-eebc66af87be616784a94b47-=""><i style="font-size:15px;" class="iconfont icon-qzone" aria-hidden="true"></i></a>
-<a href="http://service.weibo.com/share/share.php?url=https://limbopro.xyz/archives/1084.html&title=薛兆丰的经济学讲义丨书单推荐第一期" target="_blank" itemprop="breadcrumb" title="" data-toggle="tooltip" data-original-title="分享到微博" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open(this.href, 'weibo-share', 'width=550,height=335');return false;" data-cf-modified-eebc66af87be616784a94b47-=""><i style="font-size:15px;" class="fontello fontello-weibo" aria-hidden="true"></i></a></div></ol> 
+<ol class="breadcrumb bg-white-pure" itemscope=""><li>
+<a href="../index.html" itemprop="breadcrumb" title="返回首页" data-toggle="tooltip"><span class="home-icons"><i data-feather="home"></i></span>首页</a>
+</li><li class="active">正文&nbsp;&nbsp;</li></ol> 
 <div id="postpage" class="blog-post">
-<article class="panel">
+<article class="single-post panel">
 
 
 <div id="post-content" class="wrapper-lg">
 <div class="entry-content l-h-2x">
-<p><img src="../usr/uploads/2019/07/573253124.jpg" alt="薛兆丰的经济学讲义.jpg" title="薛兆丰的经济学讲义.jpg"></p><h2>必读清单开篇志</h2><p>有且仅且向大家推荐<code>通俗易懂</code>，且尚且有用的<code>休闲课外读物</code>，尊崇<code>内心的愉悦</code>。就算是必读清单，如果不读<code>也不会有什么忧虑</code>。你有什么在看的读物吗？欢迎在评论处留言。</p><h2>经济学书单</h2><h3>为什么推荐这本书？</h3><p>奇葩说已经很久没更新了，却也时常打卡东七门的公众号。第一次知道薛兆丰也是在奇葩说，如果你没有看过<code>奇葩说</code>，或许我会建议你去看看，选题都是极好的。他们的另外个喜马拉雅FM节目，<code>《好好说话》</code>也是我极力推荐的（也有出书）。如果你也想<code>这世界的运行逻辑</code>，薛兆丰的经济学讲义会非常适合你。或用作少儿经济学<code>启蒙</code>，也是很好的。</p><h2>免费资源下载</h2><p>景德镇陶瓷大学图书馆：<a href="https://www.google.com/search?ei=izwgXY27NYe0mAXRmJzoAQ&q=site%3Alib.jci.edu.cn%20%E8%96%9B%E5%85%86%E4%B8%B0&oq=site%3Alib.jci.edu.cn%20%E8%96%9B%E5%85%86%E4%B8%B0&gs_l=psy-ab.3...3854.12669..12844...2.0..0.528.4589.2-5j4j2j2......0....1..gws-wiz.hfksxclHvys" target="_blank">lib.jci.edu.cn/</a></p><h3>目 录</h3><p>前言 每个人的经济学 / IX<br>第1章 稀缺 为何商业是最大的慈善<br><br>真实世界 经济学的视角 / 003<br>第001讲 战俘营里的经济组织 / 003<br>第002讲 马粪争夺案 / 007<br>第003讲 看得见的和看不见的 / 010<br>第004讲 区分愿望与结果 / 014<br>人性观 人是理性和自私的吗 / 018<br>第005讲 不确定性、进化与经济理论 / 018<br>第006讲 亚当·斯密的人性观 / 022<br>第007讲 铅笔的故事 / 026<br>第008讲 商业是最大的慈善 / 028<br>区别对待 选择的标准 / 032<br>第009讲 稀缺 / 032<br>第010讲 选择和歧视 / 035<br>第011讲 凡歧视必得付代价 / 038<br>第012讲 歧视的作用和限制歧视的恶果 / 041<br>第2章 成本 不要只盯着钱<br>选择偏好 放弃的最大价值 / 049<br>第013讲 一句话给成本下定义 / 049<br>第014讲 你的成本由别人决定 / 053<br>第015讲 别只盯着钱 / 057<br>资源的价值 重新理解盈利与亏损 / 061<br>第016讲 从成本角度理解盈利与亏损 / 061<br>第017讲 最终产品的供需决定原材料的成本 / 064<br>第018讲 “租”是对资产的付费 / 067<br>第019讲 寻租—乞丐没有白拿施舍 / 071<br>科斯定律 从社会成本看问题 / 075<br>第020讲 社会成本问题 / 075<br>第021讲 谁用得好就归谁 / 083<br>第022讲 是否要不惜一切代价保护环境 / 086<br>交易费用 平衡的艺术 / 090<br>第023讲 有人群就有交易费用 / 090<br>第024讲 征地的权衡 / 094<br>第025讲 寻求合作解 / 100<br>第3章 需求 好东西运到远方去<br>边际革命 不是越多越好 / 107<br>第026讲 个人主义的主观价值论 / 107<br>第027讲 边际革命 / 110<br>需求定律 关于人性的定律 / 115<br>第028讲 需求第一定律 / 115<br>第029讲 需求第二定律 / 122<br>第030讲 需求第三定律 / 131<br>第4章 价格 如何减少竞争的无谓损失<br>资源配置 如何分饼决定饼做多大 / 139<br>第031讲 经济计算问题 / 139<br>第032讲 知识在社会中的运用 / 143<br>第033讲 如何分饼决定饼做多大 / 147<br>第034讲 换个角度看乘人之危发财的行为 / 151<br>竞争的逻辑 社会成本决定规则的优劣 / 155<br>第035讲 竞争的规则 / 155<br>第036讲 各种竞争规则孰优孰劣 / 158<br>第037讲 何谓短缺和过剩 / 162<br>价格管制 人会追求损失最小化 / 166<br>第038讲 最省事儿地违反价格管制 / 166<br>第039讲 春运火车票价还不够高 / 169<br>第040讲 美国的房租管制 / 176<br>第041讲 解除价格管制—果断与沉稳的拿捏 / 180<br>第042讲 实物补贴和货币补贴的权衡 / 184<br>竞争的维度 没有人可以控制市场因素 / 189<br>第043讲 房价上升好不好 / 189<br>第044讲 廉价保障房更贵 / 193<br>第045讲 没有使用需求就没有投资需求 / 196<br>第5章 权利 自由不等于免费<br>资源的占有 你的权利从哪里来 / 201<br>第046讲 权利有别于能力 / 201<br>第047讲 权利是人赋的而非天赋的 / 203<br>第048讲 自由不等于免费 / 207<br>产权界定 保护与限制 / 211<br>第049讲 产权的兴起 / 211<br>第050讲 产权：使用权、收益权和转让权 / 215<br>第051讲 产权保护之一：财产原则 / 218<br>第052讲 产权保护之二：责任原则 / 222<br>第053讲 产权保护之三：不可转让原则 / 225<br>公共服务 公用品与私用品 / 232<br>第054讲 经济学家论道路拥堵 / 232<br>第055讲 拥堵费的实践 / 235<br>第056讲 公用品和私用品 / 240<br>第057讲 灯塔的故事 / 244<br>第6章 耐心 想象力决定生产力<br>不确定性 时间偏好带来的回报 / 251<br>第058讲 易耗品与耐用品 / 251<br>第059讲 不耐产生交易 / 255<br>第060讲 利率管制及其后果 / 258<br>第061讲 利率变化支配资本现值 / 262<br>有效市场假说 时间维度上的平衡消费 / 267<br>第062讲 投资就是时间上的平衡消费 / 267<br>第063讲 股价究竟能不能预测 / 271<br>第064讲 股市到底有没有泡沫 / 275<br>第065讲 肥猪丸与回报率 / 279<br>预测未来 债券、保险与期货 / 283<br>第066讲 未雨绸缪：储蓄还是买保险 / 283<br>第067讲 保险的运作原理 / 286<br>第068讲 那些不是保险的保险 / 289<br>第069讲 当商品不被当作商品 / 293<br>第070讲 用期货合约来重新分配不可避免的风险 / 297<br>第7章 供应 好钢用在刀刃上<br>比较优势 天生我才必有用 / 305<br>第071讲 比较优势原理 / 305<br>第072讲 顺差逆差，孰优孰劣 / 309<br>第073讲 贸易对等和贸易报复 / 313<br>第074讲 贸易保护理由辨析 / 316<br>价格歧视 定价和竞争的策略 / 321<br>第075讲 受价者和觅价者 / 321<br>第076讲 价格歧视能给觅价者脱罪 / 326<br>第077讲 价格歧视的策略 / 330<br>第078讲 行业竞争程度不看企业个数 / 334<br>第8章 信息不对称 谁的话语权更大<br>信任的建立 直面信息不对称 / 341<br>第079讲 柠檬市场的故事 / 341<br>第080讲 何谓优质 / 345<br>制度的对策 缔约自由比自由更重要 / 349<br>第081讲 重复交易与第三方背书 / 349<br>第082讲 担保、延保与共享合同 / 351<br>第083讲 沉没成本、人质与抵押 / 356<br>第084讲 广告代言与形象打扮 / 358<br>第085讲 特许经营合同中的强者和弱者 / 362<br>第086讲 如何保障食品、药品和化妆品的质量 / 365<br>第087讲 婚姻经济学 / 370<br>责任的分担 让防范的成本最小 / 375<br>第088讲 汉德公式 / 375<br>第089讲 监管要看边际效应 / 381<br>第090讲 监管本身也要引入竞争机制 / 385<br>第9章 合作 为何同工不同酬<br>决策权 谁来当老板 / 393<br>第091讲 企业的团队本质 / 393<br>第092讲 谁来当老板：资本和劳动力 / 397<br>第093讲 谁来当老板：专用资源和通用资源 / 399<br>第094讲 谁来当老板：固定收入和剩余索取 / 403<br>收入分配 政府是否应该劫富济贫 / 408<br>第095讲 收入的高低和节奏由什么决定 / 408<br>第096讲 事与愿违之同工同酬法 / 413<br>第097讲 事与愿违之最低工资法 / 417<br>第098讲 基尼系数与收入分配 / 420<br>脱贫致富 最富裕的穷人在今天 / 425<br>第099讲 工人违约是否应该成为权利 / 425<br>第100讲 罢工的性质 / 429<br>第101讲 工作权利遇到的障碍 / 432<br>第102讲 最富裕的穷人在今天 / 437<br>第10章 协调 众人如何彼此影响<br>货币规律 货币像水又像蜜 / 445<br>第103讲 货币的起源 / 445<br>第104讲 商业银行创造货币 / 448<br>第105讲 通货膨胀的根源 / 453<br>第106讲 通货膨胀的过程 / 456<br>第107讲 通货膨胀与失业 / 460<br>经济周期 聪明人彼此不同意 / 466<br>第108讲 奥地利学派看经济周期 / 466<br>第109讲 凯恩斯主义学派看经济周期 / 472<br>第110讲 货币主义学派和理性预期学派看经济周期 / 476<br>第111讲 真实经济周期理论 / 481<br>第112讲 聪明人为什么会彼此不同意 / 484<br>公共选择 选举未必反映大多数人的意愿 / 492<br>第113讲 选举由中间派说了算 / 492<br>第114讲 阿罗不可能定律 / 496<br>第115讲 民主为何会产生不良经济政策 / 499<br>第116讲 关于收入再分配的戴雷科特定律 / 508<br>第117讲 脱贫致富之路知易行难 / 512<br>第118讲 中国做对了什么 / 516<br>后记 何为地道的经济学思维 / 521</p><hr class="content-copyright" style="margin-top:50px" /><blockquote class="content-copyright" style="font-style:normal"><p class="content-copyright">版权属于：<a class="content-copyright" target="_blank" href="https://t.me/limboprobot">http://t.me/limboprobot</a> TG 毒奶博主 Julia； <br>联系我们： <a class="content-copyright" target="_blank" href="../6.html">https://limbopro.xyz/6.html</a> 投稿或反馈或转载文章或交换友链； <br>电报频道： <a class="content-copyright" target="_blank" href="https://t.me/limboprossr">https://t.me/limboprossr</a> 及时收讯不失联； <br>必备技能： <a class="content-copyright" target="_blank" href="https://limbopro.xyz/archives/2910.html">https://limbopro.xyz/archives/2910.html</a> 如何访问任意被墙域名； <br>网站镜像： <a class="content-copyright" target="_blank" href="https://limbopro.github.io">https://limbopro.github.io</a> 每月更新；</p><p class="content-copyright">本文链接：<a class="content-copyright" href="1084.html">https://limbopro.xyz/archives/1084.html</a></p><p class="content-copyright">版权声明：<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本文采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a> 进行许可，转载请附上原文出处链接和本声明。</p></blockquote> </div>
+<p><img src="../usr/uploads/2019/07/573253124.jpg" alt="薛兆丰的经济学讲义.jpg" title="薛兆丰的经济学讲义.jpg"></p><h2>必读清单开篇志</h2><p>有且仅且向大家推荐<code>通俗易懂</code>，且尚且有用的<code>休闲课外读物</code>，尊崇<code>内心的愉悦</code>。就算是必读清单，如果不读<code>也不会有什么忧虑</code>。你有什么在看的读物吗？欢迎在评论处留言。</p><h2>经济学书单</h2><h3>为什么推荐这本书？</h3><p>奇葩说已经很久没更新了，却也时常打卡东七门的公众号。第一次知道薛兆丰也是在奇葩说，如果你没有看过<code>奇葩说</code>，或许我会建议你去看看，选题都是极好的。他们的另外个喜马拉雅FM节目，<code>《好好说话》</code>也是我极力推荐的（也有出书）。如果你也想<code>这世界的运行逻辑</code>，薛兆丰的经济学讲义会非常适合你。或用作少儿经济学<code>启蒙</code>，也是很好的。</p><h2>免费资源下载</h2><p>景德镇陶瓷大学图书馆：<span class="external-link"><a href="https://www.google.com/search?ei=izwgXY27NYe0mAXRmJzoAQ&q=site%3Alib.jci.edu.cn%20%E8%96%9B%E5%85%86%E4%B8%B0&oq=site%3Alib.jci.edu.cn%20%E8%96%9B%E5%85%86%E4%B8%B0&gs_l=psy-ab.3...3854.12669..12844...2.0..0.528.4589.2-5j4j2j2......0....1..gws-wiz.hfksxclHvys" target="_blank">lib.jci.edu.cn/<i data-feather='external-link'></i></a></span></p><h3>目 录</h3><p>前言 每个人的经济学 / IX<br>第1章 稀缺 为何商业是最大的慈善<br><br>真实世界 经济学的视角 / 003<br>第001讲 战俘营里的经济组织 / 003<br>第002讲 马粪争夺案 / 007<br>第003讲 看得见的和看不见的 / 010<br>第004讲 区分愿望与结果 / 014<br>人性观 人是理性和自私的吗 / 018<br>第005讲 不确定性、进化与经济理论 / 018<br>第006讲 亚当·斯密的人性观 / 022<br>第007讲 铅笔的故事 / 026<br>第008讲 商业是最大的慈善 / 028<br>区别对待 选择的标准 / 032<br>第009讲 稀缺 / 032<br>第010讲 选择和歧视 / 035<br>第011讲 凡歧视必得付代价 / 038<br>第012讲 歧视的作用和限制歧视的恶果 / 041<br>第2章 成本 不要只盯着钱<br>选择偏好 放弃的最大价值 / 049<br>第013讲 一句话给成本下定义 / 049<br>第014讲 你的成本由别人决定 / 053<br>第015讲 别只盯着钱 / 057<br>资源的价值 重新理解盈利与亏损 / 061<br>第016讲 从成本角度理解盈利与亏损 / 061<br>第017讲 最终产品的供需决定原材料的成本 / 064<br>第018讲 “租”是对资产的付费 / 067<br>第019讲 寻租—乞丐没有白拿施舍 / 071<br>科斯定律 从社会成本看问题 / 075<br>第020讲 社会成本问题 / 075<br>第021讲 谁用得好就归谁 / 083<br>第022讲 是否要不惜一切代价保护环境 / 086<br>交易费用 平衡的艺术 / 090<br>第023讲 有人群就有交易费用 / 090<br>第024讲 征地的权衡 / 094<br>第025讲 寻求合作解 / 100<br>第3章 需求 好东西运到远方去<br>边际革命 不是越多越好 / 107<br>第026讲 个人主义的主观价值论 / 107<br>第027讲 边际革命 / 110<br>需求定律 关于人性的定律 / 115<br>第028讲 需求第一定律 / 115<br>第029讲 需求第二定律 / 122<br>第030讲 需求第三定律 / 131<br>第4章 价格 如何减少竞争的无谓损失<br>资源配置 如何分饼决定饼做多大 / 139<br>第031讲 经济计算问题 / 139<br>第032讲 知识在社会中的运用 / 143<br>第033讲 如何分饼决定饼做多大 / 147<br>第034讲 换个角度看乘人之危发财的行为 / 151<br>竞争的逻辑 社会成本决定规则的优劣 / 155<br>第035讲 竞争的规则 / 155<br>第036讲 各种竞争规则孰优孰劣 / 158<br>第037讲 何谓短缺和过剩 / 162<br>价格管制 人会追求损失最小化 / 166<br>第038讲 最省事儿地违反价格管制 / 166<br>第039讲 春运火车票价还不够高 / 169<br>第040讲 美国的房租管制 / 176<br>第041讲 解除价格管制—果断与沉稳的拿捏 / 180<br>第042讲 实物补贴和货币补贴的权衡 / 184<br>竞争的维度 没有人可以控制市场因素 / 189<br>第043讲 房价上升好不好 / 189<br>第044讲 廉价保障房更贵 / 193<br>第045讲 没有使用需求就没有投资需求 / 196<br>第5章 权利 自由不等于免费<br>资源的占有 你的权利从哪里来 / 201<br>第046讲 权利有别于能力 / 201<br>第047讲 权利是人赋的而非天赋的 / 203<br>第048讲 自由不等于免费 / 207<br>产权界定 保护与限制 / 211<br>第049讲 产权的兴起 / 211<br>第050讲 产权：使用权、收益权和转让权 / 215<br>第051讲 产权保护之一：财产原则 / 218<br>第052讲 产权保护之二：责任原则 / 222<br>第053讲 产权保护之三：不可转让原则 / 225<br>公共服务 公用品与私用品 / 232<br>第054讲 经济学家论道路拥堵 / 232<br>第055讲 拥堵费的实践 / 235<br>第056讲 公用品和私用品 / 240<br>第057讲 灯塔的故事 / 244<br>第6章 耐心 想象力决定生产力<br>不确定性 时间偏好带来的回报 / 251<br>第058讲 易耗品与耐用品 / 251<br>第059讲 不耐产生交易 / 255<br>第060讲 利率管制及其后果 / 258<br>第061讲 利率变化支配资本现值 / 262<br>有效市场假说 时间维度上的平衡消费 / 267<br>第062讲 投资就是时间上的平衡消费 / 267<br>第063讲 股价究竟能不能预测 / 271<br>第064讲 股市到底有没有泡沫 / 275<br>第065讲 肥猪丸与回报率 / 279<br>预测未来 债券、保险与期货 / 283<br>第066讲 未雨绸缪：储蓄还是买保险 / 283<br>第067讲 保险的运作原理 / 286<br>第068讲 那些不是保险的保险 / 289<br>第069讲 当商品不被当作商品 / 293<br>第070讲 用期货合约来重新分配不可避免的风险 / 297<br>第7章 供应 好钢用在刀刃上<br>比较优势 天生我才必有用 / 305<br>第071讲 比较优势原理 / 305<br>第072讲 顺差逆差，孰优孰劣 / 309<br>第073讲 贸易对等和贸易报复 / 313<br>第074讲 贸易保护理由辨析 / 316<br>价格歧视 定价和竞争的策略 / 321<br>第075讲 受价者和觅价者 / 321<br>第076讲 价格歧视能给觅价者脱罪 / 326<br>第077讲 价格歧视的策略 / 330<br>第078讲 行业竞争程度不看企业个数 / 334<br>第8章 信息不对称 谁的话语权更大<br>信任的建立 直面信息不对称 / 341<br>第079讲 柠檬市场的故事 / 341<br>第080讲 何谓优质 / 345<br>制度的对策 缔约自由比自由更重要 / 349<br>第081讲 重复交易与第三方背书 / 349<br>第082讲 担保、延保与共享合同 / 351<br>第083讲 沉没成本、人质与抵押 / 356<br>第084讲 广告代言与形象打扮 / 358<br>第085讲 特许经营合同中的强者和弱者 / 362<br>第086讲 如何保障食品、药品和化妆品的质量 / 365<br>第087讲 婚姻经济学 / 370<br>责任的分担 让防范的成本最小 / 375<br>第088讲 汉德公式 / 375<br>第089讲 监管要看边际效应 / 381<br>第090讲 监管本身也要引入竞争机制 / 385<br>第9章 合作 为何同工不同酬<br>决策权 谁来当老板 / 393<br>第091讲 企业的团队本质 / 393<br>第092讲 谁来当老板：资本和劳动力 / 397<br>第093讲 谁来当老板：专用资源和通用资源 / 399<br>第094讲 谁来当老板：固定收入和剩余索取 / 403<br>收入分配 政府是否应该劫富济贫 / 408<br>第095讲 收入的高低和节奏由什么决定 / 408<br>第096讲 事与愿违之同工同酬法 / 413<br>第097讲 事与愿违之最低工资法 / 417<br>第098讲 基尼系数与收入分配 / 420<br>脱贫致富 最富裕的穷人在今天 / 425<br>第099讲 工人违约是否应该成为权利 / 425<br>第100讲 罢工的性质 / 429<br>第101讲 工作权利遇到的障碍 / 432<br>第102讲 最富裕的穷人在今天 / 437<br>第10章 协调 众人如何彼此影响<br>货币规律 货币像水又像蜜 / 445<br>第103讲 货币的起源 / 445<br>第104讲 商业银行创造货币 / 448<br>第105讲 通货膨胀的根源 / 453<br>第106讲 通货膨胀的过程 / 456<br>第107讲 通货膨胀与失业 / 460<br>经济周期 聪明人彼此不同意 / 466<br>第108讲 奥地利学派看经济周期 / 466<br>第109讲 凯恩斯主义学派看经济周期 / 472<br>第110讲 货币主义学派和理性预期学派看经济周期 / 476<br>第111讲 真实经济周期理论 / 481<br>第112讲 聪明人为什么会彼此不同意 / 484<br>公共选择 选举未必反映大多数人的意愿 / 492<br>第113讲 选举由中间派说了算 / 492<br>第114讲 阿罗不可能定律 / 496<br>第115讲 民主为何会产生不良经济政策 / 499<br>第116讲 关于收入再分配的戴雷科特定律 / 508<br>第117讲 脱贫致富之路知易行难 / 512<br>第118讲 中国做对了什么 / 516<br>后记 何为地道的经济学思维 / 521</p><hr class="content-copyright" style="margin-top:50px" /><blockquote class="content-copyright" style="font-style:normal"><p class="content-copyright">版权属于：<a class="content-copyright" target="_blank" href="https://t.me/limboprobot">http://t.me/limboprobot</a> TG 毒奶博主 Julia； <br>联系我们： <a class="content-copyright" target="_blank" href="../6.html">https://limbopro.xyz/6.html</a> 投稿或反馈或转载文章或交换友链； <br>电报频道： <a class="content-copyright" target="_blank" href="https://t.me/limboprossr">https://t.me/limboprossr</a> 及时收讯不失联； <br>必备技能： <a class="content-copyright" target="_blank" href="2910.html">https://limbopro.xyz/archives/2910.html</a> 如何访问任意被墙域名； <br>网站镜像： <a class="content-copyright" target="_blank" href="https://limbopro.github.io">https://limbopro.github.io</a> 每月更新；</p><p class="content-copyright">本文链接：<a class="content-copyright" href="1084.html">https://limbopro.xyz/archives/1084.html</a></p><p class="content-copyright">版权声明：<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本文采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a> 进行许可，转载请附上原文出处链接和本声明。</p></blockquote> </div>
 
 <div class="show-foot">
 <div class="notebook">
 <i class="fontello fontello-clock-o"></i>
- <span>最后修改：2019 年 08 月 03 日 11 : 27 PM</span>
+<span>最后修改：2019 年 08 月 03 日 11 : 27 PM</span>
 </div>
 <div class="copyright" data-toggle="tooltip" data-html="true" data-original-title="转载请保留本文转载地址，著作权归作者所有"><span>© 允许规范转载</span>
 </div>
@@ -362,13 +368,14 @@
 
 <nav class="m-t-lg m-b-lg">
 <ul class="pager">
-<li class="next"> <a href="1079.html" title="提问的智慧" data-toggle="tooltip"> 下一篇 </a></li> <li class="previous"> <a href="1092.html" title="YouTube 频道推荐（科技/技术/人工智能等特别有意思的频道）" data-toggle="tooltip"> 上一篇 </a></li>
+<li class="next"> <a class="box-shadow-wrap-normal" href="1079.html" title="提问的智慧" data-toggle="tooltip">
+下一篇 </a></li> <li class="previous"> <a class="box-shadow-wrap-normal" href="1092.html" title="YouTube 频道推荐（科技/技术/人工智能等特别有意思的频道）" data-toggle="tooltip"> 上一篇 </a></li>
 </ul>
 </nav>
 
-<div id="disqus_thread"><script type="eebc66af87be616784a94b47-text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="adf24965-dd03-45f8-9fdf-3f1e953df737";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script></div>
+<div id="disqus_thread"><script type="9f093e6ea3bc83bc41b9a8b8-text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="adf24965-dd03-45f8-9fdf-3f1e953df737";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script></div>
 <div id="disqus_thread"></div>
-<script type="eebc66af87be616784a94b47-text/javascript">
+<script type="9f093e6ea3bc83bc41b9a8b8-text/javascript">
 
 
 /**
@@ -391,125 +398,115 @@
 </div>
 </div>
 
-<aside class="asideBar col w-md bg-white-only b-l bg-auto no-border-xs" role="complementary">
+<aside class="asideBar col w-md bg-white-only bg-auto no-border-xs" role="complementary">
 <div id="sidebar">
 <section id="tabs-4" class="widget widget_tabs clear">
 <div class="nav-tabs-alt no-js-hide">
-<ul class="nav nav-tabs nav-justified" role="tablist">
-<li class="active" role="presentation"> <a href="1084.html#widget-tabs-4-hots" role="tab" aria-controls="widget-tabs-4-hots" aria-expanded="true" data-toggle="tab"> <i class="glyphicon glyphicon-fire text-md text-muted wrapper-sm" aria-hidden="true"></i> <span class="sr-only">热门文章</span> </a></li>
-<li role="presentation"> <a href="1084.html#widget-tabs-4-random" role="tab" aria-controls="widget-tabs-4-random" aria-expanded="false" data-toggle="tab"> <i class="glyphicon glyphicon-transfer text-md text-muted wrapper-sm" aria-hidden="true"></i> <span class="sr-only">随机文章</span> </a></li>
+<ul class="nav nav-tabs nav-justified box-shadow-bottom-normal tablist" role="tablist">
+<li data-index="0" class="active" role="presentation"> <a href="1084.html#widget-tabs-4-hots" role="tab" aria-controls="widget-tabs-4-hots" aria-expanded="true" data-toggle="tab"><div class="sidebar-icon wrapper-sm"><i data-feather="thumbs-up"></i></div><span class="sr-only">热门文章</span> </a></li>
+<li data-index="2" role="presentation"> <a href="1084.html#widget-tabs-4-random" role="tab" aria-controls="widget-tabs-4-random" aria-expanded="false" data-toggle="tab"> <div class="sidebar-icon wrapper-sm"><i data-feather="gift"></i></div> <span class="sr-only">随机文章</span>
+</a></li>
+<span class="navs-slider-bar"></span>
 </ul>
 </div>
 <div class="tab-content">
 
 <div id="widget-tabs-4-hots" class="tab-pane  fade in wrapper-md active" role="tabpanel">
-<h3 class="widget-title m-t-none text-md">热门文章</h3>
+<h5 class="widget-title m-t-none text-md">热门文章</h5>
 <ul class="list-group no-bg no-borders pull-in m-b-none">
 <li class="list-group-item">
-<a href="庆余年.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/10.jpg" class="img-circle"></a>
+<a href="1423.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/7.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h"> <a href="庆余年.html" title="庆余年全集在线观看丨22-46集丨高清丨大结局免费超钱点播（包含泄露版）"> 庆余年全集在线观看丨22-46集丨高清丨大结局免费超钱点播（包含泄露版） </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">22110</span>
+<h4 class="h5 l-h text-second"> <a href="1423.html" title="卡车家族丨1080P秒开丨折后6.4元/月起丨50+节点丨SSR机场推荐（学生党首选）"> 卡车家族丨1080P秒开丨折后6.4元/月起丨50+节点丨SSR机场推荐（学生党首选） </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">23800</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="969.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/5.jpg" class="img-circle"></a>
+<a href="2787.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/1.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h"> <a href="969.html" title="在中国看Netflix丨HBO丨Hulu丨Amazon Prime Video丨Apple TV丨或其他任意剧集。"> 在中国看Netflix丨HBO丨Hulu丨Amazon Prime Video丨Apple TV丨或其他任意剧集。 </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">19186</span>
+<h4 class="h5 l-h text-second"> <a href="2787.html" title="高速内网IPLC专线机场丨4K秒开丨14.99元/月起丨京港/沪港/深港/深新/沪美线路（贵在稳定）"> 高速内网IPLC专线机场丨4K秒开丨14.99元/月起丨京港/沪港/深港/深新/沪美线路（贵在稳定） </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">20900</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="1560.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/1.jpg" class="img-circle"></a>
+<a href="969.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/6.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h"> <a href="1560.html" title="全网在线视频解析与下载（YouTube/Pornhub/Instagram/Twitter/Xvideo/Facebook/哔哩哔哩解析/微博视频...）"> 全网在线视频解析与下载（YouTube/Pornhub/Instagram/Twitter/Xvideo/Facebook/哔哩哔哩解析/微博视频...） </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">17793</span>
+<h4 class="h5 l-h text-second"> <a href="969.html" title="在中国看Netflix丨HBO丨Hulu丨Amazon Prime Video丨Apple TV丨或其他任意剧集。"> 在中国看Netflix丨HBO丨Hulu丨Amazon Prime Video丨Apple TV丨或其他任意剧集。 </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">19253</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="1163.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/6.jpg" class="img-circle"></a>
+<a href="n3ro.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/4.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h"> <a href="1163.html" title="长安十二时辰丨优酷源同步在线观看"> 长安十二时辰丨优酷源同步在线观看 </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">15669</span>
+<h4 class="h5 l-h text-second"> <a href="n3ro.html" title="44+条高速内网IPLC专线丨N3RO丨折后14.4元/月起丨线路多多丨川日/川港/京港/京美/京德/沪韩/沪日/沪港/深新/深港/沪新/杭港/沪美/川日/游戏加速"> 44+条高速内网IPLC专线丨N3RO丨折后14.4元/月起丨线路多多丨川日/川港/京港/京美/京德/沪韩/沪日/沪港/深新/深港/沪新/杭港/沪美/川日/游戏加速 </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">16853</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="3629.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/4.jpg" class="img-circle"></a>
+<a href="3629.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/2.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h"> <a href="3629.html" title="iOS 使用 Surge/Quantumult/Shadowrocket /QuantumultX 解锁 TikTok （国际版）区域限制（免拔卡）12.17.2019"> iOS 使用 Surge/Quantumult/Shadowrocket /QuantumultX 解锁 TikTok （国际版）区域限制（免拔卡）12.17.2019 </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">12971</span>
+<h4 class="h5 l-h text-second"> <a href="3629.html" title="iOS 使用 Surge/Quantumult/Shadowrocket /QuantumultX 解锁 TikTok （国际版）区域限制（免拔卡）12.17.2019"> iOS 使用 Surge/Quantumult/Shadowrocket /QuantumultX 解锁 TikTok （国际版）区域限制（免拔卡）12.17.2019 </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">13093</span>
 </span>
 </small></div></li> </ul>
 </div>
 
 <div id="widget-tabs-4-random" class="tab-pane fade wrapper-md no-js-show" role="tabpanel">
-<h3 class="widget-title m-t-none text-md">随机文章</h3>
+<h5 class="widget-title m-t-none text-md">随机文章</h5>
 <ul class="list-group no-bg no-borders pull-in">
 <li class="list-group-item">
-<a href="1363.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/10.jpg" class="img-circle"></a>
+<a href="1201.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/7.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h"> <a href="1363.html" title="HyperDown丨PHP Markdown解析器"> HyperDown丨PHP Markdown解析器 </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">2827</span>
+<h4 class="h5 l-h text-second"> <a href="1201.html" title="百度网盘直链下载助手（一个脚本搞定百度网盘下载）&amp;3个方法解决百度网盘限速"> 百度网盘直链下载助手（一个脚本搞定百度网盘下载）&amp;3个方法解决百度网盘限速 </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">3885</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="lover.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/5.jpg" class="img-circle"></a>
+<a href="2432.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/1.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h"> <a href="lover.html" title="R级片《情人》未删减 "> R级片《情人》未删减 </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">1409</span>
+<h4 class="h5 l-h text-second"> <a href="2432.html" title="樱花动漫－专注动漫的门户网站丨哪里看动漫（追番）"> 樱花动漫－专注动漫的门户网站丨哪里看动漫（追番） </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">1758</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="5531.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/1.jpg" class="img-circle"></a>
+<a href="3709.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/6.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h"> <a href="5531.html" title="《文案训练手册》丨书单推荐第八期"> 《文案训练手册》丨书单推荐第八期 </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">455</span>
+<h4 class="h5 l-h text-second"> <a href="3709.html" title="提问的智慧：如何正确的提问？一个萌新的自我修养"> 提问的智慧：如何正确的提问？一个萌新的自我修养 </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">1592</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="https://limbopro.xyz/archives/455.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/6.jpg" class="img-circle"></a>
+<a href="4145.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/4.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h"> <a href="https://limbopro.xyz/archives/455.html" title="如何在Typecho中使用disqus，并开启评论？"> 如何在Typecho中使用disqus，并开启评论？ </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">3557</span>
+<h4 class="h5 l-h text-second"> <a href="4145.html" title="续命之徒：绝命毒师电影 "> 续命之徒：绝命毒师电影 </a></h4>
+ <small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">748</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="https://limbopro.xyz/archives/204.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/4.jpg" class="img-circle"></a>
+<a href="5624.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/2.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h"> <a href="https://limbopro.xyz/archives/204.html" title="Typecho丨开启你的第一个轻量化网站"> Typecho丨开启你的第一个轻量化网站 </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">3181</span>
+<h4 class="h5 l-h text-second"> <a href="5624.html" title="少年的你 (2019)"> 少年的你 (2019) </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">560</span>
 </span>
 </small></div></li> </ul>
 </div>
 </div>
 </section>
 
-<section id="categories-2" class="widget widget_categories wrapper-md clear">
-<h3 class="widget-title m-t-none text-md">博客信息</h3>
-<ul class="list-group">
-<li class="list-group-item"> <i class="glyphicon glyphicon-file text-muted"></i> <span class="badge
+<section id="blog_info" class="widget widget_categories wrapper-md clear">
+<h5 class="widget-title m-t-none text-md">博客信息</h5>
+<ul class="list-group box-shadow-wrap-normal">
+<li class="list-group-item text-second"><span class="blog-info-icons"> <i data-feather="award"></i></span> <span class="badge
            pull-right">213</span>文章数目</li>
-<li class="list-group-item"> <i class="glyphicon glyphicon-comment text-muted"></i> <span class="badge
+<li class="list-group-item text-second"> <span class="blog-info-icons"> <i data-feather="message-circle"></i></span>
+<span class="badge
            pull-right">5</span>评论数目</li>
-<li class="list-group-item"> <i class="glyphicon glyphicon-equalizer text-muted"></i> <span class="badge
-           pull-right">224天</span>运行天数</li>
-<li class="list-group-item"> <i class="glyphicon glyphicon-refresh text-muted"></i> <span class="badge
-           pull-right">5 小时前</span>最后活动</li>
+<li class="list-group-item text-second"><span class="blog-info-icons"> <i data-feather="calendar"></i></span>
+<span class="badge
+           pull-right">225天</span>运行天数</li>
+<li class="list-group-item text-second"><span class="blog-info-icons"> <i data-feather="activity"></i></span> <span class="badge
+           pull-right">12 小时前</span>最后活动</li>
 </ul>
 </section>
 
-<div id="tag_toc_body">
-<section id="tag_toc" class="widget widget_categories wrapper-md clear">
-<h3 class="widget-title m-t-none text-md">文章目录</h3>
-<div class="tags l-h-2x">
-<div id="toc"></div>
-</div>
+
+<section id="tag_cloud-2" class="widget widget_tag_cloud wrapper-md clear">
+<h5 class="widget-title m-t-none text-md">标签云</h5>
+<div class="post-tags tags l-h-2x">
+<a href="../tag/经济学书单/index.html">经济学书单</a> </div>
 </section>
-<div class="hidden-lg tocify-mobile-panel panel panel-default
-              setting_body_panel" aria-hidden="true">
-<button class="btn btn-default no-shadow pos-abt" data-toggle="tooltip" data-placement="left" data-original-title="目录" data-toggle-class=".tocify-mobile-panel=active">
-<i class="glyphicon glyphicon-resize-full"></i>
-</button>
-<div class="panel-heading">文章目录</div>
-<div class="setting_body toc-mobile-body">
-<div class="panel-body">
-<div class="tocTree"></div>
-</div>
-</div>
-</div>
-</div>
 </div>
 </aside>
 
@@ -519,10 +516,10 @@
 <div class="page">
 <h1 class="title">薛兆丰的经济学讲义丨书单推荐第一期</h1>
 <div class="metadata singleline"><a href="1084.html#" rel="author" class="byline">毒奶</a>&nbsp;•&nbsp;<span class="delimiter"></span><time class="date">2019 年 07 月 06 日</time></div>
-<p><img src="../usr/uploads/2019/07/573253124.jpg" alt="薛兆丰的经济学讲义.jpg" title="薛兆丰的经济学讲义.jpg"></p><h2>必读清单开篇志</h2><p>有且仅且向大家推荐<code>通俗易懂</code>，且尚且有用的<code>休闲课外读物</code>，尊崇<code>内心的愉悦</code>。就算是必读清单，如果不读<code>也不会有什么忧虑</code>。你有什么在看的读物吗？欢迎在评论处留言。</p><h2>经济学书单</h2><h3>为什么推荐这本书？</h3><p>奇葩说已经很久没更新了，却也时常打卡东七门的公众号。第一次知道薛兆丰也是在奇葩说，如果你没有看过<code>奇葩说</code>，或许我会建议你去看看，选题都是极好的。他们的另外个喜马拉雅FM节目，<code>《好好说话》</code>也是我极力推荐的（也有出书）。如果你也想<code>这世界的运行逻辑</code>，薛兆丰的经济学讲义会非常适合你。或用作少儿经济学<code>启蒙</code>，也是很好的。</p><h2>免费资源下载</h2><p>景德镇陶瓷大学图书馆：<a href="https://www.google.com/search?ei=izwgXY27NYe0mAXRmJzoAQ&q=site%3Alib.jci.edu.cn%20%E8%96%9B%E5%85%86%E4%B8%B0&oq=site%3Alib.jci.edu.cn%20%E8%96%9B%E5%85%86%E4%B8%B0&gs_l=psy-ab.3...3854.12669..12844...2.0..0.528.4589.2-5j4j2j2......0....1..gws-wiz.hfksxclHvys" target="_blank">lib.jci.edu.cn/</a></p><h3>目 录</h3><p>前言 每个人的经济学 / IX<br>第1章 稀缺 为何商业是最大的慈善<br><br>真实世界 经济学的视角 / 003<br>第001讲 战俘营里的经济组织 / 003<br>第002讲 马粪争夺案 / 007<br>第003讲 看得见的和看不见的 / 010<br>第004讲 区分愿望与结果 / 014<br>人性观 人是理性和自私的吗 / 018<br>第005讲 不确定性、进化与经济理论 / 018<br>第006讲 亚当·斯密的人性观 / 022<br>第007讲 铅笔的故事 / 026<br>第008讲 商业是最大的慈善 / 028<br>区别对待 选择的标准 / 032<br>第009讲 稀缺 / 032<br>第010讲 选择和歧视 / 035<br>第011讲 凡歧视必得付代价 / 038<br>第012讲 歧视的作用和限制歧视的恶果 / 041<br>第2章 成本 不要只盯着钱<br>选择偏好 放弃的最大价值 / 049<br>第013讲 一句话给成本下定义 / 049<br>第014讲 你的成本由别人决定 / 053<br>第015讲 别只盯着钱 / 057<br>资源的价值 重新理解盈利与亏损 / 061<br>第016讲 从成本角度理解盈利与亏损 / 061<br>第017讲 最终产品的供需决定原材料的成本 / 064<br>第018讲 “租”是对资产的付费 / 067<br>第019讲 寻租—乞丐没有白拿施舍 / 071<br>科斯定律 从社会成本看问题 / 075<br>第020讲 社会成本问题 / 075<br>第021讲 谁用得好就归谁 / 083<br>第022讲 是否要不惜一切代价保护环境 / 086<br>交易费用 平衡的艺术 / 090<br>第023讲 有人群就有交易费用 / 090<br>第024讲 征地的权衡 / 094<br>第025讲 寻求合作解 / 100<br>第3章 需求 好东西运到远方去<br>边际革命 不是越多越好 / 107<br>第026讲 个人主义的主观价值论 / 107<br>第027讲 边际革命 / 110<br>需求定律 关于人性的定律 / 115<br>第028讲 需求第一定律 / 115<br>第029讲 需求第二定律 / 122<br>第030讲 需求第三定律 / 131<br>第4章 价格 如何减少竞争的无谓损失<br>资源配置 如何分饼决定饼做多大 / 139<br>第031讲 经济计算问题 / 139<br>第032讲 知识在社会中的运用 / 143<br>第033讲 如何分饼决定饼做多大 / 147<br>第034讲 换个角度看乘人之危发财的行为 / 151<br>竞争的逻辑 社会成本决定规则的优劣 / 155<br>第035讲 竞争的规则 / 155<br>第036讲 各种竞争规则孰优孰劣 / 158<br>第037讲 何谓短缺和过剩 / 162<br>价格管制 人会追求损失最小化 / 166<br>第038讲 最省事儿地违反价格管制 / 166<br>第039讲 春运火车票价还不够高 / 169<br>第040讲 美国的房租管制 / 176<br>第041讲 解除价格管制—果断与沉稳的拿捏 / 180<br>第042讲 实物补贴和货币补贴的权衡 / 184<br>竞争的维度 没有人可以控制市场因素 / 189<br>第043讲 房价上升好不好 / 189<br>第044讲 廉价保障房更贵 / 193<br>第045讲 没有使用需求就没有投资需求 / 196<br>第5章 权利 自由不等于免费<br>资源的占有 你的权利从哪里来 / 201<br>第046讲 权利有别于能力 / 201<br>第047讲 权利是人赋的而非天赋的 / 203<br>第048讲 自由不等于免费 / 207<br>产权界定 保护与限制 / 211<br>第049讲 产权的兴起 / 211<br>第050讲 产权：使用权、收益权和转让权 / 215<br>第051讲 产权保护之一：财产原则 / 218<br>第052讲 产权保护之二：责任原则 / 222<br>第053讲 产权保护之三：不可转让原则 / 225<br>公共服务 公用品与私用品 / 232<br>第054讲 经济学家论道路拥堵 / 232<br>第055讲 拥堵费的实践 / 235<br>第056讲 公用品和私用品 / 240<br>第057讲 灯塔的故事 / 244<br>第6章 耐心 想象力决定生产力<br>不确定性 时间偏好带来的回报 / 251<br>第058讲 易耗品与耐用品 / 251<br>第059讲 不耐产生交易 / 255<br>第060讲 利率管制及其后果 / 258<br>第061讲 利率变化支配资本现值 / 262<br>有效市场假说 时间维度上的平衡消费 / 267<br>第062讲 投资就是时间上的平衡消费 / 267<br>第063讲 股价究竟能不能预测 / 271<br>第064讲 股市到底有没有泡沫 / 275<br>第065讲 肥猪丸与回报率 / 279<br>预测未来 债券、保险与期货 / 283<br>第066讲 未雨绸缪：储蓄还是买保险 / 283<br>第067讲 保险的运作原理 / 286<br>第068讲 那些不是保险的保险 / 289<br>第069讲 当商品不被当作商品 / 293<br>第070讲 用期货合约来重新分配不可避免的风险 / 297<br>第7章 供应 好钢用在刀刃上<br>比较优势 天生我才必有用 / 305<br>第071讲 比较优势原理 / 305<br>第072讲 顺差逆差，孰优孰劣 / 309<br>第073讲 贸易对等和贸易报复 / 313<br>第074讲 贸易保护理由辨析 / 316<br>价格歧视 定价和竞争的策略 / 321<br>第075讲 受价者和觅价者 / 321<br>第076讲 价格歧视能给觅价者脱罪 / 326<br>第077讲 价格歧视的策略 / 330<br>第078讲 行业竞争程度不看企业个数 / 334<br>第8章 信息不对称 谁的话语权更大<br>信任的建立 直面信息不对称 / 341<br>第079讲 柠檬市场的故事 / 341<br>第080讲 何谓优质 / 345<br>制度的对策 缔约自由比自由更重要 / 349<br>第081讲 重复交易与第三方背书 / 349<br>第082讲 担保、延保与共享合同 / 351<br>第083讲 沉没成本、人质与抵押 / 356<br>第084讲 广告代言与形象打扮 / 358<br>第085讲 特许经营合同中的强者和弱者 / 362<br>第086讲 如何保障食品、药品和化妆品的质量 / 365<br>第087讲 婚姻经济学 / 370<br>责任的分担 让防范的成本最小 / 375<br>第088讲 汉德公式 / 375<br>第089讲 监管要看边际效应 / 381<br>第090讲 监管本身也要引入竞争机制 / 385<br>第9章 合作 为何同工不同酬<br>决策权 谁来当老板 / 393<br>第091讲 企业的团队本质 / 393<br>第092讲 谁来当老板：资本和劳动力 / 397<br>第093讲 谁来当老板：专用资源和通用资源 / 399<br>第094讲 谁来当老板：固定收入和剩余索取 / 403<br>收入分配 政府是否应该劫富济贫 / 408<br>第095讲 收入的高低和节奏由什么决定 / 408<br>第096讲 事与愿违之同工同酬法 / 413<br>第097讲 事与愿违之最低工资法 / 417<br>第098讲 基尼系数与收入分配 / 420<br>脱贫致富 最富裕的穷人在今天 / 425<br>第099讲 工人违约是否应该成为权利 / 425<br>第100讲 罢工的性质 / 429<br>第101讲 工作权利遇到的障碍 / 432<br>第102讲 最富裕的穷人在今天 / 437<br>第10章 协调 众人如何彼此影响<br>货币规律 货币像水又像蜜 / 445<br>第103讲 货币的起源 / 445<br>第104讲 商业银行创造货币 / 448<br>第105讲 通货膨胀的根源 / 453<br>第106讲 通货膨胀的过程 / 456<br>第107讲 通货膨胀与失业 / 460<br>经济周期 聪明人彼此不同意 / 466<br>第108讲 奥地利学派看经济周期 / 466<br>第109讲 凯恩斯主义学派看经济周期 / 472<br>第110讲 货币主义学派和理性预期学派看经济周期 / 476<br>第111讲 真实经济周期理论 / 481<br>第112讲 聪明人为什么会彼此不同意 / 484<br>公共选择 选举未必反映大多数人的意愿 / 492<br>第113讲 选举由中间派说了算 / 492<br>第114讲 阿罗不可能定律 / 496<br>第115讲 民主为何会产生不良经济政策 / 499<br>第116讲 关于收入再分配的戴雷科特定律 / 508<br>第117讲 脱贫致富之路知易行难 / 512<br>第118讲 中国做对了什么 / 516<br>后记 何为地道的经济学思维 / 521</p><hr class="content-copyright" style="margin-top:50px" /><blockquote class="content-copyright" style="font-style:normal"><p class="content-copyright">版权属于：<a class="content-copyright" target="_blank" href="https://t.me/limboprobot">http://t.me/limboprobot</a> TG 毒奶博主 Julia； <br>联系我们： <a class="content-copyright" target="_blank" href="../6.html">https://limbopro.xyz/6.html</a> 投稿或反馈或转载文章或交换友链； <br>电报频道： <a class="content-copyright" target="_blank" href="https://t.me/limboprossr">https://t.me/limboprossr</a> 及时收讯不失联； <br>必备技能： <a class="content-copyright" target="_blank" href="https://limbopro.xyz/archives/2910.html">https://limbopro.xyz/archives/2910.html</a> 如何访问任意被墙域名； <br>网站镜像： <a class="content-copyright" target="_blank" href="https://limbopro.github.io">https://limbopro.github.io</a> 每月更新；</p><p class="content-copyright">本文链接：<a class="content-copyright" href="1084.html">https://limbopro.xyz/archives/1084.html</a></p><p class="content-copyright">版权声明：<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本文采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a> 进行许可，转载请附上原文出处链接和本声明。</p></blockquote>
+<p><img src="../usr/uploads/2019/07/573253124.jpg" alt="薛兆丰的经济学讲义.jpg" title="薛兆丰的经济学讲义.jpg"></p><h2>必读清单开篇志</h2><p>有且仅且向大家推荐<code>通俗易懂</code>，且尚且有用的<code>休闲课外读物</code>，尊崇<code>内心的愉悦</code>。就算是必读清单，如果不读<code>也不会有什么忧虑</code>。你有什么在看的读物吗？欢迎在评论处留言。</p><h2>经济学书单</h2><h3>为什么推荐这本书？</h3><p>奇葩说已经很久没更新了，却也时常打卡东七门的公众号。第一次知道薛兆丰也是在奇葩说，如果你没有看过<code>奇葩说</code>，或许我会建议你去看看，选题都是极好的。他们的另外个喜马拉雅FM节目，<code>《好好说话》</code>也是我极力推荐的（也有出书）。如果你也想<code>这世界的运行逻辑</code>，薛兆丰的经济学讲义会非常适合你。或用作少儿经济学<code>启蒙</code>，也是很好的。</p><h2>免费资源下载</h2><p>景德镇陶瓷大学图书馆：<span class="external-link"><a href="https://www.google.com/search?ei=izwgXY27NYe0mAXRmJzoAQ&q=site%3Alib.jci.edu.cn%20%E8%96%9B%E5%85%86%E4%B8%B0&oq=site%3Alib.jci.edu.cn%20%E8%96%9B%E5%85%86%E4%B8%B0&gs_l=psy-ab.3...3854.12669..12844...2.0..0.528.4589.2-5j4j2j2......0....1..gws-wiz.hfksxclHvys" target="_blank">lib.jci.edu.cn/<i data-feather='external-link'></i></a></span></p><h3>目 录</h3><p>前言 每个人的经济学 / IX<br>第1章 稀缺 为何商业是最大的慈善<br><br>真实世界 经济学的视角 / 003<br>第001讲 战俘营里的经济组织 / 003<br>第002讲 马粪争夺案 / 007<br>第003讲 看得见的和看不见的 / 010<br>第004讲 区分愿望与结果 / 014<br>人性观 人是理性和自私的吗 / 018<br>第005讲 不确定性、进化与经济理论 / 018<br>第006讲 亚当·斯密的人性观 / 022<br>第007讲 铅笔的故事 / 026<br>第008讲 商业是最大的慈善 / 028<br>区别对待 选择的标准 / 032<br>第009讲 稀缺 / 032<br>第010讲 选择和歧视 / 035<br>第011讲 凡歧视必得付代价 / 038<br>第012讲 歧视的作用和限制歧视的恶果 / 041<br>第2章 成本 不要只盯着钱<br>选择偏好 放弃的最大价值 / 049<br>第013讲 一句话给成本下定义 / 049<br>第014讲 你的成本由别人决定 / 053<br>第015讲 别只盯着钱 / 057<br>资源的价值 重新理解盈利与亏损 / 061<br>第016讲 从成本角度理解盈利与亏损 / 061<br>第017讲 最终产品的供需决定原材料的成本 / 064<br>第018讲 “租”是对资产的付费 / 067<br>第019讲 寻租—乞丐没有白拿施舍 / 071<br>科斯定律 从社会成本看问题 / 075<br>第020讲 社会成本问题 / 075<br>第021讲 谁用得好就归谁 / 083<br>第022讲 是否要不惜一切代价保护环境 / 086<br>交易费用 平衡的艺术 / 090<br>第023讲 有人群就有交易费用 / 090<br>第024讲 征地的权衡 / 094<br>第025讲 寻求合作解 / 100<br>第3章 需求 好东西运到远方去<br>边际革命 不是越多越好 / 107<br>第026讲 个人主义的主观价值论 / 107<br>第027讲 边际革命 / 110<br>需求定律 关于人性的定律 / 115<br>第028讲 需求第一定律 / 115<br>第029讲 需求第二定律 / 122<br>第030讲 需求第三定律 / 131<br>第4章 价格 如何减少竞争的无谓损失<br>资源配置 如何分饼决定饼做多大 / 139<br>第031讲 经济计算问题 / 139<br>第032讲 知识在社会中的运用 / 143<br>第033讲 如何分饼决定饼做多大 / 147<br>第034讲 换个角度看乘人之危发财的行为 / 151<br>竞争的逻辑 社会成本决定规则的优劣 / 155<br>第035讲 竞争的规则 / 155<br>第036讲 各种竞争规则孰优孰劣 / 158<br>第037讲 何谓短缺和过剩 / 162<br>价格管制 人会追求损失最小化 / 166<br>第038讲 最省事儿地违反价格管制 / 166<br>第039讲 春运火车票价还不够高 / 169<br>第040讲 美国的房租管制 / 176<br>第041讲 解除价格管制—果断与沉稳的拿捏 / 180<br>第042讲 实物补贴和货币补贴的权衡 / 184<br>竞争的维度 没有人可以控制市场因素 / 189<br>第043讲 房价上升好不好 / 189<br>第044讲 廉价保障房更贵 / 193<br>第045讲 没有使用需求就没有投资需求 / 196<br>第5章 权利 自由不等于免费<br>资源的占有 你的权利从哪里来 / 201<br>第046讲 权利有别于能力 / 201<br>第047讲 权利是人赋的而非天赋的 / 203<br>第048讲 自由不等于免费 / 207<br>产权界定 保护与限制 / 211<br>第049讲 产权的兴起 / 211<br>第050讲 产权：使用权、收益权和转让权 / 215<br>第051讲 产权保护之一：财产原则 / 218<br>第052讲 产权保护之二：责任原则 / 222<br>第053讲 产权保护之三：不可转让原则 / 225<br>公共服务 公用品与私用品 / 232<br>第054讲 经济学家论道路拥堵 / 232<br>第055讲 拥堵费的实践 / 235<br>第056讲 公用品和私用品 / 240<br>第057讲 灯塔的故事 / 244<br>第6章 耐心 想象力决定生产力<br>不确定性 时间偏好带来的回报 / 251<br>第058讲 易耗品与耐用品 / 251<br>第059讲 不耐产生交易 / 255<br>第060讲 利率管制及其后果 / 258<br>第061讲 利率变化支配资本现值 / 262<br>有效市场假说 时间维度上的平衡消费 / 267<br>第062讲 投资就是时间上的平衡消费 / 267<br>第063讲 股价究竟能不能预测 / 271<br>第064讲 股市到底有没有泡沫 / 275<br>第065讲 肥猪丸与回报率 / 279<br>预测未来 债券、保险与期货 / 283<br>第066讲 未雨绸缪：储蓄还是买保险 / 283<br>第067讲 保险的运作原理 / 286<br>第068讲 那些不是保险的保险 / 289<br>第069讲 当商品不被当作商品 / 293<br>第070讲 用期货合约来重新分配不可避免的风险 / 297<br>第7章 供应 好钢用在刀刃上<br>比较优势 天生我才必有用 / 305<br>第071讲 比较优势原理 / 305<br>第072讲 顺差逆差，孰优孰劣 / 309<br>第073讲 贸易对等和贸易报复 / 313<br>第074讲 贸易保护理由辨析 / 316<br>价格歧视 定价和竞争的策略 / 321<br>第075讲 受价者和觅价者 / 321<br>第076讲 价格歧视能给觅价者脱罪 / 326<br>第077讲 价格歧视的策略 / 330<br>第078讲 行业竞争程度不看企业个数 / 334<br>第8章 信息不对称 谁的话语权更大<br>信任的建立 直面信息不对称 / 341<br>第079讲 柠檬市场的故事 / 341<br>第080讲 何谓优质 / 345<br>制度的对策 缔约自由比自由更重要 / 349<br>第081讲 重复交易与第三方背书 / 349<br>第082讲 担保、延保与共享合同 / 351<br>第083讲 沉没成本、人质与抵押 / 356<br>第084讲 广告代言与形象打扮 / 358<br>第085讲 特许经营合同中的强者和弱者 / 362<br>第086讲 如何保障食品、药品和化妆品的质量 / 365<br>第087讲 婚姻经济学 / 370<br>责任的分担 让防范的成本最小 / 375<br>第088讲 汉德公式 / 375<br>第089讲 监管要看边际效应 / 381<br>第090讲 监管本身也要引入竞争机制 / 385<br>第9章 合作 为何同工不同酬<br>决策权 谁来当老板 / 393<br>第091讲 企业的团队本质 / 393<br>第092讲 谁来当老板：资本和劳动力 / 397<br>第093讲 谁来当老板：专用资源和通用资源 / 399<br>第094讲 谁来当老板：固定收入和剩余索取 / 403<br>收入分配 政府是否应该劫富济贫 / 408<br>第095讲 收入的高低和节奏由什么决定 / 408<br>第096讲 事与愿违之同工同酬法 / 413<br>第097讲 事与愿违之最低工资法 / 417<br>第098讲 基尼系数与收入分配 / 420<br>脱贫致富 最富裕的穷人在今天 / 425<br>第099讲 工人违约是否应该成为权利 / 425<br>第100讲 罢工的性质 / 429<br>第101讲 工作权利遇到的障碍 / 432<br>第102讲 最富裕的穷人在今天 / 437<br>第10章 协调 众人如何彼此影响<br>货币规律 货币像水又像蜜 / 445<br>第103讲 货币的起源 / 445<br>第104讲 商业银行创造货币 / 448<br>第105讲 通货膨胀的根源 / 453<br>第106讲 通货膨胀的过程 / 456<br>第107讲 通货膨胀与失业 / 460<br>经济周期 聪明人彼此不同意 / 466<br>第108讲 奥地利学派看经济周期 / 466<br>第109讲 凯恩斯主义学派看经济周期 / 472<br>第110讲 货币主义学派和理性预期学派看经济周期 / 476<br>第111讲 真实经济周期理论 / 481<br>第112讲 聪明人为什么会彼此不同意 / 484<br>公共选择 选举未必反映大多数人的意愿 / 492<br>第113讲 选举由中间派说了算 / 492<br>第114讲 阿罗不可能定律 / 496<br>第115讲 民主为何会产生不良经济政策 / 499<br>第116讲 关于收入再分配的戴雷科特定律 / 508<br>第117讲 脱贫致富之路知易行难 / 512<br>第118讲 中国做对了什么 / 516<br>后记 何为地道的经济学思维 / 521</p><hr class="content-copyright" style="margin-top:50px" /><blockquote class="content-copyright" style="font-style:normal"><p class="content-copyright">版权属于：<a class="content-copyright" target="_blank" href="https://t.me/limboprobot">http://t.me/limboprobot</a> TG 毒奶博主 Julia； <br>联系我们： <a class="content-copyright" target="_blank" href="../6.html">https://limbopro.xyz/6.html</a> 投稿或反馈或转载文章或交换友链； <br>电报频道： <a class="content-copyright" target="_blank" href="https://t.me/limboprossr">https://t.me/limboprossr</a> 及时收讯不失联； <br>必备技能： <a class="content-copyright" target="_blank" href="2910.html">https://limbopro.xyz/archives/2910.html</a> 如何访问任意被墙域名； <br>网站镜像： <a class="content-copyright" target="_blank" href="https://limbopro.github.io">https://limbopro.github.io</a> 每月更新；</p><p class="content-copyright">本文链接：<a class="content-copyright" href="1084.html">https://limbopro.xyz/archives/1084.html</a></p><p class="content-copyright">版权声明：<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本文采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a> 进行许可，转载请附上原文出处链接和本声明。</p></blockquote>
 </div>
 </div>
-<script type="eebc66af87be616784a94b47-text/javascript">
+<script type="9f093e6ea3bc83bc41b9a8b8-text/javascript">
         try {
             $("[data-morphing]").fancyMorph({
                 hash : 'morphing'
@@ -533,7 +530,7 @@
 
             </script>
 
-<script type="eebc66af87be616784a94b47-text/javascript">
+<script type="9f093e6ea3bc83bc41b9a8b8-text/javascript">
 (function () {
     window.TypechoComment = {
         dom : function (id) {
@@ -605,7 +602,7 @@
     };
 })();
 </script>
-<script type="eebc66af87be616784a94b47-text/javascript">
+<script type="9f093e6ea3bc83bc41b9a8b8-text/javascript">
 var registCommentEvent = function() {
     var event = document.addEventListener ? {
         add: 'addEventListener',
@@ -630,35 +627,30 @@ var registCommentEvent = function() {
                         input.type = 'hidden';
                         input.name = '_';
                             input.value = (function () {
-    var _YpQy = //'L3'
-'d'+'be'//'FH9'
-+//'s'
-'s'+''///*'FMN'*/'FMN'
-+/* 'rqr'//'rqr' */''+'06'//'xh4'
-+//'49'
-'49'+'8'//'p'
-+/* '30'//'30' */''+/* 'S'//'S' */''+'0c'//'HO'
-+//'l'
-'b4c'+//'K'
-'59'+'d8'//'j'
-+//'T'
-'T'+'Ixw'//'Ixw'
-+'cd'//'mcv'
-+//'o'
-'dd1'+'0a2'//'a0'
-+'e05'//'Qfj'
-+'2V'//'2V'
-+'1ce'//'nH'
-+//'l'
-'0'+/* '7L'//'7L' */''+//'rI'
-'1'+//'z'
-'e', _Ls1JS = [[3,4],[5,7],[15,16],[15,18],[26,28]];
+    var _TJy84s = //'vR'
+'d'+''///*'bYK'*/'bYK'
++//'va'
+'be0'+'6'//'Yl'
++'80'//'S'
++//'N'
+'cb'+''///*'8yn'*/'8yn'
++'4c'//'o'
++//'WG'
+'59'+'d'//'Og'
++'8cd'//'bH'
++//'Om'
+'dd1'+'0a'//'k'
++//'FLN'
+'2e0'+'5'//'jKQ'
++//'X'
+'1ce'+'01e'//'Xd'
+, _BQHlJS = [];
     
-    for (var i = 0; i < _Ls1JS.length; i ++) {
-        _YpQy = _YpQy.substring(0, _Ls1JS[i][0]) + _YpQy.substring(_Ls1JS[i][1]);
+    for (var i = 0; i < _BQHlJS.length; i ++) {
+        _TJy84s = _TJy84s.substring(0, _BQHlJS[i][0]) + _TJy84s.substring(_BQHlJS[i][1]);
     }
 
-    return _YpQy;
+    return _TJy84s;
 })();
                     
                         f.appendChild(input);
@@ -680,20 +672,21 @@ var registCommentEvent = function() {
 };
 </script></div>
 <footer id="footer" class="app-footer" role="footer">
-<div class="wrapper b-t bg-light">
+<div class="wrapper bg-light">
 <span class="pull-right hidden-xs text-ellipsis">
-Powered by <a target="blank" href="http://www.typecho.org">Typecho</a>&nbsp;|&nbsp;Theme by <a target="blank" href="../index.html#">handsome</a>
+Powered by <a target="_blank" href="http://www.typecho.org">Typecho</a>&nbsp;|&nbsp;Theme by <a target="_blank" href="https://www.ihewro.com/archives/489/">handsome</a>
 </span>
-<span class="text-ellipsis">&copy;&nbsp;2019 <a target="blank" href="../index.html">毒奶</a>.inc Copyright&nbsp; 自建站之日起，本站总访问量 3813679303 次</span>
+<span class="text-ellipsis">&copy;&nbsp;2019 Copyright&nbsp;</span>
 </div>
 
 <script type="text/template" id="tmpl-customizer">
           <div class="settings panel panel-default setting_body_panel" aria-hidden="true">
-              <button class="btn btn-default no-shadow pos-abt" data-toggle="tooltip" data-placement="left" data-original-title="设置" data-toggle-class=".settings=active, .settings-icon=animate-spin">
+              <button class=" btn btn-default no-shadow pos-abt border-radius-half-left"
+                      data-toggle="tooltip" data-placement="left" data-original-title="设置" data-toggle-class=".settings=active, .settings-icon=animate-spin">
                   <i class="fontello fontello-gear settings-icon"></i>
               </button>
               <div class="panel-heading">
-                  <button class="pull-right btn btn-xs btn-rounded btn-danger" name="reset" data-toggle="tooltip" data-placement="top" data-original-title="恢复默认值" >重置</button>
+                  <button class="pull-right btn btn-xs btn-rounded btn-danger " name="reset" data-toggle="tooltip" data-placement="top" data-original-title="恢复默认值" >重置</button>
                   设置		</div>
               <div class="setting_body">
               <div class="panel-body">
@@ -737,7 +730,7 @@ Powered by <a target="blank" href="http://www.typecho.org">Typecho</a>&nbsp;|&nb
           </div>
       </script>
 <div class="topButton panel panel-default">
-<button id="goToTop" class="btn btn-default no-shadow pos-abt hide">
+<button id="goToTop" class="btn btn-default no-shadow pos-abt hide  border-radius-half-left" data-toggle="tooltip" data-placement="left" data-original-title="返回顶部">
 <i class="fontello fontello-chevron-circle-up" aria-hidden="true"></i>
 </button>
 </div>
@@ -763,14 +756,14 @@ Powered by <a target="blank" href="http://www.typecho.org">Typecho</a>&nbsp;|&nb
 		-moz-transform: scale(1.4);	/* Firefox */
 	}
 </style>
-<script type="eebc66af87be616784a94b47-text/javascript">
+<script type="9f093e6ea3bc83bc41b9a8b8-text/javascript">
 	document.addEventListener('DOMContentLoaded', function(){
 		var imgs = document.querySelectorAll('img');
 		Array.prototype.forEach.call(imgs, function(el, i) {
 			if (el.tabIndex <= 0) el.tabIndex = 100;
 		});
 	});
-</script><script type="eebc66af87be616784a94b47-text/javascript">
+</script><script type="9f093e6ea3bc83bc41b9a8b8-text/javascript">
 	(function(){
 		var pres = document.querySelectorAll('pre');
 		var lineNumberClassName = 'line-numbers';
@@ -779,22 +772,22 @@ Powered by <a target="blank" href="http://www.typecho.org">Typecho</a>&nbsp;|&nb
 		});
 	})();
 </script>
-<script type="eebc66af87be616784a94b47-text/javascript" src="../usr/plugins/CodePrettify/static/clipboard.min.js"></script>
-<script type="eebc66af87be616784a94b47-text/javascript" src="../usr/plugins/CodePrettify/static/prism.js"></script>
-<script type="eebc66af87be616784a94b47-text/javascript">
+<script type="9f093e6ea3bc83bc41b9a8b8-text/javascript" src="../usr/plugins/CodePrettify/static/clipboard.min.js"></script>
+<script type="9f093e6ea3bc83bc41b9a8b8-text/javascript" src="../usr/plugins/CodePrettify/static/prism.js"></script>
+<script type="9f093e6ea3bc83bc41b9a8b8-text/javascript">
 SearchConfig = {
     url : "https://limbopro.xyz/usr/plugins/Handsome/cache/search.json"
 }
 </script>
 
-<script type="eebc66af87be616784a94b47-text/javascript">
+<script type="9f093e6ea3bc83bc41b9a8b8-text/javascript">
         window['LocalConst'] = {
             COMMENT_NAME_INFO: '必须填写昵称或姓名',
             COMMENT_EMAIL_INFO: '必须填写电子邮箱地址',
             COMMENT_EMAIL_LEGAL_INFO: '邮箱地址不合法',
             COMMENT_CONTENT_INFO: '必须填写评论内容',
             COMMENT_SUBMIT_ERROR: '提交失败，请重试！',
-            COMMENT_CONTENT_LEGAL_INFO: '提交失败,您的输入内容不符合规则！',
+            COMMENT_CONTENT_LEGAL_INFO: '提交失败,评论被拦截，可能发言太快或内容不符合规则',
 
             LOGIN_USERNAME_INFO: '必须填写用户名',
             LOGIN_PASSWORD_INFO: '请填写密码',
@@ -823,14 +816,15 @@ SearchConfig = {
             BASE_SCRIPT_URL: 'https://limbopro.xyz/usr/themes/handsome/',
             BLOG_URL: 'https://limbopro.xyz/',
             BLOG_URL_PHP: 'https://limbopro.xyz/',
-            THEME_COLOR: '13',
+            THEME_COLOR: '14',
+            THEME_COLOR_EDIT: 'danger-danger-black',
             THEME_HEADER_FIX: '1',
             THEME_ASIDE_FIX: '1',
             THEME_ASIDE_FOLDED: '',
             THEME_ASIDE_DOCK: '',
             THEME_CONTAINER_BOX: '1',
             THEME_HIGHLIGHT_CODE: '1',
-            THEME_TOC: '1',
+            THEME_TOC: '',
             TOC_TITLE: '文章目录',
             HEADER_FIX: '固定头部',
             ASIDE_FIX: '固定导航',
@@ -841,7 +835,7 @@ SearchConfig = {
             COMMENT_REJECT_PLACEHOLDER: '居然什么也不说，哼',
             COMMENT_PLACEHOLDER: '说点什么吧……',
             SHOW_SETTING_BUTTON: '1',
-            THEME_VERSION: '5.3.120190915221',
+            THEME_VERSION: '6.0.020191205',
 
             OPERATION_NOTICE: '操作通知',
             SCREENSHOT_BEGIN: '正在生成当前页面截图……',
@@ -852,14 +846,15 @@ SearchConfig = {
             MUSIC_FAILE: '当前音乐地址无效，自动为您播放下一首',
             MUSIC_FAILE_END: '当前音乐地址无效',
             MUSIC_LIST_SUCCESS: '歌单歌曲加载成功',
-            CDN_NAME: ''
+            CDN_NAME: '',
+            LAZY_LOAD: ''
         };
 
     </script>
 
-<script src="../usr/themes/handsome/assets/libs/bootstrap/js/bootstrap.min.js" type="eebc66af87be616784a94b47-text/javascript"></script>
-<script src="../usr/themes/handsome/assets/js/features/jquery.pjax.min.js" type="eebc66af87be616784a94b47-text/javascript"></script>
-<script type="eebc66af87be616784a94b47-text/javascript">
+<script src="../usr/themes/handsome/assets/libs/bootstrap/js/bootstrap.min.js" type="9f093e6ea3bc83bc41b9a8b8-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/js/features/jquery.pjax.min.js" type="9f093e6ea3bc83bc41b9a8b8-text/javascript"></script>
+<script type="9f093e6ea3bc83bc41b9a8b8-text/javascript">
         $(document).pjax('a[href^="https://limbopro.xyz/"]:not(a[target="_blank"], a[no-pjax])', {
             container: '#content',
             fragment: '#content',
@@ -887,18 +882,22 @@ SearchConfig = {
     </script>
 
 
+<script src="../usr/themes/handsome/assets/js/features/feather.min.js?v=6.0.020191205" type="9f093e6ea3bc83bc41b9a8b8-text/javascript"></script>
 
-<script src="https://cdn.staticfile.org/mathjax/2.7.0/MathJax.js" type="eebc66af87be616784a94b47-text/javascript"></script>
-<script src="https://cdn.staticfile.org/mathjax/2.7.0/config/TeX-AMS-MML_SVG.js" type="eebc66af87be616784a94b47-text/javascript"></script>
+<script src="https://cdn.staticfile.org/mathjax/2.7.0/MathJax.js" type="9f093e6ea3bc83bc41b9a8b8-text/javascript"></script>
+<script src="https://cdn.staticfile.org/mathjax/2.7.0/config/TeX-AMS-MML_SVG.js" type="9f093e6ea3bc83bc41b9a8b8-text/javascript"></script>
 
-<script src="../usr/themes/handsome/assets/js/features/jquery.fancybox.min.js?v=5.3.120190915221" type="eebc66af87be616784a94b47-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/js/features/jquery.fancybox.min.js?v=6.0.020191205" type="9f093e6ea3bc83bc41b9a8b8-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/js/features/easypiechart.min.js?v=6.0.020191205" type="9f093e6ea3bc83bc41b9a8b8-text/javascript"></script>
+
+<script src="../usr/themes/handsome/assets/js/features/html2canvas.min.js" type="9f093e6ea3bc83bc41b9a8b8-text/javascript"></script>
 
 
-<script src="../usr/themes/handsome/assets/js/function.min.js?v=5.3.120190915221" type="eebc66af87be616784a94b47-text/javascript"></script>
-<script src="../usr/themes/handsome/assets/js/core.min.js?v=5.3.120190915221" type="eebc66af87be616784a94b47-text/javascript"></script>
-<script src="../usr/themes/handsome/assets/js/features/setting.min.js?v=5.3.120190915221" type="eebc66af87be616784a94b47-text/javascript"></script>
-<script type="eebc66af87be616784a94b47-text/javascript">
+<script src="../usr/themes/handsome/assets/js/function.min.js?v=6.0.020191205" type="9f093e6ea3bc83bc41b9a8b8-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/js/core.min.js?v=6.0.020191205" type="9f093e6ea3bc83bc41b9a8b8-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/js/features/setting.min.js?v=6.0.020191205" type="9f093e6ea3bc83bc41b9a8b8-text/javascript"></script>
+<script type="9f093e6ea3bc83bc41b9a8b8-text/javascript">
             </script>
-<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="eebc66af87be616784a94b47-|49" defer=""></script></body>
+<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="9f093e6ea3bc83bc41b9a8b8-|49" defer=""></script></body>
 </html>
 

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+xmlns:content="http://purl.org/rss/1.0/modules/content/"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+xmlns:atom="http://www.w3.org/2005/Atom"
+xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+<channel>
+<title>毒奶博主丨欢迎使用代理访问本站。 - disques</title>
+<link>https://limbopro.xyz/tag/disques/</link>
+<atom:link href="https://limbopro.xyz/feed/tag/disques/" rel="self" type="application/rss+xml" />
+<language>zh-CN</language>
+<description></description>
+<lastBuildDate>Fri, 31 May 2019 17:08:00 +0800</lastBuildDate>
+<pubDate>Fri, 31 May 2019 17:08:00 +0800</pubDate>
+<item>
+<title>如何在Typecho中使用disqus，并开启评论？</title>
+<link>https://limbopro.xyz/archives/455.html</link>
+<guid>https://limbopro.xyz/archives/455.html</guid>
+<pubDate>Fri, 31 May 2019 17:08:00 +0800</pubDate>
+<dc:creator>毒奶</dc:creator>
+<description><![CDATA[一个好的网站，一定是要有一套好的评论模块的。Disqus 优缺点优点缺点大平台国内访问不佳通用代码可能被墙自动加载CSS需要登陆评论邮件提醒...可用Twitter脸书谷歌账号登陆...内置文章...]]></description>
+<content:encoded xml:lang="zh-CN"><![CDATA[
+<p>一个好的网站，一定是要有一套好的评论模块的。</p><h2>Disqus 优缺点</h2><table><thead><tr><th align="center">优点</th><th align="center">缺点</th></tr></thead><tbody><tr><td align="center">大平台</td><td align="center">国内访问不佳</td></tr><tr><td align="center">通用代码</td><td align="center">可能被墙</td></tr><tr><td align="center">自动加载CSS</td><td align="center">需要登陆</td></tr><tr><td align="center">评论邮件提醒</td><td align="center">...</td></tr><tr><td align="center">可用Twitter脸书谷歌账号登陆</td><td align="center">...</td></tr><tr><td align="center">内置文章点赞系统（无需登录）</td><td align="center">...</td></tr></tbody></table><h2>disqus 网站注册</h2><p><a href="https://disqus.com/profile/signup/intent/">https://disqus.com/profile/signup/intent/</a> 注册好并登陆Disqus，会提示创建评论站点 如果没有提示，点这里链接 <a href="https://disqus.com/admin/create/">https://disqus.com/admin/create/</a>;</p><h2>创建评论站点</h2><p>1.选择<code>I want to install Disqus on my site</code><br>2.跳转进入<code>Create a new site</code>页面，需要设置你的网站名字，分类，进入下一步；(Website Name 建议设置为域名名称 例如 <code>limbopro</code>)；</p><p>3.<code>Select a plan</code>，无需选择</p><h2>安装评论代码</h2><p>所谓安装，其实就是将一段 js 代码嵌入到你的博客源代码里面。</p><h3>通用代码</h3><p>4.<code>Install Disqus</code>，如果没看到你在用的博客平台，选 <code>I don't see my platform listed, install manually with Universal Code</code>；</p><p>到这里，你就可以看见你的专属 <code>通用代码</code> 了;</p><pre><code>&lt;div id=&quot;disqus_thread&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://fuckgfw.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+&lt;/script&gt;
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;https://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+                            </code></pre><p>大概长这样；</p><h2>修改 comments.php</h2><p>SSH登陆服务器；进入网站根目录../usr/themes/主题/comments.php..(如果你是用的不是默认主题，可能需要自己查看下主题目录结构一个个查下位置，找到comments.php)</p><pre><code>find ./ -name &quot;comments.php&quot; #进入网站根目录后，使用find命令查找</code></pre><pre><code>cp comments.php comments.php.bak #备份comments.php
+&gt; comments.php #清空comments.php
+vi comments.php #编辑comments.php</code></pre><p>把模板所在目录里的comments.php文件里的代码清空后（记得备份），复制disqus的通用代码（Universal Code）到comments.php里，保存即可。</p><p>刷新文章页面，评论模块变成了 Disqus 的了；如果没有，你开一开代理访问吧。</p><p>有个bug，需fq使用。但鉴于访问源来说，似乎fq不是什么问题。</p><h2>本文参考</h2><p><a href="https://vineo.cn/config-disqus.html">为博客添加Disqus评论系统</a></p>
+]]></content:encoded>
+<slash:comments>0</slash:comments>
+<comments>https://limbopro.xyz/archives/455.html#comments</comments>
+<wfw:commentRss>https://limbopro.xyz/feed/archives/455.html</wfw:commentRss>
+</item>
+</channel>
+</rss>

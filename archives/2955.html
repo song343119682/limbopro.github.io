@@ -27,12 +27,12 @@
 
 <link href="../usr/themes/handsome/assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-<link rel="stylesheet" href="../usr/themes/handsome/assets/css/function.min.css?v=5.3.120190915221" type="text/css" />
-<link rel="stylesheet" href="../usr/themes/handsome/assets/css/handsome.min.css?v=5.3.120190915221" type="text/css" />
+<link rel="stylesheet" href="../usr/themes/handsome/assets/css/function.min.css?v=6.0.020191205" type="text/css" />
+<link rel="stylesheet" href="../usr/themes/handsome/assets/css/handsome.min.css?v=6.0.020191205" type="text/css" />
 
-<link rel="stylesheet" href="../usr/themes/handsome/assets/css/features/jquery.fancybox.min.css?v=5.3.120190915221" type="text/css" />
-<link rel="stylesheet" href="../usr/themes/handsome/assets/css/features/code/zenburn.min.css?v=5.3.120190915221" type="text/css" />
-<link rel="stylesheet" href="../usr/themes/handsome/assets/css/features/coolopacity.min.css?v=5.3.120190915221" type="text/css" />
+<link rel="stylesheet" href="../usr/themes/handsome/assets/css/features/jquery.fancybox.min.css?v=6.0.020191205" type="text/css" />
+<link rel="stylesheet" href="../usr/themes/handsome/assets/css/features/code/vs.min.css?v=6.0.020191205" type="text/css" />
+<link rel="stylesheet" href="../usr/themes/handsome/assets/css/features/coolopacity.min.css?v=6.0.020191205" type="text/css" />
 <style>
             .cool-transparent .app:before {
                 background-color: rgba(0 , 0, 0, 0.7)!important;
@@ -40,7 +40,7 @@
             }
         </style>
 
-<link rel="stylesheet" href="../usr/themes/handsome/assets/css/font.min.css?v=5.3.120190915221" type="text/css" />
+<link rel="stylesheet" href="../usr/themes/handsome/assets/css/font.min.css?v=6.0.020191205" type="text/css" />
 <style type="text/css">
         
         html.bg {
@@ -57,59 +57,68 @@
         background: url(../usr/uploads/2019/11/425005431.jpg) center center no-repeat no-repeat fixed #6A6B6F;background-size: cover;
         }
 }
-#aside .wrapper:hover {
+    .nav-tabs-alt .nav-tabs>li[data-index="2"].active~.navs-slider-bar {
+        transform: translateX(405%);
+    }
+    .nav-tabs-alt .nav-tabs>li[data-index="0"].active~.navs-slider-bar {
+        transform: translateX(100%);
+    }#aside .wrapper:hover {
 	background: url(../usr/themes/handsome/assets/img/snow.gif);
 	background-size: cover;
 	color: #999;
 }    </style>
 
-<script src="../usr/themes/handsome/assets/libs/jquery/jquery.min.js" type="01692abe8de64011e41d9c2f-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/libs/jquery/jquery.min.js" type="940cb6940d095ee5b2a95033-text/javascript"></script>
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140019039-1" type="01692abe8de64011e41d9c2f-text/javascript"></script>
-<script type="01692abe8de64011e41d9c2f-text/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140019039-1" type="940cb6940d095ee5b2a95033-text/javascript"></script>
+<script type="940cb6940d095ee5b2a95033-text/javascript">
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'UA-140019039-1');
 </script>
-<script src="../usr/themes/handsome/assets/js/features/fancyMorph.min.js" type="01692abe8de64011e41d9c2f-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/js/features/fancyMorph.min.js" type="940cb6940d095ee5b2a95033-text/javascript"></script>
 </head>
-<body id="body">
+<body id="body" class="fix-padding">
 
-<div id="alllayout" class="app app-aside-fixed container app-header-fixed "> 
-<header id="header" class="app-header navbar" role="menu">
+<div id="alllayout" class="app app-aside-fix container app-header-fixed "> 
+<header id="header" class="fix-padding app-header navbar box-shadow-bottom-lg" role="menu">
 
 <div class="text-ellipsis navbar-header bg-danger">
-<button class="pull-right visible-xs dk" ui-toggle-class="show animated animated-lento fadeIn" target=".navbar-collapse">
-<i class="fontello fontello-gear text-lg"></i>
+<button class="pull-right visible-xs" ui-toggle-class="show animated animated-lento fadeIn" target=".navbar-collapse">
+<span class="menu-icons"><i data-feather="search"></i></span>
 </button>
 <button class="pull-left visible-xs" ui-toggle-class="off-screen animated" target=".app-aside" ui-scroll="app">
-<i class="fontello fontello-menu text-lg"></i>
+<span class="menu-icons"><i data-feather="menu"></i></span>
 </button>
 
 <a href="../index.html" class="navbar-brand text-lt">
 <i class="fontello fontello-home"></i>
-<span class="hidden-folded m-l-xs">毒奶博主</span>
+<span class="hidden-folded m-l-xs">It's limboPro.xyz</span>
 </a>
 
 </div>
 
 
-<div class="collapse pos-rlt navbar-collapse box-shadow bg-danger">
+<div class="collapse pos-rlt navbar-collapse bg-danger">
 
 <form id="searchform1" class="searchform navbar-form navbar-form-sm navbar-left shift" method="post" role="search">
 <div class="form-group">
-<div class="input-group rounded bg-light">
-<input data-status="false" autocomplete="off" id="search_input" type="search" name="s" class="transparent
-                rounded
-              form-control input-sm no-border padder" required placeholder="输入关键词搜索…">
+<div class="input-group rounded bg-white-pure box-shadow-wrap-normal">
+<input autocomplete="off" id="search_input" type="search" name="s" class="transparent rounded form-control input-sm no-borders padder" required placeholder="输入关键词搜索…">
 
-<ul id="search_tips_drop" class="dropdown-menu hide" style="display: block;top: 30px; left: 0px;">
+<ul id="search_tips_drop" class="small-scroll-bar dropdown-menu hide" style="display: block;top: 
+                30px; left: 0px;">
 </ul>
 <span id="search_submit" class="transparent input-group-btn">
-<button type="submit" class="transparent btn btn-sm"><i class="fontello fontello-search" id="icon-search"></i><i class="animate-spin  fontello fontello-spinner hide" id="spin-search"></i></button>
+<button type="submit" class="transparent btn btn-sm">
+<span class="feathericons" id="icon-search"><i data-feather="search"></i></span>
+<span class="feathericons animate-spin  hide" id="spin-search"><i data-feather="loader"></i></span>
+
+
+</button>
 </span>
 </div>
 </div>
@@ -119,8 +128,8 @@
 <ul class="nav navbar-nav navbar-right">
 <li class="dropdown"><a target="blank" href="https://t.me/limboprobot" class="dropdown-toggle"><i class="fontello-chat-alt icon-fw"></i><span class="visible-xs-inline">相册</span></a></li> 
 <li class="dropdown">
-<a href="2955.html#" data-toggle="dropdown" class="dropdown-toggle">
-<i class="fontello fontello-bell icon-fw"></i>
+<a href="2955.html#" data-toggle="dropdown" class="feathericons dropdown-toggle">
+<i data-feather="twitch"></i>
 <span class="visible-xs-inline">
 闲言碎语 </span>
 <span class="badge badge-sm up bg-danger pull-right-xs"></span>
@@ -144,26 +153,26 @@
 </header>
 
 
-<aside id="aside" class="app-aside hidden-xs bg-dark"> 
+<aside id="aside" class="app-aside hidden-xs bg-black"> 
 <div class="aside-wrap" layout="column">
-<div class="navi-wrap scroll-y" flex>
+<div class="navi-wrap scroll-y scroll-hide" flex>
 
 <div class="clearfix hidden-xs text-center hide  show" id="aside-user">
-<div class="dropdown wrapper">
+<div class="dropdown wrapper ">
 <div ui-nav>
 <a href="https://t.me/limboprossr">
-<span class="thumb-lg w-auto-folded avatar m-t-sm">
-<img src="../usr/uploads/2019/09/2211209831.jpg" class="img-full">
+<span class="thumb-lg w-auto-folded avatar m-t-sm  ">
+<img src="../usr/uploads/2019/09/2211209831.jpg" class="img-full img-circle normal-shadow">
 </span>
 </a>
 </div>
-<a href="2955.html#" data-toggle="dropdown" class="dropdown-toggle hidden-folded">
+<a href="2955.html#" data-toggle="dropdown" class="dropdown-toggle hidden-folded  ">
 <span class="clear">
 <span class="block m-t-sm">
 <strong class="font-bold text-lt">毒奶</strong>
 <b class="caret"></b>
 </span>
-<span class="text-muted text-xs block">TG 毒奶博主<br>业余斜杆青年<br>增长黑客<br>收集癖</span>
+<span class="text-muted text-xs block">TG 毒奶博主<br>业余斜杆青年<br>增长黑客</span>
 </span>
 </a>
 
@@ -172,9 +181,9 @@
 <span class="arrow top hidden-folded arrow-info"></span>
 <div>
 <p>下午好，是时候打个盹了</p>
-</div>
+</div> 
 <div class="progress progress-xs m-b-none dker">
-<div class="progress-bar bg-white" data-toggle="tooltip" data-original-title="时间已经度过66.67%" style="width: 66.67%"></div>
+<div class="progress-bar bg-white" data-toggle="tooltip" data-original-title="时间已经度过54.17%" style="width: 54.17%"></div>
 </div>
 </li>
 </ul>
@@ -182,7 +191,7 @@
 </div>
 </div>
 
- 
+
 <nav ui-nav class="navi clearfix">
 <ul class="nav">
 
@@ -193,12 +202,12 @@
 
 <li>
 <a href="../index.html" class="auto">
-<i class="iconfont icon-zhuye icon text-md"></i>
+<span class="nav-icon"><i data-feather="home"></i></span>
 <span>首页</span>
 </a>
 </li>
 
-<li> <a target="_self" href="../6.html" class="auto"><i class="glyphicon fontello-emo-devil icon text-md"></i><span>联系我们</span></a></li><li> <a target="_self" href="../1765.html" class="auto"><i class="glyphicon fontello-indent icon text-md"></i><span>文章归档</span></a></li><li> <a target="_self" href="../865.html" class="auto"><i class="glyphicon fontello-instagram icon text-md"></i><span>机场推荐</span></a></li><li> <a target="_blank" href="https://t.me/limboprossr" class="auto"><i class="glyphicon fontello-bell icon text-md"></i><span>电报频道</span></a></li><li> <a target="_blank" href="../search.html" class="auto"><i class="glyphicon fontello-search icon text-md"></i><span>毒奶搜索</span></a></li><li> <a target="_blank" href="https://github.com/limbopro" class="auto"><i class="glyphicon fontello-eye icon text-md"></i><span>托管仓库</span></a></li> <li class="line dk"></li>
+<li> <a target="_self" href="../6.html" class="auto"><span class="nav-icon"><i class="glyphicon fontello-emo-devil"></i></span><span>联系我们</span></a></li><li> <a target="_self" href="../1765.html" class="auto"><span class="nav-icon"><i class="glyphicon fontello-indent"></i></span><span>文章归档</span></a></li><li> <a target="_self" href="../865.html" class="auto"><span class="nav-icon"><i class="glyphicon fontello-instagram"></i></span><span>机场推荐</span></a></li><li> <a target="_blank" href="https://t.me/limboprossr" class="auto"><span class="nav-icon"><i class="glyphicon fontello-bell"></i></span><span>电报频道</span></a></li><li> <a target="_blank" href="../search.html" class="auto"><span class="nav-icon"><i class="glyphicon fontello-search"></i></span><span>毒奶搜索</span></a></li><li> <a target="_blank" href="https://github.com/limbopro" class="auto"><span class="nav-icon"><i class="glyphicon fontello-eye"></i></span><span>托管仓库</span></a></li> <li class="line dk"></li>
 
 <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
 <span>组成</span>
@@ -210,7 +219,8 @@
 <i class="fontello icon-fw fontello-angle-right text"></i>
 <i class="fontello icon-fw fontello-angle-down text-active"></i>
 </span>
-<i class="glyphicon glyphicon-th"></i>
+
+<span class="nav-icon"><i data-feather="grid"></i></span>
 <span>分类</span>
 </a>
 <ul class="nav nav-sub dk">
@@ -220,7 +230,7 @@
 </a>
 </li>
 
-<li><a href="../category/master-care/index.html"><b class="badge pull-right">19</b><span>无主杂记</span></a></li><li><a href="../category/Bulletin/index.html"><b class="badge pull-right">5</b><span>运营通报</span></a></li><li><a href="../category/hot-movies/index.html"><b class="badge pull-right">17</b><span>追剧小组</span></a></li><li><a href="../category/films-recommend/index.html"><b class="badge pull-right">38</b><span>电影推荐</span></a></li><li><a href="../category/ssr/index.html"><b class="badge pull-right">0</b><span>科学上网</span></a></li><li><a href="../category/ssr-operation/index.html"><b class="badge pull-right">2</b><span>自学上网</span></a></li><li><a href="../category/tools/index.html"><b class="badge pull-right">21</b><span>实用工具</span></a></li><li><a href="../category/LNMP/index.html"><b class="badge pull-right">24</b><span>建站指南</span></a></li><li><a href="../category/Typecho/index.html"><b class="badge pull-right">19</b><span>网站优化</span></a></li><li><a href="../category/Toilet-reading/index.html"><b class="badge pull-right">8</b><span>厕所读物</span></a></li><li><a href="../category/software-skills/index.html"><b class="badge pull-right">23</b><span>软件百科</span></a></li><li><a href="../category/telegram-anecdote/index.html"><b class="badge pull-right">10</b><span>电报奇闻</span></a></li><li><a href="../category/instagram/index.html"><b class="badge pull-right">11</b><span>美图欣赏</span></a></li><li><a href="../category/sales/index.html"><b class="badge pull-right">1</b><span>怪薅羊毛</span></a></li><li><a href="../category/NSFW/index.html"><b class="badge pull-right">17</b><span>开车专栏</span></a></li><li><a href="../category/day-of-history/index.html"><b class="badge pull-right">1</b><span>历史时刻</span></a></li><li><a href="../category/AfterFQ/index.html"><b class="badge pull-right">1</b><span>毒奶世界</span></a></li><li><a href="../category/technologyart/index.html"><b class="badge pull-right">2</b><span>科技美学</span></a></li> </ul>
+<li><a href="../category/master-care/index.html"><b class="badge pull-right">19</b><span>无主杂记</span></a></li><li><a href="../category/Bulletin/index.html"><b class="badge pull-right">5</b><span>运营通报</span></a></li><li><a href="../category/hot-movies/index.html"><b class="badge pull-right">17</b><span>追剧小组</span></a></li><li><a href="../category/films-recommend/index.html"><b class="badge pull-right">39</b><span>电影推荐</span></a></li><li><a href="../category/ssr/index.html"><b class="badge pull-right">3</b><span>科学上网</span></a></li><li><a href="../category/ssr-operation/index.html"><b class="badge pull-right">1</b><span>自学上网</span></a></li><li><a href="../category/tools/index.html"><b class="badge pull-right">21</b><span>实用工具</span></a></li><li><a href="../category/LNMP/index.html"><b class="badge pull-right">24</b><span>建站指南</span></a></li><li><a href="../category/Typecho/index.html"><b class="badge pull-right">19</b><span>网站优化</span></a></li><li><a href="../category/Toilet-reading/index.html"><b class="badge pull-right">8</b><span>厕所读物</span></a></li><li><a href="../category/software-skills/index.html"><b class="badge pull-right">23</b><span>软件百科</span></a></li><li><a href="../category/telegram-anecdote/index.html"><b class="badge pull-right">10</b><span>电报奇闻</span></a></li><li><a href="../category/instagram/index.html"><b class="badge pull-right">11</b><span>美图欣赏</span></a></li><li><a href="../category/sales/index.html"><b class="badge pull-right">1</b><span>怪薅羊毛</span></a></li><li><a href="../category/NSFW/index.html"><b class="badge pull-right">17</b><span>开车专栏</span></a></li><li><a href="../category/day-of-history/index.html"><b class="badge pull-right">1</b><span>历史时刻</span></a></li><li><a href="../category/AfterFQ/index.html"><b class="badge pull-right">1</b><span>毒奶世界</span></a></li><li><a href="../category/technologyart/index.html"><b class="badge pull-right">2</b><span>科技美学</span></a></li><li><a href="../category/Internetlog/index.html"><b class="badge pull-right">1</b><span>观察报告</span></a></li> </ul>
 </li>
 
 <li>
@@ -229,7 +239,7 @@
 <i class="fontello icon-fw fontello-angle-right text"></i>
 <i class="fontello icon-fw fontello-angle-down text-active"></i>
 </span>
-<i class="glyphicon glyphicon-file"></i>
+<span class="nav-icon"><i data-feather="file"></i></span>
 <span>页面</span>
 </a>
 <ul class="nav nav-sub dk">
@@ -253,7 +263,7 @@
 <i class="fontello icon-fw fontello-angle-right text"></i>
 <i class="fontello icon-fw fontello-angle-down text-active"></i>
 </span>
-<i class="iconfont icon-links"></i>
+<span class="nav-icon"><i data-feather="user"></i></span>
 <span>友链</span>
 </a>
 <ul class="nav nav-sub dk">
@@ -274,13 +284,13 @@
 <div id="left_footer" class="footer wrapper-xs text-center nav-xs lt">
 <div class="col-xs-6 no-padder">
 <a target="_blank" class="tinav" href="../feed/index.html" title="" data-toggle="tooltip" data-placement="top" data-original-title="文章RSS地址">
-<span class="block"><i class="fontello fontello-rss"></i></span>
+<span class="left-bottom-icons block"><i data-feather="rss"></i></span>
 <small class="text-muted">文章</small>
 </a>
 </div>
 <div class="col-xs-6 no-padder">
 <a target="_blank" href="../feed/comments/index.html" title="" data-toggle="tooltip" data-placement="top" data-original-title="评论RSS地址">
-<span class="block"><i class="fontello fontello-rss-square"></i></span>
+<span class="left-bottom-icons block"><i data-feather="message-square"></i></span>
 <small class="text-muted">评论</small>
 </a>
 </div>
@@ -305,47 +315,43 @@
 
 <div class="col center-part">
 
-
-<header id="small_widgets" class="bg-light lter b-b wrapper-md">
-<h1 class="entry-title m-n font-thin h3 text-black l-h">有哪些值得反复观看的科幻电影（一个世纪内）<a class="plus-font-size" data-toggle="tooltip" data-original-title="点击改变文章字体大小"><i class="glyphicon glyphicon-text-size
-" aria-hidden="true"></i></a><a data-morphing="" id="morphing" data-src="#morphing-content" href="javascript:;" class="read_mode superscript m-l-sm" data-toggle="tooltip" data-placement="right" data-original-title="阅读模式"><i class="glyphicon glyphicon-eye-open" aria-hidden="true"></i></a></h1> 
+<style>
+        
+        .mdx-si-head .cover{
+            object-fit: cover;
+            width: 100%;
+            height: 100%
+        }
+        
+</style>
+<div class="mdx-share-img" id="mdx-share-img"><div class="mdx-si-head" style="background-image:url(../usr/themes/handsome/assets/img/video.jpg)"><p>毒奶</p><span>有哪些值得反复观看的科幻电影（一个世纪内）</span></div><div class="mdx-si-sum">探讨未来的太空旅行、机器人、外星人和人类生存的预言。 via 豆瓣为什么要做科幻电影推荐RT.主理人的科幻电影片单...</div><div class="mdx-si-box"><span>扫描右侧二维码阅读全文</span><div class="mdx-si-qr" id="mdx-si-qr"><img src="../usr/themes/handsome/libs/GetCode.php?type=url&amp;content=https:%252F%252Flimbopro.xyz%252Farchives%252F2955.html"></div></div><div class="mdx-si-time">25<br><span class="mdx-si-time-2">2019/09</span></div></div> 
+<header id="small_widgets" class="bg-light lter wrapper-md">
+<h1 class="entry-title m-n font-thin text-black l-h">有哪些值得反复观看的科幻电影（一个世纪内）<a class="plus-font-size" data-toggle="tooltip" data-original-title="点击改变文章字体大小"><i data-feather="type"></i></a><a data-morphing="" id="morphing" data-src="#morphing-content" href="javascript:;" class="read_mode superscript m-l-sm" data-toggle="tooltip" data-placement="right" data-original-title="阅读模式"><i data-feather="book-open"></i></a></h1> 
 <ul class="entry-meta text-muted list-inline m-b-none small
              post-head-icon">
 
-<li class="meta-author"><i class="fontello fontello-user" aria-hidden="true"></i><span class="sr-only">博主：</span> <a class="meta-value" href="../author/1/index.html" rel="author"> 毒奶</a></li>
+<li class="meta-author"><span class="post-icons"><i data-feather="user"></i></span><span class="sr-only">博主：</span> <a class="meta-value" href="../author/1/index.html" rel="author"> 毒奶</a></li>
 
-<li class="meta-date"><i class="fontello fontello-clock-o" aria-hidden="true"></i>&nbsp;<span class="sr-only">发布时间：</span><time class="meta-value">2019 年 09 月 25 日</time></li>
+<li class="meta-date"><span class="post-icons"><i data-feather="clock"></i></span><span class="sr-only">发布时间：</span><time class="meta-value">2019 年 09 月 25 日</time></li>
 
-<li class="meta-views"><i class="fontello fontello-eye" aria-hidden="true"></i>&nbsp;<span class="meta-value">1365&nbsp;次浏览</span></li>
+<li class="meta-views"><span class="post-icons"><i data-feather="eye"></i></span><span class="meta-value">1371次浏览</span></li>
 
-<li class="meta-word"><i class="fontello fontello-pencil"></i>&nbsp;<span class="meta-value">9428&nbsp;字数</span></li>
+<li class="meta-word"><span class="post-icons"><i data-feather="pen-tool"></i></span><span class="meta-value">9428字数</span></li>
 
-<li class="meta-categories"><i class="fontello fontello-tags" aria-hidden="true"></i> <span class="sr-only">分类：</span> <span class="meta-value"><a href="../category/films-recommend/index.html">电影推荐</a></span></li>
+<li class="meta-categories"><span class="post-icons"><i data-feather="hash"></i></span><span class="sr-only">分类：</span> <span class="meta-value"><a href="../category/films-recommend/index.html">电影推荐</a></span></li>
 </ul>
 </header>
 <div class="wrapper-md" id="post-panel">
-<ol class="breadcrumb bg-white b-a" itemscope=""><li>
-<a href="../index.html" itemprop="breadcrumb" title="返回首页" data-toggle="tooltip"><i class="fontello fontello-home" aria-hidden="true"></i>&nbsp;首页</a>
-</li><li class="active">正文&nbsp;&nbsp;</li>
-<div style="float:right;">
-分享到：
-<style>
-   .breadcrumb i.iconfont.icon-qzone:after {
-    padding: 0 0 0 5px;
-    color: #ccc;
-    content: "/\00a0";
-    }
-    
-   </style>
-<a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://limbopro.xyz/archives/2955.html&title=有哪些值得反复观看的科幻电影（一个世纪内）&site=https://limbopro.xyz/" itemprop="breadcrumb" target="_blank" title="" data-toggle="tooltip" data-original-title="分享到QQ空间" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open(this.href, 'qzone-share', 'width=550,height=335');return false;" data-cf-modified-01692abe8de64011e41d9c2f-=""><i style="font-size:15px;" class="iconfont icon-qzone" aria-hidden="true"></i></a>
-<a href="http://service.weibo.com/share/share.php?url=https://limbopro.xyz/archives/2955.html&title=有哪些值得反复观看的科幻电影（一个世纪内）" target="_blank" itemprop="breadcrumb" title="" data-toggle="tooltip" data-original-title="分享到微博" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open(this.href, 'weibo-share', 'width=550,height=335');return false;" data-cf-modified-01692abe8de64011e41d9c2f-=""><i style="font-size:15px;" class="fontello fontello-weibo" aria-hidden="true"></i></a></div></ol> 
+<ol class="breadcrumb bg-white-pure" itemscope=""><li>
+<a href="../index.html" itemprop="breadcrumb" title="返回首页" data-toggle="tooltip"><span class="home-icons"><i data-feather="home"></i></span>首页</a>
+</li><li class="active">正文&nbsp;&nbsp;</li></ol> 
 <div id="postpage" class="blog-post">
-<article class="panel">
+<article class="single-post panel">
 
 
 <div id="post-content" class="wrapper-lg">
 <div class="entry-content l-h-2x">
-<p>探讨未来的太空旅行、机器人、外星人和人类生存的预言。 via <a href="https://www.douban.com/doulist/44514350/" target="_blank">豆瓣</a></p><h2>为什么要做科幻电影推荐</h2><p><img src="../usr/uploads/2019/09/3016875588.jpg" alt="Earth.jpg" title="Earth.jpg"></p><p>RT.</p><h2>主理人的科幻电影片单</h2><p>本片单基于 <a href="https://www.douban.com/doulist/44514350/?start=25&sort=seq&playable=0&sub_type=" target="_blank">最经典的20部科幻电影（300多部）</a>，但我从中挑选了我个人喜欢的，如下。</p><p>如需找到相关电影的资源，请参考：<a href="https://limbopro.xyz/archives/969.html" target="_blank">在中国如何免费看HBO/网飞/Hulu（Netflix/奈飞）/剧集/电影/动漫/番剧，看这一篇就够了</a> 基本上啥电影都能找到。</p><p>以上。</p><hr><h2>09.25.2019更新</h2><h2>2001太空漫游 2001: A Space Odyssey (1968)</h2><p><img src="../usr/uploads/2019/09/3289054947.jpg" alt="太空漫游.jpg" title="太空漫游.jpg"></p><p><video src="http://vt1.doubanio.com/201909251810/189d0a303fa5dc21195a4440744c1bbe/view/movie/M/402300949.mp4" width="100%" height="320" controls="controls"></video></p><p>这不是照着剧本拍的，而是曲谱。 via 豆瓣用户</p><p>始祖级电影。</p><h3>在线观看</h3><p>奈菲影视：<a href="https://www.nfmovies.com/detail/?15036.html" target="_blank">在线观看</a> 或使用 <a href="../search.html" target="_blank">毒奶搜索</a> 搜索资源；</p><p>via <a href="https://movie.douban.com/subject/1292226/?from=subject-page" target="_blank">豆瓣电影</a></p><h2>异次元骇客 The Thirteenth Floor (1999)</h2><p><img src="../usr/uploads/2019/09/4035574348.jpg" alt="异次元骇客.jpg" title="异次元骇客.jpg"></p><p>奈菲影视：<a href="https://www.nfmovies.com/detail/?3992.html" target="_blank">在线观看</a> 或使用 <a href="../search.html" target="_blank">毒奶搜索</a> 搜索资源；</p><p>via <a href="https://movie.douban.com/subject/1300282/?from=subject-page" target="_blank">豆瓣电影</a></p><h3>异形系列</h3><p><img src="../usr/uploads/2019/09/3189919808.jpg" alt="Alien.jpg" title="Alien.jpg"></p><p>1.异形 Alien (1979)<br>2.异形2 Aliens (1986)<br>3.异形3 Alien³ (1992)<br>4.异形4 Alien: Resurrection (1997)<br>5.普罗米修斯 Prometheus (2012)<br>6.异形：契约 Alien: Covenant (2017)</p><p>雷德利斯科特导演作品，就冲着这个也要看。</p><p>奈菲影视：<a href="https://www.nfmovies.com/detail/?10731.html" target="_blank">在线观看</a> 或使用 <a href="../search.html" target="_blank">毒奶搜索</a> 搜索资源；</p><p>via <a href="https://movie.douban.com/subject_search?search_text=%E5%BC%82%E5%BD%A2&cat=1002" target="_blank">豆瓣</a></p><h2>火星救援 The Martian (2015)</h2><p><img src="../usr/uploads/2019/09/2541568465.jpg" alt="火星救援.jpg" title="火星救援.jpg"></p><p>片长: 144分钟 / 151分钟(加长版)</p><p>也是雷德利斯科特作品。</p><p>奈菲影视：<a href="https://www.nfmovies.com/detail/?22016.html" target="_blank">在线观看</a> 或使用 <a href="../search.html" target="_blank">毒奶搜索</a> 搜索资源；</p><p>via <a href="https://movie.douban.com/subject/25864085/" target="_blank">豆瓣</a></p><h2>星际穿越 Interstellar (2014)</h2><p><img src="../usr/uploads/2019/09/2427587613.jpg" alt="星际穿越.jpg" title="星际穿越.jpg"></p><p><video src="http://vt1.doubanio.com/201909251719/50fcce682cffb1b6eaaa383a71be55d7/view/movie/M/301650578.mp4" width="100%" height="320" controls="controls"></video></p><p>片长: 169分钟</p><p>克里斯托弗·诺兰导演作品。</p><p>奈菲影视：<a href="https://www.nfmovies.com/detail/?28837.html" target="_blank">在线观看</a> 或使用 <a href="../search.html" target="_blank">毒奶搜索</a> 搜索资源；</p><p>via <a href="https://movie.douban.com/subject/1889243/?from=subject-page" target="_blank">豆瓣</a></p><h2>黑客帝国系列</h2><p><img src="../usr/uploads/2019/09/3527202078.jpg" alt="黑客帝国.jpg" title="黑客帝国.jpg"></p><p>黑客帝国 The Matrix (1999)</p><p><video src="http://vt1.doubanio.com/201909251724/d48ad77575e87cceb5035bfa9c7a00c7/view/movie/M/402470591.mp4" width="100%" height="320" controls="controls"></video></p><p>黑客帝国2：重装上阵 The Matrix Reloaded (2003)</p><p><video src="http://vt1.doubanio.com/201909251726/1a7d337767e50cf6e08b1940f702b556/view/movie/M/301020673-1.mp4" width="100%" height="320" controls="controls"></video></p><p>黑客帝国3：矩阵革命 The Matrix Revolutions (2003)</p><p><video src="http://vt1.doubanio.com/201909251725/59ddd7a331ee7773210f2823ec7fb99e/view/movie/M/301370573.mp4" width="100%" height="320" controls="controls"></video></p><p>黑客帝国4 The Matrix 4 (2022)</p><p>via 豆瓣电影</p><h2>她 Her (2013)</h2><p><img src="../usr/uploads/2019/09/2871254916.jpg" alt="她.jpg" title="她.jpg"></p><p><video src="http://vt1.doubanio.com/201909251730/98b4c435b039b94a44bb3de3931c0457/view/movie/M/301470407.mp4" width="100%" height="320" controls="controls"></video></p><p>片长：126分钟<br>奈菲影视：<a href="https://www.nfmovies.com/detail/?31317.html" target="_blank">在线观看</a> 或使用 <a href="../search.html" target="_blank">毒奶搜索</a> 搜索资源；</p><p>via <a href="https://movie.douban.com/subject/6722879/" target="_blank">豆瓣电影</a></p><h2>这个男人来自地球 The Man from Earth (2007)</h2><p><img src="../usr/uploads/2019/09/3013251270.jpg" alt="这跟男人来自地球.jpg" title="这跟男人来自地球.jpg"></p><p>豆瓣电影TOP250</p><p>奈菲影视：<a href="https://www.nfmovies.com/detail/?3915.html" target="_blank">在线观看</a> 或使用 <a href="../search.html" target="_blank">毒奶搜索</a> 搜索资源；</p><p>via <a href="https://movie.douban.com/subject/2300586/?from=subject-page" target="_blank">豆瓣电影</a></p><h2>疯狂的麦克斯4：狂暴之路 Mad Max: Fury Road (2015)</h2><p><img src="../usr/uploads/2019/09/373584090.jpg" alt="疯狂的麦克斯.jpg" title="疯狂的麦克斯.jpg"></p><p><video src="http://vt1.doubanio.com/201909251737/b412f72cdbc6e9d4b864e2f929ad2b60/view/movie/M/301730798.mp4" width="100%" height="320" controls="controls"></video></p><p>一顿猛夸。</p><p>豆瓣电影TOP250</p><p>奈菲影视： <a href="https://www.nfmovies.com/detail/?18474.html" target="_blank">在线观看</a> 或使用 <a href="../search.html" target="_blank">毒奶搜索</a> 搜索资源；</p><p>via <a href="https://movie.douban.com/subject/3592854/" target="_blank">豆瓣电影</a></p><h2>星际迷航 Star Trek (2009)</h2><p><img src="../usr/uploads/2019/09/2617358859.jpg" alt="星际迷航.jpg" title="星际迷航.jpg"></p><p><video src="http://vt1.doubanio.com/201909251739/04a38866006557a0c6c361e666ebe501/view/movie/M/301020674-1.mp4" width="100%" height="320" controls="controls"></video></p><p>奈菲影视： <a href="https://www.nfmovies.com/detail/?4178.html" target="_blank">在线观看</a> 或使用 <a href="../search.html" target="_blank">毒奶搜索</a> 搜索资源；</p><p>via <a href="https://movie.douban.com/subject/2132932/" target="_blank">豆瓣电影</a></p><h2>星球大战系列</h2><p>1.星球大战 Star Wars (1977)</p><p><img src="../usr/uploads/2019/09/238934804.jpg" alt="星球大战.jpg" title="星球大战.jpg"></p><p>不敢相信是77年作品！传奇啊！C3PO真啰嗦。= = via 豆瓣用户</p><p>奈菲影视： <a href="https://www.nfmovies.com/detail/?9130.html" target="_blank">在线观看</a> 或使用 <a href="../search.html" target="_blank">毒奶搜索</a> 搜索资源；</p><h2>攻壳机动队 攻殻機動隊 (1995)</h2><p><img src="../usr/uploads/2019/09/3106545799.jpg" alt="攻壳机动队.jpg" title="攻壳机动队.jpg"></p><p><video src="http://vt1.doubanio.com/201909251750/eb68c9bdec654955e9f32cdb2dd4b20d/view/movie/M/302140555.mp4" width="100%" height="320" controls="controls"></video></p><p>甚至觉得比后面寡姐的真人版还要好看。</p><p>奈菲影视： <a href="https://www.nfmovies.com/detail/?31737.html" target="_blank">在线观看</a> 或使用 <a href="../search.html" target="_blank">毒奶搜索</a> 搜索资源；</p><p>via <a href="https://movie.douban.com/subject/1291936/" target="_blank">豆瓣电影</a></p><h2>大都会 Metropolis (1927)</h2><p><img src="../usr/uploads/2019/09/4234438105.jpg" alt="大都会.jpg" title="大都会.jpg"></p><p>一百多年的电影，你敢想？</p><p>片长: 153分钟</p><p>奈菲影视： <a href="https://www.nfmovies.com/detail/?31618.html" target="_blank">在线观看</a> 或使用 <a href="../search.html" target="_blank">毒奶搜索</a> 搜索资源；</p><p>via <a href="https://movie.douban.com/subject/1298107/" target="_blank">豆瓣电影</a></p><h2>机器人总动员 WALL·E (2008)</h2><p><img src="../usr/uploads/2019/09/3099654507.jpg" alt="机器人总动员.jpg" title="机器人总动员.jpg"></p><p><video src="http://vt1.doubanio.com/201909251810/c9fc740df86a3bb573e4a55076cab4f0/view/movie/M/301080764.mp4" width="100%" height="320" controls="controls"></video></p><p>奈菲影视： <a href="https://www.nfmovies.com/detail/?3354.html" target="_blank">在线观看</a> 或使用 <a href="../search.html" target="_blank">毒奶搜索</a> 搜索资源</p><p>via <a href="https://movie.douban.com/subject/2131459/" target="_blank">豆瓣电影</a></p><h2>我是传奇 I Am Legend (2007)</h2><p><img src="../usr/uploads/2019/09/3838424990.jpg" alt="我是传奇.jpg" title="我是传奇.jpg"></p><p><video src="http://vt1.doubanio.com/201909251813/326463cb1fe8263f7f4258c44695a707/view/movie/M/301420462.mp4" width="100%" height="320" controls="controls"></video></p><p>结尾居然还真死了。非得翘了才是传奇么。。 via 豆瓣用户</p><p>via <a href="https://movie.douban.com/subject/1820156/" target="_blank">豆瓣电影</a></p><h2>电子世界争霸战 TRON (1982)</h2><p><img src="../usr/uploads/2019/09/2634436273.jpg" alt="电子世界争霸战.jpg" title="电子世界争霸战.jpg"></p><p>这就是电影特效史的丰碑，它已经被时间证明了价值。 via 豆瓣用户</p><p>via <a href="https://movie.douban.com/subject/1293482/" target="_blank">豆瓣电影</a></p><h2>创：战纪 TRON: Legacy (2010)</h2><p><img src="../usr/uploads/2019/09/2968747283.jpg" alt="创战纪.jpg" title="创战纪.jpg"></p><p><video src="http://vt1.doubanio.com/201909251820/3acd8d5bc2b8ed1f37116bdf99445cf9/view/movie/M/301230385.mp4" width="100%" height="320" controls="controls"></video></p><p>有没有跟上面那部有点像？那就对了。</p><p>via <a href="https://movie.douban.com/subject/2997134/?from=subject-page" target="_blank">豆瓣电影</a></p><h2>阿基拉 Akira (1988)</h2><p><img src="../usr/uploads/2019/09/1279756284.jpg" alt="阿基拉.jpg" title="阿基拉.jpg"></p><p>无法超越的反乌托邦巨作 via 豆瓣用户</p><p>via 豆瓣电影</p><h2>湮灭 Annihilation (2018)</h2><p><img src="../usr/uploads/2019/09/1235918786.jpg" alt="湮灭.jpg" title="湮灭.jpg"></p><p>文科生看不懂《<a href="https://movie.douban.com/subject/21324900/" target="_blank">降临</a>》，理科生看不懂《湮灭》。 via 豆瓣用户<br>看完湮灭出来 漫天飞雪 市中心灯光如昼 高楼上的液晶屏在播放芭蕾表演 车站里几个女生簇拥说笑着 突然觉得能平凡活着真好。 va 豆瓣用户</p><p>via <a href="https://movie.douban.com/subject/26384741/" target="_blank">豆瓣电影</a></p><h2>头号玩家 Ready Player One (2018)</h2><p><img src="../usr/uploads/2019/09/1199049417.jpg" alt="头号玩家.jpg" title="头号玩家.jpg"></p><p><video src="http://vt1.doubanio.com/201909251834/d5b6f72017c3d240a16e1b89e31963e1/view/movie/M/302280844.mp4" width="100%" height="320" controls="controls"></video></p><p>斯皮尔伯格老爷子作品。</p><p>via <a href="https://movie.douban.com/subject/4920389/" target="_blank">豆瓣电影</a></p><h2>超能陆战队 Big Hero 6 (2014)</h2><p><img src="../usr/uploads/2019/09/3702767400.jpg" alt="超能陆战队.jpg" title="超能陆战队.jpg"></p><p><video src="http://vt1.doubanio.com/201909251837/c8efbc4777ac9e05bfcb1e2d729b2fa3/view/movie/M/301700706.mp4" width="100%" height="320" controls="controls"></video></p><p>又是一个故事平平只靠细节讨巧的动画，但是没办法，就是超级吃这套啊！！ via 豆瓣用户</p><p>via <a href="https://movie.douban.com/subject/11026735/" target="_blank">豆瓣电影</a></p><p>以上。</p><h2>附注</h2><p>1.<a href="https://limbopro.xyz/archives/969.html" target="_blank">在中国如何免费看HBO/网飞/Hulu（Netflix/奈飞）/剧集/电影/动漫/番剧，看这一篇就够了。 </a></p><hr class="content-copyright" style="margin-top:50px" /><blockquote class="content-copyright" style="font-style:normal"><p class="content-copyright">版权属于：<a class="content-copyright" target="_blank" href="https://t.me/limboprobot">http://t.me/limboprobot</a> TG 毒奶博主 Julia； <br>联系我们： <a class="content-copyright" target="_blank" href="../6.html">https://limbopro.xyz/6.html</a> 投稿或反馈或转载文章或交换友链； <br>电报频道： <a class="content-copyright" target="_blank" href="https://t.me/limboprossr">https://t.me/limboprossr</a> 及时收讯不失联； <br>必备技能： <a class="content-copyright" target="_blank" href="https://limbopro.xyz/archives/2910.html">https://limbopro.xyz/archives/2910.html</a> 如何访问任意被墙域名； <br>网站镜像： <a class="content-copyright" target="_blank" href="https://limbopro.github.io">https://limbopro.github.io</a> 每月更新；</p><p class="content-copyright">本文链接：<a class="content-copyright" href="2955.html">https://limbopro.xyz/archives/2955.html</a></p><p class="content-copyright">版权声明：<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本文采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a> 进行许可，转载请附上原文出处链接和本声明。</p></blockquote> </div>
+<p>探讨未来的太空旅行、机器人、外星人和人类生存的预言。 via <span class="external-link"><a href="https://www.douban.com/doulist/44514350/" target="_blank">豆瓣<i data-feather='external-link'></i></a></span></p><h2>为什么要做科幻电影推荐</h2><p><img src="../usr/uploads/2019/09/3016875588.jpg" alt="Earth.jpg" title="Earth.jpg"></p><p>RT.</p><h2>主理人的科幻电影片单</h2><p>本片单基于 <span class="external-link"><a href="https://www.douban.com/doulist/44514350/?start=25&sort=seq&playable=0&sub_type=" target="_blank">最经典的20部科幻电影（300多部）<i data-feather='external-link'></i></a></span>，但我从中挑选了我个人喜欢的，如下。</p><p>如需找到相关电影的资源，请参考：<a href="969.html">在中国如何免费看HBO/网飞/Hulu（Netflix/奈飞）/剧集/电影/动漫/番剧，看这一篇就够了</a> 基本上啥电影都能找到。</p><p>以上。</p><hr><h2>09.25.2019更新</h2><h2>2001太空漫游 2001: A Space Odyssey (1968)</h2><p><img src="../usr/uploads/2019/09/3289054947.jpg" alt="太空漫游.jpg" title="太空漫游.jpg"></p><p><video src="http://vt1.doubanio.com/201909251810/189d0a303fa5dc21195a4440744c1bbe/view/movie/M/402300949.mp4" width="100%" height="320" controls="controls"></video></p><p>这不是照着剧本拍的，而是曲谱。 via 豆瓣用户</p><p>始祖级电影。</p><h3>在线观看</h3><p>奈菲影视：<span class="external-link"><a href="https://www.nfmovies.com/detail/?15036.html" target="_blank">在线观看<i data-feather='external-link'></i></a></span> 或使用 <a href="../search.html">毒奶搜索</a> 搜索资源；</p><p>via <span class="external-link"><a href="https://movie.douban.com/subject/1292226/?from=subject-page" target="_blank">豆瓣电影<i data-feather='external-link'></i></a></span></p><h2>异次元骇客 The Thirteenth Floor (1999)</h2><p><img src="../usr/uploads/2019/09/4035574348.jpg" alt="异次元骇客.jpg" title="异次元骇客.jpg"></p><p>奈菲影视：<span class="external-link"><a href="https://www.nfmovies.com/detail/?3992.html" target="_blank">在线观看<i data-feather='external-link'></i></a></span> 或使用 <a href="../search.html">毒奶搜索</a> 搜索资源；</p><p>via <span class="external-link"><a href="https://movie.douban.com/subject/1300282/?from=subject-page" target="_blank">豆瓣电影<i data-feather='external-link'></i></a></span></p><h3>异形系列</h3><p><img src="../usr/uploads/2019/09/3189919808.jpg" alt="Alien.jpg" title="Alien.jpg"></p><p>1.异形 Alien (1979)<br>2.异形2 Aliens (1986)<br>3.异形3 Alien³ (1992)<br>4.异形4 Alien: Resurrection (1997)<br>5.普罗米修斯 Prometheus (2012)<br>6.异形：契约 Alien: Covenant (2017)</p><p>雷德利斯科特导演作品，就冲着这个也要看。</p><p>奈菲影视：<span class="external-link"><a href="https://www.nfmovies.com/detail/?10731.html" target="_blank">在线观看<i data-feather='external-link'></i></a></span> 或使用 <a href="../search.html">毒奶搜索</a> 搜索资源；</p><p>via <span class="external-link"><a href="https://movie.douban.com/subject_search?search_text=%E5%BC%82%E5%BD%A2&cat=1002" target="_blank">豆瓣<i data-feather='external-link'></i></a></span></p><h2>火星救援 The Martian (2015)</h2><p><img src="../usr/uploads/2019/09/2541568465.jpg" alt="火星救援.jpg" title="火星救援.jpg"></p><p>片长: 144分钟 / 151分钟(加长版)</p><p>也是雷德利斯科特作品。</p><p>奈菲影视：<span class="external-link"><a href="https://www.nfmovies.com/detail/?22016.html" target="_blank">在线观看<i data-feather='external-link'></i></a></span> 或使用 <a href="../search.html">毒奶搜索</a> 搜索资源；</p><p>via <span class="external-link"><a href="https://movie.douban.com/subject/25864085/" target="_blank">豆瓣<i data-feather='external-link'></i></a></span></p><h2>星际穿越 Interstellar (2014)</h2><p><img src="../usr/uploads/2019/09/2427587613.jpg" alt="星际穿越.jpg" title="星际穿越.jpg"></p><p><video src="http://vt1.doubanio.com/201909251719/50fcce682cffb1b6eaaa383a71be55d7/view/movie/M/301650578.mp4" width="100%" height="320" controls="controls"></video></p><p>片长: 169分钟</p><p>克里斯托弗·诺兰导演作品。</p><p>奈菲影视：<span class="external-link"><a href="https://www.nfmovies.com/detail/?28837.html" target="_blank">在线观看<i data-feather='external-link'></i></a></span> 或使用 <a href="../search.html">毒奶搜索</a> 搜索资源；</p><p>via <span class="external-link"><a href="https://movie.douban.com/subject/1889243/?from=subject-page" target="_blank">豆瓣<i data-feather='external-link'></i></a></span></p><h2>黑客帝国系列</h2><p><img src="../usr/uploads/2019/09/3527202078.jpg" alt="黑客帝国.jpg" title="黑客帝国.jpg"></p><p>黑客帝国 The Matrix (1999)</p><p><video src="http://vt1.doubanio.com/201909251724/d48ad77575e87cceb5035bfa9c7a00c7/view/movie/M/402470591.mp4" width="100%" height="320" controls="controls"></video></p><p>黑客帝国2：重装上阵 The Matrix Reloaded (2003)</p><p><video src="http://vt1.doubanio.com/201909251726/1a7d337767e50cf6e08b1940f702b556/view/movie/M/301020673-1.mp4" width="100%" height="320" controls="controls"></video></p><p>黑客帝国3：矩阵革命 The Matrix Revolutions (2003)</p><p><video src="http://vt1.doubanio.com/201909251725/59ddd7a331ee7773210f2823ec7fb99e/view/movie/M/301370573.mp4" width="100%" height="320" controls="controls"></video></p><p>黑客帝国4 The Matrix 4 (2022)</p><p>via 豆瓣电影</p><h2>她 Her (2013)</h2><p><img src="../usr/uploads/2019/09/2871254916.jpg" alt="她.jpg" title="她.jpg"></p><p><video src="http://vt1.doubanio.com/201909251730/98b4c435b039b94a44bb3de3931c0457/view/movie/M/301470407.mp4" width="100%" height="320" controls="controls"></video></p><p>片长：126分钟<br>奈菲影视：<span class="external-link"><a href="https://www.nfmovies.com/detail/?31317.html" target="_blank">在线观看<i data-feather='external-link'></i></a></span> 或使用 <a href="../search.html">毒奶搜索</a> 搜索资源；</p><p>via <span class="external-link"><a href="https://movie.douban.com/subject/6722879/" target="_blank">豆瓣电影<i data-feather='external-link'></i></a></span></p><h2>这个男人来自地球 The Man from Earth (2007)</h2><p><img src="../usr/uploads/2019/09/3013251270.jpg" alt="这跟男人来自地球.jpg" title="这跟男人来自地球.jpg"></p><p>豆瓣电影TOP250</p><p>奈菲影视：<span class="external-link"><a href="https://www.nfmovies.com/detail/?3915.html" target="_blank">在线观看<i data-feather='external-link'></i></a></span> 或使用 <a href="../search.html">毒奶搜索</a> 搜索资源；</p><p>via <span class="external-link"><a href="https://movie.douban.com/subject/2300586/?from=subject-page" target="_blank">豆瓣电影<i data-feather='external-link'></i></a></span></p><h2>疯狂的麦克斯4：狂暴之路 Mad Max: Fury Road (2015)</h2><p><img src="../usr/uploads/2019/09/373584090.jpg" alt="疯狂的麦克斯.jpg" title="疯狂的麦克斯.jpg"></p><p><video src="http://vt1.doubanio.com/201909251737/b412f72cdbc6e9d4b864e2f929ad2b60/view/movie/M/301730798.mp4" width="100%" height="320" controls="controls"></video></p><p>一顿猛夸。</p><p>豆瓣电影TOP250</p><p>奈菲影视： <span class="external-link"><a href="https://www.nfmovies.com/detail/?18474.html" target="_blank">在线观看<i data-feather='external-link'></i></a></span> 或使用 <a href="../search.html">毒奶搜索</a> 搜索资源；</p><p>via <span class="external-link"><a href="https://movie.douban.com/subject/3592854/" target="_blank">豆瓣电影<i data-feather='external-link'></i></a></span></p><h2>星际迷航 Star Trek (2009)</h2><p><img src="../usr/uploads/2019/09/2617358859.jpg" alt="星际迷航.jpg" title="星际迷航.jpg"></p><p><video src="http://vt1.doubanio.com/201909251739/04a38866006557a0c6c361e666ebe501/view/movie/M/301020674-1.mp4" width="100%" height="320" controls="controls"></video></p><p>奈菲影视： <span class="external-link"><a href="https://www.nfmovies.com/detail/?4178.html" target="_blank">在线观看<i data-feather='external-link'></i></a></span> 或使用 <a href="../search.html">毒奶搜索</a> 搜索资源；</p><p>via <span class="external-link"><a href="https://movie.douban.com/subject/2132932/" target="_blank">豆瓣电影<i data-feather='external-link'></i></a></span></p><h2>星球大战系列</h2><p>1.星球大战 Star Wars (1977)</p><p><img src="../usr/uploads/2019/09/238934804.jpg" alt="星球大战.jpg" title="星球大战.jpg"></p><p>不敢相信是77年作品！传奇啊！C3PO真啰嗦。= = via 豆瓣用户</p><p>奈菲影视： <span class="external-link"><a href="https://www.nfmovies.com/detail/?9130.html" target="_blank">在线观看<i data-feather='external-link'></i></a></span> 或使用 <a href="../search.html">毒奶搜索</a> 搜索资源；</p><h2>攻壳机动队 攻殻機動隊 (1995)</h2><p><img src="../usr/uploads/2019/09/3106545799.jpg" alt="攻壳机动队.jpg" title="攻壳机动队.jpg"></p><p><video src="http://vt1.doubanio.com/201909251750/eb68c9bdec654955e9f32cdb2dd4b20d/view/movie/M/302140555.mp4" width="100%" height="320" controls="controls"></video></p><p>甚至觉得比后面寡姐的真人版还要好看。</p><p>奈菲影视： <span class="external-link"><a href="https://www.nfmovies.com/detail/?31737.html" target="_blank">在线观看<i data-feather='external-link'></i></a></span> 或使用 <a href="../search.html">毒奶搜索</a> 搜索资源；</p><p>via <span class="external-link"><a href="https://movie.douban.com/subject/1291936/" target="_blank">豆瓣电影<i data-feather='external-link'></i></a></span></p><h2>大都会 Metropolis (1927)</h2><p><img src="../usr/uploads/2019/09/4234438105.jpg" alt="大都会.jpg" title="大都会.jpg"></p><p>一百多年的电影，你敢想？</p><p>片长: 153分钟</p><p>奈菲影视： <span class="external-link"><a href="https://www.nfmovies.com/detail/?31618.html" target="_blank">在线观看<i data-feather='external-link'></i></a></span> 或使用 <a href="../search.html">毒奶搜索</a> 搜索资源；</p><p>via <span class="external-link"><a href="https://movie.douban.com/subject/1298107/" target="_blank">豆瓣电影<i data-feather='external-link'></i></a></span></p><h2>机器人总动员 WALL·E (2008)</h2><p><img src="../usr/uploads/2019/09/3099654507.jpg" alt="机器人总动员.jpg" title="机器人总动员.jpg"></p><p><video src="http://vt1.doubanio.com/201909251810/c9fc740df86a3bb573e4a55076cab4f0/view/movie/M/301080764.mp4" width="100%" height="320" controls="controls"></video></p><p>奈菲影视： <span class="external-link"><a href="https://www.nfmovies.com/detail/?3354.html" target="_blank">在线观看<i data-feather='external-link'></i></a></span> 或使用 <a href="../search.html">毒奶搜索</a> 搜索资源</p><p>via <span class="external-link"><a href="https://movie.douban.com/subject/2131459/" target="_blank">豆瓣电影<i data-feather='external-link'></i></a></span></p><h2>我是传奇 I Am Legend (2007)</h2><p><img src="../usr/uploads/2019/09/3838424990.jpg" alt="我是传奇.jpg" title="我是传奇.jpg"></p><p><video src="http://vt1.doubanio.com/201909251813/326463cb1fe8263f7f4258c44695a707/view/movie/M/301420462.mp4" width="100%" height="320" controls="controls"></video></p><p>结尾居然还真死了。非得翘了才是传奇么。。 via 豆瓣用户</p><p>via <span class="external-link"><a href="https://movie.douban.com/subject/1820156/" target="_blank">豆瓣电影<i data-feather='external-link'></i></a></span></p><h2>电子世界争霸战 TRON (1982)</h2><p><img src="../usr/uploads/2019/09/2634436273.jpg" alt="电子世界争霸战.jpg" title="电子世界争霸战.jpg"></p><p>这就是电影特效史的丰碑，它已经被时间证明了价值。 via 豆瓣用户</p><p>via <span class="external-link"><a href="https://movie.douban.com/subject/1293482/" target="_blank">豆瓣电影<i data-feather='external-link'></i></a></span></p><h2>创：战纪 TRON: Legacy (2010)</h2><p><img src="../usr/uploads/2019/09/2968747283.jpg" alt="创战纪.jpg" title="创战纪.jpg"></p><p><video src="http://vt1.doubanio.com/201909251820/3acd8d5bc2b8ed1f37116bdf99445cf9/view/movie/M/301230385.mp4" width="100%" height="320" controls="controls"></video></p><p>有没有跟上面那部有点像？那就对了。</p><p>via <span class="external-link"><a href="https://movie.douban.com/subject/2997134/?from=subject-page" target="_blank">豆瓣电影<i data-feather='external-link'></i></a></span></p><h2>阿基拉 Akira (1988)</h2><p><img src="../usr/uploads/2019/09/1279756284.jpg" alt="阿基拉.jpg" title="阿基拉.jpg"></p><p>无法超越的反乌托邦巨作 via 豆瓣用户</p><p>via 豆瓣电影</p><h2>湮灭 Annihilation (2018)</h2><p><img src="../usr/uploads/2019/09/1235918786.jpg" alt="湮灭.jpg" title="湮灭.jpg"></p><p>文科生看不懂《<span class="external-link"><a href="https://movie.douban.com/subject/21324900/" target="_blank">降临<i data-feather='external-link'></i></a></span>》，理科生看不懂《湮灭》。 via 豆瓣用户<br>看完湮灭出来 漫天飞雪 市中心灯光如昼 高楼上的液晶屏在播放芭蕾表演 车站里几个女生簇拥说笑着 突然觉得能平凡活着真好。 va 豆瓣用户</p><p>via <span class="external-link"><a href="https://movie.douban.com/subject/26384741/" target="_blank">豆瓣电影<i data-feather='external-link'></i></a></span></p><h2>头号玩家 Ready Player One (2018)</h2><p><img src="../usr/uploads/2019/09/1199049417.jpg" alt="头号玩家.jpg" title="头号玩家.jpg"></p><p><video src="http://vt1.doubanio.com/201909251834/d5b6f72017c3d240a16e1b89e31963e1/view/movie/M/302280844.mp4" width="100%" height="320" controls="controls"></video></p><p>斯皮尔伯格老爷子作品。</p><p>via <span class="external-link"><a href="https://movie.douban.com/subject/4920389/" target="_blank">豆瓣电影<i data-feather='external-link'></i></a></span></p><h2>超能陆战队 Big Hero 6 (2014)</h2><p><img src="../usr/uploads/2019/09/3702767400.jpg" alt="超能陆战队.jpg" title="超能陆战队.jpg"></p><p><video src="http://vt1.doubanio.com/201909251837/c8efbc4777ac9e05bfcb1e2d729b2fa3/view/movie/M/301700706.mp4" width="100%" height="320" controls="controls"></video></p><p>又是一个故事平平只靠细节讨巧的动画，但是没办法，就是超级吃这套啊！！ via 豆瓣用户</p><p>via <span class="external-link"><a href="https://movie.douban.com/subject/11026735/" target="_blank">豆瓣电影<i data-feather='external-link'></i></a></span></p><p>以上。</p><h2>附注</h2><p>1.<a href="969.html">在中国如何免费看HBO/网飞/Hulu（Netflix/奈飞）/剧集/电影/动漫/番剧，看这一篇就够了。 </a></p><hr class="content-copyright" style="margin-top:50px" /><blockquote class="content-copyright" style="font-style:normal"><p class="content-copyright">版权属于：<a class="content-copyright" target="_blank" href="https://t.me/limboprobot">http://t.me/limboprobot</a> TG 毒奶博主 Julia； <br>联系我们： <a class="content-copyright" target="_blank" href="../6.html">https://limbopro.xyz/6.html</a> 投稿或反馈或转载文章或交换友链； <br>电报频道： <a class="content-copyright" target="_blank" href="https://t.me/limboprossr">https://t.me/limboprossr</a> 及时收讯不失联； <br>必备技能： <a class="content-copyright" target="_blank" href="2910.html">https://limbopro.xyz/archives/2910.html</a> 如何访问任意被墙域名； <br>网站镜像： <a class="content-copyright" target="_blank" href="https://limbopro.github.io">https://limbopro.github.io</a> 每月更新；</p><p class="content-copyright">本文链接：<a class="content-copyright" href="2955.html">https://limbopro.xyz/archives/2955.html</a></p><p class="content-copyright">版权声明：<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本文采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a> 进行许可，转载请附上原文出处链接和本声明。</p></blockquote> </div>
 
 <div class="show-foot">
 <div class="notebook">
@@ -362,13 +368,14 @@
 
 <nav class="m-t-lg m-b-lg">
 <ul class="pager">
-<li class="next"> <a href="https://limbopro.xyz/archives/2929.html" title="纪录片丨徒手攀岩 Free Solo (2018)" data-toggle="tooltip"> 下一篇 </a></li> <li class="previous"> <a href="3004.html" title="《影响力》经典翻译版丨书单推荐第五期" data-toggle="tooltip"> 上一篇 </a></li>
+<li class="next"> <a class="box-shadow-wrap-normal" href="2929.html" title="纪录片丨徒手攀岩 Free Solo (2018)" data-toggle="tooltip">
+下一篇 </a></li> <li class="previous"> <a class="box-shadow-wrap-normal" href="3004.html" title="《影响力》经典翻译版丨书单推荐第五期" data-toggle="tooltip"> 上一篇 </a></li>
 </ul>
 </nav>
 
-<div id="disqus_thread"><script type="01692abe8de64011e41d9c2f-text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="adf24965-dd03-45f8-9fdf-3f1e953df737";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script></div>
+<div id="disqus_thread"><script type="940cb6940d095ee5b2a95033-text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="adf24965-dd03-45f8-9fdf-3f1e953df737";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script></div>
 <div id="disqus_thread"></div>
-<script type="01692abe8de64011e41d9c2f-text/javascript">
+<script type="940cb6940d095ee5b2a95033-text/javascript">
 
 
 /**
@@ -391,125 +398,115 @@
 </div>
 </div>
 
-<aside class="asideBar col w-md bg-white-only b-l bg-auto no-border-xs" role="complementary">
+<aside class="asideBar col w-md bg-white-only bg-auto no-border-xs" role="complementary">
 <div id="sidebar">
 <section id="tabs-4" class="widget widget_tabs clear">
 <div class="nav-tabs-alt no-js-hide">
-<ul class="nav nav-tabs nav-justified" role="tablist">
-<li class="active" role="presentation"> <a href="2955.html#widget-tabs-4-hots" role="tab" aria-controls="widget-tabs-4-hots" aria-expanded="true" data-toggle="tab"> <i class="glyphicon glyphicon-fire text-md text-muted wrapper-sm" aria-hidden="true"></i> <span class="sr-only">热门文章</span> </a></li>
-<li role="presentation"> <a href="2955.html#widget-tabs-4-random" role="tab" aria-controls="widget-tabs-4-random" aria-expanded="false" data-toggle="tab"> <i class="glyphicon glyphicon-transfer text-md text-muted wrapper-sm" aria-hidden="true"></i> <span class="sr-only">随机文章</span> </a></li>
+<ul class="nav nav-tabs nav-justified box-shadow-bottom-normal tablist" role="tablist">
+<li data-index="0" class="active" role="presentation"> <a href="2955.html#widget-tabs-4-hots" role="tab" aria-controls="widget-tabs-4-hots" aria-expanded="true" data-toggle="tab"><div class="sidebar-icon wrapper-sm"><i data-feather="thumbs-up"></i></div><span class="sr-only">热门文章</span> </a></li>
+<li data-index="2" role="presentation"> <a href="2955.html#widget-tabs-4-random" role="tab" aria-controls="widget-tabs-4-random" aria-expanded="false" data-toggle="tab"> <div class="sidebar-icon wrapper-sm"><i data-feather="gift"></i></div> <span class="sr-only">随机文章</span>
+</a></li>
+<span class="navs-slider-bar"></span>
 </ul>
 </div>
 <div class="tab-content">
 
 <div id="widget-tabs-4-hots" class="tab-pane  fade in wrapper-md active" role="tabpanel">
-<h3 class="widget-title m-t-none text-md">热门文章</h3>
+<h5 class="widget-title m-t-none text-md">热门文章</h5>
 <ul class="list-group no-bg no-borders pull-in m-b-none">
 <li class="list-group-item">
-<a href="https://limbopro.xyz/archives/3629.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/7.jpg" class="img-circle"></a>
+<a href="1423.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/10.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h"> <a href="https://limbopro.xyz/archives/3629.html" title="iOS 使用 Surge/Quantumult/Shadowrocket /QuantumultX 解锁 TikTok （国际版）区域限制（免拔卡）12.17.2019"> iOS 使用 Surge/Quantumult/Shadowrocket /QuantumultX 解锁 TikTok （国际版）区域限制（免拔卡）12.17.2019 </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">12975</span>
+<h4 class="h5 l-h text-second"> <a href="1423.html" title="卡车家族丨1080P秒开丨折后6.4元/月起丨50+节点丨SSR机场推荐（学生党首选）"> 卡车家族丨1080P秒开丨折后6.4元/月起丨50+节点丨SSR机场推荐（学生党首选） </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">23800</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="https://limbopro.xyz/archives/997.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="https://limbopro.xyz/usr/themes/handsome/usr/img/sj2/5.jpg" class="img-circle"></a>
+<a href="2787.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/5.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h"> <a href="https://limbopro.xyz/archives/997.html" title="CDN下源站IP泄露检测丨Censys"> CDN下源站IP泄露检测丨Censys </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">12680</span>
+<h4 class="h5 l-h text-second"> <a href="2787.html" title="高速内网IPLC专线机场丨4K秒开丨14.99元/月起丨京港/沪港/深港/深新/沪美线路（贵在稳定）"> 高速内网IPLC专线机场丨4K秒开丨14.99元/月起丨京港/沪港/深港/深新/沪美线路（贵在稳定） </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">20898</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="https://limbopro.xyz/archives/3235.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/6.jpg" class="img-circle"></a>
+<a href="969.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/8.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h"> <a href="https://limbopro.xyz/archives/3235.html" title="无需安装谷歌服务框架，在线下载Google Play应用（APK）的方法。（附Go谷歌安装器下载与安装）"> 无需安装谷歌服务框架，在线下载Google Play应用（APK）的方法。（附Go谷歌安装器下载与安装） </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">12372</span>
+<h4 class="h5 l-h text-second"> <a href="969.html" title="在中国看Netflix丨HBO丨Hulu丨Amazon Prime Video丨Apple TV丨或其他任意剧集。"> 在中国看Netflix丨HBO丨Hulu丨Amazon Prime Video丨Apple TV丨或其他任意剧集。 </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">19251</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="https://limbopro.xyz/archives/nicegram.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/8.jpg" class="img-circle"></a>
+<a href="n3ro.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/3.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h"> <a href="https://limbopro.xyz/archives/nicegram.html" title="iOS 怎么看电报开车群组/频道内容（宅男指北，苹果用户电报开车之道）"> iOS 怎么看电报开车群组/频道内容（宅男指北，苹果用户电报开车之道） </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">10404</span>
+<h4 class="h5 l-h text-second"> <a href="n3ro.html" title="44+条高速内网IPLC专线丨N3RO丨折后14.4元/月起丨线路多多丨川日/川港/京港/京美/京德/沪韩/沪日/沪港/深新/深港/沪新/杭港/沪美/川日/游戏加速"> 44+条高速内网IPLC专线丨N3RO丨折后14.4元/月起丨线路多多丨川日/川港/京港/京美/京德/沪韩/沪日/沪港/深新/深港/沪新/杭港/沪美/川日/游戏加速 </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">16853</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="https://limbopro.xyz/archives/1215.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/4.jpg" class="img-circle"></a>
+<a href="3629.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/6.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h"> <a href="https://limbopro.xyz/archives/1215.html" title="Telegram群组/频道/机器人推荐"> Telegram群组/频道/机器人推荐 </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">9165</span>
+<h4 class="h5 l-h text-second"> <a href="3629.html" title="iOS 使用 Surge/Quantumult/Shadowrocket /QuantumultX 解锁 TikTok （国际版）区域限制（免拔卡）12.17.2019"> iOS 使用 Surge/Quantumult/Shadowrocket /QuantumultX 解锁 TikTok （国际版）区域限制（免拔卡）12.17.2019 </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">13093</span>
 </span>
 </small></div></li> </ul>
 </div>
 
 <div id="widget-tabs-4-random" class="tab-pane fade wrapper-md no-js-show" role="tabpanel">
-<h3 class="widget-title m-t-none text-md">随机文章</h3>
+<h5 class="widget-title m-t-none text-md">随机文章</h5>
 <ul class="list-group no-bg no-borders pull-in">
 <li class="list-group-item">
-<a href="https://limbopro.xyz/archives/nicegram.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/7.jpg" class="img-circle"></a>
+<a href="19.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/10.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h"> <a href="https://limbopro.xyz/archives/nicegram.html" title="iOS 怎么看电报开车群组/频道内容（宅男指北，苹果用户电报开车之道）"> iOS 怎么看电报开车群组/频道内容（宅男指北，苹果用户电报开车之道） </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">10404</span>
+<h4 class="h5 l-h text-second"> <a href="19.html" title="韩国画家丨zipcy 梁世恩"> 韩国画家丨zipcy 梁世恩 </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">3156</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="https://limbopro.xyz/archives/1475.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="https://limbopro.xyz/usr/themes/handsome/usr/img/sj2/5.jpg" class="img-circle"></a>
+<a href="323.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/5.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h"> <a href="https://limbopro.xyz/archives/1475.html" title="全职高手丨2019"> 全职高手丨2019 </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">2875</span>
+<h4 class="h5 l-h text-second"> <a href="323.html" title="Ctrl 键的妙用"> Ctrl 键的妙用 </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">4495</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="https://limbopro.xyz/archives/1092.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/6.jpg" class="img-circle"></a>
+<a href="2056.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/8.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h"> <a href="https://limbopro.xyz/archives/1092.html" title="YouTube 频道推荐（科技/技术/人工智能等特别有意思的频道）"> YouTube 频道推荐（科技/技术/人工智能等特别有意思的频道） </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">3894</span>
+<h4 class="h5 l-h text-second"> <a href="2056.html" title="Cloudflare 必知知识点丨无限计量与搜索引擎机器人白名单"> Cloudflare 必知知识点丨无限计量与搜索引擎机器人白名单 </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">1483</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="2713.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/8.jpg" class="img-circle"></a>
+<a href="2955.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/3.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h"> <a href="2713.html" title="Linux 磁盘清理大文件及大文件夹查找命令（文件大小排序/磁盘清理）"> Linux 磁盘清理大文件及大文件夹查找命令（文件大小排序/磁盘清理） </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">1600</span>
+<h4 class="h5 l-h text-second"> <a href="2955.html" title="有哪些值得反复观看的科幻电影（一个世纪内）"> 有哪些值得反复观看的科幻电影（一个世纪内） </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">1372</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="https://limbopro.xyz/archives/670.html" class="pull-left thumb-sm m-r"><img style="height: 40px!important;width: 40px!important;" src="../usr/themes/handsome/usr/img/sj2/4.jpg" class="img-circle"></a>
+<a href="ssrspeed.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/6.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h"> <a href="https://limbopro.xyz/archives/670.html" title="2001太空漫游丨本周电影推荐"> 2001太空漫游丨本周电影推荐 </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">3165</span>
+<h4 class="h5 l-h text-second"> <a href="ssrspeed.html" title="StairSpeedTest/SSRSpeed 机场测速之小白入门指南"> StairSpeedTest/SSRSpeed 机场测速之小白入门指南 </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">1757</span>
 </span>
 </small></div></li> </ul>
 </div>
 </div>
 </section>
 
-<section id="categories-2" class="widget widget_categories wrapper-md clear">
-<h3 class="widget-title m-t-none text-md">博客信息</h3>
-<ul class="list-group">
-<li class="list-group-item"> <i class="glyphicon glyphicon-file text-muted"></i> <span class="badge
-           pull-right">209</span>文章数目</li>
-<li class="list-group-item"> <i class="glyphicon glyphicon-comment text-muted"></i> <span class="badge
+<section id="blog_info" class="widget widget_categories wrapper-md clear">
+<h5 class="widget-title m-t-none text-md">博客信息</h5>
+<ul class="list-group box-shadow-wrap-normal">
+<li class="list-group-item text-second"><span class="blog-info-icons"> <i data-feather="award"></i></span> <span class="badge
+           pull-right">213</span>文章数目</li>
+<li class="list-group-item text-second"> <span class="blog-info-icons"> <i data-feather="message-circle"></i></span>
+<span class="badge
            pull-right">5</span>评论数目</li>
-<li class="list-group-item"> <i class="glyphicon glyphicon-equalizer text-muted"></i> <span class="badge
-           pull-right">224天</span>运行天数</li>
-<li class="list-group-item"> <i class="glyphicon glyphicon-refresh text-muted"></i> <span class="badge
-           pull-right">5 天前</span>最后活动</li>
+<li class="list-group-item text-second"><span class="blog-info-icons"> <i data-feather="calendar"></i></span>
+<span class="badge
+           pull-right">225天</span>运行天数</li>
+<li class="list-group-item text-second"><span class="blog-info-icons"> <i data-feather="activity"></i></span> <span class="badge
+           pull-right">12 小时前</span>最后活动</li>
 </ul>
 </section>
 
-<div id="tag_toc_body">
-<section id="tag_toc" class="widget widget_categories wrapper-md clear">
-<h3 class="widget-title m-t-none text-md">文章目录</h3>
-<div class="tags l-h-2x">
-<div id="toc"></div>
-</div>
+
+<section id="tag_cloud-2" class="widget widget_tag_cloud wrapper-md clear">
+<h5 class="widget-title m-t-none text-md">标签云</h5>
+<div class="post-tags tags l-h-2x">
+<a href="../tag/电影推荐/index.html">电影推荐</a> <a href="../tag/科幻电影/index.html">科幻电影</a> </div>
 </section>
-<div class="hidden-lg tocify-mobile-panel panel panel-default
-              setting_body_panel" aria-hidden="true">
-<button class="btn btn-default no-shadow pos-abt" data-toggle="tooltip" data-placement="left" data-original-title="目录" data-toggle-class=".tocify-mobile-panel=active">
-<i class="glyphicon glyphicon-resize-full"></i>
-</button>
-<div class="panel-heading">文章目录</div>
-<div class="setting_body toc-mobile-body">
-<div class="panel-body">
-<div class="tocTree"></div>
-</div>
-</div>
-</div>
-</div>
 </div>
 </aside>
 
@@ -519,10 +516,10 @@
 <div class="page">
 <h1 class="title">有哪些值得反复观看的科幻电影（一个世纪内）</h1>
 <div class="metadata singleline"><a href="2955.html#" rel="author" class="byline">毒奶</a>&nbsp;•&nbsp;<span class="delimiter"></span><time class="date">2019 年 09 月 25 日</time></div>
-<p>探讨未来的太空旅行、机器人、外星人和人类生存的预言。 via <a href="https://www.douban.com/doulist/44514350/" target="_blank">豆瓣</a></p><h2>为什么要做科幻电影推荐</h2><p><img src="../usr/uploads/2019/09/3016875588.jpg" alt="Earth.jpg" title="Earth.jpg"></p><p>RT.</p><h2>主理人的科幻电影片单</h2><p>本片单基于 <a href="https://www.douban.com/doulist/44514350/?start=25&sort=seq&playable=0&sub_type=" target="_blank">最经典的20部科幻电影（300多部）</a>，但我从中挑选了我个人喜欢的，如下。</p><p>如需找到相关电影的资源，请参考：<a href="https://limbopro.xyz/archives/969.html" target="_blank">在中国如何免费看HBO/网飞/Hulu（Netflix/奈飞）/剧集/电影/动漫/番剧，看这一篇就够了</a> 基本上啥电影都能找到。</p><p>以上。</p><hr><h2>09.25.2019更新</h2><h2>2001太空漫游 2001: A Space Odyssey (1968)</h2><p><img src="../usr/uploads/2019/09/3289054947.jpg" alt="太空漫游.jpg" title="太空漫游.jpg"></p><p><video src="http://vt1.doubanio.com/201909251810/189d0a303fa5dc21195a4440744c1bbe/view/movie/M/402300949.mp4" width="100%" height="320" controls="controls"></video></p><p>这不是照着剧本拍的，而是曲谱。 via 豆瓣用户</p><p>始祖级电影。</p><h3>在线观看</h3><p>奈菲影视：<a href="https://www.nfmovies.com/detail/?15036.html" target="_blank">在线观看</a> 或使用 <a href="../search.html" target="_blank">毒奶搜索</a> 搜索资源；</p><p>via <a href="https://movie.douban.com/subject/1292226/?from=subject-page" target="_blank">豆瓣电影</a></p><h2>异次元骇客 The Thirteenth Floor (1999)</h2><p><img src="../usr/uploads/2019/09/4035574348.jpg" alt="异次元骇客.jpg" title="异次元骇客.jpg"></p><p>奈菲影视：<a href="https://www.nfmovies.com/detail/?3992.html" target="_blank">在线观看</a> 或使用 <a href="../search.html" target="_blank">毒奶搜索</a> 搜索资源；</p><p>via <a href="https://movie.douban.com/subject/1300282/?from=subject-page" target="_blank">豆瓣电影</a></p><h3>异形系列</h3><p><img src="../usr/uploads/2019/09/3189919808.jpg" alt="Alien.jpg" title="Alien.jpg"></p><p>1.异形 Alien (1979)<br>2.异形2 Aliens (1986)<br>3.异形3 Alien³ (1992)<br>4.异形4 Alien: Resurrection (1997)<br>5.普罗米修斯 Prometheus (2012)<br>6.异形：契约 Alien: Covenant (2017)</p><p>雷德利斯科特导演作品，就冲着这个也要看。</p><p>奈菲影视：<a href="https://www.nfmovies.com/detail/?10731.html" target="_blank">在线观看</a> 或使用 <a href="../search.html" target="_blank">毒奶搜索</a> 搜索资源；</p><p>via <a href="https://movie.douban.com/subject_search?search_text=%E5%BC%82%E5%BD%A2&cat=1002" target="_blank">豆瓣</a></p><h2>火星救援 The Martian (2015)</h2><p><img src="../usr/uploads/2019/09/2541568465.jpg" alt="火星救援.jpg" title="火星救援.jpg"></p><p>片长: 144分钟 / 151分钟(加长版)</p><p>也是雷德利斯科特作品。</p><p>奈菲影视：<a href="https://www.nfmovies.com/detail/?22016.html" target="_blank">在线观看</a> 或使用 <a href="../search.html" target="_blank">毒奶搜索</a> 搜索资源；</p><p>via <a href="https://movie.douban.com/subject/25864085/" target="_blank">豆瓣</a></p><h2>星际穿越 Interstellar (2014)</h2><p><img src="../usr/uploads/2019/09/2427587613.jpg" alt="星际穿越.jpg" title="星际穿越.jpg"></p><p><video src="http://vt1.doubanio.com/201909251719/50fcce682cffb1b6eaaa383a71be55d7/view/movie/M/301650578.mp4" width="100%" height="320" controls="controls"></video></p><p>片长: 169分钟</p><p>克里斯托弗·诺兰导演作品。</p><p>奈菲影视：<a href="https://www.nfmovies.com/detail/?28837.html" target="_blank">在线观看</a> 或使用 <a href="../search.html" target="_blank">毒奶搜索</a> 搜索资源；</p><p>via <a href="https://movie.douban.com/subject/1889243/?from=subject-page" target="_blank">豆瓣</a></p><h2>黑客帝国系列</h2><p><img src="../usr/uploads/2019/09/3527202078.jpg" alt="黑客帝国.jpg" title="黑客帝国.jpg"></p><p>黑客帝国 The Matrix (1999)</p><p><video src="http://vt1.doubanio.com/201909251724/d48ad77575e87cceb5035bfa9c7a00c7/view/movie/M/402470591.mp4" width="100%" height="320" controls="controls"></video></p><p>黑客帝国2：重装上阵 The Matrix Reloaded (2003)</p><p><video src="http://vt1.doubanio.com/201909251726/1a7d337767e50cf6e08b1940f702b556/view/movie/M/301020673-1.mp4" width="100%" height="320" controls="controls"></video></p><p>黑客帝国3：矩阵革命 The Matrix Revolutions (2003)</p><p><video src="http://vt1.doubanio.com/201909251725/59ddd7a331ee7773210f2823ec7fb99e/view/movie/M/301370573.mp4" width="100%" height="320" controls="controls"></video></p><p>黑客帝国4 The Matrix 4 (2022)</p><p>via 豆瓣电影</p><h2>她 Her (2013)</h2><p><img src="../usr/uploads/2019/09/2871254916.jpg" alt="她.jpg" title="她.jpg"></p><p><video src="http://vt1.doubanio.com/201909251730/98b4c435b039b94a44bb3de3931c0457/view/movie/M/301470407.mp4" width="100%" height="320" controls="controls"></video></p><p>片长：126分钟<br>奈菲影视：<a href="https://www.nfmovies.com/detail/?31317.html" target="_blank">在线观看</a> 或使用 <a href="../search.html" target="_blank">毒奶搜索</a> 搜索资源；</p><p>via <a href="https://movie.douban.com/subject/6722879/" target="_blank">豆瓣电影</a></p><h2>这个男人来自地球 The Man from Earth (2007)</h2><p><img src="../usr/uploads/2019/09/3013251270.jpg" alt="这跟男人来自地球.jpg" title="这跟男人来自地球.jpg"></p><p>豆瓣电影TOP250</p><p>奈菲影视：<a href="https://www.nfmovies.com/detail/?3915.html" target="_blank">在线观看</a> 或使用 <a href="../search.html" target="_blank">毒奶搜索</a> 搜索资源；</p><p>via <a href="https://movie.douban.com/subject/2300586/?from=subject-page" target="_blank">豆瓣电影</a></p><h2>疯狂的麦克斯4：狂暴之路 Mad Max: Fury Road (2015)</h2><p><img src="../usr/uploads/2019/09/373584090.jpg" alt="疯狂的麦克斯.jpg" title="疯狂的麦克斯.jpg"></p><p><video src="http://vt1.doubanio.com/201909251737/b412f72cdbc6e9d4b864e2f929ad2b60/view/movie/M/301730798.mp4" width="100%" height="320" controls="controls"></video></p><p>一顿猛夸。</p><p>豆瓣电影TOP250</p><p>奈菲影视： <a href="https://www.nfmovies.com/detail/?18474.html" target="_blank">在线观看</a> 或使用 <a href="../search.html" target="_blank">毒奶搜索</a> 搜索资源；</p><p>via <a href="https://movie.douban.com/subject/3592854/" target="_blank">豆瓣电影</a></p><h2>星际迷航 Star Trek (2009)</h2><p><img src="../usr/uploads/2019/09/2617358859.jpg" alt="星际迷航.jpg" title="星际迷航.jpg"></p><p><video src="http://vt1.doubanio.com/201909251739/04a38866006557a0c6c361e666ebe501/view/movie/M/301020674-1.mp4" width="100%" height="320" controls="controls"></video></p><p>奈菲影视： <a href="https://www.nfmovies.com/detail/?4178.html" target="_blank">在线观看</a> 或使用 <a href="../search.html" target="_blank">毒奶搜索</a> 搜索资源；</p><p>via <a href="https://movie.douban.com/subject/2132932/" target="_blank">豆瓣电影</a></p><h2>星球大战系列</h2><p>1.星球大战 Star Wars (1977)</p><p><img src="../usr/uploads/2019/09/238934804.jpg" alt="星球大战.jpg" title="星球大战.jpg"></p><p>不敢相信是77年作品！传奇啊！C3PO真啰嗦。= = via 豆瓣用户</p><p>奈菲影视： <a href="https://www.nfmovies.com/detail/?9130.html" target="_blank">在线观看</a> 或使用 <a href="../search.html" target="_blank">毒奶搜索</a> 搜索资源；</p><h2>攻壳机动队 攻殻機動隊 (1995)</h2><p><img src="../usr/uploads/2019/09/3106545799.jpg" alt="攻壳机动队.jpg" title="攻壳机动队.jpg"></p><p><video src="http://vt1.doubanio.com/201909251750/eb68c9bdec654955e9f32cdb2dd4b20d/view/movie/M/302140555.mp4" width="100%" height="320" controls="controls"></video></p><p>甚至觉得比后面寡姐的真人版还要好看。</p><p>奈菲影视： <a href="https://www.nfmovies.com/detail/?31737.html" target="_blank">在线观看</a> 或使用 <a href="../search.html" target="_blank">毒奶搜索</a> 搜索资源；</p><p>via <a href="https://movie.douban.com/subject/1291936/" target="_blank">豆瓣电影</a></p><h2>大都会 Metropolis (1927)</h2><p><img src="../usr/uploads/2019/09/4234438105.jpg" alt="大都会.jpg" title="大都会.jpg"></p><p>一百多年的电影，你敢想？</p><p>片长: 153分钟</p><p>奈菲影视： <a href="https://www.nfmovies.com/detail/?31618.html" target="_blank">在线观看</a> 或使用 <a href="../search.html" target="_blank">毒奶搜索</a> 搜索资源；</p><p>via <a href="https://movie.douban.com/subject/1298107/" target="_blank">豆瓣电影</a></p><h2>机器人总动员 WALL·E (2008)</h2><p><img src="../usr/uploads/2019/09/3099654507.jpg" alt="机器人总动员.jpg" title="机器人总动员.jpg"></p><p><video src="http://vt1.doubanio.com/201909251810/c9fc740df86a3bb573e4a55076cab4f0/view/movie/M/301080764.mp4" width="100%" height="320" controls="controls"></video></p><p>奈菲影视： <a href="https://www.nfmovies.com/detail/?3354.html" target="_blank">在线观看</a> 或使用 <a href="../search.html" target="_blank">毒奶搜索</a> 搜索资源</p><p>via <a href="https://movie.douban.com/subject/2131459/" target="_blank">豆瓣电影</a></p><h2>我是传奇 I Am Legend (2007)</h2><p><img src="../usr/uploads/2019/09/3838424990.jpg" alt="我是传奇.jpg" title="我是传奇.jpg"></p><p><video src="http://vt1.doubanio.com/201909251813/326463cb1fe8263f7f4258c44695a707/view/movie/M/301420462.mp4" width="100%" height="320" controls="controls"></video></p><p>结尾居然还真死了。非得翘了才是传奇么。。 via 豆瓣用户</p><p>via <a href="https://movie.douban.com/subject/1820156/" target="_blank">豆瓣电影</a></p><h2>电子世界争霸战 TRON (1982)</h2><p><img src="../usr/uploads/2019/09/2634436273.jpg" alt="电子世界争霸战.jpg" title="电子世界争霸战.jpg"></p><p>这就是电影特效史的丰碑，它已经被时间证明了价值。 via 豆瓣用户</p><p>via <a href="https://movie.douban.com/subject/1293482/" target="_blank">豆瓣电影</a></p><h2>创：战纪 TRON: Legacy (2010)</h2><p><img src="../usr/uploads/2019/09/2968747283.jpg" alt="创战纪.jpg" title="创战纪.jpg"></p><p><video src="http://vt1.doubanio.com/201909251820/3acd8d5bc2b8ed1f37116bdf99445cf9/view/movie/M/301230385.mp4" width="100%" height="320" controls="controls"></video></p><p>有没有跟上面那部有点像？那就对了。</p><p>via <a href="https://movie.douban.com/subject/2997134/?from=subject-page" target="_blank">豆瓣电影</a></p><h2>阿基拉 Akira (1988)</h2><p><img src="../usr/uploads/2019/09/1279756284.jpg" alt="阿基拉.jpg" title="阿基拉.jpg"></p><p>无法超越的反乌托邦巨作 via 豆瓣用户</p><p>via 豆瓣电影</p><h2>湮灭 Annihilation (2018)</h2><p><img src="../usr/uploads/2019/09/1235918786.jpg" alt="湮灭.jpg" title="湮灭.jpg"></p><p>文科生看不懂《<a href="https://movie.douban.com/subject/21324900/" target="_blank">降临</a>》，理科生看不懂《湮灭》。 via 豆瓣用户<br>看完湮灭出来 漫天飞雪 市中心灯光如昼 高楼上的液晶屏在播放芭蕾表演 车站里几个女生簇拥说笑着 突然觉得能平凡活着真好。 va 豆瓣用户</p><p>via <a href="https://movie.douban.com/subject/26384741/" target="_blank">豆瓣电影</a></p><h2>头号玩家 Ready Player One (2018)</h2><p><img src="../usr/uploads/2019/09/1199049417.jpg" alt="头号玩家.jpg" title="头号玩家.jpg"></p><p><video src="http://vt1.doubanio.com/201909251834/d5b6f72017c3d240a16e1b89e31963e1/view/movie/M/302280844.mp4" width="100%" height="320" controls="controls"></video></p><p>斯皮尔伯格老爷子作品。</p><p>via <a href="https://movie.douban.com/subject/4920389/" target="_blank">豆瓣电影</a></p><h2>超能陆战队 Big Hero 6 (2014)</h2><p><img src="../usr/uploads/2019/09/3702767400.jpg" alt="超能陆战队.jpg" title="超能陆战队.jpg"></p><p><video src="http://vt1.doubanio.com/201909251837/c8efbc4777ac9e05bfcb1e2d729b2fa3/view/movie/M/301700706.mp4" width="100%" height="320" controls="controls"></video></p><p>又是一个故事平平只靠细节讨巧的动画，但是没办法，就是超级吃这套啊！！ via 豆瓣用户</p><p>via <a href="https://movie.douban.com/subject/11026735/" target="_blank">豆瓣电影</a></p><p>以上。</p><h2>附注</h2><p>1.<a href="https://limbopro.xyz/archives/969.html" target="_blank">在中国如何免费看HBO/网飞/Hulu（Netflix/奈飞）/剧集/电影/动漫/番剧，看这一篇就够了。 </a></p><hr class="content-copyright" style="margin-top:50px" /><blockquote class="content-copyright" style="font-style:normal"><p class="content-copyright">版权属于：<a class="content-copyright" target="_blank" href="https://t.me/limboprobot">http://t.me/limboprobot</a> TG 毒奶博主 Julia； <br>联系我们： <a class="content-copyright" target="_blank" href="../6.html">https://limbopro.xyz/6.html</a> 投稿或反馈或转载文章或交换友链； <br>电报频道： <a class="content-copyright" target="_blank" href="https://t.me/limboprossr">https://t.me/limboprossr</a> 及时收讯不失联； <br>必备技能： <a class="content-copyright" target="_blank" href="https://limbopro.xyz/archives/2910.html">https://limbopro.xyz/archives/2910.html</a> 如何访问任意被墙域名； <br>网站镜像： <a class="content-copyright" target="_blank" href="https://limbopro.github.io">https://limbopro.github.io</a> 每月更新；</p><p class="content-copyright">本文链接：<a class="content-copyright" href="2955.html">https://limbopro.xyz/archives/2955.html</a></p><p class="content-copyright">版权声明：<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本文采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a> 进行许可，转载请附上原文出处链接和本声明。</p></blockquote>
+<p>探讨未来的太空旅行、机器人、外星人和人类生存的预言。 via <span class="external-link"><a href="https://www.douban.com/doulist/44514350/" target="_blank">豆瓣<i data-feather='external-link'></i></a></span></p><h2>为什么要做科幻电影推荐</h2><p><img src="../usr/uploads/2019/09/3016875588.jpg" alt="Earth.jpg" title="Earth.jpg"></p><p>RT.</p><h2>主理人的科幻电影片单</h2><p>本片单基于 <span class="external-link"><a href="https://www.douban.com/doulist/44514350/?start=25&sort=seq&playable=0&sub_type=" target="_blank">最经典的20部科幻电影（300多部）<i data-feather='external-link'></i></a></span>，但我从中挑选了我个人喜欢的，如下。</p><p>如需找到相关电影的资源，请参考：<a href="969.html">在中国如何免费看HBO/网飞/Hulu（Netflix/奈飞）/剧集/电影/动漫/番剧，看这一篇就够了</a> 基本上啥电影都能找到。</p><p>以上。</p><hr><h2>09.25.2019更新</h2><h2>2001太空漫游 2001: A Space Odyssey (1968)</h2><p><img src="../usr/uploads/2019/09/3289054947.jpg" alt="太空漫游.jpg" title="太空漫游.jpg"></p><p><video src="http://vt1.doubanio.com/201909251810/189d0a303fa5dc21195a4440744c1bbe/view/movie/M/402300949.mp4" width="100%" height="320" controls="controls"></video></p><p>这不是照着剧本拍的，而是曲谱。 via 豆瓣用户</p><p>始祖级电影。</p><h3>在线观看</h3><p>奈菲影视：<span class="external-link"><a href="https://www.nfmovies.com/detail/?15036.html" target="_blank">在线观看<i data-feather='external-link'></i></a></span> 或使用 <a href="../search.html">毒奶搜索</a> 搜索资源；</p><p>via <span class="external-link"><a href="https://movie.douban.com/subject/1292226/?from=subject-page" target="_blank">豆瓣电影<i data-feather='external-link'></i></a></span></p><h2>异次元骇客 The Thirteenth Floor (1999)</h2><p><img src="../usr/uploads/2019/09/4035574348.jpg" alt="异次元骇客.jpg" title="异次元骇客.jpg"></p><p>奈菲影视：<span class="external-link"><a href="https://www.nfmovies.com/detail/?3992.html" target="_blank">在线观看<i data-feather='external-link'></i></a></span> 或使用 <a href="../search.html">毒奶搜索</a> 搜索资源；</p><p>via <span class="external-link"><a href="https://movie.douban.com/subject/1300282/?from=subject-page" target="_blank">豆瓣电影<i data-feather='external-link'></i></a></span></p><h3>异形系列</h3><p><img src="../usr/uploads/2019/09/3189919808.jpg" alt="Alien.jpg" title="Alien.jpg"></p><p>1.异形 Alien (1979)<br>2.异形2 Aliens (1986)<br>3.异形3 Alien³ (1992)<br>4.异形4 Alien: Resurrection (1997)<br>5.普罗米修斯 Prometheus (2012)<br>6.异形：契约 Alien: Covenant (2017)</p><p>雷德利斯科特导演作品，就冲着这个也要看。</p><p>奈菲影视：<span class="external-link"><a href="https://www.nfmovies.com/detail/?10731.html" target="_blank">在线观看<i data-feather='external-link'></i></a></span> 或使用 <a href="../search.html">毒奶搜索</a> 搜索资源；</p><p>via <span class="external-link"><a href="https://movie.douban.com/subject_search?search_text=%E5%BC%82%E5%BD%A2&cat=1002" target="_blank">豆瓣<i data-feather='external-link'></i></a></span></p><h2>火星救援 The Martian (2015)</h2><p><img src="../usr/uploads/2019/09/2541568465.jpg" alt="火星救援.jpg" title="火星救援.jpg"></p><p>片长: 144分钟 / 151分钟(加长版)</p><p>也是雷德利斯科特作品。</p><p>奈菲影视：<span class="external-link"><a href="https://www.nfmovies.com/detail/?22016.html" target="_blank">在线观看<i data-feather='external-link'></i></a></span> 或使用 <a href="../search.html">毒奶搜索</a> 搜索资源；</p><p>via <span class="external-link"><a href="https://movie.douban.com/subject/25864085/" target="_blank">豆瓣<i data-feather='external-link'></i></a></span></p><h2>星际穿越 Interstellar (2014)</h2><p><img src="../usr/uploads/2019/09/2427587613.jpg" alt="星际穿越.jpg" title="星际穿越.jpg"></p><p><video src="http://vt1.doubanio.com/201909251719/50fcce682cffb1b6eaaa383a71be55d7/view/movie/M/301650578.mp4" width="100%" height="320" controls="controls"></video></p><p>片长: 169分钟</p><p>克里斯托弗·诺兰导演作品。</p><p>奈菲影视：<span class="external-link"><a href="https://www.nfmovies.com/detail/?28837.html" target="_blank">在线观看<i data-feather='external-link'></i></a></span> 或使用 <a href="../search.html">毒奶搜索</a> 搜索资源；</p><p>via <span class="external-link"><a href="https://movie.douban.com/subject/1889243/?from=subject-page" target="_blank">豆瓣<i data-feather='external-link'></i></a></span></p><h2>黑客帝国系列</h2><p><img src="../usr/uploads/2019/09/3527202078.jpg" alt="黑客帝国.jpg" title="黑客帝国.jpg"></p><p>黑客帝国 The Matrix (1999)</p><p><video src="http://vt1.doubanio.com/201909251724/d48ad77575e87cceb5035bfa9c7a00c7/view/movie/M/402470591.mp4" width="100%" height="320" controls="controls"></video></p><p>黑客帝国2：重装上阵 The Matrix Reloaded (2003)</p><p><video src="http://vt1.doubanio.com/201909251726/1a7d337767e50cf6e08b1940f702b556/view/movie/M/301020673-1.mp4" width="100%" height="320" controls="controls"></video></p><p>黑客帝国3：矩阵革命 The Matrix Revolutions (2003)</p><p><video src="http://vt1.doubanio.com/201909251725/59ddd7a331ee7773210f2823ec7fb99e/view/movie/M/301370573.mp4" width="100%" height="320" controls="controls"></video></p><p>黑客帝国4 The Matrix 4 (2022)</p><p>via 豆瓣电影</p><h2>她 Her (2013)</h2><p><img src="../usr/uploads/2019/09/2871254916.jpg" alt="她.jpg" title="她.jpg"></p><p><video src="http://vt1.doubanio.com/201909251730/98b4c435b039b94a44bb3de3931c0457/view/movie/M/301470407.mp4" width="100%" height="320" controls="controls"></video></p><p>片长：126分钟<br>奈菲影视：<span class="external-link"><a href="https://www.nfmovies.com/detail/?31317.html" target="_blank">在线观看<i data-feather='external-link'></i></a></span> 或使用 <a href="../search.html">毒奶搜索</a> 搜索资源；</p><p>via <span class="external-link"><a href="https://movie.douban.com/subject/6722879/" target="_blank">豆瓣电影<i data-feather='external-link'></i></a></span></p><h2>这个男人来自地球 The Man from Earth (2007)</h2><p><img src="../usr/uploads/2019/09/3013251270.jpg" alt="这跟男人来自地球.jpg" title="这跟男人来自地球.jpg"></p><p>豆瓣电影TOP250</p><p>奈菲影视：<span class="external-link"><a href="https://www.nfmovies.com/detail/?3915.html" target="_blank">在线观看<i data-feather='external-link'></i></a></span> 或使用 <a href="../search.html">毒奶搜索</a> 搜索资源；</p><p>via <span class="external-link"><a href="https://movie.douban.com/subject/2300586/?from=subject-page" target="_blank">豆瓣电影<i data-feather='external-link'></i></a></span></p><h2>疯狂的麦克斯4：狂暴之路 Mad Max: Fury Road (2015)</h2><p><img src="../usr/uploads/2019/09/373584090.jpg" alt="疯狂的麦克斯.jpg" title="疯狂的麦克斯.jpg"></p><p><video src="http://vt1.doubanio.com/201909251737/b412f72cdbc6e9d4b864e2f929ad2b60/view/movie/M/301730798.mp4" width="100%" height="320" controls="controls"></video></p><p>一顿猛夸。</p><p>豆瓣电影TOP250</p><p>奈菲影视： <span class="external-link"><a href="https://www.nfmovies.com/detail/?18474.html" target="_blank">在线观看<i data-feather='external-link'></i></a></span> 或使用 <a href="../search.html">毒奶搜索</a> 搜索资源；</p><p>via <span class="external-link"><a href="https://movie.douban.com/subject/3592854/" target="_blank">豆瓣电影<i data-feather='external-link'></i></a></span></p><h2>星际迷航 Star Trek (2009)</h2><p><img src="../usr/uploads/2019/09/2617358859.jpg" alt="星际迷航.jpg" title="星际迷航.jpg"></p><p><video src="http://vt1.doubanio.com/201909251739/04a38866006557a0c6c361e666ebe501/view/movie/M/301020674-1.mp4" width="100%" height="320" controls="controls"></video></p><p>奈菲影视： <span class="external-link"><a href="https://www.nfmovies.com/detail/?4178.html" target="_blank">在线观看<i data-feather='external-link'></i></a></span> 或使用 <a href="../search.html">毒奶搜索</a> 搜索资源；</p><p>via <span class="external-link"><a href="https://movie.douban.com/subject/2132932/" target="_blank">豆瓣电影<i data-feather='external-link'></i></a></span></p><h2>星球大战系列</h2><p>1.星球大战 Star Wars (1977)</p><p><img src="../usr/uploads/2019/09/238934804.jpg" alt="星球大战.jpg" title="星球大战.jpg"></p><p>不敢相信是77年作品！传奇啊！C3PO真啰嗦。= = via 豆瓣用户</p><p>奈菲影视： <span class="external-link"><a href="https://www.nfmovies.com/detail/?9130.html" target="_blank">在线观看<i data-feather='external-link'></i></a></span> 或使用 <a href="../search.html">毒奶搜索</a> 搜索资源；</p><h2>攻壳机动队 攻殻機動隊 (1995)</h2><p><img src="../usr/uploads/2019/09/3106545799.jpg" alt="攻壳机动队.jpg" title="攻壳机动队.jpg"></p><p><video src="http://vt1.doubanio.com/201909251750/eb68c9bdec654955e9f32cdb2dd4b20d/view/movie/M/302140555.mp4" width="100%" height="320" controls="controls"></video></p><p>甚至觉得比后面寡姐的真人版还要好看。</p><p>奈菲影视： <span class="external-link"><a href="https://www.nfmovies.com/detail/?31737.html" target="_blank">在线观看<i data-feather='external-link'></i></a></span> 或使用 <a href="../search.html">毒奶搜索</a> 搜索资源；</p><p>via <span class="external-link"><a href="https://movie.douban.com/subject/1291936/" target="_blank">豆瓣电影<i data-feather='external-link'></i></a></span></p><h2>大都会 Metropolis (1927)</h2><p><img src="../usr/uploads/2019/09/4234438105.jpg" alt="大都会.jpg" title="大都会.jpg"></p><p>一百多年的电影，你敢想？</p><p>片长: 153分钟</p><p>奈菲影视： <span class="external-link"><a href="https://www.nfmovies.com/detail/?31618.html" target="_blank">在线观看<i data-feather='external-link'></i></a></span> 或使用 <a href="../search.html">毒奶搜索</a> 搜索资源；</p><p>via <span class="external-link"><a href="https://movie.douban.com/subject/1298107/" target="_blank">豆瓣电影<i data-feather='external-link'></i></a></span></p><h2>机器人总动员 WALL·E (2008)</h2><p><img src="../usr/uploads/2019/09/3099654507.jpg" alt="机器人总动员.jpg" title="机器人总动员.jpg"></p><p><video src="http://vt1.doubanio.com/201909251810/c9fc740df86a3bb573e4a55076cab4f0/view/movie/M/301080764.mp4" width="100%" height="320" controls="controls"></video></p><p>奈菲影视： <span class="external-link"><a href="https://www.nfmovies.com/detail/?3354.html" target="_blank">在线观看<i data-feather='external-link'></i></a></span> 或使用 <a href="../search.html">毒奶搜索</a> 搜索资源</p><p>via <span class="external-link"><a href="https://movie.douban.com/subject/2131459/" target="_blank">豆瓣电影<i data-feather='external-link'></i></a></span></p><h2>我是传奇 I Am Legend (2007)</h2><p><img src="../usr/uploads/2019/09/3838424990.jpg" alt="我是传奇.jpg" title="我是传奇.jpg"></p><p><video src="http://vt1.doubanio.com/201909251813/326463cb1fe8263f7f4258c44695a707/view/movie/M/301420462.mp4" width="100%" height="320" controls="controls"></video></p><p>结尾居然还真死了。非得翘了才是传奇么。。 via 豆瓣用户</p><p>via <span class="external-link"><a href="https://movie.douban.com/subject/1820156/" target="_blank">豆瓣电影<i data-feather='external-link'></i></a></span></p><h2>电子世界争霸战 TRON (1982)</h2><p><img src="../usr/uploads/2019/09/2634436273.jpg" alt="电子世界争霸战.jpg" title="电子世界争霸战.jpg"></p><p>这就是电影特效史的丰碑，它已经被时间证明了价值。 via 豆瓣用户</p><p>via <span class="external-link"><a href="https://movie.douban.com/subject/1293482/" target="_blank">豆瓣电影<i data-feather='external-link'></i></a></span></p><h2>创：战纪 TRON: Legacy (2010)</h2><p><img src="../usr/uploads/2019/09/2968747283.jpg" alt="创战纪.jpg" title="创战纪.jpg"></p><p><video src="http://vt1.doubanio.com/201909251820/3acd8d5bc2b8ed1f37116bdf99445cf9/view/movie/M/301230385.mp4" width="100%" height="320" controls="controls"></video></p><p>有没有跟上面那部有点像？那就对了。</p><p>via <span class="external-link"><a href="https://movie.douban.com/subject/2997134/?from=subject-page" target="_blank">豆瓣电影<i data-feather='external-link'></i></a></span></p><h2>阿基拉 Akira (1988)</h2><p><img src="../usr/uploads/2019/09/1279756284.jpg" alt="阿基拉.jpg" title="阿基拉.jpg"></p><p>无法超越的反乌托邦巨作 via 豆瓣用户</p><p>via 豆瓣电影</p><h2>湮灭 Annihilation (2018)</h2><p><img src="../usr/uploads/2019/09/1235918786.jpg" alt="湮灭.jpg" title="湮灭.jpg"></p><p>文科生看不懂《<span class="external-link"><a href="https://movie.douban.com/subject/21324900/" target="_blank">降临<i data-feather='external-link'></i></a></span>》，理科生看不懂《湮灭》。 via 豆瓣用户<br>看完湮灭出来 漫天飞雪 市中心灯光如昼 高楼上的液晶屏在播放芭蕾表演 车站里几个女生簇拥说笑着 突然觉得能平凡活着真好。 va 豆瓣用户</p><p>via <span class="external-link"><a href="https://movie.douban.com/subject/26384741/" target="_blank">豆瓣电影<i data-feather='external-link'></i></a></span></p><h2>头号玩家 Ready Player One (2018)</h2><p><img src="../usr/uploads/2019/09/1199049417.jpg" alt="头号玩家.jpg" title="头号玩家.jpg"></p><p><video src="http://vt1.doubanio.com/201909251834/d5b6f72017c3d240a16e1b89e31963e1/view/movie/M/302280844.mp4" width="100%" height="320" controls="controls"></video></p><p>斯皮尔伯格老爷子作品。</p><p>via <span class="external-link"><a href="https://movie.douban.com/subject/4920389/" target="_blank">豆瓣电影<i data-feather='external-link'></i></a></span></p><h2>超能陆战队 Big Hero 6 (2014)</h2><p><img src="../usr/uploads/2019/09/3702767400.jpg" alt="超能陆战队.jpg" title="超能陆战队.jpg"></p><p><video src="http://vt1.doubanio.com/201909251837/c8efbc4777ac9e05bfcb1e2d729b2fa3/view/movie/M/301700706.mp4" width="100%" height="320" controls="controls"></video></p><p>又是一个故事平平只靠细节讨巧的动画，但是没办法，就是超级吃这套啊！！ via 豆瓣用户</p><p>via <span class="external-link"><a href="https://movie.douban.com/subject/11026735/" target="_blank">豆瓣电影<i data-feather='external-link'></i></a></span></p><p>以上。</p><h2>附注</h2><p>1.<a href="969.html">在中国如何免费看HBO/网飞/Hulu（Netflix/奈飞）/剧集/电影/动漫/番剧，看这一篇就够了。 </a></p><hr class="content-copyright" style="margin-top:50px" /><blockquote class="content-copyright" style="font-style:normal"><p class="content-copyright">版权属于：<a class="content-copyright" target="_blank" href="https://t.me/limboprobot">http://t.me/limboprobot</a> TG 毒奶博主 Julia； <br>联系我们： <a class="content-copyright" target="_blank" href="../6.html">https://limbopro.xyz/6.html</a> 投稿或反馈或转载文章或交换友链； <br>电报频道： <a class="content-copyright" target="_blank" href="https://t.me/limboprossr">https://t.me/limboprossr</a> 及时收讯不失联； <br>必备技能： <a class="content-copyright" target="_blank" href="2910.html">https://limbopro.xyz/archives/2910.html</a> 如何访问任意被墙域名； <br>网站镜像： <a class="content-copyright" target="_blank" href="https://limbopro.github.io">https://limbopro.github.io</a> 每月更新；</p><p class="content-copyright">本文链接：<a class="content-copyright" href="2955.html">https://limbopro.xyz/archives/2955.html</a></p><p class="content-copyright">版权声明：<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本文采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a> 进行许可，转载请附上原文出处链接和本声明。</p></blockquote>
 </div>
 </div>
-<script type="01692abe8de64011e41d9c2f-text/javascript">
+<script type="940cb6940d095ee5b2a95033-text/javascript">
         try {
             $("[data-morphing]").fancyMorph({
                 hash : 'morphing'
@@ -533,7 +530,7 @@
 
             </script>
 
-<script type="01692abe8de64011e41d9c2f-text/javascript">
+<script type="940cb6940d095ee5b2a95033-text/javascript">
 (function () {
     window.TypechoComment = {
         dom : function (id) {
@@ -605,7 +602,7 @@
     };
 })();
 </script>
-<script type="01692abe8de64011e41d9c2f-text/javascript">
+<script type="940cb6940d095ee5b2a95033-text/javascript">
 var registCommentEvent = function() {
     var event = document.addEventListener ? {
         add: 'addEventListener',
@@ -630,31 +627,41 @@ var registCommentEvent = function() {
                         input.type = 'hidden';
                         input.name = '_';
                             input.value = (function () {
-    var _JTnV3 = //'4NF'
-'a'+//'7'
-'a1'+'8c'//'C'
-+//'x'
-'c'+//'P'
-'7'+'010'//'CD'
-+'ac'//'H0'
-+//'AT'
-'f'+'db0'//'FJU'
-+'18e'//'6'
-+'d4'//'m'
-+//'o6s'
-'64'+'a1'//'L'
-+'0f8'//'IyW'
-+/* 'Cz'//'Cz' */''+'1be'//'mwP'
-+'nI4'//'nI4'
-+//'F2'
-'F2'+'6'//'AEO'
-, _mLohB = [[31,34],[31,33]];
+    var _Qh1o = //'3'
+'a'+/* '2qo'//'2qo' */''+'a1'//'Rb'
++'8c'//'r'
++'c70'//'2sz'
++//'Db1'
+'Db1'+//'US1'
+'US1'+//'Xm'
+'1'+'0a'//'6'
++//'G0U'
+'cf'+'d'//'qm'
++''///*'V2'*/'V2'
++'b0'//'O9e'
++//'17'
+'1'+//'aU6'
+'aU6'+'8'//'OH'
++//'A'
+'A'+//'N'
+'e'+'d4'//'nQ'
++//'c'
+'c'+//'L'
+'L'+//'MyS'
+'6'+//'CC'
+'4a'+//'xhg'
+'10'+''///*'YCM'*/'YCM'
++''///*'NRE'*/'NRE'
++//'83'
+'f8'+//'W'
+'1be'+//'e'
+'6', _S7v5 = [[8,11],[8,11],[17,20],[18,19],[21,22],[21,22]];
     
-    for (var i = 0; i < _mLohB.length; i ++) {
-        _JTnV3 = _JTnV3.substring(0, _mLohB[i][0]) + _JTnV3.substring(_mLohB[i][1]);
+    for (var i = 0; i < _S7v5.length; i ++) {
+        _Qh1o = _Qh1o.substring(0, _S7v5[i][0]) + _Qh1o.substring(_S7v5[i][1]);
     }
 
-    return _JTnV3;
+    return _Qh1o;
 })();
                     
                         f.appendChild(input);
@@ -676,20 +683,21 @@ var registCommentEvent = function() {
 };
 </script></div>
 <footer id="footer" class="app-footer" role="footer">
-<div class="wrapper b-t bg-light">
+<div class="wrapper bg-light">
 <span class="pull-right hidden-xs text-ellipsis">
-Powered by <a target="blank" href="http://www.typecho.org">Typecho</a>&nbsp;|&nbsp;Theme by <a target="blank" href="../index.html#">handsome</a>
+Powered by <a target="_blank" href="http://www.typecho.org">Typecho</a>&nbsp;|&nbsp;Theme by <a target="_blank" href="https://www.ihewro.com/archives/489/">handsome</a>
 </span>
-<span class="text-ellipsis">&copy;&nbsp;2019 <a target="blank" href="../index.html">毒奶</a>.inc Copyright&nbsp; 自建站之日起，本站总访问量 3813679996 次</span>
-</div>
+<span class="text-ellipsis">&copy;&nbsp;2019 Copyright&nbsp;</span>
+ </div>
 
 <script type="text/template" id="tmpl-customizer">
           <div class="settings panel panel-default setting_body_panel" aria-hidden="true">
-              <button class="btn btn-default no-shadow pos-abt" data-toggle="tooltip" data-placement="left" data-original-title="设置" data-toggle-class=".settings=active, .settings-icon=animate-spin">
+              <button class=" btn btn-default no-shadow pos-abt border-radius-half-left"
+                      data-toggle="tooltip" data-placement="left" data-original-title="设置" data-toggle-class=".settings=active, .settings-icon=animate-spin">
                   <i class="fontello fontello-gear settings-icon"></i>
               </button>
               <div class="panel-heading">
-                  <button class="pull-right btn btn-xs btn-rounded btn-danger" name="reset" data-toggle="tooltip" data-placement="top" data-original-title="恢复默认值" >重置</button>
+                  <button class="pull-right btn btn-xs btn-rounded btn-danger " name="reset" data-toggle="tooltip" data-placement="top" data-original-title="恢复默认值" >重置</button>
                   设置		</div>
               <div class="setting_body">
               <div class="panel-body">
@@ -733,7 +741,7 @@ Powered by <a target="blank" href="http://www.typecho.org">Typecho</a>&nbsp;|&nb
           </div>
       </script>
 <div class="topButton panel panel-default">
-<button id="goToTop" class="btn btn-default no-shadow pos-abt hide">
+<button id="goToTop" class="btn btn-default no-shadow pos-abt hide  border-radius-half-left" data-toggle="tooltip" data-placement="left" data-original-title="返回顶部">
 <i class="fontello fontello-chevron-circle-up" aria-hidden="true"></i>
 </button>
 </div>
@@ -759,14 +767,14 @@ Powered by <a target="blank" href="http://www.typecho.org">Typecho</a>&nbsp;|&nb
 		-moz-transform: scale(1.4);	/* Firefox */
 	}
 </style>
-<script type="01692abe8de64011e41d9c2f-text/javascript">
+<script type="940cb6940d095ee5b2a95033-text/javascript">
 	document.addEventListener('DOMContentLoaded', function(){
 		var imgs = document.querySelectorAll('img');
 		Array.prototype.forEach.call(imgs, function(el, i) {
 			if (el.tabIndex <= 0) el.tabIndex = 100;
 		});
 	});
-</script><script type="01692abe8de64011e41d9c2f-text/javascript">
+</script><script type="940cb6940d095ee5b2a95033-text/javascript">
 	(function(){
 		var pres = document.querySelectorAll('pre');
 		var lineNumberClassName = 'line-numbers';
@@ -775,22 +783,22 @@ Powered by <a target="blank" href="http://www.typecho.org">Typecho</a>&nbsp;|&nb
 		});
 	})();
 </script>
-<script type="01692abe8de64011e41d9c2f-text/javascript" src="../usr/plugins/CodePrettify/static/clipboard.min.js"></script>
-<script type="01692abe8de64011e41d9c2f-text/javascript" src="../usr/plugins/CodePrettify/static/prism.js"></script>
-<script type="01692abe8de64011e41d9c2f-text/javascript">
+<script type="940cb6940d095ee5b2a95033-text/javascript" src="../usr/plugins/CodePrettify/static/clipboard.min.js"></script>
+<script type="940cb6940d095ee5b2a95033-text/javascript" src="../usr/plugins/CodePrettify/static/prism.js"></script>
+<script type="940cb6940d095ee5b2a95033-text/javascript">
 SearchConfig = {
     url : "https://limbopro.xyz/usr/plugins/Handsome/cache/search.json"
 }
 </script>
 
-<script type="01692abe8de64011e41d9c2f-text/javascript">
+<script type="940cb6940d095ee5b2a95033-text/javascript">
         window['LocalConst'] = {
             COMMENT_NAME_INFO: '必须填写昵称或姓名',
             COMMENT_EMAIL_INFO: '必须填写电子邮箱地址',
             COMMENT_EMAIL_LEGAL_INFO: '邮箱地址不合法',
             COMMENT_CONTENT_INFO: '必须填写评论内容',
             COMMENT_SUBMIT_ERROR: '提交失败，请重试！',
-            COMMENT_CONTENT_LEGAL_INFO: '提交失败,您的输入内容不符合规则！',
+            COMMENT_CONTENT_LEGAL_INFO: '提交失败,评论被拦截，可能发言太快或内容不符合规则',
 
             LOGIN_USERNAME_INFO: '必须填写用户名',
             LOGIN_PASSWORD_INFO: '请填写密码',
@@ -819,14 +827,15 @@ SearchConfig = {
             BASE_SCRIPT_URL: 'https://limbopro.xyz/usr/themes/handsome/',
             BLOG_URL: 'https://limbopro.xyz/',
             BLOG_URL_PHP: 'https://limbopro.xyz/',
-            THEME_COLOR: '13',
+            THEME_COLOR: '14',
+            THEME_COLOR_EDIT: 'danger-danger-black',
             THEME_HEADER_FIX: '1',
             THEME_ASIDE_FIX: '1',
             THEME_ASIDE_FOLDED: '',
             THEME_ASIDE_DOCK: '',
             THEME_CONTAINER_BOX: '1',
             THEME_HIGHLIGHT_CODE: '1',
-            THEME_TOC: '1',
+            THEME_TOC: '',
             TOC_TITLE: '文章目录',
             HEADER_FIX: '固定头部',
             ASIDE_FIX: '固定导航',
@@ -837,7 +846,7 @@ SearchConfig = {
             COMMENT_REJECT_PLACEHOLDER: '居然什么也不说，哼',
             COMMENT_PLACEHOLDER: '说点什么吧……',
             SHOW_SETTING_BUTTON: '1',
-            THEME_VERSION: '5.3.120190915221',
+            THEME_VERSION: '6.0.020191205',
 
             OPERATION_NOTICE: '操作通知',
             SCREENSHOT_BEGIN: '正在生成当前页面截图……',
@@ -848,14 +857,15 @@ SearchConfig = {
             MUSIC_FAILE: '当前音乐地址无效，自动为您播放下一首',
             MUSIC_FAILE_END: '当前音乐地址无效',
             MUSIC_LIST_SUCCESS: '歌单歌曲加载成功',
-            CDN_NAME: ''
+            CDN_NAME: '',
+            LAZY_LOAD: ''
         };
 
     </script>
 
-<script src="../usr/themes/handsome/assets/libs/bootstrap/js/bootstrap.min.js" type="01692abe8de64011e41d9c2f-text/javascript"></script>
-<script src="../usr/themes/handsome/assets/js/features/jquery.pjax.min.js" type="01692abe8de64011e41d9c2f-text/javascript"></script>
-<script type="01692abe8de64011e41d9c2f-text/javascript">
+<script src="../usr/themes/handsome/assets/libs/bootstrap/js/bootstrap.min.js" type="940cb6940d095ee5b2a95033-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/js/features/jquery.pjax.min.js" type="940cb6940d095ee5b2a95033-text/javascript"></script>
+<script type="940cb6940d095ee5b2a95033-text/javascript">
         $(document).pjax('a[href^="https://limbopro.xyz/"]:not(a[target="_blank"], a[no-pjax])', {
             container: '#content',
             fragment: '#content',
@@ -883,18 +893,22 @@ SearchConfig = {
     </script>
 
 
+<script src="../usr/themes/handsome/assets/js/features/feather.min.js?v=6.0.020191205" type="940cb6940d095ee5b2a95033-text/javascript"></script>
 
-<script src="https://cdn.staticfile.org/mathjax/2.7.0/MathJax.js" type="01692abe8de64011e41d9c2f-text/javascript"></script>
-<script src="https://cdn.staticfile.org/mathjax/2.7.0/config/TeX-AMS-MML_SVG.js" type="01692abe8de64011e41d9c2f-text/javascript"></script>
+<script src="https://cdn.staticfile.org/mathjax/2.7.0/MathJax.js" type="940cb6940d095ee5b2a95033-text/javascript"></script>
+<script src="https://cdn.staticfile.org/mathjax/2.7.0/config/TeX-AMS-MML_SVG.js" type="940cb6940d095ee5b2a95033-text/javascript"></script>
 
-<script src="../usr/themes/handsome/assets/js/features/jquery.fancybox.min.js?v=5.3.120190915221" type="01692abe8de64011e41d9c2f-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/js/features/jquery.fancybox.min.js?v=6.0.020191205" type="940cb6940d095ee5b2a95033-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/js/features/easypiechart.min.js?v=6.0.020191205" type="940cb6940d095ee5b2a95033-text/javascript"></script>
+
+<script src="../usr/themes/handsome/assets/js/features/html2canvas.min.js" type="940cb6940d095ee5b2a95033-text/javascript"></script>
 
 
-<script src="../usr/themes/handsome/assets/js/function.min.js?v=5.3.120190915221" type="01692abe8de64011e41d9c2f-text/javascript"></script>
-<script src="../usr/themes/handsome/assets/js/core.min.js?v=5.3.120190915221" type="01692abe8de64011e41d9c2f-text/javascript"></script>
-<script src="../usr/themes/handsome/assets/js/features/setting.min.js?v=5.3.120190915221" type="01692abe8de64011e41d9c2f-text/javascript"></script>
-<script type="01692abe8de64011e41d9c2f-text/javascript">
+<script src="../usr/themes/handsome/assets/js/function.min.js?v=6.0.020191205" type="940cb6940d095ee5b2a95033-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/js/core.min.js?v=6.0.020191205" type="940cb6940d095ee5b2a95033-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/js/features/setting.min.js?v=6.0.020191205" type="940cb6940d095ee5b2a95033-text/javascript"></script>
+<script type="940cb6940d095ee5b2a95033-text/javascript">
             </script>
-<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="01692abe8de64011e41d9c2f-|49" defer=""></script></body>
+<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="940cb6940d095ee5b2a95033-|49" defer=""></script></body>
 </html>
 
