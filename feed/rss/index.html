@@ -10,16 +10,16 @@ xmlns:dc="http://purl.org/dc/elements/1.1/">
 <items>
 <rdf:Seq>
 <rdf:li resource="https://limbopro.xyz/archives/n3ro.html"/>
+<rdf:li resource="https://limbopro.xyz/archives/tgbotalert.html"/>
 <rdf:li resource="https://limbopro.xyz/archives/6484.html"/>
 <rdf:li resource="https://limbopro.xyz/archives/greasyfork.html"/>
+<rdf:li resource="https://limbopro.xyz/archives/clashA.html"/>
 <rdf:li resource="https://limbopro.xyz/archives/5832.html"/>
 <rdf:li resource="https://limbopro.xyz/archives/ssrspeed.html"/>
 <rdf:li resource="https://limbopro.xyz/archives/5674.html"/>
 <rdf:li resource="https://limbopro.xyz/archives/5624.html"/>
 <rdf:li resource="https://limbopro.xyz/archives/5605.html"/>
 <rdf:li resource="https://limbopro.xyz/archives/5531.html"/>
-<rdf:li resource="https://limbopro.xyz/archives/5198.html"/>
-<rdf:li resource="https://limbopro.xyz/archives/5151.html"/>
 </rdf:Seq>
 </items>
 </channel>
@@ -29,17 +29,59 @@ xmlns:dc="http://purl.org/dc/elements/1.1/">
 <dc:date>2019-10-02T10:16:00+08:00</dc:date>
 <description>主理人推荐序10.31.2019 更新新增 12条 IPLC 专线，共计 44+ 条 IPLC专线，专治各种开会，加上其他低倍率线路，共计66条；10.29.2019 更新特殊日子，IPLC 稳定依旧；10.04.2019 更新N3RO与卡车家族是同款老板（10.2019 转让交接完毕）；得益于大陆多点部署的BGP数据中心，通过IPLC专线连接至国外，不受任何外部干扰或QoS。并拥有川日/川港/京港/京美/京德/沪韩/沪日/沪港/深新/深港/沪新/杭港/沪美/川日/等IPLC中转线路；大流量视频用户，预算有限的学生党可用另一个平台的产品，卡车家族丨1080秒开丨折后6.4元/月起丨50+节点丨SSR机场推荐。via 机场专线 查看适合你的机场推荐；以上。[...]</description>
 </item>
+<item rdf:about="https://limbopro.xyz/archives/tgbotalert.html">
+<title>使用 Telegram Bot 对服务器CPU高负载进行报警/通知</title>
+<link>https://limbopro.xyz/archives/tgbotalert.html</link>
+<dc:date>2019-12-21T19:54:00+08:00</dc:date>
+<description>本文隶属于 实用工具 /网站优化 分类，点击分类名称可以查看更多相关文章；[post cid="1959" cover="https://limbopro.xyz/usr/uploads/2019/11/3967700330.png"/]主理人说1.拿来即可用的 Telegram Bot Api（免费）（API是什么？）；2.如果你也有博客或需要监测服务器性能；3.这或许是个好办法；4.当服务器CPU触到阈值，则触发警报；5.真的不要太好用。本文概要1.创建TG机器人并获取[API Token]；2.给机器人发送消息，并获取你电报账号的[chatID]；3.配置CPU监测及报警通知脚本；4.使用crontab设置定时任务；CPU负载检测脚本##CPU负载计算
+function GetSysCPU 
+ {
+   CpuIdle=`vmstat 1 5 |sed -n '3,$p' | awk '{x = x + $15} END {print x/5}' | awk -F. '{print $1}'` 
+   CpuNum=`echo &quot;100-$CpuIdle&quot; | bc` 
+   echo $CpuNum 
+ }
+   cpucheck=`GetSysCPU` #将结果输出赋值到cpucheck简易报警脚本配合Telegram Bot Api 食用，效果佳。##CPU负载计算
+function GetSysCPU 
+{
+CpuIdle=`vmstat 1 5 |sed -n '3,$p' | awk '{x = x + $15} END {print x/5}' | awk -F. '{print $1}'` 
+CpuNum=`echo &quot;100-$CpuIdle&quot; | bc` 
+echo $CpuNum 
+}
+
+cpucheck=`GetSysCPU` #将结果输出赋值到cpucheck
+cpumax=50 #CPU触警阈值
+
+if [ ${cpucheck} -gt $max ]; #阈值与实际CPU值进行对比
+then
+date=$(env LANG=en_US.UTF-8 date &quot;+%e/%b/%Y/%R&quot;) #当前时间赋值
+curl -X POST &quot;https://api.telegram.org/bot[API Token]/sendMessage?chat_id=[chatID]&amp;text=$date%0aCPU负载为$cpucheck%%0a注意及时检查%0a如果该警报持续...%0a或联系管理员%0a@limboprobot&quot;
+else
+date=$(env LANG=en_US.UTF-8 date &quot;+%e/%b/%Y/%R&quot;)
+echo &quot;${date}&quot; &quot;CPU负载正常，当前负载为$cpucheck%...&quot; &gt;&gt; /home/cpucheck.log #监测坚果输出到本地以便后期查阅..
+fi
+以上。实操部分第一步 创建机器人[post cid="3097" cover="https://limbopro.xyz/usr/uploads/2019/09/53339647.png"/]*看创建机器人部分即可，仅需三步即可创建一个新机器人；第二步 获取API Token同上，创建完机器人即可获得API Token第二步 获取chatID1.官方提供了接口2.通过第二步我们已经获得了API Token2.将下方API Token替换成自己的API Token；https://api.telegram.org/bot[API Token]/getUpdates #将[API Token]替换成自己的API token，实例说明https://api.telegram.org/bot10440392893:AQMZqM-FX_SGVVMtUj98xXWWqWCO2IbGHSw/getUpdates3.替换成自己的[API token]后，在浏览器中打开链接，提示{&quot;ok&quot;:true,...；4.给机器人发送任意英文字符，例如Hello word; 5.刷新刚刚在浏览器打开的链接，并找到Hello word；举例说明，发送Hello word后刷新链接得到；&quot;message&quot;:{&quot;message_id&quot;:1426,&quot;from&quot;:{&quot;id&quot;:763456868,&quot;is_bot&quot;:false,&quot;first_name&quot;:&quot;\u2708\ufe0f TG \u6bd2\u5976\u535a\u4e3b \u2708\ufe0f&quot;,&quot;last_name&quot;:&quot;\u4e3b\u7406\u4eba Julia \ud83c\udd65&quot;,&quot;username&quot;:&quot;limbopro&quot;,&quot;language_code&quot;:&quot;zh-hans&quot;},
+&quot;chat&quot;:{&quot;id&quot;:763456868,&quot;first_name&quot;:&quot;\u2708\ufe0f TG \u6bd2\u5976\u535a\u4e3b \u2708\ufe0f&quot;,&quot;last_name&quot;:&quot;\u4e3b\u7406\u4eba Julia \ud83c\udd65&quot;,&quot;username&quot;:&quot;limbopro&quot;,&quot;type&quot;:&quot;private&quot;},&quot;date&quot;:1576931731,&quot;text&quot;:&quot;Hello word&quot;}}]}其中，"chat":{"id":763456868 里的763456868，我的Chat id；若需获取群组的Chat ID，需把机器人添加至群组，在群组内发送/hello word @xxx_bot（@xxx_bot为你的机器人） 即可；第三步 机器人发送消息1.通过上面两步，我们有了机器人以及[API Token] 以及收件人的[ChatID]；https://api.telegram.org/bot[API Token]/sendMessage?chat_id=[chatID]&amp;text=hello word1.这个是TG bot sendMessage API，简单却实用；2.你可以替换自己的[API]与[chatID]；3.正确替换后，在浏览器中打开，你将收到一条消息；4.&text=后面接你需要发的信息；5.换行用%0a表示；1
+2
+3则需表示成 &text=1%0a2%0a3以上。第四步 设置定时执行脚本任务1.Crontab的使用可参考Linux crontab 命令；root@localhost:/home#  crontab -e
+* * * * * /home/checkcpu.sh #每分钟执行一次检测其他获取网站状态脚本命令curl -I -m 10 -o /dev/null -s -w %{http_code} https://limbopro.xyz附注1.Telegram Bot API - Telegram APIs #官方2.Bot Code Examples - Telegram APIs #官方样例3.https://github.com/python-telegram-bot/python-telegram-bot （拿来即用4.https://github.com/tg-bot-api/bot-api-base联系主理人1.关注频道 https://t.me/limboprossr 不失联；2.毒奶粉们（我管我的Fans）可联系 TG机器人 或发送 邮件 获取帮助；3.或点击本页面右下角的聊天按钮联系；</description>
+</item>
 <item rdf:about="https://limbopro.xyz/archives/6484.html">
 <title>一周互联网观察（12.21）</title>
 <link>https://limbopro.xyz/archives/6484.html</link>
 <dc:date>2019-12-21T00:39:00+08:00</dc:date>
-<description>Image by pen_ash from Pixabay主理人说勿忘初心方得始终待更勿念。</description>
+<description>Image by pen_ash from Pixabay主理人说你们那儿下雪了吗？这天气可真冷啊最近睡眠不好分外懒散待更ing勿念。*P.S.对了，庆余年我已经看完了...看盗版对眼睛不好（确信...过去一周via Cloudflare也是尽情（被）压测的一周博客的服务器配置还未升级...之前的升级本质上只是LNMP的优化待明年有了压岁钱再升级吧关于优化的文章可以参考网站优化以上。</description>
 </item>
 <item rdf:about="https://limbopro.xyz/archives/greasyfork.html">
 <title>Greasy Fork-安全、实用的用户脚本大全（油猴脚本）</title>
 <link>https://limbopro.xyz/archives/greasyfork.html</link>
 <dc:date>2019-12-13T22:19:00+08:00</dc:date>
 <description>本文隶属于 实用工具分类，点击分类名称可以查看更多相关文章；[post cid="1837" cover="https://limbopro.xyz/usr/uploads/2019/08/786027697.jpg"/][...]</description>
+</item>
+<item rdf:about="https://limbopro.xyz/archives/clashA.html">
+<title>神一般的工具：ClashA（UI设计赞爆！）及使用配置简明教程</title>
+<link>https://limbopro.xyz/archives/clashA.html</link>
+<dc:date>2019-12-09T13:39:00+08:00</dc:date>
+<description>本文隶属于 实用工具/科学上网 分类，点击分类名称可以查看更多相关文章；[post cid="5230" cover="https://limbopro.xyz/usr/uploads/2019/10/641260207.jpg"/][post cid="6204" cover="https://limbopro.xyz/usr/uploads/2019/12/3753675049.png"/]主理人说i&gt; 这UI设计，真是极好的！拥有Clash一切必要的特性支持SS/vmess协议界面简约且干净给人一种稳重可信赖的感觉Clash 相关软件支持平台备注ClashXMac ClashWWindows无ClashA安卓无ClaashA 介绍又叫CFA/C4A，即 Clash for Android；Clash（是什么？）安卓版本；支持SS/vmess协议；一切必要的Clash特性；TG（电报）频道：https://t.me/clash_for_android_channel下载APK：在TG频道离线下载；最近正在上架Google Play（07.12.2019）作者：kr328Github仓库：https://github.com/Kr328/ClashForAndroidClashA 界面截图*via 厘米云 Clash 订阅，厘米云分流设置挺合理（关于分流规则，这一点得看你机场主怎么设置了；）；ClashA 配置1.确认你所用的机场是否支持Clash订阅；via n3ro2.复制Clash 订阅链接；3.如上图，打开ClashA，点击Profiles，点击+/ New Profile - &gt; URL - 给该订阅命名（Name），一般为设置为机场名字，在URL处粘贴Clash订阅链接；4.点击右上角确认保存，返回到上一个页面（如上图位置），选中任意订阅名称；5.返回主界面；6.开启开关；分应用代理设置1.通过以上的设置，其实基本上可以很好的在工作生产中使用ClashA了；2.如需要给某些App走代理，可通过分应用代理进行设置；设置步骤1.打开ClashA，主界面- Settings - Proxy - 出现如上图界面；2.点击Access Control；以上。机场相关上班族/白领用户（预算充足用户）可加持IPLC，内网专线，稳定，高速，不墙（不过GFW）。[post cid="2787" cover="https://limbopro.xyz/usr/uploads/2019/09/1975249076.jpg"/]*厘米云：全平台软体订阅支持，SS/SSR/V2ray/SSD/Surge托管；[post cid="3211" cover="https://limbopro.xyz/usr/uploads/2019/11/2531730809.png"/]*N3RO：全平台软体订阅支持，SS/SSR/V2ray/SSD/Surge托管；</description>
 </item>
 <item rdf:about="https://limbopro.xyz/archives/5832.html">
 <title>2019年度观影指南（值得观看的50部电影 via 视与听）/  （2019年度10佳电影 via 时代周刊）</title>
@@ -76,17 +118,5 @@ xmlns:dc="http://purl.org/dc/elements/1.1/">
 <link>https://limbopro.xyz/archives/5531.html</link>
 <dc:date>2019-11-27T23:38:00+08:00</dc:date>
 <description>主理人说让人下单并不是一件简单的事，尤其在现如今白热化的竞争环境里；所以，无论你的广告，文章，等，或多或少最终的目的，都是要促使用户行动起来。买买买，花钱花钱。文案太平了？文章行文毫无新意？无法使人产生购买欲望？刚加入市场，没竞争力怎么跟大牌比？如何获取用户信任？这本书或许可以解救你，至少可以让你的文章/案有章可循；以上。[post cid="1084" cover="https://limbopro.xyz/usr/uploads/2019/07/573253124.jpg"/]文案训练手册对任何想要进入广告业的人，或者是那些希望在自己的工作上有更好表现的广告从业者来说，这本书都是最佳的拍档。这本实际的、权威的指导书充满了为各种媒介而写的高质量文案的真实范例，它会告诉你为了写出精彩的文案，你需要知道的所有事...via 豆瓣读书书评不要小看文案就那么几句话，它是套路的结晶！ via Dy-老夫子 你已经意识到了。你的工作很多内容需要你学会写文案。你已经看过很多书了，《影响力》，《引爆点》……可是这些飘在空中的概念如何落实到具体的写作中？你未必看过这本《文案训练手册》，约瑟夫·休格曼是位不折不扣的文案大师。甚至一位金发美女曾经想通过色诱的方式来向她学习如何写文案。第一，开头要简短并吸引人，例如本文开头的短句。第二，创造具体的销售环境（带入具体的故事环境）第三，《迷恋》7个触发器：欲望，神秘感，威望，罪恶，权力，信任，警报。第四，文案第一段让你的读者不停的说“是”，同意你的观点。第五，对产品的用途和本质深入的了解。第六，销售概念，而不是产品。via 夏狐狸Sylar金句摘引如果我必须在64个要点中选出一个最重要的，我会选诚实。你的广告必须非常诚实。这并不意味着如果你不诚实，就不会获得一个好结果。给顾客一个难以理解的价格，或者一种名不符实的产品，你可能会侥幸成功一次，甚至是两次，但是不可能长时间成功。但是，这个诚实的部分并不是教你如何才能侥幸不诚实，能维持多久。而是把诚实作为一种心理销售工具。首先，让我们以一种非常重要的前提开始。顾客是非常聪明的——比你想象的要聪明。当他们集合在一起的时候，比我们中的任何一个人都要聪明。通过我给产品做营销所经历的事情，以及我在过去35年中得到的所有关于产品的知识，你可以相信我说的话，顾客的眼睛是非常厉害的。顾客同样也会知道人们是否在他们试图传达的信息上面诚实。你在广告中越诚实，你的信息就会越有效地被顾客接受。摘录来自: [美] 约瑟夫·休格曼. “文案训练手册。” Apple Books.购买交易是一种使用逻辑使购买决定合理化的情感过程。你受感情驱使买了一辆梅塞德斯汽车，但接着你又用它的技术、安全性和转手价值来从逻辑上合理化你的购买行为。所以，判断产品的价值应该是在受情感驱使购买之前，顾客想要做的事情。这个世界上的竞争无比激烈，顾客的脑子中总是有一个问题：“我是否以最合适的价格买了这款产品？”再说一遍，你必须解决这个问题，否则就无法有效地同你的目标客户进行沟通。摘录来自: [美] 约瑟夫·休格曼. “文案训练手册。” Apple Books.贪婪以打折的方式吸引贪婪是一种非常有效的激励因素。我记不得自己有多少次只是因为打折而买了根本不需要的东西。无论是对低价商品，还是以更低价格提供的昂贵商品，贪婪都绝对是一个非常重要的因素。产品价格过低可能会减少你的信用，除非你将低价合理化。很多人愿意冒险与不知名的小商贩打交道，只因为可以花更少的钱买到更多的东西。给顾客提供比这个价格通常能提供的价值更多的东西，是一种吸引顾客贪婪的方法。贪婪并不是一种可以一直使用的技巧。但是它应该被认为是一种非常有效的能够作用在每个人的弱点上的元素。降低产品价格的时候，你一般会得到更多的销售额。继续降低价格，你就会继续产生更多的销售——如果降幅足够大的话。如果降得太多，你就需要为低价作一些辩护，因为它会在你的顾客那里产生信用方面的顾虑。贪婪确实不是一种非常正面的人类品质。但是它是存在的，它是你在同顾客交流的时候，需要考虑到的一种力量。摘录来自: [美] 约瑟夫·休格曼. “文案训练手册。” Apple Books.目录引言 本书的起源第一部分：理解过程概述1一般性知识2特殊知识3实践，实践，实践4广告中平面要素的目的5第一句话6创造完美的购买环境7与读者产生共鸣8滑梯效应9打破思维定式10种下“好奇的种子”11文案中的情感12推销概念，而不是产品13酝酿的过程14你应该写多少文案？15个人化沟通的艺术16文案顺序17编辑过程第二部分：了解真正起作用的东西概述18功能强大的文案元素19心理诱因20推销治愈性产品，而不是预防性产品21给你的写作水平打分22写出伟大文案的七个步骤第三部分：证明论点——广告范例概述23懒人致富24自然的意外恩赐25男士内衣26你了解得越多27一种更刺激的方式28胡扯的魔力29宠物飞机30邮购豪宅31匈牙利阴谋32视觉突破33黄金空间项链34消费英雄35Nautilus 拼写销售广告一篇笔记你手中笔的力量第四部分：运用你的文案写作技巧概述36为不同的媒体写文案尾声 最后一点想法附录1 打破思维定式（续）附录2 种下“好奇的种子”（续）附录3 公理和要点小结附录4 推荐阅读关于作者致谢下载文案训练手册.epub文案训练手册.mobi文案训练手册.azw3文案训练手册.pdf附注1.电子书下载 https://epubw.com/161282.html2.毒奶搜索 https://limbopro.xyz/search.html</description>
-</item>
-<item rdf:about="https://limbopro.xyz/archives/5198.html">
-<title>好莱坞往事（2019）</title>
-<link>https://limbopro.xyz/archives/5198.html</link>
-<dc:date>2019-11-21T22:16:00+08:00</dc:date>
-<description>本文隶属于 电影推荐 分类，点击分类名称查看更多相关主题；[post cid="5605" cover="https://limbopro.xyz/usr/uploads/2019/11/3577034863.jpg"/]主理人说看过杀死比尔吗？那就再看看这个：好莱坞往事（2019），一样精彩。豆瓣评论光怪陆离下的苍凉质感，这就是我对电影的热爱。 via 十九呀导演对李小龙有偏见吗？把他塑造成这样。 via 混世魔王好莱坞往事（2019）预告电影介绍故事在1969年瞬息万变的洛杉矶展开，在那个风起云涌的变革时代，嬉皮文化盛行，好莱坞大制片厂制度瓦解，新的好莱坞明星纷纷崛起。电视明星里克·道尔顿（莱昂纳多·迪卡普里奥 Leonardo DiCaprio饰）与他长期合作替身搭档克里夫·布斯（布拉德·皮特 Brad Pitt 饰）如何在逐渐陌生的娱乐圈里，找到自己的一席之地。他们正力图扬名电影圈，却发现这个行业早已不是他们想象的样子了…… 这是昆汀自编自导第9部影片，汇集星光闪闪的卡司与交错的情节，纪念好莱坞不再复返的黄金年代。via 豆瓣电影在线观看好莱坞往事 Once Upon a Time... in Hollywood (2019）：奈菲影视；或使用 毒奶搜索 搜索影视资源；</description>
-</item>
-<item rdf:about="https://limbopro.xyz/archives/5151.html">
-<title>TLS 1.3 科普丨如何提高网站安全性和减少延迟。</title>
-<link>https://limbopro.xyz/archives/5151.html</link>
-<dc:date>2019-11-20T01:09:00+08:00</dc:date>
-<description>本站已通过 Cloudflare 默认开启 TLS 1.0，往上可支持 TLS 1.1-1.3，兼容性极佳；[...]</description>
 </item>
 </rdf:RDF>
