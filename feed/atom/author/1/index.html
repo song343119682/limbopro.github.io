@@ -6,11 +6,58 @@ xml:base="https://limbopro.xyz/author/1/"
 >
 <title type="text">毒奶博主丨欢迎使用代理访问本站。 - 毒奶</title>
 <subtitle type="text">毒奶</subtitle>
-<updated>2019-12-21T00:39:00+08:00</updated>
+<updated>2019-12-21T19:54:00+08:00</updated>
 <generator uri="http://typecho.org/" version="1.1/17.10.30">Typecho</generator>
 <link rel="alternate" type="text/html" href="https://limbopro.xyz/author/1/" />
 <id>https://limbopro.xyz/feed/atom/author/1/</id>
 <link rel="self" type="application/atom+xml" href="https://limbopro.xyz/feed/atom/author/1/" />
+<entry>
+<title type="html"><![CDATA[使用 Telegram Bot 对服务器CPU高负载进行报警/通知]]></title>
+<link rel="alternate" type="text/html" href="https://limbopro.xyz/archives/tgbotalert.html" />
+<id>https://limbopro.xyz/archives/tgbotalert.html</id>
+<updated>2019-12-21T19:54:00+08:00</updated>
+<published>2019-12-21T19:54:00+08:00</published>
+<author>
+    <name>毒奶</name>
+    <uri>https://limbopro.xyz</uri>
+</author>
+<summary type="html"><![CDATA[本文隶属于 实用工具 /网站优化 分类，点击分类名称可以查看更多相关文章；[post cid=&quot;1959&quot; cover=&quot;https://limbopro.xyz/usr/uploads/201...]]></summary>
+<content type="html" xml:base="https://limbopro.xyz/archives/tgbotalert.html" xml:lang="zh-CN"><![CDATA[
+<p><img src="https://limbopro.xyz/usr/uploads/2019/12/1657228122.jpg" alt="Most-popular-Telegram-bots.jpg" title="Most-popular-Telegram-bots.jpg"></p><p>本文隶属于 <a href="https://limbopro.xyz/category/tools/">实用工具</a> /<a href="https://limbopro.xyz/category/Typecho/">网站优化</a> 分类，点击分类名称可以查看更多相关文章；</p><p>[post cid="1959" cover="https://limbopro.xyz/usr/uploads/2019/11/3967700330.png"/]</p><h2>主理人说</h2><p><img src="https://limbopro.xyz/usr/uploads/2019/12/3802691698.jpg" alt="CPU-check-telegram-alert.jpg" title="CPU-check-telegram-alert.jpg"><br>1.拿来即可用的 Telegram Bot Api（免费）（<a href="https://zh.wikipedia.org/zh-hans/%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E6%8E%A5%E5%8F%A3">API是什么</a>？）；<br>2.如果你也有博客或需要监测服务器性能；<br>3.这或许是个好办法；<br>4.当服务器CPU触到阈值，则触发警报；<br>5.真的不要太好用。</p><h2>本文概要</h2><p>1.创建TG机器人并获取[API Token]；<br>2.给机器人发送消息，并获取你电报账号的[chatID]；<br>3.配置CPU监测及报警通知<code>脚本</code>；<br>4.使用<code>crontab</code>设置定时任务；</p><h2>CPU负载检测脚本</h2><pre><code>##CPU负载计算
+function GetSysCPU 
+ {
+   CpuIdle=`vmstat 1 5 |sed -n '3,$p' | awk '{x = x + $15} END {print x/5}' | awk -F. '{print $1}'` 
+   CpuNum=`echo &quot;100-$CpuIdle&quot; | bc` 
+   echo $CpuNum 
+ }
+   cpucheck=`GetSysCPU` #将结果输出赋值到cpucheck</code></pre><h2>简易报警脚本</h2><p>配合Telegram Bot Api 食用，效果佳。</p><pre><code>##CPU负载计算
+function GetSysCPU 
+{
+CpuIdle=`vmstat 1 5 |sed -n '3,$p' | awk '{x = x + $15} END {print x/5}' | awk -F. '{print $1}'` 
+CpuNum=`echo &quot;100-$CpuIdle&quot; | bc` 
+echo $CpuNum 
+}
+
+cpucheck=`GetSysCPU` #将结果输出赋值到cpucheck
+cpumax=50 #CPU触警阈值
+
+if [ ${cpucheck} -gt $max ]; #阈值与实际CPU值进行对比
+then
+date=$(env LANG=en_US.UTF-8 date &quot;+%e/%b/%Y/%R&quot;) #当前时间赋值
+curl -X POST &quot;https://api.telegram.org/bot[API Token]/sendMessage?chat_id=[chatID]&amp;text=$date%0aCPU负载为$cpucheck%%0a注意及时检查%0a如果该警报持续...%0a或联系管理员%0a@limboprobot&quot;
+else
+date=$(env LANG=en_US.UTF-8 date &quot;+%e/%b/%Y/%R&quot;)
+echo &quot;${date}&quot; &quot;CPU负载正常，当前负载为$cpucheck%...&quot; &gt;&gt; /home/cpucheck.log #监测坚果输出到本地以便后期查阅..
+fi
+</code></pre><p>以上。</p><p>实操部分</p><h2>第一步 创建机器人</h2><p>[post cid="3097" cover="https://limbopro.xyz/usr/uploads/2019/09/53339647.png"/]<br>*看<strong>创建机器人部分</strong>即可，仅需<strong>三步</strong>即可创建一个新机器人；</p><h2>第二步 获取API Token</h2><p>同上，创建完机器人即可获得<code>API Token</code></p><h2>第二步 获取chatID</h2><p>1.官方提供了接口<br>2.通过第二步我们已经获得了<code>API Token</code><br>2.将下方<code>API Token</code>替换成自己的<code>API Token</code>；</p><pre><code>https://api.telegram.org/bot[API Token]/getUpdates #将[API Token]替换成自己的API token，</code></pre><p>实例说明</p><pre><code>https://api.telegram.org/bot10440392893:AQMZqM-FX_SGVVMtUj98xXWWqWCO2IbGHSw/getUpdates</code></pre><p>3.替换成自己的[API token]后，在浏览器中打开链接，提示<code>{&quot;ok&quot;:true,...</code>；<br>4.给机器人发送任意英文字符，例如<code>Hello word</code>; <br>5.刷新刚刚在浏览器打开的链接，并找到<code>Hello word</code>；</p><p>举例说明，发送<code>Hello word</code>后刷新链接得到；</p><pre><code>&quot;message&quot;:{&quot;message_id&quot;:1426,&quot;from&quot;:{&quot;id&quot;:763456868,&quot;is_bot&quot;:false,&quot;first_name&quot;:&quot;\u2708\ufe0f TG \u6bd2\u5976\u535a\u4e3b \u2708\ufe0f&quot;,&quot;last_name&quot;:&quot;\u4e3b\u7406\u4eba Julia \ud83c\udd65&quot;,&quot;username&quot;:&quot;limbopro&quot;,&quot;language_code&quot;:&quot;zh-hans&quot;},
+&quot;chat&quot;:{&quot;id&quot;:763456868,&quot;first_name&quot;:&quot;\u2708\ufe0f TG \u6bd2\u5976\u535a\u4e3b \u2708\ufe0f&quot;,&quot;last_name&quot;:&quot;\u4e3b\u7406\u4eba Julia \ud83c\udd65&quot;,&quot;username&quot;:&quot;limbopro&quot;,&quot;type&quot;:&quot;private&quot;},&quot;date&quot;:1576931731,&quot;text&quot;:&quot;Hello word&quot;}}]}</code></pre><p>其中，"chat":{"id":763456868 里的<code>763456868</code>，我的<code>Chat id</code>；若需获取群组的Chat ID，需把机器人添加至群组，在群组内发送<code>/hello word @xxx_bot</code>（@xxx_bot为你的机器人） 即可；</p><h2>第三步 机器人发送消息</h2><p>1.通过上面两步，我们有了机器人以及[API Token] 以及收件人的[ChatID]；</p><pre><code>https://api.telegram.org/bot[API Token]/sendMessage?chat_id=[chatID]&amp;text=hello word</code></pre><p>1.这个是TG bot sendMessage API，简单却实用；<br>2.你可以替换自己的[API]与[chatID]；<br>3.正确替换后，在浏览器中打开，你将收到一条消息；<br>4.&text=后面接你需要发的信息；<br>5.换行用<code>%0a</code>表示；</p><pre><code>1
+2
+3</code></pre><p>则需表示成 &text=1%0a2%0a3</p><p>以上。</p><h2>第四步 设置定时执行脚本任务</h2><p>1.Crontab的使用可参考<a href="https://www.runoob.com/linux/linux-comm-crontab.html">Linux crontab 命令</a>；</p><pre><code>root@localhost:/home#  crontab -e
+* * * * * /home/checkcpu.sh #每分钟执行一次检测</code></pre><h2>其他</h2><p>获取网站状态脚本命令</p><pre><code>curl -I -m 10 -o /dev/null -s -w %{http_code} https://limbopro.xyz</code></pre><h2>附注</h2><p>1.<a href="https://core.telegram.org/bots/api">Telegram Bot API - Telegram APIs</a> #官方<br>2.<a href="https://core.telegram.org/bots/samples">Bot Code Examples - Telegram APIs</a> #官方样例<br>3.<a href="https://github.com/python-telegram-bot/python-telegram-bot">https://github.com/python-telegram-bot/python-telegram-bot</a> （拿来即用<br>4.<a href="https://github.com/tg-bot-api/bot-api-base">https://github.com/tg-bot-api/bot-api-base</a></p><h2>联系主理人</h2><p>1.关注频道 <a href="https://t.me/limboprossr">https://t.me/limboprossr</a> 不失联；<br>2.<code>毒奶粉</code>们（我管我的Fans）可联系 <a href="https://limbopro.xyz/usr/uploads/2019/10/3453243330.png">TG机器人</a> 或发送 <a href="https://limbopro.xyz/usr/uploads/2019/10/3453243330.png">邮件</a> 获取帮助；</p><p>3.或点击<code>本页面右下角</code>的聊天按钮联系；</p>
+]]></content>
+<link rel="replies" type="text/html" href="https://limbopro.xyz/archives/tgbotalert.html#comments" thr:count="0" />
+<link rel="replies" type="application/atom+xml" href="https://limbopro.xyz/feed/atom/archives/tgbotalert.html" thr:count="0"/>
+</entry>
 <entry>
 <title type="html"><![CDATA[一周互联网观察（12.21）]]></title>
 <link rel="alternate" type="text/html" href="https://limbopro.xyz/archives/6484.html" />
@@ -21,9 +68,9 @@ xml:base="https://limbopro.xyz/author/1/"
     <name>毒奶</name>
     <uri>https://limbopro.xyz</uri>
 </author>
-<summary type="html"><![CDATA[Image by pen_ash from Pixabay主理人说勿忘初心方得始终待更勿念。]]></summary>
+<summary type="html"><![CDATA[Image by pen_ash from Pixabay主理人说你们那儿下雪了吗？这天气可真冷啊最近睡眠不好分外懒散待更ing勿念。*P.S.对了，庆余年我已经看完了...看盗版对眼睛不好（确...]]></summary>
 <content type="html" xml:base="https://limbopro.xyz/archives/6484.html" xml:lang="zh-CN"><![CDATA[
-<p><img src="https://limbopro.xyz/usr/uploads/2019/12/825307129.jpg" alt="shirakawa-go-3968395_640.jpg" title="shirakawa-go-3968395_640.jpg"></p><p>Image by <a href="https://pixabay.com/users/pen_ash-5526837/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3968395">pen_ash</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3968395">Pixabay</a></p><h2>主理人说</h2><p>勿忘初心<br>方得始终<br>待更<br>勿念<br>。</p>
+<p><img src="https://limbopro.xyz/usr/uploads/2019/12/825307129.jpg" alt="shirakawa-go-3968395_640.jpg" title="shirakawa-go-3968395_640.jpg"></p><p>Image by <a href="https://pixabay.com/users/pen_ash-5526837/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3968395">pen_ash</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3968395">Pixabay</a></p><h2>主理人说</h2><p>你们那儿下雪了吗？<br>这天气可真冷啊<br>最近睡眠不好<br>分外懒散<br>待更ing<br>勿念<br>。</p><p>*P.S.对了，<a href="https://limbopro.xyz/archives/%E5%BA%86%E4%BD%99%E5%B9%B4.html">庆余年</a>我已经看完了...看盗版对眼睛不好（确信...</p><h2>过去一周</h2><p><img src="https://limbopro.xyz/usr/uploads/2019/12/1727027959.png" alt="Cloudflare.png" title="Cloudflare.png"><br>via <a href="https://dash.cloudflare.com/">Cloudflare</a><br>也是尽情（被）压测的一周<br>博客的服务器配置还未升级...<br>之前的升级本质上只是LNMP的优化<br>待明年有了压岁钱再升级吧<br>关于优化的文章可以参考<a href="https://limbopro.xyz/category/Typecho/">网站优化</a><br>以上。</p>
 ]]></content>
 <link rel="replies" type="text/html" href="https://limbopro.xyz/archives/6484.html#comments" thr:count="0" />
 <link rel="replies" type="application/atom+xml" href="https://limbopro.xyz/feed/atom/archives/6484.html" thr:count="0"/>
@@ -44,6 +91,23 @@ xml:base="https://limbopro.xyz/author/1/"
 ]]></content>
 <link rel="replies" type="text/html" href="https://limbopro.xyz/archives/greasyfork.html#comments" thr:count="0" />
 <link rel="replies" type="application/atom+xml" href="https://limbopro.xyz/feed/atom/archives/greasyfork.html" thr:count="0"/>
+</entry>
+<entry>
+<title type="html"><![CDATA[神一般的工具：ClashA（UI设计赞爆！）及使用配置简明教程]]></title>
+<link rel="alternate" type="text/html" href="https://limbopro.xyz/archives/clashA.html" />
+<id>https://limbopro.xyz/archives/clashA.html</id>
+<updated>2019-12-09T13:39:00+08:00</updated>
+<published>2019-12-09T13:39:00+08:00</published>
+<author>
+    <name>毒奶</name>
+    <uri>https://limbopro.xyz</uri>
+</author>
+<summary type="html"><![CDATA[本文隶属于 实用工具/科学上网 分类，点击分类名称可以查看更多相关文章；[post cid=&quot;5230&quot; cover=&quot;https://limbopro.xyz/usr/uploads/2019...]]></summary>
+<content type="html" xml:base="https://limbopro.xyz/archives/clashA.html" xml:lang="zh-CN"><![CDATA[
+<p>本文隶属于 <a href="https://limbopro.xyz/category/tools/">实用工具</a>/<a href="https://limbopro.xyz/category/ssr/">科学上网</a> 分类，点击分类名称可以查看更多相关文章；</p><p>[post cid="5230" cover="https://limbopro.xyz/usr/uploads/2019/10/641260207.jpg"/]</p><p>[post cid="6204" cover="https://limbopro.xyz/usr/uploads/2019/12/3753675049.png"/]</p><h2>主理人说</h2><p><img src="https://limbopro.xyz/usr/uploads/2019/12/263207399.jpg" alt="ClashA.jpg" title="ClashA.jpg"></p><p>i&gt; 这UI设计，真是极好的！</p><p>拥有Clash一切必要的特性<br>支持SS/vmess协议<br>界面简约且干净<br>给人一种稳重<br>可信赖的感觉</p><h2>Clash 相关</h2><table><thead><tr><th align="center">软件</th><th align="center">支持平台</th><th align="center">备注</th></tr></thead><tbody><tr><td align="center"><a href="https://github.com/yichengchen/clashX">ClashX</a></td><td align="center">Mac</td><td align="center"> </td></tr><tr><td align="center"><a href="https://github.com/Fndroid/clash_for_windows_pkg/releases">ClashW</a></td><td align="center">Windows</td><td align="center">无</td></tr><tr><td align="center"><a href="https://t.me/clash_for_android_channel">ClashA</a></td><td align="center">安卓</td><td align="center">无</td></tr></tbody></table><h2>ClaashA 介绍</h2><p>又叫CFA/C4A，即 <strong>Clash for Android</strong>；Clash（<a href="https://github.com/Dreamacro/clash">是什么？</a>）安卓版本；<br>支持SS/vmess协议；<br>一切必要的Clash特性；</p><p><strong>TG（电报）频道</strong>：<a href="https://t.me/clash_for_android_channel">https://t.me/clash_for_android_channel</a><br><strong>下载APK</strong>：在TG频道<a href="https://t.me/clash_for_android_channel/35">离线下载</a>；最近正在上架Google Play（07.12.2019）<br><strong>作者</strong>：kr328<br><strong>Github仓库</strong>：<a href="https://github.com/Kr328/ClashForAndroid">https://github.com/Kr328/ClashForAndroid</a></p><h2>ClashA 界面截图</h2><p><img src="https://limbopro.xyz/usr/uploads/2019/12/3502184997.jpg" alt="分流-com.github.kr328.clash.jpg" title="分流-com.github.kr328.clash.jpg"></p><p>*via <a href="https://limbopro.xyz/archives/2787.html">厘米云</a> Clash 订阅，厘米云分流设置挺合理（关于分流规则，这一点得看你<a href="https://limbopro.xyz/865.html">机场</a>主怎么设置了；）；</p><h2>ClashA 配置</h2><p>1.确认你所用的<a href="https://limbopro.xyz/865.html">机场</a>是否支持Clash订阅；</p><p><img src="https://limbopro.xyz/usr/uploads/2019/12/933002751.jpg" alt="ClashA-订阅.jpg" title="ClashA-订阅.jpg"></p><p>via <a href="https://limbopro.xyz/archives/n3ro.html">n3ro</a></p><p>2.复制<code>Clash</code> 订阅链接；</p><p><img src="https://limbopro.xyz/usr/uploads/2019/12/263207399.jpg" alt="ClashA.jpg" title="ClashA.jpg"></p><p>3.如上图，打开ClashA，点击<code>Profiles</code>，点击<code>+</code>/ <code>New Profile</code> - &gt; <code>URL</code> - 给该订阅命名（<code>Name</code>），一般为设置为机场名字，在<code>URL</code>处粘贴<code>Clash</code>订阅链接；</p><p><img src="https://limbopro.xyz/usr/uploads/2019/12/975639556.jpg" alt="ClashA-订阅配置.jpg" title="ClashA-订阅配置.jpg"></p><p>4.点击右上角确认保存，返回到上一个页面（如上图位置），选中任意<code>订阅</code>名称；<br>5.返回主界面；<br>6.开启开关；</p><h2>分应用代理设置</h2><p>1.通过以上的设置，其实基本上可以很好的在工作生产中使用ClashA了；<br>2.如需要给某些App走代理，可通过<code>分应用代理</code>进行设置；</p><h3>设置步骤</h3><p><img src="https://limbopro.xyz/usr/uploads/2019/12/2031413670.jpg" alt="ClashA-分应用代理设置.jpg" title="ClashA-分应用代理设置.jpg"></p><p>1.打开<code>ClashA</code>，主界面- <code>Settings</code> - <code>Proxy</code> - 出现如上图界面；<br>2.点击<code>Access Control</code>；</p><p><img src="https://limbopro.xyz/usr/uploads/2019/12/1410715044.jpg" alt="白名单黑名单.jpg" title="白名单黑名单.jpg"></p><p>以上。</p><h2>机场相关</h2><p>上班族/白领用户（预算充足用户）可加持<a href="https://github.com/Dreamacro/clash">IPLC</a>，内网专线，稳定，高速，不墙（不过GFW）。</p><p>[post cid="2787" cover="https://limbopro.xyz/usr/uploads/2019/09/1975249076.jpg"/]</p><p><strong>*厘米云：</strong><code>全平台软体订阅支持</code>，<code>SS</code>/<code>SSR</code>/<code>V2ray</code>/<code>SSD</code>/<code>Surge托管</code>；</p><p>[post cid="3211" cover="https://limbopro.xyz/usr/uploads/2019/11/2531730809.png"/]</p><p><strong>*N3RO</strong>：<code>全平台软体订阅支持</code>，<code>SS</code>/<del><code>SSR</code></del>/<del><code>V2ray</code></del>/<code>SSD</code>/<code>Surge托管</code>；</p>
+]]></content>
+<link rel="replies" type="text/html" href="https://limbopro.xyz/archives/clashA.html#comments" thr:count="0" />
+<link rel="replies" type="application/atom+xml" href="https://limbopro.xyz/feed/atom/archives/clashA.html" thr:count="0"/>
 </entry>
 <entry>
 <title type="html"><![CDATA[2019年度观影指南（值得观看的50部电影 via 视与听）/  （2019年度10佳电影 via 时代周刊）]]></title>
@@ -146,39 +210,5 @@ xml:base="https://limbopro.xyz/author/1/"
 ]]></content>
 <link rel="replies" type="text/html" href="https://limbopro.xyz/archives/5531.html#comments" thr:count="0" />
 <link rel="replies" type="application/atom+xml" href="https://limbopro.xyz/feed/atom/archives/5531.html" thr:count="0"/>
-</entry>
-<entry>
-<title type="html"><![CDATA[好莱坞往事（2019）]]></title>
-<link rel="alternate" type="text/html" href="https://limbopro.xyz/archives/5198.html" />
-<id>https://limbopro.xyz/archives/5198.html</id>
-<updated>2019-11-21T22:16:00+08:00</updated>
-<published>2019-11-21T22:16:00+08:00</published>
-<author>
-    <name>毒奶</name>
-    <uri>https://limbopro.xyz</uri>
-</author>
-<summary type="html"><![CDATA[本文隶属于 电影推荐 分类，点击分类名称查看更多相关主题；[post cid=&quot;5605&quot; cover=&quot;https://limbopro.xyz/usr/uploads/2019/11/357...]]></summary>
-<content type="html" xml:base="https://limbopro.xyz/archives/5198.html" xml:lang="zh-CN"><![CDATA[
-<p><img src="https://limbopro.xyz/usr/uploads/2019/11/2469280498.jpg" alt="好莱坞往事.jpg" title="好莱坞往事.jpg"></p><p>本文隶属于 <a href="https://limbopro.xyz/category/films-recommend/">电影推荐</a> 分类，点击分类名称查看更多相关主题；</p><p>[post cid="5605" cover="https://limbopro.xyz/usr/uploads/2019/11/3577034863.jpg"/]</p><h2>主理人说</h2><p>看过<a href="https://movie.douban.com/subject/1291580/">杀死比尔</a>吗？那就再看看这个：好莱坞往事（2019），一样精彩。</p><h2>豆瓣评论</h2><p>光怪陆离下的苍凉质感，这就是我对电影的热爱。 via 十九呀<br>导演对李小龙有偏见吗？把他塑造成这样。 via 混世魔王</p><h2>好莱坞往事（2019）</h2><h3>预告</h3><p><video src="http://vt1.doubanio.com/201911212220/e91cf2b8c7d341a2f9fe0b134e662b4e/view/movie/M/402530172.mp4" width="100%" height="320" controls="controls"></video></p><h3>电影介绍</h3><p>故事在1969年瞬息万变的洛杉矶展开，在那个风起云涌的变革时代，嬉皮文化盛行，好莱坞大制片厂制度瓦解，新的好莱坞明星纷纷崛起。电视明星里克·道尔顿（<a href="https://m.douban.com/movie/celebrity/1041029/">莱昂纳多·迪卡普里奥</a> Leonardo DiCaprio饰）与他长期合作替身搭档克里夫·布斯（<a href="https://movie.douban.com/celebrity/1054452/">布拉德·皮特</a> Brad Pitt 饰）如何在逐渐陌生的娱乐圈里，找到自己的一席之地。他们正力图扬名电影圈，却发现这个行业早已不是他们想象的样子了…… </p><p>这是<a href="https://movie.douban.com/celebrity/1054444/">昆汀</a>自编自导<code>第9部影片</code>，汇集星光闪闪的卡司与交错的情节，纪念好莱坞不再复返的黄金年代。</p><p>via <a href="https://movie.douban.com/subject/27087724/">豆瓣电影</a></p><h3>在线观看</h3><p>好莱坞往事 Once Upon a Time... in Hollywood (2019）：<a href="https://www.nfmovies.com/video/?37934-2-0.html">奈菲影视</a>；<br>或使用 <a href="https://limbopro.xyz/search.html">毒奶搜索</a> 搜索影视资源；</p>
-]]></content>
-<link rel="replies" type="text/html" href="https://limbopro.xyz/archives/5198.html#comments" thr:count="0" />
-<link rel="replies" type="application/atom+xml" href="https://limbopro.xyz/feed/atom/archives/5198.html" thr:count="0"/>
-</entry>
-<entry>
-<title type="html"><![CDATA[TLS 1.3 科普丨如何提高网站安全性和减少延迟。]]></title>
-<link rel="alternate" type="text/html" href="https://limbopro.xyz/archives/5151.html" />
-<id>https://limbopro.xyz/archives/5151.html</id>
-<updated>2019-11-20T01:09:00+08:00</updated>
-<published>2019-11-20T01:09:00+08:00</published>
-<author>
-    <name>毒奶</name>
-    <uri>https://limbopro.xyz</uri>
-</author>
-<summary type="html"><![CDATA[本站已通过 Cloudflare 默认开启 TLS 1.0，往上可支持 TLS 1.1-1.3，兼容性极佳；]]></summary>
-<content type="html" xml:base="https://limbopro.xyz/archives/5151.html" xml:lang="zh-CN"><![CDATA[
-<p><img src="https://limbopro.xyz/usr/uploads/2019/11/151329695.png" alt="tls-1.3.png" title="tls-1.3.png"></p><p>本站已通过 <a href="https://limbopro.xyz/search/cloudflare">Cloudflare</a> 默认开启 TLS 1.0，往上可支持 TLS 1.1-1.3，兼容性极佳；</p></img><p class="more"><a href="https://limbopro.xyz/archives/5151.html" title="TLS 1.3 科普丨如何提高网站安全性和减少延迟。">[...]</a></p>
-]]></content>
-<link rel="replies" type="text/html" href="https://limbopro.xyz/archives/5151.html#comments" thr:count="0" />
-<link rel="replies" type="application/atom+xml" href="https://limbopro.xyz/feed/atom/archives/5151.html" thr:count="0"/>
 </entry>
 </feed>

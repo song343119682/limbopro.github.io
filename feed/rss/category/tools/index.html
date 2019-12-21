@@ -9,30 +9,78 @@ xmlns:dc="http://purl.org/dc/elements/1.1/">
 <description></description>
 <items>
 <rdf:Seq>
+<rdf:li resource="https://limbopro.xyz/archives/tgbotalert.html"/>
 <rdf:li resource="https://limbopro.xyz/archives/greasyfork.html"/>
+<rdf:li resource="https://limbopro.xyz/archives/clashA.html"/>
 <rdf:li resource="https://limbopro.xyz/archives/ssrspeed.html"/>
+<rdf:li resource="https://limbopro.xyz/archives/5230.html"/>
 <rdf:li resource="https://limbopro.xyz/archives/1-1-1-1.html"/>
 <rdf:li resource="https://limbopro.xyz/archives/adguard.html"/>
 <rdf:li resource="https://limbopro.xyz/archives/termius.html"/>
 <rdf:li resource="https://limbopro.xyz/archives/nicegram.html"/>
 <rdf:li resource="https://limbopro.xyz/archives/workingcopy.html"/>
-<rdf:li resource="https://limbopro.xyz/archives/3962.html"/>
-<rdf:li resource="https://limbopro.xyz/archives/imazing.html"/>
-<rdf:li resource="https://limbopro.xyz/archives/3856.html"/>
 </rdf:Seq>
 </items>
 </channel>
+<item rdf:about="https://limbopro.xyz/archives/tgbotalert.html">
+<title>使用 Telegram Bot 对服务器CPU高负载进行报警/通知</title>
+<link>https://limbopro.xyz/archives/tgbotalert.html</link>
+<dc:date>2019-12-21T19:54:00+08:00</dc:date>
+<description>本文隶属于 实用工具 /网站优化 分类，点击分类名称可以查看更多相关文章；[post cid="1959" cover="https://limbopro.xyz/usr/uploads/2019/11/3967700330.png"/]主理人说1.拿来即可用的 Telegram Bot Api（免费）（API是什么？）；2.如果你也有博客或需要监测服务器性能；3.这或许是个好办法；4.当服务器CPU触到阈值，则触发警报；5.真的不要太好用。本文概要1.创建TG机器人并获取[API Token]；2.给机器人发送消息，并获取你电报账号的[chatID]；3.配置CPU监测及报警通知脚本；4.使用crontab设置定时任务；CPU负载检测脚本##CPU负载计算
+function GetSysCPU 
+ {
+   CpuIdle=`vmstat 1 5 |sed -n '3,$p' | awk '{x = x + $15} END {print x/5}' | awk -F. '{print $1}'` 
+   CpuNum=`echo &quot;100-$CpuIdle&quot; | bc` 
+   echo $CpuNum 
+ }
+   cpucheck=`GetSysCPU` #将结果输出赋值到cpucheck简易报警脚本配合Telegram Bot Api 食用，效果佳。##CPU负载计算
+function GetSysCPU 
+{
+CpuIdle=`vmstat 1 5 |sed -n '3,$p' | awk '{x = x + $15} END {print x/5}' | awk -F. '{print $1}'` 
+CpuNum=`echo &quot;100-$CpuIdle&quot; | bc` 
+echo $CpuNum 
+}
+
+cpucheck=`GetSysCPU` #将结果输出赋值到cpucheck
+cpumax=50 #CPU触警阈值
+
+if [ ${cpucheck} -gt $max ]; #阈值与实际CPU值进行对比
+then
+date=$(env LANG=en_US.UTF-8 date &quot;+%e/%b/%Y/%R&quot;) #当前时间赋值
+curl -X POST &quot;https://api.telegram.org/bot[API Token]/sendMessage?chat_id=[chatID]&amp;text=$date%0aCPU负载为$cpucheck%%0a注意及时检查%0a如果该警报持续...%0a或联系管理员%0a@limboprobot&quot;
+else
+date=$(env LANG=en_US.UTF-8 date &quot;+%e/%b/%Y/%R&quot;)
+echo &quot;${date}&quot; &quot;CPU负载正常，当前负载为$cpucheck%...&quot; &gt;&gt; /home/cpucheck.log #监测坚果输出到本地以便后期查阅..
+fi
+以上。实操部分第一步 创建机器人[post cid="3097" cover="https://limbopro.xyz/usr/uploads/2019/09/53339647.png"/]*看创建机器人部分即可，仅需三步即可创建一个新机器人；第二步 获取API Token同上，创建完机器人即可获得API Token第二步 获取chatID1.官方提供了接口2.通过第二步我们已经获得了API Token2.将下方API Token替换成自己的API Token；https://api.telegram.org/bot[API Token]/getUpdates #将[API Token]替换成自己的API token，实例说明https://api.telegram.org/bot10440392893:AQMZqM-FX_SGVVMtUj98xXWWqWCO2IbGHSw/getUpdates3.替换成自己的[API token]后，在浏览器中打开链接，提示{&quot;ok&quot;:true,...；4.给机器人发送任意英文字符，例如Hello word; 5.刷新刚刚在浏览器打开的链接，并找到Hello word；举例说明，发送Hello word后刷新链接得到；&quot;message&quot;:{&quot;message_id&quot;:1426,&quot;from&quot;:{&quot;id&quot;:763456868,&quot;is_bot&quot;:false,&quot;first_name&quot;:&quot;\u2708\ufe0f TG \u6bd2\u5976\u535a\u4e3b \u2708\ufe0f&quot;,&quot;last_name&quot;:&quot;\u4e3b\u7406\u4eba Julia \ud83c\udd65&quot;,&quot;username&quot;:&quot;limbopro&quot;,&quot;language_code&quot;:&quot;zh-hans&quot;},
+&quot;chat&quot;:{&quot;id&quot;:763456868,&quot;first_name&quot;:&quot;\u2708\ufe0f TG \u6bd2\u5976\u535a\u4e3b \u2708\ufe0f&quot;,&quot;last_name&quot;:&quot;\u4e3b\u7406\u4eba Julia \ud83c\udd65&quot;,&quot;username&quot;:&quot;limbopro&quot;,&quot;type&quot;:&quot;private&quot;},&quot;date&quot;:1576931731,&quot;text&quot;:&quot;Hello word&quot;}}]}其中，"chat":{"id":763456868 里的763456868，我的Chat id；若需获取群组的Chat ID，需把机器人添加至群组，在群组内发送/hello word @xxx_bot（@xxx_bot为你的机器人） 即可；第三步 机器人发送消息1.通过上面两步，我们有了机器人以及[API Token] 以及收件人的[ChatID]；https://api.telegram.org/bot[API Token]/sendMessage?chat_id=[chatID]&amp;text=hello word1.这个是TG bot sendMessage API，简单却实用；2.你可以替换自己的[API]与[chatID]；3.正确替换后，在浏览器中打开，你将收到一条消息；4.&text=后面接你需要发的信息；5.换行用%0a表示；1
+2
+3则需表示成 &text=1%0a2%0a3以上。第四步 设置定时执行脚本任务1.Crontab的使用可参考Linux crontab 命令；root@localhost:/home#  crontab -e
+* * * * * /home/checkcpu.sh #每分钟执行一次检测其他获取网站状态脚本命令curl -I -m 10 -o /dev/null -s -w %{http_code} https://limbopro.xyz附注1.Telegram Bot API - Telegram APIs #官方2.Bot Code Examples - Telegram APIs #官方样例3.https://github.com/python-telegram-bot/python-telegram-bot （拿来即用4.https://github.com/tg-bot-api/bot-api-base联系主理人1.关注频道 https://t.me/limboprossr 不失联；2.毒奶粉们（我管我的Fans）可联系 TG机器人 或发送 邮件 获取帮助；3.或点击本页面右下角的聊天按钮联系；</description>
+</item>
 <item rdf:about="https://limbopro.xyz/archives/greasyfork.html">
 <title>Greasy Fork-安全、实用的用户脚本大全（油猴脚本）</title>
 <link>https://limbopro.xyz/archives/greasyfork.html</link>
 <dc:date>2019-12-13T22:19:00+08:00</dc:date>
 <description>本文隶属于 实用工具分类，点击分类名称可以查看更多相关文章；[post cid="1837" cover="https://limbopro.xyz/usr/uploads/2019/08/786027697.jpg"/][...]</description>
 </item>
+<item rdf:about="https://limbopro.xyz/archives/clashA.html">
+<title>神一般的工具：ClashA（UI设计赞爆！）及使用配置简明教程</title>
+<link>https://limbopro.xyz/archives/clashA.html</link>
+<dc:date>2019-12-09T13:39:00+08:00</dc:date>
+<description>本文隶属于 实用工具/科学上网 分类，点击分类名称可以查看更多相关文章；[post cid="5230" cover="https://limbopro.xyz/usr/uploads/2019/10/641260207.jpg"/][post cid="6204" cover="https://limbopro.xyz/usr/uploads/2019/12/3753675049.png"/]主理人说i&gt; 这UI设计，真是极好的！拥有Clash一切必要的特性支持SS/vmess协议界面简约且干净给人一种稳重可信赖的感觉Clash 相关软件支持平台备注ClashXMac ClashWWindows无ClashA安卓无ClaashA 介绍又叫CFA/C4A，即 Clash for Android；Clash（是什么？）安卓版本；支持SS/vmess协议；一切必要的Clash特性；TG（电报）频道：https://t.me/clash_for_android_channel下载APK：在TG频道离线下载；最近正在上架Google Play（07.12.2019）作者：kr328Github仓库：https://github.com/Kr328/ClashForAndroidClashA 界面截图*via 厘米云 Clash 订阅，厘米云分流设置挺合理（关于分流规则，这一点得看你机场主怎么设置了；）；ClashA 配置1.确认你所用的机场是否支持Clash订阅；via n3ro2.复制Clash 订阅链接；3.如上图，打开ClashA，点击Profiles，点击+/ New Profile - &gt; URL - 给该订阅命名（Name），一般为设置为机场名字，在URL处粘贴Clash订阅链接；4.点击右上角确认保存，返回到上一个页面（如上图位置），选中任意订阅名称；5.返回主界面；6.开启开关；分应用代理设置1.通过以上的设置，其实基本上可以很好的在工作生产中使用ClashA了；2.如需要给某些App走代理，可通过分应用代理进行设置；设置步骤1.打开ClashA，主界面- Settings - Proxy - 出现如上图界面；2.点击Access Control；以上。机场相关上班族/白领用户（预算充足用户）可加持IPLC，内网专线，稳定，高速，不墙（不过GFW）。[post cid="2787" cover="https://limbopro.xyz/usr/uploads/2019/09/1975249076.jpg"/]*厘米云：全平台软体订阅支持，SS/SSR/V2ray/SSD/Surge托管；[post cid="3211" cover="https://limbopro.xyz/usr/uploads/2019/11/2531730809.png"/]*N3RO：全平台软体订阅支持，SS/SSR/V2ray/SSD/Surge托管；</description>
+</item>
 <item rdf:about="https://limbopro.xyz/archives/ssrspeed.html">
 <title>StairSpeedTest/SSRSpeed 机场测速之小白入门指南</title>
 <link>https://limbopro.xyz/archives/ssrspeed.html</link>
 <dc:date>2019-12-04T16:33:00+08:00</dc:date>
 <description>via N3RO BGP（非IPLC节点）节点测速（100兆小水管跑满了！）；[...]</description>
+</item>
+<item rdf:about="https://limbopro.xyz/archives/5230.html">
+<title>神一般的工具们：Surge/Quantumult/Shadowrocket /QuantumultX/Clash/v2Ray（NG）/Maying 支持协议及配置教程科普指北</title>
+<link>https://limbopro.xyz/archives/5230.html</link>
+<dc:date>2019-11-22T22:26:00+08:00</dc:date>
+<description>该图片由dima_goroziya在Pixabay上发布主理人说目前我用得最顺手的便是 QuantumultX，丰富的协议支持（SSR/SS/Vmess...），也不用担心哪家 机场 因协议不支持而用不了；丰富的自定义玩法（加图标/策略偏好/组/分流/），各种远程脚本 支持，解锁各类姿势；在此文就各类软体的协议，展开对比说明；以上。软体及协议软件协议支持平台支持开源与否ShadowrocketSS/SSR/Vmess/iOS$2.99QuantumultSS/SSR/Vmess/iOS$4.99Quantumult XSS/SSR/Vmess/iOS$4.99Surge4SSiOS$49.99起v2rayNGSS/VmessAndroid免费v2rayNSS/Vmess/TrojanWindows免费ClashXSS/VmessMac免费ClashWSS/VmessWindows免费ClashASS/VmessAndroid免费MayingSSRAndroid免费SurfboardSSAndroid免费KitsunebitSS/VmessAndroid/iOS免费/$4.99本文隶属于 实用工具/科学上网 分类，点击分类名称可以查看更多相关文章；如有遗漏，欢迎联系我们进行补充；我要怎么选就实用性与便捷性而言（价格的经济性，以及丰富的协议支持），iOS建议加持 Quantumult X 即可；Android SS/Vmess 协议建议加持 V2RayNGClashA即可，SSR协议建议加持Maying，基佬蓝；Windows SS/Vmess协议建议加持V2RayN即可；Mac  SS/Vmess协议建议加持ClashX；（*Android 用户如果不能直接从Google Play下载App，可参考：无需安装谷歌服务框架，在线下载Google Play应用（APK）的方法。（附Go谷歌安装器下载与安装））我已经很久不在电脑使用SSR协议的机场了，Windows/Mac平台支持SSR协议的客户端我建议大家使用机场提供（一般在节点或用户中心处）的下载链接。软体配置*关于软件如何配置：1.相关机场的帮助中心或多都会提供各类软体的通用性教程；2.如实在没有，Google 搜索，软件名+怎么用，在此博主不再一一赘述；*本文末尾附注部分提供了一些软体的进阶玩法给大家；软件教程备注surfboard简明教程无v2RayNG简明教程无v2RayN简明教程无ClashW/X简明教程无ClashA简明教程无Shadowsocket简明教程无Quantumult简明教程无Quantumult X简明教程无*以上简明教程对应链接，如点击后不能跳转到相关教程位置，请在文章内自行搜索软件关键词；参考教程前，请确保你能找到机场订阅链接；如果不知道订阅是什么？请参考：本教程通用性说明；App 代购[post cid="2549" cover="https://limbopro.xyz/usr/uploads/2019/09/396172038.jpg"/]App相关群组App讨论群组备注QuantumultXhttps://t.me/quantumultapp无Surgehttps://t.me/loveapps无ClashAhttps://t.me/clash_android_discuss无*目前较为活跃且友爱的TG群组；游戏相关除了上网？还想用 机场 加速海外服务器打游戏？有两个较为出名的项目可以了解一下；软件协议支持平台支持备注SSTapSSRWindows开源NetchSSWindows开源SSTap介绍SSTap 是个人开发者编写的，支持 SSR 协议的客户端。其通过使用 tun2socks 调用虚拟 TAP 接口来实现了类 VPN 的全局代理效果，可以正常代理不遵循系统代理设置的应用程序。Netch 介绍Netch 是一款 Windows 平台的开源游戏加速工具，Netch 可以实现类似 SocksCap64 那样的进程代理，也可以实现 SSTap 那样的全局 TUN/TAP 代理，和 shadowsocks-windows 那样的本地 Socks5，HTTP 和系统代理。至于连接至远程服务器的代理协议，目前 Netch 支持以下代理协议：Shadowsocks，Vmess，Socks5，ShadowsocksR*支持的游戏具体可看作者更新日志；如有遗漏，欢迎联系我们进行补充；机场相关[post cid="1423" cover="https://limbopro.xyz/usr/uploads/2019/08/728231641.jpg"/][post cid="2787" cover="https://limbopro.xyz/usr/uploads/2019/09/1975249076.jpg"/]附注[post cid="4182" cover="https://limbopro.xyz/usr/uploads/2019/10/3546260568.jpg"/][post cid="3629" cover="https://limbopro.xyz/usr/uploads/2019/11/540587537.png"/][post cid="3833" cover="https://limbopro.xyz/usr/uploads/2019/10/641260207.jpg"/][post cid="2910" cover="https://limbopro.xyz/usr/uploads/2019/09/1752548461.jpg"/][post cid="2561" cover="https://limbopro.xyz/usr/uploads/2019/09/2033351625.jpg"/]5.v2rayNG/v2RayN配置教程参考)；</description>
 </item>
 <item rdf:about="https://limbopro.xyz/archives/1-1-1-1.html">
 <title>1.1.1.1 - Internet 上最快速、最保护您隐私的DNS 解析器</title>
@@ -73,23 +121,5 @@ $done(body);第三步 使用WorkingCopy同步 fork 到本地1.修改好 unblockr
 ^https?:\/\/vsco\.co\/api\/subscriptions\/2.1\/user-subscriptions\/ url script-response-body https://raw.githubusercontent.com/limbopro/Script/master/QuantumultX/File/vsco.js将远程脚本引用转化为本地脚本资源引用[rewrite_local]
 #VSCO滤镜VIP
 ^https?:\/\/vsco\.co\/api\/subscriptions\/2.1\/user-subscriptions\/ url script-response-body NobyDa/QuantumultX/File/vsco.js发现区别了吗？远程脚本资源引用转化为本地后，url script-response-body 后面的地址，如https://raw.githubusercontent.com/limbopro/Script/master/QuantumultX/File/vsco.js变成了NobyDa/QuantumultX/File/vsco.js，而NobyDa/QuantumultX/File/vsco.js正是vsco.js脚本在文件App中Scripts文件夹下所对应的路径（理解本地脚本资源的引用路径，本文的重点知识；你可以打开文件App查看一一比对，或修正配置文件中的引用；）；最终效果如下图示例hostname 配置0.复制并在浏览器打开https://raw.githubusercontent.com/limbopro/Script/master/QuantumultX/Js.conf，找到hostname =，hostname = 后的域名，复制它们；1.进入 Quantumult X App，点击右下角三菱按钮，找到配置文件模块；2.点击编辑，找到hostname =并在hostname =在后面粘贴；（一般在 200行左右）；效果Quantumult X 配置文件中引用本地脚本到此结束；开玩最后，进入 Quantumult X App，点击右下角三菱按钮，找到Rewrite模块，开启按钮，MitM模块，开启按钮；以上。后话31.10.2019 更新部分成功解锁示例：参考这里。另，本教程几经修改，以确保QuantumultX App 中配置文件[rewrite_local]示例中对本地脚本资源引用逻辑的可靠性，不保证脚本资源本身的有效性与可持续性；本教程所使用脚本资源，Fork自：NobyDa，再次感谢；如果你也想拥有自己的仓库，参照本文附注中，1。相关脚本仓库*如需引用其他脚本作者的库，可查看：https://raw.githubusercontent.com/limbopro/Script/master/QuantumultX/Js.conf ，里面进行了大量其他脚本作者仓库的引用，可在GitHub上搜索他们的用户名，Fork 后，用 Working Copy同步到本地，再修改QuantumultX中配置文件本地脚本资源的引用路径即可；已知部分脚本作者仓库位置：（如果找不到或已删库，请把他们的名字换成limbopro，例如https://github.com/eHpo1/Surge换成https://github.com/limbopro/Surge；再进行Fork即可；）NoByDa：https://github.com/NobyDa/Script 相关频道：https://t.me/NobyDa （脚本常更新）eHpo1: https://github.com/eHpo1/Surgeyichahucha：https://github.com/yichahucha/surge...粉丝特别关注的FAQ1.Github进行fork后如何与原（上游仓库）仓库同步？；附注-1.仅需三步，免费使用iMazing 轻松下载IPA （当前最新版本）/ 或安装IPA文件（或抓包旧版本IPA）  0.脚本仓库地址：https://github.com/limbopro/Script （Fork 自NobyDa）1.GitHub 新手指南，从入门到放弃（5分钟教学，你也可以拥有自己的仓库） 2.QuantumultX 进阶教程：组策略&分流规则&自定义图标的进阶玩法 3.iOS 使用 Surge/Quantumult/Shadowrocket /QuantumultX 解锁 TikTok 区域限制（免拔卡）10.10.2019 4.Shadowrocket/Quantumult/Quantumult X/App Store平价代购联系主理人1.关注频道 https://t.me/limboprossr 不失联；2.毒奶粉们（我管我的Fans）可联系 TG机器人 或发送 邮件获取帮助；3.或点击本页面右下角的聊天按钮联系；</description>
-</item>
-<item rdf:about="https://limbopro.xyz/archives/3962.html">
-<title>Fatkun丨图片批量下载（谷歌浏览器插件/扩展程序）</title>
-<link>https://limbopro.xyz/archives/3962.html</link>
-<dc:date>2019-10-23T18:48:00+08:00</dc:date>
-<description>via https://twitter.com/MUNANPHOTO主理人说批量下载网站图片，还行，扒图神器。本文隶属于 实用工具分类，点击分类名称可以查看更多相关文章；Fatkun-应用商店下载地址https://chrome.google.com/webstore/detail/fatkun-batch-download-ima/nnjjahlikiabnchcpehcpkdeckfgnohf?hl=zh-CNFatkun-概述1.找出当前页面的所有图片，提供按分辨率、链接等筛选图片，做一个简单好用的下载图片扩展！2.只需点击一下，即可下载页面上选择的所有图像；3.可以使用你自己的规则下载图像列表；3.可以批量重命名下载的图像；新特性1.通过拖动鼠标来选择需要的图片2.勾选“下载背景图片&更多”后可以下载背景图片3.Fatkun图片批量下载 - PRO 4.在天猫和1688详情页面提供了智能筛选功能，5.只下载商品相关的图片6.且自动将小图片转化为大图片7.下载sku位置的图片，且以sku名字命名图片8.其他网站的智能下载不断更新中操作指引右键批量下载筛选图片大小齐活*你的页面刷出多少图片，它就能下载多少图片！（例如推特，你一直往下拉，加载出来的推文就越多，图片越多...它一样能同步抓取）附注-1.下载 Instagram 图片与视频的方法（浏览器/iOS捷径以及Android应用程序）  0.全网在线视频解析与下载（YouTube/Pornhub/Instagram/Twitter/Xvideo/哔哩哔哩解析/微博视频...）  1.图中相关Twitter账号：https://twitter.com/MUNANPHOTO2.毒奶の机场专线推荐：https://limbopro.xyz/865.html3.MUNAN_(_MUNANPHOTO)___Twitter.zip联系主理人1.关注频道 https://t.me/limboprossr 不失联；2.毒奶粉们（我管我的Fans）可联系 TG机器人 或发送 邮件 获取帮助；3.或点击本页面右下角的聊天按钮联系；</description>
-</item>
-<item rdf:about="https://limbopro.xyz/archives/imazing.html">
-<title>仅需三步，免费使用iMazing 轻松下载IPA （当前最新版本）/ 或安装IPA文件（旧版本）（以及解锁完整版本以备份你的整个iPhone）</title>
-<link>https://limbopro.xyz/archives/imazing.html</link>
-<dc:date>2019-10-21T11:03:00+08:00</dc:date>
-<description>本文隶属于 实用工具/科学上网 分类，点击分类名称可以查看更多相关文章；[...]</description>
-</item>
-<item rdf:about="https://limbopro.xyz/archives/3856.html">
-<title>GitHub 新手指南，从入门到放弃（5分钟教学，你也可以拥有自己的仓库）以及 fork 后如何与上游仓库保持更新；</title>
-<link>https://limbopro.xyz/archives/3856.html</link>
-<dc:date>2019-10-18T09:58:00+08:00</dc:date>
-<description>本文概要就算是素人玩家，也可以玩到飞起。1.Github 是什么，它可以做什么2.开局新建一个账号3.装备全靠捡4.本地/远程/合并/更新/仓库就是一切以上。本文隶属于 实用工具/科学上网 分类，点击分类名称可以查看更多相关文章；[...]</description>
 </item>
 </rdf:RDF>
