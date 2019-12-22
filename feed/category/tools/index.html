@@ -28,7 +28,7 @@ function GetSysCPU
    CpuNum=`echo &quot;100-$CpuIdle&quot; | bc` 
    echo $CpuNum 
  }
-   cpucheck=`GetSysCPU` #将结果输出赋值到cpucheck</code></pre><h2>简易报警脚本</h2><p>配合Telegram Bot Api 食用，效果佳。</p><pre><code>##CPU负载计算
+   cpucheck=`GetSysCPU` #将结果输出赋值到cpucheck</code></pre><p>*暂忘脚本出处</p><h2>简易报警脚本</h2><p>配合Telegram Bot Api 食用，效果佳。</p><pre><code>##CPU负载计算
 function GetSysCPU 
 {
 CpuIdle=`vmstat 1 5 |sed -n '3,$p' | awk '{x = x + $15} END {print x/5}' | awk -F. '{print $1}'` 

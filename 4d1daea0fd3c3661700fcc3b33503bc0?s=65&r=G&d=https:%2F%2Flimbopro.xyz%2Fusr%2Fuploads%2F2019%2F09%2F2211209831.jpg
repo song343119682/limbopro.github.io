@@ -2,6 +2,7 @@
 <html class="no-js bg cool-transparent" lang="zh-cmn-Hans">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<base target="_blank" />
 <meta charset="UTF-8">
 
 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
@@ -50,10 +51,10 @@
         }
 @media (max-width:767px){
     html.bg {
-        background: url(usr/uploads/2019/11/425005431.jpg) center center no-repeat no-repeat fixed #6A6B6F;background-size: cover;
+        background: url(./4d1daea0fd3c3661700fcc3b33503bc0?s=65&r=G&d=https:%252F%252Flimbopro.xyz%252Fusr%252Fuploads%252F2019%252F09%252F2211209831.jpg) center center no-repeat no-repeat fixed #6A6B6F;background-size: cover;
         }
         .cool-transparent .off-screen+* .app-content-body {
-        background: url(usr/uploads/2019/11/425005431.jpg) center center no-repeat no-repeat fixed #6A6B6F;background-size: cover;
+        background: url(./4d1daea0fd3c3661700fcc3b33503bc0?s=65&r=G&d=https:%252F%252Flimbopro.xyz%252Fusr%252Fuploads%252F2019%252F09%252F2211209831.jpg) center center no-repeat no-repeat fixed #6A6B6F;background-size: cover;
         }
 }
 #toc {
@@ -69,18 +70,18 @@
 	color: #999;
 }    </style>
 
-<script src="usr/themes/handsome/assets/libs/jquery/jquery.min.js" type="48b95eedf8a81d43cd47fde9-text/javascript"></script>
+<script src="usr/themes/handsome/assets/libs/jquery/jquery.min.js" type="9705275afc3f3e33a2fb095a-text/javascript"></script>
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140019039-1" type="48b95eedf8a81d43cd47fde9-text/javascript"></script>
-<script type="48b95eedf8a81d43cd47fde9-text/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140019039-1" type="9705275afc3f3e33a2fb095a-text/javascript"></script>
+<script type="9705275afc3f3e33a2fb095a-text/javascript">
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'UA-140019039-1');
 </script>
-<script src="usr/themes/handsome/assets/js/features/fancyMorph.min.js" type="48b95eedf8a81d43cd47fde9-text/javascript"></script>
+<script src="usr/themes/handsome/assets/js/features/fancyMorph.min.js" type="9705275afc3f3e33a2fb095a-text/javascript"></script>
 </head>
 <body id="body" class="fix-padding">
 
@@ -172,8 +173,8 @@
 <span class="block m-t-sm">
 <strong class="font-bold text-lt">毒奶</strong>
 <b class="caret"></b>
-</span>
-<span class="text-muted text-xs block">TG 毒奶博主<br>业余斜杆青年<br>增长黑客<br>收集癖</span>
+ </span>
+<span class="text-muted text-xs block">TG 毒奶博主<br>业余斜杆青年<br>互联网拾荒<br>增长黑客</span>
 </span>
 </a>
 
@@ -231,7 +232,7 @@
 </a>
 </li>
 
-<li><a href="category/master-care/index.html"><b class="badge pull-right">19</b><span>无主杂记</span></a></li><li><a href="category/Bulletin/index.html"><b class="badge pull-right">5</b><span>运营通报</span></a></li><li><a href="category/hot-movies/index.html"><b class="badge pull-right">17</b><span>追剧小组</span></a></li><li><a href="category/films-recommend/index.html"><b class="badge pull-right">39</b><span>电影推荐</span></a></li><li><a href="category/ssr/index.html"><b class="badge pull-right">10</b><span>科学上网</span></a></li><li><a href="category/ssr-operation/index.html"><b class="badge pull-right">1</b><span>自学上网</span></a></li><li><a href="category/tools/index.html"><b class="badge pull-right">24</b><span>实用工具</span></a></li><li><a href="category/LNMP/index.html"><b class="badge pull-right">24</b><span>建站指南</span></a></li><li><a href="category/Typecho/index.html"><b class="badge pull-right">20</b><span>网站优化</span></a></li><li><a href="category/Toilet-reading/index.html"><b class="badge pull-right">8</b><span>厕所读物</span></a></li><li><a href="category/software-skills/index.html"><b class="badge pull-right">23</b><span>软件百科</span></a></li><li><a href="category/telegram-anecdote/index.html"><b class="badge pull-right">10</b><span>电报奇闻</span></a></li><li><a href="category/instagram/index.html"><b class="badge pull-right">11</b><span>美图欣赏</span></a></li><li><a href="category/sales/index.html"><b class="badge pull-right">1</b><span>怪薅羊毛</span></a></li><li><a href="category/NSFW/index.html"><b class="badge pull-right">17</b><span>开车专栏</span></a></li><li><a href="category/day-of-history/index.html"><b class="badge pull-right">1</b><span>历史时刻</span></a></li><li><a href="category/AfterFQ/index.html"><b class="badge pull-right">1</b><span>毒奶世界</span></a></li><li><a href="category/technologyart/index.html"><b class="badge pull-right">2</b><span>科技美学</span></a></li><li><a href="category/Internetlog/index.html"><b class="badge pull-right">1</b><span>观察报告</span></a></li> </ul>
+<li><a href="category/Bulletin/index.html"><b class="badge pull-right">5</b><span>运营通报</span></a></li><li><a href="category/hot-movies/index.html"><b class="badge pull-right">17</b><span>追剧小组</span></a></li><li><a href="category/films-recommend/index.html"><b class="badge pull-right">39</b><span>电影推荐</span></a></li><li><a href="category/instagram/index.html"><b class="badge pull-right">11</b><span>美图欣赏</span></a></li><li><a href="category/ssr/index.html"><b class="badge pull-right">10</b><span>科学上网</span></a></li><li><a href="category/ssr-operation/index.html"><b class="badge pull-right">1</b><span>自学上网</span></a></li><li><a href="category/tools/index.html"><b class="badge pull-right">24</b><span>实用工具</span></a></li><li><a href="category/LNMP/index.html"><b class="badge pull-right">24</b><span>建站指南</span></a></li><li><a href="category/Typecho/index.html"><b class="badge pull-right">20</b><span>网站优化</span></a></li><li><a href="category/Toilet-reading/index.html"><b class="badge pull-right">8</b><span>厕所读物</span></a></li><li><a href="category/software-skills/index.html"><b class="badge pull-right">23</b><span>软件百科</span></a></li><li><a href="category/telegram-anecdote/index.html"><b class="badge pull-right">10</b><span>电报奇闻</span></a></li><li><a href="category/master-care/index.html"><b class="badge pull-right">19</b><span>无主杂记</span></a></li><li><a href="category/Internetlog/index.html"><b class="badge pull-right">1</b><span>观察报告</span></a></li><li><a href="category/sales/index.html"><b class="badge pull-right">1</b><span>怪薅羊毛</span></a></li><li><a href="category/NSFW/index.html"><b class="badge pull-right">17</b><span>开车专栏</span></a></li><li><a href="category/day-of-history/index.html"><b class="badge pull-right">1</b><span>历史时刻</span></a></li><li><a href="category/AfterFQ/index.html"><b class="badge pull-right">1</b><span>毒奶世界</span></a></li><li><a href="category/technologyart/index.html"><b class="badge pull-right">2</b><span>科技美学</span></a></li> </ul>
 </li>
 
 <li>
@@ -318,7 +319,7 @@
 </ul>
 <div class="tab-content">
 <div class="tab-pane active" id="tab_1">
- <ul class="list-group no-borders pull-in m-b-none">
+<ul class="list-group no-borders pull-in m-b-none">
 <li class="list-group-item">
 <a href="archives/tgbotalert.html" class="text-ellipsis h5 block">使用 Telegram Bot 对服务器CPU高负载进行报警/通知</a>
 <p class="summary l-h-2x text-muted">本文隶属于 实用工具 /网站优化 分类，点击分类名称可以查看更多相关文章；主理人说1.拿来即可用的 Telegram Bot Api（免费）（API是什么？）；2.如果你也有博客或需要监测服务器...</p>
@@ -369,7 +370,7 @@
 </li>
 <li class="list-group-item">
 <a href="archives/adguard.html" class="text-ellipsis h5 block">Adguard-世界上最高级的广告拦截程序！丨黑五促销！请享受50%的折扣！ </a>
-<p class="summary l-h-2x text-muted">本文隶属于 软件百科 分类，点击分类名称可以查看更多相关文章；主理人推荐序全局广告拦截与隐私保护，不限于浏览器；价格良心，不得不承认加钱部分的功能（参见文章引用官网地址），确实很吸引人；万圣节有...</p>
+ <p class="summary l-h-2x text-muted">本文隶属于 软件百科 分类，点击分类名称可以查看更多相关文章；主理人推荐序全局广告拦截与隐私保护，不限于浏览器；价格良心，不得不承认加钱部分的功能（参见文章引用官网地址），确实很吸引人；万圣节有...</p>
 </li>
 <li class="list-group-item">
 <a href="archives/4372.html" class="text-ellipsis h5 block">倩女幽魂丨1987-1991</a>
@@ -414,31 +415,31 @@
 <a href="archives/615.html" class="pull-left thumb-sm m-r"><img src="usr/themes/handsome/usr/img/sj2/2.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
 <h4 class="h5 l-h text-second"> <a href="archives/615.html" title="极游丨4K秒开丨3.5元起丨v2Ray机场推荐及简易配置教程"> 极游丨4K秒开丨3.5元起丨v2Ray机场推荐及简易配置教程 </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">68515</span>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">68883</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="archives/2561.html" class="pull-left thumb-sm m-r"><img src="usr/themes/handsome/usr/img/sj2/9.jpg" class="img-40px normal-shadow img-square"></a>
+<a href="archives/2561.html" class="pull-left thumb-sm m-r"><img src="usr/themes/handsome/usr/img/sj2/10.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
 <h4 class="h5 l-h text-second"> <a href="archives/2561.html" title="Rules / 分流/去广告规则：Surge / Shadowrocket / Quantumult/ Quantumult X  及详细配置步骤教程（萌新小白版本）"> Rules / 分流/去广告规则：Surge / Shadowrocket / Quantumult/ Quantumult X 及详细配置步骤教程（萌新小白版本） </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">30645</span>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">30933</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="archives/1423.html" class="pull-left thumb-sm m-r"><img src="usr/themes/handsome/usr/img/sj2/8.jpg" class="img-40px normal-shadow img-square"></a>
+<a href="archives/1423.html" class="pull-left thumb-sm m-r"><img src="usr/themes/handsome/usr/img/sj2/7.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
 <h4 class="h5 l-h text-second"> <a href="archives/1423.html" title="卡车家族丨1080P秒开丨折后6.4元/月起丨50+节点丨SSR机场推荐（学生党首选）"> 卡车家族丨1080P秒开丨折后6.4元/月起丨50+节点丨SSR机场推荐（学生党首选） </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">23888</span>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">24019</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="archives/2787.html" class="pull-left thumb-sm m-r"><img src="usr/themes/handsome/usr/img/sj2/4.jpg" class="img-40px normal-shadow img-square"></a>
+<a href="archives/2787.html" class="pull-left thumb-sm m-r"><img src="usr/themes/handsome/usr/img/sj2/3.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
 <h4 class="h5 l-h text-second"> <a href="archives/2787.html" title="高速内网IPLC专线机场丨4K秒开丨14.99元/月起丨京港/沪港/深港/深新/沪美线路（贵在稳定）"> 高速内网IPLC专线机场丨4K秒开丨14.99元/月起丨京港/沪港/深港/深新/沪美线路（贵在稳定） </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">21085</span>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">21273</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="archives/969.html" class="pull-left thumb-sm m-r"><img src="usr/themes/handsome/usr/img/sj2/7.jpg" class="img-40px normal-shadow img-square"></a>
+<a href="archives/969.html" class="pull-left thumb-sm m-r"><img src="usr/themes/handsome/usr/img/sj2/1.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
 <h4 class="h5 l-h text-second"> <a href="archives/969.html" title="在中国看Netflix丨HBO丨Hulu丨Amazon Prime Video丨Apple TV丨或其他任意剧集。"> 在中国看Netflix丨HBO丨Hulu丨Amazon Prime Video丨Apple TV丨或其他任意剧集。 </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">19392</span>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">19541</span>
 </span>
 </small></div></li> </ul>
 </div>
@@ -447,34 +448,34 @@
 <h5 class="widget-title m-t-none text-md">随机文章</h5>
 <ul class="list-group no-bg no-borders pull-in">
 <li class="list-group-item">
-<a href="archives/4145.html" class="pull-left thumb-sm m-r"><img src="usr/themes/handsome/usr/img/sj2/2.jpg" class="img-40px normal-shadow img-square"></a>
-<div class="clear">
-<h4 class="h5 l-h text-second"> <a href="archives/4145.html" title="续命之徒：绝命毒师电影 "> 续命之徒：绝命毒师电影 </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">750</span>
-</span>
-</small></div></li><li class="list-group-item">
-<a href="archives/1008.html" class="pull-left thumb-sm m-r"><img src="usr/themes/handsome/usr/img/sj2/9.jpg" class="img-40px normal-shadow img-square"></a>
-<div class="clear">
-<h4 class="h5 l-h text-second"> <a href="archives/1008.html" title="VPN 广告大赏"> VPN 广告大赏 </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">3802</span>
-</span>
-</small></div></li><li class="list-group-item">
-<a href="archives/imazing.html" class="pull-left thumb-sm m-r"><img src="usr/themes/handsome/usr/img/sj2/8.jpg" class="img-40px normal-shadow img-square"></a>
-<div class="clear">
-<h4 class="h5 l-h text-second"> <a href="archives/imazing.html" title="仅需三步，免费使用iMazing 轻松下载IPA （当前最新版本）/ 或安装IPA文件（旧版本）（以及解锁完整版本以备份你的整个iPhone）"> 仅需三步，免费使用iMazing 轻松下载IPA （当前最新版本）/ 或安装IPA文件（旧版本）（以及解锁完整版本以备份你的整个iPhone） </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">4653</span>
-</span>
-</small></div></li><li class="list-group-item">
-<a href="archives/ssrspeed.html" class="pull-left thumb-sm m-r"><img src="usr/themes/handsome/usr/img/sj2/4.jpg" class="img-40px normal-shadow img-square"></a>
+<a href="archives/ssrspeed.html" class="pull-left thumb-sm m-r"><img src="usr/themes/handsome/usr/img/sj2/2.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
 <h4 class="h5 l-h text-second"> <a href="archives/ssrspeed.html" title="StairSpeedTest/SSRSpeed 机场测速之小白入门指南"> StairSpeedTest/SSRSpeed 机场测速之小白入门指南 </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">1823</span>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">1922</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="archives/615.html" class="pull-left thumb-sm m-r"><img src="usr/themes/handsome/usr/img/sj2/7.jpg" class="img-40px normal-shadow img-square"></a>
+<a href="archives/1877.html" class="pull-left thumb-sm m-r"><img src="usr/themes/handsome/usr/img/sj2/10.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h text-second"> <a href="archives/615.html" title="极游丨4K秒开丨3.5元起丨v2Ray机场推荐及简易配置教程"> 极游丨4K秒开丨3.5元起丨v2Ray机场推荐及简易配置教程 </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">68515</span>
+<h4 class="h5 l-h text-second"> <a href="archives/1877.html" title="“纸老虎” Cloudflare 在中国"> “纸老虎” Cloudflare 在中国 </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">1930</span>
+</span>
+</small></div></li><li class="list-group-item">
+<a href="archives/1567.html" class="pull-left thumb-sm m-r"><img src="usr/themes/handsome/usr/img/sj2/7.jpg" class="img-40px normal-shadow img-square"></a>
+<div class="clear">
+<h4 class="h5 l-h text-second"> <a href="archives/1567.html" title="春潮丨TG春潮频道上新。"> 春潮丨TG春潮频道上新。 </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">3496</span>
+</span>
+</small></div></li><li class="list-group-item">
+<a href="archives/346.html" class="pull-left thumb-sm m-r"><img src="usr/themes/handsome/usr/img/sj2/3.jpg" class="img-40px normal-shadow img-square"></a>
+<div class="clear">
+<h4 class="h5 l-h text-second"> <a href="archives/346.html" title="拉萨。"> 拉萨。 </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">3144</span>
+</span>
+</small></div></li><li class="list-group-item">
+<a href="archives/1299.html" class="pull-left thumb-sm m-r"><img src="usr/themes/handsome/usr/img/sj2/1.jpg" class="img-40px normal-shadow img-square"></a>
+<div class="clear">
+<h4 class="h5 l-h text-second"> <a href="archives/1299.html" title="人类登月50年丨值得关注的事"> 人类登月50年丨值得关注的事 </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">2829</span>
 </span>
 </small></div></li> </ul>
 </div>
@@ -485,21 +486,21 @@
 <h5 class="widget-title m-t-none text-md">博客信息</h5>
 <ul class="list-group box-shadow-wrap-normal">
 <li class="list-group-item text-second"><span class="blog-info-icons"> <i data-feather="award"></i></span> <span class="badge
-           pull-right">221</span>文章数目</li>
+           pull-right">222</span>文章数目</li>
 <li class="list-group-item text-second"> <span class="blog-info-icons"> <i data-feather="message-circle"></i></span>
 <span class="badge
            pull-right">5</span>评论数目</li>
 <li class="list-group-item text-second"><span class="blog-info-icons"> <i data-feather="calendar"></i></span>
 <span class="badge
-           pull-right">226天</span>运行天数</li>
+           pull-right">227天</span>运行天数</li>
 <li class="list-group-item text-second"><span class="blog-info-icons"> <i data-feather="activity"></i></span> <span class="badge
-           pull-right">3 小时前</span>最后活动</li>
+           pull-right">15 小时前</span>最后活动</li>
 </ul>
 </section>
 
 <section id="a_d_sidebar" class="widget widget_categories wrapper-md clear">
 <h5 class="widget-title m-t-none text-md">广告</h5>
-<script data-ad-client="ca-pub-4573757070775891" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" type="48b95eedf8a81d43cd47fde9-text/javascript"></script> </section>
+<script data-ad-client="ca-pub-4573757070775891" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" type="9705275afc3f3e33a2fb095a-text/javascript"></script> </section>
 
 <section id="tag_cloud-2" class="widget widget_tag_cloud wrapper-md clear">
 <h5 class="widget-title m-t-none text-md">标签云</h5>
@@ -546,9 +547,12 @@
 <footer id="footer" class="app-footer" role="footer">
 <div class="wrapper bg-light">
 <span class="pull-right hidden-xs text-ellipsis">
+本站总访问量 3813694882 次
+丨2人在线丨
 Powered by <a target="_blank" href="http://www.typecho.org">Typecho</a>&nbsp;|&nbsp;Theme by <a target="_blank" href="https://www.ihewro.com/archives/489/">handsome</a>
 </span>
-<span class="text-ellipsis">&copy;&nbsp;2019 <a target="blank" href="index.html">毒奶</a>.inc Copyright&nbsp; 自建站之日起，本站总访问量 3813689036 次</span>
+<span class="text-ellipsis">&copy;&nbsp;2019 <a target="blank" href="index.html">毒奶</a>.inc Copyright&nbsp;
+</span>
 </div>
 
 <script type="text/template" id="tmpl-customizer">
@@ -628,14 +632,14 @@ Powered by <a target="_blank" href="http://www.typecho.org">Typecho</a>&nbsp;|&n
 		-moz-transform: scale(1.4);	/* Firefox */
 	}
 </style>
-<script type="48b95eedf8a81d43cd47fde9-text/javascript">
+<script type="9705275afc3f3e33a2fb095a-text/javascript">
 	document.addEventListener('DOMContentLoaded', function(){
 		var imgs = document.querySelectorAll('img');
 		Array.prototype.forEach.call(imgs, function(el, i) {
 			if (el.tabIndex <= 0) el.tabIndex = 100;
 		});
 	});
-</script><script type="48b95eedf8a81d43cd47fde9-text/javascript">
+</script><script type="9705275afc3f3e33a2fb095a-text/javascript">
 	(function(){
 		var pres = document.querySelectorAll('pre');
 		var lineNumberClassName = 'line-numbers';
@@ -644,15 +648,15 @@ Powered by <a target="_blank" href="http://www.typecho.org">Typecho</a>&nbsp;|&n
 		});
 	})();
 </script>
-<script type="48b95eedf8a81d43cd47fde9-text/javascript" src="usr/plugins/CodePrettify/static/clipboard.min.js"></script>
-<script type="48b95eedf8a81d43cd47fde9-text/javascript" src="usr/plugins/CodePrettify/static/prism.js"></script>
-<script type="48b95eedf8a81d43cd47fde9-text/javascript">
+<script type="9705275afc3f3e33a2fb095a-text/javascript" src="usr/plugins/CodePrettify/static/clipboard.min.js"></script>
+<script type="9705275afc3f3e33a2fb095a-text/javascript" src="usr/plugins/CodePrettify/static/prism.js"></script>
+<script type="9705275afc3f3e33a2fb095a-text/javascript">
 SearchConfig = {
     url : "https://limbopro.xyz/usr/plugins/Handsome/cache/search.json"
 }
 </script>
 
-<script type="48b95eedf8a81d43cd47fde9-text/javascript">
+<script type="9705275afc3f3e33a2fb095a-text/javascript">
         window['LocalConst'] = {
             COMMENT_NAME_INFO: '必须填写昵称或姓名',
             COMMENT_EMAIL_INFO: '必须填写电子邮箱地址',
@@ -683,7 +687,7 @@ SearchConfig = {
             COMMENT_SYSTEM_CHANGYAN: '1',
             COMMENT_SYSTEM_OTHERS: '2',
             EMOJI: '表情',
-            IS_PJAX: '',
+            IS_PJAX: '1',
             IS_PAJX_COMMENT: '1',
             BASE_SCRIPT_URL: 'https://limbopro.xyz/usr/themes/handsome/',
             BLOG_URL: 'https://limbopro.xyz/',
@@ -724,25 +728,52 @@ SearchConfig = {
 
     </script>
 
-<script src="usr/themes/handsome/assets/libs/bootstrap/js/bootstrap.min.js" type="48b95eedf8a81d43cd47fde9-text/javascript"></script>
+<script src="usr/themes/handsome/assets/libs/bootstrap/js/bootstrap.min.js" type="9705275afc3f3e33a2fb095a-text/javascript"></script>
+<script src="usr/themes/handsome/assets/js/features/jquery.pjax.min.js" type="9705275afc3f3e33a2fb095a-text/javascript"></script>
+<script type="9705275afc3f3e33a2fb095a-text/javascript">
+        $(document).pjax('a[href^="https://limbopro.xyz/"]:not(a[target="_blank"], a[no-pjax])', {
+            container: '#content',
+            fragment: '#content',
+            timeout: 8000
+        }).on('pjax:send',function () {
+                        $('#loading').removeClass('hide');
+                    }).on('pjax:click', function() {
+
+            window['Page'].doPJAXClickAction();
+            
+                        $('body,html').animate({scrollTop:0},100);
+            
+
+        }).on('pjax:complete', function() {
+            window['Page'].doPJAXCompleteAction();
+            if ($(".post-position").length > 0){
+                window['Page'].doPJAXCompletePostAction();
+            }
+                                    $('#loading').addClass('hide');
+            
+                                    MathJax.Hub.Queue(["Typeset",MathJax.Hub,"body"]);
+            
+
+        })
+    </script>
 
 
-<script src="usr/themes/handsome/assets/js/features/feather.min.js?v=6.0.020191205" type="48b95eedf8a81d43cd47fde9-text/javascript"></script>
+<script src="usr/themes/handsome/assets/js/features/feather.min.js?v=6.0.020191205" type="9705275afc3f3e33a2fb095a-text/javascript"></script>
 
-<script src="https://cdn.staticfile.org/mathjax/2.7.0/MathJax.js" type="48b95eedf8a81d43cd47fde9-text/javascript"></script>
-<script src="https://cdn.staticfile.org/mathjax/2.7.0/config/TeX-AMS-MML_SVG.js" type="48b95eedf8a81d43cd47fde9-text/javascript"></script>
+<script src="https://cdn.staticfile.org/mathjax/2.7.0/MathJax.js" type="9705275afc3f3e33a2fb095a-text/javascript"></script>
+<script src="https://cdn.staticfile.org/mathjax/2.7.0/config/TeX-AMS-MML_SVG.js" type="9705275afc3f3e33a2fb095a-text/javascript"></script>
 
-<script src="usr/themes/handsome/assets/js/features/jquery.fancybox.min.js?v=6.0.020191205" type="48b95eedf8a81d43cd47fde9-text/javascript"></script>
-<script src="usr/themes/handsome/assets/js/features/easypiechart.min.js?v=6.0.020191205" type="48b95eedf8a81d43cd47fde9-text/javascript"></script>
+<script src="usr/themes/handsome/assets/js/features/jquery.fancybox.min.js?v=6.0.020191205" type="9705275afc3f3e33a2fb095a-text/javascript"></script>
+<script src="usr/themes/handsome/assets/js/features/easypiechart.min.js?v=6.0.020191205" type="9705275afc3f3e33a2fb095a-text/javascript"></script>
 
-<script src="usr/themes/handsome/assets/js/features/html2canvas.min.js" type="48b95eedf8a81d43cd47fde9-text/javascript"></script>
+<script src="usr/themes/handsome/assets/js/features/html2canvas.min.js" type="9705275afc3f3e33a2fb095a-text/javascript"></script>
 
 
-<script src="usr/themes/handsome/assets/js/function.min.js?v=6.0.020191205" type="48b95eedf8a81d43cd47fde9-text/javascript"></script>
-<script src="usr/themes/handsome/assets/js/core.min.js?v=6.0.020191205" type="48b95eedf8a81d43cd47fde9-text/javascript"></script>
-<script src="usr/themes/handsome/assets/js/features/setting.min.js?v=6.0.020191205" type="48b95eedf8a81d43cd47fde9-text/javascript"></script>
-<script type="48b95eedf8a81d43cd47fde9-text/javascript">
+<script src="usr/themes/handsome/assets/js/function.min.js?v=6.0.020191205" type="9705275afc3f3e33a2fb095a-text/javascript"></script>
+<script src="usr/themes/handsome/assets/js/core.min.js?v=6.0.020191205" type="9705275afc3f3e33a2fb095a-text/javascript"></script>
+<script src="usr/themes/handsome/assets/js/features/setting.min.js?v=6.0.020191205" type="9705275afc3f3e33a2fb095a-text/javascript"></script>
+<script type="9705275afc3f3e33a2fb095a-text/javascript">
             </script>
-<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="48b95eedf8a81d43cd47fde9-|49" defer=""></script></body>
+<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="9705275afc3f3e33a2fb095a-|49" defer=""></script></body>
 </html>
 

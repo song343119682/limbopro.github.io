@@ -28,6 +28,20 @@ xmlns:wfw="http://wellformedweb.org/CommentAPI/">
 <wfw:commentRss>https://limbopro.xyz/feed/archives/n3ro.html</wfw:commentRss>
 </item>
 <item>
+<title>关于毒奶博主（12.23.2019）</title>
+<link>https://limbopro.xyz/archives/2041.html</link>
+<guid>https://limbopro.xyz/archives/2041.html</guid>
+<pubDate>Mon, 12 Aug 2019 23:55:00 +0800</pubDate>
+<dc:creator>毒奶</dc:creator>
+<description><![CDATA[via Dragon Ball]]></description>
+<content:encoded xml:lang="zh-CN"><![CDATA[
+<p><img src="https://limbopro.xyz/usr/uploads/2019/11/2264724749.jpg" alt="Dragon Ball.png" title="Dragon Ball.png"></p><p>via Dragon Ball</p></img><p class="more"><a href="https://limbopro.xyz/archives/2041.html" title="关于毒奶博主（12.23.2019）">[...]</a></p>
+]]></content:encoded>
+<slash:comments>0</slash:comments>
+<comments>https://limbopro.xyz/archives/2041.html#comments</comments>
+<wfw:commentRss>https://limbopro.xyz/feed/archives/2041.html</wfw:commentRss>
+</item>
+<item>
 <title>使用 Telegram Bot 对服务器CPU高负载进行报警/通知</title>
 <link>https://limbopro.xyz/archives/tgbotalert.html</link>
 <guid>https://limbopro.xyz/archives/tgbotalert.html</guid>
@@ -42,7 +56,7 @@ function GetSysCPU
    CpuNum=`echo &quot;100-$CpuIdle&quot; | bc` 
    echo $CpuNum 
  }
-   cpucheck=`GetSysCPU` #将结果输出赋值到cpucheck</code></pre><h2>简易报警脚本</h2><p>配合Telegram Bot Api 食用，效果佳。</p><pre><code>##CPU负载计算
+   cpucheck=`GetSysCPU` #将结果输出赋值到cpucheck</code></pre><p>*暂忘脚本出处</p><h2>简易报警脚本</h2><p>配合Telegram Bot Api 食用，效果佳。</p><pre><code>##CPU负载计算
 function GetSysCPU 
 {
 CpuIdle=`vmstat 1 5 |sed -n '3,$p' | awk '{x = x + $15} END {print x/5}' | awk -F. '{print $1}'` 
