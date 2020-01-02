@@ -9,6 +9,8 @@ xmlns:dc="http://purl.org/dc/elements/1.1/">
 <description></description>
 <items>
 <rdf:Seq>
+<rdf:li resource="https://limbopro.xyz/archives/TpCache.html"/>
+<rdf:li resource="https://limbopro.xyz/archives/DDoS.html"/>
 <rdf:li resource="https://limbopro.xyz/archives/2106.html"/>
 <rdf:li resource="https://limbopro.xyz/archives/2056.html"/>
 <rdf:li resource="https://limbopro.xyz/archives/1376.html"/>
@@ -17,13 +19,98 @@ xmlns:dc="http://purl.org/dc/elements/1.1/">
 <rdf:li resource="https://limbopro.xyz/archives/1035.html"/>
 <rdf:li resource="https://limbopro.xyz/archives/997.html"/>
 <rdf:li resource="https://limbopro.xyz/archives/486.html"/>
-<rdf:li resource="https://limbopro.xyz/archives/467.html"/>
-<rdf:li resource="https://limbopro.xyz/archives/461.html"/>
 </rdf:Seq>
 </items>
 </channel>
+<item rdf:about="https://limbopro.xyz/archives/TpCache.html">
+<title>TpCache-Typecho 缓存插件（配合Redis食用，800+并发支撑）</title>
+<link>https://limbopro.xyz/archives/TpCache.html</link>
+<dc:date>2019-12-29T21:51:00+08:00</dc:date>
+<description>本文隶属于 网站优化 分类，点击分类名称查看更多相关主题；主理人说使用了TpCache+Redis组合以后，小伙伴纷纷反馈打开快到飞起。(你打开谷歌首页有多快，就有多快。TpCache项目地址：https://github.com/phpgao/TpCache功能减缓网站并发压力而开发的缓存插件。注意1.支持Memcache，Redis，Mysql三种驱动。2.非js方式的访问统计插件会失效。下载并启用TpCache插件1.进入TpCache的Github仓库，2.使用SSH登入服务器使用wget命令进行下载：$ wget https://github.com/phpgao/TpCache/archive/master.zip3.放入网站根目录/usr/plugins/文件夹下；4.解压压缩包，将文件夹重命名为TpCache；5.进入网站-控制台-插件-找到TpCache启用；*如未安装Memcache，RedisPHP扩展，可以使用MySQL驱动；6.设置好后，可以强制刷新下首页试试看效果；以上，如不想折腾redis则可到此结束，Enjoy。安装redis配合Redis食用，TpCache的性能应该是最佳的；博主的生产环境是Ubuntu server，按理说下面命令亦适合Redhat、SuSE、Debian、Centos等；源码编译安装Redis1.进入 Redis 官网：https://redis.io/2.找到最新 latest Stable version；3.目前是 5.0.7 http://download.redis.io/releases/redis-5.0.7.tar.gz ；$ cd /usr/src/ 
+$ wget http://download.redis.io/releases/redis-5.0.7.tar.gz ##下载Redis最新稳定版
+$ tar -zxvf redis-5.0.7.tar.gz ##解压
+$ cd redis-5.0.7 
+$ make &amp;&amp; make install ##编译与安装安装服务$ cd /usr/src/redis-5.0.7/utils/
+$ ./install_server.sh默认配置Port           : 6379
+Config file    : /etc/redis/6379.conf #配置文件
+Log file       : /var/log/redis_6379.log #日志
+Data dir       : /var/lib/redis/6379 #生产目录
+Executable     : /usr/local/bin/redis-server #redis-serve 文件
+Cli Executable : /usr/local/bin/redis-cli #redis-cli文件至此，Redis安装完毕，得到两个二进制文件；1.redis-server2.redis-cli安装成功之后可以通过以下命令查看redis的安装位置：（如果你忘记的话）$ which redis-server
+$ which redis-cli编辑redis conf$ vi /etc/redis/6379.conf #redis的配置文件# By default Redis does not run as a daemon. Use 'yes' if you need it.
+# Note that Redis will write a pid file in /var/run/redis.pid when daemonized.
+daemonize no建议将no改为yes，表示改为后台启动（run as a daemon）；如需修改端口找到：# Accept connections on the specified port, default is 6379 (IANA #815344).
+# If port 0 is specified Redis will not listen on a TCP socket.
+port 6379 #修改端口即可查看redis版本$ redis-cli info | grep &quot;redis_version&quot;启动redis/usr/local/bin/redis-server /etc/redis/6379.conf获取使用帮助/usr/local/bin/redis-server -h #查看帮助常用指令Usage: 
+./redis-server [/path/to/redis.conf] [options]
+./redis-server - (read config from stdin)
+./redis-server -v or --version
+./redis-server -h or --help
+./redis-server --test-memory &lt;megabytes&gt;
+
+Examples:
+./redis-server (run the server with default conf)
+./redis-server /etc/redis/6379.conf
+./redis-server --port 7777
+./redis-server --port 7777 --replicaof 127.0.0.1 8888
+./redis-server /etc/myredis.conf --loglevel verbose
+
+Sentinel mode:
+./redis-server /etc/sentinel.conf --sentine查看redis服务是否启动$ redis-cli
+127.0.0.1:6379&gt; ping #输入ping
+pong #反馈结果为pong则连接成功，服务正常；测试redis性能$ redis-benchmark -q -n 100000 #10w请求，带参数测试
+PING_INLINE: 51255.77 requests per second
+PING_BULK: 35803.80 requests per second
+...
+$ redis-benchmark #不带参数测试
+====== GET ======
+100000 requests completed in 2.19 seconds
+50 parallel clients
+3 bytes payload
+keep alive: 1
+...以上。安装 PHP redis扩展1.http://pecl.php.net/package/redis，安装所需版本（例如：redis-5.1.1.tgz ）$ cd /usr/src
+$ wget http://pecl.php.net/get/redis-5.1.1.tgz
+$ tar -zxvf redis-5.1.1.tgz
+$ cd redis-5.1.1
+$ /usr/local/php/bin/phpize #生成configure配置文件
+$ ./configure --with-php-config=/usr/local/php/bin/php-config
+$ make &amp;&amp; make install
+$ find / -name &quot;php.ini&quot;
+/usr/local/php/etc/php.ini
+$ vi /usr/local/php/etc/php.ini
+extension=redis.so #添加此配置
+lnmp restart #重启服务 nginx为TpCache配置redis驱动1.驱动选择redis驱动2.选择你设置的端口；3.保存；总结两个必要，一个配置：1.源码安装redis，并启用redis 服务（确认端口能连接）；2.安装PHP redis扩展 并启用；3.插件配置，确保端口正确；以上。效用来自 Pagespeed的得分，突飞猛进；联系主理人1.关注频道 https://t.me/limboprossr 不失联；2.毒奶粉们（我管我的Fans）可联系 TG机器人 或发送 邮件 获取帮助；3.或点击本页面右下角的聊天按钮联系；</description>
+</item>
+<item rdf:about="https://limbopro.xyz/archives/DDoS.html">
+<title>3个方法秒解各种姿势丨DDoS 终极防御教程（可快速部署且免费）</title>
+<link>https://limbopro.xyz/archives/DDoS.html</link>
+<dc:date>2019-12-28T23:52:00+08:00</dc:date>
+<description>本文隶属于 网站优化 分类，点击分类名称查看更多相关主题；主理人序DDoS防御还是要做的，兴许哪天就挨打了呢。(另，这篇文章不是完全教程，总结均由实践得出，内容比较白话，教大家知其然知其所以然，排除加钱上高防IP以及扩容的可能性；1.Cloudflare CDN（免费套餐足矣），2.MySQL/PHP+Redis 缓存（开源），3.全站静态化（每日备份），秒解狂暴DDoS攻击，且不会花费任何费用，几乎免费；本文概要0.网站为什么会被DDoS1.DDoS为何物2.LNMP（Web后端3.静态网页/动态网页（用户所见所得4.HTTP 请求方法（浏览器如何与服务器联络5.User-Agent（浏览器身份6.502 Bad Gateway（服务器状态反馈代码7.如何应对DDoS（思路为什么会被DDoS原因大概分为四种1.小朋友玩过家家2.个人情感宣泄3.名4.利个人网站被打的原因一般是因为前两种，主动攻击声名远扬[某些领域]的网站一般是因为名，雇人攻击的一般是因为利，正常情况下，小网站是不会有人碰的，这句话不是瞎说。一些具有实践意义的建议高调做人，低调做事DDoS是什么DDoS攻击，又称为分布式拒绝服务 (DDoS) ；攻击是通过大规模 Internet 流量淹没目标服务器或其周边基础设施以破坏目标服务器、服务或网络正常流量的恶意行为。DDoS 攻击利用多台受损计算机系统作为攻击流量来源以达到攻击效果。利用的机器可以包括计算机，也可以包括其他联网资源（如 IoT 设备）。总体而言，DDoS 攻击好比高速公路发生交通堵塞，妨碍常规车辆抵达预定目的地。常见的 DDoS 攻击有哪几类？不同的 DDoS 攻击手段针对不同的网络连接组件。为了解不同 DDoS 攻击的工作原理，必需掌握建立网络连接的方式。Internet 网络连接由许多不同的组件或“层”构成。就像打地基盖房子一样，模型中的每一步都有不同的目的。OSI 模型（如下图所示）是一个概念框架，用于描述 7 个不同层级的网络连接。虽然几乎所有 DDoS 攻击都涉及用流量淹没目标设备或网络，但攻击可以分为三类。攻击者可能利用一种或多种不同的攻击手段，也可能根据目标采取的防范措施循环使用多种攻击手段。应用程序层攻击攻击目标：有时称为第 7 层 DDoS 攻击（参考 OSI 模型第 7 层），此类攻击的目标是耗尽目标资源。攻击目标是生成网页并传输网页响应 HTTP 请求的服务器层。 在客户端执行一项 HTTP 请求费用很低，但目标服务器做出响应却可能比较昂贵，因为服务器通常必须加载多个文件并运行数据库查询才能创建网页。第 7 层攻击很难防御，因为很难确定流量是否存在恶意。协议攻击攻击目标：协议攻击（也称为状态表耗尽攻击）旨在耗尽 Web 应用程序服务器或中间资源（如防火墙和负载均衡器）的可用状态表容量，进而导致服务中断。协议攻击利用协议堆栈第 3 层和第 4 层的弱点致使目标无法访问。容量耗尽攻击攻击目标：此类攻击尝试耗尽目标和大型 Internet 之间的可用带宽，从而造成拥塞。运用某种放大攻击或其他生成大量流量的手段（如僵尸网络请求），向目标发送大量数据。via 什么是 DDoS 攻击？深入探索 DDoS 的工作原理及其阻止方法。 （Cloudflare 资料库）；LA/NMP知其然，知其所以然；世界上大部分网站都是运行在LNMP之上的，包括但不限于淘宝，百度等；说到建站，敢问谁不爱这四件套？软体开源，社区良好；LA/NMP是指一组通常一起使用来运行动态网站或者服务器的自由软件名称首字母缩写。Linux，操作系统Apache/Nginx，网页服务器MariaDB或MySQL，数据库管理系统（或者数据库服务器）PHP、Perl或Python，脚本语言Linux这里是只允许在服务器上的Linux系统；Linux（聆听i/ˈlɪnəks/ LIN-əks）是一种自由和开放源码的类UNIX操作系统。该操作系统的内核由林纳斯·托瓦兹在1991年10月5日首次发布5，在加上用户空间的应用程序之后，成为Linux操作系统。Linux也是自由软件和开放源代码软件发展中最著名的例子。只要遵循GNU 通用公共许可证（GPL），任何个人和机构都可以自由地使用Linux的所有底层源代码，也可以自由地修改和再发布。via 维基百科NginxNginx：Nginx**（发音同“engine X”）是异步框架的网页伺服器，也可以用作反向代理、负载平衡器和HTTP缓存。Tengine是由淘宝网发起的Web服务器项目。它在Nginx的基础上，针对大访问量网站的需求，添加了很多高级功能和特性。Tengine的性能和稳定性已经在大型的网站如淘宝网，天猫商城等得到了很好的检验。它的最终目标是打造一个高效、稳定、安全、易用的Web平台。Tengine version: Tengine/2.3.2
+nginx version: nginx/1.17.3以上，我目前安装的版本（可以在安装Nginx的基础上装Tengine的，使用一些新特性；MySQLMySQL 是全球最受欢迎的开源数据库，支持经济高效地交付可靠、高性能和可扩展的基于 Web 的和嵌入式数据库应用。它是一个集成、事务安全、符合 ACID 的数据库，具备全面的提交、回滚、崩溃恢复和行级锁定功能。MySQL 不仅简便易用、易于扩展、性能卓越，而且还提供了一整套数据库驱动程序和可视化工具，可帮助开发人员和 DBA 自主构建和管理业务关键型 MySQL 应用。via MySQL伺服器服务器通常以网络作为媒介，既可以通过局域网对内提供服务，也可以通过广域网对外提供服务。伺服器的最大特点就是其强大的运算能力，即使是一部简单的伺服器系统，通常也至少也要有两颗处理器以构成对称多处理架构，使其能在短时间内完成大量工作，并为大量用户提供服务。via 维基百科502 Bad Gateway**502** Bad Gateway 是一种HTTP协议的服务器端错误状态代码，它表示作为网关或代理角色的服务器，从上游服务器（如tomcat、php-fpm）中接收到的响应是无效的。Gateway （网关）在计算机网络体系中可以指代不同的设备，502 错误通常不是客户端能够修复的，而是需要由途径的Web服务器或者代理服务器（LNMP）对其进行修复。静态/动态页面静态页面：htm、html、shtml、xml静态网页是指存放在服务器文件系统中实实在在的HTML文件。当用户在浏览器中输入页面的URL，然后回车，浏览器就会将对应的html文件下载、渲染并呈现在窗口中。早期的网站通常都是由静态页面制作的。动态页面：asp、jsp、php、perl、cgi动态网页是相对于静态网页而言的。当浏览器请求服务器的某个页面时，服务器根据当前时间、环境参数、数据库操作等动态的生成HTML页面，然后在发送给浏览器（后面的处理就跟静态网页一样了）。很明显，动态网页中的“动态”是指服务器端页面的动态生成，相反，“静态”则指页面是实实在在的、独立的文件。via 静态网页与动态网页的区别姿势点小节静态页面不会涉及数据库请求，也无需经过PHP处理，几乎零消耗；这样的情况下，只需要使用到nginx，而nginx的高性能低消耗，想操烂基本不可能（HTTP 请求方法HTTP 定义了一组请求方法，以表明要对给定资源执行的操作。GET GET方法请求一个指定资源的表示形式. 使用GET的请求应该只被用于获取数据。
+HEAD HEAD方法请求一个与GET请求的响应相同的响应，但没有响应体。
+POST POST方法用于将实体提交到指定的资源，通常导致在服务器上的状态变化或副作用。
+PUT PUT方法用请求有效载荷替换目标资源的所有当前表示。
+DELETE DELETE方法删除指定的资源。
+CONNECT CONNECT方法建立一个到由目标资源标识的服务器的隧道。
+OPTIONS OPTIONS方法用于描述目标资源的通信选项。
+TRACE TRACE方法沿着到目标资源的路径执行一个消息环回测试。
+PATCH PATCH方法用于对资源应用部分修改。via MDN web docs我们一般只会用到前三种，GET/HEAD/POST；用户视角来讲，打开一个网站无非是请求[GET]它的资源（例如美女图片等），发文章[POST]向服务器推送数据；User-AgentUser-Agent 首部包含了一个特征字符串，用来让网络协议的对端来识别发起请求的用户代理软件的应用类型、操作系统、软件开发商以及版本号。浏览器通常使用的格式为：User-Agent: Mozilla/&lt;version&gt; (&lt;system-information&gt;) &lt;platform&gt; (&lt;platform-details&gt;) &lt;extensions&gt;防御DDoS0.升级硬件(服务器)1.过滤请求2.缓存数据库3.网页静态化4.TLS1.3升级硬件软妹币玩家请略过，还是说点软的吧；使用Cloudflare CDN高级DDoS 防护和缓解，我选CloudflareCloudflare 的内容分发网络（CDN）是一组分布在不同地理位置的服务器，可确保快速交付 Internet 内容，包括 HTML 页面、JavaScript 文件、样式表和图像。在 Cloudflare 上缓存静态资源可减少服务器负载和带宽，不会因带宽峰值而产生额外费用。用户体验： 没有 Cloudflare 的 CDN，距离您的源 Web 服务器较远的访问者会体验到页面加载速度变慢。Cloudflare 的 Anycast 网络使内容在地理上更接近您的访问者，从而减少页面负载和延迟。流量峰值： 由于重大新闻发布或在线事件，突然涌入您的网站的流量可能会使源 Web 服务器超载。Cloudflare 的 CDN 可提供您缓存的内容，以减轻源 Web 服务器的负载。DDoS 防护： 分布式拒绝服务（DDoS）攻击通过用流量淹没其基础架构来中断网站服务。Cloudflare 的 CDN 的网络容量为史上最大 DDoS 攻击的 15 倍，并且可以处理现代 DDoS 以确保您的网站正常运行。例如本博客也在使用的Cloudflare & Cloudflare清退边缘丨运营通报 30TB+流量过境使用Cloudflare CDN的五个好处1.隐藏服务器IP，SYN/ACK攻击直接豁免，亦可避免攻击者扫描服务器端口找到漏洞；2.防火墙前置，在CDN上即已缓解/过滤异常请求[GET/POST]压力；3.验证码前置，即人机验证；（技术不够的DDoS攻击根本绕不过，攻击随即缓解；）4.缓存静态资源，大大减少服务器带宽压力；5.Page Rule，Page Rule 使您能够根据页面的 URL 进行各种操作，例如创建重定向、微调缓存行为或启用和禁用我们的各种服务。在没碰到高端DDoS玩家之前，Cloudflare 应该能力保你站不死的；使用缓存本博客目前的优先策略是 MySQL/PHP + Redis；其次是网站内容全部静态化；这里需要再强调的是，每次刷新网页都会有新的请求[GET]发送到服务器，然后服务器后台通过PHP+MySQL一顿骚操作动态生成HTML文档，并将HTMl文档交由Nginx转发到客户端[目标浏览器]，然后你就可以看到美图了；而这PHP+MySQL两个软体也不是吃素的，是很吃系统资源的，刷新多了，CPU炸裂，[Nginx]直接返回[502 Bad Gateway]给你，看个球。动态生成页面就像下馆子，现点现做，遇到客流高峰也总有人手不够的时候，其他客人只有干等，已经吃上的客人还想再点菜，也得干等；相反，静态页面就好比，得，人手开销大，就算再请师傅厨房也塞不下，来了客人总得招待吧，虽然有几个捣乱的，那就提前备好餐，让前台麻溜的上菜就完了；而在这里，厨房就是你的服务器（带宽有限，CPU有限，硬盘有限，内存有限），厨子就是Php（掌勺人）+MySQL（配菜师傅），前台就是Nginx，炒不炒得出来是你们[Php+Mysql]的事儿，但论上菜，不带我[Nginx]怕的；（是的，Nginx就是这么骚...，知道这一点会让你信心大增；Redis介绍Redis是一个使用ANSI C编写的开源、支持网络、基于内存、可选持久性的键值对存储数据库。从2015年6月开始，Redis的开发由Redis Labs赞助，而2013年5月至2015年6月期间，其开发由Pivotal赞助。在2013年5月之前，其开发由VMware赞助。根据月度排行网站DB-Engines.com的数据，Redis是最流行的键值对存储数据库。目前总结了部分网友经验以及博主的实践，暂且推荐此种组合：Redis+MySQL/PHP对数据库进行缓存处理；如果你也使用 Typecho 建站，那么推荐你使用 TPCache插件[Plugins]，配合Redis使用，效果极佳；（秘：按理说我用的VPS应该能抗800并发/每秒，也就是一天跑个69120000 PV没什么问题（606024*1000）[post cid="6766" cover="https://limbopro.xyz/usr/uploads/2019/12/2254614923.png"/]Queries per second (每秒查询次数) 非相关性分析，此并发非彼并发；300～800QPS——带宽极限型
+
+目前服务器大多用了IDC机房提供了“百兆带宽”，“百兆出口”，似乎这就是单机的最高配了。这意味着网站出口的实际带宽是8M Byte左右。假定每个页面只有10K Byte，在这个并发条件下，即便你的网站是静态页面，不用什么数据库之类的技术，百兆带宽早已经吃完。这个情况下首要考虑是CDN加速／异地缓存，多机负载等技术。
+
+500～1000QPS——内网带宽极限＋Memcache极限型
+
+由于Key/value的特性，每个页面对memcache的请求远大于直接对DB的请求，Memcache的悲观并发数在2w左右，看似很高，但事实上大多数情况下，首先是有可能在此之前内网的带宽就已经吃光，接着是在8K QPS左右的情况下，但节点上的Memcache已经表现出了不稳定，如果代码上没有足够的优化，缓存的miss可能会导致系统直接将压力转嫁到了DB层上，这就使整个系统在达到某个明显的阀值之后，性能迅速下滑或直接宕机。
+
+1000～2000QPS——锁/同步模式极限型
+
+好吧，一句话：线程模型决定吞吐量。不管你系统中最常见的锁是什么锁，这个级别下，文件系统访问锁都成为了灾难。从网站内容的角度上讲，几乎任何的增删改都会牵扯到锁。“等解锁”的过程将会成为系统最重要的性能消耗。这就要求系统中不能存在中央节点，所有的数据都必须分布存储，数据需要分布处理。总之，关键词：分布
+————————————————
+版权声明：本文为CSDN博主「Storm啊」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/duzilonglove/article/details/78616167所以说，Redis + PHP 还是挺耐操的，需要注意的是1000～2000QPS下 Redis雪崩、穿透和击穿问题（可以自己深入了解下）。静态化可以参考此文：个人博客 DDoS 攻击的防范教程丨低成本&可执行，湮灭DDoS攻击者最后的倔强；封禁异常请求IP参考：批量封禁IP 地址、网站被CC 攻击的解决办法丨简易版  ，新封禁脚本暂未放进博客；使用TLS1.3参考：TLS 1.3 白话科普丨如何提高网站安全性和减少延迟；总结1.CDN一定要部署的，无论是否被攻击；2.后端对MySQL进行缓存处理，避免对数据库频繁查询；搭配 Redis 使用，效果极佳；联系主理人1.关注频道 https://t.me/limboprossr 不失联；2.毒奶粉们（我管我的Fans）可联系 TG机器人 或发送 邮件 获取帮助；3.或点击本页面右下角的聊天按钮联系；</description>
+</item>
 <item rdf:about="https://limbopro.xyz/archives/2106.html">
-<title>Cloudflare清退边缘丨运营通报 30TB+了；</title>
+<title>Cloudflare清退边缘丨运营通报 30TB+流量过境；</title>
 <link>https://limbopro.xyz/archives/2106.html</link>
 <dc:date>2019-08-14T14:53:00+08:00</dc:date>
 <description>一个事实基本上可以确认的事实是，Cloudflare并不会清退；[...]</description>
@@ -41,10 +128,90 @@ xmlns:dc="http://purl.org/dc/elements/1.1/">
 <description>本站有CDN，如果被攻击也只会出现最长一分钟的切换备用服务导致的宕机。## Stupid</description>
 </item>
 <item rdf:about="https://limbopro.xyz/archives/1282.html">
-<title>Typecho 全静态切换防御DDoS策略</title>
+<title>个人博客 DDoS 攻击的防范教程丨低成本&amp;amp;可执行</title>
 <link>https://limbopro.xyz/archives/1282.html</link>
 <dc:date>2019-07-18T23:18:00+08:00</dc:date>
-<description>做防御的方法有很多种，但最多的两种莫过于加钱或装死。主理人序加钱，万万是不可能加钱的。想来大家问到这个问题了，肯定还是因为没钱，或者说相关的预算并不多。那么到底有什么好办法呢？一 部署免费CDN可以参考这一篇：Cloudflare 三步隐藏真实服务器IP 以及，LNMP相关系列文章。二 全站静态/动态切换是的，在部署免费CDN的基础上，做动静切换。必须要明白的动态资源仍然会消耗服务器资源，例如登陆页，搜索页，都要调取 PHP，mysql 数据索引服务。[...]</description>
+<description>本文隶属于网站优化 分类，点击分类名称可以查看更多相关文章；[post cid="6538" cover="https://limbopro.xyz/usr/uploads/2019/12/2912835083.jpg"/]做DDoS防御的方法有很多种，但最多的两种莫过于加钱或装死。主理人序加钱，万万是不可能加钱的那就只有装死了静态或伪静态都可以很好的减轻服务器负载，甚至可以说是无敌（几乎；静态的情况下再配置cloudflare家的免费CDN以隐藏源站服务器IP大概就可以永久在线了我要变强背景知识快速的全球内容交付网络内容分发网络（Content Delivery Network，CDN）通过将站点内容发布至遍布全国的海量加速节点，使其用户可就近获取所需内容，避免网络拥堵、地域、运营商等因素带来的访问延迟问题，有效提升下载速度、降低响应时间，提供流畅的用户体验。via 内容分发网络 CDN静态页面：htm、html、shtml、xml静态网页是指存放在服务器文件系统中实实在在的HTML文件。当用户在浏览器中输入页面的URL，然后回车，浏览器就会将对应的html文件下载、渲染并呈现在窗口中。早期的网站通常都是由静态页面制作的。动态页面：asp、jsp、php、perl、cgi动态网页是相对于静态网页而言的。当浏览器请求服务器的某个页面时，服务器根据当前时间、环境参数、数据库操作等动态的生成HTML页面，然后在发送给浏览器（后面的处理就跟静态网页一样了）。很明显，动态网页中的“动态”是指服务器端页面的动态生成，相反，“静态”则指页面是实实在在的、独立的文件。via 静态网页与动态网页的区别姿势点小结静态页面不会涉及数据库请求，也无需经过PHP处理，几乎零消耗；这样的情况下，只需要使用到nginx，而nginx的高性能低消耗，想操烂基本不可能（那得多大仇...*本博客所有.html网页均为伪静态，非真静态；部署CDN部署免费CDN部署CDN的好处：隐藏源站服务器IP，CDN可以有效节省服务器带宽；1.打开cloudflare，注册账号，添加域名，迁移DNS服务商；（英文界面，但很简单...2.使用 censys 检测源站服务器IP是否泄漏；3.如泄漏，请及时更换IP；缓存静态资源概述默认情况下，Cloudflare CDN 缓存具有以下文件扩展名的文件：bmpejsjpegpdfpsttfclasseotjpgpictsvgwebpcssepsjsplssvgzwoffcsvgifmidpngswfwoff2docicomidippttifxlsdocxjarotfpptxtiffxlsx以上，不在范围内的就不会缓存了。参考：必用的基本页面规则，在Cloudflare中设置你想要缓存的页面或者目录，注意，这个参考非常重要。*Cloudflare 仅缓存从您网站直接提供的资源。第三方资源（Facebook、Flickr 等）不会被缓存。Cloudflare 当前不会按 MIME 类型进行缓存。静态镜像制作静态镜像wget --mirror -t 2 -S -N -k https://limbopro.xyz -P /home/wwwroot/public/1.使用wget命令，下载一份网站的镜像（网站上公开的所有内容...2.得到一份静态镜像（里面有html/jpg/...；3.其中的参数-k为将链接转化为本地路径；4.其中的参数-P为备份保存路径，届时会自动创建文件夹，文件名字将以网站名字命名；5.最终得到 /home/wwwroot/public/limbopro.xyz；使用静态镜像1.前面已经说了，通过mysql/php动态生成网页会消耗服务器大量性能资源；2.攻击者通过大量请求把服务器性能消耗完毕，以使网站瘫痪；3.攻击者用的方法有很多，可参考 https://t.me/limboprossr/1128修改nginx配置路径以使用静态镜像；index index.html index.htm index.php default.html default.htm default.php index.log main.html;
+root /home/wwwroot/pubilc/;以上，正常配置时的路径/home/wwwroot/public/；index index.html index.htm index.php default.html default.htm default.php index.log main.html;
+root /home/wwwroot/public/limbopro.xyz;修改配置到备份文件夹，修改后重启 nginx 即可；动静态切换的适用类型1.个人博客可以使用此方法，只需实现文章的排版展示即可（CSS搭配HTML即可轻松实现；2.论坛，社区不可用（因为这些地方需要交互，需要大量调用数据库，PHP等，静态网页是肯定不行的；自动切换静态镜像脚本1.使用crontab自动执行脚本：CPUcheck.sh & 100cpu.sh；2.3分钟内有两次高负载则自动切换静态；3.脚本中涉及ps/grep以及if的应用4.较为通俗易懂，5.仅供参考；/home/100cpu.sh 该脚本用于检查每分钟的CPU负载情况，达到阈值(比如CPU使用率达到80%)则记录至/home/100cpu.log；#!/bin/bash
+##CPU判定
+
+function GetSysCPU 
+ {
+   CpuIdle=`vmstat 1 5 |sed -n '3,$p' | awk '{x = x + $15} END {print x/5}' | awk -F. '{print $1}'` 
+   CpuNum=`echo &quot;100-$CpuIdle&quot; | bc` 
+   echo $CpuNum 
+ }
+ 
+   usage=`GetSysCPU` 
+   max=80 #CPU阈值，超过则记录至100cpu.log
+   
+if [ ${usage} -ge $max ];
+then
+date=$(env LANG=en_US.UTF-8 date &quot;+%e/%b/%Y/%R&quot;)
+echo &quot;$date，CPU负载为$usage...&quot; &gt;&gt; /home/100cpu.log
+else 
+
+date=$(env LANG=en_US.UTF-8 date &quot;+%e/%b/%Y/%R&quot;)
+##echo &quot;$date，CPU负载为$usage%...&quot; &gt;&gt; /home/100cpu.log
+echo &quot;${date}&quot; &quot;CPU负载正常...&quot;
+
+fi/home/CPUcheck.sh该脚本用于统计 /home/100cpu.log 的记录值，统计一定时间范围（本示例是3分钟）内CPU负载超标次数，本示例中超标次数超过2次则切换使用静态镜像，并关闭MySQL/PHP；#!/bin/bash
+
+##判定层
+ps -fe|grep &quot;wget&quot; |grep -v grep
+if [ $? -ne 0 ]
+#判定层
+
+then
+
+##执行层
+&gt; /home/100cpu.statistics.log; ##清空记录
+wc -l /home/100cpu.log &gt;&gt; /home/100cpu.statistics.log #记录
+results=$(awk '{print $1}' /home/100cpu.statistics.log) #记录
+&gt; /home/100cpu.log; #清空记录
+max=2 #触发阈值为2次
+
+if [ $results -ge $max  ];
+then
+   /home/switch2static.sh; #非备份情况下超过阈值则触发静态
+else
+date=$(env LANG=en_US.UTF-8 date &quot;+%e/%b/%Y/%R&quot;)
+/home/sec.ddoscheck.normal.sh; #切换至正常状态
+echo &quot;${date}&quot; &quot;已切换至正常模式...&quot; &gt;&gt; /home/nglog.log; #记录操作日志
+fi
+
+##执行层
+
+else
+#Wget正在备份
+date=$(env LANG=en_US.UTF-8 date &quot;+%e/%b/%Y/%R&quot;)
+echo &quot;${date}&quot; &quot;CPU高，主要是因为在备份...&quot; &gt;&gt; /home/nglog.log; #记录操作日志
+fi/home/switch2static.sh该脚本用于切换 nginx 配置文件，并加载配置使之生效；其中 .conf.ddos 的配置方法可参考本文 使用静态镜像 一节；#!/bin/bash
+date=$(env LANG=en_US.UTF-8 date &quot;+%e/%b/%Y/%R&quot;)
+echo &quot;${date}&quot; &quot;已进入静态防御模式...&quot; &gt;&gt; /home/nglog.log; #记录操作日志
+cp /usr/local/nginx/conf/vhost/limbopro.xyz.conf.ddos  /usr/local/nginx/conf/vhost/limbopro.xyz.conf; #博客切至静态配置
+lnmp nginx reload #reload 配置使生效
+#killall mysql; #关闭数据库
+lnmp mysql stop;
+lnmp php-fpm stop;
+#killall php-ftm; #关闭php/home/sec.ddoscheck.normal.sh该脚本用于切换 nginx 配置文件 至正常状态；/bin/cp /usr/local/nginx/conf/vhost/limbopro.xyz.conf.bak  /usr/local/nginx/conf/vhost/limbopro.xyz.conf #limbopro.xyz.conf.bak为正常nginx配置备份
+lnmp nginx reload;
+/bin/bash /home/autorestart.sh #检测MySQL/PHP状态并重启/home/autorestart.sh该脚本用于检测并重启 MySQL/PHP；#!/bin/bash
+
+#mysql 检测重启
+/bin/ps -ef | grep mysql |grep -v grep &gt; /dev/null
+if [ $? != 0 ];then
+lnmp mysql restart &gt; /dev/nullf
+fi
+
+#php-fpm 检测重启
+/bin/ps -ef | grep php-fpm.conf |grep -v grep &gt; /dev/null
+if [ $? != 0 ];then
+lnmp php-fpm restart &gt; /dev/nullf
+fi使用crontab自动执行脚本最后一步，使CPUcheck.sh/100cpu.sh脚本的执行自动化，其中的参数可根据需要自行修改；root@localhost:/home#  crontab -e
+*/3 * * * * /home/CPUcheck.sh #每3分钟检测是否超过阈值
+*/1 * * * * /home/100cpu.sh #每分钟记录一次CPU值Crontab的使用可参考Linux crontab 命令；其他无。总结以最小的成本应对攻击，并保持网页链接打开完好完整（损失更新文章特性），我觉得这仍然不失为一个不错的策略。博主仍在努力学习相关知识，也希望本篇文章能给大家带来帮助。联系主理人1.关注频道 https://t.me/limboprossr 不失联；2.毒奶粉们（我管我的Fans）可联系 TG机器人 或发送 邮件 获取帮助；3.或点击本页面右下角的聊天按钮联系；参考与附录1.DDoS防御的11种方针详解</description>
 </item>
 <item rdf:about="https://limbopro.xyz/archives/1204.html">
 <title>三个步骤隐藏真实服务器IP</title>
@@ -69,17 +236,5 @@ xmlns:dc="http://purl.org/dc/elements/1.1/">
 <link>https://limbopro.xyz/archives/486.html</link>
 <dc:date>2019-06-02T11:17:00+08:00</dc:date>
 <description>应对CC的一些策略参考：https://limbopro.xyz/archives/467.html</description>
-</item>
-<item rdf:about="https://limbopro.xyz/archives/467.html">
-<title>如何轻快的解决CC</title>
-<link>https://limbopro.xyz/archives/467.html</link>
-<dc:date>2019-06-01T03:41:00+08:00</dc:date>
-<description>用了两条命令便解决了。netstat -ntulpa 这个命令基本上可以了解那些发起请求的ip/sbin/iptables -I INPUT -s 127.0.0.1 -j DROP 这个命令就可以把它ban掉或者试试 [Cloudflare][1] 吧！或者使用脚本工具：CCKiller：Linux轻量级CC攻击防御工具，秒级检查、自动拉黑和释放[...]</description>
-</item>
-<item rdf:about="https://limbopro.xyz/archives/461.html">
-<title>链接数审查</title>
-<link>https://limbopro.xyz/archives/461.html</link>
-<dc:date>2019-05-31T17:29:00+08:00</dc:date>
-<description>看看谁最近上了limbopro.xyz，下面这个命令挺好用。awk '{print $1}' /home/wwwlogs/access.log |sort|uniq -c|sort -n通过遍访nginx日志，审查近期ip链接数。其中/home/wwwlogs/access.log更换成你的nginx日志位置。</description>
 </item>
 </rdf:RDF>

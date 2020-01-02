@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"
+xmlns:thr="http://purl.org/syndication/thread/1.0"
+xml:lang="zh-CN"
+xml:base="https://limbopro.xyz/tag/通知/"
+>
+<title type="text">毒奶博主丨欢迎使用代理访问本站。 - 通知</title>
+<subtitle type="text"></subtitle>
+<updated>2019-12-21T19:54:00+08:00</updated>
+<generator uri="http://typecho.org/" version="1.1/17.10.30">Typecho</generator>
+<link rel="alternate" type="text/html" href="https://limbopro.xyz/tag/通知/" />
+<id>https://limbopro.xyz/feed/atom/tag/%E9%80%9A%E7%9F%A5/</id>
+<link rel="self" type="application/atom+xml" href="https://limbopro.xyz/feed/atom/tag/%E9%80%9A%E7%9F%A5/" />
+<entry>
+<title type="html"><![CDATA[使用 Telegram Bot 对服务器CPU高负载进行报警/通知]]></title>
+<link rel="alternate" type="text/html" href="https://limbopro.xyz/archives/tgbotalert.html" />
+<id>https://limbopro.xyz/archives/tgbotalert.html</id>
+<updated>2019-12-21T19:54:00+08:00</updated>
+<published>2019-12-21T19:54:00+08:00</published>
+<author>
+    <name>毒奶</name>
+    <uri>https://limbopro.xyz</uri>
+</author>
+<summary type="html"><![CDATA[本文隶属于 实用工具 /网站优化 分类，点击分类名称可以查看更多相关文章；[post cid=&quot;1959&quot; cover=&quot;https://limbopro.xyz/usr/uploads/201...]]></summary>
+<content type="html" xml:base="https://limbopro.xyz/archives/tgbotalert.html" xml:lang="zh-CN"><![CDATA[
+<p><img src="https://limbopro.xyz/usr/uploads/2019/12/1657228122.jpg" alt="Most-popular-Telegram-bots.jpg" title="Most-popular-Telegram-bots.jpg"></p><p>本文隶属于 <a href="https://limbopro.xyz/category/tools/">实用工具</a> /<a href="https://limbopro.xyz/category/Typecho/">网站优化</a> 分类，点击分类名称可以查看更多相关文章；</p><p>[post cid="1959" cover="https://limbopro.xyz/usr/uploads/2019/11/3967700330.png"/]</p><p>[post cid="1888" cover="https://limbopro.xyz/usr/uploads/2019/08/1077784791.png"/]</p><h2>主理人说</h2><p><img src="https://limbopro.xyz/usr/uploads/2019/12/3802691698.jpg" alt="CPU-check-telegram-alert.jpg" title="CPU-check-telegram-alert.jpg"><br>1.拿来即可用的 Telegram Bot Api（免费）（<a href="https://zh.wikipedia.org/zh-hans/%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E6%8E%A5%E5%8F%A3">API是什么</a>？）；<br>2.如果你也有博客或需要监测服务器性能；<br>3.这或许是个好办法；<br>4.当服务器CPU触到阈值，则触发警报；<br>5.真的不要太好用。</p><p>*本文末尾提供了<code>网站联通状态</code>检查脚本；</p><h2>本文概要</h2><p>1.创建TG机器人并获取[API Token]；<br>2.给机器人发送消息，并获取你电报账号的[chatID]；<br>3.配置CPU监测及报警通知<code>脚本</code>；<br>4.使用<code>crontab</code>设置定时任务；</p><h2>CPU负载检测脚本</h2><pre><code>##CPU负载计算
+function GetSysCPU 
+ {
+   CpuIdle=`vmstat 1 5 |sed -n '3,$p' | awk '{x = x + $15} END {print x/5}' | awk -F. '{print $1}'` 
+   CpuNum=`echo &quot;100-$CpuIdle&quot; | bc` 
+   echo $CpuNum 
+ }
+   cpucheck=`GetSysCPU` #将结果输出赋值到cpucheck</code></pre><p>*暂忘脚本出处</p><h2>简易报警脚本</h2><p>配合Telegram Bot Api 食用，效果佳。</p><pre><code>##CPU负载计算
+function GetSysCPU 
+{
+CpuIdle=`vmstat 1 5 |sed -n '3,$p' | awk '{x = x + $15} END {print x/5}' | awk -F. '{print $1}'` 
+CpuNum=`echo &quot;100-$CpuIdle&quot; | bc` 
+echo $CpuNum 
+}
+
+cpucheck=`GetSysCPU` #将结果输出赋值到cpucheck
+cpumax=50 #CPU触警阈值
+
+if [ ${cpucheck} -gt $max ]; #阈值与实际CPU值进行对比
+then
+date=$(env LANG=en_US.UTF-8 date &quot;+%e/%b/%Y/%R&quot;) #当前时间赋值
+curl -X POST &quot;https://api.telegram.org/bot[API Token]/sendMessage?chat_id=[chatID]&amp;text=$date%0aCPU负载为$cpucheck%%0a注意及时检查%0a如果该警报持续...%0a或联系管理员%0a@limboprobot&quot;
+else
+date=$(env LANG=en_US.UTF-8 date &quot;+%e/%b/%Y/%R&quot;)
+echo &quot;${date}&quot; &quot;CPU负载正常，当前负载为$cpucheck%...&quot; &gt;&gt; /home/cpucheck.log #监测坚果输出到本地以便后期查阅..
+fi
+</code></pre><p>以上。</p><p>实操部分</p><h2>第一步 创建机器人</h2><p>[post cid="3097" cover="https://limbopro.xyz/usr/uploads/2019/09/53339647.png"/]<br>*看<strong>创建机器人部分</strong>即可，仅需<strong>三步</strong>即可创建一个新机器人；</p><h2>第二步 获取API Token</h2><p>同上，创建完机器人即可获得<code>API Token</code></p><h2>第二步 获取chatID</h2><p>1.官方提供了接口<br>2.通过第二步我们已经获得了<code>API Token</code><br>2.将下方<code>API Token</code>替换成自己的<code>API Token</code>；</p><pre><code>https://api.telegram.org/bot[API Token]/getUpdates #将[API Token]替换成自己的API token，</code></pre><p>实例说明</p><pre><code>https://api.telegram.org/bot10440392893:AQMZqM-FX_SGVVMtUj98xXWWqWCO2IbGHSw/getUpdates</code></pre><p>3.替换成自己的[API token]后，在浏览器中打开链接，提示<code>{&quot;ok&quot;:true,...</code>；<br>4.给机器人发送任意英文字符，例如<code>Hello word</code>; <br>5.刷新刚刚在浏览器打开的链接，并找到<code>Hello word</code>；</p><p>举例说明，发送<code>Hello word</code>后刷新链接得到；</p><pre><code>&quot;message&quot;:{&quot;message_id&quot;:1426,&quot;from&quot;:{&quot;id&quot;:763456868,&quot;is_bot&quot;:false,&quot;first_name&quot;:&quot;\u2708\ufe0f TG \u6bd2\u5976\u535a\u4e3b \u2708\ufe0f&quot;,&quot;last_name&quot;:&quot;\u4e3b\u7406\u4eba Julia \ud83c\udd65&quot;,&quot;username&quot;:&quot;limbopro&quot;,&quot;language_code&quot;:&quot;zh-hans&quot;},
+&quot;chat&quot;:{&quot;id&quot;:763456868,&quot;first_name&quot;:&quot;\u2708\ufe0f TG \u6bd2\u5976\u535a\u4e3b \u2708\ufe0f&quot;,&quot;last_name&quot;:&quot;\u4e3b\u7406\u4eba Julia \ud83c\udd65&quot;,&quot;username&quot;:&quot;limbopro&quot;,&quot;type&quot;:&quot;private&quot;},&quot;date&quot;:1576931731,&quot;text&quot;:&quot;Hello word&quot;}}]}</code></pre><p>其中，"chat":{"id":763456868 里的<code>763456868</code>，我的<code>Chat id</code>；若需获取群组的Chat ID，需把机器人添加至群组，在群组内发送<code>/hello word @xxx_bot</code>（@xxx_bot为你的机器人） 即可；</p><h2>第三步 机器人发送消息</h2><p>1.通过上面两步，我们有了机器人以及[API Token] 以及收件人的[ChatID]；</p><pre><code>https://api.telegram.org/bot[API Token]/sendMessage?chat_id=[chatID]&amp;text=hello word</code></pre><p>1.这个是TG bot sendMessage API，简单却实用；<br>2.你可以替换自己的[API]与[chatID]；<br>3.正确替换后，在浏览器中打开，你将收到一条消息；<br>4.&text=后面接你需要发的信息；<br>5.换行用<code>%0a</code>表示；</p><pre><code>1
+2
+3</code></pre><p>则需表示成 &text=1%0a2%0a3</p><p>以上。</p><h2>第四步 设置定时执行脚本任务</h2><p>1.Crontab的使用可参考<a href="https://www.runoob.com/linux/linux-comm-crontab.html">Linux crontab 命令</a>；</p><pre><code>root@localhost:/home#  crontab -e
+* * * * * /home/checkcpu.sh #每分钟执行一次检测</code></pre><h2>其他</h2><p>获取网站状态脚本命令</p><pre><code>curl -I -m 10 -o /dev/null -s -w %{http_code} https://limbopro.xyz</code></pre><h2>附注</h2><p>1.<a href="https://core.telegram.org/bots/api">Telegram Bot API - Telegram APIs</a> #官方<br>2.<a href="https://core.telegram.org/bots/samples">Bot Code Examples - Telegram APIs</a> #官方样例<br>3.<a href="https://github.com/python-telegram-bot/python-telegram-bot">https://github.com/python-telegram-bot/python-telegram-bot</a> （拿来即用<br>4.<a href="https://github.com/tg-bot-api/bot-api-base">https://github.com/tg-bot-api/bot-api-base</a></p><h2>联系主理人</h2><p>1.关注频道 <a href="https://t.me/limboprossr">https://t.me/limboprossr</a> 不失联；<br>2.<code>毒奶粉</code>们（我管我的Fans）可联系 <a href="https://limbopro.xyz/usr/uploads/2019/10/3453243330.png">TG机器人</a> 或发送 <a href="https://limbopro.xyz/usr/uploads/2019/10/3453243330.png">邮件</a> 获取帮助；</p><p>3.或点击<code>本页面右下角</code>的聊天按钮联系；</p>
+]]></content>
+<link rel="replies" type="text/html" href="https://limbopro.xyz/archives/tgbotalert.html#comments" thr:count="0" />
+<link rel="replies" type="application/atom+xml" href="https://limbopro.xyz/feed/atom/archives/tgbotalert.html" thr:count="0"/>
+</entry>
+<entry>
+<title type="html"><![CDATA[Monit - 配置网站服务器崩溃邮件警报]]></title>
+<link rel="alternate" type="text/html" href="https://limbopro.xyz/archives/1888.html" />
+<id>https://limbopro.xyz/archives/1888.html</id>
+<updated>2019-08-07T00:02:00+08:00</updated>
+<published>2019-08-07T00:02:00+08:00</published>
+<author>
+    <name>毒奶</name>
+    <uri>https://limbopro.xyz</uri>
+</author>
+<summary type="html"><![CDATA[本文隶属于 实用工具 /网站优化 分类，点击分类名称可以查看更多相关文章；[post cid=&quot;6538&quot; cover=&quot;https://limbopro.xyz/usr/uploads/201...]]></summary>
+<content type="html" xml:base="https://limbopro.xyz/archives/1888.html" xml:lang="zh-CN"><![CDATA[
+<p><img src="https://limbopro.xyz/usr/uploads/2019/08/919271682.jpg" alt="monit.jpg" title="monit.jpg"></p><p>本文隶属于 <a href="https://limbopro.xyz/category/tools/">实用工具</a> /<a href="https://limbopro.xyz/category/Typecho/">网站优化</a> 分类，点击分类名称可以查看更多相关文章；</p><p>[post cid="6538" cover="https://limbopro.xyz/usr/uploads/2019/12/2912835083.jpg"/]</p><h2>Monit 总体介绍</h2><p>Monit是一款功能非常丰富的进程、文件、目录和设备的监测软件，适用于Linux/Unix平台。 它可以自动修复那些已经停止运作的程序,特使适合处理那些由于多种原因导致的软件错误，同时Monit 包含一个内嵌的 HTTP(S) Web 界面，你可以使用浏览器方便地查看 Monit 所监视的服务器。</p></img><p class="more"><a href="https://limbopro.xyz/archives/1888.html" title="Monit - 配置网站服务器崩溃邮件警报">[...]</a></p>
+]]></content>
+<link rel="replies" type="text/html" href="https://limbopro.xyz/archives/1888.html#comments" thr:count="0" />
+<link rel="replies" type="application/atom+xml" href="https://limbopro.xyz/feed/atom/archives/1888.html" thr:count="0"/>
+</entry>
+</feed>

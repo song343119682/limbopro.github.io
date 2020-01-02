@@ -9,19 +9,181 @@ xmlns:dc="http://purl.org/dc/elements/1.1/">
 <description></description>
 <items>
 <rdf:Seq>
+<rdf:li resource="https://limbopro.xyz/archives/DDoS.html"/>
+<rdf:li resource="https://limbopro.xyz/archives/6679.html"/>
 <rdf:li resource="https://limbopro.xyz/archives/2713.html"/>
 <rdf:li resource="https://limbopro.xyz/archives/2056.html"/>
 <rdf:li resource="https://limbopro.xyz/archives/2027.html"/>
 <rdf:li resource="https://limbopro.xyz/archives/1935.html"/>
-<rdf:li resource="https://limbopro.xyz/archives/1888.html"/>
 <rdf:li resource="https://limbopro.xyz/archives/1872.html"/>
 <rdf:li resource="https://limbopro.xyz/archives/1852.html"/>
 <rdf:li resource="https://limbopro.xyz/archives/1481.html"/>
 <rdf:li resource="https://limbopro.xyz/archives/1307.html"/>
-<rdf:li resource="https://limbopro.xyz/archives/1282.html"/>
 </rdf:Seq>
 </items>
 </channel>
+<item rdf:about="https://limbopro.xyz/archives/DDoS.html">
+<title>3个方法秒解各种姿势丨DDoS 终极防御教程（可快速部署且免费）</title>
+<link>https://limbopro.xyz/archives/DDoS.html</link>
+<dc:date>2019-12-28T23:52:00+08:00</dc:date>
+<description>本文隶属于 网站优化 分类，点击分类名称查看更多相关主题；主理人序DDoS防御还是要做的，兴许哪天就挨打了呢。(另，这篇文章不是完全教程，总结均由实践得出，内容比较白话，教大家知其然知其所以然，排除加钱上高防IP以及扩容的可能性；1.Cloudflare CDN（免费套餐足矣），2.MySQL/PHP+Redis 缓存（开源），3.全站静态化（每日备份），秒解狂暴DDoS攻击，且不会花费任何费用，几乎免费；本文概要0.网站为什么会被DDoS1.DDoS为何物2.LNMP（Web后端3.静态网页/动态网页（用户所见所得4.HTTP 请求方法（浏览器如何与服务器联络5.User-Agent（浏览器身份6.502 Bad Gateway（服务器状态反馈代码7.如何应对DDoS（思路为什么会被DDoS原因大概分为四种1.小朋友玩过家家2.个人情感宣泄3.名4.利个人网站被打的原因一般是因为前两种，主动攻击声名远扬[某些领域]的网站一般是因为名，雇人攻击的一般是因为利，正常情况下，小网站是不会有人碰的，这句话不是瞎说。一些具有实践意义的建议高调做人，低调做事DDoS是什么DDoS攻击，又称为分布式拒绝服务 (DDoS) ；攻击是通过大规模 Internet 流量淹没目标服务器或其周边基础设施以破坏目标服务器、服务或网络正常流量的恶意行为。DDoS 攻击利用多台受损计算机系统作为攻击流量来源以达到攻击效果。利用的机器可以包括计算机，也可以包括其他联网资源（如 IoT 设备）。总体而言，DDoS 攻击好比高速公路发生交通堵塞，妨碍常规车辆抵达预定目的地。常见的 DDoS 攻击有哪几类？不同的 DDoS 攻击手段针对不同的网络连接组件。为了解不同 DDoS 攻击的工作原理，必需掌握建立网络连接的方式。Internet 网络连接由许多不同的组件或“层”构成。就像打地基盖房子一样，模型中的每一步都有不同的目的。OSI 模型（如下图所示）是一个概念框架，用于描述 7 个不同层级的网络连接。虽然几乎所有 DDoS 攻击都涉及用流量淹没目标设备或网络，但攻击可以分为三类。攻击者可能利用一种或多种不同的攻击手段，也可能根据目标采取的防范措施循环使用多种攻击手段。应用程序层攻击攻击目标：有时称为第 7 层 DDoS 攻击（参考 OSI 模型第 7 层），此类攻击的目标是耗尽目标资源。攻击目标是生成网页并传输网页响应 HTTP 请求的服务器层。 在客户端执行一项 HTTP 请求费用很低，但目标服务器做出响应却可能比较昂贵，因为服务器通常必须加载多个文件并运行数据库查询才能创建网页。第 7 层攻击很难防御，因为很难确定流量是否存在恶意。协议攻击攻击目标：协议攻击（也称为状态表耗尽攻击）旨在耗尽 Web 应用程序服务器或中间资源（如防火墙和负载均衡器）的可用状态表容量，进而导致服务中断。协议攻击利用协议堆栈第 3 层和第 4 层的弱点致使目标无法访问。容量耗尽攻击攻击目标：此类攻击尝试耗尽目标和大型 Internet 之间的可用带宽，从而造成拥塞。运用某种放大攻击或其他生成大量流量的手段（如僵尸网络请求），向目标发送大量数据。via 什么是 DDoS 攻击？深入探索 DDoS 的工作原理及其阻止方法。 （Cloudflare 资料库）；LA/NMP知其然，知其所以然；世界上大部分网站都是运行在LNMP之上的，包括但不限于淘宝，百度等；说到建站，敢问谁不爱这四件套？软体开源，社区良好；LA/NMP是指一组通常一起使用来运行动态网站或者服务器的自由软件名称首字母缩写。Linux，操作系统Apache/Nginx，网页服务器MariaDB或MySQL，数据库管理系统（或者数据库服务器）PHP、Perl或Python，脚本语言Linux这里是只允许在服务器上的Linux系统；Linux（聆听i/ˈlɪnəks/ LIN-əks）是一种自由和开放源码的类UNIX操作系统。该操作系统的内核由林纳斯·托瓦兹在1991年10月5日首次发布5，在加上用户空间的应用程序之后，成为Linux操作系统。Linux也是自由软件和开放源代码软件发展中最著名的例子。只要遵循GNU 通用公共许可证（GPL），任何个人和机构都可以自由地使用Linux的所有底层源代码，也可以自由地修改和再发布。via 维基百科NginxNginx：Nginx**（发音同“engine X”）是异步框架的网页伺服器，也可以用作反向代理、负载平衡器和HTTP缓存。Tengine是由淘宝网发起的Web服务器项目。它在Nginx的基础上，针对大访问量网站的需求，添加了很多高级功能和特性。Tengine的性能和稳定性已经在大型的网站如淘宝网，天猫商城等得到了很好的检验。它的最终目标是打造一个高效、稳定、安全、易用的Web平台。Tengine version: Tengine/2.3.2
+nginx version: nginx/1.17.3以上，我目前安装的版本（可以在安装Nginx的基础上装Tengine的，使用一些新特性；MySQLMySQL 是全球最受欢迎的开源数据库，支持经济高效地交付可靠、高性能和可扩展的基于 Web 的和嵌入式数据库应用。它是一个集成、事务安全、符合 ACID 的数据库，具备全面的提交、回滚、崩溃恢复和行级锁定功能。MySQL 不仅简便易用、易于扩展、性能卓越，而且还提供了一整套数据库驱动程序和可视化工具，可帮助开发人员和 DBA 自主构建和管理业务关键型 MySQL 应用。via MySQL伺服器服务器通常以网络作为媒介，既可以通过局域网对内提供服务，也可以通过广域网对外提供服务。伺服器的最大特点就是其强大的运算能力，即使是一部简单的伺服器系统，通常也至少也要有两颗处理器以构成对称多处理架构，使其能在短时间内完成大量工作，并为大量用户提供服务。via 维基百科502 Bad Gateway**502** Bad Gateway 是一种HTTP协议的服务器端错误状态代码，它表示作为网关或代理角色的服务器，从上游服务器（如tomcat、php-fpm）中接收到的响应是无效的。Gateway （网关）在计算机网络体系中可以指代不同的设备，502 错误通常不是客户端能够修复的，而是需要由途径的Web服务器或者代理服务器（LNMP）对其进行修复。静态/动态页面静态页面：htm、html、shtml、xml静态网页是指存放在服务器文件系统中实实在在的HTML文件。当用户在浏览器中输入页面的URL，然后回车，浏览器就会将对应的html文件下载、渲染并呈现在窗口中。早期的网站通常都是由静态页面制作的。动态页面：asp、jsp、php、perl、cgi动态网页是相对于静态网页而言的。当浏览器请求服务器的某个页面时，服务器根据当前时间、环境参数、数据库操作等动态的生成HTML页面，然后在发送给浏览器（后面的处理就跟静态网页一样了）。很明显，动态网页中的“动态”是指服务器端页面的动态生成，相反，“静态”则指页面是实实在在的、独立的文件。via 静态网页与动态网页的区别姿势点小节静态页面不会涉及数据库请求，也无需经过PHP处理，几乎零消耗；这样的情况下，只需要使用到nginx，而nginx的高性能低消耗，想操烂基本不可能（HTTP 请求方法HTTP 定义了一组请求方法，以表明要对给定资源执行的操作。GET GET方法请求一个指定资源的表示形式. 使用GET的请求应该只被用于获取数据。
+HEAD HEAD方法请求一个与GET请求的响应相同的响应，但没有响应体。
+POST POST方法用于将实体提交到指定的资源，通常导致在服务器上的状态变化或副作用。
+PUT PUT方法用请求有效载荷替换目标资源的所有当前表示。
+DELETE DELETE方法删除指定的资源。
+CONNECT CONNECT方法建立一个到由目标资源标识的服务器的隧道。
+OPTIONS OPTIONS方法用于描述目标资源的通信选项。
+TRACE TRACE方法沿着到目标资源的路径执行一个消息环回测试。
+PATCH PATCH方法用于对资源应用部分修改。via MDN web docs我们一般只会用到前三种，GET/HEAD/POST；用户视角来讲，打开一个网站无非是请求[GET]它的资源（例如美女图片等），发文章[POST]向服务器推送数据；User-AgentUser-Agent 首部包含了一个特征字符串，用来让网络协议的对端来识别发起请求的用户代理软件的应用类型、操作系统、软件开发商以及版本号。浏览器通常使用的格式为：User-Agent: Mozilla/&lt;version&gt; (&lt;system-information&gt;) &lt;platform&gt; (&lt;platform-details&gt;) &lt;extensions&gt;防御DDoS0.升级硬件(服务器)1.过滤请求2.缓存数据库3.网页静态化4.TLS1.3升级硬件软妹币玩家请略过，还是说点软的吧；使用Cloudflare CDN高级DDoS 防护和缓解，我选CloudflareCloudflare 的内容分发网络（CDN）是一组分布在不同地理位置的服务器，可确保快速交付 Internet 内容，包括 HTML 页面、JavaScript 文件、样式表和图像。在 Cloudflare 上缓存静态资源可减少服务器负载和带宽，不会因带宽峰值而产生额外费用。用户体验： 没有 Cloudflare 的 CDN，距离您的源 Web 服务器较远的访问者会体验到页面加载速度变慢。Cloudflare 的 Anycast 网络使内容在地理上更接近您的访问者，从而减少页面负载和延迟。流量峰值： 由于重大新闻发布或在线事件，突然涌入您的网站的流量可能会使源 Web 服务器超载。Cloudflare 的 CDN 可提供您缓存的内容，以减轻源 Web 服务器的负载。DDoS 防护： 分布式拒绝服务（DDoS）攻击通过用流量淹没其基础架构来中断网站服务。Cloudflare 的 CDN 的网络容量为史上最大 DDoS 攻击的 15 倍，并且可以处理现代 DDoS 以确保您的网站正常运行。例如本博客也在使用的Cloudflare & Cloudflare清退边缘丨运营通报 30TB+流量过境使用Cloudflare CDN的五个好处1.隐藏服务器IP，SYN/ACK攻击直接豁免，亦可避免攻击者扫描服务器端口找到漏洞；2.防火墙前置，在CDN上即已缓解/过滤异常请求[GET/POST]压力；3.验证码前置，即人机验证；（技术不够的DDoS攻击根本绕不过，攻击随即缓解；）4.缓存静态资源，大大减少服务器带宽压力；5.Page Rule，Page Rule 使您能够根据页面的 URL 进行各种操作，例如创建重定向、微调缓存行为或启用和禁用我们的各种服务。在没碰到高端DDoS玩家之前，Cloudflare 应该能力保你站不死的；使用缓存本博客目前的优先策略是 MySQL/PHP + Redis；其次是网站内容全部静态化；这里需要再强调的是，每次刷新网页都会有新的请求[GET]发送到服务器，然后服务器后台通过PHP+MySQL一顿骚操作动态生成HTML文档，并将HTMl文档交由Nginx转发到客户端[目标浏览器]，然后你就可以看到美图了；而这PHP+MySQL两个软体也不是吃素的，是很吃系统资源的，刷新多了，CPU炸裂，[Nginx]直接返回[502 Bad Gateway]给你，看个球。动态生成页面就像下馆子，现点现做，遇到客流高峰也总有人手不够的时候，其他客人只有干等，已经吃上的客人还想再点菜，也得干等；相反，静态页面就好比，得，人手开销大，就算再请师傅厨房也塞不下，来了客人总得招待吧，虽然有几个捣乱的，那就提前备好餐，让前台麻溜的上菜就完了；而在这里，厨房就是你的服务器（带宽有限，CPU有限，硬盘有限，内存有限），厨子就是Php（掌勺人）+MySQL（配菜师傅），前台就是Nginx，炒不炒得出来是你们[Php+Mysql]的事儿，但论上菜，不带我[Nginx]怕的；（是的，Nginx就是这么骚...，知道这一点会让你信心大增；Redis介绍Redis是一个使用ANSI C编写的开源、支持网络、基于内存、可选持久性的键值对存储数据库。从2015年6月开始，Redis的开发由Redis Labs赞助，而2013年5月至2015年6月期间，其开发由Pivotal赞助。在2013年5月之前，其开发由VMware赞助。根据月度排行网站DB-Engines.com的数据，Redis是最流行的键值对存储数据库。目前总结了部分网友经验以及博主的实践，暂且推荐此种组合：Redis+MySQL/PHP对数据库进行缓存处理；如果你也使用 Typecho 建站，那么推荐你使用 TPCache插件[Plugins]，配合Redis使用，效果极佳；（秘：按理说我用的VPS应该能抗800并发/每秒，也就是一天跑个69120000 PV没什么问题（606024*1000）[post cid="6766" cover="https://limbopro.xyz/usr/uploads/2019/12/2254614923.png"/]Queries per second (每秒查询次数) 非相关性分析，此并发非彼并发；300～800QPS——带宽极限型
+
+目前服务器大多用了IDC机房提供了“百兆带宽”，“百兆出口”，似乎这就是单机的最高配了。这意味着网站出口的实际带宽是8M Byte左右。假定每个页面只有10K Byte，在这个并发条件下，即便你的网站是静态页面，不用什么数据库之类的技术，百兆带宽早已经吃完。这个情况下首要考虑是CDN加速／异地缓存，多机负载等技术。
+
+500～1000QPS——内网带宽极限＋Memcache极限型
+
+由于Key/value的特性，每个页面对memcache的请求远大于直接对DB的请求，Memcache的悲观并发数在2w左右，看似很高，但事实上大多数情况下，首先是有可能在此之前内网的带宽就已经吃光，接着是在8K QPS左右的情况下，但节点上的Memcache已经表现出了不稳定，如果代码上没有足够的优化，缓存的miss可能会导致系统直接将压力转嫁到了DB层上，这就使整个系统在达到某个明显的阀值之后，性能迅速下滑或直接宕机。
+
+1000～2000QPS——锁/同步模式极限型
+
+好吧，一句话：线程模型决定吞吐量。不管你系统中最常见的锁是什么锁，这个级别下，文件系统访问锁都成为了灾难。从网站内容的角度上讲，几乎任何的增删改都会牵扯到锁。“等解锁”的过程将会成为系统最重要的性能消耗。这就要求系统中不能存在中央节点，所有的数据都必须分布存储，数据需要分布处理。总之，关键词：分布
+————————————————
+版权声明：本文为CSDN博主「Storm啊」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/duzilonglove/article/details/78616167所以说，Redis + PHP 还是挺耐操的，需要注意的是1000～2000QPS下 Redis雪崩、穿透和击穿问题（可以自己深入了解下）。静态化可以参考此文：个人博客 DDoS 攻击的防范教程丨低成本&可执行，湮灭DDoS攻击者最后的倔强；封禁异常请求IP参考：批量封禁IP 地址、网站被CC 攻击的解决办法丨简易版  ，新封禁脚本暂未放进博客；使用TLS1.3参考：TLS 1.3 白话科普丨如何提高网站安全性和减少延迟；总结1.CDN一定要部署的，无论是否被攻击；2.后端对MySQL进行缓存处理，避免对数据库频繁查询；搭配 Redis 使用，效果极佳；联系主理人1.关注频道 https://t.me/limboprossr 不失联；2.毒奶粉们（我管我的Fans）可联系 TG机器人 或发送 邮件 获取帮助；3.或点击本页面右下角的聊天按钮联系；</description>
+</item>
+<item rdf:about="https://limbopro.xyz/archives/6679.html">
+<title>玩转Linux 服务器丨常用命令及深入学习资料（从入门到放弃）</title>
+<link>https://limbopro.xyz/archives/6679.html</link>
+<dc:date>2019-12-27T02:31:00+08:00</dc:date>
+<description>主理人序一顿操作猛如虎，一回生，二回熟；命令行界面是什么命令行界面（英语：Command-Line Interface，缩写：CLI）是在图形用户界面得到普及之前使用最为广泛的用户界面，它通常不支持鼠标，用户通过键盘输入指令，计算机接收到指令后，予以执行。也有人称之为字符用户界面（character user interface, CUI）。常见的CLI程式bash / sh / ksh / csh / zsh（Unix-like系统）COMMAND.COM（MS-DOS系统）cmd.exe / 命令提示字元（Windows NT和Windows CE系统）Windows PowerShell（支援.NET Framework技术的Windows NT系统）via 维基百科命令行结构一条完整的命令行语法一般包括三个部分：[命令] [选项] [参数]，如下：rm -rf /*选项是调整命令执行行为的开关，即，选项不同决定了命令的显示结果不同；参数是指命令的作用对象；rm -rf /* 即表示强制（参数f代表强制）删除 /目录下的所有文件（参数r代表递归），该命令学名又叫一键跑路，务必谨慎使用；常用命令推荐参考 Linux 常用命令学习 （学完这些，基本上能完成类Windows操作需求ls 查看当前目录就是 list 的缩写，通过 ls 命令不仅可以查看 linux 文件夹包含的文件，而且可以查看文件权限(包括目录、文件夹、文件权限)查看目录信息等等。常用参数搭配：ls -a 列出目录所有文件，包含以.开始的隐藏文件
+ls -A 列出除.及..的其它文件
+ls -r 反序排列
+ls -t 以文件修改时间排序
+ls -S 以文件大小排序
+ls -h 以易读大小显示
+ls -l 除了文件名之外，还将文件的权限、所有者、文件大小等信息详细列出来cd 进入文件夹进入[文件夹]；cd / 进入要目录
+cd ~ 进入home目录
+cd - 进入上一次工作路径pwd 查看当前路径pwd 查看当前所在路径mkdir 创建文件夹创建文件夹；mkdir fuck 当前工作目录下创建名为fuck的文件夹
+mkdir -p /root/fuck 在/root目录下创建路径为/root/fuck的目录，若不存在，则创建：mv 移动移动文件或修改文件名，根据第二参数类型（如目录，则移动文件；如为文件则重命令该文件）;mv fuck.log fuck.txt 将文件 fuck.log 重命名为 fuck.txt
+mv fuck.txt you.txt too.txt /shit 将文件fuck.txt you.txt too.txt 移动到根的 shit 目录中
+mv -i log1.txt log2.txt 将文件 log1.txt 改名为 file2，如果 log2.txt 已经存在，则询问是否覆盖
+mv * /root/ 移动当前文件夹下的所有文件到/root目录下cp 复制将源文件复制至目标文件，或将多个源文件复制至目标目录。(注意：命令行复制，如果目标文件已经存在会提示是否覆盖，而在 shell 脚本中，如果不加 -i 参数，则不会提示，而是直接覆盖！)-i 提示
+-r 复制目录及目录内所有项目
+-a 复制的文件与原文件时间一样我常用cp -rf /a/* /b/cat 抓取文件内容cat filename 一次显示整个文件
+cat &gt; filename 从键盘创建一个文件
+cat file1 file2 &gt; file 将几个文件合并为一个文件grep 正则搜索强大的文本搜索命令，grep(Global Regular Expression Print) 全局正则表达式搜索。grep 的工作方式是这样的，它在一个或多个文件中搜索字符串模板。如果模板包括空格，则必须被引用，模板后的所有字符串被看作文件名。搜索的结果被送到标准输出，不影响原文件内容。grep [option] pattern file|dir常用参数-A n --after-context显示匹配字符后n行
+-B n --before-context显示匹配字符前n行
+-C n --context 显示匹配字符前后n行
+-c --count 计算符合样式的列数
+-i 忽略大小写
+-l 只列出文件内容符合指定的样式的文件名称
+-f 从文件中读取关键词
+-n 显示匹配内容的所在文件中行数
+-R 递归查找文件夹cat test1.txt | grep -f key #从文件中读取关键词[key]
+ps -ef | grep nginx #查找指定进程[nginx]是否存在
+grep -lR '^fuck' /root #从文件夹中递归查找以fuck开头的行，并只列出文件
+grep -E 'ed|at' fuck.txt #显示包含 ed 或者 at 字符的内容行wc 统计文本wc (word count) 功能为统计指定的文件中字节数、字数、行数，并将统计结果输出；命令格式：wc [option] file..命令参数：-c 统计字节数
+-l 统计行数
+-m 统计字符数
+-w 统计词数，一个字被定义为由空白、跳格或换行字符分隔的字符串wc fuck.txt #查找文件的 行数 单词数 字节数 文件名
+cat fuck.txt | wc -l #统计输出结果的行数psps(process status)，用来查看当前运行的进程状态，一次性查看，如果需要动态连续结果使用 top；linux上进程有5种状态:1.运行(正在运行或在运行队列中等待)2.中断(休眠中, 受阻, 在等待某个条件的形成或接受到信号)3.不可中断(收到信号不唤醒和不可运行, 进程必须等待直到有中断发生)4.僵死(进程已终止, 但进程描述符存在, 直到父进程调用wait4()系统调用后释放)5.停止(进程收到SIGSTOP, SIGSTP, SIGTIN, SIGTOU信号后停止运行运行)ps 工具标识进程的5种状态码：D 不可中断 uninterruptible sleep (usually IO)
+R 运行 runnable (on run queue)
+S 中断 sleeping
+T 停止 traced or stopped
+Z 僵死 a defunct (”zombie”) process命令参数：-A 显示所有进程
+a 显示所有进程
+-a 显示同一终端下所有进程
+c 显示进程真实名称
+e 显示环境变量
+f 显示进程间的关系
+r 显示当前终端运行的进程
+-aux 显示所有包含其它使用的进程ps -ef #显示当前所有进程环境变量及进程间关系
+ps -A #显示当前所有进程
+ps -aux | grep apache #与grep联用查找某进程
+ps aux | grep '(cron|syslog)' #找出与 cron 与 syslog 这两个服务有关的 PID 号码top 查看进程显示当前系统正在执行的进程的相关信息，包括进程 ID、内存占用率、CPU 占用率等;常用参数：-c 显示完整的进程命令
+-s 保密模式
+-p &lt;进程号&gt; 指定进程显示
+-n &lt;次数&gt;循环显示次数kill 终止程序发送指定的信号到相应进程。不指定型号将发送SIGTERM（15）终止指定进程。如果任无法终止该程序可用"-KILL" 参数，其发送的信号为SIGKILL(9) ，将强制结束进程，使用ps命令或者jobs 命令可以查看进程号。root用户将影响用户的进程，非root用户只能影响自己的进程。常用参数：-l  信号，若果不加信号的编号参数，则使用“-l”参数会列出全部的信号名称
+-a  当处理当前进程时，不限制命令名和进程号的对应关系
+-p  指定kill 命令只打印相关进程的进程号，而不发送任何信号
+-s  指定发送信号
+-u  指定用户kill -9 $(ps -ef | grep nginx) #先使用ps查找进程nginx，然后用kill杀掉以上。熟练使用各项命令之后，可以着手学习Shell脚本；*.sh；以及crontab的使用；脚本Shell脚本编程初体验；crontab 定时执行Linux crontab是用来定期执行程序的命令。当安装完成操作系统之后，默认便会启动此任务调度命令。crond 命令每分锺会定期检查是否有要执行的工作，如果有要执行的工作便会自动执行该工作。而 linux 任务调度的工作主要分为以下两类：1、系统执行的工作：系统周期性所要执行的工作，如备份系统数据、清理缓存2、个人执行的工作：某个用户定期要做的工作，例如每隔10分钟检查邮件服务器是否有新信，这些工作可由每个用户自行设置语法crontab [ -u user ] file
+crontab [ -u user ] { -l | -r | -e }crontab 是用来让使用者在固定时间或固定间隔执行程序之用，换句话说，也就是类似使用者的时程表。参数说明：-e : 执行文字编辑器来设定时程表，内定的文字编辑器是 VI，如果你想用别的文字编辑器，则请先设定 VISUAL 环境变数来指定使用那个文字编辑器(比如说 setenv VISUAL joe)
+-r : 删除目前的时程表
+-l : 列出目前的时程表时间格式f1 f2 f3 f4 f5 program其中 f1 是表示分钟，f2 表示小时，f3 表示一个月份中的第几日，f4 表示月份，f5 表示一个星期中的第几天。program 表示要执行的程序。当 f1 为  时表示每分钟都要执行 program，f2 为  时表示每小时都要执行程序，其余类推当 f1 为 a-b 时表示从第 a 分钟到第 b 分钟这段时间内要执行，f2 为 a-b 时表示从第 a 到第 b 小时都要执行，其余类推当 f1 为 /n 时表示每 n 分钟个时间间隔执行一次，f2 为 /n 表示每 n 小时个时间间隔执行一次，其余类推当 f1 为 a, b, c,... 时表示第 a, b, c,... 分钟要执行，f2 为 a, b, c,... 时表示第 a, b, c...个小时要执行，其余类推；0 * * * * /home/fuck.sh #每月每天每小时的第 0 分钟执行一次 /home/fuck.sh
+0 6-12/3 * 12 * /home/fuck.sh #在 12 月内, 每天的早上 6 点到 12 点，每隔 3 个小时 0 分钟执行一次 /home/fuck.sh
+0 17 * * 1-5 /home/fuck.sh #周一到周五每天下午 5:00 执行一次 /home/fuck.sh
+20 0-23/2 * * * /home/fuck.sh #每月每天的午夜 0 点 20 分, 2 点 20 分, 4 点 20 分....执行 /home/fuck.sh0 */2 * * * /sbin/service httpd restart  意思是每两个小时重启一次apache 
+50 7 * * * /sbin/service sshd start  意思是每天7：50开启ssh服务 
+50 22 * * * /sbin/service sshd stop  意思是每天22：50关闭ssh服务 
+0 0 1,15 * * fsck /home  每月1号和15号检查/home 磁盘 
+1 * * * * /home/bruce/backup  每小时的第一分执行 /home/bruce/backup这个文件 
+00 03 * * 1-5 find /home &quot;*.xxx&quot; -mtime +4 -exec rm {} \;  每周一至周五3点钟，在目录/home中，查找文件名为*.xxx的文件，并删除4天前的文件。
+30 6 */10 * * ls  意思是每月的1、11、21、31日是的6：30执行一次ls命令注意：当程序在你所指定的时间执行后，系统会寄一封信给你，显示该程序执行的内容，若是你不希望收到这样的信，请在每一行空一格之后加上 &gt; /dev/null 2&gt;&1 即可vi 编辑器vi命令是UNIX操作系统和类UNIX操作系统中最通用的全屏幕纯文本编辑器。Linux中的vi编辑器叫vim，它是vi的增强版（vi Improved），与vi编辑器完全兼容，而且实现了很多增强功能。语法vi(选项)(参数)选项+&lt;行号&gt;：从指定行号的行开始先是文本内容；
+-b：以二进制模式打开文件，用于编辑二进制文件和可执行文件；
+-c&lt;指令&gt;：在完成对第一个文件编辑任务后，执行给出的指令；
+-d：以diff模式打开文件，当多个文件编辑时，显示文件差异部分；
+-l：使用lisp模式，打开“lisp”和“showmatch”；
+-m：取消写文件功能，重设“write”选项；
+-M：关闭修改功能；
+-n：不实用缓存功能；
+-o&lt;文件数目&gt;：指定同时打开指定数目的文件；
+-R：以只读方式打开文件；
+-s：安静模式，不现实指令的任何错误信息。命令描述vi filename如果filename存在，则打开；否则会创建一个新文件再打开。vi -R filename以只读模式（只能查看不能编辑）打开现有文件。view filename以只读模式打开现有文件。知识扩展vi编辑器有三种工作方式：命令方式、输入方式和ex转义方式。在Shell提示符后输入命令vi，进入vi编辑器，并处于vi的命令方式。此时，从键盘上输入的任何字符都被作为编辑命令来解释，例如，a(append）表示附加命令，i(insert）表示插入命令，x表示删除字符命令等。如果输入的字符不是vi的合法命令，则机器发出“报警声”，光标不移动。另外，在命令方式下输入的字符（即vi命令）并不在屏幕上显示出来，例如，输入i，屏幕上并无变化，但通过执行i命令，编辑器的工作方式却发生变化：由命令方式变为输入方式。输入方式通过输入vi的插入命令（i）、附加命令（a）、打开命令（o）、替换命令（s）、修改命令(c）或取代命令（r）可以从命令方式进入输入方式。在输入方式下，从键盘上输入的所有字符都被插入到正在编辑的缓冲区中，被当做该文件的正文。进入输入方式后，输入的可见字符都在屏幕上显示出来，而编辑命令不再起作用，仅作为普通字母出现。例如，在命令方式下输入字母i，进到输入方式，然后再输入i，就在屏幕上相应光标处添加一个字母i。由输入方式回到命令方式的办法是按下Esc键。如果已在命令方式下，那么按下Esc键就会发出“嘟嘟”声。为了确保用户想执行的vi命令是在命令方式下输入的，不妨多按几下Esc键，听到嘟声后再输入命令。ex转义方式暂且不表；如何退出vi编辑器按ESC键跳到命令模式，然后输入相应指令并回车：
+:w 保存文件但不退出vi.
+:w file 将修改另外保存到file中，不退出vi.
+:w! 强制保存，不推出vi.
+:wq 保存文件并退出vi.
+:wq! 强制保存文件，并退出vi.
+q: 不保存文件，退出vi.
+:q! 不保存文件，强制退出vi.
+:e! 放弃所有修改，从上次保存文件开始再编辑nano 编辑器nano是一个字符终端的文本编辑器，有点像DOS下的editor程序。它比vi/vim要简单得多，比较适合Linux初学者使用。某些Linux发行版的默认编辑器就是nano。语法nano [选项] [[+行,列] 文件名]...-h, -?         --help                  显示此信息
+ +行,列                                 从所指列数与行数开始
+ -A             --smarthome             启用智能 HOME 键
+ -B             --backup                储存既有文件的备份
+ -C &lt;目录&gt;      --backupdir=&lt;目录&gt;      用以储存独一备份文件的目录
+ -D             --boldtext              用粗体替代颜色反转
+ -E             --tabstospaces          将已输入的制表符转换为空白
+ -F             --multibuffer           启用多重文件缓冲区功能
+ -H             --historylog            记录与读取搜索/替换的历史字符串
+ -I             --ignorercfiles         不要参考nanorc 文件
+ -K             --rebindkeypad          修正数字键区按键混淆问题
+ -L             --nonewlines            不要将换行加到文件末端
+ -N             --noconvert             不要从 DOS/Mac 格式转换
+ -O             --morespace             编辑时多使用一行
+ -Q &lt;字符串&gt;    --quotestr=&lt;字符串&gt;     引用代表字符串
+ -R             --restricted            限制模式
+ -S             --smooth                按行滚动而不是半屏
+ -T &lt;#列数&gt;     --tabsize=&lt;#列数&gt;       设定制表符宽度为 #列数
+ -U             --quickblank            状态行快速闪动
+ -V             --version               显示版本资讯并离开
+ -W             --wordbounds            更正确地侦测单字边界
+ -Y &lt;字符串&gt;    --syntax=&lt;字符串&gt;       用于加亮的语法定义
+ -c             --const                 持续显示游标位置
+ -d             --rebinddelete          修正退格键/删除键混淆问题
+ -i             --autoindent            自动缩进新行
+ -k             --cut                   从游标剪切至行尾
+ -l             --nofollow              不要依照符号连结，而是覆盖
+ -m             --mouse                 启用鼠标功能
+ -o &lt;目录&gt;      --operatingdir=&lt;目录&gt;   设定操作目录
+ -p             --preserve              保留XON (^Q) 和XOFF (^S) 按键
+ -q             --quiet                 沉默忽略启动问题, 比如rc 文件错误
+ -r &lt;#列数&gt;     --fill=&lt;#列数&gt;          设定折行宽度为 #列数
+ -s &lt;程序&gt;      --speller=&lt;程序&gt;        启用替代的拼写检查程序
+ -t             --tempfile              离开时自动储存，不要提示
+ -u             --undo                  允许通用撤销[试验性特性]
+ -v             --view                  查看(只读)模式
+ -w             --nowrap                不要自动换行
+ -x             --nohelp                不要显示辅助区
+ -z             --suspend               启用暂停功能
+ -$             --softwrap              启用软换行
+ -a, -b, -e,
+ -f, -g, -j                             (忽略，为与pico 相容)nano fuck.txt #打开可编辑文件
+Ctrl+W #搜索
+Ctrl+Y #到上一页
+Ctrl+V #到下一页
+Ctrl+O #保存修改
+Ctrl+X #退出编辑界面如果你修改了文件，下面会询问你是否需要保存修改。输入Y确认保存，输入N不保存，按Ctrl+C取消返回。如果输入了Y，下一步会让你输入想要保存的文件名。如果不需要修改文件名直接回车就行；若想要保存成别的名字（也就是另存为）则输入新名称然后确 定。这个时候也可用Ctrl+C来取消返回。via nano命令Linux 系统目录结构Linux 系统目录结构学习资料1.Linux 命令大全2.Linux 常用命令学习 （基本上能完成类Windows操作需求3.Linux crontab 命令4.Linux 系统目录结构Shell 客户端推荐[post cid="1859" cover="https://limbopro.xyz/usr/uploads/2019/08/3373704263.png"/]FinalShell是一体化的的服务器，网络管理软件，不仅是ssh客户端，还是功能强大的开发，运维工具，充分满足开发，运维需求！[post cid="4322" cover="https://limbopro.xyz/usr/uploads/2019/11/1890279868.png"/]termius：跨平台生产力工具（Windows，macOS，Linux，Android，iOS，iOS较为强悍）。[post cid="200" cover="https://limbopro.xyz/usr/uploads/2019/11/2015358404.png"/]JuiceSSH - SSH 管理工具 （安卓端强悍）联系主理人1.关注频道 https://t.me/limboprossr 不失联；2.毒奶粉们（我管我的Fans）可联系 TG机器人 或发送 邮件获取帮助；3.或点击本页面右下角的聊天按钮联系；</description>
+</item>
 <item rdf:about="https://limbopro.xyz/archives/2713.html">
 <title>Linux 磁盘清理大文件及大文件夹查找命令（文件大小排序/磁盘清理）</title>
 <link>https://limbopro.xyz/archives/2713.html</link>
@@ -46,12 +208,6 @@ xmlns:dc="http://purl.org/dc/elements/1.1/">
 <dc:date>2019-08-08T23:50:00+08:00</dc:date>
 <description>删掉一些二次判定（加快封禁检测，随总请求数量速度增加逐级提高/降低封禁阈值；），以及封禁IP数量统计，去重；好就好在脚本很短，也很好理解；[...]</description>
 </item>
-<item rdf:about="https://limbopro.xyz/archives/1888.html">
-<title>Monit - 配置网站服务器崩溃邮件警报</title>
-<link>https://limbopro.xyz/archives/1888.html</link>
-<dc:date>2019-08-07T00:02:00+08:00</dc:date>
-<description>Monit 总体介绍Monit是一款功能非常丰富的进程、文件、目录和设备的监测软件，适用于Linux/Unix平台。 它可以自动修复那些已经停止运作的程序,特使适合处理那些由于多种原因导致的软件错误，同时Monit 包含一个内嵌的 HTTP(S) Web 界面，你可以使用浏览器方便地查看 Monit 所监视的服务器。[...]</description>
-</item>
 <item rdf:about="https://limbopro.xyz/archives/1872.html">
 <title>Linode丨建站VPS服务商推荐</title>
 <link>https://limbopro.xyz/archives/1872.html</link>
@@ -75,11 +231,5 @@ xmlns:dc="http://purl.org/dc/elements/1.1/">
 <link>https://limbopro.xyz/archives/1307.html</link>
 <dc:date>2019-07-19T21:17:00+08:00</dc:date>
 <description>谷歌网站管理员以及谷歌分析做好谷歌搜索引擎优化，至少你需要以下两样工具，前者可帮助您衡量您网站的搜索流量和搜索排名情况、解决相关问题以及让您的网站在Google 搜索结果中脱颖而出；后者可收集、配置并分析您的数据，助力您覆盖最理想的受众群体。谷歌网站管理员针对谷歌机器人抓取，网站地图，索引，排名，曝光等一系列优化建议PC端 https://www.google.com/webmasters/tools/home?hl=zh-CN谷歌分析部署网站跟踪代码，查看日常数据，统计用户形象，关键词分析PC端 https://analytics.google.com/analytics/web/iOS端 https://apps.apple.com/us/app/google-analytics/id881599038日常查看用户访问报告，包含来源，停留时长，跳转网页跳出率等；主理人推荐序如果刚好你也看到这篇文章，我特意在此向你介绍谷歌网站管理员以及谷歌分析，这对于任何网站主理人都是非常必要的。一切都是以为提供最佳搜索结果（帮助）为准则，这既是谷歌的初衷，也是每位主理人撰写文章的动力，都是希望帮助到每个寻求答案的搜索引擎使用者。正如搜索引擎优化 (SEO) 新手指南中所说的，创建吸引力与实用性兼具的内容对您网站的影响可能比这里讨论的其他任何因素都大。用户看到此类内容便知道其是优质内容，并且可能乐意推荐其他用户访问此类内容。他们可能通过博文、社交媒体服务、电子邮件、论坛或其他方式进行推荐。-- via 搜索引擎优化 (SEO) 新手指南网站管理员有什么用提升您的网站在 Google 搜索结果中的排名Search Console 中的工具与报告可帮助您衡量您网站的搜索流量和搜索排名情况、解决相关问题以及让您的网站在 Google 搜索结果中脱颖而出。借助“搜索分析”报告，优化您网站的内容了解哪些查询会吸引用户访问您的网站。分析您的网站在 Google 搜索中获得的展示次数、点击次数和排名。使您的内容编入 Google 索引中提交站点地图和各个网址，以供抓取。您可查看自己的索引覆盖范围，确保 Google 已收录您网站的最新视图。接收问题提醒并解决网站问题接收当 Google 检测到您网站上存在问题时向您发送的电子邮件提醒。您可在邮件中查看哪些网址受到了这些问题的影响，并在解决这些问题后告知 Google。了解 Google 搜索如何查看您的网页这款网址检查工具会直接从 Google 索引中检索出有关您网页的抓取、索引和展示情况的信息。附录谷歌管理员：提升您的网站在 Google 搜索结果中的排名谷歌管理员社区：帮助搜索引擎优化 (SEO) 新手指南Google Analytics（分析）使用入门Typecho 如何加入谷歌分析代码（Google analytics）</description>
-</item>
-<item rdf:about="https://limbopro.xyz/archives/1282.html">
-<title>Typecho 全静态切换防御DDoS策略</title>
-<link>https://limbopro.xyz/archives/1282.html</link>
-<dc:date>2019-07-18T23:18:00+08:00</dc:date>
-<description>做防御的方法有很多种，但最多的两种莫过于加钱或装死。主理人序加钱，万万是不可能加钱的。想来大家问到这个问题了，肯定还是因为没钱，或者说相关的预算并不多。那么到底有什么好办法呢？一 部署免费CDN可以参考这一篇：Cloudflare 三步隐藏真实服务器IP 以及，LNMP相关系列文章。二 全站静态/动态切换是的，在部署免费CDN的基础上，做动静切换。必须要明白的动态资源仍然会消耗服务器资源，例如登陆页，搜索页，都要调取 PHP，mysql 数据索引服务。[...]</description>
 </item>
 </rdf:RDF>

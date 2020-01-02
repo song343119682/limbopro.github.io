@@ -3,7 +3,6 @@
 <html class="no-js bg cool-transparent" lang="zh-cmn-Hans">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-<base target="_blank" />
 <meta charset="UTF-8">
 
 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
@@ -12,6 +11,17 @@
 
 <meta name="theme-color" content="#ff393e" />
 <meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="../index.html" />
+<link rel="dns-prefetch" href="https://www.doubleclickbygoogle.com/" />
+<link rel="dns-prefetch" href="https://www.google.com/" />
+<link rel="dns-prefetch" href="https://marketingplatform.google.com/" />
+<link rel="dns-prefetch" href="https://developers.google.com/" />
+<link rel="dns-prefetch" href="https://api.ip.sb/" />
+<link rel="dns-prefetch" href="https://adservice.google.com/" />
+<link rel="dns-prefetch" href="https://ajax.cloudflare.com/" />
+<link rel="dns-prefetch" href="https://pagead2.googlesyndication.com/" />
+<link rel="dns-prefetch" href="https://www.google-analytics.com/" />
+<link rel="dns-prefetch" href="https://googleads.g.doubleclick.net/" />
 <title>Nikto丨网页服务器漏洞扫描器（开源的（GPL）） - 毒奶博主丨欢迎使用代理访问本站。</title>
 <link rel="icon" type="image/ico" href="../favicon.ico">
 <meta name="description" content="Nikto 开源的（GPL）网页服务器扫描器Nikto是一款开源的（GPL）网页服务器扫描器，它可以对网页服务器进行全面的多种扫描，包含超过3300种有潜在危险的文件／CGIs；超过625种服务..." />
@@ -22,9 +32,6 @@
 <link rel="alternate" type="application/rdf+xml" title="Nikto丨网页服务器漏洞扫描器（开源的（GPL）） &raquo; 毒奶博主丨欢迎使用代理访问本站。 &raquo; RSS 1.0" href="../feed/rss/archives/2027.html" />
 <link rel="alternate" type="application/atom+xml" title="Nikto丨网页服务器漏洞扫描器（开源的（GPL）） &raquo; 毒奶博主丨欢迎使用代理访问本站。 &raquo; ATOM 1.0" href="../feed/atom/archives/2027.html" />
 <link rel="stylesheet" type="text/css" href="../usr/plugins/CodePrettify/static/styles/GrayMac.css" />
-<script type="text/x-mathjax-config">
-        MathJax.Hub.Config({messageStyle: "none",tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-    </script>
 
 <link href="../usr/themes/handsome/assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -32,6 +39,7 @@
 <link rel="stylesheet" href="../usr/themes/handsome/assets/css/handsome.min.css?v=6.0.020191205" type="text/css" />
 
 <link rel="stylesheet" href="../usr/themes/handsome/assets/css/features/jquery.fancybox.min.css?v=6.0.020191205" type="text/css" />
+<link rel="stylesheet" href="../usr/themes/handsome/assets/css/features/newblack.min.css?v=6.0.020191205" type="text/css" />
 <link rel="stylesheet" href="../usr/themes/handsome/assets/css/features/code/custom.min.css?v=6.0.020191205" type="text/css" />
 <link rel="stylesheet" href="../usr/themes/handsome/assets/css/features/coolopacity.min.css?v=6.0.020191205" type="text/css" />
 <style>
@@ -41,7 +49,6 @@
             }
         </style>
 
-<link rel="stylesheet" href="../usr/themes/handsome/assets/css/font.min.css?v=6.0.020191205" type="text/css" />
 <style type="text/css">
         
         html.bg {
@@ -59,7 +66,7 @@
         }
 }
 #toc {
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1);
 }    .nav-tabs-alt .nav-tabs>li[data-index="2"].active~.navs-slider-bar {
         transform: translateX(405%);
     }
@@ -71,18 +78,18 @@
 	color: #999;
 }    </style>
 
-<script src="../usr/themes/handsome/assets/libs/jquery/jquery.min.js" type="0e9ebdfde0f7d6fba6e4a9d6-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/libs/jquery/jquery.min.js" type="7f35d98dade446bdda08024b-text/javascript"></script>
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140019039-1" type="0e9ebdfde0f7d6fba6e4a9d6-text/javascript"></script>
-<script type="0e9ebdfde0f7d6fba6e4a9d6-text/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140019039-1" type="7f35d98dade446bdda08024b-text/javascript"></script>
+<script type="7f35d98dade446bdda08024b-text/javascript">
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'UA-140019039-1');
 </script>
-<script src="../usr/themes/handsome/assets/js/features/fancyMorph.min.js" type="0e9ebdfde0f7d6fba6e4a9d6-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/js/features/fancyMorph.min.js" type="7f35d98dade446bdda08024b-text/javascript"></script>
 </head>
 <body id="body" class="fix-padding">
 
@@ -122,7 +129,7 @@
 
 
 </button>
-</span> 
+</span>
 </div>
 </div>
 </form>
@@ -175,18 +182,18 @@
 <strong class="font-bold text-lt">毒奶</strong>
 <b class="caret"></b>
 </span>
-<span class="text-muted text-xs block">TG 毒奶博主<br>业余斜杆青年<br>互联网拾荒<br>增长黑客</span>
+<span class="text-muted text-xs block"><script type="7f35d98dade446bdda08024b-application/javascript"> function getip(json){     document.write( json.ip); } </script> <script type="7f35d98dade446bdda08024b-application/javascript" src="https://api.ip.sb/jsonip?callback=getip"></script><br>网上冲浪爱好者<br>业余斜杆青年<br>增长黑客<br>Attack</span>
 </span>
 </a>
 
-<ul class="dropdown-menu animated fadeInRight w hidden-folded no-padder">
+ <ul class="dropdown-menu animated fadeInRight w hidden-folded no-padder">
 <li class="wrapper b-b m-b-sm bg-info m-n">
 <span class="arrow top hidden-folded arrow-info"></span>
 <div>
 <p>晚上好，注意早点休息</p>
 </div>
 <div class="progress progress-xs m-b-none dker">
-<div class="progress-bar bg-white" data-toggle="tooltip" data-original-title="时间已经度过8.33%" style="width: 8.33%"></div>
+<div class="progress-bar bg-white" data-toggle="tooltip" data-original-title="时间已经度过79.17%" style="width: 79.17%"></div>
 </div>
 </li>
 </ul>
@@ -210,7 +217,7 @@
 </a>
 </li>
 
-<li> <a target="_self" href="../6.html" class="auto"><span class="nav-icon"><i class="glyphicon fontello-emo-devil"></i></span><span>联系我们</span></a></li><li> <a target="_self" href="../1765.html" class="auto"><span class="nav-icon"><i class="glyphicon fontello-indent"></i></span><span>文章归档</span></a></li><li> <a target="_self" href="../865.html" class="auto"><span class="nav-icon"><i class="glyphicon fontello-instagram"></i></span><span>机场推荐</span></a></li><li> <a target="_blank" href="https://t.me/limboprossr" class="auto"><span class="nav-icon"><i class="glyphicon fontello-bell"></i></span><span>电报频道</span></a></li><li> <a target="_blank" href="../search.html" class="auto"><span class="nav-icon"><i class="glyphicon fontello-search"></i></span><span>毒奶搜索</span></a></li><li> <a target="_blank" href="https://github.com/limbopro" class="auto"><span class="nav-icon"><i class="glyphicon fontello-eye"></i></span><span>托管仓库</span></a></li> <li class="line dk"></li>
+<li> <a target="_self" href="../6.html" class="auto"><span class="nav-icon"><i class="glyphicon fontello-emo-devil"></i></span><span>联系我们</span></a></li><li> <a target="_self" href="../1765.html" class="auto"><span class="nav-icon"><i class="glyphicon fontello-indent"></i></span><span>文章归档</span></a></li><li> <a target="_self" href="../865.html" class="auto"><span class="nav-icon"><i class="glyphicon fontello-instagram"></i></span><span>机场推荐</span></a></li><li> <a target="_blank" href="../search.html" class="auto"><span class="nav-icon"><i class="glyphicon fontello-search"></i></span><span>毒奶搜索</span></a></li><li> <a target="_blank" href="https://t.me/limboprossr" class="auto"><span class="nav-icon"><i class="glyphicon fontello-bell"></i></span><span>电报频道</span></a></li> <li class="line dk"></li>
 
 <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
 <span>组成</span>
@@ -233,7 +240,7 @@
 </a>
 </li>
 
-<li><a href="../category/Bulletin/index.html"><b class="badge pull-right">5</b><span>运营通报</span></a></li><li><a href="../category/hot-movies/index.html"><b class="badge pull-right">17</b><span>追剧小组</span></a></li><li><a href="../category/films-recommend/index.html"><b class="badge pull-right">39</b><span>电影推荐</span></a></li><li><a href="../category/instagram/index.html"><b class="badge pull-right">11</b><span>美图欣赏</span></a></li><li><a href="../category/ssr/index.html"><b class="badge pull-right">10</b><span>科学上网</span></a></li><li><a href="../category/ssr-operation/index.html"><b class="badge pull-right">1</b><span>自学上网</span></a></li><li><a href="../category/tools/index.html"><b class="badge pull-right">24</b><span>实用工具</span></a></li><li><a href="../category/LNMP/index.html"><b class="badge pull-right">24</b><span>建站指南</span></a></li><li><a href="../category/Typecho/index.html"><b class="badge pull-right">20</b><span>网站优化</span></a></li><li><a href="../category/Toilet-reading/index.html"><b class="badge pull-right">8</b><span>厕所读物</span></a></li><li><a href="../category/software-skills/index.html"><b class="badge pull-right">23</b><span>软件百科</span></a></li><li><a href="../category/telegram-anecdote/index.html"><b class="badge pull-right">10</b><span>电报奇闻</span></a></li><li><a href="../category/master-care/index.html"><b class="badge pull-right">19</b><span>无主杂记</span></a></li><li><a href="../category/Internetlog/index.html"><b class="badge pull-right">1</b><span>观察报告</span></a></li><li><a href="../category/sales/index.html"><b class="badge pull-right">1</b><span>怪薅羊毛</span></a></li><li><a href="../category/NSFW/index.html"><b class="badge pull-right">17</b><span>开车专栏</span></a></li><li><a href="../category/day-of-history/index.html"><b class="badge pull-right">1</b><span>历史时刻</span></a></li><li><a href="../category/AfterFQ/index.html"><b class="badge pull-right">1</b><span>毒奶世界</span></a></li><li><a href="../category/technologyart/index.html"><b class="badge pull-right">2</b><span>科技美学</span></a></li> </ul>
+<li><a href="../category/Bulletin/index.html"><b class="badge pull-right">6</b><span>运营通报</span></a></li><li><a href="../category/hot-movies/index.html"><b class="badge pull-right">17</b><span>追剧小组</span></a></li><li><a href="../category/films-recommend/index.html"><b class="badge pull-right">39</b><span>电影推荐</span></a></li><li><a href="../category/instagram/index.html"><b class="badge pull-right">11</b><span>美图欣赏</span></a></li><li><a href="../category/ssr/index.html"><b class="badge pull-right">15</b><span>科学上网</span></a></li><li><a href="../category/ssr-operation/index.html"><b class="badge pull-right">1</b><span>自学上网</span></a></li><li><a href="../category/tools/index.html"><b class="badge pull-right">27</b><span>实用工具</span></a></li><li><a href="../category/LNMP/index.html"><b class="badge pull-right">24</b><span>建站指南</span></a></li><li><a href="../category/Typecho/index.html"><b class="badge pull-right">22</b><span>网站优化</span></a></li><li><a href="../category/Toilet-reading/index.html"><b class="badge pull-right">8</b><span>厕所读物</span></a></li><li><a href="../category/software-skills/index.html"><b class="badge pull-right">23</b><span>软件百科</span></a></li><li><a href="../category/telegram-anecdote/index.html"><b class="badge pull-right">10</b><span>电报奇闻</span></a></li><li><a href="../category/master-care/index.html"><b class="badge pull-right">19</b><span>无主杂记</span></a></li><li><a href="../category/Internetlog/index.html"><b class="badge pull-right">1</b><span>观察报告</span></a></li><li><a href="../category/sales/index.html"><b class="badge pull-right">1</b><span>怪薅羊毛</span></a></li><li><a href="../category/NSFW/index.html"><b class="badge pull-right">17</b><span>开车专栏</span></a></li><li><a href="../category/day-of-history/index.html"><b class="badge pull-right">1</b><span>历史时刻</span></a></li><li><a href="../category/AfterFQ/index.html"><b class="badge pull-right">1</b><span>毒奶世界</span></a></li><li><a href="../category/technologyart/index.html"><b class="badge pull-right">2</b><span>科技美学</span></a></li> </ul>
 </li>
 
 <li>
@@ -276,7 +283,7 @@
 </a>
 </li>
 
-<li data-original-title="DDoS服务" data-toggle="tooltip" data-placement="top"><a href="https://www.xddos.co" target="_blank"><span>XDDoS</span></a></li><li data-original-title="SSR机场服务商" data-toggle="tooltip" data-placement="top"><a href="http://www.kcssr.id/auth/register?affid=5677" target="_blank"><span>卡车SSR</span></a></li><li data-original-title="SS机场服务商" data-toggle="tooltip" data-placement="top"><a href="https://n3ro.host/register?ref=7091" target="_blank"><span>N3RO</span></a></li><li data-original-title="本站主题作者。" data-toggle="tooltip" data-placement="top"><a href="https://www.ihewro.com/" target="_blank"><span>友人C</span></a></li><li data-original-title="萌IDC博客" data-toggle="tooltip" data-placement="top"><a href="http://www.idc.moe" target="_blank"><span>萌IDC博客</span></a></li><li data-original-title="有朋自远方来，不亦乐乎？" data-toggle="tooltip" data-placement="top"><a href="https://zhuangzhuang.cf" target="_blank"><span>ZHUANGZHUANG</span></a></li><li data-original-title="一个不负责任的教程博客。" data-toggle="tooltip" data-placement="top"><a href="https://gtary.com/" target="_blank"><span>格塔里</span></a></li> </ul>
+ <li data-original-title="DDoS服务" data-toggle="tooltip" data-placement="top"><a href="https://www.xddos.co" target="_blank"><span>XDDoS</span></a></li><li data-original-title="SSR机场服务商" data-toggle="tooltip" data-placement="top"><a href="https://kcjisu.press/auth/register?code=8xeq" target="_blank"><span>卡车SSR</span></a></li><li data-original-title="SS机场服务商" data-toggle="tooltip" data-placement="top"><a href="https://n3ro.host/register?ref=7091" target="_blank"><span>N3RO</span></a></li><li data-original-title="本站主题作者。" data-toggle="tooltip" data-placement="top"><a href="https://www.ihewro.com/" target="_blank"><span>友人C</span></a></li><li data-original-title="萌IDC博客" data-toggle="tooltip" data-placement="top"><a href="http://www.idc.moe" target="_blank"><span>萌IDC博客</span></a></li><li data-original-title="有朋自远方来，不亦乐乎？" data-toggle="tooltip" data-placement="top"><a href="https://zhuangzhuang.cf" target="_blank"><span>ZHUANGZHUANG</span></a></li><li data-original-title="一个不负责任的教程博客。" data-toggle="tooltip" data-placement="top"><a href="https://gtary.com/" target="_blank"><span>格塔里</span></a></li> </ul>
 </li>
 </ul>
 </nav>
@@ -284,28 +291,12 @@
 </div>
 
 
-<div id="left_footer" class="footer wrapper-xs text-center nav-xs lt">
-<div class="col-xs-6 no-padder">
-<a target="_blank" class="tinav" href="../feed/index.html" title="" data-toggle="tooltip" data-placement="top" data-original-title="文章RSS地址">
-<span class="left-bottom-icons block"><i data-feather="rss"></i></span>
-<small class="text-muted">文章</small>
-</a>
-</div>
-<div class="col-xs-6 no-padder">
-<a target="_blank" href="../feed/comments/index.html" title="" data-toggle="tooltip" data-placement="top" data-original-title="评论RSS地址">
-<span class="left-bottom-icons block"><i data-feather="message-square"></i></span>
-<small class="text-muted">评论</small>
-</a>
-</div>
-</div>
 </div>
 </aside>
 
 <div id="content" class="app-content">
 
-<div id="loading" class="butterbar active hide">
-<span class="bar"></span>
-</div> 
+
 <style>
     #post-content{
         font-size: 14px;
@@ -318,16 +309,7 @@
 
 <div class="col center-part">
 
-<style>
-        
-        .mdx-si-head .cover{
-            object-fit: cover;
-            width: 100%;
-            height: 100%
-        }
-        
-</style>
-<div class="mdx-share-img" id="mdx-share-img"><div class="mdx-si-head" style="background-image:url(../usr/themes/handsome/assets/img/video.jpg)"><p>毒奶</p><span>Nikto丨网页服务器漏洞扫描器（开源的（GPL））</span></div><div class="mdx-si-sum">Nikto 开源的（GPL）网页服务器扫描器Nikto是一款开源的（GPL）网页服务器扫描器，它可以对网页服务器进...</div><div class="mdx-si-box"><span>扫描右侧二维码阅读全文</span><div class="mdx-si-qr" id="mdx-si-qr"><img src="../usr/themes/handsome/libs/GetCode.php?type=url&amp;content=https:%252F%252Flimbopro.xyz%252Farchives%252F2027.html"></div></div><div class="mdx-si-time">12<br><span class="mdx-si-time-2">2019/08</span></div></div> 
+
 <header id="small_widgets" class="bg-light lter wrapper-md">
 <h1 class="entry-title m-n font-thin text-black l-h">Nikto丨网页服务器漏洞扫描器（开源的（GPL））<a class="plus-font-size" data-toggle="tooltip" data-original-title="点击改变文章字体大小"><i data-feather="type"></i></a><a data-morphing="" id="morphing" data-src="#morphing-content" href="javascript:;" class="read_mode superscript m-l-sm" data-toggle="tooltip" data-placement="right" data-original-title="阅读模式"><i data-feather="book-open"></i></a></h1> 
 <ul class="entry-meta text-muted list-inline m-b-none small
@@ -337,7 +319,7 @@
 
 <li class="meta-date"><span class="post-icons"><i data-feather="clock"></i></span><span class="sr-only">发布时间：</span><time class="meta-value">2019 年 08 月 12 日</time></li>
 
-<li class="meta-views"><span class="post-icons"><i data-feather="eye"></i></span><span class="meta-value">1266次浏览</span></li>
+<li class="meta-views"><span class="post-icons"><i data-feather="eye"></i></span><span class="meta-value">1309次浏览</span></li>
 
 <li class="meta-word"><span class="post-icons"><i data-feather="pen-tool"></i></span><span class="meta-value">2259字数</span></li>
 
@@ -358,7 +340,7 @@
 unzip master.zip
 mv nikto-master nikto
 cd ./nikto/program/
-perl nikto.pl -h limbopro.xyz -o index.htm -C all #扫码并生成index.htm 供浏览器打开查看</code></pre><h2>Nikto扫描结果示例</h2><pre><code><a href="../cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a2d0cdcdd6e2cecdc1c3cecacdd1d6">[email&#160;protected]</a>:/nikto-master/program# perl nikto.pl -h limbopro.xyz -o index.htm -C all
+perl nikto.pl -h limbopro.xyz -o index.htm -C all #扫码并生成index.htm 供浏览器打开查看</code></pre><h2>Nikto扫描结果示例</h2><pre><code><a href="../cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f4869b9b80b4989b9795989c9b8780">[email&#160;protected]</a>:/nikto-master/program# perl nikto.pl -h limbopro.xyz -o index.htm -C all
 - Nikto v2.1.6
 ---------------------------------------------------------------------------
 + Target IP:          104.24.123.187
@@ -374,7 +356,7 @@ perl nikto.pl -h limbopro.xyz -o index.htm -C all #扫码并生成index.htm 供�
 + 26393 requests: 0 error(s) and 2 item(s) reported on remote host
 + End Time:           2019-08-12 13:32:27 (GMT8) (138 seconds)
 ---------------------------------------------------------------------------
-+ 1 host(s) tested</code></pre><h2>附注</h2><p>Nikto：<span class="external-link"><a href="https://zh.wikipedia.org/wiki/Nikto" target="_blank">Wikipedia<i data-feather='external-link'></i></a></span><br>Nikto：<span class="external-link"><a href="https://github.com/sullo/nikto" target="_blank">GitHub<i data-feather='external-link'></i></a></span><br>Nikto：<span class="external-link"><a href="https://github.com/sullo/nikto/archive/master.zip" target="_blank">Release<i data-feather='external-link'></i></a></span><br>Nikto：<span class="external-link"><a href="https://cirt.net/Nikto2" target="_blank">https://cirt.net/Nikto2<i data-feather='external-link'></i></a></span><br><span class="external-link"><a href="https://kifarunix.com/how-to-install-and-use-nikto-web-scanner-on-ubuntu-18-04/" target="_blank">How to Install and Use Nikto Web Scanner on Ubuntu 18.04<i data-feather='external-link'></i></a></span></p><hr class="content-copyright" style="margin-top:50px" /><blockquote class="content-copyright" style="font-style:normal"><p class="content-copyright">版权属于：<a class="content-copyright" target="_blank" href="https://t.me/limboprobot">http://t.me/limboprobot</a> TG 毒奶博主 Julia； <br>联系我们： <a class="content-copyright" target="_blank" href="../6.html">https://limbopro.xyz/6.html</a> 投稿或反馈或转载文章或交换友链； <br>电报频道： <a class="content-copyright" target="_blank" href="https://t.me/limboprossr">https://t.me/limboprossr</a> 及时收讯不失联； <br>必备技能： <a class="content-copyright" target="_blank" href="2910.html">https://limbopro.xyz/archives/2910.html</a> 如何访问任意被墙域名； <br>网站镜像： <a class="content-copyright" target="_blank" href="https://limbopro.github.io">https://limbopro.github.io</a> 每月更新；</p><p class="content-copyright">本文链接：<a class="content-copyright" href="2027.html">https://limbopro.xyz/archives/2027.html</a></p><p class="content-copyright">版权声明：<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本文采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a> 进行许可，转载请附上原文出处链接和本声明。</p></blockquote> </div>
++ 1 host(s) tested</code></pre><h2>附注</h2><p>Nikto：<span class="external-link"><a href="https://zh.wikipedia.org/wiki/Nikto" target="_blank">Wikipedia<i data-feather='external-link'></i></a></span><br>Nikto：<span class="external-link"><a href="https://github.com/sullo/nikto" target="_blank">GitHub<i data-feather='external-link'></i></a></span><br>Nikto：<span class="external-link"><a href="https://github.com/sullo/nikto/archive/master.zip" target="_blank">Release<i data-feather='external-link'></i></a></span><br>Nikto：<span class="external-link"><a href="https://cirt.net/Nikto2" target="_blank">https://cirt.net/Nikto2<i data-feather='external-link'></i></a></span><br><span class="external-link"><a href="https://kifarunix.com/how-to-install-and-use-nikto-web-scanner-on-ubuntu-18-04/" target="_blank">How to Install and Use Nikto Web Scanner on Ubuntu 18.04<i data-feather='external-link'></i></a></span></p><hr class="content-copyright" style="margin-top:50px" /><blockquote class="content-copyright" style="font-style:normal"><p class="content-copyright">版权属于：<a class="content-copyright" target="_blank" href="https://t.me/limboprobot">毒奶博主</a><br>联系我们： <a class="content-copyright" target="_blank" href="../6.html">https://limbopro.xyz/6.html</a> <br>电报频道： <a class="content-copyright" target="_blank" href="https://t.me/limboprossr">https://t.me/limboprossr</a><br>必备技能： <a class="content-copyright" target="_blank" href="2910.html">https://limbopro.xyz/archives/2910.html</a><br>网站镜像： <a class="content-copyright" target="_blank" href="https://limbopro.github.io">https://limbopro.github.io</a></p><p class="content-copyright">本文链接：<a class="content-copyright" href="2027.html">https://limbopro.xyz/archives/2027.html</a></p><p class="content-copyright">版权声明：<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本文采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0 许可协议</a> ，转载和引用时请务必遵守。</p></blockquote> </div>
 
 <div class="show-foot">
 <div class="notebook">
@@ -384,7 +366,7 @@ perl nikto.pl -h limbopro.xyz -o index.htm -C all #扫码并生成index.htm 供�
 <div class="copyright" data-toggle="tooltip" data-html="true" data-original-title="转载请保留本文转载地址，著作权归作者所有"><span>© 允许规范转载</span>
 </div>
 </div>
- 
+
 </div>
 </article>
 </div>
@@ -396,11 +378,9 @@ perl nikto.pl -h limbopro.xyz -o index.htm -C all #扫码并生成index.htm 供�
 </ul>
 </nav>
 
-<div id="disqus_thread"><script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="0e9ebdfde0f7d6fba6e4a9d6-text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="adf24965-dd03-45f8-9fdf-3f1e953df737";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script></div>
+<div id="disqus_thread"><script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="7f35d98dade446bdda08024b-text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="adf24965-dd03-45f8-9fdf-3f1e953df737";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script></div>
 <div id="disqus_thread"></div>
-<script type="0e9ebdfde0f7d6fba6e4a9d6-text/javascript">
-
-
+<script type="7f35d98dade446bdda08024b-text/javascript">
 /**
  * *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
  * *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
@@ -410,12 +390,51 @@ perl nikto.pl -h limbopro.xyz -o index.htm -C all #扫码并生成index.htm 供�
  * this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
  * };
  * */
-(function() { // DON'T EDIT BELOW THIS LINE
-	var d = document, s = d.createElement('script');
-	s.src = 'https://limbopro-xyz.disqus.com/embed.js';
-	s.setAttribute('data-timestamp', +new Date());
-	(d.head || d.body).appendChild(s);
-})();
+ 
+
+function loadDisqus() {
+  // Disqus via Sukka's Blog
+  var d = document, s = d.createElement('script');
+  s.src = 'https://limbopro-xyz.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+  window.disqus_config = function () {
+  this.page.url = limbopro.xyz;
+  
+  };
+  // 如果你和我一样在用 DisqusJS，loadDisqus() 里就应该是 DisqusJS 的初始化代码 new DisqusJS({...})
+}
+
+// 通过检查 window 对象确认是否在浏览器中运行
+var runningOnBrowser = typeof window !== "undefined";
+// 通过检查 scroll 事件 API 和 User-Agent 来匹配爬虫
+var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
+// 检查当前浏览器是否支持 IntersectionObserver API
+var supportsIntersectionObserver = runningOnBrowser && "IntersectionObserver" in window;
+
+// 一个小 hack，将耗时任务包裹在 setTimeout(() => { }, 1) 中，可以推迟到 Event Loop 的任务队列中、等待主调用栈清空后才执行，在绝大部分浏览器中都有效
+// 其实这个 hack 本来是用于优化骨架屏显示的。一些浏览器总是等 JavaScript 执行完了才开始页面渲染，导致骨架屏起不到降低 FCP 的优化效果，所以通过 hack 将耗时函数放到骨架屏渲染完成后再进行。
+setTimeout(function () {
+  if (!isBot && supportsIntersectionObserver) {
+    // 当前环境不是爬虫、并且浏览器兼容 IntersectionObserver API
+    var disqus_observer = new IntersectionObserver(function(entries) {
+      // 当前视窗中已出现 Disqus 评论框所在位置
+      if (entries[0].isIntersecting) {
+        // 加载 Disqus
+        loadDisqus();
+        // 停止当前的 Observer
+        disqus_observer.disconnect();
+      }
+    }, { threshold: [0] });
+    // 设置让 Observer 观察 #disqus_thread 元素
+    disqus_observer.observe(document.getElementById('disqus_thread'));
+  } else {
+    // 当前环境是爬虫、或当前浏览器其不兼容 IntersectionObserver API
+    // 直接加载 Disqus
+    loadDisqus();
+  }
+}, 1);
+
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
@@ -438,70 +457,70 @@ perl nikto.pl -h limbopro.xyz -o index.htm -C all #扫码并生成index.htm 供�
 <h5 class="widget-title m-t-none text-md">热门文章</h5>
 <ul class="list-group no-bg no-borders pull-in m-b-none">
 <li class="list-group-item">
-<a href="615.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/5.jpg" class="img-40px normal-shadow img-square"></a>
+<a href="615.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/3.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
 <h4 class="h5 l-h text-second"> <a href="615.html" title="极游丨4K秒开丨3.5元起丨v2Ray机场推荐及简易配置教程"> 极游丨4K秒开丨3.5元起丨v2Ray机场推荐及简易配置教程 </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">68883</span>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">71429</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="2561.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/10.jpg" class="img-40px normal-shadow img-square"></a>
+<a href="2561.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/8.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
 <h4 class="h5 l-h text-second"> <a href="2561.html" title="Rules / 分流/去广告规则：Surge / Shadowrocket / Quantumult/ Quantumult X  及详细配置步骤教程（萌新小白版本）"> Rules / 分流/去广告规则：Surge / Shadowrocket / Quantumult/ Quantumult X 及详细配置步骤教程（萌新小白版本） </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">30933</span>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">33128</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="1423.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/2.jpg" class="img-40px normal-shadow img-square"></a>
+<a href="1423.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/9.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
 <h4 class="h5 l-h text-second"> <a href="1423.html" title="卡车家族丨1080P秒开丨折后6.4元/月起丨50+节点丨SSR机场推荐（学生党首选）"> 卡车家族丨1080P秒开丨折后6.4元/月起丨50+节点丨SSR机场推荐（学生党首选） </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">24019</span>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">25016</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="2787.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/1.jpg" class="img-40px normal-shadow img-square"></a>
+<a href="2787.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/6.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h text-second"> <a href="2787.html" title="高速内网IPLC专线机场丨4K秒开丨14.99元/月起丨京港/沪港/深港/深新/沪美线路（贵在稳定）"> 高速内网IPLC专线机场丨4K秒开丨14.99元/月起丨京港/沪港/深港/深新/沪美线路（贵在稳定） </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">21273</span>
+<h4 class="h5 l-h text-second"> <a href="2787.html" title="高速内网IPLC专线机场丨4K秒开丨14.99元/月起丨京港/沪港/深港/深新/沪美线路（厘米云）"> 高速内网IPLC专线机场丨4K秒开丨14.99元/月起丨京港/沪港/深港/深新/沪美线路（厘米云） </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">22478</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="969.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/6.jpg" class="img-40px normal-shadow img-square"></a>
+<a href="969.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/4.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
 <h4 class="h5 l-h text-second"> <a href="969.html" title="在中国看Netflix丨HBO丨Hulu丨Amazon Prime Video丨Apple TV丨或其他任意剧集。"> 在中国看Netflix丨HBO丨Hulu丨Amazon Prime Video丨Apple TV丨或其他任意剧集。 </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">19541</span>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">20289</span>
 </span>
 </small></div></li> </ul>
 </div>
 
 <div id="widget-tabs-4-random" class="tab-pane fade wrapper-md no-js-show" role="tabpanel">
 <h5 class="widget-title m-t-none text-md">随机文章</h5>
-<ul class="list-group no-bg no-borders pull-in">
+ <ul class="list-group no-bg no-borders pull-in">
 <li class="list-group-item">
-<a href="2027.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/5.jpg" class="img-40px normal-shadow img-square"></a>
+<a href="1201.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/3.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h text-second"> <a href="2027.html" title="Nikto丨网页服务器漏洞扫描器（开源的（GPL））"> Nikto丨网页服务器漏洞扫描器（开源的（GPL）） </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">1267</span>
+<h4 class="h5 l-h text-second"> <a href="1201.html" title="百度网盘直链下载助手（一个脚本搞定百度网盘下载）&amp;3个方法解决百度网盘限速"> 百度网盘直链下载助手（一个脚本搞定百度网盘下载）&amp;3个方法解决百度网盘限速 </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">3977</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="1567.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/10.jpg" class="img-40px normal-shadow img-square"></a>
+<a href="673.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/8.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h text-second"> <a href="1567.html" title="春潮丨TG春潮频道上新。"> 春潮丨TG春潮频道上新。 </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">3496</span>
+<h4 class="h5 l-h text-second"> <a href="673.html" title="大佬吹牛群"> 大佬吹牛群 </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">4189</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="373.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/2.jpg" class="img-40px normal-shadow img-square"></a>
+<a href="969.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/9.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h text-second"> <a href="373.html" title="毒药测速DuyaoSS吃瓜吹水群"> 毒药测速DuyaoSS吃瓜吹水群 </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">3710</span>
+<h4 class="h5 l-h text-second"> <a href="969.html" title="在中国看Netflix丨HBO丨Hulu丨Amazon Prime Video丨Apple TV丨或其他任意剧集。"> 在中国看Netflix丨HBO丨Hulu丨Amazon Prime Video丨Apple TV丨或其他任意剧集。 </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">20289</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="1083.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/1.jpg" class="img-40px normal-shadow img-square"></a>
+<a href="2561.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/6.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h text-second"> <a href="1083.html" title="Need 4 speed丨02期"> Need 4 speed丨02期 </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">3442</span>
+<h4 class="h5 l-h text-second"> <a href="2561.html" title="Rules / 分流/去广告规则：Surge / Shadowrocket / Quantumult/ Quantumult X  及详细配置步骤教程（萌新小白版本）"> Rules / 分流/去广告规则：Surge / Shadowrocket / Quantumult/ Quantumult X 及详细配置步骤教程（萌新小白版本） </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">33128</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="2491.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/6.jpg" class="img-40px normal-shadow img-square"></a>
+<a href="2695.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/4.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h text-second"> <a href="2491.html" title="关于三吉彩花的一切丨周杰伦《说好不哭》MV的女主"> 关于三吉彩花的一切丨周杰伦《说好不哭》MV的女主 </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">2601</span>
+<h4 class="h5 l-h text-second"> <a href="2695.html" title="杀人回忆 살인의 추억 (2003)"> 杀人回忆 살인의 추억 (2003) </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">1617</span>
 </span>
 </small></div></li> </ul>
 </div>
@@ -512,21 +531,21 @@ perl nikto.pl -h limbopro.xyz -o index.htm -C all #扫码并生成index.htm 供�
 <h5 class="widget-title m-t-none text-md">博客信息</h5>
 <ul class="list-group box-shadow-wrap-normal">
 <li class="list-group-item text-second"><span class="blog-info-icons"> <i data-feather="award"></i></span> <span class="badge
-           pull-right">222</span>文章数目</li>
+           pull-right">231</span>文章数目</li>
 <li class="list-group-item text-second"> <span class="blog-info-icons"> <i data-feather="message-circle"></i></span>
 <span class="badge
            pull-right">5</span>评论数目</li>
 <li class="list-group-item text-second"><span class="blog-info-icons"> <i data-feather="calendar"></i></span>
 <span class="badge
-           pull-right">227天</span>运行天数</li>
+           pull-right">237天</span>运行天数</li>
 <li class="list-group-item text-second"><span class="blog-info-icons"> <i data-feather="activity"></i></span> <span class="badge
-           pull-right">15 小时前</span>最后活动</li>
+           pull-right">3 天前</span>最后活动</li>
 </ul>
 </section>
 
 <section id="a_d_sidebar" class="widget widget_categories wrapper-md clear">
 <h5 class="widget-title m-t-none text-md">广告</h5>
-<script data-ad-client="ca-pub-4573757070775891" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" type="0e9ebdfde0f7d6fba6e4a9d6-text/javascript"></script> </section>
+<script data-ad-client="ca-pub-4573757070775891" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" type="7f35d98dade446bdda08024b-text/javascript"></script> </section>
 
 
 <section id="tag_cloud-2" class="widget widget_tag_cloud wrapper-md clear">
@@ -567,7 +586,7 @@ perl nikto.pl -h limbopro.xyz -o index.htm -C all #扫码并生成index.htm 供�
 unzip master.zip
 mv nikto-master nikto
 cd ./nikto/program/
-perl nikto.pl -h limbopro.xyz -o index.htm -C all #扫码并生成index.htm 供浏览器打开查看</code></pre><h2>Nikto扫描结果示例</h2><pre><code><a href="../cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="dcaeb3b3a89cb0b3bfbdb0b4b3afa8">[email&#160;protected]</a>:/nikto-master/program# perl nikto.pl -h limbopro.xyz -o index.htm -C all
+perl nikto.pl -h limbopro.xyz -o index.htm -C all #扫码并生成index.htm 供浏览器打开查看</code></pre><h2>Nikto扫描结果示例</h2><pre><code><a href="../cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="63110c0c17230f0c00020f0b0c1017">[email&#160;protected]</a>:/nikto-master/program# perl nikto.pl -h limbopro.xyz -o index.htm -C all
 - Nikto v2.1.6
 ---------------------------------------------------------------------------
 + Target IP:          104.24.123.187
@@ -583,10 +602,10 @@ perl nikto.pl -h limbopro.xyz -o index.htm -C all #扫码并生成index.htm 供�
 + 26393 requests: 0 error(s) and 2 item(s) reported on remote host
 + End Time:           2019-08-12 13:32:27 (GMT8) (138 seconds)
 ---------------------------------------------------------------------------
-+ 1 host(s) tested</code></pre><h2>附注</h2><p>Nikto：<span class="external-link"><a href="https://zh.wikipedia.org/wiki/Nikto" target="_blank">Wikipedia<i data-feather='external-link'></i></a></span><br>Nikto：<span class="external-link"><a href="https://github.com/sullo/nikto" target="_blank">GitHub<i data-feather='external-link'></i></a></span><br>Nikto：<span class="external-link"><a href="https://github.com/sullo/nikto/archive/master.zip" target="_blank">Release<i data-feather='external-link'></i></a></span><br>Nikto：<span class="external-link"><a href="https://cirt.net/Nikto2" target="_blank">https://cirt.net/Nikto2<i data-feather='external-link'></i></a></span><br><span class="external-link"><a href="https://kifarunix.com/how-to-install-and-use-nikto-web-scanner-on-ubuntu-18-04/" target="_blank">How to Install and Use Nikto Web Scanner on Ubuntu 18.04<i data-feather='external-link'></i></a></span></p><hr class="content-copyright" style="margin-top:50px" /><blockquote class="content-copyright" style="font-style:normal"><p class="content-copyright">版权属于：<a class="content-copyright" target="_blank" href="https://t.me/limboprobot">http://t.me/limboprobot</a> TG 毒奶博主 Julia； <br>联系我们： <a class="content-copyright" target="_blank" href="../6.html">https://limbopro.xyz/6.html</a> 投稿或反馈或转载文章或交换友链； <br>电报频道： <a class="content-copyright" target="_blank" href="https://t.me/limboprossr">https://t.me/limboprossr</a> 及时收讯不失联； <br>必备技能： <a class="content-copyright" target="_blank" href="2910.html">https://limbopro.xyz/archives/2910.html</a> 如何访问任意被墙域名； <br>网站镜像： <a class="content-copyright" target="_blank" href="https://limbopro.github.io">https://limbopro.github.io</a> 每月更新；</p><p class="content-copyright">本文链接：<a class="content-copyright" href="2027.html">https://limbopro.xyz/archives/2027.html</a></p><p class="content-copyright">版权声明：<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本文采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a> 进行许可，转载请附上原文出处链接和本声明。</p></blockquote>
++ 1 host(s) tested</code></pre><h2>附注</h2><p>Nikto：<span class="external-link"><a href="https://zh.wikipedia.org/wiki/Nikto" target="_blank">Wikipedia<i data-feather='external-link'></i></a></span><br>Nikto：<span class="external-link"><a href="https://github.com/sullo/nikto" target="_blank">GitHub<i data-feather='external-link'></i></a></span><br>Nikto：<span class="external-link"><a href="https://github.com/sullo/nikto/archive/master.zip" target="_blank">Release<i data-feather='external-link'></i></a></span><br>Nikto：<span class="external-link"><a href="https://cirt.net/Nikto2" target="_blank">https://cirt.net/Nikto2<i data-feather='external-link'></i></a></span><br><span class="external-link"><a href="https://kifarunix.com/how-to-install-and-use-nikto-web-scanner-on-ubuntu-18-04/" target="_blank">How to Install and Use Nikto Web Scanner on Ubuntu 18.04<i data-feather='external-link'></i></a></span></p><hr class="content-copyright" style="margin-top:50px" /><blockquote class="content-copyright" style="font-style:normal"><p class="content-copyright">版权属于：<a class="content-copyright" target="_blank" href="https://t.me/limboprobot">毒奶博主</a><br>联系我们： <a class="content-copyright" target="_blank" href="../6.html">https://limbopro.xyz/6.html</a> <br>电报频道： <a class="content-copyright" target="_blank" href="https://t.me/limboprossr">https://t.me/limboprossr</a><br>必备技能： <a class="content-copyright" target="_blank" href="2910.html">https://limbopro.xyz/archives/2910.html</a><br>网站镜像： <a class="content-copyright" target="_blank" href="https://limbopro.github.io">https://limbopro.github.io</a></p><p class="content-copyright">本文链接：<a class="content-copyright" href="2027.html">https://limbopro.xyz/archives/2027.html</a></p><p class="content-copyright">版权声明：<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本文采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0 许可协议</a> ，转载和引用时请务必遵守。</p></blockquote>
 </div>
 </div>
-<script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="0e9ebdfde0f7d6fba6e4a9d6-text/javascript">
+<script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="7f35d98dade446bdda08024b-text/javascript">
         try {
             $("[data-morphing]").fancyMorph({
                 hash : 'morphing'
@@ -597,7 +616,7 @@ perl nikto.pl -h limbopro.xyz -o index.htm -C all #扫码并生成index.htm 供�
 
             </script>
 
-<script type="0e9ebdfde0f7d6fba6e4a9d6-text/javascript">
+<script type="7f35d98dade446bdda08024b-text/javascript">
 (function () {
     window.TypechoComment = {
         dom : function (id) {
@@ -669,7 +688,7 @@ perl nikto.pl -h limbopro.xyz -o index.htm -C all #扫码并生成index.htm 供�
     };
 })();
 </script>
-<script type="0e9ebdfde0f7d6fba6e4a9d6-text/javascript">
+<script type="7f35d98dade446bdda08024b-text/javascript">
 var registCommentEvent = function() {
     var event = document.addEventListener ? {
         add: 'addEventListener',
@@ -694,40 +713,32 @@ var registCommentEvent = function() {
                         input.type = 'hidden';
                         input.name = '_';
                             input.value = (function () {
-    var _Ack17Vk = 'r7'//'r7'
-+'0'//'zH'
-+//'rc'
-'f'+''///*'WIq'*/'WIq'
-+//'h6'
-'1c'+//'vq'
-'4'+'143'//'Pyy'
-+//'4gK'
-'ad'+//'m'
-'1'+//'O'
-'9'+'c'//'C8L'
-+//'up'
-'2'+'7a'//'bkY'
-+/* 'F'//'F' */''+//'J'
-'cd'+//'DV'
-'DV'+'0'//'Exe'
-+'5'//'6y'
-+//'s2'
-'s2'+'I'//'I'
-+'d'//'G4N'
-+'4'//'m'
-+//'UvQ'
-'0d'+''///*'X'*/'X'
-+//'z'
-'6'+'5'//'tqs'
-+'cd7'//'Ta'
-+'f45'//'DlT'
-, _slz6 = [[0,2],[18,20],[20,22],[20,21]];
+    var _UGnBOM = //'q'
+'0f1'+'c41'//'e'
++//'lXx'
+'43'+//'lS3'
+'ad'+//'J'
+'1'+'9c2'//'un'
++//'l'
+'7'+/* 'nFQ'//'nFQ' */''+//'Cg'
+'Cg'+//'jp9'
+'acd'+//'xmb'
+'05'+/* 'J7'//'J7' */''+'d'//'6w'
++//'S'
+'40'+//'NF'
+'d'+'6'//'hEh'
++//'IwV'
+'5'+/* '8'//'8' */''+'cd'//'KCG'
++/* 'i'//'i' */''+//'Be'
+'7'+'f'//'v'
++//'R'
+'45', _1Hic6 = [[15,17]];
     
-    for (var i = 0; i < _slz6.length; i ++) {
-        _Ack17Vk = _Ack17Vk.substring(0, _slz6[i][0]) + _Ack17Vk.substring(_slz6[i][1]);
+    for (var i = 0; i < _1Hic6.length; i ++) {
+        _UGnBOM = _UGnBOM.substring(0, _1Hic6[i][0]) + _UGnBOM.substring(_1Hic6[i][1]);
     }
 
-    return _Ack17Vk;
+    return _UGnBOM;
 })();
                     
                         f.appendChild(input);
@@ -751,11 +762,11 @@ var registCommentEvent = function() {
 <footer id="footer" class="app-footer" role="footer">
 <div class="wrapper bg-light">
 <span class="pull-right hidden-xs text-ellipsis">
-本站总访问量 3813694961 次
-丨3人在线丨
+3813752769
+丨1人在线丨
 Powered by <a target="_blank" href="http://www.typecho.org">Typecho</a>&nbsp;|&nbsp;Theme by <a target="_blank" href="https://www.ihewro.com/archives/489/">handsome</a>
 </span>
-<span class="text-ellipsis">&copy;&nbsp;2019 <a target="blank" href="../index.html">毒奶</a>.inc Copyright&nbsp;
+<span class="text-ellipsis">&copy;&nbsp;2020 <a target="blank" href="../index.html">毒奶</a>.inc Copyright&nbsp;
 </span>
 </div>
 
@@ -836,14 +847,14 @@ Powered by <a target="_blank" href="http://www.typecho.org">Typecho</a>&nbsp;|&n
 		-moz-transform: scale(1.4);	/* Firefox */
 	}
 </style>
-<script type="0e9ebdfde0f7d6fba6e4a9d6-text/javascript">
+<script type="7f35d98dade446bdda08024b-text/javascript">
 	document.addEventListener('DOMContentLoaded', function(){
 		var imgs = document.querySelectorAll('img');
 		Array.prototype.forEach.call(imgs, function(el, i) {
 			if (el.tabIndex <= 0) el.tabIndex = 100;
 		});
 	});
-</script><script type="0e9ebdfde0f7d6fba6e4a9d6-text/javascript">
+</script><script type="7f35d98dade446bdda08024b-text/javascript">
 	(function(){
 		var pres = document.querySelectorAll('pre');
 		var lineNumberClassName = 'line-numbers';
@@ -852,15 +863,15 @@ Powered by <a target="_blank" href="http://www.typecho.org">Typecho</a>&nbsp;|&n
 		});
 	})();
 </script>
-<script type="0e9ebdfde0f7d6fba6e4a9d6-text/javascript" src="../usr/plugins/CodePrettify/static/clipboard.min.js"></script>
-<script type="0e9ebdfde0f7d6fba6e4a9d6-text/javascript" src="../usr/plugins/CodePrettify/static/prism.js"></script>
-<script type="0e9ebdfde0f7d6fba6e4a9d6-text/javascript">
+<script type="7f35d98dade446bdda08024b-text/javascript" src="../usr/plugins/CodePrettify/static/clipboard.min.js"></script>
+<script type="7f35d98dade446bdda08024b-text/javascript" src="../usr/plugins/CodePrettify/static/prism.js"></script>
+<script type="7f35d98dade446bdda08024b-text/javascript">
 SearchConfig = {
     url : "https://limbopro.xyz/usr/plugins/Handsome/cache/search.json"
 }
 </script>
 
-<script type="0e9ebdfde0f7d6fba6e4a9d6-text/javascript">
+<script type="7f35d98dade446bdda08024b-text/javascript">
         window['LocalConst'] = {
             COMMENT_NAME_INFO: '必须填写昵称或姓名',
             COMMENT_EMAIL_INFO: '必须填写电子邮箱地址',
@@ -892,7 +903,7 @@ SearchConfig = {
             COMMENT_SYSTEM_OTHERS: '2',
             EMOJI: '表情',
             IS_PJAX: '1',
-            IS_PAJX_COMMENT: '1',
+            IS_PAJX_COMMENT: '',
             BASE_SCRIPT_URL: 'https://limbopro.xyz/usr/themes/handsome/',
             BLOG_URL: 'https://limbopro.xyz/',
             BLOG_URL_PHP: 'https://limbopro.xyz/',
@@ -932,18 +943,18 @@ SearchConfig = {
 
     </script>
 
-<script src="../usr/themes/handsome/assets/libs/bootstrap/js/bootstrap.min.js" type="0e9ebdfde0f7d6fba6e4a9d6-text/javascript"></script>
-<script src="../usr/themes/handsome/assets/js/features/jquery.pjax.min.js" type="0e9ebdfde0f7d6fba6e4a9d6-text/javascript"></script>
-<script type="0e9ebdfde0f7d6fba6e4a9d6-text/javascript">
+<script src="../usr/themes/handsome/assets/libs/bootstrap/js/bootstrap.min.js" type="7f35d98dade446bdda08024b-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/js/features/jquery.pjax.min.js" type="7f35d98dade446bdda08024b-text/javascript"></script>
+<script type="7f35d98dade446bdda08024b-text/javascript">
         $(document).pjax('a[href^="https://limbopro.xyz/"]:not(a[target="_blank"], a[no-pjax])', {
             container: '#content',
             fragment: '#content',
             timeout: 8000
         }).on('pjax:send',function () {
-                        $('#loading').removeClass('hide');
                     }).on('pjax:click', function() {
 
             window['Page'].doPJAXClickAction();
+                        Pace.restart();
             
                         $('body,html').animate({scrollTop:0},100);
             
@@ -953,31 +964,41 @@ SearchConfig = {
             if ($(".post-position").length > 0){
                 window['Page'].doPJAXCompletePostAction();
             }
-                                    $('#loading').addClass('hide');
+                                    //Pace.stop();
             
-                                    MathJax.Hub.Queue(["Typeset",MathJax.Hub,"body"]);
-            
+                        
 
         })
     </script>
 
 
-<script src="../usr/themes/handsome/assets/js/features/feather.min.js?v=6.0.020191205" type="0e9ebdfde0f7d6fba6e4a9d6-text/javascript"></script>
+<script type="7f35d98dade446bdda08024b-text/javascript">
+        window.paceOptions = {
+            ajax: {
+                ignoreURLs: ['/.*Get.php.*/']
+            },//忽视音乐加载的ajax请求
+            restartOnPushState: false,
+            startOnPageLoad: false,
+            restartOnRequestAfter: false
+        };
+    </script>
+<script src="../usr/themes/handsome/assets/js/features/pace.min.js" type="7f35d98dade446bdda08024b-text/javascript"></script>
+<link href="../usr/themes/handsome/assets/css/features/pjax/pace-theme-minimal.min.css" rel="stylesheet">
+<style>
+                        .pace .pace-progress{
+    background: #000000;
+}        </style>
+<script src="../usr/themes/handsome/assets/js/features/feather.min.js?v=6.0.020191205" type="7f35d98dade446bdda08024b-text/javascript"></script>
 
-<script src="https://cdn.staticfile.org/mathjax/2.7.0/MathJax.js" type="0e9ebdfde0f7d6fba6e4a9d6-text/javascript"></script>
-<script src="https://cdn.staticfile.org/mathjax/2.7.0/config/TeX-AMS-MML_SVG.js" type="0e9ebdfde0f7d6fba6e4a9d6-text/javascript"></script>
-
-<script src="../usr/themes/handsome/assets/js/features/jquery.fancybox.min.js?v=6.0.020191205" type="0e9ebdfde0f7d6fba6e4a9d6-text/javascript"></script>
-<script src="../usr/themes/handsome/assets/js/features/easypiechart.min.js?v=6.0.020191205" type="0e9ebdfde0f7d6fba6e4a9d6-text/javascript"></script>
-
-<script src="../usr/themes/handsome/assets/js/features/html2canvas.min.js" type="0e9ebdfde0f7d6fba6e4a9d6-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/js/features/jquery.fancybox.min.js?v=6.0.020191205" type="7f35d98dade446bdda08024b-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/js/features/easypiechart.min.js?v=6.0.020191205" type="7f35d98dade446bdda08024b-text/javascript"></script>
 
 
-<script src="../usr/themes/handsome/assets/js/function.min.js?v=6.0.020191205" type="0e9ebdfde0f7d6fba6e4a9d6-text/javascript"></script>
-<script src="../usr/themes/handsome/assets/js/core.min.js?v=6.0.020191205" type="0e9ebdfde0f7d6fba6e4a9d6-text/javascript"></script>
-<script src="../usr/themes/handsome/assets/js/features/setting.min.js?v=6.0.020191205" type="0e9ebdfde0f7d6fba6e4a9d6-text/javascript"></script>
-<script type="0e9ebdfde0f7d6fba6e4a9d6-text/javascript">
+<script src="../usr/themes/handsome/assets/js/function.min.js?v=6.0.020191205" type="7f35d98dade446bdda08024b-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/js/core.min.js?v=6.0.020191205" type="7f35d98dade446bdda08024b-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/js/features/setting.min.js?v=6.0.020191205" type="7f35d98dade446bdda08024b-text/javascript"></script>
+<script type="7f35d98dade446bdda08024b-text/javascript">
             </script>
-<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="0e9ebdfde0f7d6fba6e4a9d6-|49" defer=""></script></body>
+<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="7f35d98dade446bdda08024b-|49" defer=""></script></body>
 </html>
 

@@ -1,8 +1,5 @@
-23/Dec/2019/02:50 all blacklist updates that in history
+26/Dec/2019/15:45 all blacklist updates that in history
 
 
-23/Dec/2019/02:50 cc blacklist updates that more than 600times/5mins 
+26/Dec/2019/15:45 cc blacklist updates that more than 600times/5mins 
 
-deny 172.105.237.185;
-deny 186.101.74.20;
-deny 45.63.54.111;
