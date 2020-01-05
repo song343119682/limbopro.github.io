@@ -9,6 +9,7 @@ xmlns:dc="http://purl.org/dc/elements/1.1/">
 <description>这样用软件，事半功倍。</description>
 <items>
 <rdf:Seq>
+<rdf:li resource="https://limbopro.xyz/archives/nmap.html"/>
 <rdf:li resource="https://limbopro.xyz/archives/5674.html"/>
 <rdf:li resource="https://limbopro.xyz/archives/4710.html"/>
 <rdf:li resource="https://limbopro.xyz/archives/adguard.html"/>
@@ -18,10 +19,15 @@ xmlns:dc="http://purl.org/dc/elements/1.1/">
 <rdf:li resource="https://limbopro.xyz/archives/3629.html"/>
 <rdf:li resource="https://limbopro.xyz/archives/3235.html"/>
 <rdf:li resource="https://limbopro.xyz/archives/tgbot.html"/>
-<rdf:li resource="https://limbopro.xyz/archives/2725.html"/>
 </rdf:Seq>
 </items>
 </channel>
+<item rdf:about="https://limbopro.xyz/archives/nmap.html">
+<title>Nmap丨暗黑互联网扫描器丨IPv4端口扫描</title>
+<link>https://limbopro.xyz/archives/nmap.html</link>
+<dc:date>2020-01-03T14:03:00+08:00</dc:date>
+<description>主理人说为了安全，给你的网站套个CDN（例如 Cloudflare），将源站服务器隐藏在其后；CensysCensys 可以看成是前端集成（非实时），为用户提供数据索引支持；而它背后使用的工具正是自己开发的ZMap（比NMap快，号称一个小时扫描整个互联网IPv4地址；）我目前在用Nmap，慢却精。不久前，Censys域名查询结果提供了域名的排名信息（Alexa Rank）；用处及用法Censys 提供三种类型的查询：模式备注IPv4 HostsIP查询Websites域名查询Certificates证书查询*Censys 是无时无刻不在扫描联网设备的；每次扫描都会记录到数据库以被后期索引取出分析；所以，用Censys可以查到域名下有多少子域名及其对应服务器IP（如果DNS解析时没有套CDN，则源站服务器有很大机会被发现并记录。）ZMap译自英文-ZMap是一种免费的开放源代码安全扫描器，它是作为Nmap的更快替代品而开发的。ZMap专为信息安全研究而设计，可用于白帽子和黑帽子的目的。该工具能够发现漏洞及其影响，并检测受影响的物联网设备。ZMap使用每秒1 GB的网络带宽，可以在一个端口上一个小时内扫描整个IPv4地址空间。 维基百科（英文)ZMap安装OS Debian and Ubuntusudo apt install zmapFedora, CentOS, and RHELsudo yum install zmapGentoosudo emerge zmapmacOS (using Homebrew)brew install zmapArch Linuxsudo pacman -S zmapInstructions on building ZMap from source can be found in INSTALL.UsageA guide to using ZMap is found in our GitHub Wiki.NMapNmap是一款用于网路发现和安全审计的网路安全工具，它是自由软体。软体名字Nmap是Network Mapper的简称。通常情况下，Nmap用于：检测目标主机是否在线、端口开放情况、侦测运行的服务类型及版本信息、侦测操作系统与设备类型等信息。 它是网络管理员必用的软件之一，用以评估网络系统安全。Nmap 是不少黑客及脚本小子爱用的工具 。系统管理员可以利用Nmap来探测工作环境中未经批准使用的服务器，黑客通常会利用Nmap来搜集目标电脑的网络设定，从而计划攻击的方法。Nmap通常用在信息搜集阶段，用于搜集目标机主机的基本状态信息。扫描结果可以作为漏洞扫描、漏洞利用和权限提升阶段的输入。例如，业界流行的漏洞扫描工具Nessus与漏洞利用工具Metasploit都支持导入Nmap的XML格式结果，而Metasploit框架内也集成了Nmap工具（支持Metasploit直接扫描）。维基百科Nmap 基本语法nmap [ &lt;扫描类型&gt; ...] [ &lt;选项&gt; ] { &lt;扫描目标说明&gt; }全面进攻性扫描（包括各种主机发现、端口扫描、版本扫描、OS扫描及默认脚本扫描）nmap -A -v target_ipPing扫描nmap -sn -v target_ip快速端口扫描nmap -F -v target_ip版本扫描nmap -sV -v target_ip 操作系统扫描nmap -O -v target_ip*Nmap 常被跟评估系统漏洞软件Nessus混为一谈。Nmap 以隐秘的手法，避开闯入检测系统的监视，并尽可能不影响目标系统的日常操作。联系主理人1.关注频道 https://t.me/limboprossr 不失联；2.毒奶粉们（我管我的Fans）可联系 TG机器人 或发送 邮件 获取帮助；3.或点击本页面右下角的聊天按钮联系；</description>
+</item>
 <item rdf:about="https://limbopro.xyz/archives/5674.html">
 <title>Raining.fm / 小睡眠丨助眠神器 App（白噪音/ASMR）</title>
 <link>https://limbopro.xyz/archives/5674.html</link>
@@ -98,11 +104,5 @@ enable = true然后点击右上角 – 保存；Shadowrocket Tiktok 换区操作
 <link>https://limbopro.xyz/archives/tgbot.html</link>
 <dc:date>2019-09-29T17:33:00+08:00</dc:date>
 <description>关于TelegramTelegram是一个跨平台的即时通信软件，它的客户端是自由及开放源代码软件，但是它的服务器是专有软件。用户可以相互交换加密与自毁消息，发送照片、影片等所有类型文件。官方提供手机版、桌面版和网页版等多种平台客户端；同时官方开放应用程序接口，因此拥有许多第三方的客户端可供选择，其中多款内置中文。via 维基百科[...]</description>
-</item>
-<item rdf:about="https://limbopro.xyz/archives/2725.html">
-<title>什么值得下丨iOS/Android/Mac/Windows/Linux（限免应用/精选/好用/值得推荐）</title>
-<link>https://limbopro.xyz/archives/2725.html</link>
-<dc:date>2019-09-20T16:34:00+08:00</dc:date>
-<description>应用在精不在多，限免，好用，小众都在这里。本文隶属分类：软件百科，这里有很多实用的软件，网站，技巧推荐；[...]</description>
 </item>
 </rdf:RDF>
