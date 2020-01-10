@@ -79,18 +79,18 @@
 	color: #999;
 }    </style>
 
-<script src="../usr/themes/handsome/assets/libs/jquery/jquery.min.js" type="53489bb41a5f26ae246821a7-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/libs/jquery/jquery.min.js" type="f1277807799d6ef9e25a90fb-text/javascript"></script>
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140019039-1" type="53489bb41a5f26ae246821a7-text/javascript"></script>
-<script type="53489bb41a5f26ae246821a7-text/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140019039-1" type="f1277807799d6ef9e25a90fb-text/javascript"></script>
+<script type="f1277807799d6ef9e25a90fb-text/javascript">
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'UA-140019039-1');
 </script>
-<script src="../usr/themes/handsome/assets/js/features/fancyMorph.min.js" type="53489bb41a5f26ae246821a7-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/js/features/fancyMorph.min.js" type="f1277807799d6ef9e25a90fb-text/javascript"></script>
 </head>
 <body id="body" class="fix-padding">
 
@@ -183,7 +183,7 @@
 <strong class="font-bold text-lt">毒奶</strong>
 <b class="caret"></b>
 </span>
-<span class="text-muted text-xs block"><script type="53489bb41a5f26ae246821a7-application/javascript"> function getip(json){     document.write( json.ip); } </script> <script type="53489bb41a5f26ae246821a7-application/javascript" src="https://api.ip.sb/jsonip?callback=getip"></script><br>网上冲浪爱好者<br>业余斜杆青年<br>增长黑客<br>Attack</span>
+<span class="text-muted text-xs block"><script type="f1277807799d6ef9e25a90fb-application/javascript"> function getip(json){     document.write( json.ip); } </script> <script type="f1277807799d6ef9e25a90fb-application/javascript" src="https://api.ip.sb/jsonip?callback=getip"></script><br>网上冲浪爱好者<br>业余斜杆青年<br>增长黑客<br>Attack</span>
 </span>
 </a>
 
@@ -194,7 +194,7 @@
 <p>下午好，是时候打个盹了</p>
 </div>
 <div class="progress progress-xs m-b-none dker">
-<div class="progress-bar bg-white" data-toggle="tooltip" data-original-title="时间已经度过54.17%" style="width: 54.17%"></div>
+<div class="progress-bar bg-white" data-toggle="tooltip" data-original-title="时间已经度过58.33%" style="width: 58.33%"></div>
 </div>
 </li>
 </ul>
@@ -320,7 +320,7 @@
 
 <li class="meta-date"><span class="post-icons"><i data-feather="clock"></i></span><span class="sr-only">发布时间：</span><time class="meta-value">2019 年 07 月 26 日</time></li>
 
-<li class="meta-views"><span class="post-icons"><i data-feather="eye"></i></span><span class="meta-value">3717次浏览</span></li>
+<li class="meta-views"><span class="post-icons"><i data-feather="eye"></i></span><span class="meta-value">3718次浏览</span></li>
 
 <li class="meta-word"><span class="post-icons"><i data-feather="pen-tool"></i></span><span class="meta-value">3683字数</span></li>
 
@@ -337,7 +337,7 @@
 
 <div id="post-content" class="wrapper-lg">
 <div class="entry-content l-h-2x">
-<p><img src="../usr/uploads/2019/07/1209258953.png" alt="mod_cloudflare.png" title="mod_cloudflare.png"></p><h2>我的服务器日志为什么使用 Cloudflare 时会显示 Cloudflare 的 IP？</h2><p>当站点通过 Cloudflare 进行代理时，默认情况下，源 Web 服务器访问日志会为每个传入请求记录一个 Cloudflare IP 地址。 但是使用 mod_cloudflare 工具，您可以记录传入请求的真实 IP 地址。</p><p>*via Cloudflare <span class="external-link"><a href="https://support.cloudflare.com/hc/zh-cn/categories/200276217-%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4" target="_blank">恢复访问者 IP<i data-feather='external-link'></i></a></span>（如果你是 LAMP ，请看左边链接；）<br>*Nginx 模块 <code>--with-http_realip_module</code> <span class="external-link"><a href="https://nginx.org/en/docs/http/ngx_http_realip_module.html" target="_blank">相关说明<i data-feather='external-link'></i></a></span></p><h1>概述</h1><p>当您的网站流量路由经过 Cloudflare 时，我们充当反向代理。 这允许 Cloudflare 通过更有 效地路由数据包并缓存静态资源（图片、JavaScript、CSS 等）来加快页面加载时间。因此， 在响应请求并记录请求时，您的源 Web 服务器默认情况下会看到 Cloudflare IP 地址。</p><p>Cloudflare 会在名为 CF-Connecting-IP 的附加 HTTP 标头中添加实际的访问者 IP 地址。但是，如果您有其他依赖于真实访问者的IP 地址的应用程序，则可能会出现某些问题。</p><p>要解决此问题，您可以在源 Web 服务器中使用 <span class="external-link"><a href="https://support.cloudflare.com/hc/zh-cn/categories/200276217-%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4" target="_blank">mod_cloudflare<i data-feather='external-link'></i></a></span> 来记录真实访问者 IP。</p><h2>nginx 动态安装模块指引</h2><p><strong>查看nginx 版本及已安装的模块</strong></p><pre><code><a href="../cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="98f2edf4f1f9d8f4f7fbf9f4f0f7ebec">[email&#160;protected]</a>:/usr/local/nginx/sbin# /usr/local/nginx/sbin/nginx -V
+<p><img src="../usr/uploads/2019/07/1209258953.png" alt="mod_cloudflare.png" title="mod_cloudflare.png"></p><h2>我的服务器日志为什么使用 Cloudflare 时会显示 Cloudflare 的 IP？</h2><p>当站点通过 Cloudflare 进行代理时，默认情况下，源 Web 服务器访问日志会为每个传入请求记录一个 Cloudflare IP 地址。 但是使用 mod_cloudflare 工具，您可以记录传入请求的真实 IP 地址。</p><p>*via Cloudflare <span class="external-link"><a href="https://support.cloudflare.com/hc/zh-cn/categories/200276217-%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4" target="_blank">恢复访问者 IP<i data-feather='external-link'></i></a></span>（如果你是 LAMP ，请看左边链接；）<br>*Nginx 模块 <code>--with-http_realip_module</code> <span class="external-link"><a href="https://nginx.org/en/docs/http/ngx_http_realip_module.html" target="_blank">相关说明<i data-feather='external-link'></i></a></span></p><h1>概述</h1><p>当您的网站流量路由经过 Cloudflare 时，我们充当反向代理。 这允许 Cloudflare 通过更有 效地路由数据包并缓存静态资源（图片、JavaScript、CSS 等）来加快页面加载时间。因此， 在响应请求并记录请求时，您的源 Web 服务器默认情况下会看到 Cloudflare IP 地址。</p><p>Cloudflare 会在名为 CF-Connecting-IP 的附加 HTTP 标头中添加实际的访问者 IP 地址。但是，如果您有其他依赖于真实访问者的IP 地址的应用程序，则可能会出现某些问题。</p><p>要解决此问题，您可以在源 Web 服务器中使用 <span class="external-link"><a href="https://support.cloudflare.com/hc/zh-cn/categories/200276217-%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4" target="_blank">mod_cloudflare<i data-feather='external-link'></i></a></span> 来记录真实访问者 IP。</p><h2>nginx 动态安装模块指引</h2><p><strong>查看nginx 版本及已安装的模块</strong></p><pre><code><a href="../cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fe948b92979fbe92919d9f9296918d8a">[email&#160;protected]</a>:/usr/local/nginx/sbin# /usr/local/nginx/sbin/nginx -V
 Tengine version: Tengine/2.3.1
 nginx version: nginx/1.16.0
 built by gcc 7.4.0 (Ubuntu 7.4.0-1ubuntu1~18.04.1) 
@@ -347,7 +347,7 @@ TLS SNI support enabled
 configure arguments: --user=julia --group=julia --prefix=/usr/local/nginx --with-http_stub_status_module --with-http_ssl_module --with-http_v2_module --with-
 ... ##复制这个配置到记事本或其他地方，等下要改添加 --with-http_realip_module 模块！
 
-<a href="../cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b7ddc2dbded6f7dbd8d4d6dbdfd8c4c3">[email&#160;protected]</a>:/usr/local/nginx/sbin# </code></pre><p><strong>添加 --with-http_realip_module 模块</strong><br>我不是很记得该模块是否是默认安装， <code>--with-http_realip_module</code>；加装模块方法如下：</p><p>从上面查询结果可以知道，nginx 版本是 <code>1.16.0</code>；<br><strong>下载 nginx 源码</strong><br>以 <code>1.16.0</code> 为例：其他版本，修改下载地址的版本号为你的 nginx 版本号即可（雾）：<span class="external-link"><a href="https://nginx.org/en/download.html" target="_blank">http://nginx.org/en/download.html<i data-feather='external-link'></i></a></span> 这里查看；</p><pre><code>$ wget http://nginx.org/download/nginx-1.16.0.tar.gz ## 下载
+<a href="../cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6309160f0a02230f0c00020f0b0c1017">[email&#160;protected]</a>:/usr/local/nginx/sbin# </code></pre><p><strong>添加 --with-http_realip_module 模块</strong><br>我不是很记得该模块是否是默认安装， <code>--with-http_realip_module</code>；加装模块方法如下：</p><p>从上面查询结果可以知道，nginx 版本是 <code>1.16.0</code>；<br><strong>下载 nginx 源码</strong><br>以 <code>1.16.0</code> 为例：其他版本，修改下载地址的版本号为你的 nginx 版本号即可（雾）：<span class="external-link"><a href="https://nginx.org/en/download.html" target="_blank">http://nginx.org/en/download.html<i data-feather='external-link'></i></a></span> 这里查看；</p><pre><code>$ wget http://nginx.org/download/nginx-1.16.0.tar.gz ## 下载
 $ tar -zxvf nginx-1.16.0.tar.gz ## 解压
 $ cd nginx-1.16.0 ## 进入目录
 
@@ -414,9 +414,9 @@ index index.html index.htm index.php default.html default.htm default.php;
 </ul>
 </nav>
 
-<div id="disqus_thread"><script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="53489bb41a5f26ae246821a7-text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="adf24965-dd03-45f8-9fdf-3f1e953df737";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script></div>
+<div id="disqus_thread"><script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="f1277807799d6ef9e25a90fb-text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="adf24965-dd03-45f8-9fdf-3f1e953df737";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script></div>
 <div id="disqus_thread"></div>
-<script type="53489bb41a5f26ae246821a7-text/javascript">
+<script type="f1277807799d6ef9e25a90fb-text/javascript">
 /**
  * *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
  * *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
@@ -493,34 +493,34 @@ setTimeout(function () {
 <h5 class="widget-title m-t-none text-md">热门文章</h5>
 <ul class="list-group no-bg no-borders pull-in m-b-none">
 <li class="list-group-item">
-<a href="2561.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/5.jpg" class="img-40px normal-shadow img-square"></a>
+<a href="2561.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/1.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
 <h4 class="h5 l-h text-second"> <a href="2561.html" title="Rules / 分流/去广告规则：Surge / Shadowrocket / Quantumult/ Quantumult X  及详细配置步骤教程（萌新小白版本）"> Rules / 分流/去广告规则：Surge / Shadowrocket / Quantumult/ Quantumult X 及详细配置步骤教程（萌新小白版本） </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">35012</span>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">35023</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="1423.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/2.jpg" class="img-40px normal-shadow img-square"></a>
+<a href="1423.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/6.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
 <h4 class="h5 l-h text-second"> <a href="1423.html" title="卡车家族丨1080P秒开丨折后6.4元/月起丨50+节点丨SSR机场推荐（学生党首选）"> 卡车家族丨1080P秒开丨折后6.4元/月起丨50+节点丨SSR机场推荐（学生党首选） </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">25623</span>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">25624</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="2787.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/7.jpg" class="img-40px normal-shadow img-square"></a>
+<a href="2787.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/2.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
 <h4 class="h5 l-h text-second"> <a href="2787.html" title="高速内网IPLC专线机场丨4K秒开丨折后9.2元/月起丨京港/沪港/深港/深新/沪美线路（厘米云）"> 高速内网IPLC专线机场丨4K秒开丨折后9.2元/月起丨京港/沪港/深港/深新/沪美线路（厘米云） </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">23092</span>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">23096</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="969.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/1.jpg" class="img-40px normal-shadow img-square"></a>
+<a href="969.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/8.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
 <h4 class="h5 l-h text-second"> <a href="969.html" title="在中国看Netflix丨HBO丨Hulu丨Amazon Prime Video丨Apple TV丨或其他任意剧集。"> 在中国看Netflix丨HBO丨Hulu丨Amazon Prime Video丨Apple TV丨或其他任意剧集。 </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">20664</span>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">20665</span>
 </span>
 </small></div></li><li class="list-group-item">
 <a href="n3ro.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/10.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
 <h4 class="h5 l-h text-second"> <a href="n3ro.html" title="44+条高速内网IPLC专线丨N3RO丨折后14.4元/月起丨线路多多丨川日/川港/京港/京美/京德/沪韩/沪日/沪港/深新/深港/沪新/杭港/沪美/川日/游戏加速"> 44+条高速内网IPLC专线丨N3RO丨折后14.4元/月起丨线路多多丨川日/川港/京港/京美/京德/沪韩/沪日/沪港/深新/深港/沪新/杭港/沪美/川日/游戏加速 </a></h4>
- <small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">19370</span>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">19377</span>
 </span>
 </small></div></li> </ul>
 </div>
@@ -529,34 +529,34 @@ setTimeout(function () {
 <h5 class="widget-title m-t-none text-md">随机文章</h5>
 <ul class="list-group no-bg no-borders pull-in">
 <li class="list-group-item">
-<a href="751.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/5.jpg" class="img-40px normal-shadow img-square"></a>
+<a href="3221.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/1.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h text-second"> <a href="751.html" title=" Instagram 上面有哪些值得关注的用户？丨第03期"> Instagram 上面有哪些值得关注的用户？丨第03期 </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">3004</span>
+<h4 class="h5 l-h text-second"> <a href="3221.html" title="肖申克的救赎 The Shawshank Redemption (1994)"> 肖申克的救赎 The Shawshank Redemption (1994) </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">1003</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="2695.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/2.jpg" class="img-40px normal-shadow img-square"></a>
+<a href="1749.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/6.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h text-second"> <a href="2695.html" title="杀人回忆 살인의 추억 (2003)"> 杀人回忆 살인의 추억 (2003) </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">1643</span>
+<h4 class="h5 l-h text-second"> <a href="1749.html" title="Typecho 分类排序丨彩蛋般的存在"> Typecho 分类排序丨彩蛋般的存在 </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">2349</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="569.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/7.jpg" class="img-40px normal-shadow img-square"></a>
+<a href="1363.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/2.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h text-second"> <a href="569.html" title="Cloudflare 加速下的站点SEO优化"> Cloudflare 加速下的站点SEO优化 </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">3291</span>
+<h4 class="h5 l-h text-second"> <a href="1363.html" title="HyperDown丨PHP Markdown解析器"> HyperDown丨PHP Markdown解析器 </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">2906</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="2fa.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/1.jpg" class="img-40px normal-shadow img-square"></a>
+<a href="325.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/8.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h text-second"> <a href="2fa.html" title="Google/Microsoft 身份验证器 (Google/Microsoft Authenticator)"> Google/Microsoft 身份验证器 (Google/Microsoft Authenticator) </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">231</span>
+<h4 class="h5 l-h text-second"> <a href="325.html" title="定时重启与进程守护"> 定时重启与进程守护 </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">3294</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="385.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/10.jpg" class="img-40px normal-shadow img-square"></a>
+<a href="ssrspeed.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/10.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h text-second"> <a href="385.html" title="盐一待人，甜以待己"> 盐一待人，甜以待己 </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">3278</span>
+<h4 class="h5 l-h text-second"> <a href="ssrspeed.html" title="StairSpeedTest/SSRSpeed 机场测速之小白入门指南"> StairSpeedTest/SSRSpeed 机场测速之小白入门指南 </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">2682</span>
 </span>
 </small></div></li> </ul>
 </div>
@@ -575,13 +575,13 @@ setTimeout(function () {
 <span class="badge
            pull-right">245天</span>运行天数</li>
 <li class="list-group-item text-second"><span class="blog-info-icons"> <i data-feather="activity"></i></span> <span class="badge
-           pull-right">2 小时前</span>最后活动</li>
+           pull-right">3 小时前</span>最后活动</li>
 </ul>
 </section>
 
 <section id="a_d_sidebar" class="widget widget_categories wrapper-md clear">
 <h5 class="widget-title m-t-none text-md">广告</h5>
-<script data-ad-client="ca-pub-4573757070775891" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" type="53489bb41a5f26ae246821a7-text/javascript"></script> </section>
+<script data-ad-client="ca-pub-4573757070775891" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" type="f1277807799d6ef9e25a90fb-text/javascript"></script> </section>
 
 
 <section id="tag_cloud-2" class="widget widget_tag_cloud wrapper-md clear">
@@ -618,7 +618,7 @@ setTimeout(function () {
 <div class="page">
 <h1 class="title">Cloudflare 下 Nginx 获取用户真实IP 地址</h1>
 <div class="metadata singleline"><a href="1481.html#" rel="author" class="byline">毒奶</a>&nbsp;•&nbsp;<span class="delimiter"></span><time class="date">2019 年 07 月 26 日</time></div>
- <p><img src="../usr/uploads/2019/07/1209258953.png" alt="mod_cloudflare.png" title="mod_cloudflare.png"></p><h2>我的服务器日志为什么使用 Cloudflare 时会显示 Cloudflare 的 IP？</h2><p>当站点通过 Cloudflare 进行代理时，默认情况下，源 Web 服务器访问日志会为每个传入请求记录一个 Cloudflare IP 地址。 但是使用 mod_cloudflare 工具，您可以记录传入请求的真实 IP 地址。</p><p>*via Cloudflare <span class="external-link"><a href="https://support.cloudflare.com/hc/zh-cn/categories/200276217-%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4" target="_blank">恢复访问者 IP<i data-feather='external-link'></i></a></span>（如果你是 LAMP ，请看左边链接；）<br>*Nginx 模块 <code>--with-http_realip_module</code> <span class="external-link"><a href="https://nginx.org/en/docs/http/ngx_http_realip_module.html" target="_blank">相关说明<i data-feather='external-link'></i></a></span></p><h1>概述</h1><p>当您的网站流量路由经过 Cloudflare 时，我们充当反向代理。 这允许 Cloudflare 通过更有 效地路由数据包并缓存静态资源（图片、JavaScript、CSS 等）来加快页面加载时间。因此， 在响应请求并记录请求时，您的源 Web 服务器默认情况下会看到 Cloudflare IP 地址。</p><p>Cloudflare 会在名为 CF-Connecting-IP 的附加 HTTP 标头中添加实际的访问者 IP 地址。但是，如果您有其他依赖于真实访问者的IP 地址的应用程序，则可能会出现某些问题。</p><p>要解决此问题，您可以在源 Web 服务器中使用 <span class="external-link"><a href="https://support.cloudflare.com/hc/zh-cn/categories/200276217-%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4" target="_blank">mod_cloudflare<i data-feather='external-link'></i></a></span> 来记录真实访问者 IP。</p><h2>nginx 动态安装模块指引</h2><p><strong>查看nginx 版本及已安装的模块</strong></p><pre><code><a href="../cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="610b140d0800210d0e02000d090e1215">[email&#160;protected]</a>:/usr/local/nginx/sbin# /usr/local/nginx/sbin/nginx -V
+<p><img src="../usr/uploads/2019/07/1209258953.png" alt="mod_cloudflare.png" title="mod_cloudflare.png"></p><h2>我的服务器日志为什么使用 Cloudflare 时会显示 Cloudflare 的 IP？</h2><p>当站点通过 Cloudflare 进行代理时，默认情况下，源 Web 服务器访问日志会为每个传入请求记录一个 Cloudflare IP 地址。 但是使用 mod_cloudflare 工具，您可以记录传入请求的真实 IP 地址。</p><p>*via Cloudflare <span class="external-link"><a href="https://support.cloudflare.com/hc/zh-cn/categories/200276217-%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4" target="_blank">恢复访问者 IP<i data-feather='external-link'></i></a></span>（如果你是 LAMP ，请看左边链接；）<br>*Nginx 模块 <code>--with-http_realip_module</code> <span class="external-link"><a href="https://nginx.org/en/docs/http/ngx_http_realip_module.html" target="_blank">相关说明<i data-feather='external-link'></i></a></span></p><h1>概述</h1><p>当您的网站流量路由经过 Cloudflare 时，我们充当反向代理。 这允许 Cloudflare 通过更有 效地路由数据包并缓存静态资源（图片、JavaScript、CSS 等）来加快页面加载时间。因此， 在响应请求并记录请求时，您的源 Web 服务器默认情况下会看到 Cloudflare IP 地址。</p><p>Cloudflare 会在名为 CF-Connecting-IP 的附加 HTTP 标头中添加实际的访问者 IP 地址。但是，如果您有其他依赖于真实访问者的IP 地址的应用程序，则可能会出现某些问题。</p><p>要解决此问题，您可以在源 Web 服务器中使用 <span class="external-link"><a href="https://support.cloudflare.com/hc/zh-cn/categories/200276217-%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4" target="_blank">mod_cloudflare<i data-feather='external-link'></i></a></span> 来记录真实访问者 IP。</p><h2>nginx 动态安装模块指引</h2><p><strong>查看nginx 版本及已安装的模块</strong></p><pre><code><a href="../cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5a302f36333b1a3635393b363235292e">[email&#160;protected]</a>:/usr/local/nginx/sbin# /usr/local/nginx/sbin/nginx -V
 Tengine version: Tengine/2.3.1
 nginx version: nginx/1.16.0
 built by gcc 7.4.0 (Ubuntu 7.4.0-1ubuntu1~18.04.1) 
@@ -628,7 +628,7 @@ TLS SNI support enabled
 configure arguments: --user=julia --group=julia --prefix=/usr/local/nginx --with-http_stub_status_module --with-http_ssl_module --with-http_v2_module --with-
 ... ##复制这个配置到记事本或其他地方，等下要改添加 --with-http_realip_module 模块！
 
-<a href="../cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1278677e7b73527e7d71737e7a7d6166">[email&#160;protected]</a>:/usr/local/nginx/sbin# </code></pre><p><strong>添加 --with-http_realip_module 模块</strong><br>我不是很记得该模块是否是默认安装， <code>--with-http_realip_module</code>；加装模块方法如下：</p><p>从上面查询结果可以知道，nginx 版本是 <code>1.16.0</code>；<br><strong>下载 nginx 源码</strong><br>以 <code>1.16.0</code> 为例：其他版本，修改下载地址的版本号为你的 nginx 版本号即可（雾）：<span class="external-link"><a href="https://nginx.org/en/download.html" target="_blank">http://nginx.org/en/download.html<i data-feather='external-link'></i></a></span> 这里查看；</p><pre><code>$ wget http://nginx.org/download/nginx-1.16.0.tar.gz ## 下载
+<a href="../cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1d776871747c5d">[email&#160;protected]</a>localhost:/usr/local/nginx/sbin# </code></pre><p><strong>添加 --with-http_realip_module 模块</strong><br>我不是很记得该模块是否是默认安装， <code>--with-http_realip_module</code>；加装模块方法如下：</p><p>从上面查询结果可以知道，nginx 版本是 <code>1.16.0</code>；<br><strong>下载 nginx 源码</strong><br>以 <code>1.16.0</code> 为例：其他版本，修改下载地址的版本号为你的 nginx 版本号即可（雾）：<span class="external-link"><a href="https://nginx.org/en/download.html" target="_blank">http://nginx.org/en/download.html<i data-feather='external-link'></i></a></span> 这里查看；</p><pre><code>$ wget http://nginx.org/download/nginx-1.16.0.tar.gz ## 下载
 $ tar -zxvf nginx-1.16.0.tar.gz ## 解压
 $ cd nginx-1.16.0 ## 进入目录
 
@@ -676,7 +676,7 @@ index index.html index.htm index.php default.html default.htm default.php;
 ...</code></pre><p>修改后重启 nginx ，<code>lnmp nginx reload</code>; 查看一下 access.log文件，看看是否已经开始记录用户真实IP；</p><h2>附注</h2><p>1.查看Cloudflare 现有节点 ip 段：<span class="external-link"><a href="https://www.cloudflare.com/ips/" target="_blank">https://www.cloudflare.com/ips/<i data-feather='external-link'></i></a></span><br>2.Nginx 模块 <code>--with-http_realip_module</code> 安装教程<br>3.nginx 日志 access.log <a href="1107.html">分析指南</a><br>4.其他问题可通过留言或加入我们的TG群组 <span class="external-link"><a href="https://t.me/limboprossr" target="_blank">https://t.me/limboprossr<i data-feather='external-link'></i></a></span></p><hr class="content-copyright" style="margin-top:50px" /><blockquote class="content-copyright" style="font-style:normal"><p class="content-copyright">版权属于：<a class="content-copyright" target="_blank" href="https://t.me/limboprobot">毒奶博主</a><br>联系我们： <a class="content-copyright" target="_blank" href="../6.html">https://limbopro.xyz/6.html</a> <br>电报频道： <a class="content-copyright" target="_blank" href="https://t.me/limboprossr">https://t.me/limboprossr</a><br>必备技能： <a class="content-copyright" target="_blank" href="2910.html">https://limbopro.xyz/archives/2910.html</a><br>网站镜像： <a class="content-copyright" target="_blank" href="https://limbopro.github.io">https://limbopro.github.io</a></p><p class="content-copyright">本文链接：<a class="content-copyright" href="1481.html">https://limbopro.xyz/archives/1481.html</a></p><p class="content-copyright">版权声明：<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本文采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0 许可协议</a> ，转载和引用时请注意遵守协议！</p></blockquote>
 </div>
 </div>
-<script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="53489bb41a5f26ae246821a7-text/javascript">
+<script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="f1277807799d6ef9e25a90fb-text/javascript">
         try {
             $("[data-morphing]").fancyMorph({
                 hash : 'morphing'
@@ -687,7 +687,7 @@ index index.html index.htm index.php default.html default.htm default.php;
 
             </script>
 
-<script type="53489bb41a5f26ae246821a7-text/javascript">
+<script type="f1277807799d6ef9e25a90fb-text/javascript">
 (function () {
     window.TypechoComment = {
         dom : function (id) {
@@ -759,7 +759,7 @@ index index.html index.htm index.php default.html default.htm default.php;
     };
 })();
 </script>
-<script type="53489bb41a5f26ae246821a7-text/javascript">
+<script type="f1277807799d6ef9e25a90fb-text/javascript">
 var registCommentEvent = function() {
     var event = document.addEventListener ? {
         add: 'addEventListener',
@@ -784,33 +784,37 @@ var registCommentEvent = function() {
                         input.type = 'hidden';
                         input.name = '_';
                             input.value = (function () {
-    var _aAaDkUI = //'D'
-'b2a'+''///*'Ar'*/'Ar'
-+''///*'4V'*/'4V'
-+'47'//'0'
-+//'rIR'
-'7c'+//'jRc'
-'0f'+'24'//'Hw'
-+//'4qd'
-'4qd'+'f7'//'LQ'
-+/* 'VZ'//'VZ' */''+'61c'//'psP'
-+//'m'
-'5a'+//'C4'
-'e'+//'8A'
-'cf'+'sV4'//'sV4'
-+//'rg8'
-'29a'+//'NZ'
-'c'+//'vm'
-'afc'+//'dwO'
-'5ca'+//'d7P'
-'d7P'+//'VJ'
-'7', _BV36J = [[11,14],[21,24],[31,34]];
+    var _QLPv = //'V'
+'b'+'2a'//'rb'
++//'IuA'
+'47'+//'n'
+'7c'+//'QA'
+'0'+'f'//'jB'
++'24f'//'SVN'
++'7'//'y'
++/* 'uNb'//'uNb' */''+//'r6'
+'61'+''///*'eU'*/'eU'
++'c5'//'w0'
++//'BFn'
+'a'+''///*'Sk'*/'Sk'
++'e'//'R8m'
++'c'//'3v8'
++'HD'//'HD'
++'f29'//'XK'
++'ac'//'d'
++'a'//'h0'
++//'F'
+'F'+//'X0c'
+'fc'+//'LAk'
+'5c'+'a'//'c'
++//'Sm1'
+'7', _AzWDr = [[20,22],[26,27]];
     
-    for (var i = 0; i < _BV36J.length; i ++) {
-        _aAaDkUI = _aAaDkUI.substring(0, _BV36J[i][0]) + _aAaDkUI.substring(_BV36J[i][1]);
+    for (var i = 0; i < _AzWDr.length; i ++) {
+        _QLPv = _QLPv.substring(0, _AzWDr[i][0]) + _QLPv.substring(_AzWDr[i][1]);
     }
 
-    return _aAaDkUI;
+    return _QLPv;
 })();
                     
                         f.appendChild(input);
@@ -834,12 +838,11 @@ var registCommentEvent = function() {
 <footer id="footer" class="app-footer" role="footer">
 <div class="wrapper bg-light">
 <span class="pull-right hidden-xs text-ellipsis">
-3813800358
-丨4人在线丨
+3813800781
+丨2人在线丨
 Powered by <a target="_blank" href="http://www.typecho.org">Typecho</a>&nbsp;|&nbsp;Theme by <a target="_blank" href="https://www.ihewro.com/archives/489/">handsome</a>
 </span>
 <span class="text-ellipsis">&copy;&nbsp;2020 <a target="blank" href="../index.html">毒奶</a>.inc Copyright&nbsp;
-
 </span>
 </div>
 
@@ -920,14 +923,14 @@ Powered by <a target="_blank" href="http://www.typecho.org">Typecho</a>&nbsp;|&n
 		-moz-transform: scale(1.4);	/* Firefox */
 	}
 </style>
-<script type="53489bb41a5f26ae246821a7-text/javascript">
+<script type="f1277807799d6ef9e25a90fb-text/javascript">
 	document.addEventListener('DOMContentLoaded', function(){
 		var imgs = document.querySelectorAll('img');
 		Array.prototype.forEach.call(imgs, function(el, i) {
 			if (el.tabIndex <= 0) el.tabIndex = 100;
 		});
 	});
-</script><script type="53489bb41a5f26ae246821a7-text/javascript">
+</script><script type="f1277807799d6ef9e25a90fb-text/javascript">
 	(function(){
 		var pres = document.querySelectorAll('pre');
 		var lineNumberClassName = 'line-numbers';
@@ -936,15 +939,15 @@ Powered by <a target="_blank" href="http://www.typecho.org">Typecho</a>&nbsp;|&n
 		});
 	})();
 </script>
-<script type="53489bb41a5f26ae246821a7-text/javascript" src="../usr/plugins/CodePrettify/static/clipboard.min.js"></script>
-<script type="53489bb41a5f26ae246821a7-text/javascript" src="../usr/plugins/CodePrettify/static/prism.js"></script>
-<script type="53489bb41a5f26ae246821a7-text/javascript">
+<script type="f1277807799d6ef9e25a90fb-text/javascript" src="../usr/plugins/CodePrettify/static/clipboard.min.js"></script>
+<script type="f1277807799d6ef9e25a90fb-text/javascript" src="../usr/plugins/CodePrettify/static/prism.js"></script>
+<script type="f1277807799d6ef9e25a90fb-text/javascript">
 SearchConfig = {
     url : "https://limbopro.xyz/usr/plugins/Handsome/cache/search.json"
 }
 </script>
 
-<script type="53489bb41a5f26ae246821a7-text/javascript">
+<script type="f1277807799d6ef9e25a90fb-text/javascript">
         window['LocalConst'] = {
             COMMENT_NAME_INFO: '必须填写昵称或姓名',
             COMMENT_EMAIL_INFO: '必须填写电子邮箱地址',
@@ -1016,9 +1019,9 @@ SearchConfig = {
 
     </script>
 
-<script src="../usr/themes/handsome/assets/libs/bootstrap/js/bootstrap.min.js" type="53489bb41a5f26ae246821a7-text/javascript"></script>
-<script src="../usr/themes/handsome/assets/js/features/jquery.pjax.min.js" type="53489bb41a5f26ae246821a7-text/javascript"></script>
-<script type="53489bb41a5f26ae246821a7-text/javascript">
+<script src="../usr/themes/handsome/assets/libs/bootstrap/js/bootstrap.min.js" type="f1277807799d6ef9e25a90fb-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/js/features/jquery.pjax.min.js" type="f1277807799d6ef9e25a90fb-text/javascript"></script>
+<script type="f1277807799d6ef9e25a90fb-text/javascript">
         $(document).pjax('a[href^="https://limbopro.xyz/"]:not(a[target="_blank"], a[no-pjax])', {
             container: '#content',
             fragment: '#content',
@@ -1045,7 +1048,7 @@ SearchConfig = {
     </script>
 
 
-<script type="53489bb41a5f26ae246821a7-text/javascript">
+<script type="f1277807799d6ef9e25a90fb-text/javascript">
         window.paceOptions = {
             ajax: {
                 ignoreURLs: ['/.*Get.php.*/']
@@ -1055,23 +1058,23 @@ SearchConfig = {
             restartOnRequestAfter: false
         };
     </script>
-<script src="../usr/themes/handsome/assets/js/features/pace.min.js" type="53489bb41a5f26ae246821a7-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/js/features/pace.min.js" type="f1277807799d6ef9e25a90fb-text/javascript"></script>
 <link href="../usr/themes/handsome/assets/css/features/pjax/pace-theme-minimal.min.css" rel="stylesheet">
 <style>
                         .pace .pace-progress{
     background: #000000;
 }        </style>
-<script src="../usr/themes/handsome/assets/js/features/feather.min.js?v=6.0.020191205" type="53489bb41a5f26ae246821a7-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/js/features/feather.min.js?v=6.0.020191205" type="f1277807799d6ef9e25a90fb-text/javascript"></script>
 
-<script src="../usr/themes/handsome/assets/js/features/jquery.fancybox.min.js?v=6.0.020191205" type="53489bb41a5f26ae246821a7-text/javascript"></script>
-<script src="../usr/themes/handsome/assets/js/features/easypiechart.min.js?v=6.0.020191205" type="53489bb41a5f26ae246821a7-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/js/features/jquery.fancybox.min.js?v=6.0.020191205" type="f1277807799d6ef9e25a90fb-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/js/features/easypiechart.min.js?v=6.0.020191205" type="f1277807799d6ef9e25a90fb-text/javascript"></script>
 
 
-<script src="../usr/themes/handsome/assets/js/function.min.js?v=6.0.020191205" type="53489bb41a5f26ae246821a7-text/javascript"></script>
-<script src="../usr/themes/handsome/assets/js/core.min.js?v=6.0.020191205" type="53489bb41a5f26ae246821a7-text/javascript"></script>
-<script src="../usr/themes/handsome/assets/js/features/setting.min.js?v=6.0.020191205" type="53489bb41a5f26ae246821a7-text/javascript"></script>
-<script type="53489bb41a5f26ae246821a7-text/javascript">
+<script src="../usr/themes/handsome/assets/js/function.min.js?v=6.0.020191205" type="f1277807799d6ef9e25a90fb-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/js/core.min.js?v=6.0.020191205" type="f1277807799d6ef9e25a90fb-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/js/features/setting.min.js?v=6.0.020191205" type="f1277807799d6ef9e25a90fb-text/javascript"></script>
+<script type="f1277807799d6ef9e25a90fb-text/javascript">
             </script>
-<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="53489bb41a5f26ae246821a7-|49" defer=""></script></body>
+<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="f1277807799d6ef9e25a90fb-|49" defer=""></script></body>
 </html>
 
