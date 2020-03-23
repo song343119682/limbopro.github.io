@@ -4,14 +4,12 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 <meta charset="UTF-8">
-
 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-
 <meta name="renderer" content="webkit">
-
 <meta name="theme-color" content="#ff393e" />
 <meta http-equiv="x-dns-prefetch-control" content="on">
 <link rel="dns-prefetch" href="../index.html" />
+<link rel="dns-prefetch" href="https://www.pixiv.world/" />
 <link rel="dns-prefetch" href="https://www.doubleclickbygoogle.com/" />
 <link rel="dns-prefetch" href="https://www.google.com/" />
 <link rel="dns-prefetch" href="https://marketingplatform.google.com/" />
@@ -22,16 +20,32 @@
 <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com/" />
 <link rel="dns-prefetch" href="https://www.google-analytics.com/" />
 <link rel="dns-prefetch" href="https://googleads.g.doubleclick.net/" />
-<title>使用脚本调用CF.API以提高DDoS/CC 防御能力丨自动拉黑异常IP并提交至Cloudflare丨分钟级检查丨Cloudflare User-level Firewall Access Rule API - 毒奶博主丨欢迎使用代理访问本站。</title>
+<link rel="dns-prefetch" href="https://twitter.com/" />
 <link rel="icon" type="image/ico" href="../favicon.ico">
-<meta name="description" content="本文隶属于 网站优化 分类，点击分类名称查看更多相关主题；[post cid=&quot;6719&quot; cover=&quot;https://limbopro.xyz/usr/uploads/2019/12/173..." />
-<meta name="keywords" content="DDOS,Cloudflare,脚本,CCkiller" />
-<meta name="generator" content="Typecho 1.1/17.10.30" />
-<meta name="template" content="handsome" />
-<link rel="alternate" type="application/rss+xml" title="使用脚本调用CF.API以提高DDoS/CC 防御能力丨自动拉黑异常IP并提交至Cloudflare丨分钟级检查丨Cloudflare User-level Firewall Access Rule API &raquo; 毒奶博主丨欢迎使用代理访问本站。 &raquo; RSS 2.0" href="../feed/archives/6949.html" />
-<link rel="alternate" type="application/rdf+xml" title="使用脚本调用CF.API以提高DDoS/CC 防御能力丨自动拉黑异常IP并提交至Cloudflare丨分钟级检查丨Cloudflare User-level Firewall Access Rule API &raquo; 毒奶博主丨欢迎使用代理访问本站。 &raquo; RSS 1.0" href="../feed/rss/archives/6949.html" />
-<link rel="alternate" type="application/atom+xml" title="使用脚本调用CF.API以提高DDoS/CC 防御能力丨自动拉黑异常IP并提交至Cloudflare丨分钟级检查丨Cloudflare User-level Firewall Access Rule API &raquo; 毒奶博主丨欢迎使用代理访问本站。 &raquo; ATOM 1.0" href="../feed/atom/archives/6949.html" />
-<link rel="stylesheet" type="text/css" href="../usr/plugins/CodePrettify/static/styles/dark.css" />
+
+<title>DDoS 攻击简明防范思路与教程丨Cloudflare API - 毒奶丨欢迎使用代理访问本站。</title>
+<meta name="title" content="DDoS 攻击简明防范思路与教程丨Cloudflare API - 毒奶丨欢迎使用代理访问本站。">
+<meta name="author" content="毒奶">
+<meta name="description" content="使得你的网站在持续的DDoS攻击中尽快恢复服务。">
+<meta name="image" content="https://limbopro.xyz/usr/uploads/2019/12/2377344071.jpg">
+
+<meta itemprop="name" content="DDoS 攻击简明防范思路与教程丨Cloudflare API - 毒奶丨欢迎使用代理访问本站。">
+<meta itemprop="author" content="毒奶">
+<meta itemprop="description" content="使得你的网站在持续的DDoS攻击中尽快恢复服务。">
+<meta itemprop="image" content="https://limbopro.xyz/usr/uploads/2019/12/2377344071.jpg">
+
+<meta property="og:url" content="https://limbopro.xyz/archives/6949.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="DDoS 攻击简明防范思路与教程丨Cloudflare API - 毒奶丨欢迎使用代理访问本站。">
+<meta property="og:description" content="使得你的网站在持续的DDoS攻击中尽快恢复服务。">
+<meta property="og:image" content="https://limbopro.xyz/usr/uploads/2019/12/2377344071.jpg">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@limboprossr">
+<meta name="twitter:creator" content="@limboprossr">
+<meta name="twitter:title" content="DDoS 攻击简明防范思路与教程丨Cloudflare API - 毒奶丨欢迎使用代理访问本站。">
+<meta name="twitter:description" content="使得你的网站在持续的DDoS攻击中尽快恢复服务。">
+<meta property="twitter:image" content="https://limbopro.xyz/usr/uploads/2019/12/2377344071.jpg">
 
 <link href="../usr/themes/handsome/assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -39,7 +53,6 @@
 <link rel="stylesheet" href="../usr/themes/handsome/assets/css/handsome.min.css?v=6.0.020191205" type="text/css" />
 
 <link rel="stylesheet" href="../usr/themes/handsome/assets/css/features/jquery.fancybox.min.css?v=6.0.020191205" type="text/css" />
-<link rel="stylesheet" href="../usr/themes/handsome/assets/css/features/newblack.min.css?v=6.0.020191205" type="text/css" />
 <link rel="stylesheet" href="../usr/themes/handsome/assets/css/features/code/custom.min.css?v=6.0.020191205" type="text/css" />
 <link rel="stylesheet" href="../usr/themes/handsome/assets/css/features/coolopacity.min.css?v=6.0.020191205" type="text/css" />
 <style>
@@ -78,22 +91,46 @@
 	color: #999;
 }    </style>
 
-<script src="../usr/themes/handsome/assets/libs/jquery/jquery.min.js" type="4187e6035196dafbc3e21229-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/libs/jquery/jquery.min.js" type="5081b4c98ce58768317681f1-text/javascript"></script>
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140019039-1" type="4187e6035196dafbc3e21229-text/javascript"></script>
-<script type="4187e6035196dafbc3e21229-text/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140019039-1" type="5081b4c98ce58768317681f1-text/javascript"></script>
+<script type="5081b4c98ce58768317681f1-text/javascript">
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'UA-140019039-1');
 </script>
-<script src="../usr/themes/handsome/assets/js/features/fancyMorph.min.js" type="4187e6035196dafbc3e21229-text/javascript"></script>
-</head>
-<body id="body" class="fix-padding">
 
+<script src='https://www.google.com/recaptcha/api.js?render=<?php echo SITE_KEY; ?>' type="5081b4c98ce58768317681f1-text/javascript"></script>
+<script src="https://www.google.com/recaptcha/api.js?render=6Lc3n98UAAAAAD65utb41JWcKBgdLSTYOhTcyVFe" type="5081b4c98ce58768317681f1-text/javascript"></script>
+<script type="5081b4c98ce58768317681f1-text/javascript">
+grecaptcha.ready(function() {
+    grecaptcha.execute('_reCAPTCHA_site_key_', {action: 'homepage'}).then(function(token) {
+       ...
+    });
+});
+</script>
+
+
+<script type="5081b4c98ce58768317681f1-text/javascript">
+(function($){
+    setInterval(() => {
+        $.each($('iframe'), (arr,x) => {
+            let src = $(x).attr('src');
+            if (src && src.match(/(ads-iframe)|(disqusads)/gi)) {
+                $(x).remove();
+            }
+        });
+    }, 300);
+})(jQuery);
+</script>
+ <script src="../usr/themes/handsome/assets/js/features/fancyMorph.min.js" type="5081b4c98ce58768317681f1-text/javascript"></script>
+</head>
+<body id="body" class="fix-padding"> 
 <div id="alllayout" class="app app-aside-fix container app-header-fixed "> 
+<script src="https://www.recaptcha.net/recaptcha/api.js" type="5081b4c98ce58768317681f1-text/javascript"></script>
 <header id="header" class="fix-padding app-header navbar box-shadow-bottom-lg" role="menu">
 
 <div class="text-ellipsis navbar-header bg-danger">
@@ -182,7 +219,7 @@
 <strong class="font-bold text-lt">毒奶</strong>
 <b class="caret"></b>
 </span>
-<span class="text-muted text-xs block"><script type="4187e6035196dafbc3e21229-application/javascript"> function getip(json){     document.write( json.ip); } </script> <script type="4187e6035196dafbc3e21229-application/javascript" src="https://api.ip.sb/jsonip?callback=getip"></script><br>网上冲浪爱好者<br>业余斜杆青年<br>增长黑客<br>Attack</span>
+<span class="text-muted text-xs block"><script type="5081b4c98ce58768317681f1-application/javascript"> function getip(json){     document.write( json.ip); } </script> <script type="5081b4c98ce58768317681f1-application/javascript" src="https://api.ip.sb/jsonip?callback=getip"></script> <br>网上冲浪爱好者<br>业余斜杆青年<br>建站与防御<br>佛系更新</span>
 </span>
 </a>
 
@@ -193,7 +230,7 @@
 <p>晚上好，注意早点休息</p>
 </div>
 <div class="progress progress-xs m-b-none dker">
-<div class="progress-bar bg-white" data-toggle="tooltip" data-original-title="时间已经度过0.00%" style="width: 0.00%"></div>
+<div class="progress-bar bg-white" data-toggle="tooltip" data-original-title="时间已经度过12.50%" style="width: 12.50%"></div>
 </div>
 </li>
 </ul>
@@ -217,7 +254,7 @@
 </a>
 </li>
 
-<li> <a target="_self" href="../6.html" class="auto"><span class="nav-icon"><i class="glyphicon fontello-emo-devil"></i></span><span>联系我们</span></a></li><li> <a target="_self" href="../1765.html" class="auto"><span class="nav-icon"><i class="glyphicon fontello-indent"></i></span><span>文章归档</span></a></li><li> <a target="_self" href="../865.html" class="auto"><span class="nav-icon"><i class="glyphicon fontello-instagram"></i></span><span>机场推荐</span></a></li><li> <a target="_blank" href="../search.html" class="auto"><span class="nav-icon"><i class="glyphicon fontello-search"></i></span><span>毒奶搜索</span></a></li><li> <a target="_blank" href="https://t.me/limboprossr" class="auto"><span class="nav-icon"><i class="glyphicon fontello-bell"></i></span><span>电报频道</span></a></li> <li class="line dk"></li>
+<li> <a target="_blank" href="../search.html" class="auto"><span class="nav-icon"><i class="glyphicon fontello-search"></i></span><span>毒奶搜索</span></a></li><li> <a target="_self" href="../865.html" class="auto"><span class="nav-icon"><i class="glyphicon fontello-instagram"></i></span><span>机场推荐</span></a></li><li> <a target="_blank" href="https://t.me/limboprossr" class="auto"><span class="nav-icon"><i class="glyphicon fontello-bell"></i></span><span>电报频道</span></a></li><li> <a target="_self" href="../1765.html" class="auto"><span class="nav-icon"><i class="glyphicon fontello-indent"></i></span><span>文章归档</span></a></li><li> <a target="_self" href="../6.html" class="auto"><span class="nav-icon"><i class="glyphicon fontello-emo-devil"></i></span><span>联系我们</span></a></li> <li class="line dk"></li>
 
 <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
 <span>组成</span>
@@ -240,7 +277,7 @@
 </a>
 </li>
 
-<li><a href="../category/Bulletin/index.html"><b class="badge pull-right">6</b><span>运营通报</span></a></li><li><a href="../category/hot-movies/index.html"><b class="badge pull-right">17</b><span>追剧小组</span></a></li><li><a href="../category/films-recommend/index.html"><b class="badge pull-right">39</b><span>电影推荐</span></a></li><li><a href="../category/instagram/index.html"><b class="badge pull-right">11</b><span>美图欣赏</span></a></li><li><a href="../category/NSFW/index.html"><b class="badge pull-right">17</b><span>开车专栏</span></a></li><li><a href="../category/tools/index.html"><b class="badge pull-right">27</b><span>实用工具</span></a></li><li><a href="../category/software-skills/index.html"><b class="badge pull-right">25</b><span>软件百科</span></a></li><li><a href="../category/Typecho/index.html"><b class="badge pull-right">26</b><span>网站优化</span></a></li><li><a href="../category/LNMP/index.html"><b class="badge pull-right">24</b><span>建站指南</span></a></li><li><a href="../category/ssr/index.html"><b class="badge pull-right">13</b><span>科学上网</span></a></li><li><a href="../category/ssr-operation/index.html"><b class="badge pull-right">1</b><span>自学上网</span></a></li><li><a href="../category/Toilet-reading/index.html"><b class="badge pull-right">9</b><span>厕所读物</span></a></li><li><a href="../category/telegram-anecdote/index.html"><b class="badge pull-right">10</b><span>电报奇闻</span></a></li><li><a href="../category/master-care/index.html"><b class="badge pull-right">19</b><span>无主杂记</span></a></li><li><a href="../category/Internetlog/index.html"><b class="badge pull-right">1</b><span>观察报告</span></a></li><li><a href="../category/sales/index.html"><b class="badge pull-right">1</b><span>怪薅羊毛</span></a></li><li><a href="../category/day-of-history/index.html"><b class="badge pull-right">1</b><span>历史时刻</span></a></li><li><a href="../category/AfterFQ/index.html"><b class="badge pull-right">1</b><span>毒奶世界</span></a></li><li><a href="../category/technologyart/index.html"><b class="badge pull-right">2</b><span>科技美学</span></a></li> </ul>
+<li><a href="../category/Bulletin/index.html"><b class="badge pull-right">7</b><span>运营通报</span></a></li><li><a href="../category/hot-movies/index.html"><b class="badge pull-right">23</b><span>追剧小组</span></a></li><li><a href="../category/films-recommend/index.html"><b class="badge pull-right">40</b><span>电影推荐</span></a></li><li><a href="../category/instagram/index.html"><b class="badge pull-right">15</b><span>美图欣赏</span></a></li><li><a href="../category/NSFW/index.html"><b class="badge pull-right">21</b><span>开车专栏</span></a></li><li><a href="../category/tools/index.html"><b class="badge pull-right">32</b><span>实用工具</span></a></li><li><a href="../category/software-skills/index.html"><b class="badge pull-right">26</b><span>软件百科</span></a></li><li><a href="../category/Typecho/index.html"><b class="badge pull-right">29</b><span>网站优化</span></a></li><li><a href="../category/LNMP/index.html"><b class="badge pull-right">25</b><span>建站指南</span></a></li><li><a href="../category/ssr/index.html"><b class="badge pull-right">16</b><span>科学上网</span></a></li><li><a href="../category/Toilet-reading/index.html"><b class="badge pull-right">9</b><span>厕所读物</span></a></li><li><a href="../category/telegram-anecdote/index.html"><b class="badge pull-right">12</b><span>电报奇闻</span></a></li><li><a href="../category/master-care/index.html"><b class="badge pull-right">20</b><span>无主杂记</span></a></li><li><a href="../category/Internetlog/index.html"><b class="badge pull-right">2</b><span>联网观察</span></a></li><li><a href="../category/sales/index.html"><b class="badge pull-right">1</b><span>怪薅羊毛</span></a></li><li><a href="../category/day-of-history/index.html"><b class="badge pull-right">1</b><span>历史时刻</span></a></li><li><a href="../category/AfterFQ/index.html"><b class="badge pull-right">1</b><span>毒奶世界</span></a></li><li><a href="../category/technologyart/index.html"><b class="badge pull-right">2</b><span>科技美学</span></a></li><li><a href="../category/www/index.html"><b class="badge pull-right">0</b><span>科普专栏</span></a></li><li><a href="../category/shell/index.html"><b class="badge pull-right">1</b><span>常用命令</span></a></li> </ul>
 </li>
 
 <li>
@@ -260,9 +297,9 @@
 </li>
 
 <li><a href="../1765.html"><span>归档</span></a></li>
-<li><a href="../6.html"><span>联系我们</span></a></li>
+ <li><a href="../6.html"><span>联系我们</span></a></li>
 <li><a href="../telegram.html"><span>电报</span></a></li>
-<li><a href="../865.html"><span>毒奶の机场专线</span></a></li>
+<li><a href="../865.html"><span>SSR/SS/v2Ray机场丨折后9元起丨毒奶的机场推荐清单（2019-2020）</span></a></li>
 <li><a href="../cross.html"><span>说说</span></a></li>
 </ul>
 </li>
@@ -283,7 +320,7 @@
 </a>
 </li>
 
-<li data-original-title="DDoS服务" data-toggle="tooltip" data-placement="top"><a href="https://www.xddos.co" target="_blank"><span>XDDoS</span></a></li><li data-original-title="SSR机场服务商" data-toggle="tooltip" data-placement="top"><a href="https://kcjisu.press/auth/register?code=8xeq" target="_blank"><span>卡车SSR</span></a></li><li data-original-title="SS机场服务商" data-toggle="tooltip" data-placement="top"><a href="https://n3ro.host/register?ref=7091" target="_blank"><span>N3RO</span></a></li><li data-original-title="本站主题作者。" data-toggle="tooltip" data-placement="top"><a href="https://www.ihewro.com/" target="_blank"><span>友人C</span></a></li><li data-original-title="萌IDC博客" data-toggle="tooltip" data-placement="top"><a href="http://www.idc.moe" target="_blank"><span>萌IDC博客</span></a></li><li data-original-title="有朋自远方来，不亦乐乎？" data-toggle="tooltip" data-placement="top"><a href="https://zhuangzhuang.cf" target="_blank"><span>ZHUANGZHUANG</span></a></li><li data-original-title="一个不负责任的教程博客。" data-toggle="tooltip" data-placement="top"><a href="https://gtary.com/" target="_blank"><span>格塔里</span></a></li> </ul>
+<li data-original-title="DDoS服务" data-toggle="tooltip" data-placement="top"><a href="https://www.xddos.co" target="_blank"><span>XDDoS</span></a></li><li data-original-title="SSR机场服务商" data-toggle="tooltip" data-placement="top"><a href="https://kcjisu.casa/auth/register?code=soiO" target="_blank"><span>卡车SSR</span></a></li><li data-original-title="SS机场服务商" data-toggle="tooltip" data-placement="top"><a href="https://n3ro.fun/auth/register?code=L0NW" target="_blank"><span>N3RO</span></a></li><li data-original-title="本站主题作者。" data-toggle="tooltip" data-placement="top"><a href="https://www.ihewro.com/" target="_blank"><span>友人C</span></a></li><li data-original-title="有朋自远方来，不亦乐乎？" data-toggle="tooltip" data-placement="top"><a href="https://zhuangzhuang.cf" target="_blank"><span>ZHUANGZHUANG</span></a></li><li data-original-title="一个不负责任的教程博客。" data-toggle="tooltip" data-placement="top"><a href="https://gtary.com/" target="_blank"><span>格塔里</span></a></li><li data-original-title="毒奶搜索，毒奶的万能搜索引擎。" data-toggle="tooltip" data-placement="top"><a href="../search.html" target="_blank"><span>毒奶搜索</span></a></li><li data-original-title="一个朴素而平凡的博客，记录平时所见所闻，分享和交流技术。" data-toggle="tooltip" data-placement="top"><a href="https://idc.moe/" target="_blank"><span>洛樱博客</span></a></li> </ul>
 </li>
 </ul>
 </nav>
@@ -311,7 +348,7 @@
 
 
 <header id="small_widgets" class="bg-light lter wrapper-md">
-<h1 class="entry-title m-n font-thin text-black l-h">使用脚本调用CF.API以提高DDoS/CC 防御能力丨自动拉黑异常IP并提交至Cloudflare丨分钟级检查丨Cloudflare User-level Firewall Access Rule API<a class="plus-font-size" data-toggle="tooltip" data-original-title="点击改变文章字体大小"><i data-feather="type"></i></a><a data-morphing="" id="morphing" data-src="#morphing-content" href="javascript:;" class="read_mode superscript m-l-sm" data-toggle="tooltip" data-placement="right" data-original-title="阅读模式"><i data-feather="book-open"></i></a></h1> 
+<h1 class="entry-title m-n font-thin text-black l-h">DDoS 攻击简明防范思路与教程丨Cloudflare API<a class="plus-font-size" data-toggle="tooltip" data-original-title="点击改变文章字体大小"><i data-feather="type"></i></a><a data-morphing="" id="morphing" data-src="#morphing-content" href="javascript:;" class="read_mode superscript m-l-sm" data-toggle="tooltip" data-placement="right" data-original-title="阅读模式"><i data-feather="book-open"></i></a></h1> 
 <ul class="entry-meta text-muted list-inline m-b-none small
              post-head-icon">
 
@@ -319,9 +356,9 @@
 
 <li class="meta-date"><span class="post-icons"><i data-feather="clock"></i></span><span class="sr-only">发布时间：</span><time class="meta-value">2020 年 01 月 03 日</time></li>
 
-<li class="meta-views"><span class="post-icons"><i data-feather="eye"></i></span><span class="meta-value">201次浏览</span></li>
+<li class="meta-views"><span class="post-icons"><i data-feather="eye"></i></span><span class="meta-value">695次浏览</span></li>
 
-<li class="meta-word"><span class="post-icons"><i data-feather="pen-tool"></i></span><span class="meta-value">10266字数</span></li>
+<li class="meta-word"><span class="post-icons"><i data-feather="pen-tool"></i></span><span class="meta-value">14882字数</span></li>
 
 <li class="meta-categories"><span class="post-icons"><i data-feather="hash"></i></span><span class="sr-only">分类：</span> <span class="meta-value"><a href="../category/Typecho/index.html">网站优化</a> <a href="../category/LNMP/index.html">建站指南</a></span></li>
 </ul>
@@ -329,14 +366,29 @@
 <div class="wrapper-md" id="post-panel">
 <ol class="breadcrumb bg-white-pure" itemscope=""><li>
 <a href="../index.html" itemprop="breadcrumb" title="返回首页" data-toggle="tooltip"><span class="home-icons"><i data-feather="home"></i></span>首页</a>
-</li><li class="active">正文&nbsp;&nbsp;</li></ol> 
+</li><li class="active">正文&nbsp;&nbsp;</li>
+<div style="float:right;">
+分享到：
+<style>
+   .breadcrumb i.iconfont.icon-qzone:after {
+    padding: 0 0 0 5px;
+    color: #ccc;
+    content: "/\00a0";
+    }
+    
+   </style>
+<a class="twitter-mention-button" href="https://twitter.com/intent/tweet?text=DDoS 攻击简明防范思路与教程丨Cloudflare API&site=https://limbopro.xyz/" itemprop="breadcrumb" target="_blank" title="" data-toggle="tooltip" data-original-title="分享到Twitter">
+Tweet</a>
+</div></ol> 
 <div id="postpage" class="blog-post">
 <article class="single-post panel">
 
 
 <div id="post-content" class="wrapper-lg">
 <div class="entry-content l-h-2x">
-<p><img src="../usr/uploads/2020/01/435273227.png" alt="what-is-ddos-botmaster.png" title="what-is-ddos-botmaster.png"></p><p>本文隶属于 <a href="../category/Typecho/index.html">网站优化</a> 分类，点击分类名称查看更多相关主题；<br><div class="preview">
+<p><img src="../usr/uploads/2020/01/435273227.png" alt="what-is-ddos-botmaster.png" /></p>
+<p>本文隶属于 <a href="../category/Typecho/index.html">网站优化</a> 分类，点击分类名称查看更多相关主题；<br />
+<div class="preview">
 <div class="post-inser post box-shadow-wrap-normal">
 <a href="DDoS.html" target="_blank" class="post_inser_a ">
 <div class="inner-image bg" style="background-image: url(../usr/uploads/2019/12/1736885170.png);background-size: cover;"></div>
@@ -350,7 +402,17 @@
 
 </div>
 
-</div></p><p>其他参考资料：<a href="../usr/uploads/2020/01/1714301628.pdf">DDoS_White_Paper_CN.pdf</a></p><h2>主理人说</h2><p>找这个<span class="external-link"><a href="https://api.cloudflare.com/#user-level-firewall-access-rule-list-access-rules" target="_blank">API<i data-feather='external-link'></i></a></span>已经找了很久了（Cloudflare 的控制面板 <code>Firewall</code>模块下，Cloudflare似乎对它进行了刻意隐藏，后来在 <span class="external-link"><a href="https://api.cloudflare.com/#user-level-firewall-access-rule-create-access-rule" target="_blank">Cloudflare API 资料库<i data-feather='external-link'></i></a></span>找到了详细API使用说明）；（for 循环提交异常IP的脚本，源自 <span class="external-link"><a href="https://www.9sep.org/cloudflare-batch-firewall-blacklist" target="_blank">9sep.org<i data-feather='external-link'></i></a></span>博客，在此感谢脚本原作者；</p><p><strong>车有车牌，打电话得有电话号码，上网得有个IP地址</strong>；<span class="external-link"><a href="https://zh.wikipedia.org/zh-cn/IP%E5%9C%B0%E5%9D%80" target="_blank">IP地址<i data-feather='external-link'></i></a></span>主要有两个功能：标识主机或者网络和寻址。SO？不管是物联网设备也好还是被劫持的肉鸡，归根结底都是一个个在线的IP；所谓DDoS攻击？大概就是不计其数的IP对目标IP发起恶意请求，大白话就是无数的骚扰电话，呼死你；</p><p>1.<span class="external-link"><a href="https://www.cloudflare.com/zh-cn/learning/ddos/what-is-a-ddos-attack/" target="_blank">DDoS是什么<i data-feather='external-link'></i></a></span>？Cloudflare 官方说明；<br>2.如何缓解/清洗/防御DDoS/CC攻击的方法？禁止异常IP与服务器取得联络（不对异常IP提供服务）；<br>3.无请求便无性能损耗；</p><p><strong>本教程及其脚本并非一劳永逸，但能在遭受攻击后，快速且有效地缓解异常请求对服务器的性能损耗</strong>；通过对nginx日志进行分析，提取异常IP（短时间内该IP的请求次数超过阈值）并提交至Cloudflare的防火墙（Firewall rules），即，将DDoS/CC攻击IP/代理封锁在Cloudflare CDN前端；除非攻击者有<strong>无限的代理IP</strong>，否则攻击将会在短时间（看你设置的脚本执行周期以及触发封禁IP的请求阈值）内被清洗干净。DDoS/CC防御 100%？我觉得还行（如果你用其他CDN，亦可参考本文；同理）。</p><h2>第一步 安装模块</h2><p><div class="preview">
+</div></p>
+<p>其他参考资料：<a href="../usr/uploads/2020/01/1714301628.pdf">DDoS_White_Paper_CN.pdf</a></p>
+<span id="h-1" name="h-1"></span><h2>主理人说</h2>
+<p>找这个<span class="external-link"><a href="https://api.cloudflare.com/#user-level-firewall-access-rule-list-access-rules" target="_blank">API<i data-feather='external-link'></i></a></span>已经找了很久了（Cloudflare 的控制面板 <code>Firewall</code>模块下，Cloudflare似乎对它进行了刻意隐藏，后来在 <span class="external-link"><a href="https://api.cloudflare.com/#user-level-firewall-access-rule-create-access-rule" target="_blank">Cloudflare API 资料库<i data-feather='external-link'></i></a></span>找到了详细API使用说明）；（for 循环提交异常IP的脚本，源自 <span class="external-link"><a href="https://www.9sep.org/cloudflare-batch-firewall-blacklist" target="_blank">9sep.org<i data-feather='external-link'></i></a></span>博客，在此感谢脚本原作者；</p>
+<p><strong>车有车牌，打电话得有电话号码，上网得有个IP地址</strong>；<span class="external-link"><a href="https://zh.wikipedia.org/zh-cn/IP%E5%9C%B0%E5%9D%80" target="_blank">IP地址<i data-feather='external-link'></i></a></span>主要有两个功能：标识主机或者网络和寻址。SO？不管是物联网设备也好还是被劫持的肉鸡，归根结底都是一个个在线的IP；所谓DDoS攻击？大概就是不计其数的IP对目标IP发起恶意请求，大白话就是无数的骚扰电话，呼死你；</p>
+<p>1.<span class="external-link"><a href="https://www.cloudflare.com/zh-cn/learning/ddos/what-is-a-ddos-attack/" target="_blank">DDoS是什么<i data-feather='external-link'></i></a></span>？Cloudflare 官方说明；<br />
+2.如何缓解/清洗/防御DDoS/CC攻击的方法？禁止异常IP与服务器取得联络（不对异常IP提供服务）；<br />
+3.无请求便无性能损耗；</p>
+<p><strong>本教程及其脚本并非一劳永逸，但能在遭受攻击后，快速且有效地缓解异常请求对服务器的性能损耗</strong>；通过对nginx日志进行分析，提取异常IP（短时间内该IP的请求次数超过阈值）并提交至Cloudflare的防火墙（Firewall rules），即，将DDoS/CC攻击IP/代理封锁在Cloudflare CDN前端；除非攻击者有<strong>无限的代理IP</strong>，否则攻击将会在短时间（看你设置的脚本执行周期以及触发封禁IP的请求阈值）内被清洗干净。DDoS/CC防御 100%？我觉得还行（如果你用其他CDN，亦可参考本文；同理）。</p>
+<span id="h-2" name="h-2"></span><h2>第一步 安装模块</h2>
+<p><div class="preview">
 <div class="post-inser post box-shadow-wrap-normal">
 <a href="1481.html" target="_blank" class="post_inser_a ">
 <div class="inner-image bg" style="background-image: url(../usr/uploads/2019/12/2913761642.jpg);background-size: cover;"></div>
@@ -364,29 +426,180 @@
 
 </div>
 
-</div><br><strong>Cloudflare 下 Nginx 获取用户真实IP 地址</strong></p><p>当您的网站流量路由经过 Cloudflare 时，我们充当反向代理。 这允许 Cloudflare 通过更有 效地路由数据包并缓存静态资源（图片、JavaScript、CSS 等）来加快页面加载时间。因此， 在响应请求并记录请求时，您的源 Web 服务器默认情况下会看到 Cloudflare IP 地址。</p><p>Cloudflare 会在名为 CF-Connecting-IP 的附加 HTTP 标头中添加实际的访问者 IP 地址。但是，如果您有其他依赖于真实访问者的IP 地址的应用程序，则可能会出现某些问题。</p><h2>第二步 制作IP黑名单</h2><p><strong>禁止ip频繁访问及自动拉黑名单，防CC/DDoS攻击的一般性方法</strong><br>以前我们对异常请求的IP进行封禁，即从nginx输出层面，返回<span class="external-link"><a href="https://zh.wikipedia.org/zh-hans/HTTP_403" target="_blank">403状态码<i data-feather='external-link'></i></a></span>，以减轻服务器压力；现在我们直接把收集到的异常IP，通过脚本自动提交至 Cloudflare 防火墙以实现从CDN前端进行封禁处理，自此该IP任何请求将不会到达源站服务器；</p><p>*注：短时间内IP发出大量请求，简单判定为异常，并将该IP加入黑名单即可；</p><p><strong>拉黑IP教程概要</strong><br>拉取/提取临时日志，分析临时日志，判定异常，生成异常IP列表，提交异常IP至<span class="external-link"><a href="https://cloudflare.com/" target="_blank">Cloudflare<i data-feather='external-link'></i></a></span>；</p><p><strong>第一步，拉取一定时间范围内的请求日志</strong><br>这一步你只需填写<code>原始日志</code>的正确位置，以及<code>临时日志</code>的存放位置即可；</p><pre><code>&gt; /home/f5.log; #每次拉取临时日志时清除上一次拉取的遗留下来的临时日志
+</div><br />
+<strong>Cloudflare 下 Nginx 获取用户真实IP 地址</strong></p>
+<p>当您的网站流量路由经过 Cloudflare 时，我们充当反向代理。 这允许 Cloudflare 通过更有 效地路由数据包并缓存静态资源（图片、JavaScript、CSS 等）来加快页面加载时间。因此， 在响应请求并记录请求时，您的源 Web 服务器默认情况下会看到 Cloudflare IP 地址。</p>
+<p>Cloudflare 会在名为 CF-Connecting-IP 的附加 HTTP 标头中添加实际的访问者 IP 地址。但是，如果您有其他依赖于真实访问者的IP 地址的应用程序，则可能会出现某些问题。</p>
+<p>参考：<span class="external-link"><a href="https://support.cloudflare.com/hc/zh-cn/articles/200170786-%E6%81%A2%E5%A4%8D%E5%8E%9F%E5%A7%8B%E8%AE%BF%E9%97%AE%E8%80%85-IP-%E4%BD%BF%E7%94%A8-mod-cloudflare-%E8%AE%B0%E5%BD%95%E8%AE%BF%E9%97%AE%E8%80%85-IP-%E5%9C%B0%E5%9D%80-" target="_blank">恢复原始访问者 IP：使用 mod_cloudflare 记录访问者 IP 地址<i data-feather='external-link'></i></a></span></p>
+<p><strong>Nginx vhost 单个域名配置示例</strong></p>
+<pre><code>include /usr/local/nginx/conf/webp.conf; #Webp
+
+##WAF配置
+lua_package_path "/usr/local/nginx/conf/vhost/waf/?.lua;;";
+lua_shared_dict limit 20m;
+init_by_lua_file  /home/vhost/waf/init.lua; 
+access_by_lua_file /home/vhost/waf/waf.lua; 
+##WAF配置
+
+limit_conn_zone $binary_remote_addr zone=one:10m;
+#limit_conn_zone $binary_remote_addr zone=two:10m;
+
+#获取用户真实IP，并赋值给变量$clientRealIP
+map $http_x_forwarded_for  $clientRealIp {
+""      $remote_addr;
+~^(?P&lt;firstAddr&gt;[0-9\.]+),?.*$  $firstAddr;
+}
+
+limit_req_zone $clientRealIP zone=ConnLimitZone:20m  rate=1r/s; #每秒最多1个请求
+limit_req_log_level notice;
+#limit_req zone=ConnLimitZone burst=10 nodelay; #允许10个请求突发
+limit_req_status 403; #突发15个/s，则有4个请求会返回403；
+
+server
+        {
+        listen 443 ssl http2;
+        #listen [::]:80;
+        server_name limbopro.xyz ;
+
+        include /home/whitelist.conf;
+        include /home/ip.blacklist.auto.echo.conf;
+        include /home/vhost/blacklist.conf; #看不顺眼
+
+        ##从CF IP 请求报头中提取真实用户IP
+        set_real_ip_from 103.21.244.0/22;
+        set_real_ip_from 103.22.200.0/22;
+        set_real_ip_from 103.31.4.0/22;
+        set_real_ip_from 104.16.0.0/12;
+        set_real_ip_from 108.162.192.0/18;
+        set_real_ip_from 131.0.72.0/22;
+        set_real_ip_from 141.101.64.0/18;
+        set_real_ip_from 162.158.0.0/15;
+        set_real_ip_from 172.64.0.0/13;
+        set_real_ip_from 173.245.48.0/20;
+        set_real_ip_from 188.114.96.0/20;
+        set_real_ip_from 190.93.240.0/20;
+        set_real_ip_from 197.234.240.0/22;
+        set_real_ip_from 198.41.128.0/17;
+        set_real_ip_from 2400:cb00::/32;
+        set_real_ip_from 2606:4700::/32;
+        set_real_ip_from 2803:f800::/32;
+        set_real_ip_from 2405:b500::/32;
+        set_real_ip_from 2405:8100::/32;
+        set_real_ip_from 2c0f:f248::/32;
+        set_real_ip_from 2a06:98c0::/29;
+        real_ip_header CF-Connecting-IP;
+        ##从CF IP 请求报头中提取真实用户IP
+
+        index index.php index.html;
+        #index index.php
+        root /home/wwwroot/typecho/;
+
+
+        #开启SSL 
+        #ssl on;
+        ssl_certificate    /etc/**.pem;
+        ssl_certificate_key /etc/**key.pem;
+        ssl_protocols       TLSv1 TLSv1.1 TLSv1.2 TLSv1.3;
+        ssl_ciphers     HIGH:!aNULL:!MD5; 
+
+        ##自定义403页面
+        #502 error pages 设置开始
+        error_page 403 /403.html;
+        location = /403.html {
+        #root   html;
+        allow all;
+        }
+
+        ##自定义502页面等
+        error_page 500 502 503 504 /50x.html;
+        location = /50x.html {
+        #root   html;
+        allow all;
+        } 
+
+        client_max_body_size    1024m;
+
+        ## Webp 图片按浏览器判定是否加载（Safari with jpg/Chrome with Webp）
+        location ~ .*\.(gif|jpg|jpeg|png)$ {
+        add_header Cache-Control "public, no-transform";
+        add_header Vary "Accept-Encoding";
+        try_files $uri$webp_suffix $uri =404;
+        expires max;
+        access_log off;
+        }
+
+        ## Deny access to PHP files in specific directory
+        location ~ /(wp-content|uploads|wp-includes|images)/.*\.php$ { deny all; }
+        include enable-php-pathinfo.conf;
+
+        ## 静态资源流控开始
+        location ~ .*\.(jpeg|jpg|png|webp|gif|zip|js|css|woff2|mp4|ico|woff|mp3|pdf|mobi|epub|azw3|eot?7176355|eot|map)?$
+        {
+        expires max;
+        access_log off;
+        limit_conn one 3; #最大同时开启3个链接数
+        limit_rate_after 2m; #前2MB资源下载不限速
+        limit_rate 512k; #下载完2MB后限速512Kb/s
+        #limit_req zone=ConnLimitZone burst=144 nodelay; 
+        fastcgi_param HTTPS on;
+        include /etc/nginx/fastcgi_params;
+        } 
+        ## 静态资源流控结束
+
+        #伪静态 开始
+        if (-f $request_filename/index.html){
+        rewrite (.*) $1/index.html break;
+        }
+        if (-f $request_filename/index.php){
+        rewrite (.*) $1/index.php;
+        }
+        if (!-e $request_filename){
+        rewrite (.*) /index.php;
+        }
+        #伪静态 结束
+
+        ## 禁用不安全的HTTP方法
+        if ($request_method !~ ^(GET|HEAD|POST)$ ) {
+        return 403;
+        }
+        #
+
+        access_log  /home/wwwlogs/limbopro.xyz/access.log;
+
+        }
+
+</code></pre>
+<span id="h-3" name="h-3"></span><h2>第二步 制作IP黑名单</h2>
+<p><strong>禁止ip频繁访问及自动拉黑名单，防CC/DDoS攻击的一般性方法</strong><br />
+以前我们对异常请求的IP进行封禁，即从nginx输出层面，返回<span class="external-link"><a href="https://zh.wikipedia.org/zh-hans/HTTP_403" target="_blank">403状态码<i data-feather='external-link'></i></a></span>，以减轻服务器压力；现在我们直接把收集到的异常IP，通过脚本自动提交至 Cloudflare 防火墙以实现从CDN前端进行封禁处理，自此该IP任何请求将不会到达源站服务器；</p>
+<p>*注：短时间内IP发出大量请求，简单判定为异常，并将该IP加入黑名单即可；</p>
+<p><strong>拉黑IP教程概要</strong><br />
+拉取/提取临时日志，分析临时日志，判定异常，生成异常IP列表，提交异常IP至<span class="external-link"><a href="https://cloudflare.com/" target="_blank">Cloudflare<i data-feather='external-link'></i></a></span>；</p>
+<p><strong>第一步，拉取一定时间范围内的请求日志</strong><br />
+这一步你只需填写<code>原始日志</code>的正确位置，以及<code>临时日志</code>的存放位置即可；</p>
+<pre><code>&gt; /home/f5.log; #每次拉取临时日志时清除上一次拉取的遗留下来的临时日志
 ## 拉取临时日志 
 function define()
 {
-    ori_log_path=&quot;/home/wwwlogs/limbopro.xyz/access.log&quot; #原始日志
-    tmp_log_path=&quot;/home/f5.log&quot; #拉取临时日志存放的位置
-    date_stamp=`date -d &quot;-2min&quot; +%Y:%H:%M:%S` #从原始日志处读取最近2分钟的日志记录并存储至临时日志处存放，这个2可以改为任意数字但不应该超过日志记录的起止期限
+    ori_log_path="/home/wwwlogs/limbopro.xyz/access.log" #原始日志
+    tmp_log_path="/home/f5.log" #拉取临时日志存放的位置
+    date_stamp=`date -d "-2min" +%Y:%H:%M:%S` #从原始日志处读取最近2分钟的日志记录并存储至临时日志处存放，这个2可以改为任意数字但不应该超过日志记录的起止期限
     day_stamp=`date +%d`
 }
 
 function gather()
 {
-    awk -F '[/ &quot;\[]' -vnstamp=&quot;$date_stamp&quot; -vdstamp=&quot;$day_stamp&quot; '$7&gt;=nstamp &amp;&amp; $5==dstamp' ${ori_log_path} &gt; ${tmp_log_path}; #拉取日志
+    awk -F '[/ "\[]' -vnstamp="$date_stamp" -vdstamp="$day_stamp" '$7&gt;=nstamp &amp;&amp; $5==dstamp' ${ori_log_path} &gt; ${tmp_log_path}; #拉取日志
     log_num=`cat ${tmp_log_path} | wc -l`; #计算请求次数
     request_time=`awk '{print $(NF-1)}' ${tmp_log_path} | awk '{sum+=$1}END{print sum}'`; #请求时间
-    ave_request_time=`echo | awk &quot;{print ${request_time}/${log_num}}&quot; `; #平均请求时间
+    ave_request_time=`echo | awk "{print ${request_time}/${log_num}}" `; #平均请求时间
     ipcounts=$(awk '{print $1}' ${tmp_log_path} | sort -n | uniq | wc -l); #统计IP个数
-    date=$(env LANG=en_US.UTF-8 date &quot;+%e/%b/%Y/%R&quot;)
+    date=$(env LANG=en_US.UTF-8 date "+%e/%b/%Y/%R")
 }
 
 function output()
 {
-date=$(env LANG=en_US.UTF-8 date &quot;+%e/%b/%Y/%R&quot;)
+date=$(env LANG=en_US.UTF-8 date "+%e/%b/%Y/%R")
 }
 
 function main()
@@ -396,19 +609,25 @@ function main()
     output
 }
 
-main</code></pre><p>从原始日志处<code>/home/wwwlogs/limbopro.xyz/access.log</code>(以实际为准)拉取临时日志，并存放在<code>/home/f5.log</code>（你可自定义），然后对该临时日志进行分析；</p><p><strong>第二步，判定异常并制作黑名单</strong><br>这一步你只需定义<code>黑名单</code>存放位置（务必使用<code>.conf</code>后缀），以及单独拎出IP列表即下方的<code>/home/cf.conf</code>；</p><pre><code>##第三步 拉黑名单
-date=$(env LANG=en_US.UTF-8 date &quot;+%e/%b/%Y/%R&quot;)
+main</code></pre>
+<p>从原始日志处<code>/home/wwwlogs/limbopro.xyz/access.log</code>(以实际为准)拉取临时日志，并存放在<code>/home/f5.log</code>（你可自定义），然后对该临时日志进行分析；</p>
+<p><strong>第二步，判定异常并制作黑名单</strong><br />
+这一步你只需定义<code>黑名单</code>存放位置（务必使用<code>.conf</code>后缀），以及单独拎出IP列表即下方的<code>/home/cf.conf</code>；</p>
+<pre><code>##第三步 拉黑名单
+date=$(env LANG=en_US.UTF-8 date "+%e/%b/%Y/%R")
 blockip=/home/f5.conf #nginx封禁配置
 cfblockip=/home/cf.conf #定义IP黑名单集合留作给CF用
 access=/home/f5.log #读取临时日志
-for ip in $(awk '{cnt[$1]++;}END{for(i in cnt){printf(&quot;%s\t%s\n&quot;, cnt[i], i);}}' ${access} | awk '{if($1&gt;40) print $2}') 
+for ip in $(awk '{cnt[$1]++;}END{for(i in cnt){printf("%s\t%s\n", cnt[i], i);}}' ${access} | awk '{if($1&gt;40) print $2}') 
 ##请求次数超过40次即封禁 {if($1&gt;40)
 do 
-echo &quot;deny ${ip};&quot; &gt;&gt; $blockip
-echo &quot;${ip}&quot; &gt;&gt; $cfblockip
+echo "deny ${ip};" &gt;&gt; $blockip
+echo "${ip}" &gt;&gt; $cfblockip
 done
 
-lnmp nginx reload;</code></pre><p><strong>第三步，配置 nginx.conf 使之生效 </strong> （按理说，有了第四步，第三步或可不要）</p><pre><code>...
+lnmp nginx reload;</code></pre>
+<p><strong>第三步，配置 nginx.conf 使之生效 </strong> （按理说，有了第四步，第三步或可不要）</p>
+<pre><code>...
 server
 {
 listen 443 ssl http2;
@@ -417,22 +636,43 @@ server_name limbopro.xyz ;
 include /home/whitelist.conf;
 include /home/f5.conf; #频繁刷新第一次
 ...
-}</code></pre><p>配置 nginx.conf，添加 <code>/home/f5.conf</code> 至 nginx.conf 配置文件，重启nginx即可生效；异常请求IP再次对网站发起请求时将会获得403状态码；</p><p><strong>第四步，提交黑名单至 Cloudflare </strong></p><p><img src="../usr/uploads/2020/01/4183459401.png" alt="What is Cloudflare_v7.png" title="What is Cloudflare_v7.png"><br>via Cloudflare CDN 工作原理示意图；</p><p>就算在nginx这里就返回了403状态码，但异常请求仍会对服务器性能造成损耗，所以我们只能从 Cloudflare 防火墙层面对异常请求进行封堵即可（参考Cloudflare CDN 工作原理示意图可见一二）；</p><p><img src="../usr/uploads/2020/01/4139985079.jpg" alt="Cloudflare firerule.jpg" title="Cloudflare firerule.jpg"></p><pre><code>#!/bin/bash
+}</code></pre>
+<p>配置 nginx.conf，添加 <code>/home/f5.conf</code> 至 nginx.conf 配置文件，重启nginx即可生效；异常请求IP再次对网站发起请求时将会获得403状态码；</p>
+<p><strong>第四步，提交黑名单至 Cloudflare </strong></p>
+<p><img src="../usr/uploads/2020/01/4183459401.png" alt="What is Cloudflare_v7.png" /><br />
+via Cloudflare CDN 工作原理示意图；</p>
+<p>就算在nginx这里就返回了403状态码，但异常请求仍会对服务器性能造成损耗，所以我们只能从 Cloudflare 防火墙层面对异常请求进行封堵即可（参考Cloudflare CDN 工作原理示意图可见一二）；</p>
+<p><img src="../usr/uploads/2020/01/4139985079.jpg" alt="Cloudflare firerule.jpg" /></p>
+<pre><code>#!/bin/bash
 # Author: Zhys
 # Date  : 2018
 # blog : https://www.9sep.org/
-CFEMAIL=&quot;Cloudflare 邮箱账号&quot; 
-CFAPIKEY=&quot;Cloudflare APIKEY&quot; #Cloudflare 控制面板-页面右上角-My Profile-API Tokens-API Keys-Global API Key 可以找到；
-ZONESID=&quot;Cloudflare ZONE ID&quot; #Cloudflare 控制面板-Overview 模块- 右侧栏 - API-ZONE ID可以找到
+CFEMAIL="Cloudflare 邮箱账号" 
+CFAPIKEY="Cloudflare APIKEY" #Cloudflare 控制面板-页面右上角-My Profile-API Tokens-API Keys-Global API Key 可以找到；
+ZONESID="Cloudflare ZONE ID" #Cloudflare 控制面板-Overview 模块- 右侧栏 - API-ZONE ID可以找到
 IPADDR=$(&lt;/home/cf.conf) #
 for IPADDR in ${IPADDR[@]}; do
 echo $IPADDR
-curl -s -X POST &quot;https://api.cloudflare.com/client/v4/zones/$ZONESID/firewall/access_rules/rules&quot; \
-  -H &quot;X-Auth-Email: $CFEMAIL&quot; \
-  -H &quot;X-Auth-Key: $CFAPIKEY&quot; \
-  -H &quot;Content-Type: application/json&quot; \
-  --data '{&quot;mode&quot;:&quot;block&quot;,&quot;configuration&quot;:{&quot;target&quot;:&quot;ip&quot;,&quot;value&quot;:&quot;'$IPADDR'&quot;},&quot;notes&quot;:&quot;limbo-auto-block&quot;}'
-done</code></pre><p>cf 自封禁完全脚本来自 <span class="external-link"><a href="https://www.9sep.org/cloudflare-batch-firewall-blacklist" target="_blank">9sep.org<i data-feather='external-link'></i></a></span>，另，我 for 循环不大会写，虽然看得懂；<br>大家可以把这三步做成一个脚本，使用 <span class="external-link"><a href="https://www.runoob.com/linux/linux-comm-crontab.html" target="_blank">Crontab<i data-feather='external-link'></i></a></span> 命令自动执行即可。</p><p>以上。</p><h2>效果展示</h2><p><img src="../usr/uploads/2020/01/2609950155.png" alt="IP list.png" title="IP list.png"></p><p><img src="../usr/uploads/2020/01/373909724.png" alt="Cloudflare block.png" title="Cloudflare block.png"></p><p><img src="../usr/uploads/2020/01/4108595482.png" alt="Cloudflare.png" title="Cloudflare.png"></p><p><img src="../usr/uploads/2020/01/3963418677.png" alt="Cloudflare.png" title="Cloudflare.png"></p><p>via <span class="external-link"><a href="https://t.me/limboprossr/1220" target="_blank">https://t.me/limboprossr/1220<i data-feather='external-link'></i></a></span></p><h2>IP Access Rules 的说明</h2><p>可登入<span class="external-link"><a href="https://dash.cloudflare.com/" target="_blank">Cloudflare<i data-feather='external-link'></i></a></span>-Firewall-Tools 模块下查看；</p><pre><code>IP Access Rules can be based on IP address, IP address range, Autonomous System Number (ASN) or country.</code></pre><p>即可基于 <code>IP地址</code>/<code>IP段</code>/<span class="external-link"><a href="https://zh.wikipedia.org/zh-hans/%E8%87%AA%E6%B2%BB%E7%B3%BB%E7%BB%9F" target="_blank">自治系统号<i data-feather='external-link'></i></a></span>/<code>国家</code>，进行相应操作，例如：</p><pre><code>What option should I choose?
+curl -s -X POST "https://api.cloudflare.com/client/v4/zones/$ZONESID/firewall/access_rules/rules" \
+  -H "X-Auth-Email: $CFEMAIL" \
+  -H "X-Auth-Key: $CFAPIKEY" \
+  -H "Content-Type: application/json" \
+  --data '{"mode":"block","configuration":{"target":"ip","value":"'$IPADDR'"},"notes":"limbo-auto-block"}'
+done</code></pre>
+<p>cf 自封禁完全脚本来自 <span class="external-link"><a href="https://www.9sep.org/cloudflare-batch-firewall-blacklist" target="_blank">9sep.org<i data-feather='external-link'></i></a></span>，另，我 for 循环不大会写，虽然看得懂；<br />
+大家可以把这三步做成一个脚本，使用 <span class="external-link"><a href="https://www.runoob.com/linux/linux-comm-crontab.html" target="_blank">Crontab<i data-feather='external-link'></i></a></span> 命令自动执行即可。</p>
+<p>以上。</p>
+<span id="h-4" name="h-4"></span><h2>效果展示</h2>
+<p><img src="../usr/uploads/2020/01/2609950155.png" alt="IP list.png" /></p>
+<p><img src="../usr/uploads/2020/01/373909724.png" alt="Cloudflare block.png" /></p>
+<p><img src="../usr/uploads/2020/01/4108595482.png" alt="Cloudflare.png" /></p>
+<p><img src="../usr/uploads/2020/01/3963418677.png" alt="Cloudflare.png" /></p>
+<p>via <span class="external-link"><a href="https://t.me/limboprossr/1220" target="_blank">https://t.me/limboprossr/1220<i data-feather='external-link'></i></a></span></p>
+<span id="h-5" name="h-5"></span><h2>IP Access Rules 的说明</h2>
+<p>可登入<span class="external-link"><a href="https://dash.cloudflare.com/" target="_blank">Cloudflare<i data-feather='external-link'></i></a></span>-Firewall-Tools 模块下查看；</p>
+<pre><code>IP Access Rules can be based on IP address, IP address range, Autonomous System Number (ASN) or country.</code></pre>
+<p>即可基于 <code>IP地址</code>/<code>IP段</code>/<span class="external-link"><a href="https://zh.wikipedia.org/zh-hans/%E8%87%AA%E6%B2%BB%E7%B3%BB%E7%BB%9F" target="_blank">自治系统号<i data-feather='external-link'></i></a></span>/<code>国家</code>，进行相应操作，例如：</p>
+<pre><code>What option should I choose?
 Block: Ensures that an IP address will never be allowed to access your website
 Challenge: Specified IP addresses will be shown a CAPTCHA before being allowed to access your website
 JavaScript Challenge: The JavaScript challenge page requires the visitor to wait 5 seconds while Cloudflare determines if the visitor is coming from a real browser. The challenge requires the visitor's browser to answer a math problem which takes a bit of time to compute. Once successfully answered, the browser will be remembered and won't be challenged again.
@@ -442,11 +682,21 @@ IP Access Rules can be applied based on:
 
 IP address
 IP address range: Cloudflare accepts the following CIDR notations: /16 and /24 for IPv4 addresses and /64, /48, and /32 for IPv6
-Autonomous System Number (ASN): An ASN is the unique identifier for any network, such as the Cloudflare network (AS13335). The accepted format for ASN's is &quot;AS12345&quot;
-Country: Specified using ISO 2-letter country codes, such as &quot;US&quot; for the United States
+Autonomous System Number (ASN): An ASN is the unique identifier for any network, such as the Cloudflare network (AS13335). The accepted format for ASN's is "AS12345"
+Country: Specified using ISO 2-letter country codes, such as "US" for the United States
 You can apply IP Access Rules to this domain only or all domains in your account.
 
-To modify an existing Access Rule, create a new Access Rule and delete the existing one.</code></pre><p>Block（黑名单）/Challenge（验证码）/JavaScript Challenge(五秒盾)/Whitelist（白名单），按理说如果你是非 Cloudflare 付费用户，你只能一个一个Rule（规则）的添加，这个时候API就显得特别重要（无数量限制，且可制作脚本并利用 Crontab <br>自动执行实时相应操作）；</p><h2>Cloudflare API</h2><p><span class="external-link"><a href="https://api.cloudflare.com/#user-level-firewall-access-rule-properties" target="_blank">https://api.cloudflare.com/#user-level-firewall-access-rule-properties<i data-feather='external-link'></i></a></span> <br>*这个API可以用作提交指定IP至<code>IP Access Rules</code>里面（或可登入<span class="external-link"><a href="https://dash.cloudflare.com/" target="_blank">Cloudflare<i data-feather='external-link'></i></a></span>-Firewall-Tools-可以进行一个一个添加），批量的，可以进行脚本化，自动化（利用 <span class="external-link"><a href="http://www.runoob.com/linux/linux-comm-crontab.html" target="_blank">Crontab<i data-feather='external-link'></i></a></span> 命令定时执行脚本）；</p><p><strong>Cloudflare API 档案库</strong>：<span class="external-link"><a href="https://api.cloudflare.com/" target="_blank">https://api.cloudflare.com/<i data-feather='external-link'></i></a></span> ，例如利用脚本<span class="external-link"><a href="https://api.cloudflare.com/#user-level-firewall-access-rule-list-access-rules" target="_blank">自动切换防御模式<i data-feather='external-link'></i></a></span>，<span class="external-link"><a href="https://api.cloudflare.com/#zone-purge-all-files" target="_blank">清除或开启缓存<i data-feather='external-link'></i></a></span>，增加或修改<span class="external-link"><a href="https://api.cloudflare.com/#page-rules-for-a-zone-update-page-rule" target="_blank">PageRules<i data-feather='external-link'></i></a></span>等等；</p><h2>cURL 命令</h2><p>curl命令是一个利用URL规则在命令行下工作的文件传输工具。 它支持文件的上传和下载。 curl支持包括<code>HTTP</code>、<code>HTTPS</code>、<code>ftp</code>等众多协议，还支持<code>POST</code>、<code>cookies</code>、<code>认证</code>、从指定偏移处下载部分文件、用户代理字符串、限速、文件大小、进度条等特征。</p><p>via <span class="external-link"><a href="https://blog.csdn.net/u012340794/article/details/71440604" target="_blank">CSDN<i data-feather='external-link'></i></a></span></p><p><div class="preview">
+To modify an existing Access Rule, create a new Access Rule and delete the existing one.</code></pre>
+<p>Block（黑名单）/Challenge（验证码）/JavaScript Challenge(五秒盾)/Whitelist（白名单），按理说如果你是非 Cloudflare 付费用户，你只能一个一个Rule（规则）的添加，这个时候API就显得特别重要（无数量限制，且可制作脚本并利用 Crontab<br />
+自动执行实时相应操作）；</p>
+<span id="h-6" name="h-6"></span><h2>Cloudflare API</h2>
+<p><span class="external-link"><a href="https://api.cloudflare.com/#user-level-firewall-access-rule-properties" target="_blank">https://api.cloudflare.com/#user-level-firewall-access-rule-properties<i data-feather='external-link'></i></a></span><br />
+*这个API可以用作提交指定IP至<code>IP Access Rules</code>里面（或可登入<span class="external-link"><a href="https://dash.cloudflare.com/" target="_blank">Cloudflare<i data-feather='external-link'></i></a></span>-Firewall-Tools-可以进行一个一个添加），批量的，可以进行脚本化，自动化（利用 <span class="external-link"><a href="http://www.runoob.com/linux/linux-comm-crontab.html" target="_blank">Crontab<i data-feather='external-link'></i></a></span> 命令定时执行脚本）；</p>
+<p><strong>Cloudflare API 档案库</strong>：<span class="external-link"><a href="https://api.cloudflare.com/" target="_blank">https://api.cloudflare.com/<i data-feather='external-link'></i></a></span> ，例如利用脚本<span class="external-link"><a href="https://api.cloudflare.com/#user-level-firewall-access-rule-list-access-rules" target="_blank">自动切换防御模式<i data-feather='external-link'></i></a></span>，<span class="external-link"><a href="https://api.cloudflare.com/#zone-purge-all-files" target="_blank">清除或开启缓存<i data-feather='external-link'></i></a></span>，增加或修改<span class="external-link"><a href="https://api.cloudflare.com/#page-rules-for-a-zone-update-page-rule" target="_blank">PageRules<i data-feather='external-link'></i></a></span>等等；</p>
+<span id="h-7" name="h-7"></span><h2>cURL 命令</h2>
+<p>curl命令是一个利用URL规则在命令行下工作的文件传输工具。 它支持文件的上传和下载。 curl支持包括<code>HTTP</code>、<code>HTTPS</code>、<code>ftp</code>等众多协议，还支持<code>POST</code>、<code>cookies</code>、<code>认证</code>、从指定偏移处下载部分文件、用户代理字符串、限速、文件大小、进度条等特征。</p>
+<p>via <span class="external-link"><a href="https://blog.csdn.net/u012340794/article/details/71440604" target="_blank">CSDN<i data-feather='external-link'></i></a></span></p>
+<p><div class="preview">
 <div class="post-inser post box-shadow-wrap-normal">
 <a href="tgbotalert.html" target="_blank" class="post_inser_a ">
 <div class="inner-image bg" style="background-image: url(../usr/uploads/2019/12/2912835083.jpg);background-size: cover;"></div>
@@ -460,42 +710,51 @@ To modify an existing Access Rule, create a new Access Rule and delete the exist
 
 </div>
 
-</div></p><h2>cURL 方法</h2><p>使用 cURL 命令调用Cloudflare User-level Firewall Access Rule API的方法（官方举例）：</p><pre><code>curl -X POST &quot;https://api.cloudflare.com/client/v4/user/firewall/access_rules/rules&quot; \
-     -H &quot;X-Auth-Email: <a href="../cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f88d8b9d8ab89d80999588949dd69b9795">[email&#160;protected]</a>&quot; \
-     -H &quot;X-Auth-Key: c2547eb745079dac9320b638f5e225cf483cc5cfdda41&quot; \
-     -H &quot;Content-Type: application/json&quot; \
-     --data '{&quot;mode&quot;:&quot;challenge&quot;,&quot;configuration&quot;:{&quot;target&quot;:&quot;ip&quot;,&quot;value&quot;:&quot;198.51.100.4&quot;},&quot;notes&quot;:&quot;This rule is on because of an event that occured on date X&quot;}'</code></pre><p>Cloudflare 服务器返回成功状态（官方举例）</p><pre><code>{
-  &quot;success&quot;: true,
-  &quot;errors&quot;: [],
-  &quot;messages&quot;: [],
-  &quot;result&quot;: {
-    &quot;id&quot;: &quot;92f17202ed8bd63d69a66b86a49a8f6b&quot;,
-    &quot;notes&quot;: &quot;This rule is on because of an event that occured on date X&quot;,
-    &quot;allowed_modes&quot;: [
-      &quot;whitelist&quot;,
-      &quot;block&quot;,
-      &quot;challenge&quot;,
-      &quot;js_challenge&quot;
+</div></p>
+<span id="h-8" name="h-8"></span><h2>cURL 方法</h2>
+<p>使用 cURL 命令调用Cloudflare User-level Firewall Access Rule API的方法（官方举例）：</p>
+<pre><code>curl -X POST "https://api.cloudflare.com/client/v4/user/firewall/access_rules/rules" \
+     -H "X-Auth-Email: <a href="../cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="493c3a2c3b092c31282439252c672a2624">[email&#160;protected]</a>" \
+     -H "X-Auth-Key: c2547eb745079dac9320b638f5e225cf483cc5cfdda41" \
+     -H "Content-Type: application/json" \
+     --data '{"mode":"challenge","configuration":{"target":"ip","value":"198.51.100.4"},"notes":"This rule is on because of an event that occured on date X"}'</code></pre>
+<p>Cloudflare 服务器返回成功状态（官方举例）</p>
+<pre><code>{
+  "success": true,
+  "errors": [],
+  "messages": [],
+  "result": {
+    "id": "92f17202ed8bd63d69a66b86a49a8f6b",
+    "notes": "This rule is on because of an event that occured on date X",
+    "allowed_modes": [
+      "whitelist",
+      "block",
+      "challenge",
+      "js_challenge"
     ],
-    &quot;mode&quot;: &quot;challenge&quot;,
-    &quot;configuration&quot;: {
-      &quot;target&quot;: &quot;ip&quot;,
-      &quot;value&quot;: &quot;198.51.100.4&quot;
+    "mode": "challenge",
+    "configuration": {
+      "target": "ip",
+      "value": "198.51.100.4"
     },
-    &quot;created_on&quot;: &quot;2014-01-01T05:20:00.12345Z&quot;,
-    &quot;modified_on&quot;: &quot;2014-01-01T05:20:00.12345Z&quot;,
-    &quot;scope&quot;: {
-      &quot;id&quot;: &quot;7c5dae5552338874e5053f2534d2767a&quot;,
-      &quot;email&quot;: &quot;<a href="../cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f481879186b4918c9599849891da979b99">[email&#160;protected]</a>&quot;,
-      &quot;type&quot;: &quot;user&quot;
+    "created_on": "2014-01-01T05:20:00.12345Z",
+    "modified_on": "2014-01-01T05:20:00.12345Z",
+    "scope": {
+      "id": "7c5dae5552338874e5053f2534d2767a",
+      "email": "<a href="../cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e792948295a7829f868a978b82c984888a">[email&#160;protected]</a>",
+      "type": "user"
     }
   }
-}</code></pre><h2>联系主理人</h2><p>1.关注频道 <span class="external-link"><a href="https://t.me/limboprossr" target="_blank">https://t.me/limboprossr<i data-feather='external-link'></i></a></span> 不失联；<br>2.<code>毒奶粉</code>们（我管我的Fans）可联系 <a href="../usr/uploads/2019/10/3453243330.png">TG机器人</a> 或发送 <a href="../usr/uploads/2019/10/3453243330.png">邮件</a> 获取帮助；</p><p>3.或点击<code>本页面右下角</code>的聊天按钮联系；</p><hr class="content-copyright" style="margin-top:50px" /><blockquote class="content-copyright" style="font-style:normal"><p class="content-copyright">版权属于：<a class="content-copyright" target="_blank" href="https://t.me/limboprobot">毒奶博主</a><br>联系我们： <a class="content-copyright" target="_blank" href="../6.html">https://limbopro.xyz/6.html</a> <br>电报频道： <a class="content-copyright" target="_blank" href="https://t.me/limboprossr">https://t.me/limboprossr</a><br>必备技能： <a class="content-copyright" target="_blank" href="2910.html">https://limbopro.xyz/archives/2910.html</a><br>网站镜像： <a class="content-copyright" target="_blank" href="https://limbopro.github.io">https://limbopro.github.io</a></p><p class="content-copyright">本文链接：<a class="content-copyright" href="6949.html">https://limbopro.xyz/archives/6949.html</a></p><p class="content-copyright">版权声明：<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本文采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0 许可协议</a> ，转载和引用时请注意遵守协议！</p></blockquote> </div>
+}</code></pre>
+<span id="h-9" name="h-9"></span><h2>联系主理人</h2>
+<p>1.关注频道 <span class="external-link"><a href="https://t.me/limboprossr" target="_blank">https://t.me/limboprossr<i data-feather='external-link'></i></a></span> 不失联；<br />
+2.<code>毒奶粉</code>们（我管我的Fans）可联系 <a href="../usr/uploads/2019/10/3453243330.png">TG机器人</a> 或发送 <a href="../usr/uploads/2019/10/3453243330.png">邮件</a> 获取帮助；</p>
+<p>3.或点击<code>本页面右下角</code>的聊天按钮联系；</p><hr class="content-copyright" style="margin-top:50px" /><blockquote class="content-copyright" style="font-style:normal"><p class="content-copyright">版权属于：<a class="content-copyright" target="_blank" href="https://t.me/limboprobot">毒奶</a><br>联系我们： <a class="content-copyright" target="_blank" href="../6.html">https://limbopro.xyz/6.html</a> <br>电报频道： <a class="content-copyright" target="_blank" href="https://t.me/limboprossr">https://t.me/limboprossr</a> <br>推特账号： <a class="content-copyright" target="_blank" href="https://twitter.com/limboprossr">https://twitter.com/limboprossr</a> <br>集美账号： <a class="content-copyright" target="_blank" href="https://www.instagram.com/limboprossr/">https://www.instagram.com/limboprossr/</a> <br>油管账号 ： <a class="content-copyright" target="_blank" href="https://www.youtube.com/channel/UCopiQ6DaRujU9iV9g-zrrMQ">http://bit.ly/2VJcz7o/</a> <br>机场推荐： <a class="content-copyright" target="_blank" href="../865.html">https://limbopro.xyz/865.html</a><br>上网必会： <a class="content-copyright" target="_blank" href="2910.html">https://limbopro.xyz/archives/2910.html</a> <br>广告屏蔽： <a class="content-copyright" target="_blank" href="adguard.html">https://limbopro.xyz/archives/adguard.html</a> <br>实用工具： <a class="content-copyright" target="_blank" href="../category/tools/index.html">https://limbopro.xyz/category/tools/</a> <br>网站优化： <a class="content-copyright" target="_blank" href="../category/Typecho/index.html">https://limbopro.xyz/category/Typecho/</a> <br>美图欣赏： <a class="content-copyright" target="_blank" href="../category/instagram/index.html">https://limbopro.xyz/category/instagram/</a> <br>开车专栏： <a class="content-copyright" target="_blank" href="../category/NSFW/index.html">https://limbopro.xyz/category/NSFW/</a> <br>网站镜像： <a class="content-copyright" target="_blank" href="https://limbopro.github.io">https://limbopro.github.io</a></p><p class="content-copyright">本文链接：<a class="content-copyright" href="6949.html">https://limbopro.xyz/archives/6949.html</a></p><p class="content-copyright"><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本文采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0 许可协议</a> ，转载和引用时请注意遵守协议！</p></blockquote> </div>
 
 <div class="show-foot">
 <div class="notebook">
 <i class="fontello fontello-clock-o"></i>
-<span>最后修改：2020 年 01 月 10 日 02 : 56 PM</span>
+<span>最后修改：2020 年 03 月 09 日 02 : 25 PM</span>
 </div>
 <div class="copyright" data-toggle="tooltip" data-html="true" data-original-title="转载请保留本文转载地址，著作权归作者所有"><span>© 允许规范转载</span>
 </div>
@@ -507,14 +766,17 @@ To modify an existing Access Rule, create a new Access Rule and delete the exist
 
 <nav class="m-t-lg m-b-lg">
 <ul class="pager">
-<li class="next"> <a class="box-shadow-wrap-normal" href="6865.html" title="Instagram 上面有哪些值得关注的用户？丨第08期  " data-toggle="tooltip">
-下一篇 </a></li> <li class="previous"> <a class="box-shadow-wrap-normal" href="nmap.html" title="Nmap丨暗黑互联网扫描器丨IPv4端口扫描" data-toggle="tooltip"> 上一篇 </a></li>
+<li class="next"> <a class="box-shadow-wrap-normal" href="6865.html" title="Instagram 美女账号精选丨第08期  " data-toggle="tooltip">
+下一篇 </a></li> <li class="previous"> <a class="box-shadow-wrap-normal" href="nmap.html" title="Nmap丨暗黑互联网扫描器" data-toggle="tooltip"> 上一篇 </a></li>
 </ul>
 </nav>
 
-<div id="disqus_thread"><script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="4187e6035196dafbc3e21229-text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="adf24965-dd03-45f8-9fdf-3f1e953df737";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script></div>
+<p></p>
+<div> <a target="_blank" href="adguard.html"><img src="../usr/uploads/2020/03/343360702.jpg" style="width: auto;"></a> </div>
+<p><br /></p>
+<div id="disqus_thread"><script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="5081b4c98ce58768317681f1-text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="adf24965-dd03-45f8-9fdf-3f1e953df737";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script></div>
 <div id="disqus_thread"></div>
-<script type="4187e6035196dafbc3e21229-text/javascript">
+<script type="5081b4c98ce58768317681f1-text/javascript">
 /**
  * *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
  * *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
@@ -591,34 +853,34 @@ setTimeout(function () {
 <h5 class="widget-title m-t-none text-md">热门文章</h5>
 <ul class="list-group no-bg no-borders pull-in m-b-none">
 <li class="list-group-item">
-<a href="2561.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/9.jpg" class="img-40px normal-shadow img-square"></a>
+<a href="n3ro.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/4.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h text-second"> <a href="2561.html" title="Rules / 分流/去广告规则：Surge / Shadowrocket / Quantumult/ Quantumult X  及详细配置步骤教程（萌新小白版本）"> Rules / 分流/去广告规则：Surge / Shadowrocket / Quantumult/ Quantumult X 及详细配置步骤教程（萌新小白版本） </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">35107</span>
+<h4 class="h5 l-h text-second"> <a href="n3ro.html" title="IPLC专线丨N3RO丨30GB/折后17.8元/月起丨年付再省15%（稳定不墙办公首选）"> IPLC专线丨N3RO丨30GB/折后17.8元/月起丨年付再省15%（稳定不墙办公首选） </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">29588</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="1423.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/7.jpg" class="img-40px normal-shadow img-square"></a>
+<a href="3629.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/9.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h text-second"> <a href="1423.html" title="卡车家族丨1080P秒开丨折后6.4元/月起丨50+节点丨SSR机场推荐（学生党首选）"> 卡车家族丨1080P秒开丨折后6.4元/月起丨50+节点丨SSR机场推荐（学生党首选） </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">25661</span>
+<h4 class="h5 l-h text-second"> <a href="3629.html" title="iOS 使用 Surge/Quantumult/Shadowrocket /QuantumultX 解锁 TikTok （国际版）区域限制（免拔卡）03.02.2020  "> iOS 使用 Surge/Quantumult/Shadowrocket /QuantumultX 解锁 TikTok （国际版）区域限制（免拔卡）03.02.2020 </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">27681</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="2787.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/5.jpg" class="img-40px normal-shadow img-square"></a>
+<a href="nicegram.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/2.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h text-second"> <a href="2787.html" title="高速内网IPLC专线机场丨4K秒开丨折后9.2元/月起丨京港/沪港/深港/深新/沪美线路（厘米云）"> 高速内网IPLC专线机场丨4K秒开丨折后9.2元/月起丨京港/沪港/深港/深新/沪美线路（厘米云） </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">23146</span>
+<h4 class="h5 l-h text-second"> <a href="nicegram.html" title="宅男指北丨iOS 怎么看电报开车群组/频道内容（附频道/群组推荐）-2020年"> 宅男指北丨iOS 怎么看电报开车群组/频道内容（附频道/群组推荐）-2020年 </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">24547</span>
 </span>
 </small></div></li><li class="list-group-item">
 <a href="969.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/3.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h text-second"> <a href="969.html" title="在中国看Netflix丨HBO丨Hulu丨Amazon Prime Video丨Apple TV丨或其他任意剧集。"> 在中国看Netflix丨HBO丨Hulu丨Amazon Prime Video丨Apple TV丨或其他任意剧集。 </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">20688</span>
+<h4 class="h5 l-h text-second"> <a href="969.html" title="值得收藏的11个免费电影&amp;电视剧网站（2020）"> 值得收藏的11个免费电影&amp;电视剧网站（2020） </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">24487</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="n3ro.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/4.jpg" class="img-40px normal-shadow img-square"></a>
+<a href="1423.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/5.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h text-second"> <a href="n3ro.html" title="44+条高速内网IPLC专线丨N3RO丨折后14.4元/月起丨线路多多丨川日/川港/京港/京美/京德/沪韩/沪日/沪港/深新/深港/沪新/杭港/沪美/川日/游戏加速"> 44+条高速内网IPLC专线丨N3RO丨折后14.4元/月起丨线路多多丨川日/川港/京港/京美/京德/沪韩/沪日/沪港/深新/深港/沪新/杭港/沪美/川日/游戏加速 </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">19447</span>
+<h4 class="h5 l-h text-second"> <a href="1423.html" title="SSR机场丨50GB/折后9元/月起，年付再省10%丨卡车家族（学生党首选）"> SSR机场丨50GB/折后9元/月起，年付再省10%丨卡车家族（学生党首选） </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">21736</span>
 </span>
 </small></div></li> </ul>
 </div>
@@ -627,34 +889,34 @@ setTimeout(function () {
 <h5 class="widget-title m-t-none text-md">随机文章</h5>
 <ul class="list-group no-bg no-borders pull-in">
 <li class="list-group-item">
-<a href="17.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/9.jpg" class="img-40px normal-shadow img-square"></a>
+<a href="1229.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/4.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h text-second"> <a href="17.html" title="谢春花丨还想听你的故事"> 谢春花丨还想听你的故事 </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">3095</span>
+<h4 class="h5 l-h text-second"> <a href="1229.html" title="出来混，错了就要认，挨打要立正"> 出来混，错了就要认，挨打要立正 </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">3659</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="3261.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/7.jpg" class="img-40px normal-shadow img-square"></a>
+<a href="reCaptcha-v3.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/9.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h text-second"> <a href="3261.html" title="安娜 Anna (2019)"> 安娜 Anna (2019) </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">1054</span>
+<h4 class="h5 l-h text-second"> <a href="reCaptcha-v3.html" title="部署 reCaptcha v3 以防止垃圾Bot滥用 （Step by step）"> 部署 reCaptcha v3 以防止垃圾Bot滥用 （Step by step） </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">215</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="5198.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/5.jpg" class="img-40px normal-shadow img-square"></a>
+<a href="1092.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/2.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h text-second"> <a href="5198.html" title="好莱坞往事（2019）"> 好莱坞往事（2019） </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">552</span>
+<h4 class="h5 l-h text-second"> <a href="1092.html" title="YouTube 频道推荐（科技/技术/人工智能等特别有意思的频道）"> YouTube 频道推荐（科技/技术/人工智能等特别有意思的频道） </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">4445</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="2151.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/3.jpg" class="img-40px normal-shadow img-square"></a>
+<a href="366.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/3.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h text-second"> <a href="2151.html" title="毒奶工具包丨工作&amp;设计&amp;生活丨30个较为有用的网站推荐（01.03.2020）"> 毒奶工具包丨工作&amp;设计&amp;生活丨30个较为有用的网站推荐（01.03.2020） </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">2491</span>
+<h4 class="h5 l-h text-second"> <a href="366.html" title="少数人TG交流群"> 少数人TG交流群 </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">3956</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="1066.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/4.jpg" class="img-40px normal-shadow img-square"></a>
+<a href="407.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/5.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h text-second"> <a href="1066.html" title="蓝灯"> 蓝灯 </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">5541</span>
+<h4 class="h5 l-h text-second"> <a href="407.html" title="浏览器及一些实用的快捷键推荐"> 浏览器及一些实用的快捷键推荐 </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">3713</span>
 </span>
 </small></div></li> </ul>
 </div>
@@ -665,27 +927,35 @@ setTimeout(function () {
 <h5 class="widget-title m-t-none text-md">博客信息</h5>
 <ul class="list-group box-shadow-wrap-normal">
 <li class="list-group-item text-second"><span class="blog-info-icons"> <i data-feather="award"></i></span> <span class="badge
-           pull-right">235</span>文章数目</li>
+           pull-right">268</span>文章数目</li>
 <li class="list-group-item text-second"> <span class="blog-info-icons"> <i data-feather="message-circle"></i></span>
 <span class="badge
            pull-right">5</span>评论数目</li>
 <li class="list-group-item text-second"><span class="blog-info-icons"> <i data-feather="calendar"></i></span>
 <span class="badge
-           pull-right">246天</span>运行天数</li>
+           pull-right">318天</span>运行天数</li>
 <li class="list-group-item text-second"><span class="blog-info-icons"> <i data-feather="activity"></i></span> <span class="badge
-           pull-right">4 小时前</span>最后活动</li>
+           pull-right">1 天前</span>最后活动</li>
 </ul>
 </section>
 
 <section id="a_d_sidebar" class="widget widget_categories wrapper-md clear">
 <h5 class="widget-title m-t-none text-md">广告</h5>
-<script data-ad-client="ca-pub-4573757070775891" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" type="4187e6035196dafbc3e21229-text/javascript"></script> </section>
+<script data-ad-client="ca-pub-4573757070775891" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" type="5081b4c98ce58768317681f1-text/javascript"></script>
+
+<a href='n3ro.html'><img src='../usr/uploads/2020/03/1938474618.jpg' alt='N3RO is Ready 4 you' title='N3RO is Ready 4 you' border='0' /></a>
+
+<br></br>
+<a class="twitter-timeline" data-height="480" data-dnt="true" data-theme="dark" href="https://twitter.com/limboprossr?ref_src=twsrc%5Etfw">Tweets by limboprossr</a>
+<br></br>
+<a href="https://twitter.com/limboprossr?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @limboprossr</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8" type="5081b4c98ce58768317681f1-text/javascript"></script> </section>
+
 
 
 <section id="tag_cloud-2" class="widget widget_tag_cloud wrapper-md clear">
 <h5 class="widget-title m-t-none text-md">标签云</h5>
 <div class="post-tags tags l-h-2x">
-<a href="../tag/DDOS/index.html">DDOS</a> <a href="../tag/Cloudflare/index.html">Cloudflare</a> <a href="../tag/脚本/index.html">脚本</a> <a href="../tag/CCkiller/index.html">CCkiller</a> </div>
+<a href="../tag/DDOS/index.html">DDOS</a> <a href="../tag/Cloudflare/index.html">Cloudflare</a> <a href="../tag/脚本/index.html">脚本</a> <a href="../tag/CCkiller/index.html">CCkiller</a> <a href="../tag/API/index.html">API</a> </div>
 </section>
 <div id="tag_toc_body">
 <section id="tag_toc" class="widget widget_categories wrapper-md clear">
@@ -714,9 +984,11 @@ setTimeout(function () {
 </main>
 <div id="morphing-content" class="hidden read_mode_article">
 <div class="page">
-<h1 class="title">使用脚本调用CF.API以提高DDoS/CC 防御能力丨自动拉黑异常IP并提交至Cloudflare丨分钟级检查丨Cloudflare User-level Firewall Access Rule API</h1>
+<h1 class="title">DDoS 攻击简明防范思路与教程丨Cloudflare API</h1>
 <div class="metadata singleline"><a href="6949.html#" rel="author" class="byline">毒奶</a>&nbsp;•&nbsp;<span class="delimiter"></span><time class="date">2020 年 01 月 03 日</time></div>
-<p><img src="../usr/uploads/2020/01/435273227.png" alt="what-is-ddos-botmaster.png" title="what-is-ddos-botmaster.png"></p><p>本文隶属于 <a href="../category/Typecho/index.html">网站优化</a> 分类，点击分类名称查看更多相关主题；<br><div class="preview">
+<p><img src="../usr/uploads/2020/01/435273227.png" alt="what-is-ddos-botmaster.png" /></p>
+<p>本文隶属于 <a href="../category/Typecho/index.html">网站优化</a> 分类，点击分类名称查看更多相关主题；<br />
+<div class="preview">
 <div class="post-inser post box-shadow-wrap-normal">
 <a href="DDoS.html" target="_blank" class="post_inser_a ">
 <div class="inner-image bg" style="background-image: url(../usr/uploads/2019/12/1736885170.png);background-size: cover;"></div>
@@ -730,7 +1002,17 @@ setTimeout(function () {
 
 </div>
 
-</div></p><p>其他参考资料：<a href="../usr/uploads/2020/01/1714301628.pdf">DDoS_White_Paper_CN.pdf</a></p><h2>主理人说</h2><p>找这个<span class="external-link"><a href="https://api.cloudflare.com/#user-level-firewall-access-rule-list-access-rules" target="_blank">API<i data-feather='external-link'></i></a></span>已经找了很久了（Cloudflare 的控制面板 <code>Firewall</code>模块下，Cloudflare似乎对它进行了刻意隐藏，后来在 <span class="external-link"><a href="https://api.cloudflare.com/#user-level-firewall-access-rule-create-access-rule" target="_blank">Cloudflare API 资料库<i data-feather='external-link'></i></a></span>找到了详细API使用说明）；（for 循环提交异常IP的脚本，源自 <span class="external-link"><a href="https://www.9sep.org/cloudflare-batch-firewall-blacklist" target="_blank">9sep.org<i data-feather='external-link'></i></a></span>博客，在此感谢脚本原作者；</p><p><strong>车有车牌，打电话得有电话号码，上网得有个IP地址</strong>；<span class="external-link"><a href="https://zh.wikipedia.org/zh-cn/IP%E5%9C%B0%E5%9D%80" target="_blank">IP地址<i data-feather='external-link'></i></a></span>主要有两个功能：标识主机或者网络和寻址。SO？不管是物联网设备也好还是被劫持的肉鸡，归根结底都是一个个在线的IP；所谓DDoS攻击？大概就是不计其数的IP对目标IP发起恶意请求，大白话就是无数的骚扰电话，呼死你；</p><p>1.<span class="external-link"><a href="https://www.cloudflare.com/zh-cn/learning/ddos/what-is-a-ddos-attack/" target="_blank">DDoS是什么<i data-feather='external-link'></i></a></span>？Cloudflare 官方说明；<br>2.如何缓解/清洗/防御DDoS/CC攻击的方法？禁止异常IP与服务器取得联络（不对异常IP提供服务）；<br>3.无请求便无性能损耗；</p><p><strong>本教程及其脚本并非一劳永逸，但能在遭受攻击后，快速且有效地缓解异常请求对服务器的性能损耗</strong>；通过对nginx日志进行分析，提取异常IP（短时间内该IP的请求次数超过阈值）并提交至Cloudflare的防火墙（Firewall rules），即，将DDoS/CC攻击IP/代理封锁在Cloudflare CDN前端；除非攻击者有<strong>无限的代理IP</strong>，否则攻击将会在短时间（看你设置的脚本执行周期以及触发封禁IP的请求阈值）内被清洗干净。DDoS/CC防御 100%？我觉得还行（如果你用其他CDN，亦可参考本文；同理）。</p><h2>第一步 安装模块</h2><p><div class="preview">
+</div></p>
+<p>其他参考资料：<a href="../usr/uploads/2020/01/1714301628.pdf">DDoS_White_Paper_CN.pdf</a></p>
+<span id="h-10" name="h-10"></span><h2>主理人说</h2>
+<p>找这个<span class="external-link"><a href="https://api.cloudflare.com/#user-level-firewall-access-rule-list-access-rules" target="_blank">API<i data-feather='external-link'></i></a></span>已经找了很久了（Cloudflare 的控制面板 <code>Firewall</code>模块下，Cloudflare似乎对它进行了刻意隐藏，后来在 <span class="external-link"><a href="https://api.cloudflare.com/#user-level-firewall-access-rule-create-access-rule" target="_blank">Cloudflare API 资料库<i data-feather='external-link'></i></a></span>找到了详细API使用说明）；（for 循环提交异常IP的脚本，源自 <span class="external-link"><a href="https://www.9sep.org/cloudflare-batch-firewall-blacklist" target="_blank">9sep.org<i data-feather='external-link'></i></a></span>博客，在此感谢脚本原作者；</p>
+<p><strong>车有车牌，打电话得有电话号码，上网得有个IP地址</strong>；<span class="external-link"><a href="https://zh.wikipedia.org/zh-cn/IP%E5%9C%B0%E5%9D%80" target="_blank">IP地址<i data-feather='external-link'></i></a></span>主要有两个功能：标识主机或者网络和寻址。SO？不管是物联网设备也好还是被劫持的肉鸡，归根结底都是一个个在线的IP；所谓DDoS攻击？大概就是不计其数的IP对目标IP发起恶意请求，大白话就是无数的骚扰电话，呼死你；</p>
+<p>1.<span class="external-link"><a href="https://www.cloudflare.com/zh-cn/learning/ddos/what-is-a-ddos-attack/" target="_blank">DDoS是什么<i data-feather='external-link'></i></a></span>？Cloudflare 官方说明；<br />
+2.如何缓解/清洗/防御DDoS/CC攻击的方法？禁止异常IP与服务器取得联络（不对异常IP提供服务）；<br />
+3.无请求便无性能损耗；</p>
+<p><strong>本教程及其脚本并非一劳永逸，但能在遭受攻击后，快速且有效地缓解异常请求对服务器的性能损耗</strong>；通过对nginx日志进行分析，提取异常IP（短时间内该IP的请求次数超过阈值）并提交至Cloudflare的防火墙（Firewall rules），即，将DDoS/CC攻击IP/代理封锁在Cloudflare CDN前端；除非攻击者有<strong>无限的代理IP</strong>，否则攻击将会在短时间（看你设置的脚本执行周期以及触发封禁IP的请求阈值）内被清洗干净。DDoS/CC防御 100%？我觉得还行（如果你用其他CDN，亦可参考本文；同理）。</p>
+<span id="h-11" name="h-11"></span><h2>第一步 安装模块</h2>
+<p><div class="preview">
 <div class="post-inser post box-shadow-wrap-normal">
 <a href="1481.html" target="_blank" class="post_inser_a ">
 <div class="inner-image bg" style="background-image: url(../usr/uploads/2019/12/2913761642.jpg);background-size: cover;"></div>
@@ -744,29 +1026,180 @@ setTimeout(function () {
 
 </div>
 
-</div><br><strong>Cloudflare 下 Nginx 获取用户真实IP 地址</strong></p><p>当您的网站流量路由经过 Cloudflare 时，我们充当反向代理。 这允许 Cloudflare 通过更有 效地路由数据包并缓存静态资源（图片、JavaScript、CSS 等）来加快页面加载时间。因此， 在响应请求并记录请求时，您的源 Web 服务器默认情况下会看到 Cloudflare IP 地址。</p><p>Cloudflare 会在名为 CF-Connecting-IP 的附加 HTTP 标头中添加实际的访问者 IP 地址。但是，如果您有其他依赖于真实访问者的IP 地址的应用程序，则可能会出现某些问题。</p><h2>第二步 制作IP黑名单</h2><p><strong>禁止ip频繁访问及自动拉黑名单，防CC/DDoS攻击的一般性方法</strong><br>以前我们对异常请求的IP进行封禁，即从nginx输出层面，返回<span class="external-link"><a href="https://zh.wikipedia.org/zh-hans/HTTP_403" target="_blank">403状态码<i data-feather='external-link'></i></a></span>，以减轻服务器压力；现在我们直接把收集到的异常IP，通过脚本自动提交至 Cloudflare 防火墙以实现从CDN前端进行封禁处理，自此该IP任何请求将不会到达源站服务器；</p><p>*注：短时间内IP发出大量请求，简单判定为异常，并将该IP加入黑名单即可；</p><p><strong>拉黑IP教程概要</strong><br>拉取/提取临时日志，分析临时日志，判定异常，生成异常IP列表，提交异常IP至<span class="external-link"><a href="https://cloudflare.com/" target="_blank">Cloudflare<i data-feather='external-link'></i></a></span>；</p><p><strong>第一步，拉取一定时间范围内的请求日志</strong><br>这一步你只需填写<code>原始日志</code>的正确位置，以及<code>临时日志</code>的存放位置即可；</p><pre><code>&gt; /home/f5.log; #每次拉取临时日志时清除上一次拉取的遗留下来的临时日志
+</div><br />
+<strong>Cloudflare 下 Nginx 获取用户真实IP 地址</strong></p>
+<p>当您的网站流量路由经过 Cloudflare 时，我们充当反向代理。 这允许 Cloudflare 通过更有 效地路由数据包并缓存静态资源（图片、JavaScript、CSS 等）来加快页面加载时间。因此， 在响应请求并记录请求时，您的源 Web 服务器默认情况下会看到 Cloudflare IP 地址。</p>
+<p>Cloudflare 会在名为 CF-Connecting-IP 的附加 HTTP 标头中添加实际的访问者 IP 地址。但是，如果您有其他依赖于真实访问者的IP 地址的应用程序，则可能会出现某些问题。</p>
+<p>参考：<span class="external-link"><a href="https://support.cloudflare.com/hc/zh-cn/articles/200170786-%E6%81%A2%E5%A4%8D%E5%8E%9F%E5%A7%8B%E8%AE%BF%E9%97%AE%E8%80%85-IP-%E4%BD%BF%E7%94%A8-mod-cloudflare-%E8%AE%B0%E5%BD%95%E8%AE%BF%E9%97%AE%E8%80%85-IP-%E5%9C%B0%E5%9D%80-" target="_blank">恢复原始访问者 IP：使用 mod_cloudflare 记录访问者 IP 地址<i data-feather='external-link'></i></a></span></p>
+<p><strong>Nginx vhost 单个域名配置示例</strong></p>
+<pre><code>include /usr/local/nginx/conf/webp.conf; #Webp
+
+##WAF配置
+lua_package_path "/usr/local/nginx/conf/vhost/waf/?.lua;;";
+lua_shared_dict limit 20m;
+init_by_lua_file  /home/vhost/waf/init.lua; 
+access_by_lua_file /home/vhost/waf/waf.lua; 
+##WAF配置
+
+limit_conn_zone $binary_remote_addr zone=one:10m;
+#limit_conn_zone $binary_remote_addr zone=two:10m;
+
+#获取用户真实IP，并赋值给变量$clientRealIP
+map $http_x_forwarded_for  $clientRealIp {
+""      $remote_addr;
+~^(?P&lt;firstAddr&gt;[0-9\.]+),?.*$  $firstAddr;
+}
+
+limit_req_zone $clientRealIP zone=ConnLimitZone:20m  rate=1r/s; #每秒最多1个请求
+limit_req_log_level notice;
+#limit_req zone=ConnLimitZone burst=10 nodelay; #允许10个请求突发
+limit_req_status 403; #突发15个/s，则有4个请求会返回403；
+
+server
+        {
+        listen 443 ssl http2;
+        #listen [::]:80;
+        server_name limbopro.xyz ;
+
+        include /home/whitelist.conf;
+        include /home/ip.blacklist.auto.echo.conf;
+        include /home/vhost/blacklist.conf; #看不顺眼
+
+        ##从CF IP 请求报头中提取真实用户IP
+        set_real_ip_from 103.21.244.0/22;
+        set_real_ip_from 103.22.200.0/22;
+        set_real_ip_from 103.31.4.0/22;
+        set_real_ip_from 104.16.0.0/12;
+        set_real_ip_from 108.162.192.0/18;
+        set_real_ip_from 131.0.72.0/22;
+        set_real_ip_from 141.101.64.0/18;
+        set_real_ip_from 162.158.0.0/15;
+        set_real_ip_from 172.64.0.0/13;
+        set_real_ip_from 173.245.48.0/20;
+        set_real_ip_from 188.114.96.0/20;
+        set_real_ip_from 190.93.240.0/20;
+        set_real_ip_from 197.234.240.0/22;
+        set_real_ip_from 198.41.128.0/17;
+        set_real_ip_from 2400:cb00::/32;
+        set_real_ip_from 2606:4700::/32;
+        set_real_ip_from 2803:f800::/32;
+        set_real_ip_from 2405:b500::/32;
+        set_real_ip_from 2405:8100::/32;
+        set_real_ip_from 2c0f:f248::/32;
+        set_real_ip_from 2a06:98c0::/29;
+        real_ip_header CF-Connecting-IP;
+        ##从CF IP 请求报头中提取真实用户IP
+
+        index index.php index.html;
+        #index index.php
+        root /home/wwwroot/typecho/;
+
+
+        #开启SSL 
+        #ssl on;
+        ssl_certificate    /etc/**.pem;
+        ssl_certificate_key /etc/**key.pem;
+        ssl_protocols       TLSv1 TLSv1.1 TLSv1.2 TLSv1.3;
+        ssl_ciphers     HIGH:!aNULL:!MD5; 
+
+        ##自定义403页面
+        #502 error pages 设置开始
+        error_page 403 /403.html;
+        location = /403.html {
+        #root   html;
+        allow all;
+        }
+
+        ##自定义502页面等
+        error_page 500 502 503 504 /50x.html;
+        location = /50x.html {
+        #root   html;
+        allow all;
+        } 
+
+        client_max_body_size    1024m;
+
+        ## Webp 图片按浏览器判定是否加载（Safari with jpg/Chrome with Webp）
+        location ~ .*\.(gif|jpg|jpeg|png)$ {
+        add_header Cache-Control "public, no-transform";
+        add_header Vary "Accept-Encoding";
+        try_files $uri$webp_suffix $uri =404;
+        expires max;
+        access_log off;
+        }
+
+        ## Deny access to PHP files in specific directory
+        location ~ /(wp-content|uploads|wp-includes|images)/.*\.php$ { deny all; }
+        include enable-php-pathinfo.conf;
+
+        ## 静态资源流控开始
+        location ~ .*\.(jpeg|jpg|png|webp|gif|zip|js|css|woff2|mp4|ico|woff|mp3|pdf|mobi|epub|azw3|eot?7176355|eot|map)?$
+        {
+        expires max;
+        access_log off;
+        limit_conn one 3; #最大同时开启3个链接数
+        limit_rate_after 2m; #前2MB资源下载不限速
+        limit_rate 512k; #下载完2MB后限速512Kb/s
+        #limit_req zone=ConnLimitZone burst=144 nodelay; 
+        fastcgi_param HTTPS on;
+        include /etc/nginx/fastcgi_params;
+        } 
+        ## 静态资源流控结束
+
+        #伪静态 开始
+        if (-f $request_filename/index.html){
+        rewrite (.*) $1/index.html break;
+        }
+        if (-f $request_filename/index.php){
+        rewrite (.*) $1/index.php;
+        }
+        if (!-e $request_filename){
+        rewrite (.*) /index.php;
+        }
+        #伪静态 结束
+
+        ## 禁用不安全的HTTP方法
+        if ($request_method !~ ^(GET|HEAD|POST)$ ) {
+        return 403;
+        }
+        #
+
+        access_log  /home/wwwlogs/limbopro.xyz/access.log;
+
+        }
+
+</code></pre>
+<span id="h-12" name="h-12"></span><h2>第二步 制作IP黑名单</h2>
+<p><strong>禁止ip频繁访问及自动拉黑名单，防CC/DDoS攻击的一般性方法</strong><br />
+以前我们对异常请求的IP进行封禁，即从nginx输出层面，返回<span class="external-link"><a href="https://zh.wikipedia.org/zh-hans/HTTP_403" target="_blank">403状态码<i data-feather='external-link'></i></a></span>，以减轻服务器压力；现在我们直接把收集到的异常IP，通过脚本自动提交至 Cloudflare 防火墙以实现从CDN前端进行封禁处理，自此该IP任何请求将不会到达源站服务器；</p>
+<p>*注：短时间内IP发出大量请求，简单判定为异常，并将该IP加入黑名单即可；</p>
+<p><strong>拉黑IP教程概要</strong><br />
+拉取/提取临时日志，分析临时日志，判定异常，生成异常IP列表，提交异常IP至<span class="external-link"><a href="https://cloudflare.com/" target="_blank">Cloudflare<i data-feather='external-link'></i></a></span>；</p>
+<p><strong>第一步，拉取一定时间范围内的请求日志</strong><br />
+这一步你只需填写<code>原始日志</code>的正确位置，以及<code>临时日志</code>的存放位置即可；</p>
+<pre><code>&gt; /home/f5.log; #每次拉取临时日志时清除上一次拉取的遗留下来的临时日志
 ## 拉取临时日志 
 function define()
 {
-    ori_log_path=&quot;/home/wwwlogs/limbopro.xyz/access.log&quot; #原始日志
-    tmp_log_path=&quot;/home/f5.log&quot; #拉取临时日志存放的位置
-    date_stamp=`date -d &quot;-2min&quot; +%Y:%H:%M:%S` #从原始日志处读取最近2分钟的日志记录并存储至临时日志处存放，这个2可以改为任意数字但不应该超过日志记录的起止期限
+    ori_log_path="/home/wwwlogs/limbopro.xyz/access.log" #原始日志
+    tmp_log_path="/home/f5.log" #拉取临时日志存放的位置
+    date_stamp=`date -d "-2min" +%Y:%H:%M:%S` #从原始日志处读取最近2分钟的日志记录并存储至临时日志处存放，这个2可以改为任意数字但不应该超过日志记录的起止期限
     day_stamp=`date +%d`
 }
 
 function gather()
 {
-    awk -F '[/ &quot;\[]' -vnstamp=&quot;$date_stamp&quot; -vdstamp=&quot;$day_stamp&quot; '$7&gt;=nstamp &amp;&amp; $5==dstamp' ${ori_log_path} &gt; ${tmp_log_path}; #拉取日志
+    awk -F '[/ "\[]' -vnstamp="$date_stamp" -vdstamp="$day_stamp" '$7&gt;=nstamp &amp;&amp; $5==dstamp' ${ori_log_path} &gt; ${tmp_log_path}; #拉取日志
     log_num=`cat ${tmp_log_path} | wc -l`; #计算请求次数
     request_time=`awk '{print $(NF-1)}' ${tmp_log_path} | awk '{sum+=$1}END{print sum}'`; #请求时间
-    ave_request_time=`echo | awk &quot;{print ${request_time}/${log_num}}&quot; `; #平均请求时间
+    ave_request_time=`echo | awk "{print ${request_time}/${log_num}}" `; #平均请求时间
     ipcounts=$(awk '{print $1}' ${tmp_log_path} | sort -n | uniq | wc -l); #统计IP个数
-    date=$(env LANG=en_US.UTF-8 date &quot;+%e/%b/%Y/%R&quot;)
+    date=$(env LANG=en_US.UTF-8 date "+%e/%b/%Y/%R")
 }
 
 function output()
 {
-date=$(env LANG=en_US.UTF-8 date &quot;+%e/%b/%Y/%R&quot;)
+date=$(env LANG=en_US.UTF-8 date "+%e/%b/%Y/%R")
 }
 
 function main()
@@ -776,19 +1209,25 @@ function main()
     output
 }
 
-main</code></pre><p>从原始日志处<code>/home/wwwlogs/limbopro.xyz/access.log</code>(以实际为准)拉取临时日志，并存放在<code>/home/f5.log</code>（你可自定义），然后对该临时日志进行分析；</p><p><strong>第二步，判定异常并制作黑名单</strong><br>这一步你只需定义<code>黑名单</code>存放位置（务必使用<code>.conf</code>后缀），以及单独拎出IP列表即下方的<code>/home/cf.conf</code>；</p><pre><code>##第三步 拉黑名单
-date=$(env LANG=en_US.UTF-8 date &quot;+%e/%b/%Y/%R&quot;)
+main</code></pre>
+<p>从原始日志处<code>/home/wwwlogs/limbopro.xyz/access.log</code>(以实际为准)拉取临时日志，并存放在<code>/home/f5.log</code>（你可自定义），然后对该临时日志进行分析；</p>
+<p><strong>第二步，判定异常并制作黑名单</strong><br />
+这一步你只需定义<code>黑名单</code>存放位置（务必使用<code>.conf</code>后缀），以及单独拎出IP列表即下方的<code>/home/cf.conf</code>；</p>
+<pre><code>##第三步 拉黑名单
+date=$(env LANG=en_US.UTF-8 date "+%e/%b/%Y/%R")
 blockip=/home/f5.conf #nginx封禁配置
 cfblockip=/home/cf.conf #定义IP黑名单集合留作给CF用
 access=/home/f5.log #读取临时日志
-for ip in $(awk '{cnt[$1]++;}END{for(i in cnt){printf(&quot;%s\t%s\n&quot;, cnt[i], i);}}' ${access} | awk '{if($1&gt;40) print $2}') 
+for ip in $(awk '{cnt[$1]++;}END{for(i in cnt){printf("%s\t%s\n", cnt[i], i);}}' ${access} | awk '{if($1&gt;40) print $2}') 
 ##请求次数超过40次即封禁 {if($1&gt;40)
 do 
-echo &quot;deny ${ip};&quot; &gt;&gt; $blockip
-echo &quot;${ip}&quot; &gt;&gt; $cfblockip
+echo "deny ${ip};" &gt;&gt; $blockip
+echo "${ip}" &gt;&gt; $cfblockip
 done
 
-lnmp nginx reload;</code></pre><p><strong>第三步，配置 nginx.conf 使之生效 </strong> （按理说，有了第四步，第三步或可不要）</p><pre><code>...
+lnmp nginx reload;</code></pre>
+<p><strong>第三步，配置 nginx.conf 使之生效 </strong> （按理说，有了第四步，第三步或可不要）</p>
+<pre><code>...
 server
 {
 listen 443 ssl http2;
@@ -797,22 +1236,43 @@ server_name limbopro.xyz ;
 include /home/whitelist.conf;
 include /home/f5.conf; #频繁刷新第一次
 ...
-}</code></pre><p>配置 nginx.conf，添加 <code>/home/f5.conf</code> 至 nginx.conf 配置文件，重启nginx即可生效；异常请求IP再次对网站发起请求时将会获得403状态码；</p><p><strong>第四步，提交黑名单至 Cloudflare </strong></p><p><img src="../usr/uploads/2020/01/4183459401.png" alt="What is Cloudflare_v7.png" title="What is Cloudflare_v7.png"><br>via Cloudflare CDN 工作原理示意图；</p><p>就算在nginx这里就返回了403状态码，但异常请求仍会对服务器性能造成损耗，所以我们只能从 Cloudflare 防火墙层面对异常请求进行封堵即可（参考Cloudflare CDN 工作原理示意图可见一二）；</p><p><img src="../usr/uploads/2020/01/4139985079.jpg" alt="Cloudflare firerule.jpg" title="Cloudflare firerule.jpg"></p><pre><code>#!/bin/bash
+}</code></pre>
+<p>配置 nginx.conf，添加 <code>/home/f5.conf</code> 至 nginx.conf 配置文件，重启nginx即可生效；异常请求IP再次对网站发起请求时将会获得403状态码；</p>
+<p><strong>第四步，提交黑名单至 Cloudflare </strong></p>
+<p><img src="../usr/uploads/2020/01/4183459401.png" alt="What is Cloudflare_v7.png" /><br />
+via Cloudflare CDN 工作原理示意图；</p>
+<p>就算在nginx这里就返回了403状态码，但异常请求仍会对服务器性能造成损耗，所以我们只能从 Cloudflare 防火墙层面对异常请求进行封堵即可（参考Cloudflare CDN 工作原理示意图可见一二）；</p>
+<p><img src="../usr/uploads/2020/01/4139985079.jpg" alt="Cloudflare firerule.jpg" /></p>
+<pre><code>#!/bin/bash
 # Author: Zhys
 # Date  : 2018
 # blog : https://www.9sep.org/
-CFEMAIL=&quot;Cloudflare 邮箱账号&quot; 
-CFAPIKEY=&quot;Cloudflare APIKEY&quot; #Cloudflare 控制面板-页面右上角-My Profile-API Tokens-API Keys-Global API Key 可以找到；
-ZONESID=&quot;Cloudflare ZONE ID&quot; #Cloudflare 控制面板-Overview 模块- 右侧栏 - API-ZONE ID可以找到
+CFEMAIL="Cloudflare 邮箱账号" 
+CFAPIKEY="Cloudflare APIKEY" #Cloudflare 控制面板-页面右上角-My Profile-API Tokens-API Keys-Global API Key 可以找到；
+ZONESID="Cloudflare ZONE ID" #Cloudflare 控制面板-Overview 模块- 右侧栏 - API-ZONE ID可以找到
 IPADDR=$(&lt;/home/cf.conf) #
 for IPADDR in ${IPADDR[@]}; do
 echo $IPADDR
-curl -s -X POST &quot;https://api.cloudflare.com/client/v4/zones/$ZONESID/firewall/access_rules/rules&quot; \
-  -H &quot;X-Auth-Email: $CFEMAIL&quot; \
-  -H &quot;X-Auth-Key: $CFAPIKEY&quot; \
-  -H &quot;Content-Type: application/json&quot; \
-  --data '{&quot;mode&quot;:&quot;block&quot;,&quot;configuration&quot;:{&quot;target&quot;:&quot;ip&quot;,&quot;value&quot;:&quot;'$IPADDR'&quot;},&quot;notes&quot;:&quot;limbo-auto-block&quot;}'
-done</code></pre><p>cf 自封禁完全脚本来自 <span class="external-link"><a href="https://www.9sep.org/cloudflare-batch-firewall-blacklist" target="_blank">9sep.org<i data-feather='external-link'></i></a></span>，另，我 for 循环不大会写，虽然看得懂；<br>大家可以把这三步做成一个脚本，使用 <span class="external-link"><a href="https://www.runoob.com/linux/linux-comm-crontab.html" target="_blank">Crontab<i data-feather='external-link'></i></a></span> 命令自动执行即可。</p><p>以上。</p><h2>效果展示</h2><p><img src="../usr/uploads/2020/01/2609950155.png" alt="IP list.png" title="IP list.png"></p><p><img src="../usr/uploads/2020/01/373909724.png" alt="Cloudflare block.png" title="Cloudflare block.png"></p><p><img src="../usr/uploads/2020/01/4108595482.png" alt="Cloudflare.png" title="Cloudflare.png"></p><p><img src="../usr/uploads/2020/01/3963418677.png" alt="Cloudflare.png" title="Cloudflare.png"></p><p>via <span class="external-link"><a href="https://t.me/limboprossr/1220" target="_blank">https://t.me/limboprossr/1220<i data-feather='external-link'></i></a></span></p><h2>IP Access Rules 的说明</h2><p>可登入<span class="external-link"><a href="https://dash.cloudflare.com/" target="_blank">Cloudflare<i data-feather='external-link'></i></a></span>-Firewall-Tools 模块下查看；</p><pre><code>IP Access Rules can be based on IP address, IP address range, Autonomous System Number (ASN) or country.</code></pre><p>即可基于 <code>IP地址</code>/<code>IP段</code>/<span class="external-link"><a href="https://zh.wikipedia.org/zh-hans/%E8%87%AA%E6%B2%BB%E7%B3%BB%E7%BB%9F" target="_blank">自治系统号<i data-feather='external-link'></i></a></span>/<code>国家</code>，进行相应操作，例如：</p><pre><code>What option should I choose?
+curl -s -X POST "https://api.cloudflare.com/client/v4/zones/$ZONESID/firewall/access_rules/rules" \
+  -H "X-Auth-Email: $CFEMAIL" \
+  -H "X-Auth-Key: $CFAPIKEY" \
+  -H "Content-Type: application/json" \
+  --data '{"mode":"block","configuration":{"target":"ip","value":"'$IPADDR'"},"notes":"limbo-auto-block"}'
+done</code></pre>
+<p>cf 自封禁完全脚本来自 <span class="external-link"><a href="https://www.9sep.org/cloudflare-batch-firewall-blacklist" target="_blank">9sep.org<i data-feather='external-link'></i></a></span>，另，我 for 循环不大会写，虽然看得懂；<br />
+大家可以把这三步做成一个脚本，使用 <span class="external-link"><a href="https://www.runoob.com/linux/linux-comm-crontab.html" target="_blank">Crontab<i data-feather='external-link'></i></a></span> 命令自动执行即可。</p>
+<p>以上。</p>
+<span id="h-13" name="h-13"></span><h2>效果展示</h2>
+<p><img src="../usr/uploads/2020/01/2609950155.png" alt="IP list.png" /></p>
+<p><img src="../usr/uploads/2020/01/373909724.png" alt="Cloudflare block.png" /></p>
+<p><img src="../usr/uploads/2020/01/4108595482.png" alt="Cloudflare.png" /></p>
+<p><img src="../usr/uploads/2020/01/3963418677.png" alt="Cloudflare.png" /></p>
+<p>via <span class="external-link"><a href="https://t.me/limboprossr/1220" target="_blank">https://t.me/limboprossr/1220<i data-feather='external-link'></i></a></span></p>
+<span id="h-14" name="h-14"></span><h2>IP Access Rules 的说明</h2>
+<p>可登入<span class="external-link"><a href="https://dash.cloudflare.com/" target="_blank">Cloudflare<i data-feather='external-link'></i></a></span>-Firewall-Tools 模块下查看；</p>
+<pre><code>IP Access Rules can be based on IP address, IP address range, Autonomous System Number (ASN) or country.</code></pre>
+<p>即可基于 <code>IP地址</code>/<code>IP段</code>/<span class="external-link"><a href="https://zh.wikipedia.org/zh-hans/%E8%87%AA%E6%B2%BB%E7%B3%BB%E7%BB%9F" target="_blank">自治系统号<i data-feather='external-link'></i></a></span>/<code>国家</code>，进行相应操作，例如：</p>
+<pre><code>What option should I choose?
 Block: Ensures that an IP address will never be allowed to access your website
 Challenge: Specified IP addresses will be shown a CAPTCHA before being allowed to access your website
 JavaScript Challenge: The JavaScript challenge page requires the visitor to wait 5 seconds while Cloudflare determines if the visitor is coming from a real browser. The challenge requires the visitor's browser to answer a math problem which takes a bit of time to compute. Once successfully answered, the browser will be remembered and won't be challenged again.
@@ -822,11 +1282,21 @@ IP Access Rules can be applied based on:
 
 IP address
 IP address range: Cloudflare accepts the following CIDR notations: /16 and /24 for IPv4 addresses and /64, /48, and /32 for IPv6
-Autonomous System Number (ASN): An ASN is the unique identifier for any network, such as the Cloudflare network (AS13335). The accepted format for ASN's is &quot;AS12345&quot;
-Country: Specified using ISO 2-letter country codes, such as &quot;US&quot; for the United States
+Autonomous System Number (ASN): An ASN is the unique identifier for any network, such as the Cloudflare network (AS13335). The accepted format for ASN's is "AS12345"
+Country: Specified using ISO 2-letter country codes, such as "US" for the United States
 You can apply IP Access Rules to this domain only or all domains in your account.
 
-To modify an existing Access Rule, create a new Access Rule and delete the existing one.</code></pre><p>Block（黑名单）/Challenge（验证码）/JavaScript Challenge(五秒盾)/Whitelist（白名单），按理说如果你是非 Cloudflare 付费用户，你只能一个一个Rule（规则）的添加，这个时候API就显得特别重要（无数量限制，且可制作脚本并利用 Crontab <br>自动执行实时相应操作）；</p><h2>Cloudflare API</h2><p><span class="external-link"><a href="https://api.cloudflare.com/#user-level-firewall-access-rule-properties" target="_blank">https://api.cloudflare.com/#user-level-firewall-access-rule-properties<i data-feather='external-link'></i></a></span> <br>*这个API可以用作提交指定IP至<code>IP Access Rules</code>里面（或可登入<span class="external-link"><a href="https://dash.cloudflare.com/" target="_blank">Cloudflare<i data-feather='external-link'></i></a></span>-Firewall-Tools-可以进行一个一个添加），批量的，可以进行脚本化，自动化（利用 <span class="external-link"><a href="http://www.runoob.com/linux/linux-comm-crontab.html" target="_blank">Crontab<i data-feather='external-link'></i></a></span> 命令定时执行脚本）；</p><p><strong>Cloudflare API 档案库</strong>：<span class="external-link"><a href="https://api.cloudflare.com/" target="_blank">https://api.cloudflare.com/<i data-feather='external-link'></i></a></span> ，例如利用脚本<span class="external-link"><a href="https://api.cloudflare.com/#user-level-firewall-access-rule-list-access-rules" target="_blank">自动切换防御模式<i data-feather='external-link'></i></a></span>，<span class="external-link"><a href="https://api.cloudflare.com/#zone-purge-all-files" target="_blank">清除或开启缓存<i data-feather='external-link'></i></a></span>，增加或修改<span class="external-link"><a href="https://api.cloudflare.com/#page-rules-for-a-zone-update-page-rule" target="_blank">PageRules<i data-feather='external-link'></i></a></span>等等；</p><h2>cURL 命令</h2><p>curl命令是一个利用URL规则在命令行下工作的文件传输工具。 它支持文件的上传和下载。 curl支持包括<code>HTTP</code>、<code>HTTPS</code>、<code>ftp</code>等众多协议，还支持<code>POST</code>、<code>cookies</code>、<code>认证</code>、从指定偏移处下载部分文件、用户代理字符串、限速、文件大小、进度条等特征。</p><p>via <span class="external-link"><a href="https://blog.csdn.net/u012340794/article/details/71440604" target="_blank">CSDN<i data-feather='external-link'></i></a></span></p><p><div class="preview">
+To modify an existing Access Rule, create a new Access Rule and delete the existing one.</code></pre>
+<p>Block（黑名单）/Challenge（验证码）/JavaScript Challenge(五秒盾)/Whitelist（白名单），按理说如果你是非 Cloudflare 付费用户，你只能一个一个Rule（规则）的添加，这个时候API就显得特别重要（无数量限制，且可制作脚本并利用 Crontab<br />
+自动执行实时相应操作）；</p>
+<span id="h-15" name="h-15"></span><h2>Cloudflare API</h2>
+<p><span class="external-link"><a href="https://api.cloudflare.com/#user-level-firewall-access-rule-properties" target="_blank">https://api.cloudflare.com/#user-level-firewall-access-rule-properties<i data-feather='external-link'></i></a></span><br />
+*这个API可以用作提交指定IP至<code>IP Access Rules</code>里面（或可登入<span class="external-link"><a href="https://dash.cloudflare.com/" target="_blank">Cloudflare<i data-feather='external-link'></i></a></span>-Firewall-Tools-可以进行一个一个添加），批量的，可以进行脚本化，自动化（利用 <span class="external-link"><a href="http://www.runoob.com/linux/linux-comm-crontab.html" target="_blank">Crontab<i data-feather='external-link'></i></a></span> 命令定时执行脚本）；</p>
+<p><strong>Cloudflare API 档案库</strong>：<span class="external-link"><a href="https://api.cloudflare.com/" target="_blank">https://api.cloudflare.com/<i data-feather='external-link'></i></a></span> ，例如利用脚本<span class="external-link"><a href="https://api.cloudflare.com/#user-level-firewall-access-rule-list-access-rules" target="_blank">自动切换防御模式<i data-feather='external-link'></i></a></span>，<span class="external-link"><a href="https://api.cloudflare.com/#zone-purge-all-files" target="_blank">清除或开启缓存<i data-feather='external-link'></i></a></span>，增加或修改<span class="external-link"><a href="https://api.cloudflare.com/#page-rules-for-a-zone-update-page-rule" target="_blank">PageRules<i data-feather='external-link'></i></a></span>等等；</p>
+<span id="h-16" name="h-16"></span><h2>cURL 命令</h2>
+<p>curl命令是一个利用URL规则在命令行下工作的文件传输工具。 它支持文件的上传和下载。 curl支持包括<code>HTTP</code>、<code>HTTPS</code>、<code>ftp</code>等众多协议，还支持<code>POST</code>、<code>cookies</code>、<code>认证</code>、从指定偏移处下载部分文件、用户代理字符串、限速、文件大小、进度条等特征。</p>
+<p>via <span class="external-link"><a href="https://blog.csdn.net/u012340794/article/details/71440604" target="_blank">CSDN<i data-feather='external-link'></i></a></span></p>
+<p><div class="preview">
 <div class="post-inser post box-shadow-wrap-normal">
 <a href="tgbotalert.html" target="_blank" class="post_inser_a ">
 <div class="inner-image bg" style="background-image: url(../usr/uploads/2019/12/2912835083.jpg);background-size: cover;"></div>
@@ -840,40 +1310,49 @@ To modify an existing Access Rule, create a new Access Rule and delete the exist
 
 </div>
 
-</div></p><h2>cURL 方法</h2><p>使用 cURL 命令调用Cloudflare User-level Firewall Access Rule API的方法（官方举例）：</p><pre><code>curl -X POST &quot;https://api.cloudflare.com/client/v4/user/firewall/access_rules/rules&quot; \
-     -H &quot;X-Auth-Email: <a href="../cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3a4f495f487a5f425b574a565f14595557">[email&#160;protected]</a>&quot; \
-     -H &quot;X-Auth-Key: c2547eb745079dac9320b638f5e225cf483cc5cfdda41&quot; \
-     -H &quot;Content-Type: application/json&quot; \
-     --data '{&quot;mode&quot;:&quot;challenge&quot;,&quot;configuration&quot;:{&quot;target&quot;:&quot;ip&quot;,&quot;value&quot;:&quot;198.51.100.4&quot;},&quot;notes&quot;:&quot;This rule is on because of an event that occured on date X&quot;}'</code></pre><p>Cloudflare 服务器返回成功状态（官方举例）</p><pre><code>{
-  &quot;success&quot;: true,
-  &quot;errors&quot;: [],
-  &quot;messages&quot;: [],
-  &quot;result&quot;: {
-    &quot;id&quot;: &quot;92f17202ed8bd63d69a66b86a49a8f6b&quot;,
-    &quot;notes&quot;: &quot;This rule is on because of an event that occured on date X&quot;,
-    &quot;allowed_modes&quot;: [
-      &quot;whitelist&quot;,
-      &quot;block&quot;,
-      &quot;challenge&quot;,
-      &quot;js_challenge&quot;
+</div></p>
+<span id="h-17" name="h-17"></span><h2>cURL 方法</h2>
+<p>使用 cURL 命令调用Cloudflare User-level Firewall Access Rule API的方法（官方举例）：</p>
+<pre><code>curl -X POST "https://api.cloudflare.com/client/v4/user/firewall/access_rules/rules" \
+     -H "X-Auth-Email: <a href="../cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4134322433012439202c312d246f222e2c">[email&#160;protected]</a>" \
+     -H "X-Auth-Key: c2547eb745079dac9320b638f5e225cf483cc5cfdda41" \
+     -H "Content-Type: application/json" \
+     --data '{"mode":"challenge","configuration":{"target":"ip","value":"198.51.100.4"},"notes":"This rule is on because of an event that occured on date X"}'</code></pre>
+<p>Cloudflare 服务器返回成功状态（官方举例）</p>
+<pre><code>{
+  "success": true,
+  "errors": [],
+  "messages": [],
+  "result": {
+    "id": "92f17202ed8bd63d69a66b86a49a8f6b",
+    "notes": "This rule is on because of an event that occured on date X",
+    "allowed_modes": [
+      "whitelist",
+      "block",
+      "challenge",
+      "js_challenge"
     ],
-    &quot;mode&quot;: &quot;challenge&quot;,
-    &quot;configuration&quot;: {
-      &quot;target&quot;: &quot;ip&quot;,
-      &quot;value&quot;: &quot;198.51.100.4&quot;
+    "mode": "challenge",
+    "configuration": {
+      "target": "ip",
+      "value": "198.51.100.4"
     },
-    &quot;created_on&quot;: &quot;2014-01-01T05:20:00.12345Z&quot;,
-    &quot;modified_on&quot;: &quot;2014-01-01T05:20:00.12345Z&quot;,
-    &quot;scope&quot;: {
-      &quot;id&quot;: &quot;7c5dae5552338874e5053f2534d2767a&quot;,
-      &quot;email&quot;: &quot;<a href="../cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c8bdbbadba88adb0a9a5b8a4ade6aba7a5">[email&#160;protected]</a>&quot;,
-      &quot;type&quot;: &quot;user&quot;
+    "created_on": "2014-01-01T05:20:00.12345Z",
+    "modified_on": "2014-01-01T05:20:00.12345Z",
+    "scope": {
+      "id": "7c5dae5552338874e5053f2534d2767a",
+      "email": "<a href="../cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7e0b0d1b0c3e1b061f130e121b501d1113">[email&#160;protected]</a>",
+      "type": "user"
     }
   }
-}</code></pre><h2>联系主理人</h2><p>1.关注频道 <span class="external-link"><a href="https://t.me/limboprossr" target="_blank">https://t.me/limboprossr<i data-feather='external-link'></i></a></span> 不失联；<br>2.<code>毒奶粉</code>们（我管我的Fans）可联系 <a href="../usr/uploads/2019/10/3453243330.png">TG机器人</a> 或发送 <a href="../usr/uploads/2019/10/3453243330.png">邮件</a> 获取帮助；</p><p>3.或点击<code>本页面右下角</code>的聊天按钮联系；</p><hr class="content-copyright" style="margin-top:50px" /><blockquote class="content-copyright" style="font-style:normal"><p class="content-copyright">版权属于：<a class="content-copyright" target="_blank" href="https://t.me/limboprobot">毒奶博主</a><br>联系我们： <a class="content-copyright" target="_blank" href="../6.html">https://limbopro.xyz/6.html</a> <br>电报频道： <a class="content-copyright" target="_blank" href="https://t.me/limboprossr">https://t.me/limboprossr</a><br>必备技能： <a class="content-copyright" target="_blank" href="2910.html">https://limbopro.xyz/archives/2910.html</a><br>网站镜像： <a class="content-copyright" target="_blank" href="https://limbopro.github.io">https://limbopro.github.io</a></p><p class="content-copyright">本文链接：<a class="content-copyright" href="6949.html">https://limbopro.xyz/archives/6949.html</a></p><p class="content-copyright">版权声明：<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本文采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0 许可协议</a> ，转载和引用时请注意遵守协议！</p></blockquote>
+}</code></pre>
+<span id="h-18" name="h-18"></span><h2>联系主理人</h2>
+<p>1.关注频道 <span class="external-link"><a href="https://t.me/limboprossr" target="_blank">https://t.me/limboprossr<i data-feather='external-link'></i></a></span> 不失联；<br />
+2.<code>毒奶粉</code>们（我管我的Fans）可联系 <a href="../usr/uploads/2019/10/3453243330.png">TG机器人</a> 或发送 <a href="../usr/uploads/2019/10/3453243330.png">邮件</a> 获取帮助；</p>
+<p>3.或点击<code>本页面右下角</code>的聊天按钮联系；</p><hr class="content-copyright" style="margin-top:50px" /><blockquote class="content-copyright" style="font-style:normal"><p class="content-copyright">版权属于：<a class="content-copyright" target="_blank" href="https://t.me/limboprobot">毒奶</a><br>联系我们： <a class="content-copyright" target="_blank" href="../6.html">https://limbopro.xyz/6.html</a> <br>电报频道： <a class="content-copyright" target="_blank" href="https://t.me/limboprossr">https://t.me/limboprossr</a> <br>推特账号： <a class="content-copyright" target="_blank" href="https://twitter.com/limboprossr">https://twitter.com/limboprossr</a> <br>集美账号： <a class="content-copyright" target="_blank" href="https://www.instagram.com/limboprossr/">https://www.instagram.com/limboprossr/</a> <br>油管账号 ： <a class="content-copyright" target="_blank" href="https://www.youtube.com/channel/UCopiQ6DaRujU9iV9g-zrrMQ">http://bit.ly/2VJcz7o/</a> <br>机场推荐： <a class="content-copyright" target="_blank" href="../865.html">https://limbopro.xyz/865.html</a><br>上网必会： <a class="content-copyright" target="_blank" href="2910.html">https://limbopro.xyz/archives/2910.html</a> <br>广告屏蔽： <a class="content-copyright" target="_blank" href="adguard.html">https://limbopro.xyz/archives/adguard.html</a> <br>实用工具： <a class="content-copyright" target="_blank" href="../category/tools/index.html">https://limbopro.xyz/category/tools/</a> <br>网站优化： <a class="content-copyright" target="_blank" href="../category/Typecho/index.html">https://limbopro.xyz/category/Typecho/</a> <br>美图欣赏： <a class="content-copyright" target="_blank" href="../category/instagram/index.html">https://limbopro.xyz/category/instagram/</a> <br>开车专栏： <a class="content-copyright" target="_blank" href="../category/NSFW/index.html">https://limbopro.xyz/category/NSFW/</a> <br>网站镜像： <a class="content-copyright" target="_blank" href="https://limbopro.github.io">https://limbopro.github.io</a></p><p class="content-copyright">本文链接：<a class="content-copyright" href="6949.html">https://limbopro.xyz/archives/6949.html</a></p><p class="content-copyright"><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本文采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0 许可协议</a> ，转载和引用时请注意遵守协议！</p></blockquote>
 </div>
 </div>
-<script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="4187e6035196dafbc3e21229-text/javascript">
+<script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="5081b4c98ce58768317681f1-text/javascript">
         try {
             $("[data-morphing]").fancyMorph({
                 hash : 'morphing'
@@ -884,7 +1363,7 @@ To modify an existing Access Rule, create a new Access Rule and delete the exist
 
             </script>
 
-<script type="4187e6035196dafbc3e21229-text/javascript">
+<script type="5081b4c98ce58768317681f1-text/javascript">
 (function () {
     window.TypechoComment = {
         dom : function (id) {
@@ -956,7 +1435,7 @@ To modify an existing Access Rule, create a new Access Rule and delete the exist
     };
 })();
 </script>
-<script type="4187e6035196dafbc3e21229-text/javascript">
+<script type="5081b4c98ce58768317681f1-text/javascript">
 var registCommentEvent = function() {
     var event = document.addEventListener ? {
         add: 'addEventListener',
@@ -981,31 +1460,35 @@ var registCommentEvent = function() {
                         input.type = 'hidden';
                         input.name = '_';
                             input.value = (function () {
-    var _omp = //'P'
-'d2'+'y'//'y'
-+//'HMf'
-'ed'+'90'//'qc'
-+'0a'//'OPZ'
-+'84'//'R9g'
-+//'ZS'
-'b67'+//'D'
-'03e'+//'r5'
-'a'+'ff4'//'U'
-+'9'//'x'
-+//'2o'
-'2o'+//'M'
-'559'+//'f1T'
-'4f'+''///*'M'*/'M'
-+//'al'
-'a4a'+'a9'//'Nq'
-+'0'//'BC'
-, _p4nxO = [[2,3],[21,23]];
+    var _zMbI6nk = //'TX'
+'d2'+''///*'dm'*/'dm'
++'ed'//'Z5U'
++'900'//'i'
++'ods'//'ods'
++'a8'//'6'
++//'u'
+'4b'+//'Di'
+'Di'+/* 'Fz'//'Fz' */''+//'9p'
+'6'+'70'//'t'
++'3'//'P'
++//'C'
+'C'+//'J'
+'e'+//'78'
+'aff'+'49'//'xN'
++'559'//'6E'
++//'Q'
+'4fa'+//'F'
+'4'+/* 'J1Z'//'J1Z' */''+''///*'aT'*/'aT'
++'aa'//'U'
++'Td'//'Td'
++'90'//'stx'
+, _oUNgw = [[7,10],[11,13],[15,16],[30,32]];
     
-    for (var i = 0; i < _p4nxO.length; i ++) {
-        _omp = _omp.substring(0, _p4nxO[i][0]) + _omp.substring(_p4nxO[i][1]);
+    for (var i = 0; i < _oUNgw.length; i ++) {
+        _zMbI6nk = _zMbI6nk.substring(0, _oUNgw[i][0]) + _zMbI6nk.substring(_oUNgw[i][1]);
     }
 
-    return _omp;
+    return _zMbI6nk;
 })();
                     
                         f.appendChild(input);
@@ -1029,7 +1512,9 @@ var registCommentEvent = function() {
 <footer id="footer" class="app-footer" role="footer">
 <div class="wrapper bg-light">
 <span class="pull-right hidden-xs text-ellipsis">
-3813803846
+<a target="_blank" href="https://www.cloudflare.com"><img src="../usr/uploads/2020/03/2472081224.png" style="width: 50px;"></a>
+<a target="_blank" href="https://github.com/limbopro/Pandora"><img src="../usr/uploads/2020/03/2878577379.png" style="width: 40px;"></a>
+4000096226
 丨3人在线丨
 Powered by <a target="_blank" href="http://www.typecho.org">Typecho</a>&nbsp;|&nbsp;Theme by <a target="_blank" href="https://www.ihewro.com/archives/489/">handsome</a>
 </span>
@@ -1094,51 +1579,47 @@ Powered by <a target="_blank" href="http://www.typecho.org">Typecho</a>&nbsp;|&n
 </div>
 </footer>
 </div>
+<script src="https://cdn.bootcss.com/jquery/2.1.4/jquery.min.js" type="5081b4c98ce58768317681f1-text/javascript"></script> <script src="../usr/plugins/MenuTree/dropdown.js?v=0.8.0" type="5081b4c98ce58768317681f1-text/javascript"></script>
+<script type="5081b4c98ce58768317681f1-text/javascript">
+            jQuery('body').append('');
+            jQuery('.in-page-preview-buttons .dropdown-menu.keep-open').on('click', function (e) {
+              e.stopPropagation();
+            });
+            </script><script type="5081b4c98ce58768317681f1-text/javascript">
+SearchConfig = {
+    url : "https://limbopro.xyz/usr/plugins/Handsome/cache/search.json"
+}
+</script>
 <style>
 	img {
 		cursor: pointer;
 		transition: -webkit-transform 0.1s ease
 	}
 	img:hover{
-		transform: scale(1.01);
-		-ms-transform: scale(1.01);	/* IE 9 */
-		-webkit-transform: scale(1.01);	/* Safari 和 Chrome */
-		-o-transform: scale(1.01);	/* Opera */
-		-moz-transform: scale(1.01);	/* Firefox */
+		transform: scale(1);
+		-ms-transform: scale(1);	/* IE 9 */
+		-webkit-transform: scale(1);	/* Safari 和 Chrome */
+		-o-transform: scale(1);	/* Opera */
+		-moz-transform: scale(1);	/* Firefox */
 	}
 	img:focus {
-		transform: scale(1.4);
-		-ms-transform: scale(1.4);	/* IE 9 */
-		-webkit-transform: scale(1.4);	/* Safari 和 Chrome */
-		-o-transform: scale(1.4);	/* Opera */
-		-moz-transform: scale(1.4);	/* Firefox */
+		transform: scale(1.6);
+		-ms-transform: scale(1.6);	/* IE 9 */
+		-webkit-transform: scale(1.6);	/* Safari 和 Chrome */
+		-o-transform: scale(1.6);	/* Opera */
+		-moz-transform: scale(1.6);	/* Firefox */
 	}
 </style>
-<script type="4187e6035196dafbc3e21229-text/javascript">
+<script type="5081b4c98ce58768317681f1-text/javascript">
 	document.addEventListener('DOMContentLoaded', function(){
 		var imgs = document.querySelectorAll('img');
 		Array.prototype.forEach.call(imgs, function(el, i) {
 			if (el.tabIndex <= 0) el.tabIndex = 100;
 		});
 	});
-</script><script type="4187e6035196dafbc3e21229-text/javascript">
-	(function(){
-		var pres = document.querySelectorAll('pre');
-		var lineNumberClassName = 'line-numbers';
-		pres.forEach(function (item, index) {
-			item.className = item.className == '' ? lineNumberClassName : item.className + ' ' + lineNumberClassName;
-		});
-	})();
-</script>
-<script type="4187e6035196dafbc3e21229-text/javascript" src="../usr/plugins/CodePrettify/static/clipboard.min.js"></script>
-<script type="4187e6035196dafbc3e21229-text/javascript" src="../usr/plugins/CodePrettify/static/prism.js"></script>
-<script type="4187e6035196dafbc3e21229-text/javascript">
-SearchConfig = {
-    url : "https://limbopro.xyz/usr/plugins/Handsome/cache/search.json"
-}
 </script>
 
-<script type="4187e6035196dafbc3e21229-text/javascript">
+<script type="5081b4c98ce58768317681f1-text/javascript">
         window['LocalConst'] = {
             COMMENT_NAME_INFO: '必须填写昵称或姓名',
             COMMENT_EMAIL_INFO: '必须填写电子邮箱地址',
@@ -1210,9 +1691,9 @@ SearchConfig = {
 
     </script>
 
-<script src="../usr/themes/handsome/assets/libs/bootstrap/js/bootstrap.min.js" type="4187e6035196dafbc3e21229-text/javascript"></script>
-<script src="../usr/themes/handsome/assets/js/features/jquery.pjax.min.js" type="4187e6035196dafbc3e21229-text/javascript"></script>
-<script type="4187e6035196dafbc3e21229-text/javascript">
+<script src="../usr/themes/handsome/assets/libs/bootstrap/js/bootstrap.min.js" type="5081b4c98ce58768317681f1-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/js/features/jquery.pjax.min.js" type="5081b4c98ce58768317681f1-text/javascript"></script>
+<script type="5081b4c98ce58768317681f1-text/javascript">
         $(document).pjax('a[href^="https://limbopro.xyz/"]:not(a[target="_blank"], a[no-pjax])', {
             container: '#content',
             fragment: '#content',
@@ -1239,7 +1720,7 @@ SearchConfig = {
     </script>
 
 
-<script type="4187e6035196dafbc3e21229-text/javascript">
+<script type="5081b4c98ce58768317681f1-text/javascript">
         window.paceOptions = {
             ajax: {
                 ignoreURLs: ['/.*Get.php.*/']
@@ -1249,23 +1730,23 @@ SearchConfig = {
             restartOnRequestAfter: false
         };
     </script>
-<script src="../usr/themes/handsome/assets/js/features/pace.min.js" type="4187e6035196dafbc3e21229-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/js/features/pace.min.js" type="5081b4c98ce58768317681f1-text/javascript"></script>
 <link href="../usr/themes/handsome/assets/css/features/pjax/pace-theme-minimal.min.css" rel="stylesheet">
 <style>
                         .pace .pace-progress{
     background: #000000;
 }        </style>
-<script src="../usr/themes/handsome/assets/js/features/feather.min.js?v=6.0.020191205" type="4187e6035196dafbc3e21229-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/js/features/feather.min.js?v=6.0.020191205" type="5081b4c98ce58768317681f1-text/javascript"></script>
 
-<script src="../usr/themes/handsome/assets/js/features/jquery.fancybox.min.js?v=6.0.020191205" type="4187e6035196dafbc3e21229-text/javascript"></script>
-<script src="../usr/themes/handsome/assets/js/features/easypiechart.min.js?v=6.0.020191205" type="4187e6035196dafbc3e21229-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/js/features/jquery.fancybox.min.js?v=6.0.020191205" type="5081b4c98ce58768317681f1-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/js/features/easypiechart.min.js?v=6.0.020191205" type="5081b4c98ce58768317681f1-text/javascript"></script>
 
 
-<script src="../usr/themes/handsome/assets/js/function.min.js?v=6.0.020191205" type="4187e6035196dafbc3e21229-text/javascript"></script>
-<script src="../usr/themes/handsome/assets/js/core.min.js?v=6.0.020191205" type="4187e6035196dafbc3e21229-text/javascript"></script>
-<script src="../usr/themes/handsome/assets/js/features/setting.min.js?v=6.0.020191205" type="4187e6035196dafbc3e21229-text/javascript"></script>
-<script type="4187e6035196dafbc3e21229-text/javascript">
+<script src="../usr/themes/handsome/assets/js/function.min.js?v=6.0.020191205" type="5081b4c98ce58768317681f1-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/js/core.min.js?v=6.0.020191205" type="5081b4c98ce58768317681f1-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/js/features/setting.min.js?v=6.0.020191205" type="5081b4c98ce58768317681f1-text/javascript"></script>
+<script type="5081b4c98ce58768317681f1-text/javascript">
             </script>
-<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="4187e6035196dafbc3e21229-|49" defer=""></script></body>
+<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="5081b4c98ce58768317681f1-|49" defer=""></script></body>
 </html>
 

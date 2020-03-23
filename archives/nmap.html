@@ -4,14 +4,12 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 <meta charset="UTF-8">
-
 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-
 <meta name="renderer" content="webkit">
-
 <meta name="theme-color" content="#ff393e" />
 <meta http-equiv="x-dns-prefetch-control" content="on">
 <link rel="dns-prefetch" href="../index.html" />
+<link rel="dns-prefetch" href="https://www.pixiv.world/" />
 <link rel="dns-prefetch" href="https://www.doubleclickbygoogle.com/" />
 <link rel="dns-prefetch" href="https://www.google.com/" />
 <link rel="dns-prefetch" href="https://marketingplatform.google.com/" />
@@ -22,16 +20,32 @@
 <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com/" />
 <link rel="dns-prefetch" href="https://www.google-analytics.com/" />
 <link rel="dns-prefetch" href="https://googleads.g.doubleclick.net/" />
-<title>Nmap丨暗黑互联网扫描器丨IPv4端口扫描 - 毒奶博主丨欢迎使用代理访问本站。</title>
+<link rel="dns-prefetch" href="https://twitter.com/" />
 <link rel="icon" type="image/ico" href="../favicon.ico">
-<meta name="description" content="本文隶属于 软件百科 分类，点击分类名称可以查看更多相关文章；主理人说为了安全，给你的网站套个CDN（例如 Cloudflare），将源站服务器隐藏在其后；CensysCensys 可以看成是前..." />
-<meta name="keywords" content="DDOS,扫描器" />
-<meta name="generator" content="Typecho 1.1/17.10.30" />
-<meta name="template" content="handsome" />
-<link rel="alternate" type="application/rss+xml" title="Nmap丨暗黑互联网扫描器丨IPv4端口扫描 &raquo; 毒奶博主丨欢迎使用代理访问本站。 &raquo; RSS 2.0" href="../feed/archives/nmap.html" />
-<link rel="alternate" type="application/rdf+xml" title="Nmap丨暗黑互联网扫描器丨IPv4端口扫描 &raquo; 毒奶博主丨欢迎使用代理访问本站。 &raquo; RSS 1.0" href="../feed/rss/archives/nmap.html" />
-<link rel="alternate" type="application/atom+xml" title="Nmap丨暗黑互联网扫描器丨IPv4端口扫描 &raquo; 毒奶博主丨欢迎使用代理访问本站。 &raquo; ATOM 1.0" href="../feed/atom/archives/nmap.html" />
-<link rel="stylesheet" type="text/css" href="../usr/plugins/CodePrettify/static/styles/dark.css" />
+
+<title>Nmap丨暗黑互联网扫描器 - 毒奶丨欢迎使用代理访问本站。</title>
+<meta name="title" content="Nmap丨暗黑互联网扫描器 - 毒奶丨欢迎使用代理访问本站。">
+<meta name="author" content="毒奶">
+<meta name="description" content="扫描网站或服务器IP开放端口及对应服务，为下一步入侵做准备或防御。">
+<meta name="image" content="https://limbopro.xyz/usr/uploads/2020/01/2671133890.jpg">
+
+<meta itemprop="name" content="Nmap丨暗黑互联网扫描器 - 毒奶丨欢迎使用代理访问本站。">
+<meta itemprop="author" content="毒奶">
+<meta itemprop="description" content="扫描网站或服务器IP开放端口及对应服务，为下一步入侵做准备或防御。">
+<meta itemprop="image" content="https://limbopro.xyz/usr/uploads/2020/01/2671133890.jpg">
+
+<meta property="og:url" content="https://limbopro.xyz/archives/nmap.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Nmap丨暗黑互联网扫描器 - 毒奶丨欢迎使用代理访问本站。">
+<meta property="og:description" content="扫描网站或服务器IP开放端口及对应服务，为下一步入侵做准备或防御。">
+<meta property="og:image" content="https://limbopro.xyz/usr/uploads/2020/01/2671133890.jpg">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@limboprossr">
+<meta name="twitter:creator" content="@limboprossr">
+<meta name="twitter:title" content="Nmap丨暗黑互联网扫描器 - 毒奶丨欢迎使用代理访问本站。">
+<meta name="twitter:description" content="扫描网站或服务器IP开放端口及对应服务，为下一步入侵做准备或防御。">
+<meta property="twitter:image" content="https://limbopro.xyz/usr/uploads/2020/01/2671133890.jpg">
 
 <link href="../usr/themes/handsome/assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -39,7 +53,6 @@
 <link rel="stylesheet" href="../usr/themes/handsome/assets/css/handsome.min.css?v=6.0.020191205" type="text/css" />
 
 <link rel="stylesheet" href="../usr/themes/handsome/assets/css/features/jquery.fancybox.min.css?v=6.0.020191205" type="text/css" />
-<link rel="stylesheet" href="../usr/themes/handsome/assets/css/features/newblack.min.css?v=6.0.020191205" type="text/css" />
 <link rel="stylesheet" href="../usr/themes/handsome/assets/css/features/code/custom.min.css?v=6.0.020191205" type="text/css" />
 <link rel="stylesheet" href="../usr/themes/handsome/assets/css/features/coolopacity.min.css?v=6.0.020191205" type="text/css" />
 <style>
@@ -48,7 +61,7 @@
                 filter: blur(20px);
             }
         </style>
- 
+
 <style type="text/css">
         
         html.bg {
@@ -78,22 +91,46 @@
 	color: #999;
 }    </style>
 
-<script src="../usr/themes/handsome/assets/libs/jquery/jquery.min.js" type="56788d79325cb39df6c748a1-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/libs/jquery/jquery.min.js" type="e04efd4f418e170e3897ca92-text/javascript"></script>
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140019039-1" type="56788d79325cb39df6c748a1-text/javascript"></script>
-<script type="56788d79325cb39df6c748a1-text/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140019039-1" type="e04efd4f418e170e3897ca92-text/javascript"></script>
+<script type="e04efd4f418e170e3897ca92-text/javascript">
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'UA-140019039-1');
 </script>
-<script src="../usr/themes/handsome/assets/js/features/fancyMorph.min.js" type="56788d79325cb39df6c748a1-text/javascript"></script>
-</head>
-<body id="body" class="fix-padding">
 
+<script src='https://www.google.com/recaptcha/api.js?render=<?php echo SITE_KEY; ?>' type="e04efd4f418e170e3897ca92-text/javascript"></script>
+<script src="https://www.google.com/recaptcha/api.js?render=6Lc3n98UAAAAAD65utb41JWcKBgdLSTYOhTcyVFe" type="e04efd4f418e170e3897ca92-text/javascript"></script>
+<script type="e04efd4f418e170e3897ca92-text/javascript">
+grecaptcha.ready(function() {
+    grecaptcha.execute('_reCAPTCHA_site_key_', {action: 'homepage'}).then(function(token) {
+       ...
+    });
+});
+</script>
+
+
+<script type="e04efd4f418e170e3897ca92-text/javascript">
+(function($){
+    setInterval(() => {
+        $.each($('iframe'), (arr,x) => {
+            let src = $(x).attr('src');
+            if (src && src.match(/(ads-iframe)|(disqusads)/gi)) {
+                $(x).remove();
+            }
+        });
+    }, 300);
+})(jQuery);
+</script>
+ <script src="../usr/themes/handsome/assets/js/features/fancyMorph.min.js" type="e04efd4f418e170e3897ca92-text/javascript"></script>
+</head>
+<body id="body" class="fix-padding"> 
 <div id="alllayout" class="app app-aside-fix container app-header-fixed "> 
+<script src="https://www.recaptcha.net/recaptcha/api.js" type="e04efd4f418e170e3897ca92-text/javascript"></script>
 <header id="header" class="fix-padding app-header navbar box-shadow-bottom-lg" role="menu">
 
 <div class="text-ellipsis navbar-header bg-danger">
@@ -182,7 +219,7 @@
 <strong class="font-bold text-lt">毒奶</strong>
 <b class="caret"></b>
 </span>
-<span class="text-muted text-xs block"><script type="56788d79325cb39df6c748a1-application/javascript"> function getip(json){     document.write( json.ip); } </script> <script type="56788d79325cb39df6c748a1-application/javascript" src="https://api.ip.sb/jsonip?callback=getip"></script><br>网上冲浪爱好者<br>业余斜杆青年<br>增长黑客<br>Attack</span>
+<span class="text-muted text-xs block"><script type="e04efd4f418e170e3897ca92-application/javascript"> function getip(json){     document.write( json.ip); } </script> <script type="e04efd4f418e170e3897ca92-application/javascript" src="https://api.ip.sb/jsonip?callback=getip"></script> <br>网上冲浪爱好者<br>业余斜杆青年<br>建站与防御<br>佛系更新</span>
 </span>
 </a>
 
@@ -193,7 +230,7 @@
 <p>晚上好，注意早点休息</p>
 </div>
 <div class="progress progress-xs m-b-none dker">
-<div class="progress-bar bg-white" data-toggle="tooltip" data-original-title="时间已经度过0.00%" style="width: 0.00%"></div>
+<div class="progress-bar bg-white" data-toggle="tooltip" data-original-title="时间已经度过12.50%" style="width: 12.50%"></div>
 </div>
 </li>
 </ul>
@@ -217,7 +254,7 @@
 </a>
 </li>
 
-<li> <a target="_self" href="../6.html" class="auto"><span class="nav-icon"><i class="glyphicon fontello-emo-devil"></i></span><span>联系我们</span></a></li><li> <a target="_self" href="../1765.html" class="auto"><span class="nav-icon"><i class="glyphicon fontello-indent"></i></span><span>文章归档</span></a></li><li> <a target="_self" href="../865.html" class="auto"><span class="nav-icon"><i class="glyphicon fontello-instagram"></i></span><span>机场推荐</span></a></li><li> <a target="_blank" href="../search.html" class="auto"><span class="nav-icon"><i class="glyphicon fontello-search"></i></span><span>毒奶搜索</span></a></li><li> <a target="_blank" href="https://t.me/limboprossr" class="auto"><span class="nav-icon"><i class="glyphicon fontello-bell"></i></span><span>电报频道</span></a></li> <li class="line dk"></li>
+<li> <a target="_blank" href="../search.html" class="auto"><span class="nav-icon"><i class="glyphicon fontello-search"></i></span><span>毒奶搜索</span></a></li><li> <a target="_self" href="../865.html" class="auto"><span class="nav-icon"><i class="glyphicon fontello-instagram"></i></span><span>机场推荐</span></a></li><li> <a target="_blank" href="https://t.me/limboprossr" class="auto"><span class="nav-icon"><i class="glyphicon fontello-bell"></i></span><span>电报频道</span></a></li><li> <a target="_self" href="../1765.html" class="auto"><span class="nav-icon"><i class="glyphicon fontello-indent"></i></span><span>文章归档</span></a></li><li> <a target="_self" href="../6.html" class="auto"><span class="nav-icon"><i class="glyphicon fontello-emo-devil"></i></span><span>联系我们</span></a></li> <li class="line dk"></li>
 
 <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
 <span>组成</span>
@@ -240,7 +277,7 @@
 </a>
 </li>
 
-<li><a href="../category/Bulletin/index.html"><b class="badge pull-right">6</b><span>运营通报</span></a></li><li><a href="../category/hot-movies/index.html"><b class="badge pull-right">17</b><span>追剧小组</span></a></li><li><a href="../category/films-recommend/index.html"><b class="badge pull-right">39</b><span>电影推荐</span></a></li><li><a href="../category/instagram/index.html"><b class="badge pull-right">11</b><span>美图欣赏</span></a></li><li><a href="../category/NSFW/index.html"><b class="badge pull-right">17</b><span>开车专栏</span></a></li><li><a href="../category/tools/index.html"><b class="badge pull-right">27</b><span>实用工具</span></a></li><li><a href="../category/software-skills/index.html"><b class="badge pull-right">25</b><span>软件百科</span></a></li><li><a href="../category/Typecho/index.html"><b class="badge pull-right">26</b><span>网站优化</span></a></li><li><a href="../category/LNMP/index.html"><b class="badge pull-right">24</b><span>建站指南</span></a></li><li><a href="../category/ssr/index.html"><b class="badge pull-right">13</b><span>科学上网</span></a></li><li><a href="../category/ssr-operation/index.html"><b class="badge pull-right">1</b><span>自学上网</span></a></li><li><a href="../category/Toilet-reading/index.html"><b class="badge pull-right">9</b><span>厕所读物</span></a></li><li><a href="../category/telegram-anecdote/index.html"><b class="badge pull-right">10</b><span>电报奇闻</span></a></li><li><a href="../category/master-care/index.html"><b class="badge pull-right">19</b><span>无主杂记</span></a></li><li><a href="../category/Internetlog/index.html"><b class="badge pull-right">1</b><span>观察报告</span></a></li><li><a href="../category/sales/index.html"><b class="badge pull-right">1</b><span>怪薅羊毛</span></a></li><li><a href="../category/day-of-history/index.html"><b class="badge pull-right">1</b><span>历史时刻</span></a></li><li><a href="../category/AfterFQ/index.html"><b class="badge pull-right">1</b><span>毒奶世界</span></a></li><li><a href="../category/technologyart/index.html"><b class="badge pull-right">2</b><span>科技美学</span></a></li> </ul>
+<li><a href="../category/Bulletin/index.html"><b class="badge pull-right">7</b><span>运营通报</span></a></li><li><a href="../category/hot-movies/index.html"><b class="badge pull-right">23</b><span>追剧小组</span></a></li><li><a href="../category/films-recommend/index.html"><b class="badge pull-right">40</b><span>电影推荐</span></a></li><li><a href="../category/instagram/index.html"><b class="badge pull-right">15</b><span>美图欣赏</span></a></li><li><a href="../category/NSFW/index.html"><b class="badge pull-right">21</b><span>开车专栏</span></a></li><li><a href="../category/tools/index.html"><b class="badge pull-right">32</b><span>实用工具</span></a></li><li><a href="../category/software-skills/index.html"><b class="badge pull-right">26</b><span>软件百科</span></a></li><li><a href="../category/Typecho/index.html"><b class="badge pull-right">29</b><span>网站优化</span></a></li><li><a href="../category/LNMP/index.html"><b class="badge pull-right">25</b><span>建站指南</span></a></li><li><a href="../category/ssr/index.html"><b class="badge pull-right">16</b><span>科学上网</span></a></li><li><a href="../category/Toilet-reading/index.html"><b class="badge pull-right">9</b><span>厕所读物</span></a></li><li><a href="../category/telegram-anecdote/index.html"><b class="badge pull-right">12</b><span>电报奇闻</span></a></li><li><a href="../category/master-care/index.html"><b class="badge pull-right">20</b><span>无主杂记</span></a></li><li><a href="../category/Internetlog/index.html"><b class="badge pull-right">2</b><span>联网观察</span></a></li><li><a href="../category/sales/index.html"><b class="badge pull-right">1</b><span>怪薅羊毛</span></a></li><li><a href="../category/day-of-history/index.html"><b class="badge pull-right">1</b><span>历史时刻</span></a></li><li><a href="../category/AfterFQ/index.html"><b class="badge pull-right">1</b><span>毒奶世界</span></a></li><li><a href="../category/technologyart/index.html"><b class="badge pull-right">2</b><span>科技美学</span></a></li><li><a href="../category/www/index.html"><b class="badge pull-right">0</b><span>科普专栏</span></a></li><li><a href="../category/shell/index.html"><b class="badge pull-right">1</b><span>常用命令</span></a></li> </ul>
 </li>
 
 <li>
@@ -260,9 +297,9 @@
 </li>
 
 <li><a href="../1765.html"><span>归档</span></a></li>
-<li><a href="../6.html"><span>联系我们</span></a></li>
+ <li><a href="../6.html"><span>联系我们</span></a></li>
 <li><a href="../telegram.html"><span>电报</span></a></li>
-<li><a href="../865.html"><span>毒奶の机场专线</span></a></li>
+<li><a href="../865.html"><span>SSR/SS/v2Ray机场丨折后9元起丨毒奶的机场推荐清单（2019-2020）</span></a></li>
 <li><a href="../cross.html"><span>说说</span></a></li>
 </ul>
 </li>
@@ -283,7 +320,7 @@
 </a>
 </li>
 
-<li data-original-title="DDoS服务" data-toggle="tooltip" data-placement="top"><a href="https://www.xddos.co" target="_blank"><span>XDDoS</span></a></li><li data-original-title="SSR机场服务商" data-toggle="tooltip" data-placement="top"><a href="https://kcjisu.press/auth/register?code=8xeq" target="_blank"><span>卡车SSR</span></a></li><li data-original-title="SS机场服务商" data-toggle="tooltip" data-placement="top"><a href="https://n3ro.host/register?ref=7091" target="_blank"><span>N3RO</span></a></li><li data-original-title="本站主题作者。" data-toggle="tooltip" data-placement="top"><a href="https://www.ihewro.com/" target="_blank"><span>友人C</span></a></li><li data-original-title="萌IDC博客" data-toggle="tooltip" data-placement="top"><a href="http://www.idc.moe" target="_blank"><span>萌IDC博客</span></a></li><li data-original-title="有朋自远方来，不亦乐乎？" data-toggle="tooltip" data-placement="top"><a href="https://zhuangzhuang.cf" target="_blank"><span>ZHUANGZHUANG</span></a></li><li data-original-title="一个不负责任的教程博客。" data-toggle="tooltip" data-placement="top"><a href="https://gtary.com/" target="_blank"><span>格塔里</span></a></li> </ul>
+<li data-original-title="DDoS服务" data-toggle="tooltip" data-placement="top"><a href="https://www.xddos.co" target="_blank"><span>XDDoS</span></a></li><li data-original-title="SSR机场服务商" data-toggle="tooltip" data-placement="top"><a href="https://kcjisu.casa/auth/register?code=soiO" target="_blank"><span>卡车SSR</span></a></li><li data-original-title="SS机场服务商" data-toggle="tooltip" data-placement="top"><a href="https://n3ro.fun/auth/register?code=L0NW" target="_blank"><span>N3RO</span></a></li><li data-original-title="本站主题作者。" data-toggle="tooltip" data-placement="top"><a href="https://www.ihewro.com/" target="_blank"><span>友人C</span></a></li><li data-original-title="有朋自远方来，不亦乐乎？" data-toggle="tooltip" data-placement="top"><a href="https://zhuangzhuang.cf" target="_blank"><span>ZHUANGZHUANG</span></a></li><li data-original-title="一个不负责任的教程博客。" data-toggle="tooltip" data-placement="top"><a href="https://gtary.com/" target="_blank"><span>格塔里</span></a></li><li data-original-title="毒奶搜索，毒奶的万能搜索引擎。" data-toggle="tooltip" data-placement="top"><a href="../search.html" target="_blank"><span>毒奶搜索</span></a></li><li data-original-title="一个朴素而平凡的博客，记录平时所见所闻，分享和交流技术。" data-toggle="tooltip" data-placement="top"><a href="https://idc.moe/" target="_blank"><span>洛樱博客</span></a></li> </ul>
 </li>
 </ul>
 </nav>
@@ -311,7 +348,7 @@
 
 
 <header id="small_widgets" class="bg-light lter wrapper-md">
-<h1 class="entry-title m-n font-thin text-black l-h">Nmap丨暗黑互联网扫描器丨IPv4端口扫描<a class="plus-font-size" data-toggle="tooltip" data-original-title="点击改变文章字体大小"><i data-feather="type"></i></a><a data-morphing="" id="morphing" data-src="#morphing-content" href="javascript:;" class="read_mode superscript m-l-sm" data-toggle="tooltip" data-placement="right" data-original-title="阅读模式"><i data-feather="book-open"></i></a></h1> 
+<h1 class="entry-title m-n font-thin text-black l-h">Nmap丨暗黑互联网扫描器<a class="plus-font-size" data-toggle="tooltip" data-original-title="点击改变文章字体大小"><i data-feather="type"></i></a><a data-morphing="" id="morphing" data-src="#morphing-content" href="javascript:;" class="read_mode superscript m-l-sm" data-toggle="tooltip" data-placement="right" data-original-title="阅读模式"><i data-feather="book-open"></i></a></h1> 
 <ul class="entry-meta text-muted list-inline m-b-none small
              post-head-icon">
 
@@ -319,9 +356,9 @@
 
 <li class="meta-date"><span class="post-icons"><i data-feather="clock"></i></span><span class="sr-only">发布时间：</span><time class="meta-value">2020 年 01 月 03 日</time></li>
 
-<li class="meta-views"><span class="post-icons"><i data-feather="eye"></i></span><span class="meta-value">246次浏览</span></li>
+<li class="meta-views"><span class="post-icons"><i data-feather="eye"></i></span><span class="meta-value">736次浏览</span></li>
 
-<li class="meta-word"><span class="post-icons"><i data-feather="pen-tool"></i></span><span class="meta-value">3459字数</span></li>
+<li class="meta-word"><span class="post-icons"><i data-feather="pen-tool"></i></span><span class="meta-value">3876字数</span></li>
 
 <li class="meta-categories"><span class="post-icons"><i data-feather="hash"></i></span><span class="sr-only">分类：</span> <span class="meta-value"><a href="../category/software-skills/index.html">软件百科</a> <a href="../category/Typecho/index.html">网站优化</a></span></li>
 </ul>
@@ -329,19 +366,125 @@
 <div class="wrapper-md" id="post-panel">
 <ol class="breadcrumb bg-white-pure" itemscope=""><li>
 <a href="../index.html" itemprop="breadcrumb" title="返回首页" data-toggle="tooltip"><span class="home-icons"><i data-feather="home"></i></span>首页</a>
-</li><li class="active">正文&nbsp;&nbsp;</li></ol> 
+</li><li class="active">正文&nbsp;&nbsp;</li>
+<div style="float:right;">
+分享到：
+<style>
+   .breadcrumb i.iconfont.icon-qzone:after {
+    padding: 0 0 0 5px;
+    color: #ccc;
+    content: "/\00a0";
+    }
+    
+   </style>
+<a class="twitter-mention-button" href="https://twitter.com/intent/tweet?text=Nmap丨暗黑互联网扫描器&site=https://limbopro.xyz/" itemprop="breadcrumb" target="_blank" title="" data-toggle="tooltip" data-original-title="分享到Twitter">
+Tweet</a>
+</div></ol> 
 <div id="postpage" class="blog-post">
 <article class="single-post panel">
 
 
 <div id="post-content" class="wrapper-lg">
 <div class="entry-content l-h-2x">
-<p><img src="../usr/uploads/2020/01/1699285646.png" alt="Port scan.png" title="Port scan.png"><br>本文隶属于 <a href="../category/software-skills/index.html">软件百科</a> 分类，点击分类名称可以查看更多相关文章；</p><h2>主理人说</h2><p>为了安全，给你的网站套个CDN（例如 <span class="external-link"><a href="https://cloudflare.com/" target="_blank">Cloudflare<i data-feather='external-link'></i></a></span>），将源站服务器隐藏在其后；</p><h2>Censys</h2><p><img src="../usr/uploads/2020/01/4173670430.png" alt="Censys.png" title="Censys.png"></p><p><span class="external-link"><a href="https://censys.io/" target="_blank">Censys<i data-feather='external-link'></i></a></span> 可以看成是前端集成（非实时），<strong>为用户提供数据索引支持</strong>；而它背后使用的工具正是自己开发的<strong><span class="external-link"><a href="https://zmap.io/" target="_blank">ZMap<i data-feather='external-link'></i></a></span></strong>（比NMap快，号称一个小时扫描整个互联网IPv4地址；）我目前在用<span class="external-link"><a href="https://nmap.org/" target="_blank">Nmap<i data-feather='external-link'></i></a></span>，慢却精。</p><p>不久前，<span class="external-link"><a href="https://censys.io/" target="_blank">Censys<i data-feather='external-link'></i></a></span>域名查询结果提供了域名的排名信息（<strong>Alexa Rank</strong>）；</p><h3>用处及用法</h3><p><span class="external-link"><a href="https://censys.io/ipv4" target="_blank">Censys<i data-feather='external-link'></i></a></span> 提供三种类型的查询：</p><table><thead><tr><th align="center">模式</th><th align="center">备注</th></tr></thead><tbody><tr><td align="center">IPv4 Hosts</td><td align="center">IP查询</td></tr><tr><td align="center">Websites</td><td align="center">域名查询</td></tr><tr><td align="center">Certificates</td><td align="center">证书查询</td></tr></tbody></table><p>*<span class="external-link"><a href="https://censys.io/ipv4" target="_blank">Censys<i data-feather='external-link'></i></a></span> 是无时无刻不在扫描联网设备的；每次扫描都会记录到数据库以被后期索引取出分析；所以，用Censys可以查到域名下有多少子域名及其对应服务器IP（如果DNS解析时没有套CDN，则源站服务器有很大机会被发现并记录。所以，套CDN之前，务必确认源站IP是否已经被记录了，若被Censys记录则务必更换IP）</p><h2>ZMap</h2><p>译自英文-ZMap是一种免费的开放源代码安全扫描器，它是作为Nmap的更快替代品而开发的。ZMap专为信息安全研究而设计，可用于白帽子和黑帽子的目的。该工具能够<strong>发现漏洞及其影响</strong>，<strong>并检测受影响的物联网设备</strong>。ZMap使用每秒1 GB的网络带宽，<strong>可以在一个端口上一个小时内扫描整个IPv4地址空间</strong>。 维基百科（英文)</p><h3>ZMap安装</h3><table><thead><tr><th>OS</th><th> </th></tr></thead><tbody><tr><td>Debian and Ubuntu</td><td><code>sudo apt install zmap</code></td></tr><tr><td>Fedora, CentOS, and RHEL</td><td><code>sudo yum install zmap</code></td></tr><tr><td>Gentoo</td><td><code>sudo emerge zmap</code></td></tr><tr><td>macOS (using <span class="external-link"><a href="https://brew.sh/" target="_blank">Homebrew<i data-feather='external-link'></i></a></span>)</td><td><code>brew install zmap</code></td></tr><tr><td>Arch Linux</td><td><code>sudo pacman -S zmap</code></td></tr></tbody></table><p><strong>Instructions on building ZMap from source</strong> can be found in <span class="external-link"><a href="https://github.com/zmap/zmap/blob/master/INSTALL.md" target="_blank">INSTALL<i data-feather='external-link'></i></a></span>.</p><h3>Usage</h3><p>A guide to using ZMap is found in our <span class="external-link"><a href="https://github.com/zmap/zmap/wiki" target="_blank">GitHub Wiki<i data-feather='external-link'></i></a></span>.</p><h2>NMap</h2><p>Nmap是一款用于网路发现和安全审计的网路安全工具，它是自由软体。软体名字Nmap是Network Mapper的简称。通常情况下，Nmap用于：检测目标主机是否在线、端口开放情况、侦测运行的服务类型及版本信息、侦测操作系统与设备类型等信息。 它是网络管理员必用的软件之一，用以评估网络系统安全。</p><p><strong>Nmap 是不少<span class="external-link"><a href="https://zh.wikipedia.org/wiki/" target="_blank">黑客<i data-feather='external-link'></i></a></span>及<span class="external-link"><a href="https://zh.wikipedia.org/wiki/" target="_blank">脚本小子<i data-feather='external-link'></i></a></span>爱用的工具</strong> 。<span class="external-link"><a href="https://zh.wikipedia.org/wiki/" target="_blank">系统管理员<i data-feather='external-link'></i></a></span>可以利用Nmap来探测工作环境中未经批准使用的服务器，黑客通常会利用Nmap来搜集目标电脑的网络设定，从而计划攻击的方法。</p><p><strong>Nmap通常用在信息搜集阶段，用于搜集目标机主机的基本状态信息</strong>。扫描结果可以作为<span class="external-link"><a href="https://zh.wikipedia.org/w/index.php?title=" target="_blank">漏洞扫描<i data-feather='external-link'></i></a></span>、<span class="external-link"><a href="https://zh.wikipedia.org/wiki/" target="_blank">漏洞利用<i data-feather='external-link'></i></a></span>和<span class="external-link"><a href="https://zh.wikipedia.org/wiki/" target="_blank">权限提升<i data-feather='external-link'></i></a></span>阶段的输入。例如，业界流行的漏洞扫描工具<span class="external-link"><a href="https://zh.wikipedia.org/wiki/Nessus" target="_blank">Nessus<i data-feather='external-link'></i></a></span>与漏洞利用工具<span class="external-link"><a href="https://zh.wikipedia.org/wiki/Metasploit" target="_blank">Metasploit<i data-feather='external-link'></i></a></span>都支持导入Nmap的<span class="external-link"><a href="https://zh.wikipedia.org/wiki/XML" target="_blank">XML<i data-feather='external-link'></i></a></span>格式结果，而Metasploit框架内也集成了Nmap工具（支持Metasploit直接扫描）。</p><p><span class="external-link"><a href="https://zh.wikipedia.org/zh-tw/Nmap" target="_blank">维基百科<i data-feather='external-link'></i></a></span></p><p><strong>Nmap 基本语法</strong></p><pre><code>nmap [ &lt;扫描类型&gt; ...] [ &lt;选项&gt; ] { &lt;扫描目标说明&gt; }</code></pre><p>全面进攻性扫描（包括各种主机发现、端口扫描、版本扫描、OS扫描及默认脚本扫描）</p><pre><code>nmap -A -v target_ip</code></pre><p>Ping扫描</p><pre><code>nmap -sn -v target_ip</code></pre><p>快速端口扫描</p><pre><code>nmap -F -v target_ip</code></pre><p>版本扫描</p><pre><code>nmap -sV -v target_ip </code></pre><p>操作系统扫描</p><pre><code>nmap -O -v target_ip</code></pre><p>*Nmap 常被跟评估系统漏洞软件Nessus混为一谈。Nmap 以隐秘的手法，避开闯入检测系统的监视，并尽可能不影响目标系统的日常操作。</p><h2>联系主理人</h2><p>1.关注频道 <span class="external-link"><a href="https://t.me/limboprossr" target="_blank">https://t.me/limboprossr<i data-feather='external-link'></i></a></span> 不失联；<br>2.<code>毒奶粉</code>们（我管我的Fans）可联系 <a href="../usr/uploads/2019/10/3453243330.png">TG机器人</a> 或发送 <a href="../usr/uploads/2019/10/3453243330.png">邮件</a> 获取帮助；</p><p>3.或点击<code>本页面右下角</code>的聊天按钮联系；</p><hr class="content-copyright" style="margin-top:50px" /><blockquote class="content-copyright" style="font-style:normal"><p class="content-copyright">版权属于：<a class="content-copyright" target="_blank" href="https://t.me/limboprobot">毒奶博主</a><br>联系我们： <a class="content-copyright" target="_blank" href="../6.html">https://limbopro.xyz/6.html</a> <br>电报频道： <a class="content-copyright" target="_blank" href="https://t.me/limboprossr">https://t.me/limboprossr</a><br>必备技能： <a class="content-copyright" target="_blank" href="2910.html">https://limbopro.xyz/archives/2910.html</a><br>网站镜像： <a class="content-copyright" target="_blank" href="https://limbopro.github.io">https://limbopro.github.io</a></p><p class="content-copyright">本文链接：<a class="content-copyright" href="nmap.html">https://limbopro.xyz/archives/nmap.html</a></p><p class="content-copyright">版权声明：<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本文采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0 许可协议</a> ，转载和引用时请注意遵守协议！</p></blockquote> </div>
+<p><img src="../usr/uploads/2020/01/1699285646.png" alt="Port scan.png" /><br />
+本文隶属于 <a href="../category/software-skills/index.html">软件百科</a> 分类，点击分类名称可以查看更多相关文章；</p>
+<span id="h-1" name="h-1"></span><h2>主理人说</h2>
+<p>这是一个扫描器，扫描互联网服务器存活情况，并检测端口及其运行服务；例如3306端口的Mysql，443，80端口运行的web服务；为了安全，给你的网站套个CDN（例如 <span class="external-link"><a href="https://cloudflare.com/" target="_blank">Cloudflare<i data-feather='external-link'></i></a></span>），将源站服务器隐藏在其后以躲过扫描：<a href="1204.html">三个步骤隐藏真实服务器IP</a>；</p>
+<span id="h-2" name="h-2"></span><h2>Censys</h2>
+<p><img src="../usr/uploads/2020/01/4173670430.png" alt="Censys.png" /></p>
+<p>如果你不想安装Nmap或其他扫描器，可以直接使用<span class="external-link"><a href="https://censys.io/" target="_blank">Censys<i data-feather='external-link'></i></a></span> 在线索引服务；</p>
+<p><span class="external-link"><a href="https://censys.io/" target="_blank">Censys<i data-feather='external-link'></i></a></span> 可以看成是前端集成（非实时），<strong>为用户提供数据索引支持</strong>，这些数据正是扫描器扫描而来；它背后使用的工具正是自己开发的<strong><span class="external-link"><a href="https://zmap.io/" target="_blank">ZMap<i data-feather='external-link'></i></a></span></strong>（比NMap快，号称一个小时扫描整个互联网IPv4地址；）我目前在用<span class="external-link"><a href="https://nmap.org/" target="_blank">Nmap<i data-feather='external-link'></i></a></span>，慢却精。</p>
+<p>不久前，<span class="external-link"><a href="https://censys.io/" target="_blank">Censys<i data-feather='external-link'></i></a></span>域名查询结果提供了域名的排名信息（<strong>Alexa Rank</strong>）；</p>
+<span id="h-3" name="h-3"></span><h3>Censys 用法及用处</h3>
+<p><span class="external-link"><a href="https://censys.io/ipv4" target="_blank">Censys<i data-feather='external-link'></i></a></span> 提供三种类型的查询：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">模式</th>
+<th style="text-align: center;">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">IPv4 Hosts</td>
+<td style="text-align: center;">IP查询</td>
+</tr>
+<tr>
+<td style="text-align: center;">Websites</td>
+<td style="text-align: center;">域名查询</td>
+</tr>
+<tr>
+<td style="text-align: center;">Certificates</td>
+<td style="text-align: center;">证书查询</td>
+</tr>
+</tbody>
+</table>
+<p>*<span class="external-link"><a href="https://censys.io/ipv4" target="_blank">Censys<i data-feather='external-link'></i></a></span> 是无时无刻不在扫描联网设备的；</p>
+<p>每次扫描都会记录到数据库以被后期索引取出分析；所以，用Censys可以查到域名下有多少子域名及其对应服务器IP（如果DNS解析时没有套CDN，则源站服务器有很大机会被发现并记录。所以，套CDN之前，务必确认源站IP是否已经被记录了，若被Censys记录则务必更换IP）</p>
+<p>如果想试试扫描器，可以试试下面的方法；个人建议使用Nmap，比较精确；（本博客服务器IP：40/443/3306端口均已对除<span class="external-link"><a href="https://www.cloudflare.com/ips/" target="_blank">CF IPS<i data-feather='external-link'></i></a></span>外的IP隐藏，禁止取得链接，也不会返回任何信息；无法握手；有效的避免了 SYN 洪水攻击）参考：<a href="1204.html">三个步骤隐藏服务器真实IP</a>；</p>
+<span id="h-4" name="h-4"></span><h2>ZMap</h2>
+<p>译自英文-ZMap是一种免费的开放源代码安全扫描器，它是作为Nmap的更快替代品而开发的。ZMap专为信息安全研究而设计，可用于白帽子和黑帽子的目的。该工具能够<strong>发现漏洞及其影响</strong>，<strong>并检测受影响的物联网设备</strong>。ZMap使用每秒1 GB的网络带宽，<strong>可以在一个端口上一个小时内扫描整个IPv4地址空间</strong>。 维基百科（英文)</p>
+<span id="h-5" name="h-5"></span><h3>ZMap安装</h3>
+<table>
+<thead>
+<tr>
+<th>OS</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Debian and Ubuntu</td>
+<td><code>sudo apt install zmap</code></td>
+</tr>
+<tr>
+<td>Fedora, CentOS, and RHEL</td>
+<td><code>sudo yum install zmap</code></td>
+</tr>
+<tr>
+<td>Gentoo</td>
+<td><code>sudo emerge zmap</code></td>
+</tr>
+<tr>
+<td>macOS (using <span class="external-link"><a href="https://brew.sh/" target="_blank">Homebrew<i data-feather='external-link'></i></a></span>)</td>
+<td><code>brew install zmap</code></td>
+</tr>
+<tr>
+<td>Arch Linux</td>
+<td><code>sudo pacman -S zmap</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Instructions on building ZMap from source</strong> can be found in <span class="external-link"><a href="https://github.com/zmap/zmap/blob/master/INSTALL.md" target="_blank">INSTALL<i data-feather='external-link'></i></a></span>.</p>
+<span id="h-6" name="h-6"></span><h3>Usage</h3>
+<p>A guide to using ZMap is found in our <span class="external-link"><a href="https://github.com/zmap/zmap/wiki" target="_blank">GitHub Wiki<i data-feather='external-link'></i></a></span>.</p>
+<span id="h-7" name="h-7"></span><h2>NMap</h2>
+<p>Nmap是一款用于网路发现和安全审计的网路安全工具，它是自由软体。软体名字Nmap是Network Mapper的简称。通常情况下，Nmap用于：检测目标主机是否在线、端口开放情况、侦测运行的服务类型及版本信息、侦测操作系统与设备类型等信息。 它是网络管理员必用的软件之一，用以评估网络系统安全。</p>
+<p><strong>Nmap 是不少<span class="external-link"><a href="https://zh.wikipedia.org/wiki/黑客" target="_blank">黑客<i data-feather='external-link'></i></a></span>及<span class="external-link"><a href="https://zh.wikipedia.org/wiki/脚本小子" target="_blank">脚本小子<i data-feather='external-link'></i></a></span>爱用的工具</strong> 。<span class="external-link"><a href="https://zh.wikipedia.org/wiki/系统管理员" target="_blank">系统管理员<i data-feather='external-link'></i></a></span>可以利用Nmap来探测工作环境中未经批准使用的服务器，黑客通常会利用Nmap来搜集目标电脑的网络设定，从而计划攻击的方法。</p>
+<p><strong>Nmap通常用在信息搜集阶段，用于搜集目标机主机的基本状态信息</strong>。扫描结果可以作为<span class="external-link"><a href="https://zh.wikipedia.org/w/index.php?title=漏洞扫描&amp;action=edit&amp;redlink=1" target="_blank">漏洞扫描<i data-feather='external-link'></i></a></span>、<span class="external-link"><a href="https://zh.wikipedia.org/wiki/漏洞利用" target="_blank">漏洞利用<i data-feather='external-link'></i></a></span>和<span class="external-link"><a href="https://zh.wikipedia.org/wiki/权限提升" target="_blank">权限提升<i data-feather='external-link'></i></a></span>阶段的输入。例如，业界流行的漏洞扫描工具<span class="external-link"><a href="https://zh.wikipedia.org/wiki/Nessus" target="_blank">Nessus<i data-feather='external-link'></i></a></span>与漏洞利用工具<span class="external-link"><a href="https://zh.wikipedia.org/wiki/Metasploit" target="_blank">Metasploit<i data-feather='external-link'></i></a></span>都支持导入Nmap的<span class="external-link"><a href="https://zh.wikipedia.org/wiki/XML" target="_blank">XML<i data-feather='external-link'></i></a></span>格式结果，而Metasploit框架内也集成了Nmap工具（支持Metasploit直接扫描）。</p>
+<p><span class="external-link"><a href="https://zh.wikipedia.org/zh-tw/Nmap" target="_blank">维基百科<i data-feather='external-link'></i></a></span></p>
+<p><strong>Nmap 基本语法</strong></p>
+<pre><code>nmap [ &lt;扫描类型&gt; ...] [ &lt;选项&gt; ] { &lt;扫描目标说明&gt; }</code></pre>
+<p>全面进攻性扫描（包括各种主机发现、端口扫描、版本扫描、OS扫描及默认脚本扫描）</p>
+<pre><code>nmap -A -v target_ip</code></pre>
+<p>Ping扫描</p>
+<pre><code>nmap -sn -v target_ip</code></pre>
+<p>快速端口扫描</p>
+<pre><code>nmap -F -v target_ip</code></pre>
+<p>版本扫描</p>
+<pre><code>nmap -sV -v target_ip </code></pre>
+<p>操作系统扫描</p>
+<pre><code>nmap -O -v target_ip</code></pre>
+<p>*Nmap 常被跟评估系统漏洞软件Nessus混为一谈。Nmap 以隐秘的手法，避开闯入检测系统的监视，并尽可能不影响目标系统的日常操作。</p>
+<span id="h-8" name="h-8"></span><h2>联系主理人</h2>
+<p>1.关注频道 <span class="external-link"><a href="https://t.me/limboprossr" target="_blank">https://t.me/limboprossr<i data-feather='external-link'></i></a></span> 不失联；<br />
+2.<code>毒奶粉</code>们（我管我的Fans）可联系 <a href="../usr/uploads/2019/10/3453243330.png">TG机器人</a> 或发送 <a href="../usr/uploads/2019/10/3453243330.png">邮件</a> 获取帮助；</p>
+<p>3.或点击<code>本页面右下角</code>的聊天按钮联系；</p><hr class="content-copyright" style="margin-top:50px" /><blockquote class="content-copyright" style="font-style:normal"><p class="content-copyright">版权属于：<a class="content-copyright" target="_blank" href="https://t.me/limboprobot">毒奶</a><br>联系我们： <a class="content-copyright" target="_blank" href="../6.html">https://limbopro.xyz/6.html</a> <br>电报频道： <a class="content-copyright" target="_blank" href="https://t.me/limboprossr">https://t.me/limboprossr</a> <br>推特账号： <a class="content-copyright" target="_blank" href="https://twitter.com/limboprossr">https://twitter.com/limboprossr</a> <br>集美账号： <a class="content-copyright" target="_blank" href="https://www.instagram.com/limboprossr/">https://www.instagram.com/limboprossr/</a> <br>油管账号 ： <a class="content-copyright" target="_blank" href="https://www.youtube.com/channel/UCopiQ6DaRujU9iV9g-zrrMQ">http://bit.ly/2VJcz7o/</a> <br>机场推荐： <a class="content-copyright" target="_blank" href="../865.html">https://limbopro.xyz/865.html</a><br>上网必会： <a class="content-copyright" target="_blank" href="2910.html">https://limbopro.xyz/archives/2910.html</a> <br>广告屏蔽： <a class="content-copyright" target="_blank" href="adguard.html">https://limbopro.xyz/archives/adguard.html</a> <br>实用工具： <a class="content-copyright" target="_blank" href="../category/tools/index.html">https://limbopro.xyz/category/tools/</a> <br>网站优化： <a class="content-copyright" target="_blank" href="../category/Typecho/index.html">https://limbopro.xyz/category/Typecho/</a> <br>美图欣赏： <a class="content-copyright" target="_blank" href="../category/instagram/index.html">https://limbopro.xyz/category/instagram/</a> <br>开车专栏： <a class="content-copyright" target="_blank" href="../category/NSFW/index.html">https://limbopro.xyz/category/NSFW/</a> <br>网站镜像： <a class="content-copyright" target="_blank" href="https://limbopro.github.io">https://limbopro.github.io</a></p><p class="content-copyright">本文链接：<a class="content-copyright" href="nmap.html">https://limbopro.xyz/archives/nmap.html</a></p><p class="content-copyright"><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本文采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0 许可协议</a> ，转载和引用时请注意遵守协议！</p></blockquote> </div>
 
 <div class="show-foot">
 <div class="notebook">
 <i class="fontello fontello-clock-o"></i>
-<span>最后修改：2020 年 01 月 07 日 12 : 12 AM</span>
+<span>最后修改：2020 年 01 月 12 日 02 : 26 AM</span>
 </div>
 <div class="copyright" data-toggle="tooltip" data-html="true" data-original-title="转载请保留本文转载地址，著作权归作者所有"><span>© 允许规范转载</span>
 </div>
@@ -353,14 +496,17 @@
 
 <nav class="m-t-lg m-b-lg">
 <ul class="pager">
-<li class="next"> <a class="box-shadow-wrap-normal" href="6949.html" title="使用脚本调用CF.API以提高DDoS/CC 防御能力丨自动拉黑异常IP并提交至Cloudflare丨分钟级检查丨Cloudflare User-level Firewall Access Rule API" data-toggle="tooltip">
+<li class="next"> <a class="box-shadow-wrap-normal" href="6949.html" title="DDoS 攻击简明防范思路与教程丨Cloudflare API" data-toggle="tooltip">
 下一篇 </a></li> <li class="previous"> <a class="box-shadow-wrap-normal" href="2fa.html" title="Google/Microsoft 身份验证器 (Google/Microsoft Authenticator)" data-toggle="tooltip"> 上一篇 </a></li>
 </ul>
 </nav>
-
-<div id="disqus_thread"><script type="56788d79325cb39df6c748a1-text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="adf24965-dd03-45f8-9fdf-3f1e953df737";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script></div>
+ 
+<p></p>
+<div> <a target="_blank" href="adguard.html"><img src="../usr/uploads/2020/03/343360702.jpg" style="width: auto;"></a> </div>
+<p><br /></p>
+<div id="disqus_thread"><script type="e04efd4f418e170e3897ca92-text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="adf24965-dd03-45f8-9fdf-3f1e953df737";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script></div>
 <div id="disqus_thread"></div>
-<script type="56788d79325cb39df6c748a1-text/javascript">
+<script type="e04efd4f418e170e3897ca92-text/javascript">
 /**
  * *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
  * *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
@@ -437,34 +583,34 @@ setTimeout(function () {
 <h5 class="widget-title m-t-none text-md">热门文章</h5>
 <ul class="list-group no-bg no-borders pull-in m-b-none">
 <li class="list-group-item">
-<a href="2561.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/4.jpg" class="img-40px normal-shadow img-square"></a>
+<a href="n3ro.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/4.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h text-second"> <a href="2561.html" title="Rules / 分流/去广告规则：Surge / Shadowrocket / Quantumult/ Quantumult X  及详细配置步骤教程（萌新小白版本）"> Rules / 分流/去广告规则：Surge / Shadowrocket / Quantumult/ Quantumult X 及详细配置步骤教程（萌新小白版本） </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">35107</span>
+<h4 class="h5 l-h text-second"> <a href="n3ro.html" title="IPLC专线丨N3RO丨30GB/折后17.8元/月起丨年付再省15%（稳定不墙办公首选）"> IPLC专线丨N3RO丨30GB/折后17.8元/月起丨年付再省15%（稳定不墙办公首选） </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">29588</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="1423.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/5.jpg" class="img-40px normal-shadow img-square"></a>
+<a href="3629.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/2.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h text-second"> <a href="1423.html" title="卡车家族丨1080P秒开丨折后6.4元/月起丨50+节点丨SSR机场推荐（学生党首选）"> 卡车家族丨1080P秒开丨折后6.4元/月起丨50+节点丨SSR机场推荐（学生党首选） </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">25661</span>
+<h4 class="h5 l-h text-second"> <a href="3629.html" title="iOS 使用 Surge/Quantumult/Shadowrocket /QuantumultX 解锁 TikTok （国际版）区域限制（免拔卡）03.02.2020  "> iOS 使用 Surge/Quantumult/Shadowrocket /QuantumultX 解锁 TikTok （国际版）区域限制（免拔卡）03.02.2020 </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">27681</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="2787.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/10.jpg" class="img-40px normal-shadow img-square"></a>
+<a href="nicegram.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/3.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h text-second"> <a href="2787.html" title="高速内网IPLC专线机场丨4K秒开丨折后9.2元/月起丨京港/沪港/深港/深新/沪美线路（厘米云）"> 高速内网IPLC专线机场丨4K秒开丨折后9.2元/月起丨京港/沪港/深港/深新/沪美线路（厘米云） </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">23146</span>
+<h4 class="h5 l-h text-second"> <a href="nicegram.html" title="宅男指北丨iOS 怎么看电报开车群组/频道内容（附频道/群组推荐）-2020年"> 宅男指北丨iOS 怎么看电报开车群组/频道内容（附频道/群组推荐）-2020年 </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">24547</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="969.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/2.jpg" class="img-40px normal-shadow img-square"></a>
+<a href="969.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/9.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h text-second"> <a href="969.html" title="在中国看Netflix丨HBO丨Hulu丨Amazon Prime Video丨Apple TV丨或其他任意剧集。"> 在中国看Netflix丨HBO丨Hulu丨Amazon Prime Video丨Apple TV丨或其他任意剧集。 </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">20688</span>
+<h4 class="h5 l-h text-second"> <a href="969.html" title="值得收藏的11个免费电影&amp;电视剧网站（2020）"> 值得收藏的11个免费电影&amp;电视剧网站（2020） </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">24487</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="n3ro.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/6.jpg" class="img-40px normal-shadow img-square"></a>
+<a href="1423.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/10.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h text-second"> <a href="n3ro.html" title="44+条高速内网IPLC专线丨N3RO丨折后14.4元/月起丨线路多多丨川日/川港/京港/京美/京德/沪韩/沪日/沪港/深新/深港/沪新/杭港/沪美/川日/游戏加速"> 44+条高速内网IPLC专线丨N3RO丨折后14.4元/月起丨线路多多丨川日/川港/京港/京美/京德/沪韩/沪日/沪港/深新/深港/沪新/杭港/沪美/川日/游戏加速 </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">19447</span>
+<h4 class="h5 l-h text-second"> <a href="1423.html" title="SSR机场丨50GB/折后9元/月起，年付再省10%丨卡车家族（学生党首选）"> SSR机场丨50GB/折后9元/月起，年付再省10%丨卡车家族（学生党首选） </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">21736</span>
 </span>
 </small></div></li> </ul>
 </div>
@@ -473,34 +619,34 @@ setTimeout(function () {
 <h5 class="widget-title m-t-none text-md">随机文章</h5>
 <ul class="list-group no-bg no-borders pull-in">
 <li class="list-group-item">
-<a href="328.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/4.jpg" class="img-40px normal-shadow img-square"></a>
+<a href="8002.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/4.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h text-second"> <a href="328.html" title=".log 是一个了不起的东西"> .log 是一个了不起的东西 </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">3167</span>
+<h4 class="h5 l-h text-second"> <a href="8002.html" title="10部影视剧推荐给你"> 10部影视剧推荐给你 </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">639</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="2491.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/5.jpg" class="img-40px normal-shadow img-square"></a>
+<a href="550.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/2.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h text-second"> <a href="2491.html" title="三吉彩花 [27P]"> 三吉彩花 [27P] </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">2798</span>
+<h4 class="h5 l-h text-second"> <a href="550.html" title="死寂 Dead Silence (2007)"> 死寂 Dead Silence (2007) </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">3469</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="4011.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/10.jpg" class="img-40px normal-shadow img-square"></a>
+<a href="2065.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/3.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h text-second"> <a href="4011.html" title="BGP中转丨海极速丨Gbps大带宽丨4K秒开丨Netflix等流媒体解锁丨月付9.9元起"> BGP中转丨海极速丨Gbps大带宽丨4K秒开丨Netflix等流媒体解锁丨月付9.9元起 </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">5277</span>
+<h4 class="h5 l-h text-second"> <a href="2065.html" title="Instagram 美女账号精选丨第06期  "> Instagram 美女账号精选丨第06期 </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">2069</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="3604.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/2.jpg" class="img-40px normal-shadow img-square"></a>
+<a href="366.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/9.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h text-second"> <a href="3604.html" title="Need 4 speed丨09期 148P 未公开"> Need 4 speed丨09期 148P 未公开 </a></h4>
-<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">2188</span>
+<h4 class="h5 l-h text-second"> <a href="366.html" title="少数人TG交流群"> 少数人TG交流群 </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">3956</span>
 </span>
 </small></div></li><li class="list-group-item">
-<a href="similarweb.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/6.jpg" class="img-40px normal-shadow img-square"></a>
+<a href="1204.html" class="pull-left thumb-sm m-r"><img src="../usr/themes/handsome/usr/img/sj2/10.jpg" class="img-40px normal-shadow img-square"></a>
 <div class="clear">
-<h4 class="h5 l-h text-second"> <a href="similarweb.html" title="similarweb丨全球网站排名查询工具（Google/Alibaba信赖）"> similarweb丨全球网站排名查询工具（Google/Alibaba信赖） </a></h4>
- <small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">2909</span>
+<h4 class="h5 l-h text-second"> <a href="1204.html" title="三个步骤隐藏真实服务器IP"> 三个步骤隐藏真实服务器IP </a></h4>
+<small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">5835</span>
 </span>
 </small></div></li> </ul>
 </div>
@@ -511,21 +657,29 @@ setTimeout(function () {
 <h5 class="widget-title m-t-none text-md">博客信息</h5>
 <ul class="list-group box-shadow-wrap-normal">
 <li class="list-group-item text-second"><span class="blog-info-icons"> <i data-feather="award"></i></span> <span class="badge
-           pull-right">235</span>文章数目</li>
+           pull-right">268</span>文章数目</li>
 <li class="list-group-item text-second"> <span class="blog-info-icons"> <i data-feather="message-circle"></i></span>
 <span class="badge
            pull-right">5</span>评论数目</li>
 <li class="list-group-item text-second"><span class="blog-info-icons"> <i data-feather="calendar"></i></span>
 <span class="badge
-           pull-right">246天</span>运行天数</li>
+           pull-right">318天</span>运行天数</li>
 <li class="list-group-item text-second"><span class="blog-info-icons"> <i data-feather="activity"></i></span> <span class="badge
-           pull-right">4 小时前</span>最后活动</li>
+           pull-right">1 天前</span>最后活动</li>
 </ul>
 </section>
 
 <section id="a_d_sidebar" class="widget widget_categories wrapper-md clear">
 <h5 class="widget-title m-t-none text-md">广告</h5>
-<script data-ad-client="ca-pub-4573757070775891" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" type="56788d79325cb39df6c748a1-text/javascript"></script> </section>
+<script data-ad-client="ca-pub-4573757070775891" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" type="e04efd4f418e170e3897ca92-text/javascript"></script>
+
+<a href='n3ro.html'><img src='../usr/uploads/2020/03/1938474618.jpg' alt='N3RO is Ready 4 you' title='N3RO is Ready 4 you' border='0' /></a>
+
+<br></br>
+<a class="twitter-timeline" data-height="480" data-dnt="true" data-theme="dark" href="https://twitter.com/limboprossr?ref_src=twsrc%5Etfw">Tweets by limboprossr</a>
+<br></br>
+<a href="https://twitter.com/limboprossr?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @limboprossr</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8" type="e04efd4f418e170e3897ca92-text/javascript"></script> </section>
+
 
 
 <section id="tag_cloud-2" class="widget widget_tag_cloud wrapper-md clear">
@@ -560,12 +714,105 @@ setTimeout(function () {
 </main>
 <div id="morphing-content" class="hidden read_mode_article">
 <div class="page">
-<h1 class="title">Nmap丨暗黑互联网扫描器丨IPv4端口扫描</h1>
+<h1 class="title">Nmap丨暗黑互联网扫描器</h1>
 <div class="metadata singleline"><a href="nmap.html#" rel="author" class="byline">毒奶</a>&nbsp;•&nbsp;<span class="delimiter"></span><time class="date">2020 年 01 月 03 日</time></div>
-<p><img src="../usr/uploads/2020/01/1699285646.png" alt="Port scan.png" title="Port scan.png"><br>本文隶属于 <a href="../category/software-skills/index.html">软件百科</a> 分类，点击分类名称可以查看更多相关文章；</p><h2>主理人说</h2><p>为了安全，给你的网站套个CDN（例如 <span class="external-link"><a href="https://cloudflare.com/" target="_blank">Cloudflare<i data-feather='external-link'></i></a></span>），将源站服务器隐藏在其后；</p><h2>Censys</h2><p><img src="../usr/uploads/2020/01/4173670430.png" alt="Censys.png" title="Censys.png"></p><p><span class="external-link"><a href="https://censys.io/" target="_blank">Censys<i data-feather='external-link'></i></a></span> 可以看成是前端集成（非实时），<strong>为用户提供数据索引支持</strong>；而它背后使用的工具正是自己开发的<strong><span class="external-link"><a href="https://zmap.io/" target="_blank">ZMap<i data-feather='external-link'></i></a></span></strong>（比NMap快，号称一个小时扫描整个互联网IPv4地址；）我目前在用<span class="external-link"><a href="https://nmap.org/" target="_blank">Nmap<i data-feather='external-link'></i></a></span>，慢却精。</p><p>不久前，<span class="external-link"><a href="https://censys.io/" target="_blank">Censys<i data-feather='external-link'></i></a></span>域名查询结果提供了域名的排名信息（<strong>Alexa Rank</strong>）；</p><h3>用处及用法</h3><p><span class="external-link"><a href="https://censys.io/ipv4" target="_blank">Censys<i data-feather='external-link'></i></a></span> 提供三种类型的查询：</p><table><thead><tr><th align="center">模式</th><th align="center">备注</th></tr></thead><tbody><tr><td align="center">IPv4 Hosts</td><td align="center">IP查询</td></tr><tr><td align="center">Websites</td><td align="center">域名查询</td></tr><tr><td align="center">Certificates</td><td align="center">证书查询</td></tr></tbody></table><p>*<span class="external-link"><a href="https://censys.io/ipv4" target="_blank">Censys<i data-feather='external-link'></i></a></span> 是无时无刻不在扫描联网设备的；每次扫描都会记录到数据库以被后期索引取出分析；所以，用Censys可以查到域名下有多少子域名及其对应服务器IP（如果DNS解析时没有套CDN，则源站服务器有很大机会被发现并记录。所以，套CDN之前，务必确认源站IP是否已经被记录了，若被Censys记录则务必更换IP）</p><h2>ZMap</h2><p>译自英文-ZMap是一种免费的开放源代码安全扫描器，它是作为Nmap的更快替代品而开发的。ZMap专为信息安全研究而设计，可用于白帽子和黑帽子的目的。该工具能够<strong>发现漏洞及其影响</strong>，<strong>并检测受影响的物联网设备</strong>。ZMap使用每秒1 GB的网络带宽，<strong>可以在一个端口上一个小时内扫描整个IPv4地址空间</strong>。 维基百科（英文)</p><h3>ZMap安装</h3><table><thead><tr><th>OS</th><th> </th></tr></thead><tbody><tr><td>Debian and Ubuntu</td><td><code>sudo apt install zmap</code></td></tr><tr><td>Fedora, CentOS, and RHEL</td><td><code>sudo yum install zmap</code></td></tr><tr><td>Gentoo</td><td><code>sudo emerge zmap</code></td></tr><tr><td>macOS (using <span class="external-link"><a href="https://brew.sh/" target="_blank">Homebrew<i data-feather='external-link'></i></a></span>)</td><td><code>brew install zmap</code></td></tr><tr><td>Arch Linux</td><td><code>sudo pacman -S zmap</code></td></tr></tbody></table><p><strong>Instructions on building ZMap from source</strong> can be found in <span class="external-link"><a href="https://github.com/zmap/zmap/blob/master/INSTALL.md" target="_blank">INSTALL<i data-feather='external-link'></i></a></span>.</p><h3>Usage</h3><p>A guide to using ZMap is found in our <span class="external-link"><a href="https://github.com/zmap/zmap/wiki" target="_blank">GitHub Wiki<i data-feather='external-link'></i></a></span>.</p><h2>NMap</h2><p>Nmap是一款用于网路发现和安全审计的网路安全工具，它是自由软体。软体名字Nmap是Network Mapper的简称。通常情况下，Nmap用于：检测目标主机是否在线、端口开放情况、侦测运行的服务类型及版本信息、侦测操作系统与设备类型等信息。 它是网络管理员必用的软件之一，用以评估网络系统安全。</p><p><strong>Nmap 是不少<span class="external-link"><a href="https://zh.wikipedia.org/wiki/" target="_blank">黑客<i data-feather='external-link'></i></a></span>及<span class="external-link"><a href="https://zh.wikipedia.org/wiki/" target="_blank">脚本小子<i data-feather='external-link'></i></a></span>爱用的工具</strong> 。<span class="external-link"><a href="https://zh.wikipedia.org/wiki/" target="_blank">系统管理员<i data-feather='external-link'></i></a></span>可以利用Nmap来探测工作环境中未经批准使用的服务器，黑客通常会利用Nmap来搜集目标电脑的网络设定，从而计划攻击的方法。</p><p><strong>Nmap通常用在信息搜集阶段，用于搜集目标机主机的基本状态信息</strong>。扫描结果可以作为<span class="external-link"><a href="https://zh.wikipedia.org/w/index.php?title=" target="_blank">漏洞扫描<i data-feather='external-link'></i></a></span>、<span class="external-link"><a href="https://zh.wikipedia.org/wiki/" target="_blank">漏洞利用<i data-feather='external-link'></i></a></span>和<span class="external-link"><a href="https://zh.wikipedia.org/wiki/" target="_blank">权限提升<i data-feather='external-link'></i></a></span>阶段的输入。例如，业界流行的漏洞扫描工具<span class="external-link"><a href="https://zh.wikipedia.org/wiki/Nessus" target="_blank">Nessus<i data-feather='external-link'></i></a></span>与漏洞利用工具<span class="external-link"><a href="https://zh.wikipedia.org/wiki/Metasploit" target="_blank">Metasploit<i data-feather='external-link'></i></a></span>都支持导入Nmap的<span class="external-link"><a href="https://zh.wikipedia.org/wiki/XML" target="_blank">XML<i data-feather='external-link'></i></a></span>格式结果，而Metasploit框架内也集成了Nmap工具（支持Metasploit直接扫描）。</p><p><span class="external-link"><a href="https://zh.wikipedia.org/zh-tw/Nmap" target="_blank">维基百科<i data-feather='external-link'></i></a></span></p><p><strong>Nmap 基本语法</strong></p><pre><code>nmap [ &lt;扫描类型&gt; ...] [ &lt;选项&gt; ] { &lt;扫描目标说明&gt; }</code></pre><p>全面进攻性扫描（包括各种主机发现、端口扫描、版本扫描、OS扫描及默认脚本扫描）</p><pre><code>nmap -A -v target_ip</code></pre><p>Ping扫描</p><pre><code>nmap -sn -v target_ip</code></pre><p>快速端口扫描</p><pre><code>nmap -F -v target_ip</code></pre><p>版本扫描</p><pre><code>nmap -sV -v target_ip </code></pre><p>操作系统扫描</p><pre><code>nmap -O -v target_ip</code></pre><p>*Nmap 常被跟评估系统漏洞软件Nessus混为一谈。Nmap 以隐秘的手法，避开闯入检测系统的监视，并尽可能不影响目标系统的日常操作。</p><h2>联系主理人</h2><p>1.关注频道 <span class="external-link"><a href="https://t.me/limboprossr" target="_blank">https://t.me/limboprossr<i data-feather='external-link'></i></a></span> 不失联；<br>2.<code>毒奶粉</code>们（我管我的Fans）可联系 <a href="../usr/uploads/2019/10/3453243330.png">TG机器人</a> 或发送 <a href="../usr/uploads/2019/10/3453243330.png">邮件</a> 获取帮助；</p><p>3.或点击<code>本页面右下角</code>的聊天按钮联系；</p><hr class="content-copyright" style="margin-top:50px" /><blockquote class="content-copyright" style="font-style:normal"><p class="content-copyright">版权属于：<a class="content-copyright" target="_blank" href="https://t.me/limboprobot">毒奶博主</a><br>联系我们： <a class="content-copyright" target="_blank" href="../6.html">https://limbopro.xyz/6.html</a> <br>电报频道： <a class="content-copyright" target="_blank" href="https://t.me/limboprossr">https://t.me/limboprossr</a><br>必备技能： <a class="content-copyright" target="_blank" href="2910.html">https://limbopro.xyz/archives/2910.html</a><br>网站镜像： <a class="content-copyright" target="_blank" href="https://limbopro.github.io">https://limbopro.github.io</a></p><p class="content-copyright">本文链接：<a class="content-copyright" href="nmap.html">https://limbopro.xyz/archives/nmap.html</a></p><p class="content-copyright">版权声明：<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本文采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0 许可协议</a> ，转载和引用时请注意遵守协议！</p></blockquote>
+<p><img src="../usr/uploads/2020/01/1699285646.png" alt="Port scan.png" /><br />
+本文隶属于 <a href="../category/software-skills/index.html">软件百科</a> 分类，点击分类名称可以查看更多相关文章；</p>
+<span id="h-9" name="h-9"></span><h2>主理人说</h2>
+<p>这是一个扫描器，扫描互联网服务器存活情况，并检测端口及其运行服务；例如3306端口的Mysql，443，80端口运行的web服务；为了安全，给你的网站套个CDN（例如 <span class="external-link"><a href="https://cloudflare.com/" target="_blank">Cloudflare<i data-feather='external-link'></i></a></span>），将源站服务器隐藏在其后以躲过扫描：<a href="1204.html">三个步骤隐藏真实服务器IP</a>；</p>
+<span id="h-10" name="h-10"></span><h2>Censys</h2>
+<p><img src="../usr/uploads/2020/01/4173670430.png" alt="Censys.png" /></p>
+<p>如果你不想安装Nmap或其他扫描器，可以直接使用<span class="external-link"><a href="https://censys.io/" target="_blank">Censys<i data-feather='external-link'></i></a></span> 在线索引服务；</p>
+<p><span class="external-link"><a href="https://censys.io/" target="_blank">Censys<i data-feather='external-link'></i></a></span> 可以看成是前端集成（非实时），<strong>为用户提供数据索引支持</strong>，这些数据正是扫描器扫描而来；它背后使用的工具正是自己开发的<strong><span class="external-link"><a href="https://zmap.io/" target="_blank">ZMap<i data-feather='external-link'></i></a></span></strong>（比NMap快，号称一个小时扫描整个互联网IPv4地址；）我目前在用<span class="external-link"><a href="https://nmap.org/" target="_blank">Nmap<i data-feather='external-link'></i></a></span>，慢却精。</p>
+<p>不久前，<span class="external-link"><a href="https://censys.io/" target="_blank">Censys<i data-feather='external-link'></i></a></span>域名查询结果提供了域名的排名信息（<strong>Alexa Rank</strong>）；</p>
+<span id="h-11" name="h-11"></span><h3>Censys 用法及用处</h3>
+<p><span class="external-link"><a href="https://censys.io/ipv4" target="_blank">Censys<i data-feather='external-link'></i></a></span> 提供三种类型的查询：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">模式</th>
+<th style="text-align: center;">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">IPv4 Hosts</td>
+<td style="text-align: center;">IP查询</td>
+</tr>
+<tr>
+<td style="text-align: center;">Websites</td>
+<td style="text-align: center;">域名查询</td>
+</tr>
+<tr>
+<td style="text-align: center;">Certificates</td>
+<td style="text-align: center;">证书查询</td>
+</tr>
+</tbody>
+</table>
+<p>*<span class="external-link"><a href="https://censys.io/ipv4" target="_blank">Censys<i data-feather='external-link'></i></a></span> 是无时无刻不在扫描联网设备的；</p>
+<p>每次扫描都会记录到数据库以被后期索引取出分析；所以，用Censys可以查到域名下有多少子域名及其对应服务器IP（如果DNS解析时没有套CDN，则源站服务器有很大机会被发现并记录。所以，套CDN之前，务必确认源站IP是否已经被记录了，若被Censys记录则务必更换IP）</p>
+<p>如果想试试扫描器，可以试试下面的方法；个人建议使用Nmap，比较精确；（本博客服务器IP：40/443/3306端口均已对除<span class="external-link"><a href="https://www.cloudflare.com/ips/" target="_blank">CF IPS<i data-feather='external-link'></i></a></span>外的IP隐藏，禁止取得链接，也不会返回任何信息；无法握手；有效的避免了 SYN 洪水攻击）参考：<a href="1204.html">三个步骤隐藏服务器真实IP</a>；</p>
+<span id="h-12" name="h-12"></span><h2>ZMap</h2>
+<p>译自英文-ZMap是一种免费的开放源代码安全扫描器，它是作为Nmap的更快替代品而开发的。ZMap专为信息安全研究而设计，可用于白帽子和黑帽子的目的。该工具能够<strong>发现漏洞及其影响</strong>，<strong>并检测受影响的物联网设备</strong>。ZMap使用每秒1 GB的网络带宽，<strong>可以在一个端口上一个小时内扫描整个IPv4地址空间</strong>。 维基百科（英文)</p>
+<span id="h-13" name="h-13"></span><h3>ZMap安装</h3>
+<table>
+<thead>
+<tr>
+<th>OS</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Debian and Ubuntu</td>
+<td><code>sudo apt install zmap</code></td>
+</tr>
+<tr>
+<td>Fedora, CentOS, and RHEL</td>
+<td><code>sudo yum install zmap</code></td>
+</tr>
+<tr>
+<td>Gentoo</td>
+<td><code>sudo emerge zmap</code></td>
+</tr>
+<tr>
+<td>macOS (using <span class="external-link"><a href="https://brew.sh/" target="_blank">Homebrew<i data-feather='external-link'></i></a></span>)</td>
+<td><code>brew install zmap</code></td>
+</tr>
+<tr>
+<td>Arch Linux</td>
+<td><code>sudo pacman -S zmap</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Instructions on building ZMap from source</strong> can be found in <span class="external-link"><a href="https://github.com/zmap/zmap/blob/master/INSTALL.md" target="_blank">INSTALL<i data-feather='external-link'></i></a></span>.</p>
+<span id="h-14" name="h-14"></span><h3>Usage</h3>
+<p>A guide to using ZMap is found in our <span class="external-link"><a href="https://github.com/zmap/zmap/wiki" target="_blank">GitHub Wiki<i data-feather='external-link'></i></a></span>.</p>
+<span id="h-15" name="h-15"></span><h2>NMap</h2>
+<p>Nmap是一款用于网路发现和安全审计的网路安全工具，它是自由软体。软体名字Nmap是Network Mapper的简称。通常情况下，Nmap用于：检测目标主机是否在线、端口开放情况、侦测运行的服务类型及版本信息、侦测操作系统与设备类型等信息。 它是网络管理员必用的软件之一，用以评估网络系统安全。</p>
+<p><strong>Nmap 是不少<span class="external-link"><a href="https://zh.wikipedia.org/wiki/黑客" target="_blank">黑客<i data-feather='external-link'></i></a></span>及<span class="external-link"><a href="https://zh.wikipedia.org/wiki/脚本小子" target="_blank">脚本小子<i data-feather='external-link'></i></a></span>爱用的工具</strong> 。<span class="external-link"><a href="https://zh.wikipedia.org/wiki/系统管理员" target="_blank">系统管理员<i data-feather='external-link'></i></a></span>可以利用Nmap来探测工作环境中未经批准使用的服务器，黑客通常会利用Nmap来搜集目标电脑的网络设定，从而计划攻击的方法。</p>
+<p><strong>Nmap通常用在信息搜集阶段，用于搜集目标机主机的基本状态信息</strong>。扫描结果可以作为<span class="external-link"><a href="https://zh.wikipedia.org/w/index.php?title=漏洞扫描&amp;action=edit&amp;redlink=1" target="_blank">漏洞扫描<i data-feather='external-link'></i></a></span>、<span class="external-link"><a href="https://zh.wikipedia.org/wiki/漏洞利用" target="_blank">漏洞利用<i data-feather='external-link'></i></a></span>和<span class="external-link"><a href="https://zh.wikipedia.org/wiki/权限提升" target="_blank">权限提升<i data-feather='external-link'></i></a></span>阶段的输入。例如，业界流行的漏洞扫描工具<span class="external-link"><a href="https://zh.wikipedia.org/wiki/Nessus" target="_blank">Nessus<i data-feather='external-link'></i></a></span>与漏洞利用工具<span class="external-link"><a href="https://zh.wikipedia.org/wiki/Metasploit" target="_blank">Metasploit<i data-feather='external-link'></i></a></span>都支持导入Nmap的<span class="external-link"><a href="https://zh.wikipedia.org/wiki/XML" target="_blank">XML<i data-feather='external-link'></i></a></span>格式结果，而Metasploit框架内也集成了Nmap工具（支持Metasploit直接扫描）。</p>
+<p><span class="external-link"><a href="https://zh.wikipedia.org/zh-tw/Nmap" target="_blank">维基百科<i data-feather='external-link'></i></a></span></p>
+<p><strong>Nmap 基本语法</strong></p>
+<pre><code>nmap [ &lt;扫描类型&gt; ...] [ &lt;选项&gt; ] { &lt;扫描目标说明&gt; }</code></pre>
+<p>全面进攻性扫描（包括各种主机发现、端口扫描、版本扫描、OS扫描及默认脚本扫描）</p>
+<pre><code>nmap -A -v target_ip</code></pre>
+<p>Ping扫描</p>
+<pre><code>nmap -sn -v target_ip</code></pre>
+<p>快速端口扫描</p>
+<pre><code>nmap -F -v target_ip</code></pre>
+<p>版本扫描</p>
+<pre><code>nmap -sV -v target_ip </code></pre>
+<p>操作系统扫描</p>
+<pre><code>nmap -O -v target_ip</code></pre>
+<p>*Nmap 常被跟评估系统漏洞软件Nessus混为一谈。Nmap 以隐秘的手法，避开闯入检测系统的监视，并尽可能不影响目标系统的日常操作。</p>
+<span id="h-16" name="h-16"></span><h2>联系主理人</h2>
+<p>1.关注频道 <span class="external-link"><a href="https://t.me/limboprossr" target="_blank">https://t.me/limboprossr<i data-feather='external-link'></i></a></span> 不失联；<br />
+2.<code>毒奶粉</code>们（我管我的Fans）可联系 <a href="../usr/uploads/2019/10/3453243330.png">TG机器人</a> 或发送 <a href="../usr/uploads/2019/10/3453243330.png">邮件</a> 获取帮助；</p>
+<p>3.或点击<code>本页面右下角</code>的聊天按钮联系；</p><hr class="content-copyright" style="margin-top:50px" /><blockquote class="content-copyright" style="font-style:normal"><p class="content-copyright">版权属于：<a class="content-copyright" target="_blank" href="https://t.me/limboprobot">毒奶</a><br>联系我们： <a class="content-copyright" target="_blank" href="../6.html">https://limbopro.xyz/6.html</a> <br>电报频道： <a class="content-copyright" target="_blank" href="https://t.me/limboprossr">https://t.me/limboprossr</a> <br>推特账号： <a class="content-copyright" target="_blank" href="https://twitter.com/limboprossr">https://twitter.com/limboprossr</a> <br>集美账号： <a class="content-copyright" target="_blank" href="https://www.instagram.com/limboprossr/">https://www.instagram.com/limboprossr/</a> <br>油管账号 ： <a class="content-copyright" target="_blank" href="https://www.youtube.com/channel/UCopiQ6DaRujU9iV9g-zrrMQ">http://bit.ly/2VJcz7o/</a> <br>机场推荐： <a class="content-copyright" target="_blank" href="../865.html">https://limbopro.xyz/865.html</a><br>上网必会： <a class="content-copyright" target="_blank" href="2910.html">https://limbopro.xyz/archives/2910.html</a> <br>广告屏蔽： <a class="content-copyright" target="_blank" href="adguard.html">https://limbopro.xyz/archives/adguard.html</a> <br>实用工具： <a class="content-copyright" target="_blank" href="../category/tools/index.html">https://limbopro.xyz/category/tools/</a> <br>网站优化： <a class="content-copyright" target="_blank" href="../category/Typecho/index.html">https://limbopro.xyz/category/Typecho/</a> <br>美图欣赏： <a class="content-copyright" target="_blank" href="../category/instagram/index.html">https://limbopro.xyz/category/instagram/</a> <br>开车专栏： <a class="content-copyright" target="_blank" href="../category/NSFW/index.html">https://limbopro.xyz/category/NSFW/</a> <br>网站镜像： <a class="content-copyright" target="_blank" href="https://limbopro.github.io">https://limbopro.github.io</a></p><p class="content-copyright">本文链接：<a class="content-copyright" href="nmap.html">https://limbopro.xyz/archives/nmap.html</a></p><p class="content-copyright"><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本文采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0 许可协议</a> ，转载和引用时请注意遵守协议！</p></blockquote>
 </div>
 </div>
-<script type="56788d79325cb39df6c748a1-text/javascript">
+<script type="e04efd4f418e170e3897ca92-text/javascript">
         try {
             $("[data-morphing]").fancyMorph({
                 hash : 'morphing'
@@ -576,7 +823,7 @@ setTimeout(function () {
 
             </script>
 
-<script type="56788d79325cb39df6c748a1-text/javascript">
+<script type="e04efd4f418e170e3897ca92-text/javascript">
 (function () {
     window.TypechoComment = {
         dom : function (id) {
@@ -648,7 +895,7 @@ setTimeout(function () {
     };
 })();
 </script>
-<script type="56788d79325cb39df6c748a1-text/javascript">
+<script type="e04efd4f418e170e3897ca92-text/javascript">
 var registCommentEvent = function() {
     var event = document.addEventListener ? {
         add: 'addEventListener',
@@ -673,33 +920,37 @@ var registCommentEvent = function() {
                         input.type = 'hidden';
                         input.name = '_';
                             input.value = (function () {
-    var _ZinKC3 = '4'//'egz'
-+''///*'Pa'*/'Pa'
-+'2b'//'r'
-+//'Nys'
-'cc7'+//'GSL'
-'GSL'+'a5'//'KO'
-+'5'//'Vc'
-+//'K'
-'6f8'+'f0a'//'ioW'
-+''///*'zd8'*/'zd8'
-+''///*'gPo'*/'gPo'
-+'8c'//'iYl'
-+'7bc'//'NqK'
-+//'T'
-'T'+'zO'//'zO'
-+'G8'//'G8'
-+//'4'
-'df6'+'b90'//'I'
-+'8ed'//'n0f'
-+//'AP'
-'587', _AMWKu = [[6,9],[20,21],[20,22],[20,22]];
+    var _rZFp = //'ql'
+'42'+//'f0'
+'bcc'+//'Z'
+'7a'+//'W'
+'5'+//'DO'
+'DO'+'56f'//'0'
++/* 'UvL'//'UvL' */''+//'5Ep'
+'8f'+//'ItR'
+'0'+//'qF'
+'qF'+//'L'
+'a8c'+//'8uY'
+'7bc'+//'2'
+'df'+//'K'
+'K'+//'hd'
+'6'+//'a8'
+'a8'+''///*'cpV'*/'cpV'
++//'Vsx'
+'Vsx'+'b9'//'jes'
++//'2k'
+'2k'+//'rPi'
+'08e'+//'rHk'
+'d'+/* 'V0'//'V0' */''+'5'//'dF'
++//'j0O'
+'j0O'+'87'//'bHh'
+, _2dDCBd9 = [[8,10],[14,16],[22,23],[23,25],[23,26],[25,27],[30,33]];
     
-    for (var i = 0; i < _AMWKu.length; i ++) {
-        _ZinKC3 = _ZinKC3.substring(0, _AMWKu[i][0]) + _ZinKC3.substring(_AMWKu[i][1]);
+    for (var i = 0; i < _2dDCBd9.length; i ++) {
+        _rZFp = _rZFp.substring(0, _2dDCBd9[i][0]) + _rZFp.substring(_2dDCBd9[i][1]);
     }
 
-    return _ZinKC3;
+    return _rZFp;
 })();
                     
                         f.appendChild(input);
@@ -723,7 +974,9 @@ var registCommentEvent = function() {
 <footer id="footer" class="app-footer" role="footer">
 <div class="wrapper bg-light">
 <span class="pull-right hidden-xs text-ellipsis">
-3813803845
+<a target="_blank" href="https://www.cloudflare.com"><img src="../usr/uploads/2020/03/2472081224.png" style="width: 50px;"></a>
+<a target="_blank" href="https://github.com/limbopro/Pandora"><img src="../usr/uploads/2020/03/2878577379.png" style="width: 40px;"></a>
+4000096225
 丨3人在线丨
 Powered by <a target="_blank" href="http://www.typecho.org">Typecho</a>&nbsp;|&nbsp;Theme by <a target="_blank" href="https://www.ihewro.com/archives/489/">handsome</a>
 </span>
@@ -788,51 +1041,47 @@ Powered by <a target="_blank" href="http://www.typecho.org">Typecho</a>&nbsp;|&n
 </div>
 </footer>
 </div>
+<script src="https://cdn.bootcss.com/jquery/2.1.4/jquery.min.js" type="e04efd4f418e170e3897ca92-text/javascript"></script> <script src="../usr/plugins/MenuTree/dropdown.js?v=0.8.0" type="e04efd4f418e170e3897ca92-text/javascript"></script>
+<script type="e04efd4f418e170e3897ca92-text/javascript">
+            jQuery('body').append('');
+            jQuery('.in-page-preview-buttons .dropdown-menu.keep-open').on('click', function (e) {
+              e.stopPropagation();
+            });
+            </script><script type="e04efd4f418e170e3897ca92-text/javascript">
+SearchConfig = {
+    url : "https://limbopro.xyz/usr/plugins/Handsome/cache/search.json"
+}
+</script>
 <style>
 	img {
 		cursor: pointer;
 		transition: -webkit-transform 0.1s ease
 	}
 	img:hover{
-		transform: scale(1.01);
-		-ms-transform: scale(1.01);	/* IE 9 */
-		-webkit-transform: scale(1.01);	/* Safari 和 Chrome */
-		-o-transform: scale(1.01);	/* Opera */
-		-moz-transform: scale(1.01);	/* Firefox */
+		transform: scale(1);
+		-ms-transform: scale(1);	/* IE 9 */
+		-webkit-transform: scale(1);	/* Safari 和 Chrome */
+		-o-transform: scale(1);	/* Opera */
+		-moz-transform: scale(1);	/* Firefox */
 	}
 	img:focus {
-		transform: scale(1.4);
-		-ms-transform: scale(1.4);	/* IE 9 */
-		-webkit-transform: scale(1.4);	/* Safari 和 Chrome */
-		-o-transform: scale(1.4);	/* Opera */
-		-moz-transform: scale(1.4);	/* Firefox */
+		transform: scale(1.6);
+		-ms-transform: scale(1.6);	/* IE 9 */
+		-webkit-transform: scale(1.6);	/* Safari 和 Chrome */
+		-o-transform: scale(1.6);	/* Opera */
+		-moz-transform: scale(1.6);	/* Firefox */
 	}
 </style>
-<script type="56788d79325cb39df6c748a1-text/javascript">
+<script type="e04efd4f418e170e3897ca92-text/javascript">
 	document.addEventListener('DOMContentLoaded', function(){
 		var imgs = document.querySelectorAll('img');
 		Array.prototype.forEach.call(imgs, function(el, i) {
 			if (el.tabIndex <= 0) el.tabIndex = 100;
 		});
 	});
-</script><script type="56788d79325cb39df6c748a1-text/javascript">
-	(function(){
-		var pres = document.querySelectorAll('pre');
-		var lineNumberClassName = 'line-numbers';
-		pres.forEach(function (item, index) {
-			item.className = item.className == '' ? lineNumberClassName : item.className + ' ' + lineNumberClassName;
-		});
-	})();
-</script>
-<script type="56788d79325cb39df6c748a1-text/javascript" src="../usr/plugins/CodePrettify/static/clipboard.min.js"></script>
-<script type="56788d79325cb39df6c748a1-text/javascript" src="../usr/plugins/CodePrettify/static/prism.js"></script>
-<script type="56788d79325cb39df6c748a1-text/javascript">
-SearchConfig = {
-    url : "https://limbopro.xyz/usr/plugins/Handsome/cache/search.json"
-}
 </script>
 
-<script type="56788d79325cb39df6c748a1-text/javascript">
+<script type="e04efd4f418e170e3897ca92-text/javascript">
         window['LocalConst'] = {
             COMMENT_NAME_INFO: '必须填写昵称或姓名',
             COMMENT_EMAIL_INFO: '必须填写电子邮箱地址',
@@ -904,9 +1153,9 @@ SearchConfig = {
 
     </script>
 
-<script src="../usr/themes/handsome/assets/libs/bootstrap/js/bootstrap.min.js" type="56788d79325cb39df6c748a1-text/javascript"></script>
-<script src="../usr/themes/handsome/assets/js/features/jquery.pjax.min.js" type="56788d79325cb39df6c748a1-text/javascript"></script>
-<script type="56788d79325cb39df6c748a1-text/javascript">
+<script src="../usr/themes/handsome/assets/libs/bootstrap/js/bootstrap.min.js" type="e04efd4f418e170e3897ca92-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/js/features/jquery.pjax.min.js" type="e04efd4f418e170e3897ca92-text/javascript"></script>
+<script type="e04efd4f418e170e3897ca92-text/javascript">
         $(document).pjax('a[href^="https://limbopro.xyz/"]:not(a[target="_blank"], a[no-pjax])', {
             container: '#content',
             fragment: '#content',
@@ -933,7 +1182,7 @@ SearchConfig = {
     </script>
 
 
-<script type="56788d79325cb39df6c748a1-text/javascript">
+<script type="e04efd4f418e170e3897ca92-text/javascript">
         window.paceOptions = {
             ajax: {
                 ignoreURLs: ['/.*Get.php.*/']
@@ -943,23 +1192,23 @@ SearchConfig = {
             restartOnRequestAfter: false
         };
     </script>
-<script src="../usr/themes/handsome/assets/js/features/pace.min.js" type="56788d79325cb39df6c748a1-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/js/features/pace.min.js" type="e04efd4f418e170e3897ca92-text/javascript"></script>
 <link href="../usr/themes/handsome/assets/css/features/pjax/pace-theme-minimal.min.css" rel="stylesheet">
 <style>
                         .pace .pace-progress{
     background: #000000;
 }        </style>
-<script src="../usr/themes/handsome/assets/js/features/feather.min.js?v=6.0.020191205" type="56788d79325cb39df6c748a1-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/js/features/feather.min.js?v=6.0.020191205" type="e04efd4f418e170e3897ca92-text/javascript"></script>
 
-<script src="../usr/themes/handsome/assets/js/features/jquery.fancybox.min.js?v=6.0.020191205" type="56788d79325cb39df6c748a1-text/javascript"></script>
-<script src="../usr/themes/handsome/assets/js/features/easypiechart.min.js?v=6.0.020191205" type="56788d79325cb39df6c748a1-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/js/features/jquery.fancybox.min.js?v=6.0.020191205" type="e04efd4f418e170e3897ca92-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/js/features/easypiechart.min.js?v=6.0.020191205" type="e04efd4f418e170e3897ca92-text/javascript"></script>
 
 
-<script src="../usr/themes/handsome/assets/js/function.min.js?v=6.0.020191205" type="56788d79325cb39df6c748a1-text/javascript"></script>
-<script src="../usr/themes/handsome/assets/js/core.min.js?v=6.0.020191205" type="56788d79325cb39df6c748a1-text/javascript"></script>
-<script src="../usr/themes/handsome/assets/js/features/setting.min.js?v=6.0.020191205" type="56788d79325cb39df6c748a1-text/javascript"></script>
-<script type="56788d79325cb39df6c748a1-text/javascript">
+<script src="../usr/themes/handsome/assets/js/function.min.js?v=6.0.020191205" type="e04efd4f418e170e3897ca92-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/js/core.min.js?v=6.0.020191205" type="e04efd4f418e170e3897ca92-text/javascript"></script>
+<script src="../usr/themes/handsome/assets/js/features/setting.min.js?v=6.0.020191205" type="e04efd4f418e170e3897ca92-text/javascript"></script>
+<script type="e04efd4f418e170e3897ca92-text/javascript">
             </script>
-<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="56788d79325cb39df6c748a1-|49" defer=""></script></body>
+<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="e04efd4f418e170e3897ca92-|49" defer=""></script></body>
 </html>
 

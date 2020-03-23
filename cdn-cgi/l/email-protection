@@ -54,9 +54,9 @@
 
       <div class="cf-error-footer cf-wrapper">
   <p>
-    <span class="cf-footer-item">Cloudflare Ray ID: <strong>552fea395fd3ef79</strong></span>
+    <span class="cf-footer-item">Cloudflare Ray ID: <strong>57825f3b0dcbf90b</strong></span>
     <span class="cf-footer-separator">&bull;</span>
-    <span class="cf-footer-item"><span>Your IP</span>: 172.105.237.185</span>
+    <span class="cf-footer-item"><span>Your IP</span>: 2400:8902::f03c:91ff:fe3a:d786</span>
     <span class="cf-footer-separator">&bull;</span>
     <span class="cf-footer-item"><span>Performance &amp; security by</span> <a href="https://www.cloudflare.com/5xx-error-landing?utm_source=error_footer" id="brand_link" target="_blank">Cloudflare</a></span>
     
