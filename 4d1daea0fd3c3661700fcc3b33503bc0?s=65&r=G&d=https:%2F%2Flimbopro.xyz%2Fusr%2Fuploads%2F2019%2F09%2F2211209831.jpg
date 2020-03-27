@@ -91,11 +91,11 @@
 	color: #999;
 }    </style>
 
-<script src="usr/themes/handsome/assets/libs/jquery/jquery.min.js" type="ed7c4f6aa5bd4b736eeb989e-text/javascript"></script>
+<script src="usr/themes/handsome/assets/libs/jquery/jquery.min.js" type="103e6fbf655c18b5b4d30def-text/javascript"></script>
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140019039-1" type="ed7c4f6aa5bd4b736eeb989e-text/javascript"></script>
-<script type="ed7c4f6aa5bd4b736eeb989e-text/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140019039-1" type="103e6fbf655c18b5b4d30def-text/javascript"></script>
+<script type="103e6fbf655c18b5b4d30def-text/javascript">
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
@@ -103,9 +103,9 @@
   gtag('config', 'UA-140019039-1');
 </script>
 
-<script src='https://www.google.com/recaptcha/api.js?render=<?php echo SITE_KEY; ?>' type="ed7c4f6aa5bd4b736eeb989e-text/javascript"></script>
-<script src="https://www.google.com/recaptcha/api.js?render=6Lc3n98UAAAAAD65utb41JWcKBgdLSTYOhTcyVFe" type="ed7c4f6aa5bd4b736eeb989e-text/javascript"></script>
-<script type="ed7c4f6aa5bd4b736eeb989e-text/javascript">
+<script src='https://www.google.com/recaptcha/api.js?render=<?php echo SITE_KEY; ?>' type="103e6fbf655c18b5b4d30def-text/javascript"></script>
+<script src="https://www.google.com/recaptcha/api.js?render=6Lc3n98UAAAAAD65utb41JWcKBgdLSTYOhTcyVFe" type="103e6fbf655c18b5b4d30def-text/javascript"></script>
+<script type="103e6fbf655c18b5b4d30def-text/javascript">
 grecaptcha.ready(function() {
     grecaptcha.execute('_reCAPTCHA_site_key_', {action: 'homepage'}).then(function(token) {
        ...
@@ -114,7 +114,7 @@ grecaptcha.ready(function() {
 </script>
 
 
-<script type="ed7c4f6aa5bd4b736eeb989e-text/javascript">
+<script type="103e6fbf655c18b5b4d30def-text/javascript">
 (function($){
     setInterval(() => {
         $.each($('iframe'), (arr,x) => {
@@ -126,12 +126,12 @@ grecaptcha.ready(function() {
     }, 300);
 })(jQuery);
 </script>
- <script src="usr/themes/handsome/assets/js/features/fancyMorph.min.js" type="ed7c4f6aa5bd4b736eeb989e-text/javascript"></script>
+ <script src="usr/themes/handsome/assets/js/features/fancyMorph.min.js" type="103e6fbf655c18b5b4d30def-text/javascript"></script>
 </head>
 <body id="body" class="fix-padding">
 
 <div id="alllayout" class="app app-aside-fix container app-header-fixed "> 
-<script src="https://www.recaptcha.net/recaptcha/api.js" type="ed7c4f6aa5bd4b736eeb989e-text/javascript"></script>
+<script src="https://www.recaptcha.net/recaptcha/api.js" type="103e6fbf655c18b5b4d30def-text/javascript"></script>
 <header id="header" class="fix-padding app-header navbar box-shadow-bottom-lg" role="menu">
 
 <div class="text-ellipsis navbar-header bg-danger">
@@ -190,7 +190,7 @@ grecaptcha.ready(function() {
 闲言碎语 </strong>
 </div>
 <div class="list-group" id="smallRecording">
-<a href="cross.html" class="list-group-item"><span class="clear block m-b-none words_contents">希望你每次打开，都能在这里看到新东西，有用的内容。<br><small class="text-muted">2019-8-3 11:48:43</small></span></a><a href="cross.html" class="list-group-item"><span class="clear block m-b-none words_contents">早睡早起身体好，吃嘛嘛香。<br><small class="text-muted">2019-8-2 23:35:28</small></span></a><a href="cross.html" class="list-group-item"><span class="clear block m-b-none words_contents">晚来天欲雪，能饮一杯无。<br><small class="text-muted">2019-8-2 23:21:01</small></span></a> </div>
+<a href="cross.html" class="list-group-item"><span class="clear block m-b-none words_contents">希望你每次打开，都能在这里看到新东西，有用的内容。<br><small class="text-muted">2019-8-3 11:48:43</small></span></a><a href="cross.html" class="list-group-item"><span class="clear block m-b-none words_contents">早睡早起身体好，吃嘛嘛香。<br><small class="text-muted">2019-8-2 23:35:28</small></span></a><a href="cross.html" class="list-group-item"><span class="clear block m-b-none words_contents">晚来天欲雪，能饮一杯无。<br><small class="text-muted">2019-8-2 23:21:01</small></span></a>  </div>
 </div>
 </div>
 </li>
@@ -220,7 +220,7 @@ grecaptcha.ready(function() {
 <strong class="font-bold text-lt">毒奶</strong>
 <b class="caret"></b>
 </span>
-<span class="text-muted text-xs block"><script type="ed7c4f6aa5bd4b736eeb989e-application/javascript"> function getip(json){     document.write( json.ip); } </script> <script type="ed7c4f6aa5bd4b736eeb989e-application/javascript" src="https://api.ip.sb/jsonip?callback=getip"></script> <br>网上冲浪爱好者<br>业余斜杆青年<br>建站与防御<br>佛系更新</span>
+<span class="text-muted text-xs block"><script type="103e6fbf655c18b5b4d30def-application/javascript"> function getip(json){     document.write( json.ip); } </script> <script type="103e6fbf655c18b5b4d30def-application/javascript" src="https://api.ip.sb/jsonip?callback=getip"></script> <br>网上冲浪爱好者<br>业余斜杆青年<br>建站与防御<br>佛系更新</span>
 </span>
 </a>
 
@@ -255,7 +255,7 @@ grecaptcha.ready(function() {
 </a>
 </li>
 
-<li> <a target="_blank" href="search.html" class="auto"><span class="nav-icon"><i class="glyphicon fontello-search"></i></span><span>毒奶搜索</span></a></li><li> <a target="_self" href="865.html" class="auto"><span class="nav-icon"><i class="glyphicon fontello-instagram"></i></span><span>机场推荐</span></a></li><li> <a target="_blank" href="https://t.me/limboprossr" class="auto"><span class="nav-icon"><i class="glyphicon fontello-bell"></i></span><span>电报频道</span></a></li><li> <a target="_self" href="1765.html" class="auto"><span class="nav-icon"><i class="glyphicon fontello-indent"></i></span><span>文章归档</span></a></li><li> <a target="_self" href="6.html" class="auto"><span class="nav-icon"><i class="glyphicon fontello-emo-devil"></i></span><span>联系我们</span></a></li> <li class="line dk"></li>
+<li> <a target="_blank" href="search.html" class="auto"><span class="nav-icon"><i class="glyphicon fontello-search"></i></span><span>毒奶搜索</span></a></li><li> <a target="_self" href="865.html" class="auto"><span class="nav-icon"><i class="glyphicon fontello-instagram"></i></span><span>机场推荐</span></a></li><li> <a target="_blank" href="https://t.me/limboprossr" class="auto"><span class="nav-icon"><i class="glyphicon fontello-bell"></i></span><span>电报频道</span></a></li><li> <a target="_self" href="1765.html" class="auto"><span class="nav-icon"><i class="glyphicon fontello-indent"></i></span><span>文章归档</span></a></li><li> <a target="_self" href="6.html" class="auto"><span class="nav-icon"><i class="glyphicon fontello-emo-devil"></i></span><span>联系我们</span></a></li>  <li class="line dk"></li>
 
 <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
 <span>组成</span>
@@ -340,7 +340,7 @@ grecaptcha.ready(function() {
 <div class="hbox hbox-auto-xs hbox-auto-sm">
 <div class="bg-light lter wrapper-md">
 <h1 class="entry-title m-n font-thin text-black l-h"><span class="title-icons"><i data-feather="feather"></i></span>搜索结果</h1>
-<div class="entry-meta text-muted  m-b-none small post-head-icon">为您查到关于 65 相关结果</div>
+ <div class="entry-meta text-muted  m-b-none small post-head-icon">为您查到关于 65 相关结果</div>
 </div>
 <div class="wrapper-md">
 <div class="tab-container post_tab">
@@ -397,7 +397,7 @@ grecaptcha.ready(function() {
 <li class="list-group-item">
 <a href="archives/8002.html" class="text-ellipsis h5 block">10部影视剧推荐给你</a>
 <p class="summary l-h-2x text-muted">本文隶属于 电影推荐 分类，点击分类名称查看更多相关主题；主理人说已然是2月10日，大家花呗都还了吗？过完这个年怕都是胖了。我已经有好几天不看新闻了，大门不出二门不迈宅着看书，做好功课好应对未来...</p>
-</li>
+ </li>
 <li class="list-group-item">
 <a href="archives/telegram-tutorial-4-chinese.html" class="text-ellipsis h5 block">Telegram 完全使用手册（2020）</a>
 <p class="summary l-h-2x text-muted">本文隶属于 电报奇闻/实用工具/科学上网 分类，点击分类名称可以查看更多相关文章；主理人说电报（Telegram）是个好东西，我们都热爱它。以下收集并整理了大部分 telegram 电报常见问题...</p>
@@ -503,7 +503,7 @@ grecaptcha.ready(function() {
 </span>
 </small></div></li><li class="list-group-item">
 <a href="archives/27.html" class="pull-left thumb-sm m-r"><img src="usr/themes/handsome/usr/img/sj2/4.jpg" class="img-40px normal-shadow img-square"></a>
- <div class="clear">
+<div class="clear">
 <h4 class="h5 l-h text-second"> <a href="archives/27.html" title="无忧无虑"> 无忧无虑 </a></h4>
 <small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">3156</span>
 </span>
@@ -530,14 +530,14 @@ grecaptcha.ready(function() {
 
 <section id="a_d_sidebar" class="widget widget_categories wrapper-md clear">
 <h5 class="widget-title m-t-none text-md">广告</h5>
-<script data-ad-client="ca-pub-4573757070775891" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" type="ed7c4f6aa5bd4b736eeb989e-text/javascript"></script>
+<script data-ad-client="ca-pub-4573757070775891" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" type="103e6fbf655c18b5b4d30def-text/javascript"></script>
 
 <a href='archives/n3ro.html'><img src='usr/uploads/2020/03/1938474618.jpg' alt='N3RO is Ready 4 you' title='N3RO is Ready 4 you' border='0' /></a>
 
 <br></br>
 <a class="twitter-timeline" data-height="480" data-dnt="true" data-theme="dark" href="https://twitter.com/limboprossr?ref_src=twsrc%5Etfw">Tweets by limboprossr</a>
 <br></br>
-<a href="https://twitter.com/limboprossr?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @limboprossr</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8" type="ed7c4f6aa5bd4b736eeb989e-text/javascript"></script> </section>
+<a href="https://twitter.com/limboprossr?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @limboprossr</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8" type="103e6fbf655c18b5b4d30def-text/javascript"></script> </section>
 
 
 <section id="tag_cloud-2" class="widget widget_tag_cloud wrapper-md clear">
@@ -652,7 +652,7 @@ Powered by <a target="_blank" href="http://www.typecho.org">Typecho</a>&nbsp;|&n
 </div>
 </footer>
 </div>
-<script type="ed7c4f6aa5bd4b736eeb989e-text/javascript">
+<script type="103e6fbf655c18b5b4d30def-text/javascript">
 SearchConfig = {
     url : "https://limbopro.xyz/usr/plugins/Handsome/cache/search.json"
 }
@@ -677,7 +677,7 @@ SearchConfig = {
 		-moz-transform: scale(1.6);	/* Firefox */
 	}
 </style>
-<script type="ed7c4f6aa5bd4b736eeb989e-text/javascript">
+<script type="103e6fbf655c18b5b4d30def-text/javascript">
 	document.addEventListener('DOMContentLoaded', function(){
 		var imgs = document.querySelectorAll('img');
 		Array.prototype.forEach.call(imgs, function(el, i) {
@@ -686,7 +686,7 @@ SearchConfig = {
 	});
 </script>
 
-<script type="ed7c4f6aa5bd4b736eeb989e-text/javascript">
+<script type="103e6fbf655c18b5b4d30def-text/javascript">
         window['LocalConst'] = {
             COMMENT_NAME_INFO: '必须填写昵称或姓名',
             COMMENT_EMAIL_INFO: '必须填写电子邮箱地址',
@@ -758,9 +758,9 @@ SearchConfig = {
 
     </script>
 
-<script src="usr/themes/handsome/assets/libs/bootstrap/js/bootstrap.min.js" type="ed7c4f6aa5bd4b736eeb989e-text/javascript"></script>
-<script src="usr/themes/handsome/assets/js/features/jquery.pjax.min.js" type="ed7c4f6aa5bd4b736eeb989e-text/javascript"></script>
-<script type="ed7c4f6aa5bd4b736eeb989e-text/javascript">
+<script src="usr/themes/handsome/assets/libs/bootstrap/js/bootstrap.min.js" type="103e6fbf655c18b5b4d30def-text/javascript"></script>
+<script src="usr/themes/handsome/assets/js/features/jquery.pjax.min.js" type="103e6fbf655c18b5b4d30def-text/javascript"></script>
+<script type="103e6fbf655c18b5b4d30def-text/javascript">
         $(document).pjax('a[href^="https://limbopro.xyz/"]:not(a[target="_blank"], a[no-pjax])', {
             container: '#content',
             fragment: '#content',
@@ -787,7 +787,7 @@ SearchConfig = {
     </script>
 
 
-<script type="ed7c4f6aa5bd4b736eeb989e-text/javascript">
+<script type="103e6fbf655c18b5b4d30def-text/javascript">
         window.paceOptions = {
             ajax: {
                 ignoreURLs: ['/.*Get.php.*/']
@@ -797,23 +797,23 @@ SearchConfig = {
             restartOnRequestAfter: false
         };
     </script>
-<script src="usr/themes/handsome/assets/js/features/pace.min.js" type="ed7c4f6aa5bd4b736eeb989e-text/javascript"></script>
+<script src="usr/themes/handsome/assets/js/features/pace.min.js" type="103e6fbf655c18b5b4d30def-text/javascript"></script>
 <link href="usr/themes/handsome/assets/css/features/pjax/pace-theme-minimal.min.css" rel="stylesheet">
 <style>
                         .pace .pace-progress{
     background: #000000;
 }        </style>
-<script src="usr/themes/handsome/assets/js/features/feather.min.js?v=6.0.020191205" type="ed7c4f6aa5bd4b736eeb989e-text/javascript"></script>
+<script src="usr/themes/handsome/assets/js/features/feather.min.js?v=6.0.020191205" type="103e6fbf655c18b5b4d30def-text/javascript"></script>
 
-<script src="usr/themes/handsome/assets/js/features/jquery.fancybox.min.js?v=6.0.020191205" type="ed7c4f6aa5bd4b736eeb989e-text/javascript"></script>
-<script src="usr/themes/handsome/assets/js/features/easypiechart.min.js?v=6.0.020191205" type="ed7c4f6aa5bd4b736eeb989e-text/javascript"></script>
+<script src="usr/themes/handsome/assets/js/features/jquery.fancybox.min.js?v=6.0.020191205" type="103e6fbf655c18b5b4d30def-text/javascript"></script>
+<script src="usr/themes/handsome/assets/js/features/easypiechart.min.js?v=6.0.020191205" type="103e6fbf655c18b5b4d30def-text/javascript"></script>
 
 
-<script src="usr/themes/handsome/assets/js/function.min.js?v=6.0.020191205" type="ed7c4f6aa5bd4b736eeb989e-text/javascript"></script>
-<script src="usr/themes/handsome/assets/js/core.min.js?v=6.0.020191205" type="ed7c4f6aa5bd4b736eeb989e-text/javascript"></script>
-<script src="usr/themes/handsome/assets/js/features/setting.min.js?v=6.0.020191205" type="ed7c4f6aa5bd4b736eeb989e-text/javascript"></script>
-<script type="ed7c4f6aa5bd4b736eeb989e-text/javascript">
+<script src="usr/themes/handsome/assets/js/function.min.js?v=6.0.020191205" type="103e6fbf655c18b5b4d30def-text/javascript"></script>
+<script src="usr/themes/handsome/assets/js/core.min.js?v=6.0.020191205" type="103e6fbf655c18b5b4d30def-text/javascript"></script>
+<script src="usr/themes/handsome/assets/js/features/setting.min.js?v=6.0.020191205" type="103e6fbf655c18b5b4d30def-text/javascript"></script>
+<script type="103e6fbf655c18b5b4d30def-text/javascript">
             </script>
-<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="ed7c4f6aa5bd4b736eeb989e-|49" defer=""></script></body>
+<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="103e6fbf655c18b5b4d30def-|49" defer=""></script></body>
 </html>
 
